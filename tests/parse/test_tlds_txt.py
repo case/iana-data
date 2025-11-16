@@ -4,7 +4,7 @@ from pathlib import Path
 
 from src.parse.tlds_txt import parse_tlds_file, tlds_txt_content_changed
 
-FIXTURES_DIR = Path(__file__).parent / "fixtures" / "source"
+FIXTURES_DIR = Path(__file__).parent.parent / "fixtures" / "source"
 
 
 def test_parse_tlds_file_ignores_comments_and_empty_lines():
