@@ -1,0 +1,114 @@
+"""Download utilities for IANA data files."""
+
+import logging
+import re
+from datetime import datetime, timezone
+from pathlib import Path
+
+import httpx
+
+from ..config import IANA_URLS, SOURCE_DIR, SOURCE_FILES
+from .metadata import load_metadata, save_metadata
+
+logger = logging.getLogger(__name__)
+
+
+def _parse_cache_control_max_age(cache_control: str) -> int | None:
+    """Parse max-age directive from Cache-Control header."""
+    match = re.search(r"max-age=(\d+)", cache_control)
+    if match:
+        return int(match.group(1))
+    return None
+
+
+def _is_cache_fresh(metadata_entry: dict[str, str]) -> bool:
+    """Check if cached file is still fresh based on Cache-Control."""
+    if "download_timestamp" not in metadata_entry or "cache_max_age" not in metadata_entry:
+        return False
+
+    download_time = datetime.fromisoformat(metadata_entry["download_timestamp"])
+    max_age = int(metadata_entry["cache_max_age"])
+
+    # Calculate age in seconds
+    age = (datetime.now(timezone.utc) - download_time).total_seconds()
+
+    return age < max_age
+
+
+def download_iana_files() -> dict[str, str]:
+    """
+    Download IANA data files using conditional requests.
+
+    Uses If-Modified-Since and If-None-Match headers to avoid
+    downloading files that haven't changed since the last fetch.
+
+    Returns:
+        A dict mapping source keys to their download status:
+        - "downloaded": File was updated
+        - "not_modified": File hasn't changed
+        - "error": Download failed
+    """
+    metadata = load_metadata()
+    results: dict[str, str] = {}
+
+    # Ensure source directory exists
+    Path(SOURCE_DIR).mkdir(parents=True, exist_ok=True)
+
+    with httpx.Client(timeout=30.0, follow_redirects=True) as client:
+        for key, url in IANA_URLS.items():
+            filename = SOURCE_FILES[key]
+            filepath = Path(SOURCE_DIR) / filename
+
+            # Check if cache is still fresh (for Cache-Control based files)
+            if key in metadata and _is_cache_fresh(metadata[key]):
+                results[key] = "not_modified"
+                logger.info("Cache still fresh for %s", key)
+                continue
+
+            # Prepare conditional request headers
+            headers: dict[str, str] = {}
+            if key in metadata:
+                if "etag" in metadata[key]:
+                    headers["If-None-Match"] = metadata[key]["etag"]
+                if "last_modified" in metadata[key]:
+                    headers["If-Modified-Since"] = metadata[key]["last_modified"]
+
+            try:
+                response = client.get(url, headers=headers)
+
+                if response.status_code == 304:
+                    # Not modified
+                    results[key] = "not_modified"
+                elif response.status_code == 200:
+                    # Download successful, save file
+                    with open(filepath, "wb") as f:
+                        f.write(response.content)
+
+                    # Update metadata
+                    if key not in metadata:
+                        metadata[key] = {}
+
+                    if "etag" in response.headers:
+                        metadata[key]["etag"] = response.headers["etag"]
+                    if "last-modified" in response.headers:
+                        metadata[key]["last_modified"] = response.headers["last-modified"]
+
+                    # Handle Cache-Control header
+                    if "cache-control" in response.headers:
+                        max_age = _parse_cache_control_max_age(response.headers["cache-control"])
+                        if max_age:
+                            metadata[key]["cache_control"] = response.headers["cache-control"]
+                            metadata[key]["cache_max_age"] = str(max_age)
+                            metadata[key]["download_timestamp"] = datetime.now(timezone.utc).isoformat()
+
+                    results[key] = "downloaded"
+                else:
+                    results[key] = "error"
+            except Exception as e:
+                logger.error("Error downloading %s: %s", key, e)
+                results[key] = "error"
+
+    # Save updated metadata
+    save_metadata(metadata)
+
+    return results
