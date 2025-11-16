@@ -23,6 +23,9 @@ def test_parse_root_db_html_by_type():
 
     results = parse_root_db_html(fixture_path)
 
+    # Count total generic types (generic + sponsored + infrastructure + generic-restricted)
+    assert results["delegated"]["total_generic"] == 21
+
     # Count delegated by type
     assert results["delegated"]["by_type"]["generic"] == 18
     assert results["delegated"]["by_type"]["country-code"] == 9

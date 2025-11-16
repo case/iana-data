@@ -37,8 +37,17 @@ def analyze_root_db_html(filepath: Path) -> int:
         logger.info("        %s IDNs: %d", tld_type, count)
     logger.info("")
     logger.info("    By Type:")
-    for tld_type, count in sorted(results["delegated"]["by_type"].items()):
-        logger.info("      %s: %d", tld_type, count)
+
+    # Show Generic total with subtypes
+    logger.info("      Generic: %d", results["delegated"]["total_generic"])
+    generic_types = ["generic", "sponsored", "infrastructure", "generic-restricted"]
+    for generic_type in generic_types:
+        if generic_type in results["delegated"]["by_type"]:
+            logger.info("        %s: %d", generic_type, results["delegated"]["by_type"][generic_type])
+
+    # Show Country-code
+    if "country-code" in results["delegated"]["by_type"]:
+        logger.info("      Country-code: %d", results["delegated"]["by_type"]["country-code"])
     logger.info("")
     logger.info("  Undelegated:")
     logger.info("    Total: %d", results["undelegated"]["total"])

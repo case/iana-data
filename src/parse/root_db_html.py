@@ -88,11 +88,14 @@ def parse_root_db_html(filepath: Path) -> dict:
     Returns:
         Dict with analysis results:
         - total: Total number of TLD entries
-        - by_type: Count of TLDs by type (generic, country-code, etc.)
-        - total_idns: Total number of IDN TLDs (xn--)
-        - idn_by_type: Count of IDN TLDs by type
-        - delegated: Count of delegated TLDs
-        - undelegated: Count of undelegated TLDs (manager is "Not assigned")
+        - delegated: Dict with delegated TLD statistics
+          - total: Count of delegated TLDs
+          - by_type: Count of delegated TLDs by type
+          - total_generic: Total of all generic types (generic, sponsored, infrastructure, generic-restricted)
+          - total_idns: Total number of delegated IDN TLDs (xn--)
+          - idn_by_type: Count of delegated IDN TLDs by type
+        - undelegated: Dict with undelegated TLD statistics
+          - total: Count of undelegated TLDs (manager is "Not assigned")
         - entries: List of all TLD entries with domain, type, manager, and delegated status
     """
     content = filepath.read_text()
@@ -111,6 +114,10 @@ def parse_root_db_html(filepath: Path) -> dict:
     for entry in delegated_entries:
         delegated_by_type[entry["type"]] += 1
 
+    # Calculate total generic types (generic + sponsored + infrastructure + generic-restricted)
+    generic_types = ["generic", "sponsored", "infrastructure", "generic-restricted"]
+    delegated_total_generic = sum(delegated_by_type.get(t, 0) for t in generic_types)
+
     # Count delegated IDNs (domains starting with .xn--)
     delegated_idn_entries = [e for e in delegated_entries if e.get("domain", "").startswith(".xn--")]
     delegated_total_idns = len(delegated_idn_entries)
@@ -125,6 +132,7 @@ def parse_root_db_html(filepath: Path) -> dict:
         "delegated": {
             "total": len(delegated_entries),
             "by_type": dict(delegated_by_type),
+            "total_generic": delegated_total_generic,
             "total_idns": delegated_total_idns,
             "idn_by_type": dict(delegated_idn_by_type),
         },
