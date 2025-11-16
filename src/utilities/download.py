@@ -1,38 +1,17 @@
 """Download utilities for IANA data files."""
 
 import logging
-import re
 from datetime import datetime, timezone
 from pathlib import Path
 
 import httpx
 
 from ..config import IANA_URLS, SOURCE_DIR, SOURCE_FILES
+from ..parse import tlds_txt_content_changed
+from .cache import is_cache_fresh, parse_cache_control_max_age
 from .metadata import load_metadata, save_metadata
 
 logger = logging.getLogger(__name__)
-
-
-def _parse_cache_control_max_age(cache_control: str) -> int | None:
-    """Parse max-age directive from Cache-Control header."""
-    match = re.search(r"max-age=(\d+)", cache_control)
-    if match:
-        return int(match.group(1))
-    return None
-
-
-def _is_cache_fresh(metadata_entry: dict[str, str]) -> bool:
-    """Check if cached file is still fresh based on Cache-Control."""
-    if "download_timestamp" not in metadata_entry or "cache_max_age" not in metadata_entry:
-        return False
-
-    download_time = datetime.fromisoformat(metadata_entry["download_timestamp"])
-    max_age = int(metadata_entry["cache_max_age"])
-
-    # Calculate age in seconds
-    age = (datetime.now(timezone.utc) - download_time).total_seconds()
-
-    return age < max_age
 
 
 def download_iana_files() -> dict[str, str]:
@@ -60,7 +39,7 @@ def download_iana_files() -> dict[str, str]:
             filepath = Path(SOURCE_DIR) / filename
 
             # Check if cache is still fresh (for Cache-Control based files)
-            if key in metadata and _is_cache_fresh(metadata[key]):
+            if key in metadata and is_cache_fresh(metadata[key]):
                 results[key] = "not_modified"
                 logger.info("Cache still fresh for %s", key)
                 continue
@@ -80,6 +59,11 @@ def download_iana_files() -> dict[str, str]:
                     # Not modified
                     results[key] = "not_modified"
                 elif response.status_code == 200:
+                    # Special handling for TLD_LIST - check if content actually changed
+                    if key == "TLD_LIST" and not tlds_txt_content_changed(filepath, response.text):
+                        results[key] = "not_modified"
+                        continue
+
                     # Download successful, save file
                     with open(filepath, "wb") as f:
                         f.write(response.content)
@@ -95,7 +79,7 @@ def download_iana_files() -> dict[str, str]:
 
                     # Handle Cache-Control header
                     if "cache-control" in response.headers:
-                        max_age = _parse_cache_control_max_age(response.headers["cache-control"])
+                        max_age = parse_cache_control_max_age(response.headers["cache-control"])
                         if max_age:
                             metadata[key]["cache_control"] = response.headers["cache-control"]
                             metadata[key]["cache_max_age"] = str(max_age)
