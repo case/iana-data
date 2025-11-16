@@ -4,8 +4,10 @@
 import argparse
 import logging
 import sys
+from pathlib import Path
 
-from .config import IANA_URLS, setup_logging
+from .analyze import analyze_tlds_txt
+from .config import IANA_URLS, SOURCE_DIR, SOURCE_FILES, setup_logging
 from .utilities import download_iana_files
 
 logger = logging.getLogger(__name__)
@@ -26,6 +28,17 @@ def main() -> int:
             "Download IANA data files. "
             "Specify sources to download (e.g., RDAP_BOOTSTRAP TLD_LIST), "
             "or omit to download all files."
+        ),
+    )
+
+    parser.add_argument(
+        "--analyze",
+        nargs="*",
+        metavar="FILE",
+        help=(
+            "Analyze data files. "
+            "Specify files to analyze (e.g., tlds-txt), "
+            "or omit to analyze all files."
         ),
     )
 
@@ -71,6 +84,43 @@ def main() -> int:
 
         # Return error code if any downloads failed
         if any(results.get(s) == "error" for s in sources_to_download):
+            return 1
+
+        return 0
+
+    if args.analyze is not None:
+        # Define available analyzers
+        analyzers = {
+            "tlds-txt": lambda: analyze_tlds_txt(Path(SOURCE_DIR) / SOURCE_FILES["TLD_LIST"]),
+        }
+
+        # Determine which files to analyze
+        if len(args.analyze) == 0:
+            # Analyze all files
+            logger.info("Analyzing all IANA data files...")
+            files_to_analyze = list(analyzers.keys())
+        else:
+            # Analyze specific files
+            files_to_analyze = args.analyze
+
+            # Validate file names
+            invalid_files = [f for f in files_to_analyze if f not in analyzers]
+            if invalid_files:
+                logger.error("Unknown file(s) to analyze: %s", ", ".join(invalid_files))
+                logger.info("Available: %s", ", ".join(analyzers.keys()))
+                return 1
+
+        # Run analyzers
+        results = []
+        for file in files_to_analyze:
+            if file in analyzers:
+                result = analyzers[file]()
+                results.append(result)
+            else:
+                logger.info("Skipping %s (not implemented yet)", file)
+
+        # Return error if any analysis failed
+        if any(r != 0 for r in results):
             return 1
 
         return 0
