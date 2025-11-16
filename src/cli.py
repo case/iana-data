@@ -6,7 +6,7 @@ import logging
 import sys
 from pathlib import Path
 
-from .analyze import analyze_tlds_txt
+from .analyze import analyze_root_db_html, analyze_tlds_txt
 from .config import IANA_URLS, SOURCE_DIR, SOURCE_FILES, setup_logging
 from .utilities import download_iana_files
 
@@ -92,6 +92,7 @@ def main() -> int:
         # Define available analyzers
         analyzers = {
             "tlds-txt": lambda: analyze_tlds_txt(Path(SOURCE_DIR) / SOURCE_FILES["TLD_LIST"]),
+            "root-db": lambda: analyze_root_db_html(Path(SOURCE_DIR) / SOURCE_FILES["ROOT_ZONE_DB"]),
         }
 
         # Determine which files to analyze
@@ -112,7 +113,11 @@ def main() -> int:
 
         # Run analyzers
         results = []
-        for file in files_to_analyze:
+        for i, file in enumerate(files_to_analyze):
+            # Add blank line before each analyzer (except first)
+            if i > 0:
+                logger.info("")
+
             if file in analyzers:
                 result = analyzers[file]()
                 results.append(result)

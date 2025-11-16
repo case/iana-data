@@ -49,7 +49,7 @@ def analyze_tlds_txt(filepath: Path) -> int:
 
     results = get_tlds_analysis(filepath)
 
-    logger.info("TLD List Analysis:")
+    logger.info("\033[1mTLD List Analysis:\033[0m")
     logger.info("  Total TLDs: %d", results["total"])
     logger.info("  IDNs (xn--): %d", results["idns"])
 
