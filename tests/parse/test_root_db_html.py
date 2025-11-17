@@ -14,7 +14,7 @@ def test_parse_root_db_html_total_entries():
     results = parse_root_db_html(fixture_path)
 
     # Total entries in the fixture
-    assert results["total"] == 34
+    assert results["total"] == 36
 
 
 def test_parse_root_db_html_by_type():
@@ -28,7 +28,7 @@ def test_parse_root_db_html_by_type():
 
     # Count delegated by type
     assert results["delegated"]["by_type"]["generic"] == 18
-    assert results["delegated"]["by_type"]["country-code"] == 9
+    assert results["delegated"]["by_type"]["country-code"] == 11
     assert results["delegated"]["by_type"]["sponsored"] == 1
     assert results["delegated"]["by_type"]["infrastructure"] == 1
     assert results["delegated"]["by_type"]["generic-restricted"] == 1
@@ -79,6 +79,25 @@ def test_parse_root_db_html_extracts_managers():
     assert entries_by_domain[".arpa"]["manager"] == "Internet Architecture Board (IAB)"
 
 
+def test_parse_root_db_html_unique_managers():
+    """Test that parse_root_db_html counts unique TLD managers for delegated TLDs."""
+    fixture_path = FIXTURES_DIR / "root.html"
+
+    results = parse_root_db_html(fixture_path)
+
+    # Count unique managers (excluding "Not assigned")
+    assert results["delegated"]["unique_managers"] == 28
+
+    # Count unique gTLD managers
+    assert results["delegated"]["unique_gtld_managers"] == 18
+
+    # Count unique ccTLD managers
+    assert results["delegated"]["unique_cctld_managers"] == 10
+
+    # Verify it's counting unique managers, not total TLDs
+    assert results["delegated"]["unique_managers"] < results["delegated"]["total"]
+
+
 def test_parse_root_db_html_delegation_status():
     """Test that parse_root_db_html correctly identifies delegated vs undelegated TLDs."""
     fixture_path = FIXTURES_DIR / "root.html"
@@ -86,7 +105,7 @@ def test_parse_root_db_html_delegation_status():
     results = parse_root_db_html(fixture_path)
 
     # Count delegated vs undelegated
-    assert results["delegated"]["total"] == 30
+    assert results["delegated"]["total"] == 32
     assert results["undelegated"]["total"] == 4
 
     # Check specific entries

@@ -94,6 +94,9 @@ def parse_root_db_html(filepath: Path) -> dict:
           - total_generic: Total of all generic types (generic, sponsored, infrastructure, generic-restricted)
           - total_idns: Total number of delegated IDN TLDs (xn--)
           - idn_by_type: Count of delegated IDN TLDs by type
+          - unique_managers: Count of unique TLD managers for delegated TLDs
+          - unique_gtld_managers: Count of unique managers for generic TLDs
+          - unique_cctld_managers: Count of unique managers for country-code TLDs
         - undelegated: Dict with undelegated TLD statistics
           - total: Count of undelegated TLDs (manager is "Not assigned")
         - entries: List of all TLD entries with domain, type, manager, and delegated status
@@ -127,6 +130,26 @@ def parse_root_db_html(filepath: Path) -> dict:
     for entry in delegated_idn_entries:
         delegated_idn_by_type[entry["type"]] += 1
 
+    # Count unique managers for delegated TLDs
+    unique_managers = set(entry["manager"] for entry in delegated_entries)
+    total_unique_managers = len(unique_managers)
+
+    # Count unique gTLD managers (generic types)
+    gtld_managers = set(
+        entry["manager"]
+        for entry in delegated_entries
+        if entry["type"] in generic_types
+    )
+    total_unique_gtld_managers = len(gtld_managers)
+
+    # Count unique ccTLD managers (country-code)
+    cctld_managers = set(
+        entry["manager"]
+        for entry in delegated_entries
+        if entry["type"] == "country-code"
+    )
+    total_unique_cctld_managers = len(cctld_managers)
+
     return {
         "total": len(entries),
         "delegated": {
@@ -135,6 +158,9 @@ def parse_root_db_html(filepath: Path) -> dict:
             "total_generic": delegated_total_generic,
             "total_idns": delegated_total_idns,
             "idn_by_type": dict(delegated_idn_by_type),
+            "unique_managers": total_unique_managers,
+            "unique_gtld_managers": total_unique_gtld_managers,
+            "unique_cctld_managers": total_unique_cctld_managers,
         },
         "undelegated": {
             "total": len(undelegated_entries),
