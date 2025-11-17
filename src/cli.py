@@ -6,7 +6,7 @@ import logging
 import sys
 from pathlib import Path
 
-from .analyze import analyze_root_db_html, analyze_tlds_txt
+from .analyze import analyze_rdap_json, analyze_root_db_html, analyze_tlds_txt
 from .config import IANA_URLS, SOURCE_DIR, SOURCE_FILES, setup_logging
 from .utilities import download_iana_files
 
@@ -93,6 +93,7 @@ def main() -> int:
         analyzers = {
             "tlds-txt": lambda: analyze_tlds_txt(Path(SOURCE_DIR) / SOURCE_FILES["TLD_LIST"]),
             "root-db": lambda: analyze_root_db_html(Path(SOURCE_DIR) / SOURCE_FILES["ROOT_ZONE_DB"]),
+            "rdap": lambda: analyze_rdap_json(Path(SOURCE_DIR) / SOURCE_FILES["RDAP_BOOTSTRAP"]),
         }
 
         # Determine which files to analyze
