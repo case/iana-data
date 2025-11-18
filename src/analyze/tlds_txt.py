@@ -20,7 +20,12 @@ def get_tlds_analysis(filepath: Path) -> dict[str, int]:
         - total: Total number of TLDs
         - idns: Number of internationalized domain names (xn--)
     """
-    content = filepath.read_text()
+    try:
+        content = filepath.read_text()
+    except OSError as e:
+        logger.error("Error reading TLDs file from %s: %s", filepath, e)
+        return {"total": 0, "idns": 0}
+
     tlds = parse_tlds_file(content)
 
     # Count IDNs (start with "xn--" or "XN--")

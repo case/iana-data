@@ -1,9 +1,12 @@
 """Parser for IANA Root Zone Database HTML file."""
 
+import logging
 from html.parser import HTMLParser
 from pathlib import Path
 
 from ..config import SOURCE_DIR, SOURCE_FILES
+
+logger = logging.getLogger(__name__)
 
 
 class RootDBHTMLParser(HTMLParser):
@@ -95,7 +98,12 @@ def parse_root_db_html(filepath: Path | None = None) -> list[dict]:
     """
     if filepath is None:
         filepath = Path(SOURCE_DIR) / SOURCE_FILES["ROOT_ZONE_DB"]
-    content = filepath.read_text()
+
+    try:
+        content = filepath.read_text()
+    except OSError as e:
+        logger.error("Error reading root zone HTML from %s: %s", filepath, e)
+        return []
 
     parser = RootDBHTMLParser()
     parser.feed(content)

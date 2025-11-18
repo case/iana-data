@@ -48,7 +48,12 @@ def tlds_txt_content_changed(filepath: Path, new_content: str) -> bool:
     new_tlds = parse_tlds_file(new_content)
 
     # Parse existing content
-    existing_content = filepath.read_text()
+    try:
+        existing_content = filepath.read_text()
+    except OSError as e:
+        logger.error("Error reading existing TLDs file from %s: %s", filepath, e)
+        return True  # Treat as changed if we can't read existing file
+
     existing_tlds = parse_tlds_file(existing_content)
 
     # Only consider changed if actual TLD list differs

@@ -1,9 +1,12 @@
 """Parser for supplemental ccTLD RDAP data."""
 
 import json
+import logging
 from pathlib import Path
 
 from ..config import GENERATED_DIR
+
+logger = logging.getLogger(__name__)
 
 
 def parse_supplemental_cctld_rdap(filepath: Path | None = None) -> dict[str, dict]:
@@ -24,8 +27,12 @@ def parse_supplemental_cctld_rdap(filepath: Path | None = None) -> dict[str, dic
     if not filepath.exists():
         return {}
 
-    with open(filepath, encoding="utf-8") as f:
-        data = json.load(f)
+    try:
+        with open(filepath, encoding="utf-8") as f:
+            data = json.load(f)
+    except (OSError, json.JSONDecodeError) as e:
+        logger.error("Error parsing supplemental RDAP from %s: %s", filepath, e)
+        return {}
 
     # Build lookup map
     supplemental_map = {}
