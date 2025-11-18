@@ -10,6 +10,10 @@ download:
 analyze:
 	uv run python -m src.cli --analyze
 
+.PHONY: build
+build:
+	uv run python -m src.cli --build
+
 .PHONY: lint
 lint:
 	uv run ruff check src/ tests/

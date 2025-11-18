@@ -7,6 +7,7 @@ import sys
 from pathlib import Path
 
 from .analyze import analyze_rdap_json, analyze_root_db_html, analyze_tlds_txt
+from .build import build_tlds_json
 from .config import IANA_URLS, SOURCE_DIR, SOURCE_FILES, setup_logging
 from .utilities import download_iana_files
 
@@ -40,6 +41,12 @@ def main() -> int:
             "Specify files to analyze (e.g., tlds-txt), "
             "or omit to analyze all files."
         ),
+    )
+
+    parser.add_argument(
+        "--build",
+        action="store_true",
+        help="Build enhanced TLD data file (tlds.json)",
     )
 
     args = parser.parse_args()
@@ -129,6 +136,19 @@ def main() -> int:
         if any(r != 0 for r in results):
             return 1
 
+        return 0
+
+    if args.build:
+        logger.info("Building enhanced TLD data file...")
+        result = build_tlds_json()
+
+        if result.get("error"):
+            logger.error("Build failed: %s", result["error"])
+            return 1
+
+        logger.info("Build complete:")
+        logger.info("  Total TLDs: %d", result["total_tlds"])
+        logger.info("  Output file: %s", result.get("output_file"))
         return 0
 
     # No arguments provided
