@@ -2,7 +2,7 @@
 
 from pathlib import Path
 
-from src.analyze.tlds_txt import get_tlds_analysis
+from src.analyze.tlds_txt import analyze_tlds_txt, get_tlds_analysis
 
 FIXTURES_DIR = Path(__file__).parent.parent / "fixtures" / "source"
 
@@ -38,3 +38,21 @@ def test_get_tlds_analysis_new_content():
     assert results["total"] == 23
     # Same number of IDNs (HELLO is not an IDN)
     assert results["idns"] == 5
+
+
+def test_analyze_tlds_txt_success():
+    """Test that analyze_tlds_txt returns success exit code for valid file."""
+    fixture_path = FIXTURES_DIR / "tlds.txt"
+
+    exit_code = analyze_tlds_txt(fixture_path)
+
+    assert exit_code == 0
+
+
+def test_analyze_tlds_txt_missing_file():
+    """Test that analyze_tlds_txt returns error exit code for missing file."""
+    nonexistent_path = FIXTURES_DIR / "does-not-exist.txt"
+
+    exit_code = analyze_tlds_txt(nonexistent_path)
+
+    assert exit_code == 1
