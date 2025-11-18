@@ -4,7 +4,7 @@ import json
 import logging
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Final
+from typing import Any, Final
 
 logger = logging.getLogger(__name__)
 
@@ -20,8 +20,11 @@ def utc_timestamp() -> str:
 GENERATED_DIR: Final[str] = "data/generated"
 METADATA_FILE: Final[str] = f"{GENERATED_DIR}/metadata.json"
 
+# Type alias for metadata structure
+MetadataDict = dict[str, dict[str, Any]]
 
-def load_metadata() -> dict[str, dict[str, str]]:
+
+def load_metadata() -> MetadataDict:
     """Load metadata from previous downloads."""
     metadata_path = Path(METADATA_FILE)
     if metadata_path.exists():
@@ -35,7 +38,7 @@ def load_metadata() -> dict[str, dict[str, str]]:
     return {}
 
 
-def save_metadata(metadata: dict[str, dict[str, str]]) -> None:
+def save_metadata(metadata: MetadataDict) -> None:
     """Save metadata for future conditional requests."""
     metadata_path = Path(METADATA_FILE)
     metadata_path.parent.mkdir(parents=True, exist_ok=True)

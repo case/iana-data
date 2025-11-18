@@ -37,12 +37,11 @@ class RootDBHTMLParser(HTMLParser):
         elif tag == "a" and self.in_td and self.td_count == 0:
             # Extract domain from href in first column (domain column)
             attrs_dict = dict(attrs)
-            if "href" in attrs_dict:
-                href = attrs_dict["href"]
+            href = attrs_dict.get("href")
+            if href and "/domains/root/db/" in href:
                 # Extract TLD from href like "/domains/root/db/xn--kpry57d.html"
-                if "/domains/root/db/" in href:
-                    domain = href.split("/domains/root/db/")[1].replace(".html", "")
-                    self.current_domain_from_href = f".{domain}"
+                domain = href.split("/domains/root/db/")[1].replace(".html", "")
+                self.current_domain_from_href = f".{domain}"
 
     def handle_endtag(self, tag):
         if tag == "tbody":

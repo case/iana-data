@@ -2,6 +2,7 @@
 
 import re
 from datetime import datetime, timezone
+from typing import Any
 
 
 def parse_cache_control_max_age(cache_control: str) -> int | None:
@@ -20,7 +21,7 @@ def parse_cache_control_max_age(cache_control: str) -> int | None:
     return None
 
 
-def is_cache_fresh(metadata_entry: dict[str, str]) -> bool:
+def is_cache_fresh(metadata_entry: dict[str, Any]) -> bool:
     """
     Check if cached file is still fresh based on Cache-Control.
 
