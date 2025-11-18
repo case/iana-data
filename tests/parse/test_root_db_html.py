@@ -8,45 +8,63 @@ FIXTURES_DIR = Path(__file__).parent.parent / "fixtures" / "source"
 
 
 def test_parse_root_db_html_total_entries():
-    """Test that parse_root_db_html correctly counts total TLD entries."""
+    """Test that parse_root_db_html returns all TLD entries."""
     fixture_path = FIXTURES_DIR / "root.html"
 
-    results = parse_root_db_html(fixture_path)
+    entries = parse_root_db_html(fixture_path)
 
     # Total entries in the fixture
-    assert results["total"] == 36
+    assert len(entries) == 36
 
 
 def test_parse_root_db_html_by_type():
-    """Test that parse_root_db_html correctly counts delegated TLDs by type."""
+    """Test that parse_root_db_html returns entries with correct type data."""
     fixture_path = FIXTURES_DIR / "root.html"
 
-    results = parse_root_db_html(fixture_path)
+    entries = parse_root_db_html(fixture_path)
+
+    # Filter to delegated entries and count by type
+    delegated = [e for e in entries if e.get("delegated", True)]
+    by_type = {}
+    for entry in delegated:
+        entry_type = entry["type"]
+        by_type[entry_type] = by_type.get(entry_type, 0) + 1
 
     # Count total generic types (generic + sponsored + infrastructure + generic-restricted)
-    assert results["delegated"]["total_generic"] == 21
+    generic_types = ["generic", "sponsored", "infrastructure", "generic-restricted"]
+    total_generic = sum(by_type.get(t, 0) for t in generic_types)
+    assert total_generic == 21
 
     # Count delegated by type
-    assert results["delegated"]["by_type"]["generic"] == 18
-    assert results["delegated"]["by_type"]["country-code"] == 11
-    assert results["delegated"]["by_type"]["sponsored"] == 1
-    assert results["delegated"]["by_type"]["infrastructure"] == 1
-    assert results["delegated"]["by_type"]["generic-restricted"] == 1
+    assert by_type["generic"] == 18
+    assert by_type["country-code"] == 11
+    assert by_type["sponsored"] == 1
+    assert by_type["infrastructure"] == 1
+    assert by_type["generic-restricted"] == 1
     # test type is undelegated in our fixture
 
 
 def test_parse_root_db_html_idn_counts():
-    """Test that parse_root_db_html correctly identifies and counts delegated IDNs."""
+    """Test that parse_root_db_html returns entries with IDN domains."""
     fixture_path = FIXTURES_DIR / "root.html"
 
-    results = parse_root_db_html(fixture_path)
+    entries = parse_root_db_html(fixture_path)
+
+    # Filter to delegated IDNs (domains starting with .xn--)
+    delegated = [e for e in entries if e.get("delegated", True)]
+    delegated_idns = [e for e in delegated if e["domain"].startswith(".xn--")]
 
     # Total delegated IDNs (entries with xn--)
-    assert results["delegated"]["total_idns"] == 5
+    assert len(delegated_idns) == 5
 
     # Delegated IDNs by type
-    assert results["delegated"]["idn_by_type"]["country-code"] == 4
-    assert results["delegated"]["idn_by_type"]["generic"] == 1
+    idn_by_type = {}
+    for entry in delegated_idns:
+        entry_type = entry["type"]
+        idn_by_type[entry_type] = idn_by_type.get(entry_type, 0) + 1
+
+    assert idn_by_type["country-code"] == 4
+    assert idn_by_type["generic"] == 1
     # test type IDN is undelegated in our fixture
 
 
@@ -54,10 +72,10 @@ def test_parse_root_db_html_extracts_domains():
     """Test that parse_root_db_html extracts domain names correctly."""
     fixture_path = FIXTURES_DIR / "root.html"
 
-    results = parse_root_db_html(fixture_path)
+    entries = parse_root_db_html(fixture_path)
 
     # Check some sample domains are in the list
-    domains = [entry["domain"] for entry in results["entries"]]
+    domains = [entry["domain"] for entry in entries]
 
     assert ".aaa" in domains
     assert ".ac" in domains
@@ -69,10 +87,10 @@ def test_parse_root_db_html_extracts_managers():
     """Test that parse_root_db_html extracts TLD managers correctly."""
     fixture_path = FIXTURES_DIR / "root.html"
 
-    results = parse_root_db_html(fixture_path)
+    entries = parse_root_db_html(fixture_path)
 
     # Find specific entries and check their managers
-    entries_by_domain = {entry["domain"]: entry for entry in results["entries"]}
+    entries_by_domain = {entry["domain"]: entry for entry in entries}
 
     assert entries_by_domain[".aaa"]["manager"] == "American Automobile Association, Inc."
     assert entries_by_domain[".ac"]["manager"] == "Internet Computer Bureau Limited"
@@ -80,36 +98,50 @@ def test_parse_root_db_html_extracts_managers():
 
 
 def test_parse_root_db_html_unique_managers():
-    """Test that parse_root_db_html counts unique TLD managers for delegated TLDs."""
+    """Test that parse_root_db_html returns entries with manager data."""
     fixture_path = FIXTURES_DIR / "root.html"
 
-    results = parse_root_db_html(fixture_path)
+    entries = parse_root_db_html(fixture_path)
+
+    # Filter to delegated entries
+    delegated = [e for e in entries if e.get("delegated", True)]
 
     # Count unique managers (excluding "Not assigned")
-    assert results["delegated"]["unique_managers"] == 28
+    unique_managers = set(e["manager"] for e in delegated)
+    assert len(unique_managers) == 28
 
     # Count unique gTLD managers
-    assert results["delegated"]["unique_gtld_managers"] == 18
+    generic_types = ["generic", "sponsored", "infrastructure", "generic-restricted"]
+    gtld_managers = set(
+        e["manager"] for e in delegated if e["type"] in generic_types
+    )
+    assert len(gtld_managers) == 18
 
     # Count unique ccTLD managers
-    assert results["delegated"]["unique_cctld_managers"] == 10
+    cctld_managers = set(
+        e["manager"] for e in delegated if e["type"] == "country-code"
+    )
+    assert len(cctld_managers) == 10
 
     # Verify it's counting unique managers, not total TLDs
-    assert results["delegated"]["unique_managers"] < results["delegated"]["total"]
+    assert len(unique_managers) < len(delegated)
 
 
 def test_parse_root_db_html_delegation_status():
     """Test that parse_root_db_html correctly identifies delegated vs undelegated TLDs."""
     fixture_path = FIXTURES_DIR / "root.html"
 
-    results = parse_root_db_html(fixture_path)
+    entries = parse_root_db_html(fixture_path)
 
     # Count delegated vs undelegated
-    assert results["delegated"]["total"] == 32
-    assert results["undelegated"]["total"] == 4
+    delegated = [e for e in entries if e.get("delegated", True)]
+    undelegated = [e for e in entries if not e.get("delegated", True)]
+
+    assert len(delegated) == 32
+    assert len(undelegated) == 4
 
     # Check specific entries
-    entries_by_domain = {entry["domain"]: entry for entry in results["entries"]}
+    entries_by_domain = {entry["domain"]: entry for entry in entries}
 
     # Delegated TLDs
     assert entries_by_domain[".aaa"]["delegated"] is True
