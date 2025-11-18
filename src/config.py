@@ -17,6 +17,9 @@ SOURCE_FILES: Final[dict[str, str]] = {
     "ROOT_ZONE_DB": "iana-root.html",
 }
 
+GENERATED_DIR: Final[str] = "data/generated"
+TLDS_OUTPUT_FILE: Final[str] = f"{GENERATED_DIR}/tlds.json"
+
 
 def setup_logging() -> None:
     """Configure logging for the application."""
