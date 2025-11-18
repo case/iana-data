@@ -3,7 +3,7 @@
 import logging
 from pathlib import Path
 
-from ..parse import parse_tlds_file
+from ..parse import parse_tlds_txt
 
 logger = logging.getLogger(__name__)
 
@@ -20,13 +20,7 @@ def get_tlds_analysis(filepath: Path) -> dict[str, int]:
         - total: Total number of TLDs
         - idns: Number of internationalized domain names (xn--)
     """
-    try:
-        content = filepath.read_text()
-    except OSError as e:
-        logger.error("Error reading TLDs file from %s: %s", filepath, e)
-        return {"total": 0, "idns": 0}
-
-    tlds = parse_tlds_file(content)
+    tlds = parse_tlds_txt(filepath)
 
     # Count IDNs (start with "xn--" or "XN--")
     idns = [tld for tld in tlds if tld.upper().startswith("XN--")]

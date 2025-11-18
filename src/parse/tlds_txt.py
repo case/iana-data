@@ -3,10 +3,34 @@
 import logging
 from pathlib import Path
 
+from ..config import SOURCE_DIR, SOURCE_FILES
+
 logger = logging.getLogger(__name__)
 
 
-def parse_tlds_file(content: str) -> list[str]:
+def parse_tlds_txt(filepath: Path | None = None) -> list[str]:
+    """
+    Parse the IANA TLDs text file.
+
+    Args:
+        filepath: Path to the TLDs text file (defaults to configured location)
+
+    Returns:
+        List of TLDs (stripped, in original case)
+    """
+    if filepath is None:
+        filepath = Path(SOURCE_DIR) / SOURCE_FILES["TLD_LIST"]
+
+    try:
+        content = filepath.read_text()
+    except OSError as e:
+        logger.error("Error reading TLDs text file from %s: %s", filepath, e)
+        return []
+
+    return _parse_tlds_content(content)
+
+
+def _parse_tlds_content(content: str) -> list[str]:
     """
     Parse a TLDs file, filtering out comments and empty lines.
 
@@ -45,7 +69,7 @@ def tlds_txt_content_changed(filepath: Path, new_content: str) -> bool:
         return True
 
     # Parse new content
-    new_tlds = parse_tlds_file(new_content)
+    new_tlds = _parse_tlds_content(new_content)
 
     # Parse existing content
     try:
@@ -54,7 +78,7 @@ def tlds_txt_content_changed(filepath: Path, new_content: str) -> bool:
         logger.error("Error reading existing TLDs file from %s: %s", filepath, e)
         return True  # Treat as changed if we can't read existing file
 
-    existing_tlds = parse_tlds_file(existing_content)
+    existing_tlds = _parse_tlds_content(existing_content)
 
     # Only consider changed if actual TLD list differs
     if new_tlds == existing_tlds:
