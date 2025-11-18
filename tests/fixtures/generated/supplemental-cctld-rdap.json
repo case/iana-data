@@ -1,0 +1,36 @@
+{
+  "ccTldRdapServers": [
+    {
+      "tld": "ch",
+      "rdapServer": "https://rdap.nic.ch/",
+      "backendOperator": "SWITCH",
+      "dateUpdated": "2022-01-15",
+      "source": "https://www.nic.ch/whois/rdap/",
+      "notes": "Test note"
+    },
+    {
+      "tld": "de",
+      "rdapServer": "https://rdap.denic.de/",
+      "backendOperator": "DENIC",
+      "dateUpdated": "2021-11-30",
+      "source": "https://www.denic.de/en/content-pool/rdap-master",
+      "notes": ""
+    },
+    {
+      "tld": "li",
+      "rdapServer": "https://rdap.nic.li/",
+      "backendOperator": "SWITCH",
+      "dateUpdated": "2022-01-15",
+      "source": "https://www.nic.li/whois/rdap/",
+      "notes": ""
+    },
+    {
+      "tld": "io",
+      "rdapServer": "https://rdap.identitydigital.services/rdap/",
+      "backendOperator": "Identity Digital",
+      "dateUpdated": "2024-04-30",
+      "source": "",
+      "notes": ""
+    }
+  ]
+}
