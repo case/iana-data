@@ -2,14 +2,15 @@
 """Command-line interface for IANA data ETL."""
 
 import argparse
+import json
 import logging
 import sys
 from pathlib import Path
 
 from .analyze import analyze_rdap_json, analyze_root_db_html, analyze_tlds_txt
 from .build import build_tlds_json
-from .config import IANA_URLS, SOURCE_DIR, SOURCE_FILES, setup_logging
-from .utilities import download_iana_files
+from .config import IANA_URLS, SOURCE_DIR, SOURCE_FILES, TLDS_OUTPUT_FILE, setup_logging
+from .utilities import download_iana_files, download_tld_pages
 
 logger = logging.getLogger(__name__)
 
@@ -47,6 +48,17 @@ def main() -> int:
         "--build",
         action="store_true",
         help="Build enhanced TLD data file (tlds.json)",
+    )
+
+    parser.add_argument(
+        "--download-tld-pages",
+        nargs="*",
+        metavar="PREFIX",
+        help=(
+            "Download individual TLD detail pages from IANA. "
+            "Specify prefixes to filter (e.g., 'a b c' for TLDs starting with a, b, or c), "
+            "or omit to download all TLD pages."
+        ),
     )
 
     args = parser.parse_args()
@@ -149,6 +161,58 @@ def main() -> int:
         logger.info("Build complete:")
         logger.info("  Total TLDs: %d", result["total_tlds"])
         logger.info("  Output file: %s", result.get("output_file"))
+        return 0
+
+    if getattr(args, "download_tld_pages", None) is not None:
+        # Load TLD list from tlds.json
+        tlds_json_path = Path(TLDS_OUTPUT_FILE)
+        if not tlds_json_path.exists():
+            logger.error("tlds.json not found at %s. Run --build first.", TLDS_OUTPUT_FILE)
+            return 1
+
+        try:
+            with open(tlds_json_path) as f:
+                data = json.load(f)
+            all_tlds = [entry["tld"] for entry in data["tlds"]]
+        except (json.JSONDecodeError, OSError, KeyError) as e:
+            logger.error("Error reading tlds.json: %s", e)
+            return 1
+
+        # Filter TLDs by prefix if specified
+        prefixes = args.download_tld_pages
+        if prefixes:
+            # Normalize prefixes to lowercase
+            prefixes = [p.lower() for p in prefixes]
+            tlds_to_download = [
+                tld for tld in all_tlds
+                if tld.lower().startswith(tuple(prefixes))
+            ]
+            logger.info(
+                "Downloading TLD pages for prefixes: %s (%d TLDs)",
+                ", ".join(prefixes),
+                len(tlds_to_download),
+            )
+        else:
+            tlds_to_download = all_tlds
+            logger.info("Downloading all TLD pages (%d TLDs)...", len(tlds_to_download))
+
+        if not tlds_to_download:
+            logger.warning("No TLDs match the specified prefixes")
+            return 0
+
+        # Perform download
+        results = download_tld_pages(tlds_to_download)
+
+        # Report results
+        downloaded = sum(1 for status in results.values() if status == "downloaded")
+        errors = sum(1 for status in results.values() if status == "error")
+
+        logger.info("Download complete:")
+        logger.info("  Downloaded: %d", downloaded)
+        if errors:
+            logger.error("  Errors: %d", errors)
+            return 1
+
         return 0
 
     # No arguments provided

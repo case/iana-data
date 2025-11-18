@@ -19,3 +19,10 @@ def fast_retries():
 
     with patch("src.utilities.download.make_request_with_retry", fast_request):
         yield
+
+
+@pytest.fixture(autouse=True)
+def no_sleep_delays():
+    """Disable rate limiting delays in tests for speed."""
+    with patch("src.utilities.download.time.sleep"):
+        yield

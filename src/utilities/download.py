@@ -2,7 +2,7 @@
 
 import json
 import logging
-from datetime import datetime, timezone
+import time
 from pathlib import Path
 
 import httpx
@@ -10,7 +10,7 @@ import httpx
 from ..config import IANA_URLS, SOURCE_DIR, SOURCE_FILES, TLDS_OUTPUT_FILE
 from ..parse import extract_main_content, tlds_txt_content_changed
 from .cache import is_cache_fresh, parse_cache_control_max_age
-from .metadata import load_metadata, save_metadata
+from .metadata import load_metadata, save_metadata, utc_timestamp
 from .urls import get_tld_file_path, get_tld_page_url
 from .retry import make_request_with_retry
 
@@ -48,7 +48,7 @@ def download_iana_files() -> dict[str, str]:
                 # Update last_checked even for cache-fresh files
                 if key not in metadata:
                     metadata[key] = {}
-                metadata[key]["last_checked"] = datetime.now(timezone.utc).isoformat()
+                metadata[key]["last_checked"] = utc_timestamp()
                 continue
 
             # Prepare conditional request headers
@@ -69,7 +69,7 @@ def download_iana_files() -> dict[str, str]:
                     metadata[key]["headers"] = {}
 
                 # Always update last_checked timestamp
-                metadata[key]["last_checked"] = datetime.now(timezone.utc).isoformat()
+                metadata[key]["last_checked"] = utc_timestamp()
 
                 if response.status_code == 304:
                     # Not modified
@@ -79,6 +79,15 @@ def download_iana_files() -> dict[str, str]:
                     if key == "TLD_LIST" and not tlds_txt_content_changed(filepath, response.text):
                         results[key] = "not_modified"
                         continue
+
+                    # Check if content actually changed (for tracking last_changed)
+                    content_changed = True
+                    if filepath.exists():
+                        try:
+                            existing_content = filepath.read_bytes()
+                            content_changed = existing_content != response.content
+                        except OSError:
+                            pass  # Treat as changed if we can't read existing file
 
                     # Download successful, save file
                     with open(filepath, "wb") as f:
@@ -98,7 +107,11 @@ def download_iana_files() -> dict[str, str]:
                             metadata[key]["headers"]["cache_max_age"] = str(max_age)
 
                     # Update last_downloaded timestamp
-                    metadata[key]["last_downloaded"] = datetime.now(timezone.utc).isoformat()
+                    metadata[key]["last_downloaded"] = utc_timestamp()
+
+                    # Update last_changed only when content actually changed
+                    if content_changed:
+                        metadata[key]["last_changed"] = utc_timestamp()
 
                     results[key] = "downloaded"
                 else:
@@ -116,6 +129,7 @@ def download_iana_files() -> dict[str, str]:
 def download_tld_pages(
     tlds: list[str] | None = None,
     base_dir: Path | None = None,
+    delay: float = 1.0,
 ) -> dict[str, str]:
     """
     Download TLD detail pages from IANA.
@@ -123,6 +137,7 @@ def download_tld_pages(
     Args:
         tlds: List of TLDs to download. If None, downloads all TLDs from tlds.json
         base_dir: Base directory for storing pages. Defaults to data/source/tld-pages
+        delay: Seconds to wait between requests to avoid hammering server (default: 1.0)
 
     Returns:
         Dict mapping TLD to status: "downloaded", "error"
@@ -148,16 +163,13 @@ def download_tld_pages(
     # Load metadata
     metadata = load_metadata()
 
-    # Track download statistics
-    successful_downloads = 0
-    failed_downloads = 0
     results: dict[str, str] = {}
 
     # Update last_checked timestamp
-    checked_time = datetime.now(timezone.utc).isoformat()
+    checked_time = utc_timestamp()
 
     with httpx.Client(timeout=30.0, follow_redirects=True) as client:
-        for tld in tlds:
+        for i, tld in enumerate(tlds):
             url = get_tld_page_url(tld)
             file_path = get_tld_file_path(tld, base_dir)
 
@@ -190,24 +202,22 @@ def download_tld_pages(
                         logger.info("  → %s (fallback)", fallback_path)
 
                     results[tld] = "downloaded"
-                    successful_downloads += 1
                 else:
                     logger.error("HTTP %d for %s", response.status_code, tld)
                     results[tld] = "error"
-                    failed_downloads += 1
 
             except Exception as e:
                 logger.error("Error downloading %s: %s", tld, e)
                 results[tld] = "error"
-                failed_downloads += 1
+
+            # Rate limiting: wait between requests (skip after last item)
+            if delay > 0 and i < len(tlds) - 1:
+                time.sleep(delay)
 
     # Update metadata with TLD_HTML entry
     metadata["TLD_HTML"] = {
         "last_checked": checked_time,
-        "last_downloaded": datetime.now(timezone.utc).isoformat(),
-        "total_tlds": len(tlds),
-        "successful_downloads": successful_downloads,
-        "failed_downloads": failed_downloads,
+        "last_downloaded": utc_timestamp(),
     }
 
     # Save metadata

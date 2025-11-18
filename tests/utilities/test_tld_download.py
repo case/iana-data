@@ -556,9 +556,6 @@ def test_download_tld_pages_creates_metadata_entry(tmp_path):
         assert "TLD_HTML" in metadata
         assert "last_downloaded" in metadata["TLD_HTML"]
         assert "last_checked" in metadata["TLD_HTML"]
-        assert metadata["TLD_HTML"]["total_tlds"] == 1
-        assert metadata["TLD_HTML"]["successful_downloads"] == 1
-        assert metadata["TLD_HTML"]["failed_downloads"] == 0
 
 
 def test_download_tld_pages_updates_metadata_entry(tmp_path):
@@ -579,9 +576,6 @@ def test_download_tld_pages_updates_metadata_entry(tmp_path):
         "TLD_HTML": {
             "last_downloaded": "2025-01-01T00:00:00Z",
             "last_checked": "2025-01-01T00:00:00Z",
-            "total_tlds": 0,
-            "successful_downloads": 0,
-            "failed_downloads": 0,
         }
     }
     with open(metadata_file, "w") as f:
@@ -604,46 +598,3 @@ def test_download_tld_pages_updates_metadata_entry(tmp_path):
             metadata = json.load(f)
 
         assert metadata["TLD_HTML"]["last_downloaded"] != "2025-01-01T00:00:00Z"
-        assert metadata["TLD_HTML"]["total_tlds"] == 2
-        assert metadata["TLD_HTML"]["successful_downloads"] == 2
-        assert metadata["TLD_HTML"]["failed_downloads"] == 0
-
-
-def test_download_tld_pages_tracks_failures_in_metadata(tmp_path):
-    """Test that download tracks both successes and failures in metadata."""
-    fixture_file = FIXTURES_DIR / "c" / "com.html"
-    full_html = fixture_file.read_text()
-
-    def mock_get(url, headers=None):
-        # com succeeds, net fails
-        if "com.html" in url:
-            response = Mock(spec=httpx.Response)
-            response.status_code = 200
-            response.text = full_html
-            return response
-        else:
-            response = Mock(spec=httpx.Response)
-            response.status_code = 404
-            response.text = "Not Found"
-            return response
-
-    metadata_file = tmp_path / "metadata.json"
-
-    with (
-        patch("httpx.Client") as mock_client,
-        patch("src.utilities.metadata.METADATA_FILE", str(metadata_file)),
-    ):
-        mock_client.return_value.__enter__.return_value.get = mock_get
-
-        results = download_tld_pages(["com", "net"], base_dir=tmp_path)
-
-        assert results["com"] == "downloaded"
-        assert results["net"] == "error"
-
-        # Check metadata tracks both
-        with open(metadata_file) as f:
-            metadata = json.load(f)
-
-        assert metadata["TLD_HTML"]["total_tlds"] == 2
-        assert metadata["TLD_HTML"]["successful_downloads"] == 1
-        assert metadata["TLD_HTML"]["failed_downloads"] == 1
