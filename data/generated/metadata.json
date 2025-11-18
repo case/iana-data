@@ -1,24 +1,29 @@
 {
   "RDAP_BOOTSTRAP": {
-    "last_checked": "2025-11-18T03:52:00.214253+00:00",
+    "last_checked": "2025-11-18T22:28:06Z",
     "headers": {
       "etag": "\"1182e-642f50662aab6-gzip\"",
       "last_modified": "Thu, 06 Nov 2025 23:00:01 GMT"
     }
   },
   "TLD_LIST": {
-    "last_checked": "2025-11-18T03:52:00.222748+00:00",
+    "last_checked": "2025-11-18T22:28:06Z",
     "headers": {
       "etag": "\"2548-643b0e096fc2a\"",
       "last_modified": "Sun, 16 Nov 2025 07:07:01 GMT"
     }
   },
   "ROOT_ZONE_DB": {
-    "last_checked": "2025-11-18T03:52:00.223401+00:00",
-    "last_downloaded": "2025-11-18T03:41:26.598612+00:00",
+    "last_checked": "2025-11-18T22:28:06Z",
+    "last_downloaded": "2025-11-18T20:23:07Z",
+    "last_changed": "2025-11-18T20:23:07Z",
     "headers": {
       "cache_control": "public, max-age=21603",
       "cache_max_age": "21603"
     }
+  },
+  "TLD_HTML": {
+    "last_checked": "2025-11-18T22:27:56Z",
+    "last_downloaded": "2025-11-18T22:27:56Z"
   }
 }

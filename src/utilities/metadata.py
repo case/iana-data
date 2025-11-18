@@ -2,10 +2,20 @@
 
 import json
 import logging
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Final
 
 logger = logging.getLogger(__name__)
+
+
+def utc_timestamp() -> str:
+    """Generate a UTC timestamp with second precision.
+
+    Returns:
+        Timestamp string in format: 2025-11-18T20:23:07Z
+    """
+    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 GENERATED_DIR: Final[str] = "data/generated"
 METADATA_FILE: Final[str] = f"{GENERATED_DIR}/metadata.json"
