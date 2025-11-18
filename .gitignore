@@ -69,3 +69,4 @@ cython_debug/
 
 # Project-specific
 data/generated/tlds.json
+/temp/**
