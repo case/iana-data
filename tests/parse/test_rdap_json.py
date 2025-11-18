@@ -8,35 +8,40 @@ FIXTURES_DIR = Path(__file__).parent.parent / "fixtures" / "source"
 
 
 def test_parse_rdap_json_total_tlds():
-    """Test that parse_rdap_json correctly counts total TLDs."""
+    """Test that parse_rdap_json returns TLD lookup map."""
     fixture_path = FIXTURES_DIR / "rdap.json"
 
-    results = parse_rdap_json(fixture_path)
+    rdap_lookup = parse_rdap_json(fixture_path)
 
-    # Total TLDs in the fixture
-    assert results["total_tlds"] == 56
+    # Count total TLDs in the fixture
+    assert len(rdap_lookup) == 56
 
 
 def test_parse_rdap_json_unique_servers():
-    """Test that parse_rdap_json correctly counts unique RDAP servers."""
+    """Test that parse_rdap_json returns lookup with correct unique servers."""
     fixture_path = FIXTURES_DIR / "rdap.json"
 
-    results = parse_rdap_json(fixture_path)
+    rdap_lookup = parse_rdap_json(fixture_path)
 
-    # Unique RDAP servers
-    assert results["unique_servers"] == 11
+    # Count unique RDAP servers
+    unique_servers = set(rdap_lookup.values())
+
+    assert len(unique_servers) == 11
 
 
 def test_parse_rdap_json_server_list():
-    """Test that parse_rdap_json returns the list of unique servers."""
+    """Test that parse_rdap_json returns lookup with specific servers."""
     fixture_path = FIXTURES_DIR / "rdap.json"
 
-    results = parse_rdap_json(fixture_path)
+    rdap_lookup = parse_rdap_json(fixture_path)
+
+    # Collect all servers
+    all_servers = set(rdap_lookup.values())
 
     # Check some specific servers are in the list
-    assert "https://pubapi.registry.google/rdap/" in results["servers"]
-    assert "https://rdap.iana.org/" in results["servers"]
-    assert "https://rdap.centralnic.com/biz/" in results["servers"]
+    assert "https://pubapi.registry.google/rdap/" in all_servers
+    assert "https://rdap.iana.org/" in all_servers
+    assert "https://rdap.centralnic.com/biz/" in all_servers
 
-    # Verify it's returning unique servers
-    assert len(results["servers"]) == results["unique_servers"]
+    # Verify count
+    assert len(all_servers) == 11

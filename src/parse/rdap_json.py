@@ -3,36 +3,34 @@
 import json
 from pathlib import Path
 
+from ..config import SOURCE_DIR, SOURCE_FILES
 
-def parse_rdap_json(filepath: Path) -> dict:
+
+def parse_rdap_json(filepath: Path | None = None) -> dict[str, str]:
     """
-    Parse the RDAP Bootstrap JSON file.
+    Parse the RDAP Bootstrap JSON file into a TLD lookup map.
 
     Args:
-        filepath: Path to the RDAP JSON file
+        filepath: Path to the RDAP JSON file (defaults to configured location)
 
     Returns:
-        Dict with analysis results:
-        - total_tlds: Total number of TLDs in RDAP bootstrap
-        - unique_servers: Count of unique RDAP servers
-        - servers: List of unique RDAP server URLs
+        dict: Map of TLD (ASCII, without leading dot) to RDAP server URL
     """
+    if filepath is None:
+        filepath = Path(SOURCE_DIR) / SOURCE_FILES["RDAP_BOOTSTRAP"]
     content = filepath.read_text()
     data = json.loads(content)
 
-    total_tlds = 0
-    unique_servers = set()
-
-    # Process each service entry
-    for service in data["services"]:
+    rdap_map = {}
+    for service in data.get("services", []):
         tlds = service[0]
         servers = service[1]
+        # Use first server for each TLD
+        server_url = servers[0] if servers else None
+        if server_url:
+            for tld in tlds:
+                # Remove leading dot if present
+                clean_tld = tld.lstrip(".")
+                rdap_map[clean_tld] = server_url
 
-        total_tlds += len(tlds)
-        unique_servers.update(servers)
-
-    return {
-        "total_tlds": total_tlds,
-        "unique_servers": len(unique_servers),
-        "servers": sorted(unique_servers),
-    }
+    return rdap_map

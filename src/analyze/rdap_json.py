@@ -23,10 +23,14 @@ def analyze_rdap_json(filepath: Path) -> int:
         logger.info("Run --download first to fetch the data files")
         return 1
 
-    results = parse_rdap_json(filepath)
+    rdap_lookup = parse_rdap_json(filepath)
+
+    # Compute statistics
+    total_tlds = len(rdap_lookup)
+    unique_servers = set(rdap_lookup.values())
 
     logger.info("\033[1mRDAP Bootstrap Analysis:\033[0m")
-    logger.info("  Total TLDs: %d", results["total_tlds"])
-    logger.info("  Unique RDAP Servers: %d", results["unique_servers"])
+    logger.info("  Total TLDs: %d", total_tlds)
+    logger.info("  Unique RDAP Servers: %d", len(unique_servers))
 
     return 0
