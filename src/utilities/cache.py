@@ -25,16 +25,19 @@ def is_cache_fresh(metadata_entry: dict[str, str]) -> bool:
     Check if cached file is still fresh based on Cache-Control.
 
     Args:
-        metadata_entry: Metadata dict containing download_timestamp and cache_max_age
+        metadata_entry: Metadata dict containing last_downloaded and headers.cache_max_age
 
     Returns:
         True if cache is still fresh, False otherwise
     """
-    if "download_timestamp" not in metadata_entry or "cache_max_age" not in metadata_entry:
+    if "last_downloaded" not in metadata_entry:
         return False
 
-    download_time = datetime.fromisoformat(metadata_entry["download_timestamp"])
-    max_age = int(metadata_entry["cache_max_age"])
+    if "headers" not in metadata_entry or "cache_max_age" not in metadata_entry["headers"]:
+        return False
+
+    download_time = datetime.fromisoformat(metadata_entry["last_downloaded"])
+    max_age = int(metadata_entry["headers"]["cache_max_age"])
 
     # Calculate age in seconds
     age = (datetime.now(timezone.utc) - download_time).total_seconds()

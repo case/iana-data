@@ -42,18 +42,31 @@ def download_iana_files() -> dict[str, str]:
             if key in metadata and is_cache_fresh(metadata[key]):
                 results[key] = "not_modified"
                 logger.info("Cache still fresh for %s", key)
+                # Update last_checked even for cache-fresh files
+                if key not in metadata:
+                    metadata[key] = {}
+                metadata[key]["last_checked"] = datetime.now(timezone.utc).isoformat()
                 continue
 
             # Prepare conditional request headers
             headers: dict[str, str] = {}
-            if key in metadata:
-                if "etag" in metadata[key]:
-                    headers["If-None-Match"] = metadata[key]["etag"]
-                if "last_modified" in metadata[key]:
-                    headers["If-Modified-Since"] = metadata[key]["last_modified"]
+            if key in metadata and "headers" in metadata[key]:
+                if "etag" in metadata[key]["headers"]:
+                    headers["If-None-Match"] = metadata[key]["headers"]["etag"]
+                if "last_modified" in metadata[key]["headers"]:
+                    headers["If-Modified-Since"] = metadata[key]["headers"]["last_modified"]
 
             try:
                 response = client.get(url, headers=headers)
+
+                # Initialize metadata entry if needed
+                if key not in metadata:
+                    metadata[key] = {}
+                if "headers" not in metadata[key]:
+                    metadata[key]["headers"] = {}
+
+                # Always update last_checked timestamp
+                metadata[key]["last_checked"] = datetime.now(timezone.utc).isoformat()
 
                 if response.status_code == 304:
                     # Not modified
@@ -68,22 +81,21 @@ def download_iana_files() -> dict[str, str]:
                     with open(filepath, "wb") as f:
                         f.write(response.content)
 
-                    # Update metadata
-                    if key not in metadata:
-                        metadata[key] = {}
-
+                    # Update metadata with response headers
                     if "etag" in response.headers:
-                        metadata[key]["etag"] = response.headers["etag"]
+                        metadata[key]["headers"]["etag"] = response.headers["etag"]
                     if "last-modified" in response.headers:
-                        metadata[key]["last_modified"] = response.headers["last-modified"]
+                        metadata[key]["headers"]["last_modified"] = response.headers["last-modified"]
 
                     # Handle Cache-Control header
                     if "cache-control" in response.headers:
                         max_age = parse_cache_control_max_age(response.headers["cache-control"])
                         if max_age:
-                            metadata[key]["cache_control"] = response.headers["cache-control"]
-                            metadata[key]["cache_max_age"] = str(max_age)
-                            metadata[key]["download_timestamp"] = datetime.now(timezone.utc).isoformat()
+                            metadata[key]["headers"]["cache_control"] = response.headers["cache-control"]
+                            metadata[key]["headers"]["cache_max_age"] = str(max_age)
+
+                    # Update last_downloaded timestamp
+                    metadata[key]["last_downloaded"] = datetime.now(timezone.utc).isoformat()
 
                     results[key] = "downloaded"
                 else:
