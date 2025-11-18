@@ -2,7 +2,7 @@
 
 from pathlib import Path
 
-from src.parse.root_db_html import parse_root_db_html
+from src.parse.root_db_html import derive_type_from_iana_tag, parse_root_db_html
 
 FIXTURES_DIR = Path(__file__).parent.parent / "fixtures" / "source"
 
@@ -151,3 +151,39 @@ def test_parse_root_db_html_delegation_status():
     assert entries_by_domain[".abarth"]["delegated"] is False
     assert entries_by_domain[".active"]["delegated"] is False
     assert entries_by_domain[".zippo"]["delegated"] is False
+
+
+def test_derive_type_from_iana_tag_country_code():
+    """Test that derive_type_from_iana_tag returns cctld for country-code."""
+    result = derive_type_from_iana_tag("country-code")
+    assert result == "cctld"
+
+
+def test_derive_type_from_iana_tag_generic():
+    """Test that derive_type_from_iana_tag returns gtld for generic."""
+    result = derive_type_from_iana_tag("generic")
+    assert result == "gtld"
+
+
+def test_derive_type_from_iana_tag_sponsored():
+    """Test that derive_type_from_iana_tag returns gtld for sponsored."""
+    result = derive_type_from_iana_tag("sponsored")
+    assert result == "gtld"
+
+
+def test_derive_type_from_iana_tag_infrastructure():
+    """Test that derive_type_from_iana_tag returns gtld for infrastructure."""
+    result = derive_type_from_iana_tag("infrastructure")
+    assert result == "gtld"
+
+
+def test_derive_type_from_iana_tag_generic_restricted():
+    """Test that derive_type_from_iana_tag returns gtld for generic-restricted."""
+    result = derive_type_from_iana_tag("generic-restricted")
+    assert result == "gtld"
+
+
+def test_derive_type_from_iana_tag_test():
+    """Test that derive_type_from_iana_tag returns gtld for test."""
+    result = derive_type_from_iana_tag("test")
+    assert result == "gtld"

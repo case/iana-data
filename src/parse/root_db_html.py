@@ -101,3 +101,18 @@ def parse_root_db_html(filepath: Path | None = None) -> list[dict]:
     parser.feed(content)
 
     return parser.entries
+
+
+def derive_type_from_iana_tag(iana_tag: str) -> str:
+    """
+    Derive simplified type from IANA tag.
+
+    Args:
+        iana_tag: IANA tag value (e.g., "generic", "country-code")
+
+    Returns:
+        str: Either "gtld" or "cctld"
+    """
+    if iana_tag == "country-code":
+        return "cctld"
+    return "gtld"
