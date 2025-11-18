@@ -10,6 +10,14 @@ download:
 analyze:
 	uv run python -m src.cli --analyze
 
+.PHONY: lint
+lint:
+	uv run ruff check src/ tests/
+
 .PHONY: test
-test:
+test: lint
 	uv run pytest
+
+.PHONY: coverage
+coverage: lint
+	uv run pytest --cov=src --cov-report=term-missing
