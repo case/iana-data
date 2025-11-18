@@ -8,6 +8,7 @@ from tenacity import (
     retry_if_exception_type,
     stop_after_attempt,
     wait_exponential,
+    wait_none,
 )
 
 logger = logging.getLogger(__name__)
@@ -54,9 +55,15 @@ def make_request_with_retry(
         ServerError: After retries exhausted for 5xx errors
     """
 
+    # Use no wait in tests (when min_wait=0) for speed
+    if min_wait == 0:
+        wait_strategy = wait_none()
+    else:
+        wait_strategy = wait_exponential(multiplier=1, min=min_wait, max=max_wait)
+
     @retry(
         stop=stop_after_attempt(max_attempts),
-        wait=wait_exponential(multiplier=1, min=min_wait, max=max_wait),
+        wait=wait_strategy,
         retry=retry_if_exception_type(
             (httpx.ConnectError, httpx.TimeoutException, ServerError)
         ),
