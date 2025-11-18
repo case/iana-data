@@ -2,9 +2,13 @@
 deps:
 	uv sync
 
-.PHONY: download
-download:
+.PHONY: download-core
+download-core:
 	uv run python -m src.cli --download
+
+.PHONY: download-tld-pages
+download-tld-pages:
+	uv run python -m src.cli --download-tld-pages
 
 .PHONY: analyze
 analyze:
@@ -18,8 +22,12 @@ build:
 lint:
 	uv run ruff check src/ tests/
 
+.PHONY: typecheck
+typecheck:
+	uv run pyright src/
+
 .PHONY: test
-test: lint
+test: lint typecheck
 	uv run pytest
 
 .PHONY: coverage
