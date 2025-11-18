@@ -10,6 +10,7 @@ from ..config import IANA_URLS, SOURCE_DIR, SOURCE_FILES
 from ..parse import tlds_txt_content_changed
 from .cache import is_cache_fresh, parse_cache_control_max_age
 from .metadata import load_metadata, save_metadata
+from .retry import make_request_with_retry
 
 logger = logging.getLogger(__name__)
 
@@ -57,7 +58,7 @@ def download_iana_files() -> dict[str, str]:
                     headers["If-Modified-Since"] = metadata[key]["headers"]["last_modified"]
 
             try:
-                response = client.get(url, headers=headers)
+                response = make_request_with_retry(client, url, headers=headers)
 
                 # Initialize metadata entry if needed
                 if key not in metadata:
