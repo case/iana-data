@@ -1,15 +1,17 @@
 """Download utilities for IANA data files."""
 
+import json
 import logging
 from datetime import datetime, timezone
 from pathlib import Path
 
 import httpx
 
-from ..config import IANA_URLS, SOURCE_DIR, SOURCE_FILES
-from ..parse import tlds_txt_content_changed
+from ..config import IANA_URLS, SOURCE_DIR, SOURCE_FILES, TLDS_OUTPUT_FILE
+from ..parse import extract_main_content, tlds_txt_content_changed
 from .cache import is_cache_fresh, parse_cache_control_max_age
 from .metadata import load_metadata, save_metadata
+from .urls import get_tld_file_path, get_tld_page_url
 from .retry import make_request_with_retry
 
 logger = logging.getLogger(__name__)
@@ -106,6 +108,109 @@ def download_iana_files() -> dict[str, str]:
                 results[key] = "error"
 
     # Save updated metadata
+    save_metadata(metadata)
+
+    return results
+
+
+def download_tld_pages(
+    tlds: list[str] | None = None,
+    base_dir: Path | None = None,
+) -> dict[str, str]:
+    """
+    Download TLD detail pages from IANA.
+
+    Args:
+        tlds: List of TLDs to download. If None, downloads all TLDs from tlds.json
+        base_dir: Base directory for storing pages. Defaults to data/source/tld-pages
+
+    Returns:
+        Dict mapping TLD to status: "downloaded", "error"
+    """
+    if base_dir is None:
+        base_dir = Path("data/source/tld-pages")
+
+    # Get TLD list if not provided
+    if tlds is None:
+        tlds_json_path = Path(TLDS_OUTPUT_FILE)
+        if tlds_json_path.exists():
+            try:
+                with open(tlds_json_path) as f:
+                    data = json.load(f)
+                tlds = [entry["tld"] for entry in data["tlds"]]
+            except (json.JSONDecodeError, OSError, KeyError) as e:
+                logger.error("Error reading tlds.json: %s", e)
+                return {}
+        else:
+            logger.error("tlds.json not found at %s. Run build first.", TLDS_OUTPUT_FILE)
+            return {}
+
+    # Load metadata
+    metadata = load_metadata()
+
+    # Track download statistics
+    successful_downloads = 0
+    failed_downloads = 0
+    results: dict[str, str] = {}
+
+    # Update last_checked timestamp
+    checked_time = datetime.now(timezone.utc).isoformat()
+
+    with httpx.Client(timeout=30.0, follow_redirects=True) as client:
+        for tld in tlds:
+            url = get_tld_page_url(tld)
+            file_path = get_tld_file_path(tld, base_dir)
+
+            try:
+                logger.info("Downloading %s...", tld)
+                response = make_request_with_retry(client, url)
+
+                if response.status_code == 200:
+                    # Extract main content
+                    main_content = extract_main_content(response.text)
+
+                    # Create directory if needed
+                    file_path.parent.mkdir(parents=True, exist_ok=True)
+
+                    if main_content:
+                        # Save extracted main content
+                        with open(file_path, "w", encoding="utf-8") as f:
+                            f.write(main_content)
+                        logger.info("  → %s", file_path)
+                    else:
+                        # Fallback: save full HTML if main content extraction fails
+                        fallback_path = file_path.with_stem(f"{file_path.stem}-full")
+                        logger.warning(
+                            "No <main> content found for %s, saving full HTML as fallback to %s",
+                            tld,
+                            fallback_path,
+                        )
+                        with open(fallback_path, "w", encoding="utf-8") as f:
+                            f.write(response.text)
+                        logger.info("  → %s (fallback)", fallback_path)
+
+                    results[tld] = "downloaded"
+                    successful_downloads += 1
+                else:
+                    logger.error("HTTP %d for %s", response.status_code, tld)
+                    results[tld] = "error"
+                    failed_downloads += 1
+
+            except Exception as e:
+                logger.error("Error downloading %s: %s", tld, e)
+                results[tld] = "error"
+                failed_downloads += 1
+
+    # Update metadata with TLD_HTML entry
+    metadata["TLD_HTML"] = {
+        "last_checked": checked_time,
+        "last_downloaded": datetime.now(timezone.utc).isoformat(),
+        "total_tlds": len(tlds),
+        "successful_downloads": successful_downloads,
+        "failed_downloads": failed_downloads,
+    }
+
+    # Save metadata
     save_metadata(metadata)
 
     return results
