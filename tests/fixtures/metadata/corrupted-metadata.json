@@ -1,0 +1,8 @@
+{
+  "RDAP_BOOTSTRAP": {
+    "last_downloaded": "2025-11-18T10:00:00Z",
+    "headers": {
+      "etag": "abc123"
+    }
+  },
+  invalid json here without proper closing

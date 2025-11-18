@@ -1,0 +1,20 @@
+{
+  "RDAP_BOOTSTRAP": {
+    "last_downloaded": "2025-11-18T16:00:00Z",
+    "headers": {
+      "cache_max_age": "21600"
+    }
+  },
+  "TLD_LIST": {
+    "last_downloaded": "2025-11-18T16:00:00Z",
+    "headers": {
+      "cache_max_age": "21600"
+    }
+  },
+  "ROOT_ZONE_DB": {
+    "last_downloaded": "2025-11-18T16:00:00Z",
+    "headers": {
+      "cache_max_age": "21600"
+    }
+  }
+}

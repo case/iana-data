@@ -1,0 +1,14 @@
+Last-Modified: Tue, 18 Nov 2025 07:07:01 GMT
+ETag: "2548-643d91c42ea78-gzip"
+Access-Control-Allow-Origin: *
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: origin-when-cross-origin
+Content-Type: text/plain; charset=UTF-8
+Strict-Transport-Security: max-age=48211200; preload
+Vary: Accept-Encoding
+Cache-Control: public, max-age=205, s-maxage=600
+Date: Tue, 18 Nov 2025 17:07:42 GMT
+Alt-Svc: h3=":443"; ma=93600,h3-29=":443"; ma=93600
+Content-Length: 9544
+Connection: close
+Akamai-Cache-Status: Hit from child

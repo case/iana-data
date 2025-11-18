@@ -1,0 +1,15 @@
+Last-Modified: Thu, 06 Nov 2025 23:00:01 GMT
+ETag: "1182e-642f50662aab6-gzip"
+Access-Control-Allow-Origin: *
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: origin-when-cross-origin
+Content-Type: application/json
+Strict-Transport-Security: max-age=48211200; preload
+Vary: Accept-Encoding
+Cache-Control: max-age=26389
+Date: Tue, 18 Nov 2025 17:07:40 GMT
+Alt-Svc: h3=":443"; ma=93600,h3-29=":443"; ma=93600
+Transfer-Encoding: chunked
+Connection: close
+Connection: Transfer-Encoding
+Akamai-Cache-Status: Hit from child

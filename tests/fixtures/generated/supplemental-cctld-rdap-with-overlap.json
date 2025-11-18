@@ -1,0 +1,28 @@
+{
+  "ccTldRdapServers": [
+    {
+      "tld": "ch",
+      "rdapServer": "https://rdap.nic.ch/",
+      "backendOperator": "SWITCH",
+      "dateUpdated": "2022-01-15",
+      "source": "https://www.nic.ch/whois/rdap/",
+      "notes": "Test note"
+    },
+    {
+      "tld": "aaa",
+      "rdapServer": "https://example.com/rdap/",
+      "backendOperator": "Test Operator",
+      "dateUpdated": "2024-01-01",
+      "source": "https://example.com/",
+      "notes": "This TLD is already in IANA RDAP - intentional overlap for testing"
+    },
+    {
+      "tld": "io",
+      "rdapServer": "https://rdap.identitydigital.services/rdap/",
+      "backendOperator": "Identity Digital",
+      "dateUpdated": "2024-04-30",
+      "source": "",
+      "notes": ""
+    }
+  ]
+}
