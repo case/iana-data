@@ -5,12 +5,21 @@ from pathlib import Path
 from unittest.mock import Mock, patch
 
 import httpx
+import pytest
 
 from src.parse import extract_main_content
 from src.utilities.download import download_tld_pages
 from src.utilities.urls import get_tld_file_path, get_tld_page_url
 
 FIXTURES_DIR = Path(__file__).parent.parent / "fixtures" / "source" / "tlds" / "html-full"
+
+
+@pytest.fixture(autouse=True)
+def isolate_metadata(tmp_path):
+    """Ensure all tests use isolated metadata file to prevent leaking to real metadata.json."""
+    metadata_file = tmp_path / "metadata.json"
+    with patch("src.utilities.metadata.METADATA_FILE", str(metadata_file)):
+        yield metadata_file
 
 
 def test_get_tld_page_url_regular_tld():
@@ -524,7 +533,7 @@ def test_download_tld_pages_uses_default_from_data(tmp_path):
         assert "net" in results
 
 
-def test_download_tld_pages_creates_metadata_entry(tmp_path):
+def test_download_tld_pages_creates_metadata_entry(tmp_path, isolate_metadata):
     """Test that download creates TLD_HTML metadata entry on first run."""
     fixture_file = FIXTURES_DIR / "c" / "com.html"
     full_html = fixture_file.read_text()
@@ -535,12 +544,7 @@ def test_download_tld_pages_creates_metadata_entry(tmp_path):
         response.text = full_html
         return response
 
-    metadata_file = tmp_path / "metadata.json"
-
-    with (
-        patch("httpx.Client") as mock_client,
-        patch("src.utilities.metadata.METADATA_FILE", str(metadata_file)),
-    ):
+    with patch("httpx.Client") as mock_client:
         mock_client.return_value.__enter__.return_value.get = mock_get
 
         # First download
@@ -549,8 +553,8 @@ def test_download_tld_pages_creates_metadata_entry(tmp_path):
         assert results["com"] == "downloaded"
 
         # Check metadata was created
-        assert metadata_file.exists()
-        with open(metadata_file) as f:
+        assert isolate_metadata.exists()
+        with open(isolate_metadata) as f:
             metadata = json.load(f)
 
         assert "TLD_HTML" in metadata
@@ -558,7 +562,7 @@ def test_download_tld_pages_creates_metadata_entry(tmp_path):
         assert "last_checked" in metadata["TLD_HTML"]
 
 
-def test_download_tld_pages_updates_metadata_entry(tmp_path):
+def test_download_tld_pages_updates_metadata_entry(tmp_path, isolate_metadata):
     """Test that download updates existing TLD_HTML metadata entry."""
     fixture_file = FIXTURES_DIR / "c" / "com.html"
     full_html = fixture_file.read_text()
@@ -569,8 +573,6 @@ def test_download_tld_pages_updates_metadata_entry(tmp_path):
         response.text = full_html
         return response
 
-    metadata_file = tmp_path / "metadata.json"
-
     # Create initial metadata
     initial_metadata = {
         "TLD_HTML": {
@@ -578,13 +580,10 @@ def test_download_tld_pages_updates_metadata_entry(tmp_path):
             "last_checked": "2025-01-01T00:00:00Z",
         }
     }
-    with open(metadata_file, "w") as f:
+    with open(isolate_metadata, "w") as f:
         json.dump(initial_metadata, f)
 
-    with (
-        patch("httpx.Client") as mock_client,
-        patch("src.utilities.metadata.METADATA_FILE", str(metadata_file)),
-    ):
+    with patch("httpx.Client") as mock_client:
         mock_client.return_value.__enter__.return_value.get = mock_get
 
         # Second download
@@ -594,7 +593,7 @@ def test_download_tld_pages_updates_metadata_entry(tmp_path):
         assert results["net"] == "downloaded"
 
         # Check metadata was updated
-        with open(metadata_file) as f:
+        with open(isolate_metadata) as f:
             metadata = json.load(f)
 
         assert metadata["TLD_HTML"]["last_downloaded"] != "2025-01-01T00:00:00Z"
