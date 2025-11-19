@@ -3,7 +3,7 @@
 import json
 from pathlib import Path
 
-from src.config import GENERATED_DIR, SOURCE_DIR, SOURCE_FILES, TLDS_OUTPUT_FILE
+from src.config import MANUAL_DIR, SOURCE_DIR, SOURCE_FILES, TLDS_OUTPUT_FILE
 from src.parse.rdap_json import parse_rdap_json
 from src.parse.root_db_html import parse_root_db_html
 from src.parse.supplemental_cctld_rdap import parse_supplemental_cctld_rdap
@@ -24,7 +24,7 @@ def test_supplemental_rdap_does_not_overlap_with_iana_rdap():
     iana_tlds = set(iana_rdap_lookup.keys())
 
     # Parse supplemental ccTLD RDAP data
-    supplemental_path = Path(GENERATED_DIR) / "supplemental-cctld-rdap.json"
+    supplemental_path = Path(MANUAL_DIR) / "supplemental-cctld-rdap.json"
     supplemental_lookup = parse_supplemental_cctld_rdap(supplemental_path)
     supplemental_tlds = set(supplemental_lookup.keys())
 
@@ -41,7 +41,7 @@ def test_supplemental_rdap_does_not_overlap_with_iana_rdap():
 
 def test_supplemental_rdap_file_exists():
     """Test that supplemental ccTLD RDAP file exists."""
-    supplemental_path = Path(GENERATED_DIR) / "supplemental-cctld-rdap.json"
+    supplemental_path = Path(MANUAL_DIR) / "supplemental-cctld-rdap.json"
     assert supplemental_path.exists(), (
         f"Supplemental ccTLD RDAP file not found at {supplemental_path}. "
         f"This file should exist in the repository."
@@ -50,7 +50,7 @@ def test_supplemental_rdap_file_exists():
 
 def test_supplemental_rdap_has_entries():
     """Test that supplemental ccTLD RDAP file has some entries."""
-    supplemental_path = Path(GENERATED_DIR) / "supplemental-cctld-rdap.json"
+    supplemental_path = Path(MANUAL_DIR) / "supplemental-cctld-rdap.json"
     supplemental_lookup = parse_supplemental_cctld_rdap(supplemental_path)
 
     assert len(supplemental_lookup) > 0, (

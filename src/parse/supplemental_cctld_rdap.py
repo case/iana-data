@@ -4,7 +4,7 @@ import json
 import logging
 from pathlib import Path
 
-from ..config import GENERATED_DIR
+from ..config import MANUAL_DIR
 
 logger = logging.getLogger(__name__)
 
@@ -22,7 +22,7 @@ def parse_supplemental_cctld_rdap(filepath: Path | None = None) -> dict[str, dic
             - source: Source URL where the RDAP server was found
     """
     if filepath is None:
-        filepath = Path(GENERATED_DIR) / "supplemental-cctld-rdap.json"
+        filepath = Path(MANUAL_DIR) / "supplemental-cctld-rdap.json"
 
     if not filepath.exists():
         return {}

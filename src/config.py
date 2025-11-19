@@ -18,6 +18,7 @@ SOURCE_FILES: Final[dict[str, str]] = {
     "ROOT_ZONE_DB": "iana-root.html",
 }
 
+MANUAL_DIR: Final[str] = "data/manual"
 GENERATED_DIR: Final[str] = "data/generated"
 TLDS_OUTPUT_FILE: Final[str] = f"{GENERATED_DIR}/tlds.json"
 

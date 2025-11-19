@@ -68,7 +68,7 @@ def test_parse_supplemental_cctld_rdap_missing_file():
 
 def test_parse_supplemental_cctld_rdap_default_path():
     """Test that parse_supplemental_cctld_rdap can use default path."""
-    # This will look in data/generated/supplemental-cctld-rdap.json
+    # This will look in data/manual/supplemental-cctld-rdap.json
     rdap_lookup = parse_supplemental_cctld_rdap()
 
     # Should return dict (may be empty if file doesn't exist, or populated if it does)
