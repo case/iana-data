@@ -67,6 +67,9 @@ cython_debug/
 # Ruff stuff:
 .ruff_cache/
 
+# Misc
+.DS_Store
+
 # Project-specific
 data/generated/tlds.json
 /temp/**
