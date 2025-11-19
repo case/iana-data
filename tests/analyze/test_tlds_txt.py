@@ -13,7 +13,7 @@ def test_get_tlds_analysis_baseline():
 
     results = get_tlds_analysis(fixture_path)
 
-    assert results["total"] == 22
+    assert results["total"] == 24
     assert results["idns"] == 5
 
 
@@ -24,7 +24,7 @@ def test_get_tlds_analysis_timestamp_only():
     results = get_tlds_analysis(fixture_path)
 
     # Should have same counts as baseline
-    assert results["total"] == 22
+    assert results["total"] == 24
     assert results["idns"] == 5
 
 
@@ -34,8 +34,8 @@ def test_get_tlds_analysis_new_content():
 
     results = get_tlds_analysis(fixture_path)
 
-    # Should have one more TLD than baseline (22 + 1 = 23)
-    assert results["total"] == 23
+    # Should have one more TLD than baseline (24 + 1 = 25)
+    assert results["total"] == 25
     # Same number of IDNs (HELLO is not an IDN)
     assert results["idns"] == 5
 

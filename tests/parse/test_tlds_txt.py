@@ -14,8 +14,8 @@ def test_parse_tlds_content_ignores_comments_and_empty_lines():
 
     tlds = _parse_tlds_content(content)
 
-    # Should have 22 TLDs (not counting the comment line or empty lines)
-    assert len(tlds) == 22
+    # Should have 24 TLDs (not counting the comment line or empty lines)
+    assert len(tlds) == 24
 
     # Should not contain any comments
     assert all(not tld.startswith("#") for tld in tlds)
@@ -108,8 +108,8 @@ def test_parse_tlds_txt_with_filepath():
 
     tlds = parse_tlds_txt(fixture_path)
 
-    # Should have 22 TLDs (not counting the comment line or empty lines)
-    assert len(tlds) == 22
+    # Should have 24 TLDs (not counting the comment line or empty lines)
+    assert len(tlds) == 24
 
     # Should not contain any comments
     assert all(not tld.startswith("#") for tld in tlds)
@@ -127,7 +127,7 @@ def test_parse_tlds_txt_without_normalize():
     tlds = parse_tlds_txt(fixture_path, normalize=False)
 
     # Should have 22 TLDs
-    assert len(tlds) == 22
+    assert len(tlds) == 24
 
     # Should contain TLDs in original uppercase
     assert "AAA" in tlds

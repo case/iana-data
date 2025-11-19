@@ -175,10 +175,18 @@ def main() -> int:
         if prefixes:
             # Normalize prefixes to lowercase
             prefixes = [p.lower() for p in prefixes]
-            tlds_to_download = [
-                tld for tld in all_tlds
-                if tld.lower().startswith(tuple(prefixes))
-            ]
+
+            # Special handling: if "x" is in prefixes but "xn--" is not,
+            # exclude xn-- TLDs from being matched by "x"
+            exclude_xn = "x" in prefixes and "xn--" not in prefixes
+
+            def matches_prefix(tld: str) -> bool:
+                tld_lower = tld.lower()
+                if exclude_xn and tld_lower.startswith("xn--"):
+                    return False
+                return tld_lower.startswith(tuple(prefixes))
+
+            tlds_to_download = [tld for tld in all_tlds if matches_prefix(tld)]
             logger.info(
                 "Downloading TLD pages for prefixes: %s (%d TLDs)",
                 ", ".join(prefixes),
