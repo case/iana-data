@@ -1,0 +1,85 @@
+name: Tests
+
+on:
+  workflow_dispatch: # Enables the web UI manual trigger
+  pull_request:
+    branches: [main]
+    paths:
+      - ".github/workflows/**"
+      - "pyproject.toml"
+      - "uv.lock"
+      - "data/manual/**"
+      - "src/**"
+      - "tests/**"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/**"
+      - "pyproject.toml"
+      - "uv.lock"
+      - "data/manual/**"
+      - "src/**"
+      - "tests/**"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  Tests:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5.0.0
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6.7.0
+        with:
+          enable-cache: true
+          version-file: "pyproject.toml"
+
+      - name: Install dependencies
+        run: make deps
+
+      - name: Run tests
+        run: |
+          set -o pipefail
+          make test 2>&1 | tee test-output.log
+
+      - name: Capture build logs
+        if: always()
+        run: |
+          echo "=== UV Version ===" > build-info.log
+          uv --version >> build-info.log
+          echo "\n=== Python Version ===" >> build-info.log
+          python --version >> build-info.log
+          echo "\n=== System Info ===" >> build-info.log
+          uname -a >> build-info.log
+          echo "\n=== Dependency Tree ===" >> build-info.log
+          uv tree >> build-info.log 2>&1 || echo "Failed to generate dependency tree" >> build-info.log
+          echo "\n=== Lock File Info ===" >> build-info.log
+          ls -la uv.lock >> build-info.log 2>&1 || echo "No uv.lock found" >> build-info.log
+
+      - name: Upload failure artifacts
+        uses: actions/upload-artifact@v4.6.2
+        if: always()
+        with:
+          name: test-failure-logs-${{ github.run_id }}
+          path: |
+            test-output.log
+            build-info.log
+            .venv/pyvenv.cfg
+          retention-days: 7
+
+      - name: Notification if failure
+        if: ${{ failure() }}
+        run: |
+          curl -Ss -X POST -H 'Content-type: application/json' \
+            --data '{
+              "token": "${{ secrets.PUSHOVER_API_TOKEN }}",
+              "user": "${{ secrets.PUSHOVER_USER_KEY }}",
+              "title": "Test run failed",
+              "message": "❌ Tests failed for iana-data"
+            }' \
+            https://api.pushover.net/1/messages.json
