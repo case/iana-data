@@ -8,7 +8,7 @@ download-core:
 
 .PHONY: download-tld-pages
 download-tld-pages:
-	uv run python -m src.cli --download-tld-pages
+	uv run python -m src.cli --download-tld-pages $(GROUPS)
 
 .PHONY: analyze
 analyze:
