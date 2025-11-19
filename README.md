@@ -150,7 +150,7 @@ _FIXME - add an example_
 
 ## Todo
 
-- [ ] GH Actions automation for all of this
+- [ ] GH Actions automation for building `tlds.json`
 - [ ] Annotated data - the parent entity of the TLD Manager (grouping them, e.g. Binky Moon -> Identity Digital)
 
 **Later**
@@ -176,3 +176,4 @@ _FIXME - add an example_
 - [x] Integration tests - Data accuracy, integrity, and overlap tests
 - [x] Downloads for individual TLD pages
 - [x] IDN & ISO ASCII equivalent TLD mappings
+- [x] CI for Tests, Data updates

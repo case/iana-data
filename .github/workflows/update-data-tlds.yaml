@@ -1,0 +1,128 @@
+name: Update TLDs Data
+
+on:
+  schedule:
+    # Run daily at 2:00 AM UTC / 18:00 US-Pacific
+    - cron: "0 2 * * *"
+  workflow_dispatch: # Allow manual triggering
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  update-data:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5.0.1
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7.1.3
+        with:
+          enable-cache: true
+          version-file: "pyproject.toml"
+
+      - name: Install dependencies
+        run: make deps
+
+      # Download TLD pages in 8 batches for better error isolation
+      # Total: 1,592 TLDs, ~200 per batch, ~3-4 min each
+
+      - name: "Download TLDs: a-b (198 TLDs)"
+        run: make download-tld-pages GROUPS="a b"
+
+      - name: "Download TLDs: c-d (187 TLDs)"
+        run: make download-tld-pages GROUPS="c d"
+
+      - name: "Download TLDs: e-h (227 TLDs)"
+        run: make download-tld-pages GROUPS="e f g h"
+
+      - name: "Download TLDs: i + IDN (215 TLDs)"
+        run: make download-tld-pages GROUPS="i xn--"
+
+      - name: "Download TLDs: j-m (221 TLDs)"
+        run: make download-tld-pages GROUPS="j k l m"
+
+      - name: "Download TLDs: n-q (158 TLDs)"
+        run: make download-tld-pages GROUPS="n o p q"
+
+      - name: "Download TLDs: r-s (190 TLDs)"
+        run: make download-tld-pages GROUPS="r s"
+
+      - name: "Download TLDs: t-z (196 TLDs)"
+        run: make download-tld-pages GROUPS="t u v w x y z"
+
+      - name: Notification if download fails
+        if: failure()
+        uses: ./.github/actions/pushover
+        with:
+          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
+          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
+          title: "IANA TLD data download failed"
+          message: "❌ Failed to download IANA TLD data files"
+
+      - name: Run tests
+        run: |
+          set -o pipefail
+          make test 2>&1 | tee test-output.log
+
+      - name: Notification if tests fail
+        if: failure()
+        uses: ./.github/actions/pushover
+        with:
+          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
+          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
+          title: "IANA data - tests failed"
+          message: "❌ Tests failed for iana-data"
+
+      # - name: Build tlds.json # FIXME
+      #   id: build
+      #   run: make build-tlds-json
+
+      # - name: Notification if build fails
+      #   if: failure() && steps.build.outcome == 'failure'
+      #   uses: ./.github/actions/pushover
+      #   with:
+      #     pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
+      #     pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
+      #     title: "IANA data - tlds.json build failed"
+      #     message: "❌ Failed to build tlds.json"
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          if ! git diff --exit-code data/; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+            # Get list of changed files in data/ directory
+            CHANGED_FILES=$(git diff --name-only data/ | sed 's|^data/source/||' | sed 's|^data/generated/||')
+            echo "files<<EOF" >> $GITHUB_OUTPUT
+            echo "$CHANGED_FILES" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+
+          # Build commit message with actual changed files
+          COMMIT_MSG="Update IANA core data files"
+          if [ -n "${{ steps.git-check.outputs.files }}" ]; then
+            COMMIT_MSG="${COMMIT_MSG}
+
+          Changed files:"
+            while IFS= read -r file; do
+              COMMIT_MSG="${COMMIT_MSG}
+          - ${file}"
+            done <<< "${{ steps.git-check.outputs.files }}"
+          fi
+
+          git commit -m "${COMMIT_MSG}"
+          git push
