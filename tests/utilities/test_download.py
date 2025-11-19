@@ -146,11 +146,20 @@ def test_download_with_fresh_cache(tmp_path):
         request_made = True
         raise Exception("Should not make HTTP request when cache is fresh")
 
+    # Mock "now" to be 1 hour after the fixture timestamp (within 24h cache window)
+    # Fixture has last_downloaded: 2025-11-18T16:00:00Z with max_age: 86400
+    from datetime import datetime, timezone
+
+    mock_now = datetime(2025, 11, 18, 17, 0, 0, tzinfo=timezone.utc)
+
     with (
         patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
         patch("src.utilities.metadata.METADATA_FILE", str(metadata_file)),
+        patch("src.utilities.cache.datetime") as mock_datetime,
         patch("httpx.Client") as mock_client,
     ):
+        mock_datetime.now.return_value = mock_now
+        mock_datetime.fromisoformat = datetime.fromisoformat
         mock_client.return_value.__enter__.return_value.get = mock_get
 
         results = download_iana_files()
