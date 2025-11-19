@@ -148,10 +148,22 @@ _FIXME - add an example_
 - `make download-tld-pages` - Downloads the individual TLD HTML pages
 - `make download-tld-pages GROUPS="a b c"` - Specify one or more groups of pages to download, by letter
 
+## Local dev
+
+Dependencies:
+
+- [uv](https://docs.astral.sh/uv/) & [ruff]([ruff](https://docs.astral.sh/ruff/)) - Friendly local tooling
+- [httpx](https://github.com/encode/httpx/) - Friendly HTTP usage
+- [tenacity](https://github.com/jd/tenacity) - Friendly HTTP retries
+- [selectolax](https://github.com/rushter/selectolax) - HTML parsing
+- [pyright](https://github.com/microsoft/pyright) - Type checking
+- [pytest](https://github.com/pytest-dev/pytest/) - Testing & coverage framework
+
 ## Todo
 
-- [ ] GH Actions automation for building `tlds.json`
+- [ ] Add automated ISO-3166 country names support, via a canonical & trustworthy data source
 - [ ] Annotated data - the parent entity of the TLD Manager (grouping them, e.g. Binky Moon -> Identity Digital)
+- [ ] GH Actions automation for building `tlds.json`
 
 **Later**
 
