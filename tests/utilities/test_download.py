@@ -9,7 +9,7 @@ import httpx
 from src.utilities.download import download_iana_files
 
 FIXTURES_DIR = Path(__file__).parent.parent / "fixtures"
-SOURCE_FIXTURES_DIR = FIXTURES_DIR / "source"
+SOURCE_FIXTURES_DIR = FIXTURES_DIR / "source" / "core"
 METADATA_FIXTURES_DIR = FIXTURES_DIR / "metadata"
 
 

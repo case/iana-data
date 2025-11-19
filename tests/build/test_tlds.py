@@ -9,7 +9,7 @@ from src.parse.rdap_json import parse_rdap_json
 from src.parse.root_db_html import parse_root_db_html
 from src.parse.tlds_txt import parse_tlds_txt
 
-FIXTURES_DIR = Path(__file__).parent.parent / "fixtures" / "source"
+FIXTURES_DIR = Path(__file__).parent.parent / "fixtures" / "source" / "core"
 
 
 def test_build_tlds_json_creates_file():
@@ -80,7 +80,7 @@ def test_build_tlds_json_has_required_fields():
         assert "delegated" in tld_entry
         assert "iana_tag" in tld_entry
         assert "type" in tld_entry
-        assert "tld_manager" in tld_entry
+        # tld_manager is now in orgs object, which is optional for undelegated TLDs
 
 
 def test_build_tlds_json_strips_leading_dots():
@@ -124,14 +124,13 @@ def test_build_tlds_json_delegated_status():
         data = json.load(f)
 
     for tld_entry in data["tlds"]:
-        tld_manager = tld_entry["tld_manager"]
         delegated = tld_entry["delegated"]
 
-        # Check logic: delegated is False if manager is "Not assigned"
-        if tld_manager == "Not assigned":
-            assert delegated is False
-        else:
-            assert delegated is True
+        # Check logic: delegated TLDs should have orgs with tld_manager
+        if delegated:
+            assert "orgs" in tld_entry
+            assert "tld_manager" in tld_entry["orgs"]
+        # Undelegated TLDs may or may not have orgs
 
 
 def test_build_tlds_json_rdap_servers_present():
@@ -149,14 +148,14 @@ def test_build_tlds_json_rdap_servers_present():
     tld_map = {entry["tld"]: entry for entry in data["tlds"]}
 
     # Check a few TLDs that should have RDAP servers
-    for tld, rdap_server in list(rdap_lookup.items())[:5]:
+    for tld in list(rdap_lookup.keys())[:5]:
         if tld in tld_map:
             entry = tld_map[tld]
-            if "rdap_server" in entry:
-                assert entry["rdap_server"] == rdap_server
-                # Should also have rdap_source annotation
-                assert "annotations" in entry
-                assert "rdap_source" in entry["annotations"]
+            # RDAP server should be present (from page data or bootstrap)
+            assert "rdap_server" in entry
+            # Should also have rdap_source annotation
+            assert "annotations" in entry
+            assert "rdap_source" in entry["annotations"]
 
 
 def test_build_tlds_json_idn_unicode_field():

@@ -65,7 +65,7 @@ def test_overlap_detection_works_with_fixtures():
     to verify the test logic actually catches it.
     """
     # Parse IANA RDAP fixture
-    iana_rdap_path = FIXTURES_DIR / "source" / "rdap.json"
+    iana_rdap_path = FIXTURES_DIR / "source" / "core" / "rdap.json"
     iana_rdap_lookup = parse_rdap_json(iana_rdap_path)
     iana_tlds = set(iana_rdap_lookup.keys())
 
@@ -88,7 +88,7 @@ def test_no_overlap_in_fixture_data():
     This verifies that our test fixtures are set up correctly.
     """
     # Parse IANA RDAP fixture
-    iana_rdap_path = FIXTURES_DIR / "source" / "rdap.json"
+    iana_rdap_path = FIXTURES_DIR / "source" / "core" / "rdap.json"
     iana_rdap_lookup = parse_rdap_json(iana_rdap_path)
     iana_tlds = set(iana_rdap_lookup.keys())
 

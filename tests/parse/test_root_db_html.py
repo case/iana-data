@@ -4,7 +4,7 @@ from pathlib import Path
 
 from src.parse.root_db_html import derive_type_from_iana_tag, parse_root_db_html
 
-FIXTURES_DIR = Path(__file__).parent.parent / "fixtures" / "source"
+FIXTURES_DIR = Path(__file__).parent.parent / "fixtures" / "source" / "core"
 
 
 def test_parse_root_db_html_total_entries():

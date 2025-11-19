@@ -4,7 +4,7 @@ from pathlib import Path
 
 from src.analyze.tlds_txt import analyze_tlds_txt, get_tlds_analysis
 
-FIXTURES_DIR = Path(__file__).parent.parent / "fixtures" / "source"
+FIXTURES_DIR = Path(__file__).parent.parent / "fixtures" / "source" / "core"
 
 
 def test_get_tlds_analysis_baseline():

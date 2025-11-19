@@ -4,7 +4,7 @@ from pathlib import Path
 
 from src.analyze.rdap_json import analyze_rdap_json
 
-FIXTURES_DIR = Path(__file__).parent.parent / "fixtures" / "source"
+FIXTURES_DIR = Path(__file__).parent.parent / "fixtures" / "source" / "core"
 
 
 def test_analyze_rdap_json_success():

@@ -4,7 +4,7 @@ from pathlib import Path
 
 from src.analyze.root_db_html import analyze_root_db_html
 
-FIXTURES_DIR = Path(__file__).parent.parent / "fixtures" / "source"
+FIXTURES_DIR = Path(__file__).parent.parent / "fixtures" / "source" / "core"
 
 
 def test_analyze_root_db_html_success():

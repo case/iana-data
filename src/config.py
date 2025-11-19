@@ -10,6 +10,7 @@ IANA_URLS: Final[dict[str, str]] = {
 }
 
 SOURCE_DIR: Final[str] = "data/source"
+TLD_PAGES_DIR: Final[str] = "data/source/tld-pages"
 
 SOURCE_FILES: Final[dict[str, str]] = {
     "RDAP_BOOTSTRAP": "iana-rdap.json",

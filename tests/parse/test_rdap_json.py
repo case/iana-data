@@ -4,7 +4,7 @@ from pathlib import Path
 
 from src.parse.rdap_json import parse_rdap_json
 
-FIXTURES_DIR = Path(__file__).parent.parent / "fixtures" / "source"
+FIXTURES_DIR = Path(__file__).parent.parent / "fixtures" / "source" / "core"
 
 
 def test_parse_rdap_json_total_tlds():
