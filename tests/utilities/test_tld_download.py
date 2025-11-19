@@ -480,26 +480,17 @@ def test_download_tld_pages_handles_file_write_error(tmp_path):
     test_dir.chmod(0o755)
 
 
-def test_download_tld_pages_handles_corrupted_tlds_json(tmp_path):
-    """Test handling of corrupted tlds.json file."""
-    # Create a corrupted JSON file
-    corrupted_json_path = tmp_path / "tlds.json"
-    with open(corrupted_json_path, "w") as f:
-        f.write("{ invalid json ")
-
-    with (
-        patch("src.utilities.download.TLDS_OUTPUT_FILE", str(corrupted_json_path)),
-        patch("pathlib.Path.exists", return_value=True),
-    ):
+def test_download_tld_pages_handles_empty_tld_list(tmp_path):
+    """Test handling when TLD source file returns empty list."""
+    with patch("src.utilities.download.parse_tlds_txt", return_value=[]):
         results = download_tld_pages(base_dir=tmp_path)
 
-        # Should return empty dict due to JSON decode error
+        # Should return empty dict when no TLDs found
         assert results == {}
 
 
-def test_download_tld_pages_uses_default_from_data(tmp_path):
-    """Test downloading all TLDs from built tlds.json when no list provided."""
-    # This test will use actual data, so we'll mock the data loading
+def test_download_tld_pages_uses_default_from_source(tmp_path):
+    """Test downloading all TLDs from source file when no list provided."""
     fixture_file = FIXTURES_DIR / "c" / "com.html"
     full_html = fixture_file.read_text()
 
@@ -509,26 +500,15 @@ def test_download_tld_pages_uses_default_from_data(tmp_path):
         response.text = full_html
         return response
 
-    # Mock the tlds.json data to return just a few TLDs
-    mock_tlds_data = {
-        "tlds": [
-            {"tld": "com"},
-            {"tld": "net"},
-        ]
-    }
-
     with (
         patch("httpx.Client") as mock_client,
-        patch("builtins.open", create=True),
-        patch("json.load") as mock_json_load,
-        patch("pathlib.Path.exists", return_value=True),
+        patch("src.utilities.download.parse_tlds_txt", return_value=["com", "net"]),
     ):
         mock_client.return_value.__enter__.return_value.get = mock_get
-        mock_json_load.return_value = mock_tlds_data
 
         results = download_tld_pages(base_dir=tmp_path)
 
-        # Should download both TLDs from the data
+        # Should download both TLDs from the source
         assert "com" in results
         assert "net" in results
 

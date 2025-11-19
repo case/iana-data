@@ -114,10 +114,28 @@ def test_parse_tlds_txt_with_filepath():
     # Should not contain any comments
     assert all(not tld.startswith("#") for tld in tlds)
 
-    # Should contain expected TLDs (in original uppercase)
+    # Should contain expected TLDs (normalized to lowercase by default)
+    assert "aaa" in tlds
+    assert "aarp" in tlds
+    assert "xn--wgbh1c" in tlds
+
+
+def test_parse_tlds_txt_without_normalize():
+    """Test that parse_tlds_txt preserves original case when normalize=False."""
+    fixture_path = FIXTURES_DIR / "tlds.txt"
+
+    tlds = parse_tlds_txt(fixture_path, normalize=False)
+
+    # Should have 22 TLDs
+    assert len(tlds) == 22
+
+    # Should contain TLDs in original uppercase
     assert "AAA" in tlds
     assert "AARP" in tlds
     assert "XN--WGBH1C" in tlds
+
+    # Lowercase versions should NOT be present
+    assert "aaa" not in tlds
 
 
 def test_parse_tlds_txt_with_default_path():

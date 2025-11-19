@@ -2,14 +2,14 @@
 """Command-line interface for IANA data ETL."""
 
 import argparse
-import json
 import logging
 import sys
 from pathlib import Path
 
 from .analyze import analyze_rdap_json, analyze_root_db_html, analyze_tlds_txt
 from .build import build_tlds_json
-from .config import IANA_URLS, SOURCE_DIR, SOURCE_FILES, TLDS_OUTPUT_FILE, setup_logging
+from .config import IANA_URLS, SOURCE_DIR, SOURCE_FILES, setup_logging
+from .parse import parse_tlds_txt
 from .utilities import download_iana_files, download_tld_pages
 
 logger = logging.getLogger(__name__)
@@ -164,18 +164,10 @@ def main() -> int:
         return 0
 
     if getattr(args, "download_tld_pages", None) is not None:
-        # Load TLD list from tlds.json
-        tlds_json_path = Path(TLDS_OUTPUT_FILE)
-        if not tlds_json_path.exists():
-            logger.error("tlds.json not found at %s. Run --build first.", TLDS_OUTPUT_FILE)
-            return 1
-
-        try:
-            with open(tlds_json_path) as f:
-                data = json.load(f)
-            all_tlds = [entry["tld"] for entry in data["tlds"]]
-        except (json.JSONDecodeError, OSError, KeyError) as e:
-            logger.error("Error reading tlds.json: %s", e)
+        # Load TLD list from source file
+        all_tlds = parse_tlds_txt()
+        if not all_tlds:
+            logger.error("No TLDs found. Run --download first to fetch the TLD list.")
             return 1
 
         # Filter TLDs by prefix if specified

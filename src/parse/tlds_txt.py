@@ -8,15 +8,16 @@ from ..config import SOURCE_DIR, SOURCE_FILES
 logger = logging.getLogger(__name__)
 
 
-def parse_tlds_txt(filepath: Path | None = None) -> list[str]:
+def parse_tlds_txt(filepath: Path | None = None, normalize: bool = True) -> list[str]:
     """
     Parse the IANA TLDs text file.
 
     Args:
         filepath: Path to the TLDs text file (defaults to configured location)
+        normalize: If True, lowercase all TLDs (default: True)
 
     Returns:
-        List of TLDs (stripped, in original case)
+        List of TLDs (stripped, lowercased if normalize=True)
     """
     if filepath is None:
         filepath = Path(SOURCE_DIR) / SOURCE_FILES["TLD_LIST"]
@@ -27,7 +28,12 @@ def parse_tlds_txt(filepath: Path | None = None) -> list[str]:
         logger.error("Error reading TLDs text file from %s: %s", filepath, e)
         return []
 
-    return _parse_tlds_content(content)
+    tlds = _parse_tlds_content(content)
+
+    if normalize:
+        tlds = [tld.lower() for tld in tlds]
+
+    return tlds
 
 
 def _parse_tlds_content(content: str) -> list[str]:

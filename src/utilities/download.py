@@ -1,14 +1,13 @@
 """Download utilities for IANA data files."""
 
-import json
 import logging
 import time
 from pathlib import Path
 
 import httpx
 
-from ..config import IANA_URLS, SOURCE_DIR, SOURCE_FILES, TLDS_OUTPUT_FILE
-from ..parse import extract_main_content, tlds_txt_content_changed
+from ..config import IANA_URLS, SOURCE_DIR, SOURCE_FILES
+from ..parse import extract_main_content, parse_tlds_txt, tlds_txt_content_changed
 from .cache import is_cache_fresh, parse_cache_control_max_age
 from .metadata import load_metadata, save_metadata, utc_timestamp
 from .urls import get_tld_file_path, get_tld_page_url
@@ -135,7 +134,7 @@ def download_tld_pages(
     Download TLD detail pages from IANA.
 
     Args:
-        tlds: List of TLDs to download. If None, downloads all TLDs from tlds.json
+        tlds: List of TLDs to download. If None, downloads all TLDs from source file
         base_dir: Base directory for storing pages. Defaults to data/source/tld-pages
         delay: Seconds to wait between requests to avoid hammering server (default: 1.0)
 
@@ -147,17 +146,9 @@ def download_tld_pages(
 
     # Get TLD list if not provided
     if tlds is None:
-        tlds_json_path = Path(TLDS_OUTPUT_FILE)
-        if tlds_json_path.exists():
-            try:
-                with open(tlds_json_path) as f:
-                    data = json.load(f)
-                tlds = [entry["tld"] for entry in data["tlds"]]
-            except (json.JSONDecodeError, OSError, KeyError) as e:
-                logger.error("Error reading tlds.json: %s", e)
-                return {}
-        else:
-            logger.error("tlds.json not found at %s. Run build first.", TLDS_OUTPUT_FILE)
+        tlds = parse_tlds_txt()
+        if not tlds:
+            logger.error("No TLDs found. Run --download first to fetch the TLD list.")
             return {}
 
     # Load metadata
