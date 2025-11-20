@@ -177,7 +177,6 @@ Dependencies:
 
 **Later**
 
-- [ ] Annotation - ISO 3166 mappings, e.g. for country names?
 - [ ] Annotation - IDN meanings, maybe could derive from the individual TLD web pages
 - [ ] Annotation - IDN language
 - [ ] Script to create a Sqlite db from the data - maybe purely from client side? E.g. JS could generate it "on the fly"?
@@ -198,5 +197,6 @@ Dependencies:
 - [x] Integration tests - Data accuracy, integrity, and overlap tests
 - [x] Downloads for individual TLD pages
 - [x] IDN & ISO ASCII equivalent TLD mappings
-- [x] CI for Tests, Data updates
+- [x] CI for tests
+- [x] CI for data updates
 - [x] Add automated ISO-3166 country names support, via a canonical & trustworthy data source
