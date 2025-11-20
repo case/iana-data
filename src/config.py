@@ -22,6 +22,14 @@ MANUAL_DIR: Final[str] = "data/manual"
 GENERATED_DIR: Final[str] = "data/generated"
 TLDS_OUTPUT_FILE: Final[str] = f"{GENERATED_DIR}/tlds.json"
 
+# ccTLD overrides for codes not in ISO 3166-1
+CCTLD_OVERRIDES: Final[dict[str, str]] = {
+    "ac": "Ascension Island",
+    "eu": "European Union",
+    "su": "Soviet Union",
+    "uk": "United Kingdom",
+}
+
 
 def setup_logging() -> None:
     """Configure logging for the application."""

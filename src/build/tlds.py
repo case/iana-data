@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Any
 
 from ..config import IANA_URLS, TLD_PAGES_DIR, TLDS_OUTPUT_FILE
+from ..parse.country import get_country_name, is_cctld
 from ..parse.rdap_json import parse_rdap_json
 from ..parse.root_db_html import derive_type_from_iana_tag, parse_root_db_html
 from ..parse.supplemental_cctld_rdap import parse_supplemental_cctld_rdap
@@ -197,10 +198,25 @@ def _build_tld_entry(
         entry["iana_reports"] = page_data["iana_reports"]
 
     # Add annotations if needed
+    annotations: dict[str, str] = {}
+
     if rdap_source:
-        entry["annotations"] = {
-            "rdap_source": rdap_source,
-        }
+        annotations["rdap_source"] = rdap_source
+
+    # Add country name for ccTLDs (both ASCII and IDN)
+    if is_cctld(tld):
+        # ASCII ccTLD - look up directly
+        country_name = get_country_name(tld)
+        if country_name:
+            annotations["country_name_iso"] = country_name
+    elif "tld_iso" in entry:
+        # IDN ccTLD - look up by the ISO code
+        country_name = get_country_name(entry["tld_iso"])
+        if country_name:
+            annotations["country_name_iso"] = country_name
+
+    if annotations:
+        entry["annotations"] = annotations
 
     return entry
 

@@ -114,7 +114,7 @@ Here is its schema:
         "rdap_source": "string",           // Source of RDAP server: "IANA" for canonical sources, or URL for supplemental sources
 
         // Geographic metadata (primarily for ccTLDs)
-        "country_name": "string",          // Full country name (e.g. "Taiwan")
+        "country_name_iso": "string",      // ISO 3166 country name (e.g. "Taiwan", "United States")
 
         // Custom taxonomies
         "tags": ["string"],                // Array of custom tags (e.g. ["brand"], ["geo"])
@@ -158,10 +158,20 @@ Dependencies:
 - [selectolax](https://github.com/rushter/selectolax) - HTML parsing
 - [pyright](https://github.com/microsoft/pyright) - Type checking
 - [pytest](https://github.com/pytest-dev/pytest/) - Testing & coverage framework
+- [pycountry](https://github.com/pycountry/pycountry/) - ISO 3166 country code name mapping
+
+## Misc
+
+**ISO 3166-1 alpha-2 country names**
+- [Wikipedia details](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+- We need to special-case a few:
+  - `.ac` - Ascension Island
+  - `.eu` - European Union
+  - `.su` - Soviet Union
+  - `.uk` - United Kingdom
 
 ## Todo
 
-- [ ] Add automated ISO-3166 country names support, via a canonical & trustworthy data source
 - [ ] Annotated data - the parent entity of the TLD Manager (grouping them, e.g. Binky Moon -> Identity Digital)
 - [ ] GH Actions automation for building `tlds.json`
 
@@ -189,3 +199,4 @@ Dependencies:
 - [x] Downloads for individual TLD pages
 - [x] IDN & ISO ASCII equivalent TLD mappings
 - [x] CI for Tests, Data updates
+- [x] Add automated ISO-3166 country names support, via a canonical & trustworthy data source

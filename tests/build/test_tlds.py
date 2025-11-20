@@ -221,3 +221,103 @@ def test_build_tlds_json_delegated_count_matches_tlds_txt():
 
     # Should match
     assert actual_delegated_count == expected_delegated_count
+
+
+def test_build_tlds_json_ascii_cctld_has_country_name():
+    """Test that ASCII ccTLDs have country_name_iso in annotations."""
+    build_tlds_json()
+
+    output_path = Path(TLDS_OUTPUT_FILE)
+    with open(output_path) as f:
+        data = json.load(f)
+
+    # Build a map of TLD to entry
+    tld_map = {entry["tld"]: entry for entry in data["tlds"]}
+
+    # Test some ASCII ccTLDs
+    test_cctlds = {
+        "us": "United States",
+        "gb": "United Kingdom",
+        "de": "Germany",
+        "jp": "Japan",
+        "fr": "France",
+    }
+
+    for cctld, expected_name in test_cctlds.items():
+        assert cctld in tld_map
+        entry = tld_map[cctld]
+        assert "annotations" in entry
+        assert "country_name_iso" in entry["annotations"]
+        assert entry["annotations"]["country_name_iso"] == expected_name
+
+
+def test_build_tlds_json_idn_cctld_has_country_name():
+    """Test that IDN ccTLDs have country_name_iso in annotations."""
+    build_tlds_json()
+
+    output_path = Path(TLDS_OUTPUT_FILE)
+    with open(output_path) as f:
+        data = json.load(f)
+
+    # Find IDN ccTLDs (have tld_iso field)
+    idn_cctlds = [entry for entry in data["tlds"] if "tld_iso" in entry]
+
+    assert len(idn_cctlds) > 0, "Should have at least some IDN ccTLDs"
+
+    # Check that they all have country_name_iso
+    for entry in idn_cctlds:
+        assert "annotations" in entry
+        assert "country_name_iso" in entry["annotations"]
+        # Country name should be non-empty string
+        assert isinstance(entry["annotations"]["country_name_iso"], str)
+        assert len(entry["annotations"]["country_name_iso"]) > 0
+
+
+def test_build_tlds_json_cctld_overrides():
+    """Test that ccTLD overrides (ac, eu, su, uk) have correct country names."""
+    build_tlds_json()
+
+    output_path = Path(TLDS_OUTPUT_FILE)
+    with open(output_path) as f:
+        data = json.load(f)
+
+    # Build a map of TLD to entry
+    tld_map = {entry["tld"]: entry for entry in data["tlds"]}
+
+    # Test overrides (not in ISO 3166-1)
+    overrides = {
+        "ac": "Ascension Island",
+        "eu": "European Union",
+        "su": "Soviet Union",
+        "uk": "United Kingdom",
+    }
+
+    for cctld, expected_name in overrides.items():
+        if cctld in tld_map:
+            entry = tld_map[cctld]
+            assert "annotations" in entry
+            assert "country_name_iso" in entry["annotations"]
+            assert entry["annotations"]["country_name_iso"] == expected_name
+
+
+def test_build_tlds_json_gtld_no_country_name():
+    """Test that gTLDs do not have country_name_iso."""
+    build_tlds_json()
+
+    output_path = Path(TLDS_OUTPUT_FILE)
+    with open(output_path) as f:
+        data = json.load(f)
+
+    # Find gTLDs
+    gtlds = [entry for entry in data["tlds"] if entry["type"] == "gtld"]
+
+    # Check some common gTLDs
+    gtld_tlds = [e["tld"] for e in gtlds]
+    test_gtlds = ["com", "org", "net", "info", "biz"]
+
+    for gtld in test_gtlds:
+        if gtld in gtld_tlds:
+            entry = [e for e in gtlds if e["tld"] == gtld][0]
+            # Should not have country_name_iso
+            if "annotations" in entry:
+                assert "country_name_iso" not in entry["annotations"]
