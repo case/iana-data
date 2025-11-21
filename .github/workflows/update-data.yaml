@@ -34,10 +34,11 @@ jobs:
       # Download core IANA files
       - name: Download core data (RDAP, TLD list, root zone DB)
         id: download-core
+        continue-on-error: true
         run: make download-core
 
       - name: Notification if core download fails
-        if: failure() && steps.download-core.outcome == 'failure'
+        if: steps.download-core.outcome == 'failure'
         uses: ./.github/actions/pushover
         with:
           pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
@@ -47,29 +48,38 @@ jobs:
 
       # Download TLD pages in 8 batches for better error isolation
       # Total: 1,592 TLDs, ~200 per batch, ~3-4 min each
+      # Continue on error to allow other batches to complete
 
       - name: "Download TLDs: a-b (198 TLDs)"
+        continue-on-error: true
         run: make download-tld-pages GROUPS="a b"
 
       - name: "Download TLDs: c-d (187 TLDs)"
+        continue-on-error: true
         run: make download-tld-pages GROUPS="c d"
 
       - name: "Download TLDs: e-h (227 TLDs)"
+        continue-on-error: true
         run: make download-tld-pages GROUPS="e f g h"
 
       - name: "Download TLDs: i + IDN (215 TLDs)"
+        continue-on-error: true
         run: make download-tld-pages GROUPS="i xn--"
 
       - name: "Download TLDs: j-m (221 TLDs)"
+        continue-on-error: true
         run: make download-tld-pages GROUPS="j k l m"
 
       - name: "Download TLDs: n-q (158 TLDs)"
+        continue-on-error: true
         run: make download-tld-pages GROUPS="n o p q"
 
       - name: "Download TLDs: r-s (190 TLDs)"
+        continue-on-error: true
         run: make download-tld-pages GROUPS="r s"
 
       - name: "Download TLDs: t-z (188 TLDs)"
+        continue-on-error: true
         run: make download-tld-pages GROUPS="t u v w y z"
 
       - name: Notification if TLD download fails
@@ -82,6 +92,7 @@ jobs:
           message: "❌ Failed to download IANA TLD data files"
 
       - name: Run tests
+        continue-on-error: true
         run: |
           set -o pipefail
           make test 2>&1 | tee test-output.log
@@ -110,6 +121,7 @@ jobs:
 
       - name: Check for changes
         id: git-check
+        if: always()
         run: |
           if ! git diff --exit-code data/; then
             echo "changed=true" >> $GITHUB_OUTPUT
@@ -121,7 +133,7 @@ jobs:
           fi
 
       - name: Commit and push changes
-        if: steps.git-check.outputs.changed == 'true'
+        if: always() && steps.git-check.outputs.changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -142,11 +154,11 @@ jobs:
           git commit -m "${COMMIT_MSG}"
           git push
 
-      - name: Notification if success
-        if: success() && steps.git-check.outputs.changed == 'true'
+      - name: Notification if data committed
+        if: always() && steps.git-check.outputs.changed == 'true'
         uses: ./.github/actions/pushover
         with:
           pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
           pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
           title: "IANA data - successfully updated"
-          message: "✅ Successfully updated IANA data"
+          message: "✅ Successfully updated and committed IANA data"
