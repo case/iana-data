@@ -9,6 +9,10 @@ IANA_URLS: Final[dict[str, str]] = {
     "ROOT_ZONE_DB": "https://www.iana.org/domains/root/db",
 }
 
+ICANN_URLS: Final[dict[str, str]] = {
+    "REGISTRY_AGREEMENT_TABLE": "https://www.icann.org/en/registry-agreements/csvdownload",
+}
+
 SOURCE_DIR: Final[str] = "data/source"
 TLD_PAGES_DIR: Final[str] = "data/source/tld-pages"
 
@@ -16,6 +20,7 @@ SOURCE_FILES: Final[dict[str, str]] = {
     "RDAP_BOOTSTRAP": "iana-rdap.json",
     "TLD_LIST": "iana-tlds.txt",
     "ROOT_ZONE_DB": "iana-root.html",
+    "REGISTRY_AGREEMENT_TABLE": "icann-registry-agreement-table.csv",
 }
 
 MANUAL_DIR: Final[str] = "data/manual"

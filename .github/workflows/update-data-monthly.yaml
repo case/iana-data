@@ -1,0 +1,88 @@
+name: Update Monthly Data
+
+on:
+  workflow_dispatch: # Allow manual triggering
+  schedule:
+    # Run on the 1st of each month at 3:00 AM UTC
+    - cron: "0 3 1 * *"
+
+# Prevent concurrent runs
+concurrency:
+  group: update-monthly-data
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  update-monthly-data:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5.0.1
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7.1.3
+        with:
+          enable-cache: true
+          version-file: "pyproject.toml"
+
+      - name: Install dependencies
+        run: make deps
+
+      - name: Download ICANN Registry Agreement Table
+        id: download-registry-agreement
+        continue-on-error: true
+        run: uv run python scripts/registry-agreement-table/download_registry_agreement_table.py
+
+      - name: Notification if download fails
+        if: steps.download-registry-agreement.outcome == 'failure'
+        uses: ./.github/actions/pushover
+        with:
+          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
+          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
+          title: "ICANN monthly data download failed"
+          message: "❌ Failed to download ICANN registry agreement table"
+
+      - name: Check for changes
+        id: git-check
+        if: always()
+        run: |
+          if ! git diff --exit-code data/; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+            CHANGED_FILES=$(git diff --name-only data/ | sed 's|^data/source/||' | sed 's|^data/generated/||')
+            echo "files<<EOF" >> $GITHUB_OUTPUT
+            echo "$CHANGED_FILES" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: always() && steps.git-check.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+
+          COMMIT_MSG="Update ICANN monthly data files"
+          if [ -n "${{ steps.git-check.outputs.files }}" ]; then
+            COMMIT_MSG="${COMMIT_MSG}
+
+          Changed files:"
+            while IFS= read -r file; do
+              COMMIT_MSG="${COMMIT_MSG}
+          - ${file}"
+            done <<< "${{ steps.git-check.outputs.files }}"
+          fi
+
+          git commit -m "${COMMIT_MSG}"
+          git push
+
+      - name: Notification if data committed
+        if: always() && steps.git-check.outputs.changed == 'true'
+        uses: ./.github/actions/pushover
+        with:
+          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
+          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
+          title: "ICANN monthly data - successfully updated"
+          message: "✅ Successfully updated and committed ICANN monthly data"

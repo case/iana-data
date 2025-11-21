@@ -25,5 +25,14 @@
   "TLD_HTML": {
     "last_checked": "2025-11-21T03:16:12Z",
     "last_downloaded": "2025-11-21T03:19:25Z"
+  },
+  "REGISTRY_AGREEMENT_TABLE": {
+    "headers": {
+      "etag": "W/\"329e3-19aa7ccdea5-br\"",
+      "last_modified": "Fri, 21 Nov 2025 19:03:32 GMT"
+    },
+    "last_checked": "2025-11-21T19:03:32Z",
+    "last_downloaded": "2025-11-21T19:03:32Z",
+    "last_changed": "2025-11-21T19:03:10Z"
   }
 }

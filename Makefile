@@ -20,11 +20,11 @@ build:
 
 .PHONY: generate-idn-mapping
 generate-idn-mapping:
-	uv run python scripts/generate_idn_script_mapping.py
+	uv run python scripts/idn_unicode_scripts/generate_idn_script_mapping.py
 
 .PHONY: analyze-idn-scripts
 analyze-idn-scripts:
-	uv run python scripts/analyze_idn_scripts.py
+	uv run python scripts/idn_unicode_scripts/analyze_idn_scripts.py
 
 .PHONY: lint
 lint:
