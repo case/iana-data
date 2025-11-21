@@ -45,5 +45,6 @@ def save_metadata(metadata: MetadataDict) -> None:
     try:
         with open(metadata_path, "w") as f:
             json.dump(metadata, f, indent=2)
+            f.write("\n")
     except OSError as e:
         logger.error("Error saving metadata to %s: %s", metadata_path, e)
