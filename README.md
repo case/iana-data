@@ -15,16 +15,20 @@ Here are some of the questions we'd like to be able to answer, from IANA's data:
 - When was a given TLD delegated?
 - Which entity is the manager of a given TLD?
 - What are the parent entities of the TLD managers, if any?
+- Which TLDs are "Brand" TLDs, and not open for general registration?
 - Etc.
 
 ## Data files
 
 Here are the data files we're working with:
 
-- The ["All TLDs" txt file](https://data.iana.org/TLD/tlds-alpha-by-domain.txt)
-- The [Root DB html file](https://www.iana.org/domains/root/db), which alas doesn't appear to be available in a friendlier format
-- The [RDAP "bootstrap" file](https://data.iana.org/rdap/dns.json)
-- The individual IANA TLD pages, like [this one for `.beer`](https://www.iana.org/domains/root/db/beer.html)
+- IANA - The ["All TLDs" txt file](https://data.iana.org/TLD/tlds-alpha-by-domain.txt)
+- IANA - The [Root DB html file](https://www.iana.org/domains/root/db), which alas doesn't appear to be available in a friendlier format
+- IANA - The [RDAP "bootstrap" file](https://data.iana.org/rdap/dns.json)
+- IANA - The individual TLD pages, like [this one for `.beer`](https://www.iana.org/domains/root/db/beer.html)
+- ICANN - The [Registry Agreements table](https://www.icann.org/en/registry-agreements) CSV, which let us identify which are Brand TLDs, etc.
+
+## Working with the data files
 
 There are a few challenges with these data files, for example:
 
@@ -52,7 +56,7 @@ _FIXME_
 
 ## Generated data
 
-### `tlds.json`
+The `data/generated/idn-script-mapping.json` file maps IDNs to their Scripts, e.g. Arabic, Cyrillic, etc. This isn't the same as a TLD's language, but it's close enough, and it's canonical data from the Unicode strings.
 
 The `data/generated/tlds.json` file is an "enhanced" bootstrap file, which aggregates the myriad pieces of related data for a given TLD, into a single file and data structure.
 
@@ -153,6 +157,7 @@ _FIXME - add an example_
 **Misc**
 - `make analyze-idn-scripts` - analyzes the IDNs, and prints their associated Unicode label names
 - `make generate-idn-mapping` - creates the `data/generated/idn-script-mapping.json` file, by mapping IDNs like `ελ` to their Unicode character labels (e.g. `GREEK`), then using `pycountry` to map their labels to their ISO script names
+- `make analyze-registry-agreements` - summarizes the contents of the ICANN Registry Agreements file
 
 ## Local dev
 
@@ -178,18 +183,15 @@ Dependencies:
 
 ## Todo
 
-- [ ] Annotated data - the parent entity of the TLD Manager (grouping them, e.g. Binky Moon -> Identity Digital)
+- [ ] Checkly monitoring for cctld rdap servers
+- [ ] Curl + make command monitoring, for rdap servers (disabled); document this in the Readme
+- [ ] Annotation - the parent entity of the TLD Manager (grouping them, e.g. Binky Moon -> Identity Digital)
 - [ ] GH Actions automation for building `tlds.json`
 
 **Later**
 
-- [ ] Annotation - `brand` TLDs - via https://www.icann.org/en/registry-agreements?page=1&agreement-type=brand-spec-13
-- [ ] Annotation - `open` or `closed` TLDs (needs discovery)
-- [ ] Annotation - IDN meanings, maybe could derive from the individual TLD web pages
-- [ ] Annotation - IDN language
-- [ ] Checkly monitoring for cctld rdap servers
-- [ ] Curl + make command monitoring, for rdap servers (disabled)
-  - [ ] Document this in the readme
+- [ ] Annotation - IDN meanings & language, maybe could derive from the individual TLD web pages
+- [ ] Annotation - `open` or `closed` TLDs (needs discovery; may be addressed by the `brand` registry type annotation)
 - [ ] Script to create a Sqlite db from the data - maybe purely from client side? E.g. JS could generate it "on the fly"?
 - [ ] Wikidata - figure out how to programmatically get (some or all of) this data into Wikidata, and Wikipedia
 - [ ] Add a `version` field to the `tlds.json` schema?
@@ -212,3 +214,6 @@ Dependencies:
 - [x] CI for data updates
 - [x] Added automated ISO-3166 country names support, via a canonical & trustworthy data source
 - [x] Added IDN -> script mapping, e.g. to identify IDNs as Arabic, CJK, etc
+- [x] Added ICANN Registry Agreements CSV, to identify `brand` TLDs
+- [x] Annotation - `brand` TLDs identification via the ICANN CSV
+- [x] Schedule for downloading the ICANN CSV (monthly)
