@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from ..config import IANA_URLS, TLD_PAGES_DIR, TLDS_OUTPUT_FILE
+from ..config import IANA_URLS, IDN_SCRIPT_MAPPING_FILE, TLD_PAGES_DIR, TLDS_OUTPUT_FILE
 from ..parse.country import get_country_name, is_cctld
 from ..parse.rdap_json import parse_rdap_json
 from ..parse.root_db_html import derive_type_from_iana_tag, parse_root_db_html
@@ -29,6 +29,17 @@ def build_tlds_json() -> dict:
     root_zone_entries = parse_root_db_html()
     rdap_lookup = parse_rdap_json()
     supplemental_rdap = parse_supplemental_cctld_rdap()
+
+    # Load IDN script mappings
+    idn_script_mapping = {}
+    idn_script_file = Path(IDN_SCRIPT_MAPPING_FILE)
+    if idn_script_file.exists():
+        try:
+            with open(idn_script_file, "r", encoding="utf-8") as f:
+                idn_script_mapping = json.load(f)
+            logger.info("Loaded %d IDN script mappings", len(idn_script_mapping))
+        except Exception as e:
+            logger.warning("Error loading IDN script mappings: %s", e)
 
     # Load and parse TLD pages
     logger.info("Parsing TLD pages...")
@@ -54,7 +65,7 @@ def build_tlds_json() -> dict:
     for entry in root_zone_entries:
         tld = entry["domain"].lstrip(".")
         page_data = tld_page_data.get(tld, {})
-        tld_entry = _build_tld_entry(entry, rdap_lookup, supplemental_rdap, page_data)
+        tld_entry = _build_tld_entry(entry, rdap_lookup, supplemental_rdap, page_data, idn_script_mapping)
         tlds.append(tld_entry)
 
     # Build IDN ↔ ASCII bidirectional mapping
@@ -101,6 +112,7 @@ def _build_tld_entry(
     rdap_lookup: dict[str, str],
     supplemental_rdap: dict[str, dict],
     page_data: dict[str, Any],
+    idn_script_mapping: dict[str, str],
 ) -> dict:
     """
     Build a single TLD entry for output.
@@ -110,6 +122,7 @@ def _build_tld_entry(
         rdap_lookup: Map of TLD to IANA RDAP server URL
         supplemental_rdap: Map of TLD to supplemental RDAP data
         page_data: Parsed data from TLD detail page
+        idn_script_mapping: Map of IDN TLD to script name
 
     Returns:
         dict: TLD entry following schema
@@ -131,6 +144,10 @@ def _build_tld_entry(
         except Exception:
             # If decoding fails, skip unicode field
             pass
+
+    # Add tld_script for IDNs
+    if tld in idn_script_mapping:
+        entry["tld_script"] = idn_script_mapping[tld]
 
     # Add tld_iso for IDN ccTLDs (from page data)
     if "tld_iso" in page_data:

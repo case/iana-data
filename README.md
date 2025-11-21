@@ -144,9 +144,15 @@ _FIXME - add an example_
 - `make deps` - Install the project dependencies
 - `make test` - Run all the tests
 - `make coverage` - See the test coverage
+
+**Data downloads**
 - `make download-core` - Downloads the three core IANA files, respecting cache headers
 - `make download-tld-pages` - Downloads the individual TLD HTML pages
 - `make download-tld-pages GROUPS="a b c"` - Specify one or more groups of pages to download, by letter
+
+**Misc**
+- `make analyze-idn-scripts` - analyzes the IDNs, and prints their associated Unicode label names
+- `make generate-idn-mapping` - creates the `data/generated/idn-script-mapping.json` file, by mapping IDNs like `ελ` to their Unicode character labels (e.g. `GREEK`), then using `pycountry` to map their labels to their ISO script names
 
 ## Local dev
 

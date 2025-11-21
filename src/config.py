@@ -21,6 +21,13 @@ SOURCE_FILES: Final[dict[str, str]] = {
 MANUAL_DIR: Final[str] = "data/manual"
 GENERATED_DIR: Final[str] = "data/generated"
 TLDS_OUTPUT_FILE: Final[str] = f"{GENERATED_DIR}/tlds.json"
+IDN_SCRIPT_MAPPING_FILE: Final[str] = f"{GENERATED_DIR}/idn-script-mapping.json"
+
+# Test fixtures
+FIXTURES_DIR: Final[str] = "tests/fixtures"
+FIXTURES_FILES: Final[dict[str, str]] = {
+    "IDN_SCRIPT_MAPPING": "idn-script-mapping.json",
+}
 
 # ccTLD overrides for codes not in ISO 3166-1
 CCTLD_OVERRIDES: Final[dict[str, str]] = {
