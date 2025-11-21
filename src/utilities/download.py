@@ -3,6 +3,7 @@
 import logging
 import time
 from pathlib import Path
+from typing import Callable
 
 import httpx
 
@@ -16,12 +17,68 @@ from .retry import make_request_with_retry
 logger = logging.getLogger(__name__)
 
 
+# =============================================================================
+# Public API
+# =============================================================================
+
+
+def download_file(
+    key: str,
+    url: str,
+    filename: str,
+    content_validator: Callable[[Path, str], bool] | None = None,
+) -> str:
+    """
+    Download a single file using conditional requests.
+
+    This is the main public API for downloading files. Handles all aspects:
+    - HTTP client creation
+    - Conditional requests (If-Modified-Since, ETag)
+    - Cache freshness checks
+    - Metadata loading and saving
+    - Directory creation
+    - File writing
+
+    Args:
+        key: Metadata key for tracking this download
+        url: URL to download from
+        filename: Filename to save in SOURCE_DIR
+        content_validator: Optional callback to check if content actually changed.
+            Takes (filepath, new_content_text) and returns True if content changed.
+            If returns False, file is not saved and "not_modified" is returned.
+
+    Returns:
+        Status: "downloaded", "not_modified", or "error"
+    """
+    filepath = Path(SOURCE_DIR) / filename
+
+    # Ensure source directory exists
+    Path(SOURCE_DIR).mkdir(parents=True, exist_ok=True)
+
+    metadata = load_metadata()
+
+    with httpx.Client(timeout=30.0, follow_redirects=True) as client:
+        result = _download_file_impl(
+            client=client,
+            key=key,
+            url=url,
+            filepath=filepath,
+            metadata=metadata,
+            content_validator=content_validator,
+        )
+
+    # Save updated metadata
+    save_metadata(metadata)
+
+    return result
+
+
 def download_iana_files() -> dict[str, str]:
     """
-    Download IANA data files using conditional requests.
+    Download all IANA data files using conditional requests.
 
-    Uses If-Modified-Since and If-None-Match headers to avoid
-    downloading files that haven't changed since the last fetch.
+    Uses a single HTTP client and metadata save for efficiency when
+    downloading multiple files.
 
     Returns:
         A dict mapping source keys to their download status:
@@ -40,84 +97,19 @@ def download_iana_files() -> dict[str, str]:
             filename = SOURCE_FILES[key]
             filepath = Path(SOURCE_DIR) / filename
 
-            # Check if cache is still fresh (for Cache-Control based files)
-            if key in metadata and is_cache_fresh(metadata[key]):
-                results[key] = "not_modified"
-                logger.info("Cache still fresh for %s", key)
-                # Update last_checked even for cache-fresh files
-                if key not in metadata:
-                    metadata[key] = {}
-                metadata[key]["last_checked"] = utc_timestamp()
-                continue
+            # Special handling for TLD_LIST - use content validator
+            content_validator = None
+            if key == "TLD_LIST":
+                content_validator = tlds_txt_content_changed
 
-            # Prepare conditional request headers
-            headers: dict[str, str] = {}
-            if key in metadata and "headers" in metadata[key]:
-                if "etag" in metadata[key]["headers"]:
-                    headers["If-None-Match"] = metadata[key]["headers"]["etag"]
-                if "last_modified" in metadata[key]["headers"]:
-                    headers["If-Modified-Since"] = metadata[key]["headers"]["last_modified"]
-
-            try:
-                response = make_request_with_retry(client, url, headers=headers)
-
-                # Initialize metadata entry if needed
-                if key not in metadata:
-                    metadata[key] = {}
-                if "headers" not in metadata[key]:
-                    metadata[key]["headers"] = {}
-
-                # Always update last_checked timestamp
-                metadata[key]["last_checked"] = utc_timestamp()
-
-                if response.status_code == 304:
-                    # Not modified
-                    results[key] = "not_modified"
-                elif response.status_code == 200:
-                    # Special handling for TLD_LIST - check if content actually changed
-                    if key == "TLD_LIST" and not tlds_txt_content_changed(filepath, response.text):
-                        results[key] = "not_modified"
-                        continue
-
-                    # Check if content actually changed (for tracking last_changed)
-                    content_changed = True
-                    if filepath.exists():
-                        try:
-                            existing_content = filepath.read_bytes()
-                            content_changed = existing_content != response.content
-                        except OSError:
-                            pass  # Treat as changed if we can't read existing file
-
-                    # Download successful, save file
-                    with open(filepath, "wb") as f:
-                        f.write(response.content)
-
-                    # Update metadata with response headers
-                    if "etag" in response.headers:
-                        metadata[key]["headers"]["etag"] = response.headers["etag"]
-                    if "last-modified" in response.headers:
-                        metadata[key]["headers"]["last_modified"] = response.headers["last-modified"]
-
-                    # Handle Cache-Control header
-                    if "cache-control" in response.headers:
-                        max_age = parse_cache_control_max_age(response.headers["cache-control"])
-                        if max_age:
-                            metadata[key]["headers"]["cache_control"] = response.headers["cache-control"]
-                            metadata[key]["headers"]["cache_max_age"] = str(max_age)
-
-                    # Update last_downloaded timestamp
-                    metadata[key]["last_downloaded"] = utc_timestamp()
-
-                    # Update last_changed only when content actually changed
-                    if content_changed:
-                        metadata[key]["last_changed"] = utc_timestamp()
-
-                    results[key] = "downloaded"
-                else:
-                    results[key] = "error"
-            except Exception as e:
-                logger.error("Error downloading %s: %s", key, e)
-                results[key] = "error"
+            results[key] = _download_file_impl(
+                client=client,
+                key=key,
+                url=url,
+                filepath=filepath,
+                metadata=metadata,
+                content_validator=content_validator,
+            )
 
     # Save updated metadata
     save_metadata(metadata)
@@ -215,3 +207,116 @@ def download_tld_pages(
     save_metadata(metadata)
 
     return results
+
+
+# =============================================================================
+# Internal Implementation
+# =============================================================================
+
+
+def _download_file_impl(
+    client: httpx.Client,
+    key: str,
+    url: str,
+    filepath: Path,
+    metadata: dict,
+    content_validator: Callable[[Path, str], bool] | None = None,
+) -> str:
+    """
+    Internal implementation for downloading a single file.
+
+    Used by both download_file() and download_iana_files() to share logic
+    while allowing efficient batching with a single client/metadata.
+
+    Args:
+        client: httpx Client instance
+        key: Metadata key for tracking this download
+        url: URL to download from
+        filepath: Local path to save file to
+        metadata: Metadata dict (modified in place)
+        content_validator: Optional callback to check if content actually changed.
+
+    Returns:
+        Status: "downloaded", "not_modified", or "error"
+    """
+    # Check if cache is still fresh (for Cache-Control based files)
+    if key in metadata and is_cache_fresh(metadata[key]):
+        logger.info("Cache still fresh for %s", key)
+        # Update last_checked even for cache-fresh files
+        if key not in metadata:
+            metadata[key] = {}
+        metadata[key]["last_checked"] = utc_timestamp()
+        return "not_modified"
+
+    # Prepare conditional request headers
+    headers: dict[str, str] = {}
+    if key in metadata and "headers" in metadata[key]:
+        if "etag" in metadata[key]["headers"]:
+            headers["If-None-Match"] = metadata[key]["headers"]["etag"]
+        if "last_modified" in metadata[key]["headers"]:
+            headers["If-Modified-Since"] = metadata[key]["headers"]["last_modified"]
+
+    try:
+        response = make_request_with_retry(client, url, headers=headers)
+
+        # Initialize metadata entry if needed
+        if key not in metadata:
+            metadata[key] = {}
+        if "headers" not in metadata[key]:
+            metadata[key]["headers"] = {}
+
+        # Always update last_checked timestamp
+        metadata[key]["last_checked"] = utc_timestamp()
+
+        if response.status_code == 304:
+            # Not modified
+            return "not_modified"
+        elif response.status_code == 200:
+            # Check with content validator if provided
+            if content_validator and not content_validator(filepath, response.text):
+                return "not_modified"
+
+            # Check if content actually changed (for tracking last_changed)
+            content_changed = True
+            if filepath.exists():
+                try:
+                    existing_content = filepath.read_bytes()
+                    content_changed = existing_content != response.content
+                except OSError:
+                    pass  # Treat as changed if we can't read existing file
+
+            # Download successful, save file
+            filepath.parent.mkdir(parents=True, exist_ok=True)
+            with open(filepath, "wb") as f:
+                f.write(response.content)
+
+            # Update metadata with response headers
+            if "etag" in response.headers:
+                metadata[key]["headers"]["etag"] = response.headers["etag"]
+            if "last-modified" in response.headers:
+                metadata[key]["headers"]["last_modified"] = response.headers[
+                    "last-modified"
+                ]
+
+            # Handle Cache-Control header
+            if "cache-control" in response.headers:
+                max_age = parse_cache_control_max_age(response.headers["cache-control"])
+                if max_age:
+                    metadata[key]["headers"]["cache_control"] = response.headers[
+                        "cache-control"
+                    ]
+                    metadata[key]["headers"]["cache_max_age"] = str(max_age)
+
+            # Update last_downloaded timestamp
+            metadata[key]["last_downloaded"] = utc_timestamp()
+
+            # Update last_changed only when content actually changed
+            if content_changed:
+                metadata[key]["last_changed"] = utc_timestamp()
+
+            return "downloaded"
+        else:
+            return "error"
+    except Exception as e:
+        logger.error("Error downloading %s: %s", key, e)
+        return "error"

@@ -6,7 +6,7 @@ from unittest.mock import Mock, patch
 
 import httpx
 
-from src.utilities.download import download_iana_files
+from src.utilities.download import download_file, download_iana_files, _download_file_impl
 
 FIXTURES_DIR = Path(__file__).parent.parent / "fixtures"
 SOURCE_FIXTURES_DIR = FIXTURES_DIR / "source" / "core"
@@ -262,3 +262,172 @@ def test_download_handles_http_error(tmp_path):
         assert results["RDAP_BOOTSTRAP"] == "error"
         assert results["TLD_LIST"] == "error"
         assert results["ROOT_ZONE_DB"] == "error"
+
+
+def test_download_file_impl_single_file(tmp_path):
+    """Test _download_file_impl() function directly for a single file."""
+    source_dir = tmp_path / "data" / "source"
+    source_dir.mkdir(parents=True)
+    filepath = source_dir / "test-file.csv"
+
+    # Mock response
+    def mock_request(client, url, headers=None):
+        response = Mock(spec=httpx.Response)
+        response.status_code = 200
+        response.headers = {
+            "etag": '"abc123"',
+            "last-modified": "Wed, 20 Nov 2024 12:00:00 GMT",
+        }
+        response.content = b"col1,col2\nval1,val2\n"
+        response.text = "col1,col2\nval1,val2\n"
+        return response
+
+    metadata: dict = {}
+
+    with patch("src.utilities.download.make_request_with_retry", side_effect=mock_request):
+        mock_client = Mock(spec=httpx.Client)
+        result = _download_file_impl(
+            client=mock_client,
+            key="TEST_FILE",
+            url="https://example.com/test.csv",
+            filepath=filepath,
+            metadata=metadata,
+        )
+
+    # Check result
+    assert result == "downloaded"
+    assert filepath.exists()
+    assert filepath.read_text() == "col1,col2\nval1,val2\n"
+
+    # Check metadata was updated
+    assert "TEST_FILE" in metadata
+    assert metadata["TEST_FILE"]["headers"]["etag"] == '"abc123"'
+    assert "last_downloaded" in metadata["TEST_FILE"]
+    assert "last_checked" in metadata["TEST_FILE"]
+
+
+def test_download_file_impl_304_not_modified(tmp_path):
+    """Test _download_file_impl() with 304 Not Modified response."""
+    source_dir = tmp_path / "data" / "source"
+    source_dir.mkdir(parents=True)
+    filepath = source_dir / "test-file.csv"
+
+    # Create existing file
+    filepath.write_text("existing content")
+
+    # Mock 304 response
+    def mock_request(client, url, headers=None):
+        response = Mock(spec=httpx.Response)
+        response.status_code = 304
+        response.headers = {}
+        return response
+
+    metadata = {
+        "TEST_FILE": {
+            "headers": {
+                "etag": '"abc123"',
+                "last_modified": "Wed, 20 Nov 2024 12:00:00 GMT",
+            }
+        }
+    }
+
+    with patch("src.utilities.download.make_request_with_retry", side_effect=mock_request):
+        mock_client = Mock(spec=httpx.Client)
+        result = _download_file_impl(
+            client=mock_client,
+            key="TEST_FILE",
+            url="https://example.com/test.csv",
+            filepath=filepath,
+            metadata=metadata,
+        )
+
+    # Check result
+    assert result == "not_modified"
+
+    # File should be unchanged
+    assert filepath.read_text() == "existing content"
+
+
+def test_download_file_impl_with_content_validator(tmp_path):
+    """Test _download_file_impl() with content validator callback."""
+    source_dir = tmp_path / "data" / "source"
+    source_dir.mkdir(parents=True)
+    filepath = source_dir / "test-file.txt"
+
+    # Create existing file
+    filepath.write_text("existing content")
+
+    # Mock response with new content
+    def mock_request(client, url, headers=None):
+        response = Mock(spec=httpx.Response)
+        response.status_code = 200
+        response.headers = {}
+        response.content = b"new content"
+        response.text = "new content"
+        return response
+
+    # Validator that returns False (content not actually changed)
+    def validator(path, new_content):
+        return False  # Pretend content hasn't changed
+
+    metadata: dict = {}
+
+    with patch("src.utilities.download.make_request_with_retry", side_effect=mock_request):
+        mock_client = Mock(spec=httpx.Client)
+        result = _download_file_impl(
+            client=mock_client,
+            key="TEST_FILE",
+            url="https://example.com/test.txt",
+            filepath=filepath,
+            metadata=metadata,
+            content_validator=validator,
+        )
+
+    # Check result - should be not_modified because validator returned False
+    assert result == "not_modified"
+
+    # File should be unchanged
+    assert filepath.read_text() == "existing content"
+
+
+def test_download_file_public_api(tmp_path):
+    """Test the public download_file() API that handles everything."""
+    source_dir = tmp_path / "data" / "source"
+    generated_dir = tmp_path / "data" / "generated"
+
+    # Mock response
+    def mock_request(client, url, headers=None):
+        response = Mock(spec=httpx.Response)
+        response.status_code = 200
+        response.headers = {
+            "etag": '"test-etag"',
+        }
+        response.content = b"test,data\n1,2\n"
+        response.text = "test,data\n1,2\n"
+        return response
+
+    # Ensure generated dir exists for metadata
+    generated_dir.mkdir(parents=True)
+
+    with (
+        patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
+        patch("src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")),
+        patch("src.utilities.download.make_request_with_retry", side_effect=mock_request),
+        patch("src.utilities.download.httpx.Client") as mock_client_class,
+    ):
+        # Setup mock client context manager
+        mock_client_class.return_value.__enter__.return_value = Mock()
+        mock_client_class.return_value.__exit__.return_value = False
+
+        result = download_file(
+            key="TEST_FILE",
+            url="https://example.com/test.csv",
+            filename="test-file.csv",
+        )
+
+    # Check result
+    assert result == "downloaded"
+
+    # Check file was created
+    assert (source_dir / "test-file.csv").exists()
+    assert (source_dir / "test-file.csv").read_text() == "test,data\n1,2\n"
