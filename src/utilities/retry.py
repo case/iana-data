@@ -4,6 +4,7 @@ import logging
 
 import httpx
 from tenacity import (
+    before_sleep_log,
     retry,
     retry_if_exception_type,
     stop_after_attempt,
@@ -32,7 +33,7 @@ def make_request_with_retry(
     Make HTTP request with retry logic for transient errors.
 
     Retries on:
-    - Network errors (ConnectError, TimeoutException)
+    - All network/transport errors (ConnectError, RemoteProtocolError, ReadError, etc.)
     - Server errors (5xx status codes)
 
     Does not retry on:
@@ -50,33 +51,34 @@ def make_request_with_retry(
         httpx Response object
 
     Raises:
-        httpx.ConnectError: After retries exhausted
-        httpx.TimeoutException: After retries exhausted
+        httpx.TransportError: After retries exhausted for network errors
         ServerError: After retries exhausted for 5xx errors
     """
 
     # Use no wait in tests (when min_wait=0) for speed
     if min_wait == 0:
         wait_strategy = wait_none()
+        # Don't log retries in tests
+        before_sleep_callback = None
     else:
         wait_strategy = wait_exponential(multiplier=1, min=min_wait, max=max_wait)
+        # Log retry attempts at WARNING level
+        before_sleep_callback = before_sleep_log(logger, logging.WARNING)
 
     @retry(
         stop=stop_after_attempt(max_attempts),
         wait=wait_strategy,
-        retry=retry_if_exception_type(
-            (httpx.ConnectError, httpx.TimeoutException, ServerError)
-        ),
+        retry=retry_if_exception_type((httpx.TransportError, ServerError)),
+        before_sleep=before_sleep_callback,
         reraise=True,
     )
     def _request():
         response = client.get(url, headers=headers)
         # Raise ServerError for 5xx to trigger retry
         if 500 <= response.status_code < 600:
-            logger.warning(
-                "Server error %d for %s, retrying...", response.status_code, url
+            raise ServerError(
+                f"Server returned {response.status_code} for {url}"
             )
-            raise ServerError(f"Server returned {response.status_code}")
         return response
 
     return _request()
