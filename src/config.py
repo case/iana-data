@@ -42,6 +42,16 @@ CCTLD_OVERRIDES: Final[dict[str, str]] = {
     "uk": "United Kingdom",
 }
 
+# Mapping from ICANN Registry Agreement Type strings to normalized annotation values
+# Source: ICANN Registry Agreement Table CSV "Agreement Type" field
+REGISTRY_AGREEMENT_TYPE_MAPPING: Final[dict[str, str]] = {
+    "Base": "base",
+    "Brand (Spec 13)": "brand",
+    "Community (Spec 12)": "community",
+    "Sponsored": "sponsored",
+    "Non-Sponsored": "non_sponsored",
+}
+
 
 def setup_logging() -> None:
     """Configure logging for the application."""

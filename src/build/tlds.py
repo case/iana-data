@@ -9,6 +9,11 @@ from typing import Any
 from ..config import IANA_URLS, IDN_SCRIPT_MAPPING_FILE, TLD_PAGES_DIR, TLDS_OUTPUT_FILE
 from ..parse.country import get_country_name, is_cctld
 from ..parse.rdap_json import parse_rdap_json
+from ..parse.registry_agreement_csv import (
+    RegistryAgreement,
+    get_normalized_agreement_types,
+    parse_registry_agreement_csv,
+)
 from ..parse.root_db_html import derive_type_from_iana_tag, parse_root_db_html
 from ..parse.supplemental_cctld_rdap import parse_supplemental_cctld_rdap
 from ..parse.tld_html import parse_tld_page
@@ -29,6 +34,7 @@ def build_tlds_json() -> dict:
     root_zone_entries = parse_root_db_html()
     rdap_lookup = parse_rdap_json()
     supplemental_rdap = parse_supplemental_cctld_rdap()
+    registry_agreements = parse_registry_agreement_csv()
 
     # Load IDN script mappings
     idn_script_mapping = {}
@@ -65,7 +71,9 @@ def build_tlds_json() -> dict:
     for entry in root_zone_entries:
         tld = entry["domain"].lstrip(".")
         page_data = tld_page_data.get(tld, {})
-        tld_entry = _build_tld_entry(entry, rdap_lookup, supplemental_rdap, page_data, idn_script_mapping)
+        tld_entry = _build_tld_entry(
+            entry, rdap_lookup, supplemental_rdap, page_data, idn_script_mapping, registry_agreements
+        )
         tlds.append(tld_entry)
 
     # Build IDN ↔ ASCII bidirectional mapping
@@ -113,6 +121,7 @@ def _build_tld_entry(
     supplemental_rdap: dict[str, dict],
     page_data: dict[str, Any],
     idn_script_mapping: dict[str, str],
+    registry_agreements: dict[str, RegistryAgreement],
 ) -> dict:
     """
     Build a single TLD entry for output.
@@ -123,6 +132,7 @@ def _build_tld_entry(
         supplemental_rdap: Map of TLD to supplemental RDAP data
         page_data: Parsed data from TLD detail page
         idn_script_mapping: Map of IDN TLD to script name
+        registry_agreements: Map of TLD to ICANN registry agreement data
 
     Returns:
         dict: TLD entry following schema
@@ -216,7 +226,7 @@ def _build_tld_entry(
         entry["iana_reports"] = page_data["iana_reports"]
 
     # Add annotations if needed
-    annotations: dict[str, str] = {}
+    annotations: dict[str, str | list[str]] = {}
 
     if rdap_source:
         annotations["rdap_source"] = rdap_source
@@ -232,6 +242,13 @@ def _build_tld_entry(
         country_name = get_country_name(entry["tld_iso"])
         if country_name:
             annotations["country_name_iso"] = country_name
+
+    # Add registry agreement types from ICANN data (gTLDs only)
+    if tld in registry_agreements:
+        agreement = registry_agreements[tld]
+        agreement_types = get_normalized_agreement_types(agreement.get("agreement_types", []))
+        if agreement_types:
+            annotations["registry_agreement_types"] = agreement_types
 
     if annotations:
         entry["annotations"] = annotations

@@ -2,6 +2,11 @@
 
 from .country import get_all_country_mappings, get_country_name, is_cctld
 from .rdap_json import parse_rdap_json
+from .registry_agreement_csv import (
+    get_normalized_agreement_types,
+    parse_agreement_types,
+    parse_registry_agreement_csv,
+)
 from .root_db_html import derive_type_from_iana_tag, parse_root_db_html
 from .supplemental_cctld_rdap import parse_supplemental_cctld_rdap
 from .tld_html import extract_main_content
@@ -14,6 +19,9 @@ __all__ = [
     "derive_type_from_iana_tag",
     "parse_rdap_json",
     "parse_supplemental_cctld_rdap",
+    "parse_registry_agreement_csv",
+    "parse_agreement_types",
+    "get_normalized_agreement_types",
     "extract_main_content",
     "get_country_name",
     "is_cctld",

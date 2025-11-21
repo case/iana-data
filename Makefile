@@ -26,6 +26,10 @@ generate-idn-mapping:
 analyze-idn-scripts:
 	uv run python scripts/idn_unicode_scripts/analyze_idn_scripts.py
 
+.PHONY: analyze-registry-agreements
+analyze-registry-agreements:
+	uv run python scripts/registry-agreement-table/analyze_registry_agreements.py
+
 .PHONY: lint
 lint:
 	uv run ruff check src/ tests/
