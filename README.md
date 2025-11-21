@@ -177,7 +177,7 @@ Dependencies:
 
 **Later**
 
-- [ ] Annotation - `brand` TLDs (needs discovery)
+- [ ] Annotation - `brand` TLDs - via https://www.icann.org/en/registry-agreements?page=1&agreement-type=brand-spec-13
 - [ ] Annotation - `open` or `closed` TLDs (needs discovery)
 - [ ] Annotation - IDN meanings, maybe could derive from the individual TLD web pages
 - [ ] Annotation - IDN language
@@ -204,4 +204,5 @@ Dependencies:
 - [x] IDN & ISO ASCII equivalent TLD mappings
 - [x] CI for tests
 - [x] CI for data updates
-- [x] Add automated ISO-3166 country names support, via a canonical & trustworthy data source
+- [x] Added automated ISO-3166 country names support, via a canonical & trustworthy data source
+- [x] Added IDN -> script mapping, e.g. to identify IDNs as Arabic, CJK, etc
