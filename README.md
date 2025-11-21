@@ -177,8 +177,13 @@ Dependencies:
 
 **Later**
 
+- [ ] Annotation - `brand` TLDs (needs discovery)
+- [ ] Annotation - `open` or `closed` TLDs (needs discovery)
 - [ ] Annotation - IDN meanings, maybe could derive from the individual TLD web pages
 - [ ] Annotation - IDN language
+- [ ] Checkly monitoring for cctld rdap servers
+- [ ] Curl + make command monitoring, for rdap servers (disabled)
+  - [ ] Document this in the readme
 - [ ] Script to create a Sqlite db from the data - maybe purely from client side? E.g. JS could generate it "on the fly"?
 - [ ] Wikidata - figure out how to programmatically get (some or all of) this data into Wikidata, and Wikipedia
 - [ ] Add a `version` field to the `tlds.json` schema?
