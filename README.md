@@ -1,17 +1,31 @@
 # iana-data
 
-## Overview
+## Tl;dr
 
-[IANA](https://www.iana.org/) publishes some raw, canonical data about the DNS and root zone TLDs. This project is an attempt to make the IANA data easier to explore and interpret.
+This project saves nightly copies of canonical source data from [IANA](https://www.iana.org/) and [ICANN](https://www.icann.org/) in its git history, and builds a `tlds.json` file that aggregates interesting TLD data into a single place. The collected data in this file makes it easier to understand TLD namespace. It's sort of an API-in-a-box, for exploring the TLD cinematic universe.
 
-Here are some of the questions we'd like to be able to answer, from IANA's data:
+It also includes some non-IANA data, notably a handful of ccTLD RDAP server URLs that for whatever reason, aren't listed in IANA's RDAP bootstrap file. (Where possible, we include the sources where we found the RDAP URLs, but sometimes it's just from basic guessing)
+
+_Note:_ For folks unfamiliar with this ecosystem, ICANN governs all the gTLDS, and mandates that they offer RDAP servers. ccTLDs - all ~250 of them - are each governed by themselves, and therefore can publish RDAP or WHOIS servers, or not. This dataset attempts to collect the RDAP server URLs.
+
+Since these URLs may change, we have some lightweight monitoring in place to keep an eye on them:
+
+https://cctld-rdap.checkly-dashboards.com/
+
+Later on, we'll work on a friendly UI for all this.
+
+## Background
+
+IANA publishes some raw, canonical data about the DNS and root zone TLDs. This project is an attempt to make the  data easier to explore and interpret.
+
+Here are some of the questions we'd like to be able to answer, from the IANA data:
 
 - How many delegated TLDs are there?
 - Of the delegated TLDs, how many are Generic, and how many are Country-Code?
-- Of the Country-Code TLDs, how many are the IDN equivalent of an ASCII ccTLD?
 - Which countries do the ccTLDs represent?
 - How many TLDs are IDNs?
 - What do the IDNs mean?
+- Of the Country-Code TLDs, how many are the IDN equivalent of an ASCII ccTLD?
 - When was a given TLD delegated?
 - Which entity is the manager of a given TLD?
 - What are the parent entities of the TLD managers, if any?
@@ -22,41 +36,58 @@ Here are some of the questions we'd like to be able to answer, from IANA's data:
 
 Here are the data files we're working with:
 
-- IANA - The ["All TLDs" txt file](https://data.iana.org/TLD/tlds-alpha-by-domain.txt)
-- IANA - The [Root DB html file](https://www.iana.org/domains/root/db), which alas doesn't appear to be available in a friendlier format
-- IANA - The [RDAP "bootstrap" file](https://data.iana.org/rdap/dns.json)
+- IANA - The [All TLDs text file](https://data.iana.org/TLD/tlds-alpha-by-domain.txt)
+- IANA - The [Root DB html file](https://www.iana.org/domains/root/db), which (alas) doesn't appear to be available in a friendlier format
+- IANA - The [RDAP bootstrap file](https://data.iana.org/rdap/dns.json)
 - IANA - The individual TLD pages, like [this one for `.beer`](https://www.iana.org/domains/root/db/beer.html)
-- ICANN - The [Registry Agreements table](https://www.icann.org/en/registry-agreements) CSV, which let us identify which are Brand TLDs, etc.
+- ICANN - The [Registry Agreements table CSV](https://www.icann.org/en/registry-agreements), which help us identify which are Brand TLDs, etc.
 
 ## Working with the data files
 
 There are a few challenges with these data files, for example:
 
-For the "All TLDs" text file:
+**For the "All TLDs" text file:**
 
 - It doesn't say which are `generic` (gTLDs) vs `country-code` (ccTLDs)
 - There are `xn--` IDNs in the file; some are gTLDs, and some are ccTLDs
 - All two-character ASCII TLDs are ccTLDs, but not all two-character IDNs are ccTLDs
 - All the TLDs in there are delegated, which is handy. E.g. "currently in the DNS"
 
-For the "Root DB" html file:
+**For the "Root DB" html file:**
 
-- It lists more TLDs than the "All TLDs" file, because it also includes some `undelegated` TLDs. (These have a `TLD Manager` value of `Not assigned`.)
-- It has more "types" than just `generic` and `country-code` - it also lists `sponsored`, `infrastructure`, and `generic-restricted` types
+- It lists more TLDs than the "All TLDs" file, because it also includes some `undelegated` TLDs
+- It has more "types" than just `generic` and `country-code` - it also lists `sponsored`, `infrastructure`, and `generic-restricted`
 - It shows the Unicode IDN variants in the rendered html, and their ASCII variants in their `href` links to the per-TLD pages on the IANA website
 - We can use the combination of `country-code` and IDN status, to determine which IDNs are ccTLDs vs. gTLDs
+- Etc
 
-For the RDAP bootstrap file:
+**For the individual TLD pages:**
 
-_FIXME_
+- There are entities - sponsoring org, and administrative and technical contacts
+- Creation and Updated dates are there
+- Namserver hosts are there
+- Etc
+
+**For the RDAP bootstrap file:**
+
+- All the gTLDs are listed
+- Some ccTLDs are listed
+- A lot of ccTLDs aren't listed
+- Some TLDs have the same RDAP server URL
+- Etc.
+
+**For the ICANN Registry Agreements CSV:**
+
+- It has Agreement Types, which include the Brand agreements
+- There's other stuff that may be relevant in the future
 
 ## Supplemental data
 
-_FIXME_
+- The `data/manual/supplemental-cctld-rdap.json` file is the manually-edited list of ccTLD servers that aren't in the IANA file. Ideally, we'll find more, and add them here.
+- The `data/generated/metadata.json` file keeps track of our lifecycle of http fetches
+- The `data/generated/idn-script-mapping.json` file maps IDNs to their Scripts, e.g. Arabic, Cyrillic, etc. This isn't the same as a TLD's language, but it's close enough, and it's canonical data from the Unicode strings.
 
-## Generated data
-
-The `data/generated/idn-script-mapping.json` file maps IDNs to their Scripts, e.g. Arabic, Cyrillic, etc. This isn't the same as a TLD's language, but it's close enough, and it's canonical data from the Unicode strings.
+## `tlds.json`
 
 The `data/generated/tlds.json` file is an "enhanced" bootstrap file, which aggregates the myriad pieces of related data for a given TLD, into a single file and data structure.
 
@@ -78,6 +109,7 @@ Here is its schema:
       // --- Core IANA-sourced fields (always present) ---
       "tld": "string",                     // ASCII TLD without leading dot (e.g. "com", "xn--flw351e") [REQUIRED]
       "tld_unicode": "string",             // Unicode representation (only for IDNs, e.g. "谷歌") [OPTIONAL - omit if not IDN]
+      "tld_script": "string",              // Unicode script name for IDNs (e.g. "Han-CJK", "Arabic", "Cyrillic") [OPTIONAL - IDNs only]
       "tld_iso": "string",                 // ISO 3166-1 alpha-2 ccTLD this IDN is equivalent to (e.g. "cn") [OPTIONAL - IDN ccTLDs only]
       "idn": ["string"],                   // Array of IDN variants of this ccTLD (e.g. ["xn--fiqs8s", "xn--fiqz9s"]) [OPTIONAL - ISO ccTLDs only]
       "delegated": boolean,                // true if TLD Manager is assigned, false if "Not assigned" [REQUIRED]
@@ -120,6 +152,9 @@ Here is its schema:
         // Geographic metadata (primarily for ccTLDs)
         "country_name_iso": "string",      // ISO 3166 country name (e.g. "Taiwan", "United States")
 
+        // ICANN Registry Agreement metadata (gTLDs only)
+        "registry_agreement_types": ["string"], // Array of agreement types: "base" | "brand" | "community" | "sponsored" | "non_sponsored"
+
         // Custom taxonomies
         "tags": ["string"],                // Array of custom tags (e.g. ["brand"], ["geo"])
 
@@ -138,10 +173,6 @@ Here is its schema:
   ]
 }
 ```
-
-It looks like this:
-
-_FIXME - add an example_
 
 ## Local usage
 
@@ -174,6 +205,7 @@ Dependencies:
 ## Misc
 
 **ISO 3166-1 alpha-2 country names**
+
 - [Wikipedia details](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
 - We need to special-case a few:
   - `.ac` - Ascension Island
@@ -183,9 +215,6 @@ Dependencies:
 
 ## Todo
 
-- [ ] Checkly - Readme update
-- [ ] Checkly - Add `description`, `header`,  to the Dashboard
-- [ ] Curl + make command monitoring, for rdap servers, ; document this in the Readme
 - [ ] Annotation - the parent entity of the TLD Manager (grouping them, e.g. Binky Moon -> Identity Digital)
 - [ ] GH Actions automation for building `tlds.json`
 
@@ -196,10 +225,16 @@ Dependencies:
 - [ ] Script to create a Sqlite db from the data - maybe purely from client side? E.g. JS could generate it "on the fly"?
 - [ ] Wikidata - figure out how to programmatically get (some or all of) this data into Wikidata, and Wikipedia
 - [ ] Add a `version` field to the `tlds.json` schema?
+- [ ] Data integrity - more e2e tests to confirm that the data all lines up. E.g. the TLD pages <-> RDAP bootstrap file <-> full root db html page contents
 - [ ] Check other git repos, for TLDs TXT list change history
     - [some txt file history](https://github.com/ris-work/TLD-watch/commits/master/)
     - [Go project](https://github.com/jehiah/generic_tlds/commits/master/)
     - ZoneDB has some history
+
+**If anyone asks**
+
+- [ ] ccTLD RDAP - `curl` workfow for the monitoring, instead of Checkly
+- [ ] More data from the TLD pages, e.g. Name Server IPs (we currently only use hostnames in `tlds.json`), and IANA Report link URLs
 
 **Done**
 
