@@ -45,6 +45,20 @@ jobs:
           title: "ICANN monthly data download failed"
           message: "❌ Failed to download ICANN registry agreement table"
 
+      - name: Build tlds.json
+        id: build
+        continue-on-error: true
+        run: make build
+
+      - name: Notification if build fails
+        if: steps.build.outcome == 'failure'
+        uses: ./.github/actions/pushover
+        with:
+          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
+          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
+          title: "ICANN monthly data - tlds.json build failed"
+          message: "❌ Failed to build tlds.json"
+
       - name: Check for changes
         id: git-check
         if: always()

@@ -210,7 +210,7 @@ Dependencies:
 
 ## Todo
 
-- [ ] GH Actions automation for building `tlds.json`
+- [ ] 
 
 **Later**
 
@@ -249,3 +249,5 @@ Dependencies:
 - [x] Schedule for downloading the ICANN CSV (monthly)
 - [x] Checkly monitoring for ccTLD RDAP servers
 - [x] TLD Manager "aliases" per the `data/manual/tld-manager-aliases.json` file
+- [x] `tlds.json` is now in source control
+- [x] GH Actions automation for building `tlds.json`

@@ -75,12 +75,10 @@ def analyze_tlds_json() -> None:
     print()
     print("=== Stats ===")
     total_tlds = len(data["tlds"])
-    with_reports = sum(1 for t in data["tlds"] if "iana_reports" in t)
     with_rdap = sum(1 for t in data["tlds"] if "rdap_server" in t)
     with_alias = sum(1 for t in data["tlds"] if t.get("orgs", {}).get("tld_manager_alias"))
 
     print(f"  Total TLDs: {total_tlds}")
-    print(f"  With iana_reports: {with_reports}")
     print(f"  With rdap_server: {with_rdap}")
     print(f"  With tld_manager_alias: {with_alias}")
 
