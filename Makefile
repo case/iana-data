@@ -46,3 +46,19 @@ test: lint typecheck
 .PHONY: coverage
 coverage: lint
 	uv run pytest --cov=src --cov-report=term-missing
+
+.PHONY: checkly-test
+checkly-test:
+	npx checkly test --config monitoring/checkly/checkly.config.ts
+
+.PHONY: checkly-preview-deploy
+checkly-preview-deploy:
+	npx checkly deploy --preview --config monitoring/checkly/checkly.config.ts
+
+.PHONY: checkly-deploy
+checkly-deploy:
+	npx checkly deploy --config monitoring/checkly/checkly.config.ts
+
+.PHONY: checkly-info
+checkly-info:
+	npx jiti monitoring/checkly/info.ts
