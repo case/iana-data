@@ -1,6 +1,7 @@
 .PHONY: deps
 deps:
 	uv sync
+	npm install
 
 .PHONY: download-core
 download-core:
