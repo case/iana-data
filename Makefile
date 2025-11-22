@@ -31,6 +31,10 @@ analyze-idn-scripts:
 analyze-registry-agreements:
 	uv run python scripts/registry-agreement-table/analyze_registry_agreements.py
 
+.PHONY: analyze-tlds-json
+analyze-tlds-json:
+	uv run python scripts/analyze_tlds_json.py
+
 .PHONY: lint
 lint:
 	uv run ruff check src/ tests/

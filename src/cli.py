@@ -158,9 +158,19 @@ def main() -> int:
             logger.error("Build failed: %s", result["error"])
             return 1
 
+        # Format file size for display
+        file_size = result.get("file_size", 0)
+        if file_size >= 1024 * 1024:
+            size_str = f"{file_size / (1024 * 1024):.1f} MB"
+        elif file_size >= 1024:
+            size_str = f"{file_size / 1024:.1f} KB"
+        else:
+            size_str = f"{file_size} bytes"
+
         logger.info("Build complete:")
         logger.info("  Total TLDs: %d", result["total_tlds"])
         logger.info("  Output file: %s", result.get("output_file"))
+        logger.info("  File size: %s", size_str)
         return 0
 
     if getattr(args, "download_tld_pages", None) is not None:

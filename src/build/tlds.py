@@ -120,6 +120,7 @@ def build_tlds_json() -> dict:
     return {
         "total_tlds": len(tlds),
         "output_file": str(output_path),
+        "file_size": output_path.stat().st_size,
     }
 
 
@@ -233,10 +234,6 @@ def _build_tld_entry(
 
     if "tld_updated" in page_data:
         entry["tld_updated"] = [page_data["tld_updated"]]
-
-    # Add IANA reports from page data
-    if "iana_reports" in page_data:
-        entry["iana_reports"] = page_data["iana_reports"]
 
     # Add annotations if needed
     annotations: dict[str, str | list[str]] = {}
