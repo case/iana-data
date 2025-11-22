@@ -1,5 +1,6 @@
 import * as path from "path";
 import * as fs from "fs";
+import config from "./checkly.config.ts";
 
 interface CcTldRdapServer {
   tld: string;
@@ -16,21 +17,23 @@ const dataPath = path.join(
 );
 const data: SupplementalData = JSON.parse(fs.readFileSync(dataPath, "utf-8"));
 
+// Get config values
+const frequency = config.checks?.frequency as { frequency: number };
+const frequencyMinutes = frequency?.frequency ?? 1440; // default 24h
+const locations = config.checks?.locations ?? [];
+
 // Count checks
 const totalServers = data.ccTldRdapServers.length;
 const activeServers = data.ccTldRdapServers.filter((s) => s.monitoring).length;
-const checksPerServer = 2; // 404 and 200 checks
+const checksPerServer = 1; // 200 check only
 const totalChecks = totalServers * checksPerServer;
 const activeChecks = activeServers * checksPerServer;
 
-// Frequency: EVERY_24H = once per day
-const frequencyHours = 24;
-const checksPerDay = activeChecks;
+// Calculate runs
+const runsPerDay = (24 * 60) / frequencyMinutes;
+const checksPerDay = activeChecks * runsPerDay;
 const checksPerMonth = checksPerDay * 30;
-
-// Locations: 2 (us-west-2, eu-west-3)
-const locations = 2;
-const totalRunsPerMonth = checksPerMonth * locations;
+const totalRunsPerMonth = checksPerMonth * locations.length;
 
 console.log("Checkly Configuration Info");
 console.log("==========================");
@@ -40,8 +43,8 @@ console.log(`Checks per server: ${checksPerServer} (404 + 200)`);
 console.log(`Total checks: ${totalChecks}`);
 console.log(`Active checks: ${activeChecks}`);
 console.log();
-console.log(`Frequency: Every ${frequencyHours} hours`);
-console.log(`Locations: ${locations}`);
+console.log(`Frequency: Every ${frequencyMinutes} minutes (${frequencyMinutes / 60} hours)`);
+console.log(`Locations: ${locations.length} (${locations.join(", ")})`);
 console.log();
-console.log(`Check runs per day: ${checksPerDay * locations}`);
+console.log(`Check runs per day: ${(checksPerDay * locations.length).toLocaleString()}`);
 console.log(`Check runs per month: ${totalRunsPerMonth.toLocaleString()}`);

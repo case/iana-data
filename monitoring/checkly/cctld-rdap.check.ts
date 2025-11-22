@@ -46,26 +46,6 @@ for (const server of data.ccTldRdapServers) {
     backendOperator.toLowerCase().replace(/ /g, "-")
   }`;
 
-  // Check for non-existent domain - should return 404 with proper RDAP error
-  new ApiCheck(`${tld}-404`, {
-    name: `${tld}-404`,
-    group,
-    activated: monitoring,
-    shouldFail: true,
-    tags: ["cctld-rdap", operatorTag],
-    request: {
-      method: "GET",
-      url: `${rdapServer}domain/foobar-horse-3846.${tld}`,
-      assertions: [
-        AssertionBuilder.statusCode().equals(404),
-        AssertionBuilder.headers("content-type").contains(
-          "application/rdap+json",
-        ),
-        AssertionBuilder.jsonBody("$.errorCode").equals(404),
-      ],
-    },
-  });
-
   // Check for known domain - should return 200 with valid RDAP domain response
   new ApiCheck(`${tld}-200`, {
     name: `${tld}-200`,
@@ -98,6 +78,9 @@ const operatorTags = [
 new Dashboard("cctld-rdap-dashboard", {
   customUrl: "cctld-rdap",
   header: "ccTLD RDAP Status",
+  description:
+    "Monitoring 200s from ccTLD RDAP servers that aren't in the IANA RDAP bootstrap file.",
   tags: ["cctld-rdap", ...operatorTags],
   checksPerPage: 20,
+  width: "FULL",
 });
