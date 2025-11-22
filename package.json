@@ -1,0 +1,15 @@
+{
+  "name": "iana-data-checkly",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Checkly monitoring for ccTLD RDAP servers",
+  "scripts": {
+    "checkly:test": "npx checkly test --config checkly/checkly.config.ts",
+    "checkly:deploy": "npx checkly deploy --config checkly/checkly.config.ts"
+  },
+  "devDependencies": {
+    "checkly": "6.9.2",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3"
+  }
+}
