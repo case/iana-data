@@ -60,8 +60,8 @@
       "backendOperator": "CentralNic",
       "dateUpdated": "2022-01-15",
       "source": "https://www.nic.li/whois/rdap/",
-      "notes": "503 errors as of 2025-11-12",
-      "monitoring": false
+      "notes": "",
+      "monitoring": true
     },
     {
       "tld": "io",
