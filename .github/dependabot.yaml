@@ -18,3 +18,12 @@ updates:
       day: "friday"
       time: "14:00"
       timezone: "America/Los_Angeles"
+
+  # NodeJS
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "friday"
+      time: "14:00"
+      timezone: "America/Los_Angeles"
