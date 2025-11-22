@@ -1,0 +1,30 @@
+{
+  "managerAliases": {
+    "Identity Digital": [
+      {
+        "name": "Binky Moon, LLC",
+        "source": "https://www.identity.digital/policies/privacy-policy"
+      },
+      {
+        "name": "Dog Beach, LLC",
+        "source": "https://www.identity.digital/policies/privacy-policy"
+      }
+    ],
+    "Google": [
+      {
+        "name": "Charleston Road Registry Inc.",
+        "source": "https://en.wikipedia.org/wiki/Google_Registry"
+      }
+    ],
+    "VeriSign": [
+      {
+        "name": "VeriSign Global Registry Services",
+        "source": null
+      },
+      {
+        "name": "VeriSign, Inc.",
+        "source": null
+      }
+    ]
+  }
+}

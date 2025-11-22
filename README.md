@@ -119,6 +119,7 @@ Here is its schema:
       // --- Organizations ---
       "orgs": {                            // Organizations associated with this TLD [OPTIONAL - omit if undelegated]
         "tld_manager": "string",           // TLD Manager name from IANA Root Zone Database [REQUIRED if orgs present]
+        "tld_manager_alias": "string",             // Sourced from data/manual/tld-manager-aliases.json
         "admin": "string",                 // Administrative Contact organization [OPTIONAL - omit if empty]
         "tech": "string"                   // Technical Contact organization [OPTIONAL - omit if empty]
       },
@@ -154,12 +155,6 @@ Here is its schema:
 
         // ICANN Registry Agreement metadata (gTLDs only)
         "registry_agreement_types": ["string"], // Array of agreement types: "base" | "brand" | "community" | "sponsored" | "non_sponsored"
-
-        // Custom taxonomies
-        "tags": ["string"],                // Array of custom tags (e.g. ["brand"], ["geo"])
-
-        // Organizational metadata
-        "parent_entity": "string",         // Parent organization of TLD manager
 
         // General notes
         "notes": [                         // Array of timestamped notes
@@ -215,7 +210,6 @@ Dependencies:
 
 ## Todo
 
-- [ ] Annotation - the parent entity of the TLD Manager (grouping them, e.g. Binky Moon -> Identity Digital)
 - [ ] GH Actions automation for building `tlds.json`
 
 **Later**
@@ -254,3 +248,4 @@ Dependencies:
 - [x] Annotation - `brand` TLDs identification via the ICANN CSV
 - [x] Schedule for downloading the ICANN CSV (monthly)
 - [x] Checkly monitoring for ccTLD RDAP servers
+- [x] TLD Manager "aliases" per the `data/manual/tld-manager-aliases.json` file

@@ -28,6 +28,12 @@ GENERATED_DIR: Final[str] = "data/generated"
 TLDS_OUTPUT_FILE: Final[str] = f"{GENERATED_DIR}/tlds.json"
 IDN_SCRIPT_MAPPING_FILE: Final[str] = f"{GENERATED_DIR}/idn-script-mapping.json"
 
+# Manual data files
+MANUAL_FILES: Final[dict[str, str]] = {
+    "SUPPLEMENTAL_CCTLD_RDAP": "supplemental-cctld-rdap.json",
+    "TLD_MANAGER_ALIASES": "tld-manager-aliases.json",
+}
+
 # Test fixtures
 FIXTURES_DIR: Final[str] = "tests/fixtures"
 FIXTURES_FILES: Final[dict[str, str]] = {

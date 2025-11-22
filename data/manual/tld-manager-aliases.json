@@ -1,0 +1,330 @@
+{
+  "managerAliases": {
+    "Identity Digital": [
+      {
+        "name": "Identity Digital Limited",
+        "source": null
+      },
+      {
+        "name": "Binky Moon, LLC",
+        "source": "https://www.identity.digital/policies/privacy-policy"
+      },
+      {
+        "name": "Dog Beach, LLC",
+        "source": "https://www.identity.digital/policies/privacy-policy"
+      },
+      {
+        "name": "Internet Computer Bureau Limited",
+        "source": "https://en.wikipedia.org/wiki/Internet_Computer_Bureau"
+      }
+    ],
+    "GoDaddy": [
+      {
+        "name": "Registry Services, LLC",
+        "source": "https://en.wikipedia.org/wiki/GoDaddy#GoDaddy_Registry"
+      },
+      {
+        "name": "Go Daddy East, LLC",
+        "source": null
+      }
+    ],
+    "Amazon": [
+      {
+        "name": "Amazon Registry Services, Inc.",
+        "source": null
+      },
+      {
+        "name": "AWS Registry LLC",
+        "source": null
+      },
+      {
+        "name": "Amazon Registry Services, INC",
+        "source": null
+      }
+    ],
+    "Google": [
+      {
+        "name": "Charleston Road Registry Inc.",
+        "source": "https://en.wikipedia.org/wiki/Google_Registry"
+      }
+    ],
+    "VeriSign": [
+      {
+        "name": "VeriSign Global Registry Services",
+        "source": null
+      },
+      {
+        "name": "VeriSign, Inc.",
+        "source": null
+      },
+      {
+        "name": "VeriSign Information Services, Inc.",
+        "source": null
+      },
+      {
+        "name": "VeriSign Sarl",
+        "source": null
+      }
+    ],
+    "NIXI": [
+      {
+        "name": "National Internet eXchange of India",
+        "source": null
+      },
+      {
+        "name": "National Internet Exchange of India",
+        "source": null
+      }
+    ],
+    "ICM Registry": [
+      {
+        "name": "ICM Registry AD LLC",
+        "source": null
+      },
+      {
+        "name": "ICM Registry PN LLC",
+        "source": null
+      },
+      {
+        "name": "ICM Registry SX LLC",
+        "source": null
+      },
+      {
+        "name": "ICM Registry LLC",
+        "source": null
+      }
+    ],
+    "GMO": [
+      {
+        "name": "GMO Internet, Inc.",
+        "source": null
+      },
+      {
+        "name": "GMO Registry, Inc.",
+        "source": null
+      }
+    ],
+    "ZACR": [
+      {
+        "name": "ZA Central Registry NPC trading as ZA Central Registry",
+        "source": null
+      },
+      {
+        "name": "ZA Central Registry NPC trading as Registry.Africa",
+        "source": null
+      }
+    ],
+    "PIR": [
+      {
+        "name": "Public Interest Registry",
+        "source": null
+      },
+      {
+        "name": "Public Interest Registry (PIR)",
+        "source": null
+      }
+    ],
+    "AFNIC": [
+      {
+        "name": "Association Française pour le Nommage Internet en Coopération (A.F.N.I.C.)",
+        "source": null
+      }
+    ],
+    "Microsoft": [
+      {
+        "name": "Microsoft Corporation",
+        "source": null
+      }
+    ],
+    "IBM": [
+      {
+        "name": "International Business Machines Corporation",
+        "source": null
+      }
+    ],
+    "Dish Network": [
+      {
+        "name": "Dish DBS Corporation",
+        "source": "https://www.sec.gov/Archives/edgar/data/1001082/000155837021001322/dish-20201231xex21.htm"
+      },
+      {
+        "name": "DISH Technologies L.L.C.",
+        "source": "https://www.sec.gov/Archives/edgar/data/1001082/000155837021001322/dish-20201231xex21.htm"
+      }
+    ],
+    "BMW": [
+      {
+        "name": "Bayerische Motoren Werke Aktiengesellschaft",
+        "source": null
+      }
+    ],
+    "Apple": [
+      {
+        "name": "Beats Electronics, LLC",
+        "source": "https://en.wikipedia.org/wiki/Beats_Electronics"
+      },
+      {
+        "name": "Apple Inc.",
+        "source": null
+      }
+    ],
+    "HDFC": [
+      {
+        "name": "HOUSING DEVELOPMENT FINANCE CORPORATION LIMITED",
+        "source": "https://en.wikipedia.org/wiki/Housing_Development_Finance_Corporation"
+      },
+      {
+        "name": "HDFC Bank Limited",
+        "source": null
+      }
+    ],
+    "Fiat Chrysler": [
+      {
+        "name": "Fiat Chrysler Automobiles N.V.",
+        "source": null
+      },
+      {
+        "name": "FCA US LLC.",
+        "source": "https://en.wikipedia.org/wiki/Fiat_Chrysler_Automobiles"
+      }
+    ],
+    "Audi": [
+      {
+        "name": "AUDI Aktiengesellschaft",
+        "source": null
+      },
+      {
+        "name": "Automobili Lamborghini S.p.A.",
+        "source": "https://en.wikipedia.org/wiki/Lamborghini"
+      }
+    ],
+    "LDS": [
+      {
+        "name": "IRI Domain Management, LLC",
+        "source": "https://en.wikipedia.org/wiki/The_Church_of_Jesus_Christ_of_Latter-day_Saints#Name_and_legal_entities"
+      },
+      {
+        "name": "IRI Domain Management, LLC (\"Applicant\")",
+        "source": null
+      }
+    ],
+    "FTLD": [
+      {
+        "name": "fTLD Registry Services, LLC",
+        "source": null
+      },
+      {
+        "name": "fTLD Registry Services LLC",
+        "source": null
+      }
+    ],
+    "Sony": [
+      {
+        "name": "Sony Computer Entertainment Inc.",
+        "source": null
+      },
+      {
+        "name": "Sony Corporation",
+        "source": null
+      }
+    ],
+    "DotCooperation": [
+      {
+        "name": "DotCooperation LLC",
+        "source": null
+      },
+      {
+        "name": "DotCooperation, LLC",
+        "source": null
+      }
+    ],
+    "GRS Domains": [
+      {
+        "name": "dot Accountant Limited",
+        "source": "https://en.wikipedia.org/wiki/GRS_Domains"
+      },
+      {
+        "name": "dot Bid Limited",
+        "source": "https://en.wikipedia.org/wiki/GRS_Domains"
+      },
+      {
+        "name": "dot Cricket Limited",
+        "source": "https://en.wikipedia.org/wiki/GRS_Domains"
+      },
+      {
+        "name": "dot Date Limited",
+        "source": "https://en.wikipedia.org/wiki/GRS_Domains"
+      },
+      {
+        "name": "dot Support Limited",
+        "source": "https://en.wikipedia.org/wiki/GRS_Domains"
+      },
+      {
+        "name": "dot Faith Limited",
+        "source": "https://en.wikipedia.org/wiki/GRS_Domains"
+      },
+      {
+        "name": "dot Loan Limited",
+        "source": "https://en.wikipedia.org/wiki/GRS_Domains"
+      },
+      {
+        "name": "Exclusive Registry Limited",
+        "source": "https://en.wikipedia.org/wiki/GRS_Domains"
+      },
+      {
+        "name": "Blue Sky Registry Limited",
+        "source": "https://en.wikipedia.org/wiki/GRS_Domains"
+      },
+      {
+        "name": "Premier Registry Limited",
+        "source": "https://en.wikipedia.org/wiki/GRS_Domains"
+      },
+      {
+        "name": "dot Review Limited",
+        "source": "https://en.wikipedia.org/wiki/GRS_Domains"
+      },
+      {
+        "name": "dot Science Limited",
+        "source": "https://en.wikipedia.org/wiki/GRS_Domains"
+      },
+      {
+        "name": "dot Stream Limited",
+        "source": "https://en.wikipedia.org/wiki/GRS_Domains"
+      },
+      {
+        "name": "Elite Registry Limited",
+        "source": "https://en.wikipedia.org/wiki/GRS_Domains"
+      },
+      {
+        "name": "dot Webcam Limited",
+        "source": "https://en.wikipedia.org/wiki/GRS_Domains"
+      },
+      {
+        "name": "First Registry Limited",
+        "source": "https://en.wikipedia.org/wiki/GRS_Domains"
+      }
+    ],
+    "Second Genistry": [
+      {
+        "name": "Employ Media LLC",
+        "source": "https://www.secondgen.com/portfolio"
+      },
+      {
+        "name": "Real Estate Domains LLC",
+        "source": "https://www.secondgen.com/portfolio"
+      },
+      {
+        "name": "dotCareer LLC",
+        "source": "https://www.secondgen.com/portfolio"
+      },
+      {
+        "name": "Medistry LLC",
+        "source": "https://www.secondgen.com/portfolio"
+      },
+      {
+        "name": "dotRealEstate LLC",
+        "source": "https://www.secondgen.com/portfolio"
+      }
+    ]
+  }
+}

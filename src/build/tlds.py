@@ -17,6 +17,7 @@ from ..parse.registry_agreement_csv import (
 from ..parse.root_db_html import derive_type_from_iana_tag, parse_root_db_html
 from ..parse.supplemental_cctld_rdap import parse_supplemental_cctld_rdap
 from ..parse.tld_html import parse_tld_page
+from ..parse.tld_manager_aliases import parse_tld_manager_aliases
 from ..utilities.urls import get_tld_file_path
 
 logger = logging.getLogger(__name__)
@@ -35,6 +36,7 @@ def build_tlds_json() -> dict:
     rdap_lookup = parse_rdap_json()
     supplemental_rdap = parse_supplemental_cctld_rdap()
     registry_agreements = parse_registry_agreement_csv()
+    tld_manager_aliases = parse_tld_manager_aliases()
 
     # Load IDN script mappings
     idn_script_mapping = {}
@@ -72,7 +74,13 @@ def build_tlds_json() -> dict:
         tld = entry["domain"].lstrip(".")
         page_data = tld_page_data.get(tld, {})
         tld_entry = _build_tld_entry(
-            entry, rdap_lookup, supplemental_rdap, page_data, idn_script_mapping, registry_agreements
+            entry,
+            rdap_lookup,
+            supplemental_rdap,
+            page_data,
+            idn_script_mapping,
+            registry_agreements,
+            tld_manager_aliases,
         )
         tlds.append(tld_entry)
 
@@ -122,6 +130,7 @@ def _build_tld_entry(
     page_data: dict[str, Any],
     idn_script_mapping: dict[str, str],
     registry_agreements: dict[str, RegistryAgreement],
+    tld_manager_aliases: dict[str, str],
 ) -> dict:
     """
     Build a single TLD entry for output.
@@ -133,6 +142,7 @@ def _build_tld_entry(
         page_data: Parsed data from TLD detail page
         idn_script_mapping: Map of IDN TLD to script name
         registry_agreements: Map of TLD to ICANN registry agreement data
+        tld_manager_aliases: Map of TLD manager name to canonical alias
 
     Returns:
         dict: TLD entry following schema
@@ -176,6 +186,9 @@ def _build_tld_entry(
     orgs: dict[str, str] = {}
     if tld_manager != "Not assigned":
         orgs["tld_manager"] = tld_manager
+        # Add alias if this manager has a canonical name
+        if tld_manager in tld_manager_aliases:
+            orgs["tld_manager_alias"] = tld_manager_aliases[tld_manager]
 
     if "orgs" in page_data:
         if "admin" in page_data["orgs"]:
