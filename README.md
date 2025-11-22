@@ -183,8 +183,9 @@ Dependencies:
 
 ## Todo
 
-- [ ] Checkly monitoring for cctld rdap servers
-- [ ] Curl + make command monitoring, for rdap servers (disabled); document this in the Readme
+- [ ] Checkly - Readme update
+- [ ] Checkly - Add `description`, `header`,  to the Dashboard
+- [ ] Curl + make command monitoring, for rdap servers, ; document this in the Readme
 - [ ] Annotation - the parent entity of the TLD Manager (grouping them, e.g. Binky Moon -> Identity Digital)
 - [ ] GH Actions automation for building `tlds.json`
 
@@ -217,3 +218,4 @@ Dependencies:
 - [x] Added ICANN Registry Agreements CSV, to identify `brand` TLDs
 - [x] Annotation - `brand` TLDs identification via the ICANN CSV
 - [x] Schedule for downloading the ICANN CSV (monthly)
+- [x] Checkly monitoring for ccTLD RDAP servers
