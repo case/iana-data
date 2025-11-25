@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2025-11-24T03:04:44Z",
+  "publication": "2025-11-25T03:04:21Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -42577,8 +42577,8 @@
       "iana_tag": "generic",
       "type": "gtld",
       "orgs": {
-        "tld_manager": "Beijing Tld Registry Technology Limited",
-        "admin": "Beijing Tld Registry Technology Limited",
+        "tld_manager": "Beijing TLD Registry Technology Limited",
+        "admin": "Beijing TLD Registry Technology Limited",
         "tech": "Beijing Tele-info Technology Co., Ltd."
       },
       "nameservers": [
@@ -42592,7 +42592,7 @@
       "rdap_server": "https://rdap.teleinfo.cn/xn--3ds443g/",
       "tld_created": "2013-12-19",
       "tld_updated": [
-        "2025-04-24"
+        "2025-11-24"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -42910,6 +42910,20 @@
         "rdap_source": "IANA",
         "registry_agreement_types": [
           "base",
+          "non_sponsored"
+        ]
+      }
+    },
+    {
+      "tld": "xn--4gq48lf9j",
+      "tld_unicode": "一号店",
+      "delegated": false,
+      "iana_tag": "generic",
+      "type": "gtld",
+      "annotations": {
+        "registry_agreement_types": [
+          "base",
+          "brand",
           "non_sponsored"
         ]
       }
@@ -44230,8 +44244,8 @@
       "iana_tag": "generic",
       "type": "gtld",
       "orgs": {
-        "tld_manager": "TLD REGISTRY LIMITED",
-        "admin": "TLD Registry Ltd.",
+        "tld_manager": "Beijing TLD Registry Technology Limited",
+        "admin": "Beijing TLD Registry Technology Limited",
         "tech": "Beijing Tele-info Technology Co., Ltd."
       },
       "nameservers": [
@@ -44245,7 +44259,7 @@
       "rdap_server": "https://rdap.teleinfo.cn/xn--fiq228c5hs/",
       "tld_created": "2013-12-19",
       "tld_updated": [
-        "2025-04-24"
+        "2025-11-24"
       ],
       "annotations": {
         "rdap_source": "IANA",
