@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2025-11-25T03:04:21Z",
+  "publication": "2025-11-25T17:13:28Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -42917,6 +42917,7 @@
     {
       "tld": "xn--4gq48lf9j",
       "tld_unicode": "一号店",
+      "tld_script": "Han-CJK",
       "delegated": false,
       "iana_tag": "generic",
       "type": "gtld",
