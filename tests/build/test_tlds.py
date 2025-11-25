@@ -3,16 +3,23 @@
 import json
 from pathlib import Path
 
+import pytest
+
 from src.build.tlds import build_tlds_json
-from src.config import TLDS_OUTPUT_FILE
 from src.parse.rdap_json import parse_rdap_json
 from src.parse.root_db_html import parse_root_db_html
 from src.parse.tlds_txt import parse_tlds_txt
 
 FIXTURES_DIR = Path(__file__).parent.parent / "fixtures" / "source" / "core"
 
+@pytest.fixture
+def temp_output(tmp_path, monkeypatch):
+    """Fixture to redirect build output to temp directory."""
+    output_file = tmp_path / "tlds.json"
+    monkeypatch.setattr("src.build.tlds.TLDS_OUTPUT_FILE", str(output_file))
+    return output_file
 
-def test_build_tlds_json_creates_file():
+def test_build_tlds_json_creates_file(temp_output):
     """Test that build_tlds_json creates the output file."""
     result = build_tlds_json()
 
@@ -21,16 +28,13 @@ def test_build_tlds_json_creates_file():
     assert "output_file" in result
 
     # Should create output file
-    output_path = Path(TLDS_OUTPUT_FILE)
-    assert output_path.exists()
+    assert temp_output.exists()
 
-
-def test_build_tlds_json_has_correct_structure():
+def test_build_tlds_json_has_correct_structure(temp_output):
     """Test that generated tlds.json has correct top-level structure."""
     build_tlds_json()
 
-    output_path = Path(TLDS_OUTPUT_FILE)
-    with open(output_path) as f:
+    with open(temp_output) as f:
         data = json.load(f)
 
     # Check top-level fields
@@ -46,8 +50,7 @@ def test_build_tlds_json_has_correct_structure():
     # Check tlds is a list
     assert isinstance(data["tlds"], list)
 
-
-def test_build_tlds_json_tld_count_matches_source():
+def test_build_tlds_json_tld_count_matches_source(temp_output):
     """Test that number of TLDs in output matches root zone source."""
     # Parse root zone to get expected count
     root_zone_entries = parse_root_db_html()
@@ -59,19 +62,18 @@ def test_build_tlds_json_tld_count_matches_source():
     assert result["total_tlds"] == expected_count
 
     # Also verify in the file itself
-    output_path = Path(TLDS_OUTPUT_FILE)
-    with open(output_path) as f:
+    
+    with open(temp_output) as f:
         data = json.load(f)
 
     assert len(data["tlds"]) == expected_count
 
-
-def test_build_tlds_json_has_required_fields():
+def test_build_tlds_json_has_required_fields(temp_output):
     """Test that each TLD entry has required fields."""
     build_tlds_json()
 
-    output_path = Path(TLDS_OUTPUT_FILE)
-    with open(output_path) as f:
+    
+    with open(temp_output) as f:
         data = json.load(f)
 
     # Check first few entries have required fields
@@ -82,26 +84,24 @@ def test_build_tlds_json_has_required_fields():
         assert "type" in tld_entry
         # tld_manager is now in orgs object, which is optional for undelegated TLDs
 
-
-def test_build_tlds_json_strips_leading_dots():
+def test_build_tlds_json_strips_leading_dots(temp_output):
     """Test that TLDs in output don't have leading dots."""
     build_tlds_json()
 
-    output_path = Path(TLDS_OUTPUT_FILE)
-    with open(output_path) as f:
+    
+    with open(temp_output) as f:
         data = json.load(f)
 
     # Check that no TLD starts with a dot
     for tld_entry in data["tlds"]:
         assert not tld_entry["tld"].startswith(".")
 
-
-def test_build_tlds_json_derives_type_correctly():
+def test_build_tlds_json_derives_type_correctly(temp_output):
     """Test that type field is correctly derived from iana_tag."""
     build_tlds_json()
 
-    output_path = Path(TLDS_OUTPUT_FILE)
-    with open(output_path) as f:
+    
+    with open(temp_output) as f:
         data = json.load(f)
 
     for tld_entry in data["tlds"]:
@@ -114,13 +114,12 @@ def test_build_tlds_json_derives_type_correctly():
         else:
             assert derived_type == "gtld"
 
-
-def test_build_tlds_json_delegated_status():
+def test_build_tlds_json_delegated_status(temp_output):
     """Test that delegated status is correctly set."""
     build_tlds_json()
 
-    output_path = Path(TLDS_OUTPUT_FILE)
-    with open(output_path) as f:
+    
+    with open(temp_output) as f:
         data = json.load(f)
 
     for tld_entry in data["tlds"]:
@@ -132,16 +131,15 @@ def test_build_tlds_json_delegated_status():
             assert "tld_manager" in tld_entry["orgs"]
         # Undelegated TLDs may or may not have orgs
 
-
-def test_build_tlds_json_rdap_servers_present():
+def test_build_tlds_json_rdap_servers_present(temp_output):
     """Test that RDAP servers are included for TLDs that have them."""
     # Get RDAP lookup to know which TLDs should have servers
     rdap_lookup = parse_rdap_json()
 
     build_tlds_json()
 
-    output_path = Path(TLDS_OUTPUT_FILE)
-    with open(output_path) as f:
+    
+    with open(temp_output) as f:
         data = json.load(f)
 
     # Build a map of TLD to entry for easy lookup
@@ -157,13 +155,12 @@ def test_build_tlds_json_rdap_servers_present():
             assert "annotations" in entry
             assert "rdap_source" in entry["annotations"]
 
-
-def test_build_tlds_json_idn_unicode_field():
+def test_build_tlds_json_idn_unicode_field(temp_output):
     """Test that IDN TLDs have tld_unicode field."""
     build_tlds_json()
 
-    output_path = Path(TLDS_OUTPUT_FILE)
-    with open(output_path) as f:
+    
+    with open(temp_output) as f:
         data = json.load(f)
 
     # Find an IDN TLD (starts with xn--)
@@ -180,13 +177,12 @@ def test_build_tlds_json_idn_unicode_field():
             # Unicode version should not start with xn--
             assert not entry["tld_unicode"].startswith("xn--")
 
-
-def test_build_tlds_json_publication_timestamp_format():
+def test_build_tlds_json_publication_timestamp_format(temp_output):
     """Test that publication timestamp uses correct format (seconds + Z)."""
     build_tlds_json()
 
-    output_path = Path(TLDS_OUTPUT_FILE)
-    with open(output_path) as f:
+    
+    with open(temp_output) as f:
         data = json.load(f)
 
     publication = data["publication"]
@@ -201,8 +197,7 @@ def test_build_tlds_json_publication_timestamp_format():
     # Length should be 20 characters
     assert len(publication) == 20
 
-
-def test_build_tlds_json_delegated_count_matches_tlds_txt():
+def test_build_tlds_json_delegated_count_matches_tlds_txt(temp_output):
     """Test that delegated TLD count matches all-tlds text file."""
     # Parse TLDs text file to get expected count
     tlds_txt_list = parse_tlds_txt()
@@ -211,8 +206,8 @@ def test_build_tlds_json_delegated_count_matches_tlds_txt():
     # Build and check output
     build_tlds_json()
 
-    output_path = Path(TLDS_OUTPUT_FILE)
-    with open(output_path) as f:
+    
+    with open(temp_output) as f:
         data = json.load(f)
 
     # Count delegated TLDs in output
@@ -222,13 +217,12 @@ def test_build_tlds_json_delegated_count_matches_tlds_txt():
     # Should match
     assert actual_delegated_count == expected_delegated_count
 
-
-def test_build_tlds_json_ascii_cctld_has_country_name():
+def test_build_tlds_json_ascii_cctld_has_country_name(temp_output):
     """Test that ASCII ccTLDs have country_name_iso in annotations."""
     build_tlds_json()
 
-    output_path = Path(TLDS_OUTPUT_FILE)
-    with open(output_path) as f:
+    
+    with open(temp_output) as f:
         data = json.load(f)
 
     # Build a map of TLD to entry
@@ -250,13 +244,12 @@ def test_build_tlds_json_ascii_cctld_has_country_name():
         assert "country_name_iso" in entry["annotations"]
         assert entry["annotations"]["country_name_iso"] == expected_name
 
-
-def test_build_tlds_json_idn_cctld_has_country_name():
+def test_build_tlds_json_idn_cctld_has_country_name(temp_output):
     """Test that IDN ccTLDs have country_name_iso in annotations."""
     build_tlds_json()
 
-    output_path = Path(TLDS_OUTPUT_FILE)
-    with open(output_path) as f:
+    
+    with open(temp_output) as f:
         data = json.load(f)
 
     # Find IDN ccTLDs (have tld_iso field)
@@ -272,13 +265,12 @@ def test_build_tlds_json_idn_cctld_has_country_name():
         assert isinstance(entry["annotations"]["country_name_iso"], str)
         assert len(entry["annotations"]["country_name_iso"]) > 0
 
-
-def test_build_tlds_json_cctld_overrides():
+def test_build_tlds_json_cctld_overrides(temp_output):
     """Test that ccTLD overrides (ac, eu, su, uk) have correct country names."""
     build_tlds_json()
 
-    output_path = Path(TLDS_OUTPUT_FILE)
-    with open(output_path) as f:
+    
+    with open(temp_output) as f:
         data = json.load(f)
 
     # Build a map of TLD to entry
@@ -299,13 +291,12 @@ def test_build_tlds_json_cctld_overrides():
             assert "country_name_iso" in entry["annotations"]
             assert entry["annotations"]["country_name_iso"] == expected_name
 
-
-def test_build_tlds_json_gtld_no_country_name():
+def test_build_tlds_json_gtld_no_country_name(temp_output):
     """Test that gTLDs do not have country_name_iso."""
     build_tlds_json()
 
-    output_path = Path(TLDS_OUTPUT_FILE)
-    with open(output_path) as f:
+    
+    with open(temp_output) as f:
         data = json.load(f)
 
     # Find gTLDs

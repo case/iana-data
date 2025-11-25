@@ -105,9 +105,25 @@ def test_tld_script_field_present_for_idns(built_tlds_json):
 
     assert len(idn_tlds) > 0, "No IDN TLDs found"
 
+    # Load the fixture to provide helpful error messages
+    mapping_file = Path(FIXTURES_DIR) / FIXTURES_FILES["IDN_SCRIPT_MAPPING"]
+    with open(mapping_file, "r", encoding="utf-8") as f:
+        fixture_mappings = json.load(f)
+
     # All IDN TLDs should have tld_script field
     for tld in idn_tlds:
-        assert "tld_script" in tld, f"Missing tld_script for {tld['tld']}"
+        tld_name = tld['tld']
+        if "tld_script" not in tld:
+            # Check if it's in the fixture
+            if tld_name not in fixture_mappings:
+                pytest.fail(
+                    f"Missing tld_script for {tld_name}. "
+                    f"This TLD is not in the test fixture at {mapping_file}. "
+                    f"Run 'make generate-idn-mapping' to update production mapping, "
+                    f"then add '{tld_name}' to the test fixture."
+                )
+            else:
+                pytest.fail(f"Missing tld_script for {tld_name} (TLD is in fixture but not in built JSON)")
         assert isinstance(tld["tld_script"], str)
         assert len(tld["tld_script"]) > 0
 
@@ -177,13 +193,32 @@ def test_delegated_and_undelegated_idns_have_scripts(built_tlds_json):
     assert len(delegated_idns) > 0, "No delegated IDN TLDs found"
     assert len(undelegated_idns) > 0, "No undelegated IDN TLDs found"
 
+    # Load the fixture to provide helpful error messages
+    mapping_file = Path(FIXTURES_DIR) / FIXTURES_FILES["IDN_SCRIPT_MAPPING"]
+    with open(mapping_file, "r", encoding="utf-8") as f:
+        fixture_mappings = json.load(f)
+
     # All should have scripts
     for tld in delegated_idns:
-        assert "tld_script" in tld
+        if "tld_script" not in tld:
+            tld_name = tld['tld']
+            if tld_name not in fixture_mappings:
+                pytest.fail(
+                    f"Delegated IDN {tld_name} missing tld_script. "
+                    f"TLD not in test fixture at {mapping_file}. "
+                    f"Run 'make generate-idn-mapping' then update test fixture."
+                )
         assert tld["tld_script"]
 
     for tld in undelegated_idns:
-        assert "tld_script" in tld
+        if "tld_script" not in tld:
+            tld_name = tld['tld']
+            if tld_name not in fixture_mappings:
+                pytest.fail(
+                    f"Undelegated IDN {tld_name} missing tld_script. "
+                    f"TLD not in test fixture at {mapping_file}. "
+                    f"Run 'make generate-idn-mapping' then update test fixture."
+                )
         assert tld["tld_script"]
 
 
@@ -192,6 +227,20 @@ def test_no_null_scripts_for_idns(built_tlds_json):
     tlds = built_tlds_json["tlds"]
     idn_tlds = [t for t in tlds if t["tld"].startswith("xn--")]
 
+    # Load the fixture to provide helpful error messages
+    mapping_file = Path(FIXTURES_DIR) / FIXTURES_FILES["IDN_SCRIPT_MAPPING"]
+    with open(mapping_file, "r", encoding="utf-8") as f:
+        fixture_mappings = json.load(f)
+
     for tld in idn_tlds:
-        assert tld.get("tld_script") is not None, f"Null script for {tld['tld']}"
-        assert tld["tld_script"] != "", f"Empty script for {tld['tld']}"
+        tld_name = tld['tld']
+        if tld.get("tld_script") is None:
+            if tld_name not in fixture_mappings:
+                pytest.fail(
+                    f"Null script for {tld_name}. "
+                    f"TLD not in test fixture at {mapping_file}. "
+                    f"Run 'make generate-idn-mapping' then update test fixture."
+                )
+            else:
+                pytest.fail(f"Null script for {tld_name} (TLD is in fixture but not in built JSON)")
+        assert tld["tld_script"] != "", f"Empty script for {tld_name}"
