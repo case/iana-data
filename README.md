@@ -210,7 +210,8 @@ Dependencies:
 
 ## Todo
 
-- [ ] 
+- [ ] Email alerts, similar to Pushover
+- [ ] Readme + auto-updates with a TLD overview table - delegated, gtld/cctld, IDNs, brands, etc.
 
 **Later**
 
