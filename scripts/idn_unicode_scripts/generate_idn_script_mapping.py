@@ -12,7 +12,7 @@ from collections import Counter
 from pathlib import Path
 
 # Add src to path
-sys.path.insert(0, str(Path(__file__).parent.parent))
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from src.config import IDN_SCRIPT_MAPPING_FILE
 from src.parse.root_db_html import parse_root_db_html

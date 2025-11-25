@@ -46,6 +46,10 @@ jobs:
           title: "IANA core data download failed"
           message: "❌ Failed to download IANA core data files"
 
+      - name: Generate IDN script mappings
+        continue-on-error: true
+        run: make generate-idn-mapping
+
       # Download TLD pages in 8 batches for better error isolation
       # Total: 1,592 TLDs, ~200 per batch, ~3-4 min each
       # Continue on error to allow other batches to complete

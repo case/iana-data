@@ -16,7 +16,7 @@ analyze:
 	uv run python -m src.cli --analyze
 
 .PHONY: build
-build:
+build: generate-idn-mapping
 	uv run python -m src.cli --build
 
 .PHONY: generate-idn-mapping
