@@ -171,6 +171,13 @@ def main() -> int:
         logger.info("  Total TLDs: %d", result["total_tlds"])
         logger.info("  Output file: %s", result.get("output_file"))
         logger.info("  File size: %s", size_str)
+
+        # Show whether content changed
+        if result.get("changed"):
+            logger.info("  Status: Updated (content changed)")
+        else:
+            logger.info("  Status: Unchanged (content identical)")
+
         return 0
 
     if getattr(args, "download_tld_pages", None) is not None:

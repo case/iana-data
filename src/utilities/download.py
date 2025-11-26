@@ -8,7 +8,13 @@ from typing import Callable
 import httpx
 
 from ..config import IANA_URLS, SOURCE_DIR, SOURCE_FILES
-from ..parse import extract_main_content, parse_tlds_txt, tlds_txt_content_changed
+from ..parse import (
+    extract_main_content,
+    parse_tlds_txt,
+    rdap_json_content_changed,
+    root_db_html_content_changed,
+    tlds_txt_content_changed,
+)
 from .cache import is_cache_fresh, parse_cache_control_max_age
 from .metadata import load_metadata, save_metadata, utc_timestamp
 from .urls import get_tld_file_path, get_tld_page_url
@@ -97,10 +103,14 @@ def download_iana_files() -> dict[str, str]:
             filename = SOURCE_FILES[key]
             filepath = Path(SOURCE_DIR) / filename
 
-            # Special handling for TLD_LIST - use content validator
+            # Use content validators to ignore timestamp-only changes
             content_validator = None
             if key == "TLD_LIST":
                 content_validator = tlds_txt_content_changed
+            elif key == "RDAP_BOOTSTRAP":
+                content_validator = rdap_json_content_changed
+            elif key == "ROOT_ZONE_DB":
+                content_validator = root_db_html_content_changed
 
             results[key] = _download_file_impl(
                 client=client,

@@ -42,3 +42,44 @@ def parse_rdap_json(filepath: Path | None = None) -> dict[str, str]:
                 rdap_map[clean_tld] = server_url
 
     return rdap_map
+
+
+def rdap_json_content_changed(filepath: Path, new_content: str) -> bool:
+    """
+    Check if RDAP JSON content has actually changed.
+
+    Ignores publication timestamp - only compares actual services data.
+
+    Args:
+        filepath: Path to existing RDAP file
+        new_content: New content to compare against
+
+    Returns:
+        True if content changed, False if only timestamp changed
+    """
+    if not filepath.exists():
+        return True
+
+    # Parse new content
+    try:
+        new_data = json.loads(new_content)
+        new_services = new_data.get("services", [])
+    except json.JSONDecodeError as e:
+        logger.error("Error parsing new RDAP content: %s", e)
+        return True  # Treat as changed if we can't parse
+
+    # Parse existing content
+    try:
+        existing_content = filepath.read_text()
+        existing_data = json.loads(existing_content)
+        existing_services = existing_data.get("services", [])
+    except (OSError, json.JSONDecodeError) as e:
+        logger.error("Error reading existing RDAP file from %s: %s", filepath, e)
+        return True  # Treat as changed if we can't read existing file
+
+    # Only consider changed if services differ (ignore publication timestamp)
+    if new_services == existing_services:
+        logger.info("RDAP content unchanged (only timestamp updated)")
+        return False
+
+    return True

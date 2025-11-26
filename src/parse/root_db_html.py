@@ -123,3 +123,46 @@ def derive_type_from_iana_tag(iana_tag: str) -> str:
     if iana_tag == "country-code":
         return "cctld"
     return "gtld"
+
+
+def root_db_html_content_changed(filepath: Path, new_content: str) -> bool:
+    """
+    Check if Root Zone Database HTML content has actually changed.
+
+    Ignores HTML wrapper changes (CSS/JS versions) - only compares actual TLD table data.
+
+    Args:
+        filepath: Path to existing root zone HTML file
+        new_content: New content to compare against
+
+    Returns:
+        True if content changed, False if only wrapper changed
+    """
+    if not filepath.exists():
+        return True
+
+    # Parse new content
+    new_parser = RootDBHTMLParser()
+    try:
+        new_parser.feed(new_content)
+        new_entries = new_parser.entries
+    except Exception as e:
+        logger.error("Error parsing new root zone HTML content: %s", e)
+        return True  # Treat as changed if we can't parse
+
+    # Parse existing content
+    try:
+        existing_content = filepath.read_text()
+        existing_parser = RootDBHTMLParser()
+        existing_parser.feed(existing_content)
+        existing_entries = existing_parser.entries
+    except (OSError, Exception) as e:
+        logger.error("Error reading existing root zone HTML from %s: %s", filepath, e)
+        return True  # Treat as changed if we can't read existing file
+
+    # Only consider changed if TLD entries differ (ignore HTML wrapper changes)
+    if new_entries == existing_entries:
+        logger.info("Root Zone Database content unchanged (only HTML wrapper updated)")
+        return False
+
+    return True

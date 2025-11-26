@@ -18,6 +18,7 @@ from ..parse.root_db_html import derive_type_from_iana_tag, parse_root_db_html
 from ..parse.supplemental_cctld_rdap import parse_supplemental_cctld_rdap
 from ..parse.tld_html import parse_tld_page
 from ..parse.tld_manager_aliases import parse_tld_manager_aliases
+from ..utilities.content_changed import write_json_if_changed
 from ..utilities.urls import get_tld_file_path
 
 logger = logging.getLogger(__name__)
@@ -99,21 +100,23 @@ def build_tlds_json() -> dict:
         "tlds": tlds,
     }
 
-    # Write output file
+    # Write output file (only if content changed)
     output_path = Path(TLDS_OUTPUT_FILE)
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-
     logger.info(f"Writing output to {output_path}...")
-    try:
-        with open(output_path, "w", encoding="utf-8") as f:
-            json.dump(output, f, indent=2, ensure_ascii=False)
-            f.write("\n")
-    except OSError as e:
-        logger.error("Error writing output to %s: %s", output_path, e)
+
+    changed, status = write_json_if_changed(
+        output_path,
+        output,
+        exclude_fields=["publication"],
+        indent=2,
+    )
+
+    if status == "error":
         return {
             "total_tlds": len(tlds),
             "output_file": None,
-            "error": str(e),
+            "changed": False,
+            "error": "Failed to write file",
         }
 
     logger.info(f"Successfully built {len(tlds)} TLD entries")
@@ -121,6 +124,7 @@ def build_tlds_json() -> dict:
         "total_tlds": len(tlds),
         "output_file": str(output_path),
         "file_size": output_path.stat().st_size,
+        "changed": changed,
     }
 
 
