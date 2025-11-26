@@ -95,14 +95,27 @@ jobs:
           title: "IANA TLD data download failed"
           message: "❌ Failed to download IANA TLD data files"
 
+      - name: Check if source data changed
+        id: source-check
+        run: |
+          # Check if data/source/ has any changes (not just metadata.json)
+          if git diff --quiet data/source/; then
+            echo "Source files unchanged (timestamp updates only)"
+            echo "source_changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "Source files have content changes"
+            echo "source_changed=true" >> $GITHUB_OUTPUT
+          fi
+
       - name: Run tests
+        if: steps.source-check.outputs.source_changed == 'true'
         continue-on-error: true
         run: |
           set -o pipefail
           make test 2>&1 | tee test-output.log
 
       - name: Notification if tests fail
-        if: failure()
+        if: failure() && steps.source-check.outputs.source_changed == 'true'
         uses: ./.github/actions/pushover
         with:
           pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
@@ -111,6 +124,7 @@ jobs:
           message: "❌ Tests failed for iana-data"
 
       - name: Build tlds.json
+        if: steps.source-check.outputs.source_changed == 'true'
         id: build
         continue-on-error: true
         run: make build
