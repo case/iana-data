@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2025-11-26T03:04:07Z",
+  "publication": "2025-11-27T03:04:10Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -1155,7 +1155,7 @@
       "orgs": {
         "tld_manager": "Bharti Airtel Limited",
         "admin": "Bharti Airtel",
-        "tech": "Verisign, Inc."
+        "tech": "GoDaddy Registry"
       },
       "nameservers": [
         "a.nic.airtel",
@@ -1170,7 +1170,7 @@
       "rdap_server": "https://tld-rdap.verisign.com/airtel/v1/",
       "tld_created": "2015-06-18",
       "tld_updated": [
-        "2025-11-14"
+        "2025-11-26"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -4163,7 +4163,7 @@
       "orgs": {
         "tld_manager": "Bharti Enterprises (Holding) Private Limited",
         "admin": "Bharti Enterprises (Holdings) Private Limited",
-        "tech": "Verisign Inc."
+        "tech": "GoDaddy Registry"
       },
       "nameservers": [
         "a.nic.bharti",
@@ -4177,7 +4177,7 @@
       "rdap_server": "https://tld-rdap.verisign.com/bharti/v1/",
       "tld_created": "2015-05-08",
       "tld_updated": [
-        "2025-11-14"
+        "2025-11-26"
       ],
       "annotations": {
         "rdap_source": "IANA",

@@ -1,20 +1,20 @@
 {
   "RDAP_BOOTSTRAP": {
-    "last_checked": "2025-11-26T15:10:29Z",
+    "last_checked": "2025-11-27T02:34:59Z",
     "headers": {
       "etag": "\"1182e-642f50662aab6-gzip\"",
       "last_modified": "Thu, 06 Nov 2025 23:00:01 GMT"
     }
   },
   "TLD_LIST": {
-    "last_checked": "2025-11-26T15:10:29Z",
+    "last_checked": "2025-11-27T02:34:59Z",
     "headers": {
       "etag": "\"2548-643b0e096fc2a\"",
       "last_modified": "Sun, 16 Nov 2025 07:07:01 GMT"
     }
   },
   "ROOT_ZONE_DB": {
-    "last_checked": "2025-11-26T15:10:30Z",
+    "last_checked": "2025-11-27T02:34:59Z",
     "last_downloaded": "2025-11-26T02:35:40Z",
     "last_changed": "2025-11-25T02:35:09Z",
     "headers": {
@@ -23,8 +23,8 @@
     }
   },
   "TLD_HTML": {
-    "last_checked": "2025-11-26T03:00:28Z",
-    "last_downloaded": "2025-11-26T03:03:52Z"
+    "last_checked": "2025-11-27T03:00:55Z",
+    "last_downloaded": "2025-11-27T03:03:55Z"
   },
   "REGISTRY_AGREEMENT_TABLE": {
     "headers": {
