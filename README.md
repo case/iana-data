@@ -210,15 +210,18 @@ Dependencies:
 
 ## Todo
 
+### Current 
+
 - [ ] Email alerts, similar to Pushover
-- [ ] Readme + auto-updates with a TLD overview table - delegated, gtld/cctld, IDNs, brands, etc.
+- [ ] TLDs summary (delegated, gtld/cctld, IDNs, brands, etc.) in the Readme, via GH Actions auto-update
+- [ ] Zone file sizes - maybe via the [ICANN Monthly Registry Reports](https://www.icann.org/resources/pages/xbox-2015-10-01-en)?
 
-**Later**
+### Later
 
-- [ ] Annotation - IDN meanings & language, maybe could derive from the individual TLD web pages
-- [ ] Annotation - `open` or `closed` TLDs (needs discovery; may be addressed by the `brand` registry type annotation)
+- [ ] Annotation - IDN meanings & language, maybe could derive from the individual TLD web pages?
+- [ ] Annotation - `open` or `closed` TLDs (needs discovery; may be addressed by the `brand` registry type annotation?)
 - [ ] Script to create a Sqlite db from the data - maybe purely from client side? E.g. JS could generate it "on the fly"?
-- [ ] Wikidata - figure out how to programmatically get (some or all of) this data into Wikidata, and Wikipedia
+- [ ] Wikidata contribution - figure out how to programmatically get (some or all of) this data into Wikidata, and / or Wikipedia
 - [ ] Add a `version` field to the `tlds.json` schema?
 - [ ] Data integrity - more e2e tests to confirm that the data all lines up. E.g. the TLD pages <-> RDAP bootstrap file <-> full root db html page contents
 - [ ] Check other git repos, for TLDs TXT list change history
@@ -228,7 +231,7 @@ Dependencies:
 
 **If anyone asks**
 
-- [ ] ccTLD RDAP - `curl` workfow for the monitoring, instead of Checkly
+- [ ] ccTLD RDAP - `curl` workfow for the monitoring, in addition to the Checkly config
 - [ ] More data from the TLD pages, e.g. Name Server IPs (we currently only use hostnames in `tlds.json`), and IANA Report link URLs
 
 **Done**
