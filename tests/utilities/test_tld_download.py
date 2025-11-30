@@ -481,16 +481,16 @@ def test_download_tld_pages_handles_file_write_error(tmp_path):
 
 
 def test_download_tld_pages_handles_empty_tld_list(tmp_path):
-    """Test handling when TLD source file returns empty list."""
-    with patch("src.utilities.download.parse_tlds_txt", return_value=[]):
-        results = download_tld_pages(base_dir=tmp_path)
+    """Test handling when empty TLD list is provided."""
+    # Pass empty list directly instead of mocking
+    results = download_tld_pages(tlds=[], base_dir=tmp_path)
 
-        # Should return empty dict when no TLDs found
-        assert results == {}
+    # Should return empty dict when no TLDs provided
+    assert results == {}
 
 
 def test_download_tld_pages_uses_default_from_source(tmp_path):
-    """Test downloading all TLDs from source file when no list provided."""
+    """Test downloading all TLDs from explicit list."""
     fixture_file = FIXTURES_DIR / "c" / "com.html"
     full_html = fixture_file.read_text()
 
@@ -500,15 +500,13 @@ def test_download_tld_pages_uses_default_from_source(tmp_path):
         response.text = full_html
         return response
 
-    with (
-        patch("httpx.Client") as mock_client,
-        patch("src.utilities.download.parse_tlds_txt", return_value=["com", "net"]),
-    ):
+    with patch("httpx.Client") as mock_client:
         mock_client.return_value.__enter__.return_value.get = mock_get
 
-        results = download_tld_pages(base_dir=tmp_path)
+        # Pass explicit TLD list instead of mocking parse_tlds_txt
+        results = download_tld_pages(tlds=["com", "net"], base_dir=tmp_path)
 
-        # Should download both TLDs from the source
+        # Should download both TLDs
         assert "com" in results
         assert "net" in results
 

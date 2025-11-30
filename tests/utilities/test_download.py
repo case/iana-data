@@ -776,12 +776,16 @@ def test_download_tld_pages_delay_between_requests(tmp_path):
 
 
 def test_download_tld_pages_empty_tld_list(tmp_path):
-    """Test download_tld_pages when parse_tlds_txt returns empty list (covers lines 153-154)."""
+    """Test download_tld_pages when empty TLD list is provided (covers lines 155-157)."""
     from src.utilities.download import download_tld_pages
 
-    # Mock parse_tlds_txt to return empty list
-    with patch("src.utilities.download.parse_tlds_txt", return_value=[]):
-        result = download_tld_pages(tlds=None, base_dir=tmp_path / "tld-pages", delay=0)
+    generated_dir = tmp_path / "data" / "generated"
+    generated_dir.mkdir(parents=True)
 
-    # Should return empty dict when no TLDs found
+    # Patch metadata file to prevent writing to production
+    with patch("src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")):
+        # Pass empty list directly - this exercises the empty list check without needing to mock
+        result = download_tld_pages(tlds=[], base_dir=tmp_path / "tld-pages", delay=0)
+
+    # Should return empty dict when no TLDs provided
     assert result == {}
