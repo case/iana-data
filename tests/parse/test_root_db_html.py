@@ -187,3 +187,44 @@ def test_derive_type_from_iana_tag_test():
     """Test that derive_type_from_iana_tag returns gtld for test."""
     result = derive_type_from_iana_tag("test")
     assert result == "gtld"
+
+
+def test_parse_root_db_html_domain_text_without_href(tmp_path):
+    """Test parsing HTML where domain is plain text without href link."""
+    # Create HTML with domain as plain text (no <a> tag)
+    html_content = """
+    <html>
+    <body>
+        <table id="tld-table">
+            <thead><tr><th>Domain</th><th>Type</th><th>TLD Manager</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td><span class="domain tld">.test</span></td>
+                    <td>generic</td>
+                    <td>Test Manager</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+    </html>
+    """
+
+    filepath = tmp_path / "test.html"
+    filepath.write_text(html_content)
+
+    entries = parse_root_db_html(filepath)
+
+    assert len(entries) == 1
+    assert entries[0]["domain"] == ".test"
+    assert entries[0]["type"] == "generic"
+    assert entries[0]["manager"] == "Test Manager"
+
+
+def test_parse_root_db_html_handles_file_read_error(tmp_path, monkeypatch):
+    """Test error handling when file cannot be read."""
+    non_existent_file = tmp_path / "nonexistent.html"
+
+    # parse_root_db_html should return empty list on file read error
+    entries = parse_root_db_html(non_existent_file)
+
+    assert entries == []

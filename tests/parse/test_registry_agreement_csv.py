@@ -118,6 +118,75 @@ def test_parse_registry_agreement_csv_missing_file():
     assert result == {}
 
 
+def test_parse_registry_agreement_csv_empty_tld_rows(tmp_path):
+    """Test that rows with empty TLD fields are skipped."""
+    csv_file = tmp_path / "test.csv"
+    csv_file.write_text(
+        "Top Level Domain,Agreement Type,Agreement Status,Operator\n"
+        "aaa,Base,active,Test Operator\n"
+        ",Base,active,Empty TLD Operator\n"  # Empty TLD - should be skipped
+        "   ,Base,active,Whitespace TLD\n"  # Whitespace only - should be skipped
+        "bbb,Base,active,Another Operator\n"
+    )
+
+    agreements = parse_registry_agreement_csv(csv_file)
+
+    # Only aaa and bbb should be present (empty TLD rows skipped)
+    assert len(agreements) == 2
+    assert "aaa" in agreements
+    assert "bbb" in agreements
+
+
+def test_parse_registry_agreement_csv_file_read_error(tmp_path, monkeypatch):
+    """Test error handling when file cannot be read (OSError)."""
+    csv_file = tmp_path / "test.csv"
+    csv_file.write_text("Top Level Domain,Agreement Type\naaa,Base\n")
+
+    # Mock open to raise PermissionError (OSError subclass)
+    import builtins
+
+    original_open = builtins.open
+
+    def mock_open(*args, **kwargs):
+        if "test.csv" in str(args[0]):
+            raise PermissionError("Permission denied")
+        return original_open(*args, **kwargs)
+
+    monkeypatch.setattr("builtins.open", mock_open)
+
+    result = parse_registry_agreement_csv(csv_file)
+
+    assert result == {}
+
+
+def test_parse_registry_agreement_csv_malformed_csv(tmp_path, monkeypatch):
+    """Test error handling when CSV parsing raises csv.Error."""
+    csv_file = tmp_path / "test.csv"
+    csv_file.write_text("Top Level Domain,Agreement Type\naaa,Base\n")
+
+    # Mock csv.DictReader to raise csv.Error when iterated
+    import csv
+
+    class ErrorReader:
+        """Mock CSV reader that raises csv.Error when iterated."""
+
+        def __iter__(self):
+            raise csv.Error("Malformed CSV")
+
+    def mock_dictreader(*args, **kwargs):
+        return ErrorReader()
+
+    # Patch in the module where it's used
+    monkeypatch.setattr(
+        "src.parse.registry_agreement_csv.csv.DictReader", mock_dictreader
+    )
+
+    result = parse_registry_agreement_csv(csv_file)
+
+    # Should return empty dict on CSV parsing error
+    assert result == {}
+
+
 # Tests for parse_agreement_types utility function
 
 
