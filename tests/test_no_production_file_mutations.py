@@ -1,9 +1,51 @@
 """Test that no tests modify production data files."""
 
+import hashlib
 import os
 from pathlib import Path
 
 import pytest
+
+
+def _get_directory_state(directory: Path) -> dict:
+    """Get state of all files in directory recursively."""
+    state = {}
+    if not directory.exists():
+        return state
+
+    for file_path in directory.rglob("*"):
+        if file_path.is_file():
+            # Store mtime, size, and hash for each file
+            state[str(file_path.relative_to(directory))] = {
+                "mtime": os.path.getmtime(file_path),
+                "size": file_path.stat().st_size,
+                "hash": hashlib.md5(file_path.read_bytes()).hexdigest(),
+            }
+    return state
+
+
+def test_production_source_directory_not_modified_by_tests():
+    """
+    Test that data/source/ directory is not modified by test suite.
+
+    This test captures the state of all files in data/source/ to ensure
+    no tests are inadvertently reading from or writing to production source files.
+    Tests should ONLY use fixtures in tests/fixtures/ and tmp_path, never production data.
+    """
+    source_dir = Path("data/source")
+
+    if not source_dir.exists():
+        pytest.skip("Production data/source directory does not exist yet")
+
+    # Capture initial state of all files
+    initial_state = _get_directory_state(source_dir)
+
+    # Store in module-level variable for cleanup check
+    global _production_source_initial_state
+    _production_source_initial_state = {
+        "directory": source_dir,
+        "state": initial_state,
+    }
 
 
 def test_production_tlds_json_not_modified_by_tests():
@@ -39,7 +81,43 @@ def verify_production_files_unchanged():
     # Setup: nothing needed
     yield
 
-    # Teardown: check if production file was modified
+    # Teardown: check if production source directory was modified
+    if "_production_source_initial_state" in globals():
+        state = _production_source_initial_state
+        source_dir = state["directory"]
+        initial_state = state["state"]
+
+        if source_dir.exists():
+            final_state = _get_directory_state(source_dir)
+
+            # Check for modified or deleted files
+            for rel_path, initial_file_state in initial_state.items():
+                if rel_path not in final_state:
+                    pytest.fail(
+                        f"Production file {source_dir / rel_path} was DELETED during test run! "
+                        f"Tests should NEVER modify production data in data/source/. "
+                        f"Use tmp_path and patch SOURCE_DIR to redirect to test directories."
+                    )
+                final_file_state = final_state[rel_path]
+                if final_file_state["hash"] != initial_file_state["hash"]:
+                    pytest.fail(
+                        f"Production file {source_dir / rel_path} was MODIFIED during test run! "
+                        f"Original hash: {initial_file_state['hash']}, Final hash: {final_file_state['hash']}. "
+                        f"Tests should NEVER write to production data in data/source/. "
+                        f"Use tmp_path and patch SOURCE_DIR to redirect to test directories. "
+                        f"Example: patch('src.utilities.download.SOURCE_DIR', str(tmp_path / 'data' / 'source'))"
+                    )
+
+            # Check for new files
+            for rel_path in final_state:
+                if rel_path not in initial_state:
+                    pytest.fail(
+                        f"Production file {source_dir / rel_path} was CREATED during test run! "
+                        f"Tests should NEVER write to production data in data/source/. "
+                        f"Use tmp_path and patch SOURCE_DIR to redirect to test directories."
+                    )
+
+    # Teardown: check if production generated file was modified
     if "_production_file_initial_state" in globals():
         state = _production_file_initial_state
         production_file = state["path"]
