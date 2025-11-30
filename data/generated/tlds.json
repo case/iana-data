@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2025-11-27T03:04:10Z",
+  "publication": "2025-11-30T03:09:57Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -2351,14 +2351,13 @@
         "ns2.asnic.info",
         "ns3.asnic.org",
         "ns4.asnic.uk",
-        "ns5.asnic.us",
-        "pch.nic.as"
+        "ns5.asnic.us"
       ],
       "registry_url": "http://www.nic.as",
       "whois_server": "whois.nic.as",
       "tld_created": "1997-06-12",
       "tld_updated": [
-        "2022-05-06"
+        "2025-11-29"
       ],
       "annotations": {
         "country_name_iso": "American Samoa"
