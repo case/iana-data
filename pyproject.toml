@@ -26,3 +26,10 @@ dev = [
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 norecursedirs = [".git", ".tox", "dist", "*.egg"]
+
+[tool.coverage.report]
+precision = 0
+show_missing = true
+skip_covered = false
+sort = "cover"  # Sort by coverage % (lowest first) - valid: name, stmts, miss, cover
+fail_under = 90  # Fail if overall coverage < 90%
