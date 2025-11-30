@@ -1,10 +1,10 @@
 """Parser for TLD manager aliases data."""
 
-import json
 import logging
 from pathlib import Path
 
 from ..config import MANUAL_DIR, MANUAL_FILES
+from ..utilities.file_io import read_json_file
 
 logger = logging.getLogger(__name__)
 
@@ -27,15 +27,7 @@ def parse_tld_manager_aliases(filepath: Path | None = None) -> dict[str, str]:
     if filepath is None:
         filepath = Path(MANUAL_DIR) / MANUAL_FILES["TLD_MANAGER_ALIASES"]
 
-    if not filepath.exists():
-        return {}
-
-    try:
-        with open(filepath, encoding="utf-8") as f:
-            data = json.load(f)
-    except (OSError, json.JSONDecodeError) as e:
-        logger.error("Error parsing TLD manager aliases from %s: %s", filepath, e)
-        return {}
+    data = read_json_file(filepath, default={})
 
     # Build reverse lookup: manager name -> canonical alias
     aliases_lookup: dict[str, str] = {}

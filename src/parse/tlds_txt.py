@@ -4,6 +4,7 @@ import logging
 from pathlib import Path
 
 from ..config import SOURCE_DIR, SOURCE_FILES
+from ..utilities.file_io import read_text_file
 
 logger = logging.getLogger(__name__)
 
@@ -22,10 +23,8 @@ def parse_tlds_txt(filepath: Path | None = None, normalize: bool = True) -> list
     if filepath is None:
         filepath = Path(SOURCE_DIR) / SOURCE_FILES["TLD_LIST"]
 
-    try:
-        content = filepath.read_text()
-    except OSError as e:
-        logger.error("Error reading TLDs text file from %s: %s", filepath, e)
+    content = read_text_file(filepath, default="")
+    if not content:
         return []
 
     tlds = _parse_tlds_content(content)
@@ -78,11 +77,10 @@ def tlds_txt_content_changed(filepath: Path, new_content: str) -> bool:
     new_tlds = _parse_tlds_content(new_content)
 
     # Parse existing content
-    try:
-        existing_content = filepath.read_text()
-    except OSError as e:
-        logger.error("Error reading existing TLDs file from %s: %s", filepath, e)
-        return True  # Treat as changed if we can't read existing file
+    existing_content = read_text_file(filepath, default="")
+    if not existing_content:
+        # File couldn't be read
+        return True
 
     existing_tlds = _parse_tlds_content(existing_content)
 

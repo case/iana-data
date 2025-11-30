@@ -5,6 +5,7 @@ import logging
 from pathlib import Path
 
 from ..config import SOURCE_DIR, SOURCE_FILES
+from ..utilities.file_io import read_json_file
 
 logger = logging.getLogger(__name__)
 
@@ -22,12 +23,7 @@ def parse_rdap_json(filepath: Path | None = None) -> dict[str, str]:
     if filepath is None:
         filepath = Path(SOURCE_DIR) / SOURCE_FILES["RDAP_BOOTSTRAP"]
 
-    try:
-        content = filepath.read_text()
-        data = json.loads(content)
-    except (OSError, json.JSONDecodeError) as e:
-        logger.error("Error parsing RDAP JSON from %s: %s", filepath, e)
-        return {}
+    data = read_json_file(filepath, default={})
 
     rdap_map = {}
     for service in data.get("services", []):
@@ -69,13 +65,11 @@ def rdap_json_content_changed(filepath: Path, new_content: str) -> bool:
         return True  # Treat as changed if we can't parse
 
     # Parse existing content
-    try:
-        existing_content = filepath.read_text()
-        existing_data = json.loads(existing_content)
-        existing_services = existing_data.get("services", [])
-    except (OSError, json.JSONDecodeError) as e:
-        logger.error("Error reading existing RDAP file from %s: %s", filepath, e)
-        return True  # Treat as changed if we can't read existing file
+    existing_data = read_json_file(filepath, default={})
+    if not existing_data:
+        # File couldn't be read or parsed
+        return True
+    existing_services = existing_data.get("services", [])
 
     # Only consider changed if services differ (ignore publication timestamp)
     if new_services == existing_services:

@@ -5,6 +5,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 from ..config import SOURCE_DIR, SOURCE_FILES
+from ..utilities.file_io import read_text_file
 
 logger = logging.getLogger(__name__)
 
@@ -98,10 +99,8 @@ def parse_root_db_html(filepath: Path | None = None) -> list[dict]:
     if filepath is None:
         filepath = Path(SOURCE_DIR) / SOURCE_FILES["ROOT_ZONE_DB"]
 
-    try:
-        content = filepath.read_text()
-    except OSError as e:
-        logger.error("Error reading root zone HTML from %s: %s", filepath, e)
+    content = read_text_file(filepath, default="")
+    if not content:
         return []
 
     parser = RootDBHTMLParser()
@@ -151,14 +150,18 @@ def root_db_html_content_changed(filepath: Path, new_content: str) -> bool:
         return True  # Treat as changed if we can't parse
 
     # Parse existing content
+    existing_content = read_text_file(filepath, default="")
+    if not existing_content:
+        # File couldn't be read
+        return True
+
     try:
-        existing_content = filepath.read_text()
         existing_parser = RootDBHTMLParser()
         existing_parser.feed(existing_content)
         existing_entries = existing_parser.entries
-    except (OSError, Exception) as e:
-        logger.error("Error reading existing root zone HTML from %s: %s", filepath, e)
-        return True  # Treat as changed if we can't read existing file
+    except Exception as e:
+        logger.error("Error parsing existing root zone HTML from %s: %s", filepath, e)
+        return True  # Treat as changed if we can't parse existing file
 
     # Only consider changed if TLD entries differ (ignore HTML wrapper changes)
     if new_entries == existing_entries:
