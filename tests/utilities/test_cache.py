@@ -46,8 +46,8 @@ def test_is_cache_fresh_with_fresh_cache():
     download_time = datetime.now(timezone.utc) - timedelta(hours=1)
 
     metadata_entry = {
-        "last_downloaded": download_time.strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "headers": {
+        "cache_data": {
+            "last_downloaded": download_time.strftime("%Y-%m-%dT%H:%M:%SZ"),
             "cache_max_age": "21600",  # 6 hours
         },
     }
@@ -61,8 +61,8 @@ def test_is_cache_fresh_with_stale_cache():
     download_time = datetime.now(timezone.utc) - timedelta(hours=7)
 
     metadata_entry = {
-        "last_downloaded": download_time.strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "headers": {
+        "cache_data": {
+            "last_downloaded": download_time.strftime("%Y-%m-%dT%H:%M:%SZ"),
             "cache_max_age": "21600",  # 6 hours
         },
     }
@@ -73,7 +73,7 @@ def test_is_cache_fresh_with_stale_cache():
 def test_is_cache_fresh_missing_last_downloaded():
     """Test that missing last_downloaded returns False."""
     metadata_entry = {
-        "headers": {
+        "cache_data": {
             "cache_max_age": "3600",
         },
     }
@@ -81,10 +81,10 @@ def test_is_cache_fresh_missing_last_downloaded():
     assert is_cache_fresh(metadata_entry) is False
 
 
-def test_is_cache_fresh_missing_headers():
-    """Test that missing headers returns False."""
+def test_is_cache_fresh_missing_cache_data():
+    """Test that missing cache_data returns False."""
     metadata_entry = {
-        "last_downloaded": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "last_checked": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
     }
 
     assert is_cache_fresh(metadata_entry) is False
@@ -93,8 +93,8 @@ def test_is_cache_fresh_missing_headers():
 def test_is_cache_fresh_missing_cache_max_age():
     """Test that missing cache_max_age returns False."""
     metadata_entry = {
-        "last_downloaded": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "headers": {
+        "cache_data": {
+            "last_downloaded": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
             "etag": "abc123",
         },
     }
@@ -109,8 +109,8 @@ def test_is_cache_fresh_boundary_condition():
     download_time = datetime.now(timezone.utc) - timedelta(seconds=max_age)
 
     metadata_entry = {
-        "last_downloaded": download_time.strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "headers": {
+        "cache_data": {
+            "last_downloaded": download_time.strftime("%Y-%m-%dT%H:%M:%SZ"),
             "cache_max_age": str(max_age),
         },
     }
@@ -125,8 +125,8 @@ def test_is_cache_fresh_short_max_age():
     download_time = datetime.now(timezone.utc) - timedelta(days=1)
 
     metadata_entry = {
-        "last_downloaded": download_time.strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "headers": {
+        "cache_data": {
+            "last_downloaded": download_time.strftime("%Y-%m-%dT%H:%M:%SZ"),
             "cache_max_age": "205",
         },
     }

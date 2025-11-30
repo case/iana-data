@@ -538,7 +538,6 @@ def test_download_tld_pages_creates_metadata_entry(tmp_path, isolate_metadata):
             metadata = json.load(f)
 
         assert "TLD_HTML" in metadata
-        assert "last_downloaded" in metadata["TLD_HTML"]
         assert "last_checked" in metadata["TLD_HTML"]
 
 
@@ -556,7 +555,6 @@ def test_download_tld_pages_updates_metadata_entry(tmp_path, isolate_metadata):
     # Create initial metadata
     initial_metadata = {
         "TLD_HTML": {
-            "last_downloaded": "2025-01-01T00:00:00Z",
             "last_checked": "2025-01-01T00:00:00Z",
         }
     }
@@ -576,4 +574,4 @@ def test_download_tld_pages_updates_metadata_entry(tmp_path, isolate_metadata):
         with open(isolate_metadata) as f:
             metadata = json.load(f)
 
-        assert metadata["TLD_HTML"]["last_downloaded"] != "2025-01-01T00:00:00Z"
+        assert metadata["TLD_HTML"]["last_checked"] != "2025-01-01T00:00:00Z"

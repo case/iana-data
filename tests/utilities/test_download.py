@@ -129,22 +129,38 @@ def test_download_with_304_not_modified(tmp_path):
 
 
 def test_download_with_fresh_cache(tmp_path):
-    """Test download when cache is still fresh (no HTTP request made)."""
+    """Test download when cache is still fresh (no HTTP request made for cached file)."""
     source_dir, generated_dir = setup_test_env(tmp_path)
 
-    # Copy existing file
+    # Copy existing files
     shutil.copy(SOURCE_FIXTURES_DIR / "rdap.json", source_dir / "iana-rdap.json")
+    shutil.copy(SOURCE_FIXTURES_DIR / "tlds.txt", source_dir / "iana-tlds.txt")
+    shutil.copy(SOURCE_FIXTURES_DIR / "root.html", source_dir / "iana-root.html")
 
     # Copy fresh cache metadata fixture
     metadata_file = generated_dir / "metadata.json"
     shutil.copy(METADATA_FIXTURES_DIR / "fresh-cache-metadata.json", metadata_file)
 
-    request_made = False
+    root_zone_request_made = False
 
     def mock_get(url, headers=None):
-        nonlocal request_made
-        request_made = True
-        raise Exception("Should not make HTTP request when cache is fresh")
+        # RDAP and TLD_LIST should still make requests (but get 304 responses)
+        if url == "https://data.iana.org/rdap/dns.json":
+            response = Mock(spec=httpx.Response)
+            response.status_code = 304
+            response.headers = {}
+            return response
+        elif url == "https://data.iana.org/TLD/tlds-alpha-by-domain.txt":
+            response = Mock(spec=httpx.Response)
+            response.status_code = 304
+            response.headers = {}
+            return response
+        elif url == "https://www.iana.org/domains/root/db":
+            # ROOT_ZONE_DB should NOT make a request (cache is fresh)
+            nonlocal root_zone_request_made
+            root_zone_request_made = True
+            raise Exception("Should not make HTTP request for ROOT_ZONE_DB when cache is fresh")
+        raise Exception(f"Unexpected URL: {url}")
 
     # Mock "now" to be 1 hour after the fixture timestamp (within 24h cache window)
     # Fixture has last_downloaded: 2025-11-18T16:00:00Z with max_age: 86400
@@ -164,9 +180,13 @@ def test_download_with_fresh_cache(tmp_path):
 
         results = download_iana_files()
 
-        # Should return not_modified without making request
+        # ROOT_ZONE_DB should skip HTTP request due to fresh cache
+        assert results["ROOT_ZONE_DB"] == "not_modified"
+        assert not root_zone_request_made  # No HTTP request should be made for ROOT_ZONE_DB
+
+        # RDAP and TLD_LIST should still make requests but get 304
         assert results["RDAP_BOOTSTRAP"] == "not_modified"
-        assert not request_made  # No HTTP request should be made
+        assert results["TLD_LIST"] == "not_modified"
 
 
 def test_download_tld_list_content_unchanged(tmp_path):
@@ -301,8 +321,7 @@ def test_download_file_impl_single_file(tmp_path):
 
     # Check metadata was updated
     assert "TEST_FILE" in metadata
-    assert metadata["TEST_FILE"]["headers"]["etag"] == '"abc123"'
-    assert "last_downloaded" in metadata["TEST_FILE"]
+    assert metadata["TEST_FILE"]["cache_data"]["etag"] == '"abc123"'
     assert "last_checked" in metadata["TEST_FILE"]
 
 
@@ -324,7 +343,7 @@ def test_download_file_impl_304_not_modified(tmp_path):
 
     metadata = {
         "TEST_FILE": {
-            "headers": {
+            "cache_data": {
                 "etag": '"abc123"',
                 "last_modified": "Wed, 20 Nov 2024 12:00:00 GMT",
             }

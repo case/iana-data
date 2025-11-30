@@ -1,8 +1,9 @@
 {
-  "RDAP_BOOTSTRAP": {
-    "last_downloaded": "2025-11-17T10:00:00Z",
-    "headers": {
-      "cache_max_age": "3600"
+  "ROOT_ZONE_DB": {
+    "last_checked": "2025-11-17T10:00:00Z",
+    "cache_data": {
+      "cache_max_age": "3600",
+      "last_downloaded": "2025-11-17T10:00:00Z"
     }
   }
 }

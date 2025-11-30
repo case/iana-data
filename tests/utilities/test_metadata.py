@@ -29,8 +29,8 @@ def test_load_metadata_file_exists(tmp_path):
         assert "ROOT_ZONE_DB" in result
 
         # Verify content from fixture
-        assert result["RDAP_BOOTSTRAP"]["headers"]["etag"] == "\"1182e-642f50662aab6-gzip\""
-        assert result["TLD_LIST"]["headers"]["cache_max_age"] == "205"
+        assert result["RDAP_BOOTSTRAP"]["cache_data"]["etag"] == "\"1182e-642f50662aab6-gzip\""
+        assert result["TLD_LIST"]["cache_data"]["last_modified"] == "Tue, 18 Nov 2025 07:07:01 GMT"
     finally:
         metadata_module.METADATA_FILE = original_file
 

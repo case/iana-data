@@ -210,7 +210,6 @@ def download_tld_pages(
     # Update metadata with TLD_HTML entry
     metadata["TLD_HTML"] = {
         "last_checked": checked_time,
-        "last_downloaded": utc_timestamp(),
     }
 
     # Save metadata
@@ -260,11 +259,11 @@ def _download_file_impl(
 
     # Prepare conditional request headers
     headers: dict[str, str] = {}
-    if key in metadata and "headers" in metadata[key]:
-        if "etag" in metadata[key]["headers"]:
-            headers["If-None-Match"] = metadata[key]["headers"]["etag"]
-        if "last_modified" in metadata[key]["headers"]:
-            headers["If-Modified-Since"] = metadata[key]["headers"]["last_modified"]
+    if key in metadata and "cache_data" in metadata[key]:
+        if "etag" in metadata[key]["cache_data"]:
+            headers["If-None-Match"] = metadata[key]["cache_data"]["etag"]
+        if "last_modified" in metadata[key]["cache_data"]:
+            headers["If-Modified-Since"] = metadata[key]["cache_data"]["last_modified"]
 
     try:
         response = make_request_with_retry(client, url, headers=headers)
@@ -272,8 +271,6 @@ def _download_file_impl(
         # Initialize metadata entry if needed
         if key not in metadata:
             metadata[key] = {}
-        if "headers" not in metadata[key]:
-            metadata[key]["headers"] = {}
 
         # Always update last_checked timestamp
         metadata[key]["last_checked"] = utc_timestamp()
@@ -286,25 +283,20 @@ def _download_file_impl(
             if content_validator and not content_validator(filepath, response.text):
                 return "not_modified"
 
-            # Check if content actually changed (for tracking last_changed)
-            content_changed = True
-            if filepath.exists():
-                try:
-                    existing_content = filepath.read_bytes()
-                    content_changed = existing_content != response.content
-                except OSError:
-                    pass  # Treat as changed if we can't read existing file
-
             # Download successful, save file
             filepath.parent.mkdir(parents=True, exist_ok=True)
             with open(filepath, "wb") as f:
                 f.write(response.content)
 
-            # Update metadata with response headers
+            # Initialize cache_data if needed
+            if "cache_data" not in metadata[key]:
+                metadata[key]["cache_data"] = {}
+
+            # Update cache data with response headers
             if "etag" in response.headers:
-                metadata[key]["headers"]["etag"] = response.headers["etag"]
+                metadata[key]["cache_data"]["etag"] = response.headers["etag"]
             if "last-modified" in response.headers:
-                metadata[key]["headers"]["last_modified"] = response.headers[
+                metadata[key]["cache_data"]["last_modified"] = response.headers[
                     "last-modified"
                 ]
 
@@ -312,17 +304,12 @@ def _download_file_impl(
             if "cache-control" in response.headers:
                 max_age = parse_cache_control_max_age(response.headers["cache-control"])
                 if max_age:
-                    metadata[key]["headers"]["cache_control"] = response.headers[
+                    metadata[key]["cache_data"]["cache_control"] = response.headers[
                         "cache-control"
                     ]
-                    metadata[key]["headers"]["cache_max_age"] = str(max_age)
-
-            # Update last_downloaded timestamp
-            metadata[key]["last_downloaded"] = utc_timestamp()
-
-            # Update last_changed only when content actually changed
-            if content_changed:
-                metadata[key]["last_changed"] = utc_timestamp()
+                    metadata[key]["cache_data"]["cache_max_age"] = str(max_age)
+                    # For Cache-Control, also store download time for freshness calculation
+                    metadata[key]["cache_data"]["last_downloaded"] = utc_timestamp()
 
             return "downloaded"
         else:
