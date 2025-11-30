@@ -8,13 +8,6 @@ from typing import Callable
 import httpx
 
 from ..config import IANA_URLS, SOURCE_DIR, SOURCE_FILES
-from ..parse import (
-    extract_main_content,
-    parse_tlds_txt,
-    rdap_json_content_changed,
-    root_db_html_content_changed,
-    tlds_txt_content_changed,
-)
 from .cache import is_cache_fresh, parse_cache_control_max_age
 from .metadata import load_metadata, save_metadata, utc_timestamp
 from .urls import get_tld_file_path, get_tld_page_url
@@ -92,6 +85,13 @@ def download_iana_files() -> dict[str, str]:
         - "not_modified": File hasn't changed
         - "error": Download failed
     """
+    # Lazy imports to avoid circular dependency
+    from ..parse import (
+        rdap_json_content_changed,
+        root_db_html_content_changed,
+        tlds_txt_content_changed,
+    )
+
     metadata = load_metadata()
     results: dict[str, str] = {}
 
@@ -143,6 +143,9 @@ def download_tld_pages(
     Returns:
         Dict mapping TLD to status: "downloaded", "error"
     """
+    # Lazy imports to avoid circular dependency
+    from ..parse import extract_main_content, parse_tlds_txt
+
     if base_dir is None:
         base_dir = Path("data/source/tld-pages")
 

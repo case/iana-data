@@ -43,6 +43,10 @@ lint:
 typecheck:
 	uv run pyright src/
 
+.PHONY: check-circular-imports
+check-circular-imports:
+	uv run pydeps src --no-output
+
 .PHONY: test
 test: lint typecheck
 	uv run pytest
