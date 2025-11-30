@@ -47,47 +47,73 @@ jobs:
           message: "❌ Failed to download IANA core data files"
 
       - name: Generate IDN script mappings
+        id: generate-idn-mapping
         continue-on-error: true
         run: make generate-idn-mapping
+
+      - name: Notification if IDN mapping fails
+        if: steps.generate-idn-mapping.outcome == 'failure'
+        uses: ./.github/actions/pushover
+        with:
+          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
+          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
+          title: "IANA data - IDN mapping generation failed"
+          message: "❌ Failed to generate IDN script mappings"
 
       # Download TLD pages in 8 batches for better error isolation
       # Total: 1,592 TLDs, ~200 per batch, ~3-4 min each
       # Continue on error to allow other batches to complete
 
       - name: "Download TLDs: a-b (198 TLDs)"
+        id: download-tlds-ab
         continue-on-error: true
         run: make download-tld-pages GROUPS="a b"
 
       - name: "Download TLDs: c-d (187 TLDs)"
+        id: download-tlds-cd
         continue-on-error: true
         run: make download-tld-pages GROUPS="c d"
 
       - name: "Download TLDs: e-h (227 TLDs)"
+        id: download-tlds-eh
         continue-on-error: true
         run: make download-tld-pages GROUPS="e f g h"
 
       - name: "Download TLDs: i + IDN (215 TLDs)"
+        id: download-tlds-i-idn
         continue-on-error: true
         run: make download-tld-pages GROUPS="i xn--"
 
       - name: "Download TLDs: j-m (221 TLDs)"
+        id: download-tlds-jm
         continue-on-error: true
         run: make download-tld-pages GROUPS="j k l m"
 
       - name: "Download TLDs: n-q (158 TLDs)"
+        id: download-tlds-nq
         continue-on-error: true
         run: make download-tld-pages GROUPS="n o p q"
 
       - name: "Download TLDs: r-s (190 TLDs)"
+        id: download-tlds-rs
         continue-on-error: true
         run: make download-tld-pages GROUPS="r s"
 
       - name: "Download TLDs: t-z (188 TLDs)"
+        id: download-tlds-tz
         continue-on-error: true
         run: make download-tld-pages GROUPS="t u v w y z"
 
       - name: Notification if TLD download fails
-        if: failure()
+        if: |
+          steps.download-tlds-ab.outcome == 'failure' ||
+          steps.download-tlds-cd.outcome == 'failure' ||
+          steps.download-tlds-eh.outcome == 'failure' ||
+          steps.download-tlds-i-idn.outcome == 'failure' ||
+          steps.download-tlds-jm.outcome == 'failure' ||
+          steps.download-tlds-nq.outcome == 'failure' ||
+          steps.download-tlds-rs.outcome == 'failure' ||
+          steps.download-tlds-tz.outcome == 'failure'
         uses: ./.github/actions/pushover
         with:
           pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
@@ -108,6 +134,7 @@ jobs:
           fi
 
       - name: Run tests
+        id: run-tests
         if: steps.source-check.outputs.source_changed == 'true'
         continue-on-error: true
         run: |
@@ -115,7 +142,7 @@ jobs:
           make test 2>&1 | tee test-output.log
 
       - name: Notification if tests fail
-        if: failure() && steps.source-check.outputs.source_changed == 'true'
+        if: steps.run-tests.outcome == 'failure'
         uses: ./.github/actions/pushover
         with:
           pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
