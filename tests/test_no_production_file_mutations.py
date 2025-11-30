@@ -48,6 +48,31 @@ def test_production_source_directory_not_modified_by_tests():
     }
 
 
+def test_production_metadata_json_not_modified_by_tests():
+    """
+    Test that production metadata.json is not modified by test suite.
+
+    metadata.json tracks download state and should NEVER be modified by tests.
+    Tests should patch METADATA_FILE to redirect to tmp_path.
+    """
+    metadata_file = Path("data/generated/metadata.json")
+
+    if not metadata_file.exists():
+        pytest.skip("Production metadata.json does not exist yet")
+
+    # Store hash of content (not just mtime, as content is what matters)
+    initial_content = metadata_file.read_text()
+    initial_hash = hashlib.md5(initial_content.encode()).hexdigest()
+
+    # Store in module-level variable for cleanup check
+    global _production_metadata_initial_state
+    _production_metadata_initial_state = {
+        "hash": initial_hash,
+        "path": metadata_file,
+        "content_sample": initial_content[:200],  # For debugging
+    }
+
+
 def test_production_tlds_json_not_modified_by_tests():
     """
     Test that production tlds.json is not modified by test suite.
@@ -80,6 +105,24 @@ def verify_production_files_unchanged():
     """Session-scoped fixture to verify production files at test session end."""
     # Setup: nothing needed
     yield
+
+    # Teardown: check if production metadata.json was modified
+    if "_production_metadata_initial_state" in globals():
+        state = _production_metadata_initial_state
+        metadata_file = state["path"]
+
+        if metadata_file.exists():
+            final_content = metadata_file.read_text()
+            final_hash = hashlib.md5(final_content.encode()).hexdigest()
+
+            if final_hash != state["hash"]:
+                pytest.fail(
+                    f"Production file {metadata_file} was MODIFIED during test run!\n"
+                    f"Original hash: {state['hash']}, Final hash: {final_hash}.\n"
+                    f"Tests should NEVER write to data/generated/metadata.json.\n"
+                    f"Use patch('src.utilities.metadata.METADATA_FILE', str(tmp_path / 'metadata.json'))\n"
+                    f"to redirect metadata operations to test directories."
+                )
 
     # Teardown: check if production source directory was modified
     if "_production_source_initial_state" in globals():
