@@ -30,8 +30,12 @@
       "etag": "W/\"329e3-19aa7ccdea5-br\"",
       "last_modified": "Fri, 21 Nov 2025 19:03:32 GMT"
     },
-    "last_checked": "2025-11-21T19:03:32Z",
+    "last_checked": "2025-12-01T03:37:18Z",
     "last_downloaded": "2025-11-21T19:03:32Z",
-    "last_changed": "2025-11-21T19:03:10Z"
+    "last_changed": "2025-11-21T19:03:10Z",
+    "cache_data": {
+      "etag": "W/\"329ea-19ad7fc7646-br\"",
+      "last_modified": "Mon, 01 Dec 2025 03:37:18 GMT"
+    }
   }
 }
