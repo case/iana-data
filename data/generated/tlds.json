@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2025-11-30T03:09:57Z",
+  "publication": "2025-12-02T03:07:23Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -1167,10 +1167,10 @@
       ],
       "registry_url": "http://www.airtel.in",
       "whois_server": "whois.nic.airtel",
-      "rdap_server": "https://tld-rdap.verisign.com/airtel/v1/",
+      "rdap_server": "https://rdap.nic.airtel",
       "tld_created": "2015-06-18",
       "tld_updated": [
-        "2025-11-26"
+        "2025-12-01"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -4173,10 +4173,11 @@
         "z.nic.bharti"
       ],
       "registry_url": "http://www.bharti.com/wps/wcm/connect/BhartiPortal/Bharti/home",
-      "rdap_server": "https://tld-rdap.verisign.com/bharti/v1/",
+      "whois_server": "whois.nic.bharti",
+      "rdap_server": "https://rdap.nic.bharti",
       "tld_created": "2015-05-08",
       "tld_updated": [
-        "2025-11-26"
+        "2025-12-01"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -26549,7 +26550,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-08-04",
       "tld_updated": [
-        "2023-08-11"
+        "2025-12-01"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -39491,7 +39492,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-08-04",
       "tld_updated": [
-        "2023-08-11"
+        "2025-12-01"
       ],
       "annotations": {
         "rdap_source": "IANA",
