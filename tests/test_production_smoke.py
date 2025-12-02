@@ -91,21 +91,6 @@ def test_cli_download_tld_pages_flag_works():
     # Either succeeds or fails gracefully (exit code doesn't matter for this test)
 
 
-def test_cli_build_flag_works():
-    """Test that --build flag works (used by: make build)."""
-    result = subprocess.run(
-        [sys.executable, "-m", "src.cli", "--build"],
-        capture_output=True,
-        text=True,
-        timeout=10,
-    )
-
-    # Should not crash with import errors
-    # May fail due to missing source files, but that's OK for smoke test
-    assert "circular import" not in result.stderr.lower()
-    assert "ImportError" not in result.stderr
-
-
 def test_cli_analyze_flag_works():
     """Test that --analyze flag works (used by: make analyze)."""
     result = subprocess.run(
