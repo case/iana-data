@@ -46,6 +46,20 @@ jobs:
           title: "IANA core data download failed"
           message: "❌ Failed to download IANA core data files"
 
+      - name: Download ICANN Registry Agreement Table
+        id: download-registry-agreement
+        continue-on-error: true
+        run: uv run python scripts/registry-agreement-table/download_registry_agreement_table.py
+
+      - name: Notification if registry agreement download fails
+        if: steps.download-registry-agreement.outcome == 'failure'
+        uses: ./.github/actions/pushover
+        with:
+          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
+          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
+          title: "ICANN registry agreement download failed"
+          message: "❌ Failed to download ICANN registry agreement table"
+
       - name: Generate IDN script mappings
         id: generate-idn-mapping
         continue-on-error: true
@@ -136,13 +150,12 @@ jobs:
       - name: Run tests
         id: run-tests
         if: steps.source-check.outputs.source_changed == 'true'
-        continue-on-error: true
         run: |
           set -o pipefail
           make test 2>&1 | tee test-output.log
 
       - name: Notification if tests fail
-        if: steps.run-tests.outcome == 'failure'
+        if: failure() && steps.run-tests.outcome == 'failure'
         uses: ./.github/actions/pushover
         with:
           pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
@@ -153,11 +166,10 @@ jobs:
       - name: Build tlds.json
         if: steps.source-check.outputs.source_changed == 'true'
         id: build
-        continue-on-error: true
         run: make build
 
       - name: Notification if build fails
-        if: steps.build.outcome == 'failure'
+        if: failure() && steps.build.outcome == 'failure'
         uses: ./.github/actions/pushover
         with:
           pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
