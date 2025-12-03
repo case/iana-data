@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2025-12-02T03:07:23Z",
+  "publication": "2025-12-03T03:04:45Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -46478,11 +46478,10 @@
         "ns2.nic.xn--p1acf"
       ],
       "registry_url": "http://rusnames.ru/",
-      "whois_server": "whois.nic.xn--p1acf",
-      "rdap_server": "https://api.rdap.nic.xn--p1acf/",
+      "rdap_server": "https://rdap.nic.xn--p1acf/",
       "tld_created": "2014-07-03",
       "tld_updated": [
-        "2022-11-21"
+        "2025-12-02"
       ],
       "annotations": {
         "rdap_source": "IANA",
