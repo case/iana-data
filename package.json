@@ -8,7 +8,7 @@
     "checkly:deploy": "npx checkly deploy --config monitoring/checkly/checkly.config.ts"
   },
   "devDependencies": {
-    "checkly": "6.9.3",
+    "checkly": "6.9.5",
     "jiti": "2.6.1",
     "typescript": "5.9.3"
   }
