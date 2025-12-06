@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2025-12-05T03:06:52Z",
+  "publication": "2025-12-06T03:02:28Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -27524,7 +27524,7 @@
       "orgs": {
         "tld_manager": "Nippon Life Insurance Company",
         "admin": "Nippon Life Insurance Company",
-        "tech": "Verisign, Inc."
+        "tech": "Identity Digital Limited"
       },
       "nameservers": [
         "v0n0.nic.nissay",
@@ -27539,7 +27539,7 @@
       "rdap_server": "https://tld-rdap.verisign.com/nissay/v1/",
       "tld_created": "2016-01-08",
       "tld_updated": [
-        "2025-11-06"
+        "2025-12-05"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -38458,7 +38458,7 @@
       "type": "cctld",
       "orgs": {
         "tld_manager": "Government of the Kingdom of Tonga, H.R.H. Crown Prince Tupouto'a, c/o Consulate of Tonga",
-        "admin": "Government of the Kingdom of Tonga\nH.R.H. Crown Prince Tupouto'a\nc/o Consulate of Tonga",
+        "admin": "Fangaloto,",
         "tech": "Tucows.com"
       },
       "nameservers": [
@@ -38472,7 +38472,7 @@
       "rdap_server": "https://rdap.tonicregistry.to/rdap/",
       "tld_created": "1995-12-18",
       "tld_updated": [
-        "2025-10-28"
+        "2025-12-05"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -42455,7 +42455,7 @@
       "rdap_server": "https://restwhois.ngtld.cn/",
       "tld_created": "2014-07-17",
       "tld_updated": [
-        "2025-11-06"
+        "2025-12-05"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -43034,7 +43034,7 @@
       "orgs": {
         "tld_manager": "Shangri-La International Hotel Management Limited",
         "admin": "28/F. Kerry Centre",
-        "tech": "Verisign, Inc."
+        "tech": "Identity Digital Limited"
       },
       "nameservers": [
         "v0n0.nic.xn--5su34j936bgsg",
@@ -43049,7 +43049,7 @@
       "rdap_server": "https://tld-rdap.verisign.com/xn--5su34j936bgsg/v1/",
       "tld_created": "2016-06-24",
       "tld_updated": [
-        "2025-11-06"
+        "2025-12-05"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -47208,7 +47208,7 @@
       "orgs": {
         "tld_manager": "Kerry Trading Co. Limited",
         "admin": "Kerry Trading Co. Limited",
-        "tech": "Verisign, Inc."
+        "tech": "Identity Digital Limited"
       },
       "nameservers": [
         "v0n0.nic.xn--w4r85el8fhu5dnra",
@@ -47223,7 +47223,7 @@
       "rdap_server": "https://tld-rdap.verisign.com/xn--w4r85el8fhu5dnra/v1/",
       "tld_created": "2016-02-05",
       "tld_updated": [
-        "2025-11-06"
+        "2025-12-05"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -47243,7 +47243,7 @@
       "orgs": {
         "tld_manager": "Kerry Trading Co. Limited",
         "admin": "Kerry Trading Co. Limited",
-        "tech": "Verisign, Inc."
+        "tech": "Identity Digital Limited"
       },
       "nameservers": [
         "v0n0.nic.xn--w4rs40l",
@@ -47258,7 +47258,7 @@
       "rdap_server": "https://tld-rdap.verisign.com/xn--w4rs40l/v1/",
       "tld_created": "2016-02-05",
       "tld_updated": [
-        "2025-11-06"
+        "2025-12-05"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -47354,7 +47354,7 @@
       "rdap_server": "https://restwhois.ngtld.cn/",
       "tld_created": "2014-07-24",
       "tld_updated": [
-        "2025-11-06"
+        "2025-12-05"
       ],
       "annotations": {
         "rdap_source": "IANA",
