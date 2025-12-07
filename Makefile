@@ -1,3 +1,25 @@
+.PHONY: help
+help:
+	@echo "Available commands:"
+	@echo "  make analyze                   Analyze downloaded data"
+	@echo "  make analyze-idn-scripts       Analyze IDN scripts"
+	@echo "  make analyze-registry-agreements  Analyze registry agreements"
+	@echo "  make analyze-tlds-json         Analyze TLDs JSON"
+	@echo "  make build                     Build output files (runs generate-idn-mapping first)"
+	@echo "  make check-circular-imports    Check for circular imports with pydeps"
+	@echo "  make checkly-deploy            Deploy Checkly checks (production)"
+	@echo "  make checkly-info              Show Checkly info"
+	@echo "  make checkly-preview-deploy    Deploy Checkly checks (preview)"
+	@echo "  make checkly-test              Run Checkly tests"
+	@echo "  make coverage                  Run tests with coverage report"
+	@echo "  make deps                      Install dependencies (uv sync, npm install)"
+	@echo "  make download-core             Download core IANA data files"
+	@echo "  make download-tld-pages        Download TLD pages (optional GROUPS=...)"
+	@echo "  make generate-idn-mapping      Generate IDN script mapping"
+	@echo "  make lint                      Run ruff linter"
+	@echo "  make test                      Run linter, typecheck, and tests"
+	@echo "  make typecheck                 Run pyright type checker"
+
 .PHONY: deps
 deps:
 	uv sync
