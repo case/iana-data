@@ -136,6 +136,15 @@
       "monitoring": true
     },
     {
+      "tld": "us",
+      "rdapServer": "https://rdap.nic.us/",
+      "backendOperator": "Registry Services, LLC",
+      "dateUpdated": "2025-12-07",
+      "source": "Manually discovered it",
+      "notes": "",
+      "monitoring": true
+    },
+    {
       "tld": "vc",
       "rdapServer": "https://rdap.identitydigital.services/rdap/",
       "backendOperator": "Identity Digital Inc.",
