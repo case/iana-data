@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2025-12-06T03:02:28Z",
+  "publication": "2025-12-07T23:51:16Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -39815,11 +39815,13 @@
       ],
       "registry_url": "http://www.nic.us",
       "whois_server": "whois.nic.us",
+      "rdap_server": "https://rdap.nic.us/",
       "tld_created": "1985-02-15",
       "tld_updated": [
         "2024-08-29"
       ],
       "annotations": {
+        "rdap_source": "Manually discovered it",
         "country_name_iso": "United States"
       }
     },
