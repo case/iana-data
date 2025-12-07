@@ -220,3 +220,15 @@ jobs:
           pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
           title: "IANA data - successfully updated"
           message: "✅ Successfully updated and committed IANA data"
+
+      - name: Email notification if data committed
+        if: always() && steps.git-check.outputs.changed == 'true'
+        uses: case/actions-email@v1
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+        with:
+          provider: resend
+          subject: "IANA data - successfully updated"
+          body_text: "Successfully updated and committed IANA data"
