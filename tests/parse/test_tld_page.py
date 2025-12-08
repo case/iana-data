@@ -34,14 +34,25 @@ def test_parse_com_orgs():
 
 
 def test_parse_com_nameservers():
-    """Test parsing nameservers from .com page."""
+    """Test parsing nameservers from .com page with IPv4 and IPv6 addresses."""
     html = (FIXTURES_DIR / "com.html").read_text()
     result = parse_tld_page(html)
 
     assert "nameservers" in result
     assert len(result["nameservers"]) == 13
-    assert "a.gtld-servers.net" in result["nameservers"]
-    assert "m.gtld-servers.net" in result["nameservers"]
+
+    # Find specific nameservers by hostname
+    ns_a = next(ns for ns in result["nameservers"] if ns["hostname"] == "a.gtld-servers.net")
+    ns_m = next(ns for ns in result["nameservers"] if ns["hostname"] == "m.gtld-servers.net")
+
+    # Check structure has hostname, ipv4, ipv6
+    assert ns_a["hostname"] == "a.gtld-servers.net"
+    assert ns_a["ipv4"] == ["192.5.6.30"]
+    assert ns_a["ipv6"] == ["2001:503:a83e::2:30"]
+
+    assert ns_m["hostname"] == "m.gtld-servers.net"
+    assert ns_m["ipv4"] == ["192.55.83.30"]
+    assert ns_m["ipv6"] == ["2001:501:b1f9::30"]
 
 
 def test_parse_com_registry_info():
@@ -91,13 +102,18 @@ def test_parse_tw_orgs():
 
 
 def test_parse_tw_nameservers():
-    """Test parsing nameservers from .tw page."""
+    """Test parsing nameservers from .tw page with new structure."""
     html = (FIXTURES_DIR / "tw.html").read_text()
     result = parse_tld_page(html)
 
     assert "nameservers" in result
     assert len(result["nameservers"]) == 9
-    assert "a.dns.tw" in result["nameservers"]
+
+    # Find a.dns.tw by hostname
+    ns_a = next(ns for ns in result["nameservers"] if ns["hostname"] == "a.dns.tw")
+    assert ns_a["hostname"] == "a.dns.tw"
+    assert "ipv4" in ns_a
+    assert "ipv6" in ns_a
 
 
 def test_parse_idn_traditional_tld_display():
@@ -220,3 +236,64 @@ def test_parse_idn_gtld_tld_display():
     result = parse_tld_page(html)
 
     assert result["tld_display"] == "कॉम"  # Hindi for "com"
+
+
+# === Nameserver IP address edge case tests ===
+
+
+def test_parse_cd_ipv4_only_nameservers():
+    """Test parsing .cd which has IPv4-only nameservers (no IPv6)."""
+    html = (FIXTURES_DIR / "cd.html").read_text()
+    result = parse_tld_page(html)
+
+    assert "nameservers" in result
+    assert len(result["nameservers"]) == 3
+
+    # All nameservers should have IPv4 but empty IPv6
+    for ns in result["nameservers"]:
+        assert "hostname" in ns
+        assert len(ns["ipv4"]) == 1
+        assert ns["ipv6"] == []
+
+    # Check specific nameserver
+    ns1 = next(ns for ns in result["nameservers"] if ns["hostname"] == "ns-root-21.scpt-network.net")
+    assert ns1["ipv4"] == ["102.68.62.15"]
+    assert ns1["ipv6"] == []
+
+
+def test_parse_cw_multiple_ips_per_nameserver():
+    """Test parsing .cw which has nameservers with multiple IPv4 and IPv6 addresses."""
+    html = (FIXTURES_DIR / "cw.html").read_text()
+    result = parse_tld_page(html)
+
+    assert "nameservers" in result
+    assert len(result["nameservers"]) == 7
+
+    # ns0.ja.net has 2 IPv4 and 2 IPv6 addresses
+    ns_janet = next(ns for ns in result["nameservers"] if ns["hostname"] == "ns0.ja.net")
+    assert ns_janet["hostname"] == "ns0.ja.net"
+    assert len(ns_janet["ipv4"]) == 2
+    assert "193.63.94.20" in ns_janet["ipv4"]
+    assert "128.86.1.20" in ns_janet["ipv4"]
+    assert len(ns_janet["ipv6"]) == 2
+    # IPv6 addresses should be normalized (compressed form)
+    assert "2001:630:0:9::14" in ns_janet["ipv6"]
+    assert "2001:630:0:8::14" in ns_janet["ipv6"]
+
+
+def test_parse_cw_mixed_ipv4_only_and_dual_stack():
+    """Test .cw has mix of IPv4-only and dual-stack nameservers."""
+    html = (FIXTURES_DIR / "cw.html").read_text()
+    result = parse_tld_page(html)
+
+    # kadushi.curinfo.cw is IPv4-only
+    ns_kadushi = next(ns for ns in result["nameservers"] if ns["hostname"] == "kadushi.curinfo.cw")
+    assert ns_kadushi["ipv4"] == ["65.208.122.63"]
+    assert ns_kadushi["ipv6"] == []
+
+    # cw.cctld.authdns.ripe.net is dual-stack (1 IPv4, 1 IPv6)
+    ns_ripe = next(ns for ns in result["nameservers"] if ns["hostname"] == "cw.cctld.authdns.ripe.net")
+    assert ns_ripe["ipv4"] == ["193.0.9.86"]
+    assert len(ns_ripe["ipv6"]) == 1
+    # Should be normalized
+    assert ns_ripe["ipv6"] == ["2a13:27c0:30::86"]
