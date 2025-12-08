@@ -15,6 +15,7 @@ def built_tlds_json(tmp_path, monkeypatch):
     mapping_fixture = Path(FIXTURES_DIR) / FIXTURES_FILES["IDN_SCRIPT_MAPPING"]
     monkeypatch.setattr("src.build.tlds.TLDS_OUTPUT_FILE", str(tmp_path / "tlds.json"))
     monkeypatch.setattr("src.build.tlds.IDN_SCRIPT_MAPPING_FILE", str(mapping_fixture))
+    monkeypatch.setattr("src.utilities.metadata.METADATA_FILE", str(tmp_path / "metadata.json"))
     build_tlds_json()
 
     with open(tmp_path / "tlds.json", "r", encoding="utf-8") as f:

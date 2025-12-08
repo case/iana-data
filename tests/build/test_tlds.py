@@ -16,7 +16,9 @@ FIXTURES_DIR = Path(__file__).parent.parent / "fixtures" / "source" / "core"
 def temp_output(tmp_path, monkeypatch):
     """Fixture to redirect build output to temp directory."""
     output_file = tmp_path / "tlds.json"
+    metadata_file = tmp_path / "metadata.json"
     monkeypatch.setattr("src.build.tlds.TLDS_OUTPUT_FILE", str(output_file))
+    monkeypatch.setattr("src.utilities.metadata.METADATA_FILE", str(metadata_file))
     return output_file
 
 def test_build_tlds_json_creates_file(temp_output):
