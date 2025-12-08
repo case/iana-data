@@ -27,6 +27,7 @@ dev = [
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 norecursedirs = [".git", ".tox", "dist", "*.egg"]
+addopts = "--durations=20 --durations-min=1.0"
 
 [tool.coverage.report]
 precision = 0
