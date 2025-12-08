@@ -7,7 +7,7 @@ from typing import Callable
 
 import httpx
 
-from ..config import IANA_URLS, SOURCE_DIR, SOURCE_FILES
+from ..config import IANA_URLS, IPTOASN_DIR, IPTOASN_FILE, IPTOASN_URL, SOURCE_DIR, SOURCE_FILES
 from .cache import is_cache_fresh, parse_cache_control_max_age
 from .metadata import load_metadata, save_metadata, utc_timestamp
 from .urls import get_tld_file_path, get_tld_page_url
@@ -219,6 +219,49 @@ def download_tld_pages(
     save_metadata(metadata)
 
     return results
+
+
+def download_iptoasn() -> str:
+    """
+    Download the iptoasn combined TSV file.
+
+    Downloads the gzipped file from iptoasn.com and saves it locally.
+    This file is gitignored and used during build for ASN lookups.
+
+    Returns:
+        Status: "downloaded" or "error"
+    """
+    iptoasn_dir = Path(IPTOASN_DIR)
+    iptoasn_dir.mkdir(parents=True, exist_ok=True)
+    filepath = iptoasn_dir / IPTOASN_FILE
+
+    try:
+        logger.info("Downloading iptoasn data from %s...", IPTOASN_URL)
+        with httpx.Client(timeout=60.0, follow_redirects=True) as client:
+            response = make_request_with_retry(client, IPTOASN_URL)
+
+            if response.status_code == 200:
+                with open(filepath, "wb") as f:
+                    f.write(response.content)
+                size_mb = len(response.content) / (1024 * 1024)
+                logger.info("  → %s (%.1f MB)", filepath, size_mb)
+                return "downloaded"
+            else:
+                logger.error("HTTP %d for %s", response.status_code, IPTOASN_URL)
+                return "error"
+    except Exception as e:
+        logger.error("Error downloading iptoasn: %s", e)
+        return "error"
+
+
+def get_iptoasn_path() -> Path:
+    """
+    Get the path to the iptoasn data file.
+
+    Returns:
+        Path to ip2asn-combined.tsv.gz
+    """
+    return Path(IPTOASN_DIR) / IPTOASN_FILE
 
 
 # =============================================================================

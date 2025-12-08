@@ -10,7 +10,7 @@ from .analyze import analyze_rdap_json, analyze_root_db_html, analyze_tlds_txt
 from .build import build_tlds_json
 from .config import IANA_URLS, SOURCE_DIR, SOURCE_FILES, setup_logging
 from .parse import parse_tlds_txt
-from .utilities import download_iana_files, download_tld_pages
+from .utilities import download_iana_files, download_iptoasn, download_tld_pages
 
 logger = logging.getLogger(__name__)
 
@@ -59,6 +59,12 @@ def main() -> int:
             "Specify prefixes to filter (e.g., 'a b c' for TLDs starting with a, b, or c), "
             "or omit to download all TLD pages."
         ),
+    )
+
+    parser.add_argument(
+        "--download-iptoasn",
+        action="store_true",
+        help="Download iptoasn data file for ASN lookups during build.",
     )
 
     args = parser.parse_args()
@@ -179,6 +185,17 @@ def main() -> int:
             logger.info("  Status: Unchanged (content identical)")
 
         return 0
+
+    if args.download_iptoasn:
+        logger.info("Downloading iptoasn data...")
+        result = download_iptoasn()
+
+        if result == "downloaded":
+            logger.info("  ✓ iptoasn: downloaded")
+            return 0
+        else:
+            logger.error("  ✗ iptoasn: %s", result)
+            return 1
 
     if getattr(args, "download_tld_pages", None) is not None:
         # Load TLD list from source file

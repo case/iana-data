@@ -13,6 +13,10 @@ ICANN_URLS: Final[dict[str, str]] = {
     "REGISTRY_AGREEMENT_TABLE": "https://www.icann.org/en/registry-agreements/csvdownload",
 }
 
+IPTOASN_URL: Final[str] = "https://iptoasn.com/data/ip2asn-combined.tsv.gz"
+IPTOASN_DIR: Final[str] = "data/source/iptoasn"
+IPTOASN_FILE: Final[str] = "ip2asn-combined.tsv.gz"
+
 SOURCE_DIR: Final[str] = "data/source"
 TLD_PAGES_DIR: Final[str] = "data/source/tld-pages"
 

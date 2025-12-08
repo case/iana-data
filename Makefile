@@ -14,6 +14,7 @@ help:
 	@echo "  make coverage                  Run tests with coverage report"
 	@echo "  make deps                      Install dependencies (uv sync, npm install)"
 	@echo "  make download-core             Download core IANA data files"
+	@echo "  make download-iptoasn          Download iptoasn data for ASN lookups"
 	@echo "  make download-tld-pages        Download TLD pages (optional GROUPS=...)"
 	@echo "  make generate-idn-mapping      Generate IDN script mapping"
 	@echo "  make lint                      Run ruff linter"
@@ -32,6 +33,10 @@ download-core:
 .PHONY: download-tld-pages
 download-tld-pages:
 	uv run python -m src.cli --download-tld-pages $(GROUPS)
+
+.PHONY: download-iptoasn
+download-iptoasn:
+	uv run python -m src.cli --download-iptoasn
 
 .PHONY: analyze
 analyze:
