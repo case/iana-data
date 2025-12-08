@@ -80,6 +80,18 @@ class TestParseIptoasnTsv:
         assert len(ipv4_records) > 0
         assert len(ipv6_records) > 0
 
+    def test_parse_skips_malformed_lines(self):
+        """Test that malformed lines (too few fields, invalid ASN, empty) are skipped."""
+        filepath = FIXTURES_DIR / "ip2asn-malformed-sample.tsv"
+        records = parse_iptoasn_tsv(filepath)
+
+        # Should have only 2 valid records from the malformed file
+        assert len(records) == 2
+        assert records[0].asn == 13335
+        assert records[0].org == "CLOUDFLARENET"
+        assert records[1].asn == 15169
+        assert records[1].org == "GOOGLE"
+
 
 class TestASNRecord:
     """Tests for ASNRecord dataclass."""
@@ -194,3 +206,19 @@ class TestASNLookup:
         assert result is not None
         assert result.asn == 396982
         assert result.org == "GOOGLE-CLOUD-PLATFORM"
+
+    def test_lookup_invalid_ipv4_returns_none(self):
+        """Test that invalid IPv4 address returns None."""
+        filepath = FIXTURES_DIR / "ip2asn-combined-sample.tsv"
+        lookup = ASNLookup.from_file(filepath)
+
+        result = lookup.lookup("not.a.valid.ip")
+        assert result is None
+
+    def test_lookup_invalid_ipv6_returns_none(self):
+        """Test that invalid IPv6 address returns None."""
+        filepath = FIXTURES_DIR / "ip2asn-combined-sample.tsv"
+        lookup = ASNLookup.from_file(filepath)
+
+        result = lookup.lookup("not:a:valid:ipv6")
+        assert result is None

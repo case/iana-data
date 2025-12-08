@@ -1,0 +1,6 @@
+1.0.0.0	1.0.0.255	13335	US	CLOUDFLARENET
+malformed line with not enough fields
+too	few	fields
+1.0.1.0	1.0.1.255	NOT_A_NUMBER	US	INVALID_ASN
+
+1.0.2.0	1.0.2.255	15169	US	GOOGLE

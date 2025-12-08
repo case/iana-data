@@ -789,3 +789,92 @@ def test_download_tld_pages_empty_tld_list(tmp_path):
 
     # Should return empty dict when no TLDs provided
     assert result == {}
+
+
+# === Tests for download_iptoasn ===
+
+
+def test_download_iptoasn_success(tmp_path):
+    """Test successful download of iptoasn data."""
+    from src.utilities.download import download_iptoasn
+
+    iptoasn_dir = tmp_path / "data" / "source" / "iptoasn"
+
+    # Mock response
+    def mock_request(client, url, headers=None):
+        response = Mock(spec=httpx.Response)
+        response.status_code = 200
+        response.content = b"fake gzip content"
+        return response
+
+    with (
+        patch("src.utilities.download.IPTOASN_DIR", str(iptoasn_dir)),
+        patch("src.utilities.download.make_request_with_retry", side_effect=mock_request),
+        patch("httpx.Client") as mock_client_class,
+    ):
+        mock_client_class.return_value.__enter__.return_value = Mock()
+        mock_client_class.return_value.__exit__.return_value = False
+
+        result = download_iptoasn()
+
+    assert result == "downloaded"
+    assert (iptoasn_dir / "ip2asn-combined.tsv.gz").exists()
+    assert (iptoasn_dir / "ip2asn-combined.tsv.gz").read_bytes() == b"fake gzip content"
+
+
+def test_download_iptoasn_http_error(tmp_path):
+    """Test download_iptoasn handles HTTP errors."""
+    from src.utilities.download import download_iptoasn
+
+    iptoasn_dir = tmp_path / "data" / "source" / "iptoasn"
+
+    # Mock 404 response
+    def mock_request(client, url, headers=None):
+        response = Mock(spec=httpx.Response)
+        response.status_code = 404
+        return response
+
+    with (
+        patch("src.utilities.download.IPTOASN_DIR", str(iptoasn_dir)),
+        patch("src.utilities.download.make_request_with_retry", side_effect=mock_request),
+        patch("httpx.Client") as mock_client_class,
+    ):
+        mock_client_class.return_value.__enter__.return_value = Mock()
+        mock_client_class.return_value.__exit__.return_value = False
+
+        result = download_iptoasn()
+
+    assert result == "error"
+
+
+def test_download_iptoasn_exception(tmp_path):
+    """Test download_iptoasn handles exceptions."""
+    from src.utilities.download import download_iptoasn
+
+    iptoasn_dir = tmp_path / "data" / "source" / "iptoasn"
+
+    # Mock exception
+    def mock_request(client, url, headers=None):
+        raise Exception("Connection failed")
+
+    with (
+        patch("src.utilities.download.IPTOASN_DIR", str(iptoasn_dir)),
+        patch("src.utilities.download.make_request_with_retry", side_effect=mock_request),
+        patch("httpx.Client") as mock_client_class,
+    ):
+        mock_client_class.return_value.__enter__.return_value = Mock()
+        mock_client_class.return_value.__exit__.return_value = False
+
+        result = download_iptoasn()
+
+    assert result == "error"
+
+
+def test_get_iptoasn_path():
+    """Test get_iptoasn_path returns correct path."""
+    from src.utilities.download import get_iptoasn_path
+
+    path = get_iptoasn_path()
+
+    assert path.name == "ip2asn-combined.tsv.gz"
+    assert "iptoasn" in str(path)
