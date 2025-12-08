@@ -74,6 +74,46 @@ jobs:
           title: "IANA data - IDN mapping generation failed"
           message: "❌ Failed to generate IDN script mappings"
 
+      # Download iptoasn artifact (uploaded by update-iptoasn workflow)
+      - name: Get latest iptoasn workflow run
+        id: get-iptoasn-run
+        continue-on-error: true
+        run: |
+          RUN_ID=$(gh run list --workflow=update-iptoasn.yaml --status=success --limit=1 --json databaseId -q '.[0].databaseId')
+          if [ -n "$RUN_ID" ]; then
+            echo "run_id=$RUN_ID" >> $GITHUB_OUTPUT
+            echo "Found successful iptoasn workflow run: $RUN_ID"
+          else
+            echo "No successful iptoasn workflow run found"
+          fi
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Download iptoasn artifact
+        id: download-iptoasn
+        if: steps.get-iptoasn-run.outputs.run_id != ''
+        continue-on-error: true
+        uses: actions/download-artifact@v6.0.0
+        with:
+          pattern: iptoasn-*
+          path: data/source/iptoasn
+          github-token: ${{ github.token }}
+          run-id: ${{ steps.get-iptoasn-run.outputs.run_id }}
+          merge-multiple: true
+
+      - name: Record iptoasn artifact info
+        if: steps.download-iptoasn.outcome == 'success'
+        run: |
+          # Find the downloaded file and log its info
+          if [ -f "data/source/iptoasn/ip2asn-combined.tsv.gz" ]; then
+            SIZE=$(stat -c%s data/source/iptoasn/ip2asn-combined.tsv.gz)
+            SIZE_MB=$(echo "scale=1; $SIZE / 1048576" | bc)
+            echo "Downloaded iptoasn data (${SIZE_MB} MB)"
+          else
+            echo "Warning: iptoasn file not found after download"
+            ls -la data/source/iptoasn/ || true
+          fi
+
       # Download TLD pages in 8 batches for better error isolation
       # Total: 1,592 TLDs, ~200 per batch, ~3-4 min each
       # Continue on error to allow other batches to complete
