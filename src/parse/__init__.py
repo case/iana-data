@@ -1,6 +1,7 @@
 """Parsers for IANA data files."""
 
 from .country import get_all_country_mappings, get_country_name, is_cctld
+from .iptoasn import ASNLookup, ASNRecord, parse_iptoasn_tsv
 from .rdap_json import parse_rdap_json, rdap_json_content_changed
 from .registry_agreement_csv import (
     get_normalized_agreement_types,
@@ -17,6 +18,9 @@ from .tld_html import extract_main_content
 from .tlds_txt import parse_tlds_txt, tlds_txt_content_changed
 
 __all__ = [
+    "ASNLookup",
+    "ASNRecord",
+    "parse_iptoasn_tsv",
     "parse_tlds_txt",
     "tlds_txt_content_changed",
     "parse_root_db_html",

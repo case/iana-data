@@ -1,0 +1,35 @@
+1.0.0.0	1.0.0.255	13335	US	CLOUDFLARENET
+1.0.1.0	1.0.3.255	0	None	Not routed
+1.0.4.0	1.0.7.255	38803	AU	GTELECOM-AS-AP Gtelecom Pty Ltd
+1.0.8.0	1.0.15.255	0	None	Not routed
+1.0.16.0	1.0.16.255	2519	JP	VECTANT ARTERIA Networks Corporation
+1.0.17.0	1.0.63.255	0	None	Not routed
+1.0.64.0	1.0.127.255	18144	JP	AS-ENECOM Enecom,Inc.
+1.0.128.0	1.0.139.255	23969	TH	TOT-NET TOT Public Company Limited
+1.0.140.0	1.0.180.255	23969	TH	TOT-NET TOT Public Company Limited
+1.0.181.0	1.0.182.255	23969	TH	TOT-NET TOT Public Company Limited
+1.0.183.0	1.0.195.255	23969	TH	TOT-NET TOT Public Company Limited
+1.179.112.0	1.179.119.255	396982	US	GOOGLE-CLOUD-PLATFORM
+2c0f:fb50::	2c0f:fb50:ffff:ffff:ffff:ffff:ffff:ffff	15169	US	GOOGLE
+2c0f:ff90::	2c0f:ff90:ffff:ffff:ffff:ffff:ffff:ffff	15808	KE	ACCESSKENYA-KE ACCESSKENYA GROUP LTD is an ISP serving
+2c0f:ff91::	2c0f:ff97:ffff:ffff:ffff:ffff:ffff:ffff	0	None	Not routed
+2c0f:ff98::	2c0f:ff98:ffff:ffff:ffff:ffff:ffff:ffff	37113	UG	tangerine-ug-as
+2c0f:ff99::	2c0f:ff9f:ffff:ffff:ffff:ffff:ffff:ffff	0	None	Not routed
+2c0f:ffa0::	2c0f:ffa0:2:ffff:ffff:ffff:ffff:ffff	37273	UG	BCS
+2c0f:ffa0:3::	2c0f:ffa0:4:ffff:ffff:ffff:ffff:ffff	37273	UG	BCS
+2c0f:ffa0:5::	2c0f:ffa0:ffff:ffff:ffff:ffff:ffff:ffff	37273	UG	BCS
+2c0f:ffa1::	2c0f:ffa7:ffff:ffff:ffff:ffff:ffff:ffff	0	None	Not routed
+2c0f:ffa8::	2c0f:ffa8:ffff:ffff:ffff:ffff:ffff:ffff	37057	LS	VODACOM-LESOTHO
+2c0f:ffa9::	2c0f:ffc7:ffff:ffff:ffff:ffff:ffff:ffff	0	None	Not routed
+2c0f:ffc8::	2c0f:ffc8:ffff:ffff:ffff:ffff:ffff:ffff	22355	ZA	FROGFOOT
+2c0f:ffc9::	2c0f:ffcf:ffff:ffff:ffff:ffff:ffff:ffff	0	None	Not routed
+2c0f:ffd0::	2c0f:ffd0:ffff:ffff:ffff:ffff:ffff:ffff	36968	ZA	ECN-AS1
+2c0f:ffd1::	2c0f:ffd7:ffff:ffff:ffff:ffff:ffff:ffff	0	None	Not routed
+2c0f:ffd8::	2c0f:ffd8:ffff:ffff:ffff:ffff:ffff:ffff	37105	ZA	RAIN-GROUP-HOLDINGS
+2c0f:ffd9::	2c0f:ffef:ffff:ffff:ffff:ffff:ffff:ffff	0	None	Not routed
+2c0f:fff0::	2c0f:fff0:ffff:ffff:ffff:ffff:ffff:ffff	37125	NG	Layer3-
+2c0f:fff1::	fdff:ffff:ffff:ffff:ffff:ffff:ffff:ffff	0	None	Not routed
+fd00:448a:1130::	fd00:448a:1130:ffff:ffff:ffff:ffff:ffff	7713	ID	TELKOMNET-AS-AP PT Telekomunikasi Indonesia
+fd00:448a:1131::	fd00:448a:118f:ffff:ffff:ffff:ffff:ffff	0	None	Not routed
+fd00:448a:1190::	fd00:448a:1190:ffff:ffff:ffff:ffff:ffff	7713	ID	TELKOMNET-AS-AP PT Telekomunikasi Indonesia
+fd00:448a:1191::	fd00:448a:11af:ffff:ffff:ffff:ffff:ffff	0	None	Not routed
