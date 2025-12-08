@@ -1,0 +1,65 @@
+name: Update iptoasn data
+
+on:
+  schedule:
+    # Run daily at 00:00 UTC (2 hours before main IANA workflow)
+    - cron: "0 0 * * *"
+  workflow_dispatch: # Allow manual triggering
+
+# Prevent concurrent runs
+concurrency:
+  group: update-iptoasn
+  cancel-in-progress: false
+
+jobs:
+  download-iptoasn:
+    runs-on: ubuntu-slim
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6.0.1
+
+      - name: Download iptoasn data
+        id: download
+        run: |
+          # Download the combined IPv4+IPv6 ASN data
+          curl -fsSL -o ip2asn-combined.tsv.gz https://iptoasn.com/data/ip2asn-combined.tsv.gz
+
+          # Get file size for logging
+          SIZE=$(stat -c%s ip2asn-combined.tsv.gz)
+          SIZE_MB=$(echo "scale=1; $SIZE / 1048576" | bc)
+          echo "Downloaded ip2asn-combined.tsv.gz (${SIZE_MB} MB)"
+
+          # Set today's date for artifact naming
+          DATE=$(date -u +%Y-%m-%d)
+          echo "date=$DATE" >> $GITHUB_OUTPUT
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v5.0.0
+        with:
+          name: iptoasn-${{ steps.download.outputs.date }}
+          path: ip2asn-combined.tsv.gz
+          retention-days: 45
+          compression-level: 0
+          if-no-files-found: error
+
+      - name: Notification if download fails
+        if: failure()
+        uses: ./.github/actions/pushover
+        with:
+          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
+          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
+          title: "iptoasn download failed"
+          message: "❌ Failed to download iptoasn data from iptoasn.com"
+
+      - name: Email notification if download fails
+        if: failure()
+        uses: case/actions-email@v1
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+        with:
+          provider: resend
+          subject: "iptoasn download failed"
+          body_text: "Failed to download iptoasn data from iptoasn.com"
