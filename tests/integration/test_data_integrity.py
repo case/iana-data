@@ -3,6 +3,8 @@
 import json
 from pathlib import Path
 
+import pytest
+
 from src.config import MANUAL_DIR, SOURCE_DIR, SOURCE_FILES, TLDS_OUTPUT_FILE
 from src.parse.rdap_json import parse_rdap_json
 from src.parse.root_db_html import parse_root_db_html
@@ -217,3 +219,143 @@ def test_total_tlds_math_is_correct():
         f"{calculated_total}, but root DB has {total_count} total TLDs. "
         f"These should match. Difference: {total_count - calculated_total}"
     )
+
+
+# --- ASN Data Integrity Tests ---
+
+
+@pytest.fixture
+def tlds_json_fixture():
+    """Load the tlds.json fixture file."""
+    fixture_path = FIXTURES_DIR / "generated" / "tlds.json"
+    with open(fixture_path) as f:
+        return json.load(f)
+
+
+def test_fixture_nameserver_ips_have_asn_structure(tlds_json_fixture):
+    """Test that nameserver IPs in fixture have the correct ASN metadata structure.
+
+    Each IP should be an object with ip, asn, as_org, and as_country fields.
+    """
+    # Find a TLD with nameservers that have IPs
+    tld_with_ns = None
+    for tld in tlds_json_fixture["tlds"]:
+        if "nameservers" not in tld:
+            continue
+        for ns in tld["nameservers"]:
+            if isinstance(ns, dict) and (ns.get("ipv4") or ns.get("ipv6")):
+                tld_with_ns = tld
+                break
+        if tld_with_ns:
+            break
+
+    assert tld_with_ns is not None, "Fixture should have at least one TLD with nameserver IPs"
+
+    ns = tld_with_ns["nameservers"][0]
+    ip_list = ns.get("ipv4") or ns.get("ipv6")
+    first_ip = ip_list[0]
+
+    # Should be an object with ASN fields
+    assert isinstance(first_ip, dict), (
+        f"IP should be an object with ASN metadata, got {type(first_ip)}"
+    )
+    assert "ip" in first_ip, "IP object should have 'ip' field"
+    assert "asn" in first_ip, "IP object should have 'asn' field"
+    assert "as_org" in first_ip, "IP object should have 'as_org' field"
+    assert "as_country" in first_ip, "IP object should have 'as_country' field"
+
+
+def test_fixture_nameserver_asn_values_are_valid(tlds_json_fixture):
+    """Test that ASN values in fixture are valid integers >= 0."""
+    invalid_asns = []
+
+    for tld in tlds_json_fixture["tlds"]:
+        if "nameservers" not in tld:
+            continue
+
+        for ns in tld["nameservers"]:
+            if not isinstance(ns, dict):
+                continue
+            for ip_obj in ns.get("ipv4", []) + ns.get("ipv6", []):
+                if isinstance(ip_obj, dict):
+                    asn = ip_obj.get("asn")
+                    if not isinstance(asn, int) or asn < 0:
+                        invalid_asns.append({
+                            "tld": tld["tld"],
+                            "ip": ip_obj.get("ip"),
+                            "asn": asn,
+                        })
+
+    assert len(invalid_asns) == 0, (
+        f"Found {len(invalid_asns)} IPs with invalid ASN values: {invalid_asns[:5]}"
+    )
+
+
+def test_fixture_known_asn_values(tlds_json_fixture):
+    """Test that fixture has expected ASN values for known IPs.
+
+    The fixture includes Cloudflare (13335) and Google (15169) ASNs.
+    """
+    # Find the "aaa" TLD which has our test ASN data
+    aaa_tld = next(
+        (tld for tld in tlds_json_fixture["tlds"] if tld["tld"] == "aaa"),
+        None
+    )
+    assert aaa_tld is not None, "Fixture should have 'aaa' TLD"
+    assert "nameservers" in aaa_tld, "'aaa' TLD should have nameservers"
+
+    # Collect all ASNs from the nameservers
+    found_asns = set()
+    for ns in aaa_tld["nameservers"]:
+        if not isinstance(ns, dict):
+            continue
+        for ip_obj in ns.get("ipv4", []) + ns.get("ipv6", []):
+            if isinstance(ip_obj, dict) and "asn" in ip_obj:
+                found_asns.add(ip_obj["asn"])
+
+    # Should have Cloudflare and Google ASNs
+    assert 13335 in found_asns, "Fixture should include Cloudflare ASN (13335)"
+    assert 15169 in found_asns, "Fixture should include Google ASN (15169)"
+
+
+def test_production_nameserver_structure_if_built():
+    """Test that production tlds.json has correct nameserver structure if it exists.
+
+    This test validates the actual built file structure without checking
+    specific ASN values (which change with iptoasn data updates).
+    """
+    tlds_json_path = Path(TLDS_OUTPUT_FILE)
+    if not tlds_json_path.exists():
+        pytest.skip("Built tlds.json not found. Run 'make build' first.")
+
+    with open(tlds_json_path) as f:
+        tlds_data = json.load(f)
+
+    # Find a TLD with nameservers
+    tld_with_ns = None
+    for tld in tlds_data["tlds"]:
+        if "nameservers" in tld and len(tld["nameservers"]) > 0:
+            ns = tld["nameservers"][0]
+            if isinstance(ns, dict) and (ns.get("ipv4") or ns.get("ipv6")):
+                tld_with_ns = tld
+                break
+
+    if tld_with_ns is None:
+        pytest.skip("No TLDs with nameserver IPs found in production tlds.json")
+
+    ns = tld_with_ns["nameservers"][0]
+
+    # Check nameserver structure
+    assert "hostname" in ns, "Nameserver should have 'hostname' field"
+    assert "ipv4" in ns, "Nameserver should have 'ipv4' field"
+    assert "ipv6" in ns, "Nameserver should have 'ipv6' field"
+
+    # Check IP structure (if there are IPs)
+    ip_list = ns.get("ipv4") or ns.get("ipv6")
+    if ip_list:
+        first_ip = ip_list[0]
+        assert isinstance(first_ip, dict), "IP should be an object"
+        assert "ip" in first_ip, "IP object should have 'ip' field"
+        assert "asn" in first_ip, "IP object should have 'asn' field"
+        assert "as_org" in first_ip, "IP object should have 'as_org' field"
+        assert "as_country" in first_ip, "IP object should have 'as_country' field"

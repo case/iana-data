@@ -17,12 +17,22 @@
         "tech": "GoDaddy Registry"
       },
       "nameservers": [
-        "a.nic.aaa",
-        "b.nic.aaa",
-        "c.nic.aaa",
-        "ns1.dns.nic.aaa",
-        "ns2.dns.nic.aaa",
-        "ns3.dns.nic.aaa"
+        {
+          "hostname": "a.nic.aaa",
+          "ipv4": [
+            {"ip": "192.0.34.53", "asn": 13335, "as_org": "CLOUDFLARENET", "as_country": "US"}
+          ],
+          "ipv6": [
+            {"ip": "2001:500:12::53", "asn": 13335, "as_org": "CLOUDFLARENET", "as_country": "US"}
+          ]
+        },
+        {
+          "hostname": "b.nic.aaa",
+          "ipv4": [
+            {"ip": "192.0.35.53", "asn": 15169, "as_org": "GOOGLE", "as_country": "US"}
+          ],
+          "ipv6": []
+        }
       ],
       "registry_url": "http://www.aaa.com",
       "whois_server": "whois.nic.aaa",
