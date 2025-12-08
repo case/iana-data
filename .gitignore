@@ -77,3 +77,6 @@ cython_debug/
 # data/generated/tlds.json
 /temp/**
 node_modules/
+
+# iptoasn data (downloaded during build, not committed)
+data/source/iptoasn/
