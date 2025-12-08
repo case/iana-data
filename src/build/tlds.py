@@ -1,5 +1,6 @@
 """Build enhanced TLD data file."""
 
+import gzip
 import json
 import logging
 from datetime import datetime, timezone
@@ -8,7 +9,9 @@ from typing import Any
 
 from ..config import IANA_URLS, IDN_SCRIPT_MAPPING_FILE, TLD_PAGES_DIR, TLDS_OUTPUT_FILE
 from ..parse.country import get_country_name, is_cctld
+from ..parse.iptoasn import ASNLookup
 from ..parse.rdap_json import parse_rdap_json
+from ..utilities.download import get_iptoasn_path
 from ..parse.registry_agreement_csv import (
     RegistryAgreement,
     get_normalized_agreement_types,
@@ -19,6 +22,7 @@ from ..parse.supplemental_cctld_rdap import parse_supplemental_cctld_rdap
 from ..parse.tld_html import parse_tld_page
 from ..parse.tld_manager_aliases import parse_tld_manager_aliases
 from ..utilities.content_changed import write_json_if_changed
+from ..utilities.metadata import load_metadata, save_metadata, utc_timestamp
 from ..utilities.urls import get_tld_file_path
 
 logger = logging.getLogger(__name__)
@@ -49,6 +53,26 @@ def build_tlds_json() -> dict:
             logger.info("Loaded %d IDN script mappings", len(idn_script_mapping))
         except Exception as e:
             logger.warning("Error loading IDN script mappings: %s", e)
+
+    # Load iptoasn data for ASN lookups
+    asn_lookup: ASNLookup | None = None
+    iptoasn_path = get_iptoasn_path()
+    if iptoasn_path.exists():
+        try:
+            logger.info("Loading iptoasn data from %s...", iptoasn_path)
+            records = _parse_gzipped_iptoasn(iptoasn_path)
+            asn_lookup = ASNLookup(records)
+            logger.info("Loaded %d ASN records", len(records))
+            # Update metadata to track when iptoasn data was used
+            metadata = load_metadata()
+            metadata["IPTOASN"] = {
+                "last_downloaded": utc_timestamp(),
+            }
+            save_metadata(metadata)
+        except Exception as e:
+            logger.warning("Error loading iptoasn data: %s", e)
+    else:
+        logger.info("No iptoasn data found at %s (run 'make download-iptoasn' to enable ASN lookups)", iptoasn_path)
 
     # Load and parse TLD pages
     logger.info("Parsing TLD pages...")
@@ -82,6 +106,7 @@ def build_tlds_json() -> dict:
             idn_script_mapping,
             registry_agreements,
             tld_manager_aliases,
+            asn_lookup,
         )
         tlds.append(tld_entry)
 
@@ -136,6 +161,7 @@ def _build_tld_entry(
     idn_script_mapping: dict[str, str],
     registry_agreements: dict[str, RegistryAgreement],
     tld_manager_aliases: dict[str, str],
+    asn_lookup: ASNLookup | None,
 ) -> dict:
     """
     Build a single TLD entry for output.
@@ -148,6 +174,7 @@ def _build_tld_entry(
         idn_script_mapping: Map of IDN TLD to script name
         registry_agreements: Map of TLD to ICANN registry agreement data
         tld_manager_aliases: Map of TLD manager name to canonical alias
+        asn_lookup: Optional ASNLookup for IP-to-ASN resolution
 
     Returns:
         dict: TLD entry following schema
@@ -204,9 +231,12 @@ def _build_tld_entry(
     if orgs:
         entry["orgs"] = orgs
 
-    # Add nameservers from page data
+    # Add nameservers from page data (with ASN enrichment if available)
     if "nameservers" in page_data:
-        entry["nameservers"] = page_data["nameservers"]
+        entry["nameservers"] = _enrich_nameservers_with_asn(
+            page_data["nameservers"],
+            asn_lookup,
+        )
 
     # Add registry information
     if "registry_url" in page_data:
@@ -296,3 +326,123 @@ def _add_idn_mappings(tlds: list[dict]) -> None:
     for ascii_tld, idn_list in idn_mappings.items():
         if ascii_tld in tld_lookup:
             tld_lookup[ascii_tld]["idn"] = sorted(idn_list)
+
+
+def _enrich_nameservers_with_asn(
+    nameservers: list[dict[str, Any]],
+    asn_lookup: ASNLookup | None,
+) -> list[dict[str, Any]]:
+    """
+    Transform nameserver IP strings to objects with ASN metadata.
+
+    Args:
+        nameservers: List of nameserver dicts with hostname, ipv4, ipv6 arrays
+        asn_lookup: Optional ASNLookup for IP-to-ASN resolution
+
+    Returns:
+        Transformed nameservers with IP objects containing ASN data
+    """
+    result = []
+
+    for ns in nameservers:
+        enriched_ns: dict[str, Any] = {
+            "hostname": ns["hostname"],
+            "ipv4": [],
+            "ipv6": [],
+        }
+
+        # Transform IPv4 addresses
+        for ip in ns.get("ipv4", []):
+            ip_obj = _ip_to_asn_object(ip, asn_lookup)
+            enriched_ns["ipv4"].append(ip_obj)
+
+        # Transform IPv6 addresses
+        for ip in ns.get("ipv6", []):
+            ip_obj = _ip_to_asn_object(ip, asn_lookup)
+            enriched_ns["ipv6"].append(ip_obj)
+
+        result.append(enriched_ns)
+
+    return result
+
+
+def _ip_to_asn_object(ip: str, asn_lookup: ASNLookup | None) -> dict[str, Any]:
+    """
+    Convert an IP string to an object with ASN metadata.
+
+    Args:
+        ip: IP address string
+        asn_lookup: Optional ASNLookup for IP-to-ASN resolution
+
+    Returns:
+        Dict with ip, asn, as_org, as_country fields
+    """
+    if asn_lookup is None:
+        # No ASN data available - return minimal object
+        return {
+            "ip": ip,
+            "asn": 0,
+            "as_org": "Unknown",
+            "as_country": "None",
+        }
+
+    record = asn_lookup.lookup(ip)
+    if record is None:
+        # IP not found in any range
+        return {
+            "ip": ip,
+            "asn": 0,
+            "as_org": "Unknown",
+            "as_country": "None",
+        }
+
+    return {
+        "ip": ip,
+        "asn": record.asn,
+        "as_org": record.org,
+        "as_country": record.country,
+    }
+
+
+def _parse_gzipped_iptoasn(filepath: Path) -> list:
+    """
+    Parse a gzipped iptoasn TSV file.
+
+    Args:
+        filepath: Path to .tsv.gz file
+
+    Returns:
+        List of ASNRecord objects
+    """
+    from ..parse.iptoasn import ASNRecord
+
+    records = []
+
+    with gzip.open(filepath, "rt", encoding="utf-8") as f:
+        for line_num, line in enumerate(f, start=1):
+            line = line.strip()
+            if not line:
+                continue
+
+            parts = line.split("\t")
+            if len(parts) < 5:
+                continue
+
+            try:
+                start_ip = parts[0]
+                end_ip = parts[1]
+                asn = int(parts[2])
+                country = parts[3]
+                org = "\t".join(parts[4:])
+
+                records.append(ASNRecord(
+                    start_ip=start_ip,
+                    end_ip=end_ip,
+                    asn=asn,
+                    country=country,
+                    org=org,
+                ))
+            except ValueError:
+                continue
+
+    return records
