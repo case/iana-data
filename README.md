@@ -128,8 +128,22 @@ Here is its schema:
       "nameservers": [                     // Array of nameserver objects [OPTIONAL - omit if undelegated]
         {
           "hostname": "string",            // Nameserver hostname (e.g. "a.gtld-servers.net") [REQUIRED]
-          "ipv4": ["string"],              // IPv4 addresses (e.g. ["192.5.6.30"]) [REQUIRED - may be empty]
-          "ipv6": ["string"]               // IPv6 addresses, normalized (e.g. ["2001:503:a83e::2:30"]) [REQUIRED - may be empty]
+          "ipv4": [                        // IPv4 address objects [REQUIRED - may be empty array]
+            {
+              "ip": "string",              // IPv4 address (e.g. "192.5.6.30") [REQUIRED]
+              "asn": number,               // AS number (e.g. 36619), 0 for "not routed" [REQUIRED]
+              "as_org": "string",          // AS organization name (e.g. "VERISIGN-INC") [REQUIRED]
+              "as_country": "string"       // AS country code (e.g. "US"), "None" if not assigned [REQUIRED]
+            }
+          ],
+          "ipv6": [                        // IPv6 address objects, normalized [REQUIRED - may be empty array]
+            {
+              "ip": "string",              // IPv6 address, compressed (e.g. "2001:503:a83e::2:30") [REQUIRED]
+              "asn": number,               // AS number (e.g. 36619), 0 for "not routed" [REQUIRED]
+              "as_org": "string",          // AS organization name (e.g. "VERISIGN-INC") [REQUIRED]
+              "as_country": "string"       // AS country code (e.g. "US"), "None" if not assigned [REQUIRED]
+            }
+          ]
         }
       ],
 
