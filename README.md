@@ -125,7 +125,13 @@ Here is its schema:
       },
 
       // --- Name Servers ---
-      "nameservers": ["string"],           // Array of nameserver hostnames (e.g. ["a.gtld-servers.net", "b.gtld-servers.net"]) [OPTIONAL - omit if undelegated]
+      "nameservers": [                     // Array of nameserver objects [OPTIONAL - omit if undelegated]
+        {
+          "hostname": "string",            // Nameserver hostname (e.g. "a.gtld-servers.net") [REQUIRED]
+          "ipv4": ["string"],              // IPv4 addresses (e.g. ["192.5.6.30"]) [REQUIRED - may be empty]
+          "ipv6": ["string"]               // IPv6 addresses, normalized (e.g. ["2001:503:a83e::2:30"]) [REQUIRED - may be empty]
+        }
+      ],
 
       // --- Registry Information ---
       "registry_url": "string",            // URL for registration services (e.g. "http://www.verisigninc.com") [OPTIONAL - omit if not present]
@@ -232,7 +238,7 @@ Dependencies:
 **If anyone asks**
 
 - [ ] ccTLD RDAP - `curl` workfow for the monitoring, in addition to the Checkly config
-- [ ] More data from the TLD pages, e.g. Name Server IPs (we currently only use hostnames in `tlds.json`), and IANA Report link URLs
+- [ ] More data from the TLD pages, e.g. IANA Report link URLs
 
 **Done**
 
@@ -255,3 +261,4 @@ Dependencies:
 - [x] TLD Manager "aliases" per the `data/manual/tld-manager-aliases.json` file
 - [x] `tlds.json` is now in source control
 - [x] GH Actions automation for building `tlds.json`
+- [x] Nameserver IP addresses (IPv4 and IPv6) added to `tlds.json`
