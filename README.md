@@ -2,9 +2,22 @@
 
 ## Tl;dr
 
-This project saves nightly copies of canonical source data from [IANA](https://www.iana.org/) and [ICANN](https://www.icann.org/) in its git history, and builds a `tlds.json` file that aggregates interesting TLD data into a single place. The collected data in this file makes it easier to understand TLD namespace. It's sort of an API-in-a-box, for exploring the TLD cinematic universe.
+[IANA](https://www.iana.org/) and [ICANN](https://www.icann.org/) publish a lot of canonical, interesting, and useful _structured_ information about the top-level domain namespace. This project fetches nightly copies their data, and jams it into a single `data/generated/tlds.json` file so that it's all in a single place. 
 
-It also includes some non-IANA data, notably a handful of ccTLD RDAP server URLs that for whatever reason, aren't listed in IANA's RDAP bootstrap file. (Where possible, we include the sources where we found the RDAP URLs, but sometimes it's just from basic guessing)
+It's sort of an API-in-a-box, for exploring the TLD cinematic universe. It's _small data_, so this git repo has the change history from each nightly snapshot. For example:
+
+- All top-level domains
+- Their ASCII & Unicode IDN variants
+- Their ccTLD or gTLD type
+- The names of the adminstrative and technical orgs that manage them
+- Their DNS nameservers, IPv4 & IPv6 addresses, and associated ASNs and AS orgs
+- Their WHOIS and RDAP server URLs
+- Their ICANN registry agreement types, e.g. `brand`, etc.
+- Etc.
+
+### ccTLD RDAP servers
+
+There are a handful of ccTLD RDAP server URLs that for whatever reason, aren't listed in IANA's RDAP bootstrap file. (Where possible, we include the sources where we found the RDAP URLs, but sometimes it's just from basic guessing)
 
 _Note:_ For folks unfamiliar with this ecosystem, ICANN governs all the gTLDS, and mandates that they offer RDAP servers. ccTLDs - all ~250 of them - are each governed by themselves, and therefore can publish RDAP or WHOIS servers, or not. This dataset attempts to collect the RDAP server URLs.
 
@@ -41,6 +54,7 @@ Here are the data files we're working with:
 - IANA - The [RDAP bootstrap file](https://data.iana.org/rdap/dns.json)
 - IANA - The individual TLD pages, like [this one for `.beer`](https://www.iana.org/domains/root/db/beer.html)
 - ICANN - The [Registry Agreements table CSV](https://www.icann.org/en/registry-agreements), which help us identify which are Brand TLDs, etc.
+- IPtoASN - [Public Domain-licensed data](https://iptoasn.com/) that maps IP ranges to their AS orgs and countries. This lets us see which ASNs are used for which sets of Nameserver IPs, for example.
 
 ## Working with the data files
 
