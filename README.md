@@ -192,6 +192,9 @@ Here is its schema:
         // ICANN Registry Agreement metadata (gTLDs only)
         "registry_agreement_types": ["string"], // Array of agreement types: "base" | "brand" | "community" | "sponsored" | "non_sponsored"
 
+        // AS Org aliases (DNS infrastructure providers, from data/manual/as-org-aliases.json)
+        "as_org_aliases": ["string"],      // Array of canonical DNS provider names for nameserver infrastructure (e.g. ["CentralNic"], ["Identity Digital", "VeriSign"])
+
         // General notes
         "notes": [                         // Array of timestamped notes
           {
@@ -259,6 +262,7 @@ Dependencies:
 - [ ] Script to create a Sqlite db from the data - maybe purely from client side? E.g. JS could generate it "on the fly"?
 - [ ] Wikidata contribution - figure out how to programmatically get (some or all of) this data into Wikidata, and / or Wikipedia
 - [ ] Add a `version` field to the `tlds.json` schema?
+- [ ] PeeringDB API script (or integration of some sort), for deriving AS Org alias names
 - [ ] Data integrity - more e2e tests to confirm that the data all lines up. E.g. the TLD pages <-> RDAP bootstrap file <-> full root db html page contents
 - [ ] Check other git repos, for TLDs TXT list change history
     - [some txt file history](https://github.com/ris-work/TLD-watch/commits/master/)
@@ -292,3 +296,4 @@ Dependencies:
 - [x] `tlds.json` is now in source control
 - [x] GH Actions automation for building `tlds.json`
 - [x] Nameserver IP addresses (IPv4 and IPv6) added to `tlds.json`
+- [x] Added AS Org aliases
