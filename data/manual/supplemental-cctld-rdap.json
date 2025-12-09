@@ -19,6 +19,15 @@
       "monitoring": true
     },
     {
+      "tld": "bh",
+      "rdapServer": "https://rdap.centralnic.com/bh/",
+      "backendOperator": "CentralNic",
+      "dateUpdated": "2025-12-08",
+      "source": "Manually discovered",
+      "notes": "",
+      "monitoring": true
+    },
+    {
       "tld": "bz",
       "rdapServer": "https://rdap.identitydigital.services/rdap/",
       "backendOperator": "Identity Digital Inc.",
@@ -104,6 +113,15 @@
       "rdapServer": "https://rdap.identitydigital.services/rdap/",
       "backendOperator": "Identity Digital Inc.",
       "dateUpdated": "2024-04-30",
+      "source": "Manually discovered",
+      "notes": "",
+      "monitoring": true
+    },
+    {
+      "tld": "my",
+      "rdapServer": "https://rdap.mynic.my/rdap/",
+      "backendOperator": "Tucows Registry",
+      "dateUpdated": "2025-12-08",
       "source": "Manually discovered",
       "notes": "",
       "monitoring": true
