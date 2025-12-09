@@ -214,13 +214,14 @@ def _build_tld_entry(
     # Derive type from IANA tag
     entry["type"] = derive_type_from_iana_tag(iana_tag)
 
-    # Build orgs object
+    # Build orgs object (canonical data only)
     orgs: dict[str, str] = {}
+    tld_manager_alias = None
     if tld_manager != "Not assigned":
         orgs["tld_manager"] = tld_manager
-        # Add alias if this manager has a canonical name
+        # Track alias for annotations (non-canonical, manually curated)
         if tld_manager in tld_manager_aliases:
-            orgs["tld_manager_alias"] = tld_manager_aliases[tld_manager]
+            tld_manager_alias = tld_manager_aliases[tld_manager]
 
     if "orgs" in page_data:
         if "admin" in page_data["orgs"]:
@@ -257,7 +258,7 @@ def _build_tld_entry(
         rdap_source = "IANA"
     elif tld in supplemental_rdap:
         rdap_server = supplemental_rdap[tld]["rdap_server"]
-        rdap_source = supplemental_rdap[tld]["source"]
+        rdap_source = "supplemental"
 
     if rdap_server:
         entry["rdap_server"] = rdap_server
@@ -269,8 +270,11 @@ def _build_tld_entry(
     if "tld_updated" in page_data:
         entry["tld_updated"] = [page_data["tld_updated"]]
 
-    # Add annotations if needed
+    # Add annotations if needed (non-canonical / derived data)
     annotations: dict[str, str | list[str]] = {}
+
+    if tld_manager_alias:
+        annotations["tld_manager_alias"] = tld_manager_alias
 
     if rdap_source:
         annotations["rdap_source"] = rdap_source

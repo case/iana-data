@@ -130,10 +130,9 @@ Here is its schema:
       "iana_tag": "string",                // IANA tag: "generic" | "country-code" | "sponsored" | "infrastructure" | "generic-restricted" | "test" [REQUIRED]
       "type": "string",                    // Derived type: "gtld" | "cctld" [REQUIRED]
 
-      // --- Organizations ---
+      // --- Organizations (canonical data from IANA) ---
       "orgs": {                            // Organizations associated with this TLD [OPTIONAL - omit if undelegated]
         "tld_manager": "string",           // TLD Manager name from IANA Root Zone Database [REQUIRED if orgs present]
-        "tld_manager_alias": "string",             // Sourced from data/manual/tld-manager-aliases.json
         "admin": "string",                 // Administrative Contact organization [OPTIONAL - omit if empty]
         "tech": "string"                   // Technical Contact organization [OPTIONAL - omit if empty]
       },
@@ -178,13 +177,16 @@ Here is its schema:
         }
       ],
 
-      // --- Annotations (supplemental/derived data) ---
+      // --- Annotations (supplemental/derived/non-canonical data) ---
       "annotations": {                     // [OPTIONAL - omit entire object if no annotations]
 
-        // RDAP metadata
-        "rdap_source": "string",           // Source of RDAP server: "IANA" for canonical sources, or URL for supplemental sources
+        // TLD Manager alias (manually curated)
+        "tld_manager_alias": "string",     // Canonical parent company name, from data/manual/tld-manager-aliases.json (e.g. "Identity Digital", "Google")
 
-        // Geographic metadata (primarily for ccTLDs)
+        // RDAP metadata
+        "rdap_source": "string",           // Source of RDAP server: "IANA" (canonical) or "supplemental" (from data/manual/supplemental-cctld-rdap.json)
+
+        // Geographic metadata (derived from ISO 3166)
         "country_name_iso": "string",      // ISO 3166 country name (e.g. "Taiwan", "United States")
 
         // ICANN Registry Agreement metadata (gTLDs only)
