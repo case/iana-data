@@ -1,0 +1,210 @@
+{
+  "asOrgAliases": {
+    "AFNIC": [
+      {
+        "name": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+        "source": null
+      }
+    ],
+    "Amazon": [
+      {
+        "name": "AMAZON-02",
+        "source": null
+      },
+      {
+        "name": "AMAZON-AES",
+        "source": null
+      }
+    ],
+    "CDNS": [
+      {
+        "name": "COMMUNITYDNS",
+        "source": null
+      }
+    ],
+    "CentralNic": [
+      {
+        "name": "CENTRALNIC-ANYCAST-A CentralNic Anycast-A AS Number",
+        "source": null
+      },
+      {
+        "name": "CENTRALNIC-ANYCAST-B CentralNic Anycast-B AS Number",
+        "source": null
+      },
+      {
+        "name": "CENTRALNIC-ANYCAST-E",
+        "source": null
+      },
+      {
+        "name": "CENTRALNIC-ANYCAST-F",
+        "source": null
+      }
+    ],
+    "CIRA": [
+      {
+        "name": "CIRA-CLOUD1",
+        "source": null
+      },
+      {
+        "name": "CIRA-CLOUD2",
+        "source": null
+      },
+      {
+        "name": "CIRA-5",
+        "source": null
+      }
+    ],
+    "Cloudflare": [
+      {
+        "name": "CLOUDFLARENET",
+        "source": null
+      },
+      {
+        "name": "CLOUDFLARESPECTRUM Cloudflare, Inc.",
+        "source": null
+      }
+    ],
+    "CNNIC": [
+      {
+        "name": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+        "source": null
+      }
+    ],
+    "CZNIC": [
+      {
+        "name": "CZNIC-AS",
+        "source": null
+      },
+      {
+        "name": "CZNIC-AS2",
+        "source": null
+      }
+    ],
+    "DENIC": [
+      {
+        "name": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+        "source": null
+      },
+      {
+        "name": "DENIC-SERVICES",
+        "source": null
+      }
+    ],
+    "Google": [
+      {
+        "name": "GOOGLE",
+        "source": null
+      },
+      {
+        "name": "GOOGLE-CLOUD-PLATFORM",
+        "source": null
+      },
+      {
+        "name": "YOUTUBE YOUTUBE",
+        "source": null
+      }
+    ],
+    "Hetzner": [
+      {
+        "name": "HETZNER-AS",
+        "source": null
+      }
+    ],
+    "Identity Digital": [
+      {
+        "name": "AS-AFILIAS1",
+        "source": "https://en.wikipedia.org/wiki/Afilias"
+      },
+      {
+        "name": "AFILIAS-SECONDARY-DNS",
+        "source": "https://en.wikipedia.org/wiki/Afilias"
+      }
+    ],
+    "Knipp Medien": [
+      {
+        "name": "KNIPPWORLDWI",
+        "source": null
+      },
+      {
+        "name": "KNIPP-IRONDNS1-AS Technologiepark",
+        "source": null
+      }
+    ],
+    "LACTLD": [
+      {
+        "name": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+        "source": "https://www.lactld.org/"
+      }
+    ],
+    "Microsoft": [
+      {
+        "name": "MICROSOFT-CORP-MSN-AS-BLOCK",
+        "source": null
+      }
+    ],
+    "Nominet": [
+      {
+        "name": "NOMINETANYCAST",
+        "source": null
+      }
+    ],
+    "Packet Clearing House": [
+      {
+        "name": "WOODYNET-1",
+        "source": "https://www.pch.net/"
+      }
+    ],
+    "RcodeZero": [
+      {
+        "name": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+        "source": null
+      }
+    ],
+    "SIDN": [
+      {
+        "name": "SIDN-ANYCAST",
+        "source": null
+      }
+    ],
+    "Tucows": [
+      {
+        "name": "TUCOWS-TRS-DNS1",
+        "source": null
+      },
+      {
+        "name": "TUCOWS-TRS-DNS2",
+        "source": null
+      }
+    ],
+    "UltraDNS": [
+      {
+        "name": "SECURITYSERVICES",
+        "source": "https://www.peeringdb.com/asn/12008"
+      }
+    ],
+    "VeriSign": [
+      {
+        "name": "VERISIGN-AS",
+        "source": null
+      },
+      {
+        "name": "VRSN-AC28",
+        "source": null
+      },
+      {
+        "name": "VGRS-AC25",
+        "source": null
+      },
+      {
+        "name": "VRSN-AC50-340",
+        "source": null
+      }
+    ],
+    "ZDNS": [
+      {
+        "name": "ZDNS Internet Domain Name System Beijing Engineering Resrarch Center Ltd.",
+        "source": null
+      }
+    ]
+  }
+}
