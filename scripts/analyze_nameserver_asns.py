@@ -17,7 +17,7 @@ from pathlib import Path
 # Add project root to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from src.config import TLDS_OUTPUT_FILE
+from src.config import MANUAL_DIR, TLDS_OUTPUT_FILE
 
 
 @dataclass
@@ -288,6 +288,87 @@ def analyze_ipv4_vs_ipv6(profiles: list[TLDASNProfile]) -> None:
     print("  - ASN differences between protocol versions")
 
 
+def load_as_org_aliases() -> dict[str, str]:
+    """Load AS org aliases and return reverse lookup (as_org -> canonical alias)."""
+    aliases_path = Path(MANUAL_DIR) / "as-org-aliases.json"
+    if not aliases_path.exists():
+        return {}
+
+    with open(aliases_path) as f:
+        data = json.load(f)
+
+    reverse_lookup: dict[str, str] = {}
+    for alias, entries in data.get("asOrgAliases", {}).items():
+        for entry in entries:
+            name = entry.get("name")
+            if name:
+                reverse_lookup[name] = alias
+
+    return reverse_lookup
+
+
+def analyze_as_org_alias_coverage(profiles: list[TLDASNProfile]) -> None:
+    """Analyze what percentage of AS org occurrences are covered by our aliases."""
+    print_section("AS ORG ALIAS COVERAGE")
+
+    # Load aliases
+    aliases = load_as_org_aliases()
+    if not aliases:
+        print("\nNo as-org-aliases.json file found.")
+        return
+
+    # Count all AS org occurrences
+    as_org_counts: Counter[str] = Counter()
+    for profile in profiles:
+        for info in profile.asn_details.values():
+            if info.org:
+                as_org_counts[info.org] += 1
+
+    total_occurrences = sum(as_org_counts.values())
+    unique_as_orgs = len(as_org_counts)
+
+    # Count covered occurrences
+    covered_occurrences = 0
+    covered_unique = 0
+    uncovered_orgs: Counter[str] = Counter()
+
+    for as_org, count in as_org_counts.items():
+        if as_org in aliases:
+            covered_occurrences += count
+            covered_unique += 1
+        else:
+            uncovered_orgs[as_org] = count
+
+    coverage_pct = 100 * covered_occurrences / total_occurrences if total_occurrences > 0 else 0
+    unique_coverage_pct = 100 * covered_unique / unique_as_orgs if unique_as_orgs > 0 else 0
+
+    print(f"\nAS Org Aliases loaded: {len(aliases)}")
+    print(f"\nTotal AS org occurrences in data: {total_occurrences}")
+    print(f"Covered by aliases: {covered_occurrences} ({coverage_pct:.1f}%)")
+    print(f"\nUnique AS orgs in data: {unique_as_orgs}")
+    print(f"Covered by aliases: {covered_unique} ({unique_coverage_pct:.1f}%)")
+
+    # Show coverage by canonical alias
+    print("\nCoverage by canonical alias:")
+    print("-" * 60)
+    alias_coverage: Counter[str] = Counter()
+    for as_org, count in as_org_counts.items():
+        if as_org in aliases:
+            alias_coverage[aliases[as_org]] += count
+
+    for alias, count in alias_coverage.most_common():
+        pct = 100 * count / total_occurrences
+        print(f"  {alias:<25} {count:>6} occurrences ({pct:>5.1f}%)")
+
+    # Show top uncovered AS orgs
+    print("\nTop 15 uncovered AS orgs (candidates for aliasing):")
+    print("-" * 60)
+    for as_org, count in uncovered_orgs.most_common(15):
+        pct = 100 * count / total_occurrences
+        org_display = as_org[:45] + ".." if len(as_org) > 47 else as_org
+        print(f"  {count:>5} ({pct:>4.1f}%) {org_display}")
+
+
 def main() -> None:
     """Run the ASN analysis."""
     tlds_path = Path(TLDS_OUTPUT_FILE)
@@ -320,6 +401,7 @@ def main() -> None:
     analyze_geographic_distribution(profiles)
     analyze_diversity_metrics(profiles)
     analyze_ipv4_vs_ipv6(profiles)
+    analyze_as_org_alias_coverage(profiles)
 
     print()
     print("=" * 70)
