@@ -1,27 +1,27 @@
 {
   "RDAP_BOOTSTRAP": {
-    "last_checked": "2025-12-08T02:36:44Z",
+    "last_checked": "2025-12-09T02:36:16Z",
     "headers": {
       "etag": "\"1182e-642f50662aab6-gzip\"",
       "last_modified": "Thu, 06 Nov 2025 23:00:01 GMT"
     },
     "cache_data": {
-      "etag": "\"1180a-644fcb3f759bf-gzip\"",
-      "last_modified": "Tue, 02 Dec 2025 19:00:02 GMT",
-      "cache_control": "max-age=84243",
-      "cache_max_age": "84243",
-      "last_downloaded": "2025-12-03T02:36:04Z"
+      "etag": "\"116c6-64578c14b1d51-gzip\"",
+      "last_modified": "Mon, 08 Dec 2025 23:00:01 GMT",
+      "cache_control": "max-age=84230",
+      "cache_max_age": "84230",
+      "last_downloaded": "2025-12-09T02:36:16Z"
     }
   },
   "TLD_LIST": {
-    "last_checked": "2025-12-08T02:36:44Z",
+    "last_checked": "2025-12-09T02:36:16Z",
     "headers": {
       "etag": "\"2548-643b0e096fc2a\"",
       "last_modified": "Sun, 16 Nov 2025 07:07:01 GMT"
     }
   },
   "ROOT_ZONE_DB": {
-    "last_checked": "2025-12-08T02:36:44Z",
+    "last_checked": "2025-12-09T02:36:16Z",
     "last_downloaded": "2025-11-26T02:35:40Z",
     "last_changed": "2025-11-25T02:35:09Z",
     "headers": {
@@ -30,22 +30,22 @@
     }
   },
   "TLD_HTML": {
-    "last_checked": "2025-12-08T03:02:23Z"
+    "last_checked": "2025-12-09T03:05:05Z"
   },
   "REGISTRY_AGREEMENT_TABLE": {
     "headers": {
       "etag": "W/\"329e3-19aa7ccdea5-br\"",
       "last_modified": "Fri, 21 Nov 2025 19:03:32 GMT"
     },
-    "last_checked": "2025-12-08T02:36:49Z",
+    "last_checked": "2025-12-09T02:36:20Z",
     "last_downloaded": "2025-11-21T19:03:32Z",
     "last_changed": "2025-11-21T19:03:10Z",
     "cache_data": {
-      "etag": "W/\"329f0-19afbd199b6-br\"",
-      "last_modified": "Mon, 08 Dec 2025 02:36:48 GMT"
+      "etag": "W/\"329f0-19b00f784fe-br\"",
+      "last_modified": "Tue, 09 Dec 2025 02:36:20 GMT"
     }
   },
   "IPTOASN": {
-    "last_downloaded": "2025-12-08T07:45:38Z"
+    "last_downloaded": "2025-12-09T03:10:52Z"
   }
 }
