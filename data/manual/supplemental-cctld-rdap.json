@@ -5,7 +5,7 @@
       "rdapServer": "https://rdap.identitydigital.services/rdap/",
       "backendOperator": "Identity Digital Inc.",
       "dateUpdated": "2024-04-30",
-      "source": "",
+      "source": "Manually discovered",
       "notes": "",
       "monitoring": true
     },
@@ -14,7 +14,7 @@
       "rdapServer": "https://rdap.identitydigital.services/rdap/",
       "backendOperator": "Identity Digital Inc.",
       "dateUpdated": "2024-04-30",
-      "source": "",
+      "source": "Manually discovered",
       "notes": "",
       "monitoring": true
     },
@@ -23,7 +23,7 @@
       "rdapServer": "https://rdap.identitydigital.services/rdap/",
       "backendOperator": "Identity Digital Inc.",
       "dateUpdated": "2024-04-30",
-      "source": "",
+      "source": "Manually discovered",
       "notes": "",
       "monitoring": true
     },
@@ -41,7 +41,7 @@
       "rdapServer": "https://rdap.registry.co/co/",
       "backendOperator": "CentralNic",
       "dateUpdated": "2025-11-10",
-      "source": "",
+      "source": "Manually discovered",
       "notes": "",
       "monitoring": true
     },
@@ -59,8 +59,8 @@
       "rdapServer": "https://rdap.centralnic.com/gl/",
       "backendOperator": "CentralNic",
       "dateUpdated": "2022-01-15",
-      "source": "https://www.nic.li/whois/rdap/",
-      "notes": "",
+      "source": "Manually discovered",
+      "notes": "https://centralnicregistry.com/services/cctlds/",
       "monitoring": true
     },
     {
@@ -68,7 +68,7 @@
       "rdapServer": "https://rdap.identitydigital.services/rdap/",
       "backendOperator": "Identity Digital Inc.",
       "dateUpdated": "2024-04-30",
-      "source": "",
+      "source": "Manually discovered",
       "notes": "",
       "monitoring": true
     },
@@ -77,7 +77,7 @@
       "rdapServer": "https://rdap.identitydigital.services/rdap/",
       "backendOperator": "Identity Digital Inc.",
       "dateUpdated": "2024-04-30",
-      "source": "",
+      "source": "Manually discovered",
       "notes": "",
       "monitoring": true
     },
@@ -95,7 +95,7 @@
       "rdapServer": "https://rdap.identitydigital.services/rdap/",
       "backendOperator": "Identity Digital Inc.",
       "dateUpdated": "2024-04-30",
-      "source": "",
+      "source": "Manually discovered",
       "notes": "",
       "monitoring": true
     },
@@ -104,7 +104,7 @@
       "rdapServer": "https://rdap.identitydigital.services/rdap/",
       "backendOperator": "Identity Digital Inc.",
       "dateUpdated": "2024-04-30",
-      "source": "",
+      "source": "Manually discovered",
       "notes": "",
       "monitoring": true
     },
@@ -113,7 +113,7 @@
       "rdapServer": "https://rdap.identitydigital.services/rdap/",
       "backendOperator": "Identity Digital Inc.",
       "dateUpdated": "2024-04-30",
-      "source": "",
+      "source": "Manually discovered",
       "notes": "",
       "monitoring": true
     },
@@ -122,7 +122,7 @@
       "rdapServer": "https://rdap.identitydigital.services/rdap/",
       "backendOperator": "Identity Digital Inc.",
       "dateUpdated": "2024-04-30",
-      "source": "",
+      "source": "Manually discovered",
       "notes": "",
       "monitoring": true
     },
@@ -131,7 +131,7 @@
       "rdapServer": "https://rdap.identitydigital.services/rdap/",
       "backendOperator": "Identity Digital Inc.",
       "dateUpdated": "2024-04-30",
-      "source": "",
+      "source": "Manually discovered",
       "notes": "",
       "monitoring": true
     },
@@ -140,7 +140,7 @@
       "rdapServer": "https://rdap.nic.us/",
       "backendOperator": "Registry Services, LLC",
       "dateUpdated": "2025-12-07",
-      "source": "Manually discovered it",
+      "source": "Manually discovered",
       "notes": "",
       "monitoring": true
     },
@@ -149,7 +149,7 @@
       "rdapServer": "https://rdap.identitydigital.services/rdap/",
       "backendOperator": "Identity Digital Inc.",
       "dateUpdated": "2024-04-30",
-      "source": "",
+      "source": "Manually discovered",
       "notes": "",
       "monitoring": true
     }
