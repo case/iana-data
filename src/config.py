@@ -34,6 +34,7 @@ IDN_SCRIPT_MAPPING_FILE: Final[str] = f"{GENERATED_DIR}/idn-script-mapping.json"
 
 # Manual data files
 MANUAL_FILES: Final[dict[str, str]] = {
+    "AS_ORG_ALIASES": "as-org-aliases.json",
     "SUPPLEMENTAL_CCTLD_RDAP": "supplemental-cctld-rdap.json",
     "TLD_MANAGER_ALIASES": "tld-manager-aliases.json",
 }

@@ -20,6 +20,7 @@ from ..parse.registry_agreement_csv import (
 from ..parse.root_db_html import derive_type_from_iana_tag, parse_root_db_html
 from ..parse.supplemental_cctld_rdap import parse_supplemental_cctld_rdap
 from ..parse.tld_html import parse_tld_page
+from ..parse.as_org_aliases import parse_as_org_aliases
 from ..parse.tld_manager_aliases import parse_tld_manager_aliases
 from ..utilities.content_changed import write_json_if_changed
 from ..utilities.metadata import load_metadata, save_metadata, utc_timestamp
@@ -42,6 +43,7 @@ def build_tlds_json() -> dict:
     supplemental_rdap = parse_supplemental_cctld_rdap()
     registry_agreements = parse_registry_agreement_csv()
     tld_manager_aliases = parse_tld_manager_aliases()
+    as_org_aliases = parse_as_org_aliases()
 
     # Load IDN script mappings
     idn_script_mapping = {}
@@ -106,6 +108,7 @@ def build_tlds_json() -> dict:
             idn_script_mapping,
             registry_agreements,
             tld_manager_aliases,
+            as_org_aliases,
             asn_lookup,
         )
         tlds.append(tld_entry)
@@ -161,6 +164,7 @@ def _build_tld_entry(
     idn_script_mapping: dict[str, str],
     registry_agreements: dict[str, RegistryAgreement],
     tld_manager_aliases: dict[str, str],
+    as_org_aliases: dict[str, str],
     asn_lookup: ASNLookup | None,
 ) -> dict:
     """
@@ -174,6 +178,7 @@ def _build_tld_entry(
         idn_script_mapping: Map of IDN TLD to script name
         registry_agreements: Map of TLD to ICANN registry agreement data
         tld_manager_aliases: Map of TLD manager name to canonical alias
+        as_org_aliases: Map of AS org name to canonical alias
         asn_lookup: Optional ASNLookup for IP-to-ASN resolution
 
     Returns:
@@ -233,10 +238,14 @@ def _build_tld_entry(
         entry["orgs"] = orgs
 
     # Add nameservers from page data (with ASN enrichment if available)
+    # Also collect unique AS org aliases for annotations
+    as_org_aliases_found: set[str] = set()
     if "nameservers" in page_data:
         entry["nameservers"] = _enrich_nameservers_with_asn(
             page_data["nameservers"],
             asn_lookup,
+            as_org_aliases,
+            as_org_aliases_found,
         )
 
     # Add registry information
@@ -298,6 +307,10 @@ def _build_tld_entry(
         if agreement_types:
             annotations["registry_agreement_types"] = agreement_types
 
+    # Add AS org aliases for nameserver infrastructure
+    if as_org_aliases_found:
+        annotations["as_org_aliases"] = sorted(as_org_aliases_found)
+
     if annotations:
         entry["annotations"] = annotations
 
@@ -335,6 +348,8 @@ def _add_idn_mappings(tlds: list[dict]) -> None:
 def _enrich_nameservers_with_asn(
     nameservers: list[dict[str, Any]],
     asn_lookup: ASNLookup | None,
+    as_org_aliases: dict[str, str],
+    as_org_aliases_found: set[str],
 ) -> list[dict[str, Any]]:
     """
     Transform nameserver IP strings to objects with ASN metadata.
@@ -342,6 +357,8 @@ def _enrich_nameservers_with_asn(
     Args:
         nameservers: List of nameserver dicts with hostname, ipv4, ipv6 arrays
         asn_lookup: Optional ASNLookup for IP-to-ASN resolution
+        as_org_aliases: Map of AS org name to canonical alias
+        as_org_aliases_found: Set to collect found aliases (modified in place)
 
     Returns:
         Transformed nameservers with IP objects containing ASN data
@@ -359,11 +376,19 @@ def _enrich_nameservers_with_asn(
         for ip in ns.get("ipv4", []):
             ip_obj = _ip_to_asn_object(ip, asn_lookup)
             enriched_ns["ipv4"].append(ip_obj)
+            # Collect AS org alias if found
+            as_org = ip_obj.get("as_org", "")
+            if as_org in as_org_aliases:
+                as_org_aliases_found.add(as_org_aliases[as_org])
 
         # Transform IPv6 addresses
         for ip in ns.get("ipv6", []):
             ip_obj = _ip_to_asn_object(ip, asn_lookup)
             enriched_ns["ipv6"].append(ip_obj)
+            # Collect AS org alias if found
+            as_org = ip_obj.get("as_org", "")
+            if as_org in as_org_aliases:
+                as_org_aliases_found.add(as_org_aliases[as_org])
 
         result.append(enriched_ns)
 
