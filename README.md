@@ -254,6 +254,13 @@ Dependencies:
 - [ ] Email alerts, similar to Pushover
 - [ ] TLDs summary (delegated, gtld/cctld, IDNs, brands, etc.) in the Readme, via GH Actions auto-update
 - [ ] Zone file sizes - maybe via the [ICANN Monthly Registry Reports](https://www.icann.org/resources/pages/xbox-2015-10-01-en)?
+    - `activity` csv - has interesting data, e.g.
+      - `dns-udp-queries-received`
+      - `dns-udp-queries-responded`
+      - `dns-tcp-queries-received`
+      - `dns-tcp-queries-responded`
+      - `rdap-queries`
+    - `transactions` csv - `totals-domains` column -> `Totals` row has the total for the given month
 
 ### Later
 
