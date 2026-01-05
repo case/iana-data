@@ -2,7 +2,7 @@
 
 ## Tl;dr
 
-[IANA](https://www.iana.org/) and [ICANN](https://www.icann.org/) publish a lot of canonical, interesting, and useful _structured_ information about the top-level domain namespace. This project fetches nightly copies their data, and jams it into a single `data/generated/tlds.json` file so that it's all in a single place. 
+[IANA](https://www.iana.org/) and [ICANN](https://www.icann.org/) publish a lot of canonical, interesting, and useful _structured_ information about the top-level domain namespace. This project fetches nightly copies of their data, and jams it into a single `data/generated/tlds.json` file so that it's all in a single place. 
 
 It's sort of an API-in-a-box, for exploring the TLD cinematic universe. It's _small data_, so this git repo has the change history from each nightly snapshot. For example:
 
@@ -79,7 +79,7 @@ There are a few challenges with these data files, for example:
 
 - There are entities - sponsoring org, and administrative and technical contacts
 - Creation and Updated dates are there
-- Namserver hosts are there
+- Nameserver hosts are there
 - Etc
 
 **For the RDAP bootstrap file:**
