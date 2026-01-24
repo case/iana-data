@@ -31,10 +31,10 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6.0.1
+        uses: actions/checkout@v6
 
       - name: Install uv
-        uses: astral-sh/setup-uv@v7.1.4
+        uses: astral-sh/setup-uv@v7
         with:
           enable-cache: true
           version-file: "pyproject.toml"
@@ -62,7 +62,7 @@ jobs:
           ls -la uv.lock >> build-info.log 2>&1 || echo "No uv.lock found" >> build-info.log
 
       - name: Upload failure artifacts
-        uses: actions/upload-artifact@v5.0.0
+        uses: actions/upload-artifact@v6
         if: always()
         with:
           name: test-failure-logs-${{ github.run_id }}

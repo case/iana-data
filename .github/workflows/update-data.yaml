@@ -20,10 +20,10 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6.0.1
+        uses: actions/checkout@v6
 
       - name: Install uv
-        uses: astral-sh/setup-uv@v7.1.4
+        uses: astral-sh/setup-uv@v7
         with:
           enable-cache: true
           version-file: "pyproject.toml"
@@ -93,7 +93,7 @@ jobs:
         id: download-iptoasn
         if: steps.get-iptoasn-run.outputs.run_id != ''
         continue-on-error: true
-        uses: actions/download-artifact@v6.0.0
+        uses: actions/download-artifact@v7
         with:
           pattern: iptoasn-*
           path: data/source/iptoasn
