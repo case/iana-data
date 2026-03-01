@@ -1,6 +1,6 @@
 {
   "RDAP_BOOTSTRAP": {
-    "last_checked": "2026-02-28T02:49:29Z",
+    "last_checked": "2026-03-01T03:04:49Z",
     "headers": {
       "etag": "\"1182e-642f50662aab6-gzip\"",
       "last_modified": "Thu, 06 Nov 2025 23:00:01 GMT"
@@ -14,7 +14,7 @@
     }
   },
   "TLD_LIST": {
-    "last_checked": "2026-02-28T02:49:29Z",
+    "last_checked": "2026-03-01T03:04:49Z",
     "headers": {
       "etag": "\"2548-643b0e096fc2a\"",
       "last_modified": "Sun, 16 Nov 2025 07:07:01 GMT"
@@ -28,7 +28,7 @@
     }
   },
   "ROOT_ZONE_DB": {
-    "last_checked": "2026-02-28T02:49:29Z",
+    "last_checked": "2026-03-01T03:04:49Z",
     "last_downloaded": "2025-11-26T02:35:40Z",
     "last_changed": "2025-11-25T02:35:09Z",
     "headers": {
@@ -42,19 +42,19 @@
     }
   },
   "TLD_HTML": {
-    "last_checked": "2026-02-28T03:14:18Z"
+    "last_checked": "2026-03-01T03:32:21Z"
   },
   "REGISTRY_AGREEMENT_TABLE": {
     "headers": {
       "etag": "W/\"329e3-19aa7ccdea5-br\"",
       "last_modified": "Fri, 21 Nov 2025 19:03:32 GMT"
     },
-    "last_checked": "2026-02-28T02:49:32Z",
+    "last_checked": "2026-03-01T03:04:52Z",
     "last_downloaded": "2025-11-21T19:03:32Z",
     "last_changed": "2025-11-21T19:03:10Z",
     "cache_data": {
-      "etag": "W/\"329f7-19ca226b8e6-br\"",
-      "last_modified": "Sat, 28 Feb 2026 02:49:32 GMT"
+      "etag": "W/\"329f7-19ca75b1f0b-br\"",
+      "last_modified": "Sun, 01 Mar 2026 03:04:52 GMT"
     }
   },
   "IPTOASN": {
