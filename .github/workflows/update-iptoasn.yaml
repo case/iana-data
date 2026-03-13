@@ -35,7 +35,7 @@ jobs:
           echo "date=$DATE" >> $GITHUB_OUTPUT
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: iptoasn-${{ steps.download.outputs.date }}
           path: ip2asn-combined.tsv.gz
