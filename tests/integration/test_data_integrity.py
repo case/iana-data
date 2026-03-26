@@ -9,7 +9,6 @@ from src.config import MANUAL_DIR, SOURCE_DIR, SOURCE_FILES, TLDS_OUTPUT_FILE
 from src.parse.rdap_json import parse_rdap_json
 from src.parse.root_db_html import parse_root_db_html
 from src.parse.supplemental_cctld_rdap import parse_supplemental_cctld_rdap
-from src.parse.tlds_txt import parse_tlds_txt
 
 FIXTURES_DIR = Path(__file__).parent.parent / "fixtures"
 
@@ -72,7 +71,9 @@ def test_overlap_detection_works_with_fixtures():
     iana_tlds = set(iana_rdap_lookup.keys())
 
     # Parse supplemental fixture WITH intentional overlap
-    supplemental_path = FIXTURES_DIR / "generated" / "supplemental-cctld-rdap-with-overlap.json"
+    supplemental_path = (
+        FIXTURES_DIR / "generated" / "supplemental-cctld-rdap-with-overlap.json"
+    )
     supplemental_lookup = parse_supplemental_cctld_rdap(supplemental_path)
     supplemental_tlds = set(supplemental_lookup.keys())
 
@@ -109,15 +110,18 @@ def test_no_overlap_in_fixture_data():
 
 
 def test_delegated_tlds_count_matches_source():
-    """Test that delegated TLDs in tlds.json matches count in iana-tlds.txt.
+    """Test that delegated TLDs in tlds.json matches assigned entries in root DB.
 
-    The IANA TLDs text file contains all delegated TLDs. Our built tlds.json
-    should have the same count of delegated TLDs.
+    The root zone DB is the authoritative source for delegation status.
+    Our built tlds.json should have the same count of delegated TLDs as
+    the root DB has entries with an assigned manager.
     """
-    # Parse IANA TLDs text file
-    tlds_txt_path = Path(SOURCE_DIR) / SOURCE_FILES["TLD_LIST"]
-    tlds_txt_list = parse_tlds_txt(tlds_txt_path)
-    expected_delegated_count = len(tlds_txt_list)
+    # Parse root zone DB to get expected delegated count
+    root_db_path = Path(SOURCE_DIR) / SOURCE_FILES["ROOT_ZONE_DB"]
+    root_db_entries = parse_root_db_html(root_db_path)
+    expected_delegated_count = sum(
+        1 for entry in root_db_entries if entry["manager"] != "Not assigned"
+    )
 
     # Parse built tlds.json
     tlds_json_path = Path(TLDS_OUTPUT_FILE)
@@ -133,12 +137,12 @@ def test_delegated_tlds_count_matches_source():
     delegated_tlds = [entry for entry in tlds_data["tlds"] if entry["delegated"]]
     actual_delegated_count = len(delegated_tlds)
 
-    # Counts should match
+    # Counts should match the root DB (our source of truth)
     assert actual_delegated_count == expected_delegated_count, (
         f"Delegated TLD count mismatch: "
         f"tlds.json has {actual_delegated_count} delegated TLDs, "
-        f"but iana-tlds.txt has {expected_delegated_count} TLDs. "
-        f"These should match as iana-tlds.txt contains all delegated TLDs."
+        f"but root DB has {expected_delegated_count} assigned entries. "
+        f"These should match as the root DB is the source of truth for delegation."
     )
 
 
@@ -179,19 +183,12 @@ def test_undelegated_tlds_count_matches_not_assigned():
 
 
 def test_total_tlds_math_is_correct():
-    """Test that delegated + undelegated = total TLDs across all sources.
+    """Test that delegated + undelegated = total TLDs in tlds.json.
 
-    This verifies our accounting is correct:
-    - Count from iana-tlds.txt (delegated)
-    - + Count of undelegated in tlds.json
-    - = Total count in root DB HTML
+    This verifies our accounting is correct using a single source of truth:
+    - delegated + undelegated in tlds.json = total entries in root DB HTML
     """
-    # Parse IANA TLDs text file (delegated count)
-    tlds_txt_path = Path(SOURCE_DIR) / SOURCE_FILES["TLD_LIST"]
-    tlds_txt_list = parse_tlds_txt(tlds_txt_path)
-    delegated_count = len(tlds_txt_list)
-
-    # Parse built tlds.json (undelegated count)
+    # Parse built tlds.json
     tlds_json_path = Path(TLDS_OUTPUT_FILE)
     assert tlds_json_path.exists(), (
         f"Built tlds.json file not found at {tlds_json_path}. "
@@ -201,7 +198,9 @@ def test_total_tlds_math_is_correct():
     with open(tlds_json_path) as f:
         tlds_data = json.load(f)
 
+    delegated_tlds = [entry for entry in tlds_data["tlds"] if entry["delegated"]]
     undelegated_tlds = [entry for entry in tlds_data["tlds"] if not entry["delegated"]]
+    delegated_count = len(delegated_tlds)
     undelegated_count = len(undelegated_tlds)
 
     # Parse root DB HTML (total count)
@@ -214,8 +213,8 @@ def test_total_tlds_math_is_correct():
 
     assert calculated_total == total_count, (
         f"TLD count math error: "
-        f"{delegated_count} delegated (from iana-tlds.txt) + "
-        f"{undelegated_count} undelegated (from tlds.json) = "
+        f"{delegated_count} delegated + "
+        f"{undelegated_count} undelegated = "
         f"{calculated_total}, but root DB has {total_count} total TLDs. "
         f"These should match. Difference: {total_count - calculated_total}"
     )
@@ -249,7 +248,9 @@ def test_fixture_nameserver_ips_have_asn_structure(tlds_json_fixture):
         if tld_with_ns:
             break
 
-    assert tld_with_ns is not None, "Fixture should have at least one TLD with nameserver IPs"
+    assert tld_with_ns is not None, (
+        "Fixture should have at least one TLD with nameserver IPs"
+    )
 
     ns = tld_with_ns["nameservers"][0]
     ip_list = ns.get("ipv4") or ns.get("ipv6")
@@ -280,11 +281,13 @@ def test_fixture_nameserver_asn_values_are_valid(tlds_json_fixture):
                 if isinstance(ip_obj, dict):
                     asn = ip_obj.get("asn")
                     if not isinstance(asn, int) or asn < 0:
-                        invalid_asns.append({
-                            "tld": tld["tld"],
-                            "ip": ip_obj.get("ip"),
-                            "asn": asn,
-                        })
+                        invalid_asns.append(
+                            {
+                                "tld": tld["tld"],
+                                "ip": ip_obj.get("ip"),
+                                "asn": asn,
+                            }
+                        )
 
     assert len(invalid_asns) == 0, (
         f"Found {len(invalid_asns)} IPs with invalid ASN values: {invalid_asns[:5]}"
@@ -298,8 +301,7 @@ def test_fixture_known_asn_values(tlds_json_fixture):
     """
     # Find the "aaa" TLD which has our test ASN data
     aaa_tld = next(
-        (tld for tld in tlds_json_fixture["tlds"] if tld["tld"] == "aaa"),
-        None
+        (tld for tld in tlds_json_fixture["tlds"] if tld["tld"] == "aaa"), None
     )
     assert aaa_tld is not None, "Fixture should have 'aaa' TLD"
     assert "nameservers" in aaa_tld, "'aaa' TLD should have nameservers"

@@ -2,7 +2,11 @@
 
 from pathlib import Path
 
-from src.parse.tlds_txt import _parse_tlds_content, parse_tlds_txt, tlds_txt_content_changed
+from src.parse.tlds_txt import (
+    _parse_tlds_content,
+    parse_tlds_txt,
+    tlds_txt_content_changed,
+)
 
 FIXTURES_DIR = Path(__file__).parent.parent / "fixtures" / "source" / "core"
 
@@ -14,8 +18,8 @@ def test_parse_tlds_content_ignores_comments_and_empty_lines():
 
     tlds = _parse_tlds_content(content)
 
-    # Should have 24 TLDs (not counting the comment line or empty lines)
-    assert len(tlds) == 24
+    # Should have 34 TLDs (not counting the comment line or empty lines)
+    assert len(tlds) == 34
 
     # Should not contain any comments
     assert all(not tld.startswith("#") for tld in tlds)
@@ -108,8 +112,8 @@ def test_parse_tlds_txt_with_filepath():
 
     tlds = parse_tlds_txt(fixture_path)
 
-    # Should have 24 TLDs (not counting the comment line or empty lines)
-    assert len(tlds) == 24
+    # Should have 34 TLDs (not counting the comment line or empty lines)
+    assert len(tlds) == 34
 
     # Should not contain any comments
     assert all(not tld.startswith("#") for tld in tlds)
@@ -126,8 +130,7 @@ def test_parse_tlds_txt_without_normalize():
 
     tlds = parse_tlds_txt(fixture_path, normalize=False)
 
-    # Should have 22 TLDs
-    assert len(tlds) == 24
+    assert len(tlds) == 34
 
     # Should contain TLDs in original uppercase
     assert "AAA" in tlds

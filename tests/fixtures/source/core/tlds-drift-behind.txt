@@ -1,4 +1,6 @@
 # Version 2025110700, Last Updated Fri Nov  7 07:07:01 2025 UTC
+# This fixture simulates iana-tlds.txt lagging behind root DB.
+# "ACO" is delegated in root.html but intentionally omitted here.
 AAA
 AARP
 ABB
@@ -13,7 +15,6 @@ ACADEMY
 ACCENTURE
 ACCOUNTANT
 ACCOUNTANTS
-ACO
 ACTOR
 AD
 AERO
