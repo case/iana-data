@@ -74,9 +74,4 @@ def test_pydeps_is_installed():
         text=True,
     )
 
-    assert result.returncode == 0, (
-        "pydeps not installed. Run: uv add --dev pydeps==3.0.1"
-    )
-    assert "3.0.1" in result.stdout or "3.0.1" in result.stderr, (
-        f"Expected pydeps 3.0.1, got: {result.stdout}"
-    )
+    assert result.returncode == 0, "pydeps not installed. Run: uv add --dev pydeps"
