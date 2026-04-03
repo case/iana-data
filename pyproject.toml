@@ -7,7 +7,7 @@ requires-python = ">=3.13"
 dependencies = [
     "httpx>=0.28.1",
     "pycountry==26.2.16",
-    "selectolax==0.4.6",
+    "selectolax==0.4.7",
     "tenacity==9.1.4",
 ]
 
