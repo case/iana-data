@@ -1,34 +1,34 @@
 {
   "RDAP_BOOTSTRAP": {
-    "last_checked": "2026-04-18T03:05:13Z",
+    "last_checked": "2026-04-19T03:06:19Z",
     "headers": {
       "etag": "\"1182e-642f50662aab6-gzip\"",
       "last_modified": "Thu, 06 Nov 2025 23:00:01 GMT"
     },
     "cache_data": {
-      "etag": "W/\"11583-64db5a45b47ae-br\"",
-      "last_modified": "Mon, 23 Mar 2026 19:00:02 GMT",
+      "etag": "W/\"115f1-64fbfbaf49df3-br\"",
+      "last_modified": "Sat, 18 Apr 2026 17:52:34 GMT",
       "cache_control": "max-age=86400",
       "cache_max_age": "86400",
-      "last_downloaded": "2026-03-24T03:01:36Z"
+      "last_downloaded": "2026-04-19T03:06:19Z"
     }
   },
   "TLD_LIST": {
-    "last_checked": "2026-04-18T03:05:13Z",
+    "last_checked": "2026-04-19T03:06:19Z",
     "headers": {
       "etag": "\"2548-643b0e096fc2a\"",
       "last_modified": "Sun, 16 Nov 2025 07:07:01 GMT"
     },
     "cache_data": {
-      "etag": "W/\"2536-64ac35e4df0bc-br\"",
-      "last_modified": "Sat, 14 Feb 2026 07:07:01 GMT",
+      "etag": "W/\"253c-64fb6b650df62-br\"",
+      "last_modified": "Sat, 18 Apr 2026 07:07:01 GMT",
       "cache_control": "public, max-age=14400, s-maxage=600",
       "cache_max_age": "14400",
-      "last_downloaded": "2026-02-15T03:04:48Z"
+      "last_downloaded": "2026-04-19T03:06:19Z"
     }
   },
   "ROOT_ZONE_DB": {
-    "last_checked": "2026-04-18T03:05:13Z",
+    "last_checked": "2026-04-19T03:06:19Z",
     "last_downloaded": "2025-11-26T02:35:40Z",
     "last_changed": "2025-11-25T02:35:09Z",
     "headers": {
@@ -42,22 +42,22 @@
     }
   },
   "TLD_HTML": {
-    "last_checked": "2026-04-18T03:31:35Z"
+    "last_checked": "2026-04-19T03:33:54Z"
   },
   "REGISTRY_AGREEMENT_TABLE": {
     "headers": {
       "etag": "W/\"329e3-19aa7ccdea5-br\"",
       "last_modified": "Fri, 21 Nov 2025 19:03:32 GMT"
     },
-    "last_checked": "2026-04-18T03:05:17Z",
+    "last_checked": "2026-04-19T03:06:22Z",
     "last_downloaded": "2025-11-21T19:03:32Z",
     "last_changed": "2025-11-21T19:03:10Z",
     "cache_data": {
-      "etag": "W/\"329c9-19d9e8cbec1-br\"",
-      "last_modified": "Sat, 18 Apr 2026 03:05:17 GMT"
+      "etag": "W/\"329c9-19da3b41a40-br\"",
+      "last_modified": "Sun, 19 Apr 2026 03:06:22 GMT"
     }
   },
   "IPTOASN": {
-    "last_downloaded": "2026-04-18T03:35:46Z"
+    "last_downloaded": "2026-04-19T03:38:02Z"
   }
 }
