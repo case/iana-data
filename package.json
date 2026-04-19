@@ -10,6 +10,6 @@
   "devDependencies": {
     "checkly": "7.7.0",
     "jiti": "2.6.1",
-    "typescript": "5.9.3"
+    "typescript": "6.0.2"
   }
 }
