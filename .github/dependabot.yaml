@@ -11,6 +11,10 @@ updates:
       day: "friday"
       time: "14:00"
       timezone: "America/Los_Angeles"
+    groups:
+      python-dev-tools:
+        dependency-type: "development"
+        update-types: ["minor", "patch"]
 
   # GitHub Actions
   - package-ecosystem: "github-actions"
@@ -22,6 +26,10 @@ updates:
       day: "friday"
       time: "14:00"
       timezone: "America/Los_Angeles"
+    groups:
+      github-actions:
+        patterns: ["*"]
+        update-types: ["minor", "patch"]
 
   # NodeJS
   - package-ecosystem: "npm"
@@ -33,3 +41,7 @@ updates:
       day: "friday"
       time: "14:00"
       timezone: "America/Los_Angeles"
+    groups:
+      npm-dev:
+        dependency-type: "development"
+        update-types: ["minor", "patch"]
