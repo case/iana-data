@@ -1,0 +1,72 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "km",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Comores Telecom",
+      "admin": "Comores Telecom",
+      "tech": "Comores Telecom"
+    },
+    "nameservers": [
+      {
+        "hostname": "dns1.nic.km",
+        "ipv4": [
+          {
+            "ip": "197.255.224.18",
+            "asn": 36939,
+            "as_org": "ComoresTelecom",
+            "as_country": "KM"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "dns2.nic.km",
+        "ipv4": [
+          {
+            "ip": "197.255.224.66",
+            "asn": 36939,
+            "as_org": "ComoresTelecom",
+            "as_country": "KM"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns-km.afrinic.net",
+        "ipv4": [
+          {
+            "ip": "196.216.168.46",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:43f8:120::46",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.domaine.km/",
+    "tld_created": "1998-06-08",
+    "tld_updated": [
+      "2020-06-01"
+    ],
+    "annotations": {
+      "country_name_iso": "Comoros"
+    }
+  }
+}

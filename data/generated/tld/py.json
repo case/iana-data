@@ -1,0 +1,121 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "py",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "NIC-PY",
+      "admin": "LED-UCA",
+      "tech": "Centro Nacional de Computación (CNC-UNA)"
+    },
+    "nameservers": [
+      {
+        "hostname": "b.dns.py",
+        "ipv4": [
+          {
+            "ip": "200.160.0.5",
+            "asn": 22548,
+            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_country": "BR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:12ff:0:a20::5",
+            "asn": 22548,
+            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_country": "BR"
+          }
+        ]
+      },
+      {
+        "hostname": "c.dns.py",
+        "ipv4": [
+          {
+            "ip": "130.59.31.30",
+            "asn": 559,
+            "as_org": "SWITCH Switch, Swiss Academic and Research Network",
+            "as_country": "CH"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:620:0:ff::30",
+            "asn": 559,
+            "as_org": "SWITCH Switch, Swiss Academic and Research Network",
+            "as_country": "CH"
+          }
+        ]
+      },
+      {
+        "hostname": "l.dns.py",
+        "ipv4": [
+          {
+            "ip": "200.0.68.10",
+            "asn": 61455,
+            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_country": "UY"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2801:14:a000::10",
+            "asn": 61455,
+            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_country": "UY"
+          }
+        ]
+      },
+      {
+        "hostname": "p.dns.py",
+        "ipv4": [
+          {
+            "ip": "204.61.216.107",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6107:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "u.dns.py",
+        "ipv4": [
+          {
+            "ip": "198.6.1.65",
+            "asn": 701,
+            "as_org": "UUNET",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.nic.py",
+    "tld_created": "1991-09-09",
+    "tld_updated": [
+      "2023-01-18"
+    ],
+    "annotations": {
+      "country_name_iso": "Paraguay",
+      "as_org_aliases": [
+        "LACTLD",
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "au",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": ".au Domain Administration (auDA)",
+      "admin": ".au Domain Administration (auDA)",
+      "tech": ".au Domain Administration (auDA)"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.au",
+        "ipv4": [
+          {
+            "ip": "58.65.254.1",
+            "asn": 38332,
+            "as_org": "AUDA-AU-AS .au Domain Administration Ltd",
+            "as_country": "AU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2407:6e00:254::1",
+            "asn": 17987,
+            "as_org": "AUDA-AU-AS .au Domain Administration",
+            "as_country": "AU"
+          }
+        ]
+      },
+      {
+        "hostname": "q.au",
+        "ipv4": [
+          {
+            "ip": "65.22.196.1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:be::1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "r.au",
+        "ipv4": [
+          {
+            "ip": "65.22.197.1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:bf::1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "s.au",
+        "ipv4": [
+          {
+            "ip": "65.22.198.1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:c0::1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "t.au",
+        "ipv4": [
+          {
+            "ip": "65.22.199.1",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:c1::1",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://www.auda.org.au/domains/au-domains/",
+    "whois_server": "whois.auda.org.au",
+    "rdap_server": "https://rdap.cctld.au/rdap/",
+    "tld_created": "1986-03-05",
+    "tld_updated": [
+      "2026-02-09"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Australia",
+      "as_org_aliases": [
+        "Identity Digital"
+      ]
+    }
+  }
+}

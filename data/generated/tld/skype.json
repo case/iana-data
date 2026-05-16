@@ -1,0 +1,192 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "skype",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "Microsoft Corporation",
+      "admin": "Microsoft Corporation",
+      "tech": "Nominet"
+    },
+    "nameservers": [
+      {
+        "hostname": "dns1.nic.skype",
+        "ipv4": [
+          {
+            "ip": "213.248.219.138",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:618:403::138",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "dns2.nic.skype",
+        "ipv4": [
+          {
+            "ip": "103.49.83.138",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2401:fd80:403::138",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "dns3.nic.skype",
+        "ipv4": [
+          {
+            "ip": "213.248.223.138",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:618:407::138",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "dns4.nic.skype",
+        "ipv4": [
+          {
+            "ip": "43.230.51.138",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2401:fd80:407::138",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "dnsa.nic.skype",
+        "ipv4": [
+          {
+            "ip": "156.154.100.3",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:502:ad09::3",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "dnsb.nic.skype",
+        "ipv4": [
+          {
+            "ip": "156.154.101.3",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:502:2eda::3",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "dnsc.nic.skype",
+        "ipv4": [
+          {
+            "ip": "156.154.102.3",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2610:a1:1009::3",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "dnsd.nic.skype",
+        "ipv4": [
+          {
+            "ip": "156.154.103.3",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2610:a1:1010::3",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.skype.com",
+    "rdap_server": "https://rdap.nominet.uk/skype/",
+    "tld_created": "2015-03-19",
+    "tld_updated": [
+      "2026-02-07"
+    ],
+    "annotations": {
+      "tld_manager_alias": "Microsoft",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "brand",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "Nominet",
+        "UltraDNS"
+      ]
+    }
+  }
+}

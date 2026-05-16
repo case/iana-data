@@ -1,0 +1,149 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "cw",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "University of Curacao",
+      "admin": "University of Curacao",
+      "tech": "University of Curacao"
+    },
+    "nameservers": [
+      {
+        "hostname": "cw.cctld.authdns.ripe.net",
+        "ipv4": [
+          {
+            "ip": "193.0.9.86",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a13:27c0:30::86",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ]
+      },
+      {
+        "hostname": "kadushi.curinfo.cw",
+        "ipv4": [
+          {
+            "ip": "65.208.122.63",
+            "asn": 11081,
+            "as_org": "United Telecommunication Services UTS",
+            "as_country": "CW"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns0.ja.net",
+        "ipv4": [
+          {
+            "ip": "193.63.94.20",
+            "asn": 786,
+            "as_org": "JANET Jisc Services Limited",
+            "as_country": "GB"
+          },
+          {
+            "ip": "128.86.1.20",
+            "asn": 786,
+            "as_org": "JANET Jisc Services Limited",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:630:0:9::14",
+            "asn": 786,
+            "as_org": "JANET Jisc Services Limited",
+            "as_country": "GB"
+          },
+          {
+            "ip": "2001:630:0:8::14",
+            "asn": 786,
+            "as_org": "JANET Jisc Services Limited",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "ns01-server.curinfo.cw",
+        "ipv4": [
+          {
+            "ip": "65.208.122.36",
+            "asn": 11081,
+            "as_org": "United Telecommunication Services UTS",
+            "as_country": "CW"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns1.bna.cw",
+        "ipv4": [
+          {
+            "ip": "216.122.189.85",
+            "asn": 52391,
+            "as_org": "Curacao Technology Exchange N.V CTEX",
+            "as_country": "CW"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns1.dns.cw",
+        "ipv4": [
+          {
+            "ip": "194.0.28.6",
+            "asn": 48283,
+            "as_org": "SIDN-ANYCAST",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:2c:0:194:0:28:6",
+            "asn": 48283,
+            "as_org": "SIDN-ANYCAST",
+            "as_country": "NL"
+          }
+        ]
+      },
+      {
+        "hostname": "ns2.bna.cw",
+        "ipv4": [
+          {
+            "ip": "216.122.189.86",
+            "asn": 52391,
+            "as_org": "Curacao Technology Exchange N.V CTEX",
+            "as_country": "CW"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.uoc.cw/cw-registry",
+    "tld_created": "2010-12-20",
+    "tld_updated": [
+      "2025-07-07"
+    ],
+    "annotations": {
+      "country_name_iso": "Curaçao",
+      "as_org_aliases": [
+        "SIDN"
+      ]
+    }
+  }
+}

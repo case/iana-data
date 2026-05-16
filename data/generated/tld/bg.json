@@ -1,0 +1,150 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "bg",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Register.BG",
+      "admin": "Register.BG",
+      "tech": "Register.BG"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.nic.bg",
+        "ipv4": [
+          {
+            "ip": "192.92.129.99",
+            "asn": 3245,
+            "as_org": "DIGSYS-AS",
+            "as_country": "BG"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a02:6a80::192:92:129:99",
+            "asn": 3245,
+            "as_org": "DIGSYS-AS",
+            "as_country": "BG"
+          }
+        ]
+      },
+      {
+        "hostname": "b.nic.bg",
+        "ipv4": [
+          {
+            "ip": "193.68.3.232",
+            "asn": 3245,
+            "as_org": "DIGSYS-AS",
+            "as_country": "BG"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a02:6a80::193:68:3:232",
+            "asn": 3245,
+            "as_org": "DIGSYS-AS",
+            "as_country": "BG"
+          }
+        ]
+      },
+      {
+        "hostname": "c.nic.bg",
+        "ipv4": [
+          {
+            "ip": "193.68.99.99",
+            "asn": 3245,
+            "as_org": "DIGSYS-AS",
+            "as_country": "BG"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a02:6a80::193:68:99:99",
+            "asn": 3245,
+            "as_org": "DIGSYS-AS",
+            "as_country": "BG"
+          }
+        ]
+      },
+      {
+        "hostname": "d.nic.bg",
+        "ipv4": [
+          {
+            "ip": "194.0.32.1",
+            "asn": 197997,
+            "as_org": "REGISTER",
+            "as_country": "BG"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:3c::1",
+            "asn": 197997,
+            "as_org": "REGISTER",
+            "as_country": "BG"
+          }
+        ]
+      },
+      {
+        "hostname": "e.nic.bg",
+        "ipv4": [
+          {
+            "ip": "185.143.80.1",
+            "asn": 197997,
+            "as_org": "REGISTER",
+            "as_country": "BG"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a02:6a80:530e::1",
+            "asn": 197997,
+            "as_org": "REGISTER",
+            "as_country": "BG"
+          }
+        ]
+      },
+      {
+        "hostname": "p.nic.bg",
+        "ipv4": [
+          {
+            "ip": "204.61.216.110",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6110:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.register.bg",
+    "whois_server": "whois.register.bg",
+    "tld_created": "1995-01-03",
+    "tld_updated": [
+      "2021-02-24"
+    ],
+    "annotations": {
+      "country_name_iso": "Bulgaria",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ]
+    },
+    "idn": [
+      "xn--90ae"
+    ]
+  }
+}

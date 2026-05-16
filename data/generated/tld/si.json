@@ -1,0 +1,151 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "si",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Academic and Research Network of Slovenia (ARNES)",
+      "admin": "Academic and Research Network of Slovenia (ARNES)",
+      "tech": "Academic and Research Network of Slovenia (ARNES)"
+    },
+    "nameservers": [
+      {
+        "hostname": "b.dns.si",
+        "ipv4": [
+          {
+            "ip": "153.5.81.140",
+            "asn": 2107,
+            "as_org": "ARNES-NET Academic and Research Network of Slovenia",
+            "as_country": "SI"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:1470:8000:53::44",
+            "asn": 2107,
+            "as_org": "ARNES-NET Academic and Research Network of Slovenia",
+            "as_country": "SI"
+          }
+        ]
+      },
+      {
+        "hostname": "f.dns.si",
+        "ipv4": [
+          {
+            "ip": "194.146.106.62",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:1010:15::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "h.dns.si",
+        "ipv4": [
+          {
+            "ip": "204.61.216.54",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6054:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "i.dns.si",
+        "ipv4": [
+          {
+            "ip": "194.0.25.22",
+            "asn": 1921,
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_country": "AT"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:20::22",
+            "asn": 1921,
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_country": "AT"
+          }
+        ]
+      },
+      {
+        "hostname": "k.dns.si",
+        "ipv4": [
+          {
+            "ip": "185.159.197.11",
+            "asn": 55195,
+            "as_org": "CIRA-CLOUD1",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:10a:80aa::11",
+            "asn": 55195,
+            "as_org": "CIRA-CLOUD1",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "l.dns.si",
+        "ipv4": [
+          {
+            "ip": "185.159.198.11",
+            "asn": 394354,
+            "as_org": "CIRA-CLOUD2",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:10a:80ab::11",
+            "asn": 394354,
+            "as_org": "CIRA-CLOUD2",
+            "as_country": "CA"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://www.registry.si/",
+    "whois_server": "whois.register.si",
+    "rdap_server": "https://rdap.register.si/",
+    "tld_created": "1992-04-01",
+    "tld_updated": [
+      "2026-03-25"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Slovenia",
+      "as_org_aliases": [
+        "CIRA",
+        "Packet Clearing House",
+        "RcodeZero"
+      ]
+    }
+  }
+}

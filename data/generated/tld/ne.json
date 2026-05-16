@@ -1,0 +1,91 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "ne",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "SONITEL",
+      "admin": "SONITEL",
+      "tech": "SONITEL"
+    },
+    "nameservers": [
+      {
+        "hostname": "bow.rain.fr",
+        "ipv4": [
+          {
+            "ip": "194.51.3.49",
+            "asn": 3215,
+            "as_org": "France Telecom - Orange",
+            "as_country": "FR"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ne.cctld.authdns.ripe.net",
+        "ipv4": [
+          {
+            "ip": "193.0.9.101",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:e0::101",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ]
+      },
+      {
+        "hostname": "ns-ne.afrinic.net",
+        "ipv4": [
+          {
+            "ip": "196.216.168.45",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:43f8:120::45",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ]
+      },
+      {
+        "hostname": "ns.intnet.ne",
+        "ipv4": [
+          {
+            "ip": "41.138.54.10",
+            "asn": 37385,
+            "as_org": "SONITEL",
+            "as_country": "NE"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.intnet.ne",
+    "tld_created": "1996-04-24",
+    "tld_updated": [
+      "2023-11-09"
+    ],
+    "annotations": {
+      "country_name_iso": "Niger"
+    }
+  }
+}

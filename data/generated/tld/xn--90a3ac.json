@@ -1,0 +1,151 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "xn--90a3ac",
+    "tld_unicode": "срб",
+    "tld_script": "Cyrillic",
+    "tld_iso": "rs",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Serbian National Internet Domain Registry (RNIDS)",
+      "admin": "Serbian National Internet Domain Registry (RNIDS)",
+      "tech": "Serbian National Internet Domain Registry (RNIDS)"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.nic.rs",
+        "ipv4": [
+          {
+            "ip": "91.199.17.59",
+            "asn": 47267,
+            "as_org": "RNIDS-AS",
+            "as_country": "RS"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:69c::59",
+            "asn": 47267,
+            "as_org": "RNIDS-AS",
+            "as_country": "RS"
+          }
+        ]
+      },
+      {
+        "hostname": "b.nic.rs",
+        "ipv4": [
+          {
+            "ip": "195.178.32.2",
+            "asn": 8400,
+            "as_org": "TELEKOM-AS",
+            "as_country": "RS"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a00:e90:0:3::3",
+            "asn": 8400,
+            "as_org": "TELEKOM-AS",
+            "as_country": "RS"
+          }
+        ]
+      },
+      {
+        "hostname": "c.nic.rs",
+        "ipv4": [
+          {
+            "ip": "45.142.220.81",
+            "asn": 208366,
+            "as_org": "DENIC-SERVICES",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a0e:dbc0:2::81",
+            "asn": 208366,
+            "as_org": "DENIC-SERVICES",
+            "as_country": "DE"
+          }
+        ]
+      },
+      {
+        "hostname": "f.nic.rs",
+        "ipv4": [
+          {
+            "ip": "204.61.216.32",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6032:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "h.nic.rs",
+        "ipv4": [
+          {
+            "ip": "91.199.17.60",
+            "asn": 47267,
+            "as_org": "RNIDS-AS",
+            "as_country": "RS"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:69c::60",
+            "asn": 47267,
+            "as_org": "RNIDS-AS",
+            "as_country": "RS"
+          }
+        ]
+      },
+      {
+        "hostname": "l.nic.rs",
+        "ipv4": [
+          {
+            "ip": "194.146.106.114",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:1010:29::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.rnids.rs/",
+    "whois_server": "whois.rnids.rs",
+    "tld_created": "2011-02-05",
+    "tld_updated": [
+      "2025-02-06"
+    ],
+    "annotations": {
+      "country_name_iso": "Serbia",
+      "as_org_aliases": [
+        "DENIC",
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

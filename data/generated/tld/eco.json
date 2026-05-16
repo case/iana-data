@@ -1,0 +1,116 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "eco",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "Big Room Inc.",
+      "admin": "Big Room Inc.",
+      "tech": "Canadian Internet Registration Authority (CIRA)"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.ns.nic.eco",
+        "ipv4": [
+          {
+            "ip": "185.159.197.4",
+            "asn": 55195,
+            "as_org": "CIRA-CLOUD1",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:10a:80aa::4",
+            "asn": 55195,
+            "as_org": "CIRA-CLOUD1",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "b.ns.nic.eco",
+        "ipv4": [
+          {
+            "ip": "185.159.198.4",
+            "asn": 394354,
+            "as_org": "CIRA-CLOUD2",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:10a:80ab::4",
+            "asn": 394354,
+            "as_org": "CIRA-CLOUD2",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "c.ns.nic.eco",
+        "ipv4": [
+          {
+            "ip": "45.142.220.101",
+            "asn": 208366,
+            "as_org": "DENIC-SERVICES",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a0e:dbc0::101",
+            "asn": 208366,
+            "as_org": "DENIC-SERVICES",
+            "as_country": "DE"
+          }
+        ]
+      },
+      {
+        "hostname": "d.ns.nic.eco",
+        "ipv4": [
+          {
+            "ip": "185.159.199.4",
+            "asn": 396501,
+            "as_org": "CIRA-5",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:10a:80ac::4",
+            "asn": 396501,
+            "as_org": "CIRA-5",
+            "as_country": "CA"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://go.eco",
+    "whois_server": "whois.nic.eco",
+    "rdap_server": "https://rdap.eco.fury.ca/rdap/",
+    "tld_created": "2016-08-18",
+    "tld_updated": [
+      "2026-04-29"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "community",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "CIRA",
+        "DENIC"
+      ]
+    }
+  }
+}

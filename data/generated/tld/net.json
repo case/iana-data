@@ -1,0 +1,285 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "net",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "VeriSign Global Registry Services",
+      "admin": "VeriSign Global Registry Services",
+      "tech": "VeriSign Global Registry Services"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.gtld-servers.net",
+        "ipv4": [
+          {
+            "ip": "192.5.6.30",
+            "asn": 397198,
+            "as_org": "VRSN-AC28",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:503:a83e::2:30",
+            "asn": 397198,
+            "as_org": "VRSN-AC28",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "b.gtld-servers.net",
+        "ipv4": [
+          {
+            "ip": "192.33.14.30",
+            "asn": 396628,
+            "as_org": "VRSN-AC50-340",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:503:231d::2:30",
+            "asn": 396628,
+            "as_org": "VRSN-AC50-340",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "c.gtld-servers.net",
+        "ipv4": [
+          {
+            "ip": "192.26.92.30",
+            "asn": 397198,
+            "as_org": "VRSN-AC28",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:503:83eb::30",
+            "asn": 397198,
+            "as_org": "VRSN-AC28",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "d.gtld-servers.net",
+        "ipv4": [
+          {
+            "ip": "192.31.80.30",
+            "asn": 397198,
+            "as_org": "VRSN-AC28",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:856e::30",
+            "asn": 397198,
+            "as_org": "VRSN-AC28",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "e.gtld-servers.net",
+        "ipv4": [
+          {
+            "ip": "192.12.94.30",
+            "asn": 397198,
+            "as_org": "VRSN-AC28",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:502:1ca1::30",
+            "asn": 397198,
+            "as_org": "VRSN-AC28",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "f.gtld-servers.net",
+        "ipv4": [
+          {
+            "ip": "192.35.51.30",
+            "asn": 25485,
+            "as_org": "VERISIGN-AS",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:503:d414::30",
+            "asn": 25485,
+            "as_org": "VERISIGN-AS",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "g.gtld-servers.net",
+        "ipv4": [
+          {
+            "ip": "192.42.93.30",
+            "asn": 25485,
+            "as_org": "VERISIGN-AS",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:503:eea3::30",
+            "asn": 25485,
+            "as_org": "VERISIGN-AS",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "h.gtld-servers.net",
+        "ipv4": [
+          {
+            "ip": "192.54.112.30",
+            "asn": 25485,
+            "as_org": "VERISIGN-AS",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:502:8cc::30",
+            "asn": 25485,
+            "as_org": "VERISIGN-AS",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "i.gtld-servers.net",
+        "ipv4": [
+          {
+            "ip": "192.43.172.30",
+            "asn": 25485,
+            "as_org": "VERISIGN-AS",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:503:39c1::30",
+            "asn": 25485,
+            "as_org": "VERISIGN-AS",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "j.gtld-servers.net",
+        "ipv4": [
+          {
+            "ip": "192.48.79.30",
+            "asn": 36623,
+            "as_org": "HGTLD",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:502:7094::30",
+            "asn": 397193,
+            "as_org": "VRSN-AC28",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "k.gtld-servers.net",
+        "ipv4": [
+          {
+            "ip": "192.52.178.30",
+            "asn": 36623,
+            "as_org": "HGTLD",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:503:d2d::30",
+            "asn": 397193,
+            "as_org": "VRSN-AC28",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "l.gtld-servers.net",
+        "ipv4": [
+          {
+            "ip": "192.41.162.30",
+            "asn": 36623,
+            "as_org": "HGTLD",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:d937::30",
+            "asn": 397193,
+            "as_org": "VRSN-AC28",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "m.gtld-servers.net",
+        "ipv4": [
+          {
+            "ip": "192.55.83.30",
+            "asn": 36623,
+            "as_org": "HGTLD",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:501:b1f9::30",
+            "asn": 397193,
+            "as_org": "VRSN-AC28",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.verisigninc.com",
+    "whois_server": "whois.verisign-grs.com",
+    "rdap_server": "https://rdap.verisign.com/net/v1/",
+    "tld_created": "1985-01-01",
+    "tld_updated": [
+      "2026-03-10"
+    ],
+    "annotations": {
+      "tld_manager_alias": "VeriSign",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "VeriSign"
+      ]
+    }
+  }
+}

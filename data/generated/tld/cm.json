@@ -1,0 +1,147 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "cm",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Agence Nationale des Technologies de l'Information et de la Communication (ANTIC)",
+      "admin": "Agence Nationale des Technologies de l'Information et de la Communication (ANTIC)",
+      "tech": "Agence Nationale des Technologies de l'Information et de la Communication (ANTIC)"
+    },
+    "nameservers": [
+      {
+        "hostname": "auth02.ns.uu.net",
+        "ipv4": [
+          {
+            "ip": "198.6.1.82",
+            "asn": 701,
+            "as_org": "UUNET",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns-cm.afrinic.net",
+        "ipv4": [
+          {
+            "ip": "196.216.168.67",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:43f8:120::67",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ]
+      },
+      {
+        "hostname": "ns-cm.nic.fr",
+        "ipv4": [
+          {
+            "ip": "194.0.9.1",
+            "asn": 2486,
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_country": "FR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:c::1",
+            "asn": 2486,
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_country": "FR"
+          }
+        ]
+      },
+      {
+        "hostname": "ns.itu.ch",
+        "ipv4": [
+          {
+            "ip": "156.106.192.121",
+            "asn": 8414,
+            "as_org": "Place des Nations, CH-1211 Geneva 20 Switzerland",
+            "as_country": "CH"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a00:7580:60:2141::10",
+            "asn": 8414,
+            "as_org": "Place des Nations, CH-1211 Geneva 20 Switzerland",
+            "as_country": "CH"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.nic.cm",
+        "ipv4": [
+          {
+            "ip": "195.24.205.60",
+            "asn": 15964,
+            "as_org": "CAMNET-AS",
+            "as_country": "CM"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns2.nic.cm",
+        "ipv4": [
+          {
+            "ip": "195.24.205.61",
+            "asn": 15964,
+            "as_org": "CAMNET-AS",
+            "as_country": "CM"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "phloem.uoregon.edu",
+        "ipv4": [
+          {
+            "ip": "128.223.32.35",
+            "asn": 3582,
+            "as_org": "UONET",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:468:d01:20::80df:2023",
+            "asn": 3582,
+            "as_org": "UONET",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://www.nic.cm",
+    "whois_server": "whois.nic.cm",
+    "rdap_server": "https://rdap.nic.cm/",
+    "tld_created": "1995-04-29",
+    "tld_updated": [
+      "2025-07-15"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Cameroon",
+      "as_org_aliases": [
+        "AFNIC"
+      ]
+    }
+  }
+}

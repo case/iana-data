@@ -1,0 +1,149 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "ai",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Government of Anguilla",
+      "admin": "Government of Anguilla, Ministry of Infrastructure, Communications and Utilities",
+      "tech": "Government of Anguilla"
+    },
+    "nameservers": [
+      {
+        "hostname": "v0n0.nic.ai",
+        "ipv4": [
+          {
+            "ip": "199.115.152.1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:a0::1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "v0n1.nic.ai",
+        "ipv4": [
+          {
+            "ip": "199.115.153.1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:a1::1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "v0n2.nic.ai",
+        "ipv4": [
+          {
+            "ip": "199.115.154.1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:a2::1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "v0n3.nic.ai",
+        "ipv4": [
+          {
+            "ip": "199.115.155.1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:a3::1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "v2n0.nic.ai",
+        "ipv4": [
+          {
+            "ip": "199.115.156.1",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:a4::1",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ]
+      },
+      {
+        "hostname": "v2n1.nic.ai",
+        "ipv4": [
+          {
+            "ip": "199.115.157.1",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:a5::1",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://nic.ai",
+    "whois_server": "whois.nic.ai",
+    "rdap_server": "https://rdap.identitydigital.services/rdap/",
+    "tld_created": "1995-02-16",
+    "tld_updated": [
+      "2025-02-11"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Anguilla",
+      "as_org_aliases": [
+        "Identity Digital"
+      ]
+    }
+  }
+}

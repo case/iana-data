@@ -1,0 +1,133 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "sv",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "SVNet",
+      "admin": "SVNet",
+      "tech": "Conexión al Desarrollo de El Salvador"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.lactld.org",
+        "ipv4": [
+          {
+            "ip": "200.0.68.10",
+            "asn": 61455,
+            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_country": "UY"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2801:14:a000::10",
+            "asn": 61455,
+            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_country": "UY"
+          }
+        ]
+      },
+      {
+        "hostname": "dns-ext.nic.cr",
+        "ipv4": [
+          {
+            "ip": "200.107.82.219",
+            "asn": 263779,
+            "as_org": "Academia Nacional de Ciencias",
+            "as_country": "CR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:13c7:7004:110::219",
+            "asn": 263779,
+            "as_org": "Academia Nacional de Ciencias",
+            "as_country": "CR"
+          }
+        ]
+      },
+      {
+        "hostname": "ix.red.sv",
+        "ipv4": [
+          {
+            "ip": "168.243.17.2",
+            "asn": 0,
+            "as_org": "Not routed",
+            "as_country": "None"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns.dns.br",
+        "ipv4": [
+          {
+            "ip": "200.160.0.5",
+            "asn": 22548,
+            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_country": "BR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:12ff:0:a20::5",
+            "asn": 22548,
+            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_country": "BR"
+          }
+        ]
+      },
+      {
+        "hostname": "p.ns.sv",
+        "ipv4": [
+          {
+            "ip": "204.61.216.112",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6112:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "sir.red.sv",
+        "ipv4": [
+          {
+            "ip": "131.100.140.162",
+            "asn": 26617,
+            "as_org": "Navega.com S.A.",
+            "as_country": "GT"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.svnet.sv",
+    "tld_created": "1994-11-04",
+    "tld_updated": [
+      "2026-04-29"
+    ],
+    "annotations": {
+      "country_name_iso": "El Salvador",
+      "as_org_aliases": [
+        "LACTLD",
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

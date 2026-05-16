@@ -1,0 +1,72 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "pf",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Gouvernement de la Polynésie française",
+      "admin": "Direction générale de l’économie numérique",
+      "tech": "ONATI SA"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns03.pf",
+        "ipv4": [
+          {
+            "ip": "103.254.227.99",
+            "asn": 55943,
+            "as_org": "ONATI-AS-AP ONATI",
+            "as_country": "PF"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2402:6d00:1000::5",
+            "asn": 55943,
+            "as_org": "ONATI-AS-AP ONATI",
+            "as_country": "PF"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.mana.pf",
+        "ipv4": [
+          {
+            "ip": "202.3.225.10",
+            "asn": 9471,
+            "as_org": "ONATI-AS-AP ONATI",
+            "as_country": "PF"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns2.mana.pf",
+        "ipv4": [
+          {
+            "ip": "202.3.225.20",
+            "asn": 9471,
+            "as_org": "ONATI-AS-AP ONATI",
+            "as_country": "PF"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "whois_server": "whois.registry.pf",
+    "tld_created": "1996-03-19",
+    "tld_updated": [
+      "2025-10-03"
+    ],
+    "annotations": {
+      "country_name_iso": "French Polynesia"
+    }
+  }
+}

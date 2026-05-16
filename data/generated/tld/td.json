@@ -1,0 +1,102 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "td",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "l'Agence de Développement des Technologies de l'Information et de la Communication (ADETIC)",
+      "admin": "ADETIC",
+      "tech": "ADETIC"
+    },
+    "nameservers": [
+      {
+        "hostname": "anycastdns1.nic.td",
+        "ipv4": [
+          {
+            "ip": "185.38.108.108",
+            "asn": 60592,
+            "as_org": "GRANSY Gransy s.r.o. gransy.com",
+            "as_country": "CZ"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a00:fea0:dead::beef",
+            "asn": 60592,
+            "as_org": "GRANSY Gransy s.r.o. gransy.com",
+            "as_country": "CZ"
+          }
+        ]
+      },
+      {
+        "hostname": "anycastdns2.nic.td",
+        "ipv4": [
+          {
+            "ip": "185.28.194.194",
+            "asn": 60592,
+            "as_org": "GRANSY Gransy s.r.o. gransy.com",
+            "as_country": "CZ"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns-td.afrinic.net",
+        "ipv4": [
+          {
+            "ip": "196.216.168.31",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:43f8:120::31",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ]
+      },
+      {
+        "hostname": "pch.nic.td",
+        "ipv4": [
+          {
+            "ip": "204.61.216.129",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6129:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.td",
+    "whois_server": "whois.nic.td",
+    "tld_created": "1997-11-03",
+    "tld_updated": [
+      "2024-07-18"
+    ],
+    "annotations": {
+      "country_name_iso": "Chad",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

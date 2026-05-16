@@ -1,0 +1,167 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "do",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Pontificia Universidad Catolica Madre y Maestra, Recinto Santo Tomas de Aquino",
+      "admin": "Pontificia Universidad Catolica Madre y Maestra Campus Santo Tomas de Aquino",
+      "tech": "Pontificia Universidad Catolica Madre y Maestra"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.lactld.org",
+        "ipv4": [
+          {
+            "ip": "200.0.68.10",
+            "asn": 61455,
+            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_country": "UY"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2801:14:a000::10",
+            "asn": 61455,
+            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_country": "UY"
+          }
+        ]
+      },
+      {
+        "hostname": "ns.nic.do",
+        "ipv4": [
+          {
+            "ip": "190.113.72.177",
+            "asn": 262178,
+            "as_org": "Pontificia Universidad Catolica Madre y Maestra PUCMM",
+            "as_country": "DO"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:13e0:85d0:106::177",
+            "asn": 262178,
+            "as_org": "Pontificia Universidad Catolica Madre y Maestra PUCMM",
+            "as_country": "DO"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.nic.do",
+        "ipv4": [
+          {
+            "ip": "190.113.72.178",
+            "asn": 262178,
+            "as_org": "Pontificia Universidad Catolica Madre y Maestra PUCMM",
+            "as_country": "DO"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:13e0:85d0:106::178",
+            "asn": 262178,
+            "as_org": "Pontificia Universidad Catolica Madre y Maestra PUCMM",
+            "as_country": "DO"
+          }
+        ]
+      },
+      {
+        "hostname": "ns2.nic.do",
+        "ipv4": [
+          {
+            "ip": "190.113.65.12",
+            "asn": 262178,
+            "as_org": "Pontificia Universidad Catolica Madre y Maestra PUCMM",
+            "as_country": "DO"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:13e0:0:1::12",
+            "asn": 262178,
+            "as_org": "Pontificia Universidad Catolica Madre y Maestra PUCMM",
+            "as_country": "DO"
+          }
+        ]
+      },
+      {
+        "hostname": "ns4.nic.do",
+        "ipv4": [
+          {
+            "ip": "204.61.216.124",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6124:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns5.nic.do",
+        "ipv4": [
+          {
+            "ip": "190.113.65.13",
+            "asn": 262178,
+            "as_org": "Pontificia Universidad Catolica Madre y Maestra PUCMM",
+            "as_country": "DO"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:13e0:0:1::13",
+            "asn": 262178,
+            "as_org": "Pontificia Universidad Catolica Madre y Maestra PUCMM",
+            "as_country": "DO"
+          }
+        ]
+      },
+      {
+        "hostname": "phloem.uoregon.edu",
+        "ipv4": [
+          {
+            "ip": "128.223.32.35",
+            "asn": 3582,
+            "as_org": "UONET",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:468:d01:20::80df:2023",
+            "asn": 3582,
+            "as_org": "UONET",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.do",
+    "whois_server": "whois.nic.do",
+    "tld_created": "1991-08-25",
+    "tld_updated": [
+      "2025-08-21"
+    ],
+    "annotations": {
+      "country_name_iso": "Dominican Republic",
+      "as_org_aliases": [
+        "LACTLD",
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

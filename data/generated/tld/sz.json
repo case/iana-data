@@ -1,0 +1,79 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "sz",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "University of Swaziland\nDepartment of Computer Science",
+      "admin": "Swaziland ISP Association",
+      "tech": "Swaziland ISP Association"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns1.sispa.org.sz",
+        "ipv4": [
+          {
+            "ip": "41.77.232.4",
+            "asn": 37510,
+            "as_org": "POSIX-",
+            "as_country": "SZ"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "rip.psg.com",
+        "ipv4": [
+          {
+            "ip": "147.28.0.39",
+            "asn": 3130,
+            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_country": "EE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:418:1::39",
+            "asn": 3130,
+            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_country": "EE"
+          }
+        ]
+      },
+      {
+        "hostname": "sz.cctld.authdns.ripe.net",
+        "ipv4": [
+          {
+            "ip": "193.0.9.114",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a13:27c0:30::114",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.sispa.org.sz/",
+    "tld_created": "1993-07-19",
+    "tld_updated": [
+      "2025-07-14"
+    ],
+    "annotations": {
+      "country_name_iso": "Eswatini"
+    }
+  }
+}

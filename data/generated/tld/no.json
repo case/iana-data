@@ -1,0 +1,142 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "no",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Norid A/S",
+      "admin": "Norid A/S",
+      "tech": "Norid A/S"
+    },
+    "nameservers": [
+      {
+        "hostname": "i.nic.no",
+        "ipv4": [
+          {
+            "ip": "194.146.106.6",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:1010:1::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "njet.norid.no",
+        "ipv4": [
+          {
+            "ip": "156.154.101.12",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "not.norid.no",
+        "ipv4": [
+          {
+            "ip": "156.154.100.12",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:502:ad09::12",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "x.nic.no",
+        "ipv4": [
+          {
+            "ip": "128.39.8.40",
+            "asn": 224,
+            "as_org": "UNINETT UNINETT, The Norwegian University & Research Network",
+            "as_country": "NO"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:700:0:412f::40",
+            "asn": 224,
+            "as_org": "UNINETT UNINETT, The Norwegian University & Research Network",
+            "as_country": "NO"
+          }
+        ]
+      },
+      {
+        "hostname": "y.nic.no",
+        "ipv4": [
+          {
+            "ip": "193.75.4.22",
+            "asn": 2116,
+            "as_org": "GLOBALCONNECT-",
+            "as_country": "NO"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:8c0:8200:1::2",
+            "asn": 2116,
+            "as_org": "GLOBALCONNECT-",
+            "as_country": "NO"
+          }
+        ]
+      },
+      {
+        "hostname": "z.nic.no",
+        "ipv4": [
+          {
+            "ip": "158.38.8.133",
+            "asn": 224,
+            "as_org": "UNINETT UNINETT, The Norwegian University & Research Network",
+            "as_country": "NO"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:700:0:52d:158:38:8:133",
+            "asn": 224,
+            "as_org": "UNINETT UNINETT, The Norwegian University & Research Network",
+            "as_country": "NO"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.norid.no",
+    "whois_server": "whois.norid.no",
+    "rdap_server": "https://rdap.norid.no/",
+    "tld_created": "1987-03-17",
+    "tld_updated": [
+      "2022-01-14"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Norway",
+      "as_org_aliases": [
+        "UltraDNS"
+      ]
+    }
+  }
+}

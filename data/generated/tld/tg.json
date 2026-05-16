@@ -1,0 +1,154 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "tg",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Autorité de Régulation des Communications Electroniques et des Postes (ARCEP)",
+      "admin": "ARCEP",
+      "tech": "C.A.F.E. Informatique et Telecommunications"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns1.admin.net",
+        "ipv4": [
+          {
+            "ip": "198.73.186.1",
+            "asn": 36864,
+            "as_org": "AFRIBONEMALI-AS",
+            "as_country": "ML"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns1.nic.tg",
+        "ipv4": [
+          {
+            "ip": "41.207.188.36",
+            "asn": 24691,
+            "as_org": "TOGOTEL-AS TogoTelecom, Togo",
+            "as_country": "TG"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns2.admin.net",
+        "ipv4": [
+          {
+            "ip": "108.61.25.122",
+            "asn": 20473,
+            "as_org": "AS-VULTR",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:19f0:300:1007::cafe",
+            "asn": 20473,
+            "as_org": "AS-VULTR",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns2.nic.tg",
+        "ipv4": [
+          {
+            "ip": "80.248.68.12",
+            "asn": 30982,
+            "as_org": "CAFENET",
+            "as_country": "TG"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns3.admin.net",
+        "ipv4": [
+          {
+            "ip": "87.98.180.44",
+            "asn": 16276,
+            "as_org": "OVH",
+            "as_country": "FR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:41d0:2:8adf::2",
+            "asn": 16276,
+            "as_org": "OVH",
+            "as_country": "FR"
+          }
+        ]
+      },
+      {
+        "hostname": "ns4.admin.net",
+        "ipv4": [
+          {
+            "ip": "103.25.58.26",
+            "asn": 136557,
+            "as_org": "HOST-AS-AP Host Universal Pty Ltd",
+            "as_country": "AU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2406:d501::47e3:2a7c",
+            "asn": 136557,
+            "as_org": "HOST-AS-AP Host Universal Pty Ltd",
+            "as_country": "AU"
+          }
+        ]
+      },
+      {
+        "hostname": "ns5.admin.net",
+        "ipv4": [
+          {
+            "ip": "188.165.33.42",
+            "asn": 16276,
+            "as_org": "OVH",
+            "as_country": "FR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:41d0:8:5c79::3",
+            "asn": 16276,
+            "as_org": "OVH",
+            "as_country": "FR"
+          }
+        ]
+      },
+      {
+        "hostname": "tld.cafe.tg",
+        "ipv4": [
+          {
+            "ip": "80.248.64.20",
+            "asn": 30982,
+            "as_org": "CAFENET",
+            "as_country": "TG"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.nic.tg",
+    "whois_server": "whois.nic.tg",
+    "tld_created": "1996-09-05",
+    "tld_updated": [
+      "2021-03-08"
+    ],
+    "annotations": {
+      "country_name_iso": "Togo"
+    }
+  }
+}

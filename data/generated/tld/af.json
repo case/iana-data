@@ -1,0 +1,83 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "af",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Ministry of Communications and IT",
+      "admin": "Ministry of Communications and IT",
+      "tech": "Ministry of Communications and IT"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns.anycast.nic.af",
+        "ipv4": [
+          {
+            "ip": "204.61.216.13",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6013:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.anycastdns.cz",
+        "ipv4": [
+          {
+            "ip": "185.38.108.108",
+            "asn": 60592,
+            "as_org": "GRANSY Gransy s.r.o. gransy.com",
+            "as_country": "CZ"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a00:fea0:dead::beef",
+            "asn": 60592,
+            "as_org": "GRANSY Gransy s.r.o. gransy.com",
+            "as_country": "CZ"
+          }
+        ]
+      },
+      {
+        "hostname": "ns2.anycastdns.cz",
+        "ipv4": [
+          {
+            "ip": "185.28.194.194",
+            "asn": 60592,
+            "as_org": "GRANSY Gransy s.r.o. gransy.com",
+            "as_country": "CZ"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.nic.af",
+    "whois_server": "whois.nic.af",
+    "tld_created": "1997-10-16",
+    "tld_updated": [
+      "2022-11-21"
+    ],
+    "annotations": {
+      "country_name_iso": "Afghanistan",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

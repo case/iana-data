@@ -1,0 +1,116 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "ws",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Government of Samoa Ministry of Foreign Affairs & Trade",
+      "admin": "Computer Services Ltd.",
+      "tech": "Global Domains International"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.dns.ws",
+        "ipv4": [
+          {
+            "ip": "194.146.106.146",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:1010:37::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "ns2.dns.ws",
+        "ipv4": [
+          {
+            "ip": "64.70.19.80",
+            "asn": 3561,
+            "as_org": "CENTURYLINK-LEGACY-SAVVIS",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns5.dns.ws",
+        "ipv4": [
+          {
+            "ip": "64.70.19.70",
+            "asn": 3561,
+            "as_org": "CENTURYLINK-LEGACY-SAVVIS",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "s.dns.ws",
+        "ipv4": [
+          {
+            "ip": "77.72.229.248",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:3f0:0:311::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "us3.dns.ws",
+        "ipv4": [
+          {
+            "ip": "64.70.78.70",
+            "asn": 3561,
+            "as_org": "CENTURYLINK-LEGACY-SAVVIS",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "us4.dns.ws",
+        "ipv4": [
+          {
+            "ip": "64.70.78.80",
+            "asn": 3561,
+            "as_org": "CENTURYLINK-LEGACY-SAVVIS",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.website.ws",
+    "whois_server": "whois.website.ws",
+    "tld_created": "1995-07-14",
+    "tld_updated": [
+      "2021-05-26"
+    ],
+    "annotations": {
+      "country_name_iso": "Samoa"
+    }
+  }
+}

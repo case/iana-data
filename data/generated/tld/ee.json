@@ -1,0 +1,121 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "ee",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Eesti Interneti Sihtasutus (EIS)",
+      "admin": "Eesti Interneti Sihtasutus (EIS)",
+      "tech": "Eesti Interneti Sihtasutus (EIS)"
+    },
+    "nameservers": [
+      {
+        "hostname": "b.tld.ee",
+        "ipv4": [
+          {
+            "ip": "194.146.106.110",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:1010:28::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "e.tld.ee",
+        "ipv4": [
+          {
+            "ip": "204.61.216.36",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:94:53::53",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ee.cert.ee",
+        "ipv4": [
+          {
+            "ip": "46.226.142.147",
+            "asn": 56588,
+            "as_org": "EE-CERT EE CERT",
+            "as_country": "EE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a00:6a00:ad1:814::147",
+            "asn": 56588,
+            "as_org": "EE-CERT EE CERT",
+            "as_country": "EE"
+          }
+        ]
+      },
+      {
+        "hostname": "ee.eenet.ee",
+        "ipv4": [
+          {
+            "ip": "193.40.132.5",
+            "asn": 3221,
+            "as_org": "EENET-AS",
+            "as_country": "EE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:bb8:4001::53",
+            "asn": 3221,
+            "as_org": "EENET-AS",
+            "as_country": "EE"
+          }
+        ]
+      },
+      {
+        "hostname": "ns.tld.ee",
+        "ipv4": [
+          {
+            "ip": "195.43.87.10",
+            "asn": 51349,
+            "as_org": "EIS-AS",
+            "as_country": "EE"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.internet.ee",
+    "whois_server": "whois.tld.ee",
+    "tld_created": "1992-06-03",
+    "tld_updated": [
+      "2023-06-28"
+    ],
+    "annotations": {
+      "country_name_iso": "Estonia",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

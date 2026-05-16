@@ -1,0 +1,111 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "cz",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "CZ.NIC, z.s.p.o",
+      "admin": "CZ.NIC, z.s.p.o.",
+      "tech": "CZ.NIC, z.s.p.o."
+    },
+    "nameservers": [
+      {
+        "hostname": "a.ns.nic.cz",
+        "ipv4": [
+          {
+            "ip": "194.0.12.1",
+            "asn": 25192,
+            "as_org": "CZNIC-AS",
+            "as_country": "CZ"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:f::1",
+            "asn": 25192,
+            "as_org": "CZNIC-AS",
+            "as_country": "CZ"
+          }
+        ]
+      },
+      {
+        "hostname": "b.ns.nic.cz",
+        "ipv4": [
+          {
+            "ip": "194.0.13.1",
+            "asn": 25192,
+            "as_org": "CZNIC-AS",
+            "as_country": "CZ"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:10::1",
+            "asn": 25192,
+            "as_org": "CZNIC-AS",
+            "as_country": "CZ"
+          }
+        ]
+      },
+      {
+        "hostname": "c.ns.nic.cz",
+        "ipv4": [
+          {
+            "ip": "194.0.14.1",
+            "asn": 200070,
+            "as_org": "CZNIC-AS2",
+            "as_country": "CZ"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:11::1",
+            "asn": 200070,
+            "as_org": "CZNIC-AS2",
+            "as_country": "CZ"
+          }
+        ]
+      },
+      {
+        "hostname": "d.ns.nic.cz",
+        "ipv4": [
+          {
+            "ip": "193.29.206.1",
+            "asn": 25192,
+            "as_org": "CZNIC-AS",
+            "as_country": "CZ"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:1::1",
+            "asn": 25192,
+            "as_org": "CZNIC-AS",
+            "as_country": "CZ"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.cz/",
+    "whois_server": "whois.nic.cz",
+    "rdap_server": "https://rdap.nic.cz",
+    "tld_created": "1993-01-13",
+    "tld_updated": [
+      "2023-03-07"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Czechia",
+      "as_org_aliases": [
+        "CZNIC"
+      ]
+    }
+  }
+}

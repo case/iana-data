@@ -1,0 +1,114 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "bi",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Centre National de l'Informatique",
+      "admin": "Centre National de l'Informatique",
+      "tech": "Centre National de l'Informatique"
+    },
+    "nameservers": [
+      {
+        "hostname": "anyns.nic.bi",
+        "ipv4": [
+          {
+            "ip": "204.61.216.61",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6061:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "bi.cctld.authdns.ripe.net",
+        "ipv4": [
+          {
+            "ip": "193.0.9.62",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a13:27c0:30::62",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ]
+      },
+      {
+        "hostname": "ns-bi.afrinic.net",
+        "ipv4": [
+          {
+            "ip": "196.216.168.23",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:43f8:120::23",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ]
+      },
+      {
+        "hostname": "ns.nic.bi",
+        "ipv4": [
+          {
+            "ip": "196.2.8.205",
+            "asn": 25429,
+            "as_org": "CBINET-AS CBINET Burundi",
+            "as_country": "BI"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns1.nic.bi",
+        "ipv4": [
+          {
+            "ip": "196.2.12.205",
+            "asn": 25429,
+            "as_org": "CBINET-AS CBINET Burundi",
+            "as_country": "BI"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.nic.bi",
+    "whois_server": "whois1.nic.bi",
+    "tld_created": "1996-10-21",
+    "tld_updated": [
+      "2025-09-05"
+    ],
+    "annotations": {
+      "country_name_iso": "Burundi",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

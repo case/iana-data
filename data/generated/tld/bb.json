@@ -1,0 +1,120 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "bb",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Ministry of Innovation, Science and Smart Technology",
+      "admin": "Ministry of Innovation, Science and Smart Technology",
+      "tech": "Ministry of Innovation, Science and Smart Technology"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns1.nic.bb",
+        "ipv4": [
+          {
+            "ip": "64.68.192.10",
+            "asn": 16686,
+            "as_org": "EDNS",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2400:cb00:2049:1::a29f:1835",
+            "asn": 13335,
+            "as_org": "CLOUDFLARENET",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns2.nic.bb",
+        "ipv4": [
+          {
+            "ip": "198.41.222.254",
+            "asn": 13335,
+            "as_org": "CLOUDFLARENET",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2400:cb00:2049:1::c629:defe",
+            "asn": 13335,
+            "as_org": "CLOUDFLARENET",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns3.nic.bb",
+        "ipv4": [
+          {
+            "ip": "64.68.196.10",
+            "asn": 16686,
+            "as_org": "EDNS",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:49:3::10",
+            "asn": 16686,
+            "as_org": "EDNS",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "ns4.nic.bb",
+        "ipv4": [
+          {
+            "ip": "64.68.197.10",
+            "asn": 16686,
+            "as_org": "EDNS",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:49:4::10",
+            "asn": 16686,
+            "as_org": "EDNS",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "ns5.nic.bb",
+        "ipv4": [
+          {
+            "ip": "200.50.92.195",
+            "asn": 14813,
+            "as_org": "BB-COLUMBUS",
+            "as_country": "BB"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.whois.telecoms.gov.bb/",
+    "tld_created": "1991-09-03",
+    "tld_updated": [
+      "2022-03-08"
+    ],
+    "annotations": {
+      "country_name_iso": "Barbados",
+      "as_org_aliases": [
+        "Cloudflare"
+      ]
+    }
+  }
+}

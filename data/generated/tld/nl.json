@@ -1,0 +1,94 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "nl",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "SIDN (Stichting Internet Domeinregistratie Nederland)",
+      "admin": "SIDN (Stichting Internet Domeinregistratie Nederland)",
+      "tech": "SIDN (Stichting Internet Domeinregistratie Nederland)"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns1.dns.nl",
+        "ipv4": [
+          {
+            "ip": "194.0.28.53",
+            "asn": 48283,
+            "as_org": "SIDN-ANYCAST",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:2c:0:194:0:28:53",
+            "asn": 48283,
+            "as_org": "SIDN-ANYCAST",
+            "as_country": "NL"
+          }
+        ]
+      },
+      {
+        "hostname": "ns3.dns.nl",
+        "ipv4": [
+          {
+            "ip": "194.0.25.24",
+            "asn": 1921,
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_country": "AT"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:20::24",
+            "asn": 1921,
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_country": "AT"
+          }
+        ]
+      },
+      {
+        "hostname": "ns4.dns.nl",
+        "ipv4": [
+          {
+            "ip": "185.159.199.200",
+            "asn": 396501,
+            "as_org": "CIRA-5",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:10a:80ac::200",
+            "asn": 396501,
+            "as_org": "CIRA-5",
+            "as_country": "CA"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://www.sidn.nl/",
+    "whois_server": "whois.domain-registry.nl",
+    "rdap_server": "https://rdap.sidn.nl/",
+    "tld_created": "1986-04-25",
+    "tld_updated": [
+      "2024-06-20"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Netherlands",
+      "as_org_aliases": [
+        "CIRA",
+        "RcodeZero",
+        "SIDN"
+      ]
+    }
+  }
+}

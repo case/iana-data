@@ -1,0 +1,105 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "mk",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Macedonian Academic Research Network Skopje",
+      "admin": "Macedonian Academic And Research Network-MARnet",
+      "tech": "Faculty of Computer Science and Engineering"
+    },
+    "nameservers": [
+      {
+        "hostname": "b.dns.si",
+        "ipv4": [
+          {
+            "ip": "153.5.81.140",
+            "asn": 2107,
+            "as_org": "ARNES-NET Academic and Research Network of Slovenia",
+            "as_country": "SI"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:1470:8000:53::44",
+            "asn": 2107,
+            "as_org": "ARNES-NET Academic and Research Network of Slovenia",
+            "as_country": "SI"
+          }
+        ]
+      },
+      {
+        "hostname": "dns-mk.univie.ac.at",
+        "ipv4": [
+          {
+            "ip": "78.104.145.4",
+            "asn": 1120,
+            "as_org": "ACONET_SERVICES ACOnet Services @ Vienna Internet eXchange",
+            "as_country": "EU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:628:453:bb::4",
+            "asn": 1120,
+            "as_org": "ACONET_SERVICES ACOnet Services @ Vienna Internet eXchange",
+            "as_country": "EU"
+          }
+        ]
+      },
+      {
+        "hostname": "mk-e.ns.nic.cz",
+        "ipv4": [
+          {
+            "ip": "185.43.134.12",
+            "asn": 25192,
+            "as_org": "CZNIC-AS",
+            "as_country": "CZ"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:148f:fffd::12",
+            "asn": 200070,
+            "as_org": "CZNIC-AS2",
+            "as_country": "CZ"
+          }
+        ]
+      },
+      {
+        "hostname": "tld1.marnet.mk",
+        "ipv4": [
+          {
+            "ip": "194.149.137.168",
+            "asn": 52188,
+            "as_org": "MK-UKIM-FCSE",
+            "as_country": "MK"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://marnet.mk/",
+    "whois_server": "whois.marnet.mk",
+    "tld_created": "1993-09-23",
+    "tld_updated": [
+      "2024-02-15"
+    ],
+    "annotations": {
+      "country_name_iso": "North Macedonia",
+      "as_org_aliases": [
+        "CZNIC"
+      ]
+    },
+    "idn": [
+      "xn--d1alf"
+    ]
+  }
+}

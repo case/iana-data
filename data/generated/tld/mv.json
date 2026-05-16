@@ -1,0 +1,143 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "mv",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Dhivehi Raajjeyge Gulhun PLC",
+      "admin": "Dhivehi Raajjeyge Gulhun PLC",
+      "tech": "Dhivehi Raajjeyge Gulhun PLC"
+    },
+    "nameservers": [
+      {
+        "hostname": "baraveli.ns.mv",
+        "ipv4": [
+          {
+            "ip": "188.166.71.229",
+            "asn": 14061,
+            "as_org": "DIGITALOCEAN-ASN",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a03:b0c0:2:f0:0:1:46a5:8001",
+            "asn": 14061,
+            "as_org": "DIGITALOCEAN-ASN",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "boli.ns.mv",
+        "ipv4": [
+          {
+            "ip": "103.31.84.199",
+            "asn": 7642,
+            "as_org": "DHIRAAGU-MV-AP DHIVEHI RAAJJEYGE GULHUN PLC",
+            "as_country": "MV"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2406:e400:a:1::1",
+            "asn": 7642,
+            "as_org": "DHIRAAGU-MV-AP DHIVEHI RAAJJEYGE GULHUN PLC",
+            "as_country": "MV"
+          }
+        ]
+      },
+      {
+        "hostname": "mv-ns.anycast.pch.net",
+        "ipv4": [
+          {
+            "ip": "204.61.216.24",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6024:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns.dhivehinet.net.mv",
+        "ipv4": [
+          {
+            "ip": "202.1.192.196",
+            "asn": 7642,
+            "as_org": "DHIRAAGU-MV-AP DHIVEHI RAAJJEYGE GULHUN PLC",
+            "as_country": "MV"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns.mv",
+        "ipv4": [
+          {
+            "ip": "202.1.192.196",
+            "asn": 7642,
+            "as_org": "DHIRAAGU-MV-AP DHIVEHI RAAJJEYGE GULHUN PLC",
+            "as_country": "MV"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns2.dhivehinet.net.mv",
+        "ipv4": [
+          {
+            "ip": "202.1.201.201",
+            "asn": 7642,
+            "as_org": "DHIRAAGU-MV-AP DHIVEHI RAAJJEYGE GULHUN PLC",
+            "as_country": "MV"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "sangu.ns.mv",
+        "ipv4": [
+          {
+            "ip": "27.114.188.1",
+            "asn": 7642,
+            "as_org": "DHIRAAGU-MV-AP DHIVEHI RAAJJEYGE GULHUN PLC",
+            "as_country": "MV"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2406:e400:1:1::1",
+            "asn": 7642,
+            "as_org": "DHIRAAGU-MV-AP DHIVEHI RAAJJEYGE GULHUN PLC",
+            "as_country": "MV"
+          }
+        ]
+      }
+    ],
+    "tld_created": "1996-09-25",
+    "tld_updated": [
+      "2026-02-05"
+    ],
+    "annotations": {
+      "country_name_iso": "Maldives",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

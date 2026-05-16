@@ -1,0 +1,123 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "ng",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Nigeria Internet Registration Association",
+      "admin": "Nigeria Internet Registration Association",
+      "tech": "Nigeria Internet Registration Association"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns2.nic.net.ng",
+        "ipv4": [
+          {
+            "ip": "204.61.216.40",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6040:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns3.nic.net.ng",
+        "ipv4": [
+          {
+            "ip": "185.38.108.108",
+            "asn": 60592,
+            "as_org": "GRANSY Gransy s.r.o. gransy.com",
+            "as_country": "CZ"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a00:fea0:dead::beef",
+            "asn": 60592,
+            "as_org": "GRANSY Gransy s.r.o. gransy.com",
+            "as_country": "CZ"
+          }
+        ]
+      },
+      {
+        "hostname": "ns4.nic.net.ng",
+        "ipv4": [
+          {
+            "ip": "185.28.194.194",
+            "asn": 60592,
+            "as_org": "GRANSY Gransy s.r.o. gransy.com",
+            "as_country": "CZ"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns5.nic.net.ng",
+        "ipv4": [
+          {
+            "ip": "196.216.168.41",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:43f8:120::41",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ]
+      },
+      {
+        "hostname": "nsa.nic.net.ng",
+        "ipv4": [
+          {
+            "ip": "41.222.79.3",
+            "asn": 36938,
+            "as_org": "NIRA",
+            "as_country": "NG"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2c0f:f098::3",
+            "asn": 36938,
+            "as_org": "NIRA",
+            "as_country": "NG"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nira.org.ng/",
+    "whois_server": "whois.nic.net.ng",
+    "rdap_server": "http://rdap.nic.net.ng",
+    "tld_created": "1995-03-15",
+    "tld_updated": [
+      "2026-02-14"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Nigeria",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

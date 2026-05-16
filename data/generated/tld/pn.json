@@ -1,0 +1,187 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "pn",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Pitcairn Island Administration",
+      "admin": "Nominet",
+      "tech": "Nominet"
+    },
+    "nameservers": [
+      {
+        "hostname": "dns1.nic.pn",
+        "ipv4": [
+          {
+            "ip": "213.248.219.128",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:618:403::128",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "dns2.nic.pn",
+        "ipv4": [
+          {
+            "ip": "103.49.83.128",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2401:fd80:403::128",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "dns3.nic.pn",
+        "ipv4": [
+          {
+            "ip": "213.248.223.128",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:618:407::128",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "dns4.nic.pn",
+        "ipv4": [
+          {
+            "ip": "43.230.51.128",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2401:fd80:407::128",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "dnsa.nic.pn",
+        "ipv4": [
+          {
+            "ip": "156.154.100.3",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:502:ad09::3",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "dnsb.nic.pn",
+        "ipv4": [
+          {
+            "ip": "156.154.101.3",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:502:2eda::3",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "dnsc.nic.pn",
+        "ipv4": [
+          {
+            "ip": "156.154.102.3",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2610:a1:1009::3",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "dnsd.nic.pn",
+        "ipv4": [
+          {
+            "ip": "156.154.103.3",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2610:a1:1010::3",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://nic.pn",
+    "rdap_server": "https://rdap.nominet.uk/pn/",
+    "tld_created": "1997-07-10",
+    "tld_updated": [
+      "2024-02-15"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Pitcairn",
+      "as_org_aliases": [
+        "Nominet",
+        "UltraDNS"
+      ]
+    }
+  }
+}

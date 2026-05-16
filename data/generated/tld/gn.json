@@ -1,0 +1,102 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "gn",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Centre National des Sciences Halieutiques de Boussoura",
+      "admin": "Association en charge pour le Nommage Internet en Coopération de la République de Guinée 'NIC.GN'",
+      "tech": "Agence Nationale de Digitalisation de l’Etat (ANDE)"
+    },
+    "nameservers": [
+      {
+        "hostname": "fork.sth.dnsnode.net",
+        "ipv4": [
+          {
+            "ip": "77.72.229.254",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:3f0:0:306::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "ns-gn.afrinic.net",
+        "ipv4": [
+          {
+            "ip": "196.216.168.49",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:43f8:120::49",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ]
+      },
+      {
+        "hostname": "ns-pch.gn",
+        "ipv4": [
+          {
+            "ip": "204.61.216.147",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6147:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.gn",
+        "ipv4": [
+          {
+            "ip": "41.77.190.237",
+            "asn": 37430,
+            "as_org": "vdctelecom",
+            "as_country": "GN"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "https://ande.gov.gn/dns-gn/",
+    "whois_server": "whois.ande.gov.gn",
+    "tld_created": "1994-08-09",
+    "tld_updated": [
+      "2023-12-11"
+    ],
+    "annotations": {
+      "country_name_iso": "Guinea",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

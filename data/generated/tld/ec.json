@@ -1,0 +1,124 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "ec",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "ECUADORDOMAIN S.A.",
+      "admin": "ECUADORDOMAIN S.A.",
+      "tech": "ECUADORDOMAIN S.A."
+    },
+    "nameservers": [
+      {
+        "hostname": "a.lactld.org",
+        "ipv4": [
+          {
+            "ip": "200.0.68.10",
+            "asn": 61455,
+            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_country": "UY"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2801:14:a000::10",
+            "asn": 61455,
+            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_country": "UY"
+          }
+        ]
+      },
+      {
+        "hostname": "n2.nic.ec",
+        "ipv4": [
+          {
+            "ip": "200.12.199.1",
+            "asn": 52274,
+            "as_org": "NIC.EC S.A.",
+            "as_country": "EC"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2801:0:60::1",
+            "asn": 52274,
+            "as_org": "NIC.EC S.A.",
+            "as_country": "EC"
+          }
+        ]
+      },
+      {
+        "hostname": "n3.dns.ec",
+        "ipv4": [
+          {
+            "ip": "204.61.216.39",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6039:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.anycastdns.cz",
+        "ipv4": [
+          {
+            "ip": "185.38.108.108",
+            "asn": 60592,
+            "as_org": "GRANSY Gransy s.r.o. gransy.com",
+            "as_country": "CZ"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a00:fea0:dead::beef",
+            "asn": 60592,
+            "as_org": "GRANSY Gransy s.r.o. gransy.com",
+            "as_country": "CZ"
+          }
+        ]
+      },
+      {
+        "hostname": "ns2.anycastdns.cz",
+        "ipv4": [
+          {
+            "ip": "185.28.194.194",
+            "asn": 60592,
+            "as_org": "GRANSY Gransy s.r.o. gransy.com",
+            "as_country": "CZ"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.nic.ec",
+    "whois_server": "whois.nic.ec",
+    "rdap_server": "https://rdap.registry.ec",
+    "tld_created": "1991-02-01",
+    "tld_updated": [
+      "2024-04-10"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Ecuador",
+      "as_org_aliases": [
+        "LACTLD",
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

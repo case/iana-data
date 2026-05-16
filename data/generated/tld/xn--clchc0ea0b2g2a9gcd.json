@@ -1,0 +1,135 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "xn--clchc0ea0b2g2a9gcd",
+    "tld_unicode": "சிங்கப்பூர்",
+    "tld_script": "Tamil",
+    "tld_iso": "sg",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Singapore Network Information Centre (SGNIC) Pte Ltd",
+      "admin": "Singapore Network Information Centre (SGNIC) Pte Ltd",
+      "tech": "Singapore Network Information Centre (SGNIC) Pte Ltd"
+    },
+    "nameservers": [
+      {
+        "hostname": "dsany2.sgnic.sg",
+        "ipv4": [
+          {
+            "ip": "185.159.197.170",
+            "asn": 55195,
+            "as_org": "CIRA-CLOUD1",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:10a:80aa::170",
+            "asn": 55195,
+            "as_org": "CIRA-CLOUD1",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "dsany3.sgnic.sg",
+        "ipv4": [
+          {
+            "ip": "185.159.198.170",
+            "asn": 394354,
+            "as_org": "CIRA-CLOUD2",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:10a:80ab::170",
+            "asn": 394354,
+            "as_org": "CIRA-CLOUD2",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "dsany4.sgnic.sg",
+        "ipv4": [
+          {
+            "ip": "45.142.220.65",
+            "asn": 208366,
+            "as_org": "DENIC-SERVICES",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a0e:dbc0:1::65",
+            "asn": 208366,
+            "as_org": "DENIC-SERVICES",
+            "as_country": "DE"
+          }
+        ]
+      },
+      {
+        "hostname": "ns4.apnic.net",
+        "ipv4": [
+          {
+            "ip": "202.12.31.53",
+            "asn": 18366,
+            "as_org": "APNIC-ANYCAST APNIC ANYCAST ASN",
+            "as_country": "AU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dd8:12::53",
+            "asn": 18366,
+            "as_org": "APNIC-ANYCAST APNIC ANYCAST ASN",
+            "as_country": "AU"
+          }
+        ]
+      },
+      {
+        "hostname": "pch.sgzones.sg",
+        "ipv4": [
+          {
+            "ip": "204.61.216.57",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6057:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.sgnic.sg/",
+    "whois_server": "whois.ta.sgnic.sg",
+    "rdap_server": "https://rdap.ta.sgnic.sg/rdap/",
+    "tld_created": "2011-02-05",
+    "tld_updated": [
+      "2026-02-11"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Singapore",
+      "as_org_aliases": [
+        "CIRA",
+        "DENIC",
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

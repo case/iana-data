@@ -1,0 +1,113 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "np",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Mercantile Communications Pvt. Ltd.",
+      "admin": "Mercantile Communications Pvt. Ltd.",
+      "tech": "Mercantile Communications Pvt. Ltd."
+    },
+    "nameservers": [
+      {
+        "hostname": "np-ns.npix.net.np",
+        "ipv4": [
+          {
+            "ip": "198.32.126.50",
+            "asn": 24474,
+            "as_org": "ASNPANYCAST Nepal Internet Exchange NP Anycast",
+            "as_country": "NP"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "np.cctld.authdns.ripe.net",
+        "ipv4": [
+          {
+            "ip": "193.0.9.102",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a13:27c0:30::102",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ]
+      },
+      {
+        "hostname": "ns4.apnic.net",
+        "ipv4": [
+          {
+            "ip": "202.12.31.53",
+            "asn": 18366,
+            "as_org": "APNIC-ANYCAST APNIC ANYCAST ASN",
+            "as_country": "AU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dd8:12::53",
+            "asn": 18366,
+            "as_org": "APNIC-ANYCAST APNIC ANYCAST ASN",
+            "as_country": "AU"
+          }
+        ]
+      },
+      {
+        "hostname": "pch.nnic.np",
+        "ipv4": [
+          {
+            "ip": "204.61.216.11",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6011:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "shikhar.mos.com.np",
+        "ipv4": [
+          {
+            "ip": "27.111.31.5",
+            "asn": 4613,
+            "as_org": "MOS-NP Mercantile Office Systems",
+            "as_country": "NP"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.mos.com.np",
+    "tld_created": "1995-01-25",
+    "tld_updated": [
+      "2025-07-14"
+    ],
+    "annotations": {
+      "country_name_iso": "Nepal",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

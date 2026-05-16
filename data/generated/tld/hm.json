@@ -1,0 +1,66 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "hm",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "HM Domain Registry",
+      "admin": "HM Domain Registry",
+      "tech": "HM Domain Registry"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns1.registry.hm",
+        "ipv4": [
+          {
+            "ip": "142.171.40.232",
+            "asn": 35916,
+            "as_org": "MULTA-ASN1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns2.registry.hm",
+        "ipv4": [
+          {
+            "ip": "142.171.40.234",
+            "asn": 35916,
+            "as_org": "MULTA-ASN1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns3.registry.hm",
+        "ipv4": [
+          {
+            "ip": "128.199.180.188",
+            "asn": 14061,
+            "as_org": "DIGITALOCEAN-ASN",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.registry.hm",
+    "whois_server": "whois.registry.hm",
+    "tld_created": "1997-07-24",
+    "tld_updated": [
+      "2023-12-14"
+    ],
+    "annotations": {
+      "country_name_iso": "Heard Island and McDonald Islands"
+    }
+  }
+}

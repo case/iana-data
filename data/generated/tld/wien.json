@@ -1,0 +1,97 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "wien",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "punkt.wien GmbH",
+      "admin": "punkt.wien GmbH",
+      "tech": "RyCE GmbH"
+    },
+    "nameservers": [
+      {
+        "hostname": "dns.ryce-rsp.com",
+        "ipv4": [
+          {
+            "ip": "194.0.11.114",
+            "asn": 31529,
+            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:e:114::53",
+            "asn": 31529,
+            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_country": "DE"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.dns.business",
+        "ipv4": [
+          {
+            "ip": "157.90.205.138",
+            "asn": 24940,
+            "as_org": "HETZNER-AS",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:4f8:252:4295::9d5a:cd8a",
+            "asn": 24940,
+            "as_org": "HETZNER-AS",
+            "as_country": "DE"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.ryce-rsp.com",
+        "ipv4": [
+          {
+            "ip": "193.56.204.111",
+            "asn": 199216,
+            "as_org": "COMPASS-AS",
+            "as_country": "AT"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a0c:8f40:0:701::111",
+            "asn": 199216,
+            "as_org": "COMPASS-AS",
+            "as_country": "AT"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://www.nic.wien",
+    "whois_server": "whois.nic.wien",
+    "rdap_server": "https://rdap.ryce-rsp.com/rdap/",
+    "tld_created": "2013-12-19",
+    "tld_updated": [
+      "2025-09-01"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "community",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "DENIC",
+        "Hetzner"
+      ]
+    }
+  }
+}

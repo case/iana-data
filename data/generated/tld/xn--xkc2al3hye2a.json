@@ -1,0 +1,143 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "xn--xkc2al3hye2a",
+    "tld_unicode": "இலங்கை",
+    "tld_script": "Tamil",
+    "tld_iso": "lk",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "LK Domain Registry",
+      "admin": "LK Domain Registry",
+      "tech": "LK Domain Registry"
+    },
+    "nameservers": [
+      {
+        "hostname": "h.nic.lk",
+        "ipv4": [
+          {
+            "ip": "43.252.12.206",
+            "asn": 17470,
+            "as_org": "HUTCHISON-LK Hutchison Telecommunications Lanka Private Limited",
+            "as_country": "LK"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2404:8a00:0:a00::4005",
+            "asn": 17470,
+            "as_org": "HUTCHISON-LK Hutchison Telecommunications Lanka Private Limited",
+            "as_country": "LK"
+          }
+        ]
+      },
+      {
+        "hostname": "m.nic.lk",
+        "ipv4": [
+          {
+            "ip": "202.129.235.229",
+            "asn": 45356,
+            "as_org": "MOBITEL-LK Mobitel Pvt Ltd",
+            "as_country": "LK"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2407:c00:21:8:202:129:235:229",
+            "asn": 45356,
+            "as_org": "MOBITEL-LK Mobitel Pvt Ltd",
+            "as_country": "LK"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.ac.lk",
+        "ipv4": [
+          {
+            "ip": "192.248.1.162",
+            "asn": 38229,
+            "as_org": "LEARN-LK Lanka Education & Research Network, NREN",
+            "as_country": "LK"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2401:dd00:1::162",
+            "asn": 38229,
+            "as_org": "LEARN-LK Lanka Education & Research Network, NREN",
+            "as_country": "LK"
+          }
+        ]
+      },
+      {
+        "hostname": "p.nic.lk",
+        "ipv4": [
+          {
+            "ip": "204.61.216.27",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6027:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "t.nic.lk",
+        "ipv4": [
+          {
+            "ip": "203.94.66.129",
+            "asn": 9329,
+            "as_org": "SLTINT-AS-AP Sri Lanka Telecom Internet",
+            "as_country": "LK"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2402:d000:100c::129",
+            "asn": 9329,
+            "as_org": "SLTINT-AS-AP Sri Lanka Telecom Internet",
+            "as_country": "LK"
+          }
+        ]
+      },
+      {
+        "hostname": "y.nic.lk",
+        "ipv4": [
+          {
+            "ip": "194.0.1.27",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.domains.lk",
+    "tld_created": "2010-08-19",
+    "tld_updated": [
+      "2025-08-01"
+    ],
+    "annotations": {
+      "country_name_iso": "Sri Lanka",
+      "as_org_aliases": [
+        "CDNS",
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

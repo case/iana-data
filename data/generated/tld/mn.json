@@ -1,0 +1,200 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "mn",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Datacom Co., Ltd.",
+      "admin": "Datacom Co., Ltd.",
+      "tech": "Datacom Co. Ltd."
+    },
+    "nameservers": [
+      {
+        "hostname": "a0.cctld.afilias-nst.info",
+        "ipv4": [
+          {
+            "ip": "199.254.59.1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:25::1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "a2.cctld.afilias-nst.info",
+        "ipv4": [
+          {
+            "ip": "199.249.116.1",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:44::1",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ]
+      },
+      {
+        "hostname": "b0.cctld.afilias-nst.org",
+        "ipv4": [
+          {
+            "ip": "199.254.60.1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:26::1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "b2.cctld.afilias-nst.org",
+        "ipv4": [
+          {
+            "ip": "199.249.124.1",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:4c::1",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ]
+      },
+      {
+        "hostname": "c0.cctld.afilias-nst.info",
+        "ipv4": [
+          {
+            "ip": "199.254.61.1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:27::1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "d0.cctld.afilias-nst.org",
+        "ipv4": [
+          {
+            "ip": "199.254.62.1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:28::1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.magic.mn",
+        "ipv4": [
+          {
+            "ip": "202.131.0.10",
+            "asn": 45237,
+            "as_org": "GLOBAL-MG-AS-AP Magicnet LLC",
+            "as_country": "MN"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns2.magic.mn",
+        "ipv4": [
+          {
+            "ip": "202.72.241.5",
+            "asn": 24320,
+            "as_org": "RAILCOM Railcom - Commercial Center",
+            "as_country": "MN"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns3.magic.mn",
+        "ipv4": [
+          {
+            "ip": "202.131.224.80",
+            "asn": 9484,
+            "as_org": "MOBINET-AS-MN Mobinet LLC. AS Mobinet Internet Service Provider",
+            "as_country": "MN"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns4.magic.mn",
+        "ipv4": [
+          {
+            "ip": "218.100.84.26",
+            "asn": 56301,
+            "as_org": "MN-NDC-MN National Data Center building",
+            "as_country": "MN"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.nic.mn",
+    "whois_server": "whois.nic.mn",
+    "rdap_server": "https://rdap.identitydigital.services/rdap/",
+    "tld_created": "1995-03-02",
+    "tld_updated": [
+      "2022-06-15"
+    ],
+    "annotations": {
+      "rdap_source": "supplemental",
+      "country_name_iso": "Mongolia",
+      "as_org_aliases": [
+        "Identity Digital"
+      ]
+    },
+    "idn": [
+      "xn--l1acc"
+    ]
+  }
+}

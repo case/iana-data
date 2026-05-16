@@ -1,0 +1,152 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "banamex",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "Citigroup Inc.",
+      "admin": "Com Laude Group",
+      "tech": "GoDaddy Registry"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.nic.banamex",
+        "ipv4": [
+          {
+            "ip": "37.209.192.9",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dcd:1::9",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "b.nic.banamex",
+        "ipv4": [
+          {
+            "ip": "37.209.194.9",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dcd:2::9",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "c.nic.banamex",
+        "ipv4": [
+          {
+            "ip": "37.209.196.9",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dcd:3::9",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.dns.nic.banamex",
+        "ipv4": [
+          {
+            "ip": "156.154.144.21",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2610:a1:1071::15",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns2.dns.nic.banamex",
+        "ipv4": [
+          {
+            "ip": "156.154.145.21",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2610:a1:1072::15",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns3.dns.nic.banamex",
+        "ipv4": [
+          {
+            "ip": "156.154.159.21",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2610:a1:1073::15",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.citigroup.com",
+    "rdap_server": "https://rdap.nic.banamex/",
+    "tld_created": "2016-07-21",
+    "tld_updated": [
+      "2024-05-11"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "brand",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "UltraDNS"
+      ]
+    }
+  }
+}

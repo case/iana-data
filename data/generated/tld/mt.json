@@ -1,0 +1,95 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "mt",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "NIC (Malta)",
+      "admin": "NIC (Malta)",
+      "tech": "NIC (Malta)"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.ns.mt",
+        "ipv4": [
+          {
+            "ip": "193.188.47.252",
+            "asn": 12046,
+            "as_org": "ASN-CSC-UOM RicerkaNet",
+            "as_country": "EU"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "b.ns.mt",
+        "ipv4": [
+          {
+            "ip": "193.188.34.241",
+            "asn": 12046,
+            "as_org": "ASN-CSC-UOM RicerkaNet",
+            "as_country": "EU"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "f.ns.mt",
+        "ipv4": [
+          {
+            "ip": "192.93.0.4",
+            "asn": 2486,
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_country": "FR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:660:3005:1::1:2",
+            "asn": 2486,
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_country": "FR"
+          }
+        ]
+      },
+      {
+        "hostname": "p.ns.mt",
+        "ipv4": [
+          {
+            "ip": "204.61.216.45",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6045:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://www.nic.org.mt/",
+    "tld_created": "1992-12-02",
+    "tld_updated": [
+      "2020-01-23"
+    ],
+    "annotations": {
+      "country_name_iso": "Malta",
+      "as_org_aliases": [
+        "AFNIC",
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

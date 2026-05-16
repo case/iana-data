@@ -1,0 +1,229 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "fi",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Finnish Transport and Communications Agency Traficom",
+      "admin": "Finnish Transport and Communications Agency Traficom",
+      "tech": "Finnish Transport and Communications Agency Traficom"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.fi",
+        "ipv4": [
+          {
+            "ip": "193.166.4.1",
+            "asn": 1741,
+            "as_org": "FUNETAS",
+            "as_country": "FI"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:708:10:53::53",
+            "asn": 1741,
+            "as_org": "FUNETAS",
+            "as_country": "FI"
+          }
+        ]
+      },
+      {
+        "hostname": "b.fi",
+        "ipv4": [
+          {
+            "ip": "194.146.106.26",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:1010:6::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "c.fi",
+        "ipv4": [
+          {
+            "ip": "194.0.11.104",
+            "asn": 31529,
+            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:e:104::53",
+            "asn": 31529,
+            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_country": "DE"
+          }
+        ]
+      },
+      {
+        "hostname": "d.fi",
+        "ipv4": [
+          {
+            "ip": "77.72.229.253",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:3f0:0:302::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "e.fi",
+        "ipv4": [
+          {
+            "ip": "194.0.1.14",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:4::e",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "f.fi",
+        "ipv4": [
+          {
+            "ip": "80.248.170.230",
+            "asn": 24713,
+            "as_org": "CGI-FINLAND",
+            "as_country": "FI"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a03:d640:100:1::6",
+            "asn": 24713,
+            "as_org": "CGI-FINLAND",
+            "as_country": "FI"
+          }
+        ]
+      },
+      {
+        "hostname": "g.fi",
+        "ipv4": [
+          {
+            "ip": "204.61.216.98",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6098:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "i.fi",
+        "ipv4": [
+          {
+            "ip": "194.0.25.30",
+            "asn": 1921,
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_country": "AT"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:20::30",
+            "asn": 1921,
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_country": "AT"
+          }
+        ]
+      },
+      {
+        "hostname": "j.fi",
+        "ipv4": [
+          {
+            "ip": "185.159.199.190",
+            "asn": 396501,
+            "as_org": "CIRA-5",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:10a:80ac::190",
+            "asn": 396501,
+            "as_org": "CIRA-5",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "k.fi",
+        "ipv4": [
+          {
+            "ip": "213.186.229.226",
+            "asn": 16086,
+            "as_org": "DNA",
+            "as_country": "FI"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:14b8:188d::53",
+            "asn": 16086,
+            "as_org": "DNA",
+            "as_country": "FI"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://domain.fi",
+    "whois_server": "whois.fi",
+    "rdap_server": "https://rdap.fi/rdap/rdap/",
+    "tld_created": "1986-12-17",
+    "tld_updated": [
+      "2025-09-15"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Finland",
+      "as_org_aliases": [
+        "CDNS",
+        "CIRA",
+        "DENIC",
+        "Packet Clearing House",
+        "RcodeZero"
+      ]
+    }
+  }
+}

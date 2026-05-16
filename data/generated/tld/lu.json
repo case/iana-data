@@ -1,0 +1,148 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "lu",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "RESTENA",
+      "admin": "Fondation RESTENA",
+      "tech": "Fondation RESTENA"
+    },
+    "nameservers": [
+      {
+        "hostname": "g.dns.lu",
+        "ipv4": [
+          {
+            "ip": "194.0.23.5",
+            "asn": 51966,
+            "as_org": "RESTENA-ANYCAST-AS",
+            "as_country": "LU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:1b:5::5",
+            "asn": 51966,
+            "as_org": "RESTENA-ANYCAST-AS",
+            "as_country": "LU"
+          }
+        ]
+      },
+      {
+        "hostname": "i.dns.lu",
+        "ipv4": [
+          {
+            "ip": "194.146.106.66",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:1010:16::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "j.dns.lu",
+        "ipv4": [
+          {
+            "ip": "77.72.229.247",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:3f0:0:307::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "k.dns.lu",
+        "ipv4": [
+          {
+            "ip": "194.0.1.13",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:4::d",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.dns.lu",
+        "ipv4": [
+          {
+            "ip": "158.64.229.18",
+            "asn": 2602,
+            "as_org": "RESTENA Reseau Teleinformatique de lEducation Nationale",
+            "as_country": "LU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:a18:4:1::18",
+            "asn": 2602,
+            "as_org": "RESTENA Reseau Teleinformatique de lEducation Nationale",
+            "as_country": "LU"
+          }
+        ]
+      },
+      {
+        "hostname": "p.dns.lu",
+        "ipv4": [
+          {
+            "ip": "194.0.42.42",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:60::42:42",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.dns.lu",
+    "whois_server": "whois.dns.lu",
+    "tld_created": "1995-01-27",
+    "tld_updated": [
+      "2023-07-28"
+    ],
+    "annotations": {
+      "country_name_iso": "Luxembourg",
+      "as_org_aliases": [
+        "CDNS",
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

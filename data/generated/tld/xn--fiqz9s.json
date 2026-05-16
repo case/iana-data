@@ -1,0 +1,131 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "xn--fiqz9s",
+    "tld_unicode": "中國",
+    "tld_script": "Han-CJK",
+    "tld_iso": "cn",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "China Internet Network Information Center (CNNIC)",
+      "admin": "China Internet Network Information Center (CNNIC)",
+      "tech": "China Internet Network Information Center (CNNIC)"
+    },
+    "nameservers": [
+      {
+        "hostname": "h.dns.cn",
+        "ipv4": [
+          {
+            "ip": "125.208.32.1",
+            "asn": 24151,
+            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_country": "CN"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dc7:fffe::1",
+            "asn": 24409,
+            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_country": "CN"
+          }
+        ]
+      },
+      {
+        "hostname": "i.dns.cn",
+        "ipv4": [
+          {
+            "ip": "125.208.33.1",
+            "asn": 24406,
+            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_country": "CN"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dc7:ffff::1",
+            "asn": 24409,
+            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_country": "CN"
+          }
+        ]
+      },
+      {
+        "hostname": "j.dns.cn",
+        "ipv4": [
+          {
+            "ip": "125.208.34.1",
+            "asn": 24151,
+            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_country": "CN"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dc7:fffd::1",
+            "asn": 24151,
+            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_country": "CN"
+          }
+        ]
+      },
+      {
+        "hostname": "k.dns.cn",
+        "ipv4": [
+          {
+            "ip": "125.208.35.1",
+            "asn": 24151,
+            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_country": "CN"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dc7:fffc::1",
+            "asn": 24406,
+            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_country": "CN"
+          }
+        ]
+      },
+      {
+        "hostname": "l.dns.cn",
+        "ipv4": [
+          {
+            "ip": "125.208.36.1",
+            "asn": 24409,
+            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_country": "CN"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dc7:fffb::1",
+            "asn": 24406,
+            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_country": "CN"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.cnnic.cn",
+    "whois_server": "whois.cnnic.cn",
+    "tld_created": "2010-07-09",
+    "tld_updated": [
+      "2025-07-18"
+    ],
+    "annotations": {
+      "country_name_iso": "China",
+      "as_org_aliases": [
+        "CNNIC"
+      ]
+    }
+  }
+}

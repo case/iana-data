@@ -1,0 +1,97 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "xn--p1acf",
+    "tld_unicode": "рус",
+    "tld_script": "Cyrillic",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "Rusnames Limited",
+      "admin": "RUSNAMES LIMITED",
+      "tech": "RUSNAMES LIMITED"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns1.anycastdns.cz",
+        "ipv4": [
+          {
+            "ip": "185.38.108.108",
+            "asn": 60592,
+            "as_org": "GRANSY Gransy s.r.o. gransy.com",
+            "as_country": "CZ"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a00:fea0:dead::beef",
+            "asn": 60592,
+            "as_org": "GRANSY Gransy s.r.o. gransy.com",
+            "as_country": "CZ"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.nic.xn--p1acf",
+        "ipv4": [
+          {
+            "ip": "72.42.113.2",
+            "asn": 187,
+            "as_org": "DNSCAST-AS",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:171:d01:dc::2",
+            "asn": 187,
+            "as_org": "DNSCAST-AS",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns2.nic.xn--p1acf",
+        "ipv4": [
+          {
+            "ip": "72.0.49.2",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:171:a01:ad::2",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://rusnames.ru/",
+    "rdap_server": "https://rdap.nic.xn--p1acf/",
+    "tld_created": "2014-07-03",
+    "tld_updated": [
+      "2025-12-04"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "community",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

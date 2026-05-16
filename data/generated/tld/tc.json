@@ -1,0 +1,154 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "tc",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Melrex TC",
+      "admin": "TCI Telecommunications Commission",
+      "tech": "NIC TC Internet Hizmetleri A.S."
+    },
+    "nameservers": [
+      {
+        "hostname": "root1.zone.tc",
+        "ipv4": [
+          {
+            "ip": "31.169.81.225",
+            "asn": 56582,
+            "as_org": "NETFACTOR-ASN",
+            "as_country": "TR"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "root2.zone.tc",
+        "ipv4": [
+          {
+            "ip": "87.106.83.96",
+            "asn": 8560,
+            "as_org": "IONOS-AS This is the joint network for IONOS, Fasthosts, Arsys, 1&1 Mail and Media and 1&1 Telecom. Formerly known as 1&1 Internet SE.",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "root3.zone.tc",
+        "ipv4": [
+          {
+            "ip": "217.154.159.29",
+            "asn": 8560,
+            "as_org": "IONOS-AS This is the joint network for IONOS, Fasthosts, Arsys, 1&1 Mail and Media and 1&1 Telecom. Formerly known as 1&1 Internet SE.",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "root4.zone.tc",
+        "ipv4": [
+          {
+            "ip": "31.169.81.226",
+            "asn": 56582,
+            "as_org": "NETFACTOR-ASN",
+            "as_country": "TR"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "root5.zone.tc",
+        "ipv4": [
+          {
+            "ip": "95.173.188.6",
+            "asn": 51559,
+            "as_org": "NETINTERNET Netinternet Bilisim Teknolojileri AS",
+            "as_country": "TR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a03:2100:0:100::5",
+            "asn": 51559,
+            "as_org": "NETINTERNET Netinternet Bilisim Teknolojileri AS",
+            "as_country": "TR"
+          }
+        ]
+      },
+      {
+        "hostname": "root6.zone.tc",
+        "ipv4": [
+          {
+            "ip": "166.78.254.145",
+            "asn": 19994,
+            "as_org": "RACKSPACE",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:4801:7819:74:a322:3632:ff10:3e2f",
+            "asn": 19994,
+            "as_org": "RACKSPACE",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "root7.zone.tc",
+        "ipv4": [
+          {
+            "ip": "119.9.93.69",
+            "asn": 45187,
+            "as_org": "RACKSPACE-AP Rackspace IT Hosting AS IT Hosting Provider Hong Kong",
+            "as_country": "HK"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2401:1800:7800:102:ab3b:e6a7:859f:a6c7",
+            "asn": 45187,
+            "as_org": "RACKSPACE-AP Rackspace IT Hosting AS IT Hosting Provider Hong Kong",
+            "as_country": "HK"
+          }
+        ]
+      },
+      {
+        "hostname": "root8.zone.tc",
+        "ipv4": [
+          {
+            "ip": "162.13.87.182",
+            "asn": 15395,
+            "as_org": "RACKSPACE-LON",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a00:1a48:7806:115:d994:9fe:9eb2:e68d",
+            "asn": 15395,
+            "as_org": "RACKSPACE-LON",
+            "as_country": "GB"
+          }
+        ]
+      }
+    ],
+    "registry_url": "HTTPS://WWW.NIC.TC",
+    "whois_server": "whois.nic.tc",
+    "tld_created": "1997-01-27",
+    "tld_updated": [
+      "2026-03-27"
+    ],
+    "annotations": {
+      "country_name_iso": "Turks and Caicos Islands"
+    }
+  }
+}

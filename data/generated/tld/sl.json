@@ -1,0 +1,53 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "sl",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Sierratel",
+      "admin": "Sierratel",
+      "tech": "Sierratel"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns1.neoip.com",
+        "ipv4": [
+          {
+            "ip": "51.195.14.249",
+            "asn": 16276,
+            "as_org": "OVH",
+            "as_country": "FR"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns2.neoip.com",
+        "ipv4": [
+          {
+            "ip": "45.83.41.38",
+            "asn": 204548,
+            "as_org": "CLOUDWEBMANAGE-IL-FR",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "https://www.nic.sl",
+    "tld_created": "1997-05-09",
+    "tld_updated": [
+      "2021-10-08"
+    ],
+    "annotations": {
+      "country_name_iso": "Sierra Leone"
+    }
+  }
+}

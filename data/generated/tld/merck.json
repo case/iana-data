@@ -1,0 +1,94 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "merck",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "Merck Registry Holdings, Inc.",
+      "admin": "Hogan Lovells (Paris) LLP",
+      "tech": "DNS Africa Ltd"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns1.dns.business",
+        "ipv4": [
+          {
+            "ip": "157.90.205.138",
+            "asn": 24940,
+            "as_org": "HETZNER-AS",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:4f8:252:4295::9d5a:cd8a",
+            "asn": 24940,
+            "as_org": "HETZNER-AS",
+            "as_country": "DE"
+          }
+        ]
+      },
+      {
+        "hostname": "ns2us.dns.business",
+        "ipv4": [
+          {
+            "ip": "147.135.106.236",
+            "asn": 16276,
+            "as_org": "OVH",
+            "as_country": "FR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2604:2dc0:200:2eb::2",
+            "asn": 16276,
+            "as_org": "OVH",
+            "as_country": "FR"
+          }
+        ]
+      },
+      {
+        "hostname": "nsp.netnod.se",
+        "ipv4": [
+          {
+            "ip": "194.58.198.33",
+            "asn": 56908,
+            "as_org": "NETNOD-NDS $Id: aut-num_AS56908,v 1.1 20160307 11:15:51 mem Exp $",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:3f1:3033::53",
+            "asn": 56908,
+            "as_org": "NETNOD-NDS $Id: aut-num_AS56908,v 1.1 20160307 11:15:51 mem Exp $",
+            "as_country": "SE"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://nic.merck",
+    "whois_server": "whois.nic.merck",
+    "rdap_server": "https://rdap-merck.dns.business/rdap/",
+    "tld_updated": [
+      "2026-04-18"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "Hetzner"
+      ]
+    }
+  }
+}

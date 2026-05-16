@@ -1,0 +1,53 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "mh",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Office of the Cabinet",
+      "admin": "Ministry of Transportation and Communications",
+      "tech": "National Telecommunications Authority"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns.amarshallinc.com",
+        "ipv4": [
+          {
+            "ip": "71.163.249.97",
+            "asn": 701,
+            "as_org": "UUNET",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns.ntamar.net",
+        "ipv4": [
+          {
+            "ip": "117.103.88.33",
+            "asn": 24439,
+            "as_org": "NTAMAR-AS-AP MARSHALL ISLANDS NTA ISP AS",
+            "as_country": "MH"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.nic.net.mh/",
+    "tld_created": "1996-08-16",
+    "tld_updated": [
+      "2013-08-03"
+    ],
+    "annotations": {
+      "country_name_iso": "Marshall Islands"
+    }
+  }
+}

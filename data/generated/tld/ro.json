@@ -1,0 +1,140 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "ro",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "National Institute for R&D in Informatics",
+      "admin": "National Institute for R&amp;D in Informatics",
+      "tech": "National Institute for R&amp;D in Informatics"
+    },
+    "nameservers": [
+      {
+        "hostname": "dns-at.rotld.ro",
+        "ipv4": [
+          {
+            "ip": "78.104.145.6",
+            "asn": 1120,
+            "as_org": "ACONET_SERVICES ACOnet Services @ Vienna Internet eXchange",
+            "as_country": "EU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:628:453:bb::6",
+            "asn": 1120,
+            "as_org": "ACONET_SERVICES ACOnet Services @ Vienna Internet eXchange",
+            "as_country": "EU"
+          }
+        ]
+      },
+      {
+        "hostname": "dns-c.rotld.ro",
+        "ipv4": [
+          {
+            "ip": "194.0.11.113",
+            "asn": 31529,
+            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:e:113::53",
+            "asn": 31529,
+            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_country": "DE"
+          }
+        ]
+      },
+      {
+        "hostname": "dns-ro.denic.de",
+        "ipv4": [
+          {
+            "ip": "81.91.161.99",
+            "asn": 8763,
+            "as_org": "DENIC-AS Theodor-Stern-Kai 1",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "primary.rotld.ro",
+        "ipv4": [
+          {
+            "ip": "192.162.16.18",
+            "asn": 3233,
+            "as_org": "ICI-ROTLD Romanian National R&D Network",
+            "as_country": "RO"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a03:5e80:0:4:192:162:16:18",
+            "asn": 3233,
+            "as_org": "ICI-ROTLD Romanian National R&D Network",
+            "as_country": "RO"
+          }
+        ]
+      },
+      {
+        "hostname": "sec-dns-a.rotld.ro",
+        "ipv4": [
+          {
+            "ip": "192.162.16.20",
+            "asn": 3233,
+            "as_org": "ICI-ROTLD Romanian National R&D Network",
+            "as_country": "RO"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a03:5e80:0:4:192:162:16:20",
+            "asn": 3233,
+            "as_org": "ICI-ROTLD Romanian National R&D Network",
+            "as_country": "RO"
+          }
+        ]
+      },
+      {
+        "hostname": "sec-dns-b.rotld.ro",
+        "ipv4": [
+          {
+            "ip": "193.230.31.230",
+            "asn": 3233,
+            "as_org": "ICI-ROTLD Romanian National R&D Network",
+            "as_country": "RO"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a03:5e80:0:5:193:230:31:230",
+            "asn": 3233,
+            "as_org": "ICI-ROTLD Romanian National R&D Network",
+            "as_country": "RO"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.rotld.ro/",
+    "whois_server": "whois.rotld.ro",
+    "tld_created": "1993-02-26",
+    "tld_updated": [
+      "2026-04-28"
+    ],
+    "annotations": {
+      "country_name_iso": "Romania",
+      "as_org_aliases": [
+        "DENIC"
+      ]
+    }
+  }
+}

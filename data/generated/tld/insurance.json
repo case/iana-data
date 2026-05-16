@@ -1,0 +1,154 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "insurance",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "fTLD Registry Services LLC",
+      "admin": "fTLD Registry Services, LLC",
+      "tech": "GoDaddy Registry"
+    },
+    "nameservers": [
+      {
+        "hostname": "d.nic.insurance",
+        "ipv4": [
+          {
+            "ip": "156.154.103.22",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2610:a1:1010::22",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "e.nic.insurance",
+        "ipv4": [
+          {
+            "ip": "156.154.104.22",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2610:a1:1011::22",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "f.nic.insurance",
+        "ipv4": [
+          {
+            "ip": "156.154.105.22",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2610:a1:1012::22",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "w.nic.insurance",
+        "ipv4": [
+          {
+            "ip": "37.209.192.10",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dcd:1::10",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "x.nic.insurance",
+        "ipv4": [
+          {
+            "ip": "37.209.194.10",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dcd:2::10",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "y.nic.insurance",
+        "ipv4": [
+          {
+            "ip": "37.209.196.10",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dcd:3::10",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://www.ftld.com/",
+    "whois_server": "whois.nic.insurance",
+    "rdap_server": "https://rdap.nic.insurance/",
+    "tld_created": "2015-11-06",
+    "tld_updated": [
+      "2024-07-01"
+    ],
+    "annotations": {
+      "tld_manager_alias": "FTLD",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "community",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "UltraDNS"
+      ]
+    }
+  }
+}

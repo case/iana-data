@@ -1,0 +1,143 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "bv",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Norid A/S",
+      "admin": "Norid A/S",
+      "tech": "Norid A/S"
+    },
+    "nameservers": [
+      {
+        "hostname": "nac.no",
+        "ipv4": [
+          {
+            "ip": "128.39.2.22",
+            "asn": 224,
+            "as_org": "UNINETT UNINETT, The Norwegian University & Research Network",
+            "as_country": "NO"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:700:0:102::aa53",
+            "asn": 224,
+            "as_org": "UNINETT UNINETT, The Norwegian University & Research Network",
+            "as_country": "NO"
+          }
+        ]
+      },
+      {
+        "hostname": "nn.uninett.no",
+        "ipv4": [
+          {
+            "ip": "158.38.0.181",
+            "asn": 224,
+            "as_org": "UNINETT UNINETT, The Norwegian University & Research Network",
+            "as_country": "NO"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:700:0:503::aa:5302",
+            "asn": 224,
+            "as_org": "UNINETT UNINETT, The Norwegian University & Research Network",
+            "as_country": "NO"
+          }
+        ]
+      },
+      {
+        "hostname": "server.nordu.net",
+        "ipv4": [
+          {
+            "ip": "193.10.252.19",
+            "asn": 2603,
+            "as_org": "NORDUNET",
+            "as_country": "DK"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:948:4:2::19",
+            "asn": 2603,
+            "as_org": "NORDUNET",
+            "as_country": "DK"
+          }
+        ]
+      },
+      {
+        "hostname": "x.nic.no",
+        "ipv4": [
+          {
+            "ip": "128.39.8.40",
+            "asn": 224,
+            "as_org": "UNINETT UNINETT, The Norwegian University & Research Network",
+            "as_country": "NO"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:700:0:412f::40",
+            "asn": 224,
+            "as_org": "UNINETT UNINETT, The Norwegian University & Research Network",
+            "as_country": "NO"
+          }
+        ]
+      },
+      {
+        "hostname": "y.nic.no",
+        "ipv4": [
+          {
+            "ip": "193.75.4.22",
+            "asn": 2116,
+            "as_org": "GLOBALCONNECT-",
+            "as_country": "NO"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:8c0:8200:1::2",
+            "asn": 2116,
+            "as_org": "GLOBALCONNECT-",
+            "as_country": "NO"
+          }
+        ]
+      },
+      {
+        "hostname": "z.nic.no",
+        "ipv4": [
+          {
+            "ip": "158.38.8.133",
+            "asn": 224,
+            "as_org": "UNINETT UNINETT, The Norwegian University & Research Network",
+            "as_country": "NO"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:700:0:52d:158:38:8:133",
+            "asn": 224,
+            "as_org": "UNINETT UNINETT, The Norwegian University & Research Network",
+            "as_country": "NO"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://www.norid.no/en/omnorid/toppdomenet-bv/",
+    "tld_created": "1997-08-21",
+    "tld_updated": [
+      "2022-01-14"
+    ],
+    "annotations": {
+      "country_name_iso": "Bouvet Island"
+    }
+  }
+}

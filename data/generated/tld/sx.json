@@ -1,0 +1,110 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "sx",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "SX Registry SA B.V.",
+      "admin": "SX Registry SA B.V.",
+      "tech": "Canadian Internet Registration Authority (CIRA)"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns1.ns.sx",
+        "ipv4": [
+          {
+            "ip": "185.159.197.10",
+            "asn": 55195,
+            "as_org": "CIRA-CLOUD1",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:10a:80aa::10",
+            "asn": 55195,
+            "as_org": "CIRA-CLOUD1",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "ns2.ns.sx",
+        "ipv4": [
+          {
+            "ip": "185.159.198.10",
+            "asn": 394354,
+            "as_org": "CIRA-CLOUD2",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:10a:80ab::10",
+            "asn": 394354,
+            "as_org": "CIRA-CLOUD2",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "ns3.ns.sx",
+        "ipv4": [
+          {
+            "ip": "185.159.199.10",
+            "asn": 396501,
+            "as_org": "CIRA-5",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:10a:80ac::10",
+            "asn": 396501,
+            "as_org": "CIRA-5",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "ns4.ns.sx",
+        "ipv4": [
+          {
+            "ip": "45.142.220.101",
+            "asn": 208366,
+            "as_org": "DENIC-SERVICES",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a0e:dbc0::101",
+            "asn": 208366,
+            "as_org": "DENIC-SERVICES",
+            "as_country": "DE"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://registry.sx",
+    "whois_server": "whois.sx",
+    "tld_created": "2010-12-20",
+    "tld_updated": [
+      "2026-01-26"
+    ],
+    "annotations": {
+      "country_name_iso": "Sint Maarten (Dutch part)",
+      "as_org_aliases": [
+        "CIRA",
+        "DENIC"
+      ]
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "bd",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Posts and Telecommunications Division",
+      "admin": "Posts and Telecommunications Division",
+      "tech": "Bangladesh Telecommunications\nCompany Limited (BTCL)"
+    },
+    "nameservers": [
+      {
+        "hostname": "bd-ns.anycast.pch.net",
+        "ipv4": [
+          {
+            "ip": "204.61.216.108",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6108:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "dns.bd",
+        "ipv4": [
+          {
+            "ip": "123.49.12.112",
+            "asn": 17494,
+            "as_org": "BTTB-AS-AP Telecom Operator & Internet Service Provider as well",
+            "as_country": "BD"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2407:5000:88:5::3",
+            "asn": 17494,
+            "as_org": "BTTB-AS-AP Telecom Operator & Internet Service Provider as well",
+            "as_country": "BD"
+          }
+        ]
+      },
+      {
+        "hostname": "jamuna.btcl.net.bd",
+        "ipv4": [
+          {
+            "ip": "203.112.194.231",
+            "asn": 17494,
+            "as_org": "BTTB-AS-AP Telecom Operator & Internet Service Provider as well",
+            "as_country": "BD"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2407:5000:88:4::231",
+            "asn": 17494,
+            "as_org": "BTTB-AS-AP Telecom Operator & Internet Service Provider as well",
+            "as_country": "BD"
+          }
+        ]
+      },
+      {
+        "hostname": "surma.btcl.net.bd",
+        "ipv4": [
+          {
+            "ip": "203.112.194.232",
+            "asn": 17494,
+            "as_org": "BTTB-AS-AP Telecom Operator & Internet Service Provider as well",
+            "as_country": "BD"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2407:5000:88:4::232",
+            "asn": 17494,
+            "as_org": "BTTB-AS-AP Telecom Operator & Internet Service Provider as well",
+            "as_country": "BD"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://bdia.btcl.com.bd/",
+    "tld_created": "1999-05-20",
+    "tld_updated": [
+      "2025-09-01"
+    ],
+    "annotations": {
+      "country_name_iso": "Bangladesh",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ]
+    },
+    "idn": [
+      "xn--54b7fta0cc"
+    ]
+  }
+}

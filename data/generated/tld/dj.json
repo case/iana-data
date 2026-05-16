@@ -1,0 +1,68 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "dj",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Djibouti Telecom S.A",
+      "admin": "Djibouti Telecom S.A",
+      "tech": "Djibouti Telecom S.A"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns1.djibtelecom.dj",
+        "ipv4": [
+          {
+            "ip": "197.241.17.175",
+            "asn": 30990,
+            "as_org": "ADJIB-AS",
+            "as_country": "DJ"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns2.djibtelecom.dj",
+        "ipv4": [
+          {
+            "ip": "196.201.196.54",
+            "asn": 30990,
+            "as_org": "ADJIB-AS",
+            "as_country": "DJ"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns3.djibtelecom.dj",
+        "ipv4": [
+          {
+            "ip": "52.213.131.190",
+            "asn": 16509,
+            "as_org": "AMAZON-02",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.nic.dj",
+    "tld_created": "1996-05-22",
+    "tld_updated": [
+      "2024-12-25"
+    ],
+    "annotations": {
+      "country_name_iso": "Djibouti",
+      "as_org_aliases": [
+        "Amazon"
+      ]
+    }
+  }
+}

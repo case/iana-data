@@ -1,0 +1,102 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "xn--3ds443g",
+    "tld_unicode": "在线",
+    "tld_script": "Han-CJK",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "Beijing TLD Registry Technology Limited",
+      "admin": "Beijing TLD Registry Technology Limited",
+      "tech": "Beijing Tele-info Technology Co., Ltd."
+    },
+    "nameservers": [
+      {
+        "hostname": "ns1.teleinfo.cn",
+        "ipv4": [
+          {
+            "ip": "103.61.60.1",
+            "asn": 138457,
+            "as_org": "CAICT-AS-AP China Academy of Information and Communications Technology",
+            "as_country": "CN"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2402:7d80::1",
+            "asn": 8075,
+            "as_org": "MICROSOFT-CORP-MSN-AS-BLOCK",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns2.teleinfoo.com",
+        "ipv4": [
+          {
+            "ip": "103.61.61.1",
+            "asn": 8075,
+            "as_org": "MICROSOFT-CORP-MSN-AS-BLOCK",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2402:7d80:8888::1",
+            "asn": 8075,
+            "as_org": "MICROSOFT-CORP-MSN-AS-BLOCK",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns3.teleinfo.cn",
+        "ipv4": [
+          {
+            "ip": "103.61.62.1",
+            "asn": 8075,
+            "as_org": "MICROSOFT-CORP-MSN-AS-BLOCK",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns4.teleinfoo.com",
+        "ipv4": [
+          {
+            "ip": "103.61.63.1",
+            "asn": 8075,
+            "as_org": "MICROSOFT-CORP-MSN-AS-BLOCK",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "https://tldland.cn/",
+    "whois_server": "whois.teleinfo.cn",
+    "rdap_server": "https://rdap.teleinfo.cn/xn--3ds443g/",
+    "tld_created": "2013-12-19",
+    "tld_updated": [
+      "2025-12-31"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "Microsoft"
+      ]
+    }
+  }
+}

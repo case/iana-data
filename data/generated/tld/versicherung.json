@@ -1,0 +1,96 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "versicherung",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "tldbox GmbH",
+      "admin": "tldbox GmbH",
+      "tech": "tldbox GmbH"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.dns.nic.versicherung",
+        "ipv4": [
+          {
+            "ip": "194.0.25.13",
+            "asn": 1921,
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_country": "AT"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:20::13",
+            "asn": 1921,
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_country": "AT"
+          }
+        ]
+      },
+      {
+        "hostname": "m.dns.nic.versicherung",
+        "ipv4": [
+          {
+            "ip": "194.0.26.2",
+            "asn": 201612,
+            "as_org": "NICAT-MINICAST-AS",
+            "as_country": "AT"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:10e0::2",
+            "asn": 201612,
+            "as_org": "NICAT-MINICAST-AS",
+            "as_country": "AT"
+          }
+        ]
+      },
+      {
+        "hostname": "n.dns.nic.versicherung",
+        "ipv4": [
+          {
+            "ip": "194.0.24.2",
+            "asn": 201612,
+            "as_org": "NICAT-MINICAST-AS",
+            "as_country": "AT"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:24::2",
+            "asn": 201612,
+            "as_org": "NICAT-MINICAST-AS",
+            "as_country": "AT"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://nic.versicherung",
+    "whois_server": "whois.nic.versicherung",
+    "rdap_server": "https://rdap.nic.versicherung/v1/",
+    "tld_created": "2014-05-15",
+    "tld_updated": [
+      "2026-04-29"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "community",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "RcodeZero"
+      ]
+    }
+  }
+}

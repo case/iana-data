@@ -1,0 +1,125 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "xn--e1a4c",
+    "tld_unicode": "ею",
+    "tld_script": "Cyrillic",
+    "tld_iso": "eu",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "EURid vzw",
+      "admin": "EURid vzw",
+      "tech": "EURid vzw"
+    },
+    "nameservers": [
+      {
+        "hostname": "be.dns.eu",
+        "ipv4": [
+          {
+            "ip": "149.38.1.26",
+            "asn": 174,
+            "as_org": "COGENT-174",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "si.dns.eu",
+        "ipv4": [
+          {
+            "ip": "193.2.221.62",
+            "asn": 2107,
+            "as_org": "ARNES-NET Academic and Research Network of Slovenia",
+            "as_country": "SI"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:1470:8000:100::62",
+            "asn": 2107,
+            "as_org": "ARNES-NET Academic and Research Network of Slovenia",
+            "as_country": "SI"
+          }
+        ]
+      },
+      {
+        "hostname": "w.dns.eu",
+        "ipv4": [
+          {
+            "ip": "194.0.25.28",
+            "asn": 1921,
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_country": "AT"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:20::28",
+            "asn": 1921,
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_country": "AT"
+          }
+        ]
+      },
+      {
+        "hostname": "x.dns.eu",
+        "ipv4": [
+          {
+            "ip": "185.151.141.1",
+            "asn": 31529,
+            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a02:568:fe00::6575",
+            "asn": 31529,
+            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_country": "DE"
+          }
+        ]
+      },
+      {
+        "hostname": "y.dns.eu",
+        "ipv4": [
+          {
+            "ip": "194.146.106.90",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:1010:23::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.registry.eu",
+    "whois_server": "whois.eu",
+    "tld_created": "2015-12-08",
+    "tld_updated": [
+      "2025-12-22"
+    ],
+    "annotations": {
+      "country_name_iso": "European Union",
+      "as_org_aliases": [
+        "DENIC",
+        "RcodeZero"
+      ]
+    }
+  }
+}

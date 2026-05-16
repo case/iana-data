@@ -1,0 +1,104 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "cv",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Agência Reguladora Multissectorial da Economia (ARME)",
+      "admin": "Agência Reguladora Multissectorial da Economia (ARME)",
+      "tech": "Associação DNS.PT"
+    },
+    "nameservers": [
+      {
+        "hostname": "anyc.dnsnode.net",
+        "ipv4": [
+          {
+            "ip": "194.58.198.135",
+            "asn": 56908,
+            "as_org": "NETNOD-NDS $Id: aut-num_AS56908,v 1.1 20160307 11:15:51 mem Exp $",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:3f1:3032:8001::135",
+            "asn": 56908,
+            "as_org": "NETNOD-NDS $Id: aut-num_AS56908,v 1.1 20160307 11:15:51 mem Exp $",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "c.dns.pt",
+        "ipv4": [
+          {
+            "ip": "204.61.216.105",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6105:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "cv01.dns.pt",
+        "ipv4": [
+          {
+            "ip": "185.39.208.18",
+            "asn": 199993,
+            "as_org": "DNS",
+            "as_country": "PT"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a04:6d80::18",
+            "asn": 199993,
+            "as_org": "DNS",
+            "as_country": "PT"
+          }
+        ]
+      },
+      {
+        "hostname": "ns.dns.cv",
+        "ipv4": [
+          {
+            "ip": "41.221.192.220",
+            "asn": 37517,
+            "as_org": "CVTS1",
+            "as_country": "CV"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.dns.cv/",
+    "whois_server": "whois.nic.cv",
+    "rdap_server": "https://rdap.nic.cv",
+    "tld_created": "1996-10-21",
+    "tld_updated": [
+      "2024-02-26"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Cabo Verde",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

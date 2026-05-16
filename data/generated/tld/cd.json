@@ -1,0 +1,68 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "cd",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Office Congolais des Postes et Télécommunications - OCPT",
+      "admin": "SCPT",
+      "tech": "Office Congolais des Postes et Télécommunications - OCPT"
+    },
+    "nameservers": [
+      {
+        "hostname": "gransy-anycast1.nic.cd",
+        "ipv4": [
+          {
+            "ip": "185.38.108.108",
+            "asn": 60592,
+            "as_org": "GRANSY Gransy s.r.o. gransy.com",
+            "as_country": "CZ"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "gransy-anycast2.nic.cd",
+        "ipv4": [
+          {
+            "ip": "185.28.194.194",
+            "asn": 60592,
+            "as_org": "GRANSY Gransy s.r.o. gransy.com",
+            "as_country": "CZ"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "pch.nic.cd",
+        "ipv4": [
+          {
+            "ip": "204.61.216.139",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.nic.cd/",
+    "tld_created": "1997-08-20",
+    "tld_updated": [
+      "2025-12-12"
+    ],
+    "annotations": {
+      "country_name_iso": "Congo, The Democratic Republic of the",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

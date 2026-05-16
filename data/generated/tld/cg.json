@@ -1,0 +1,127 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "cg",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Interpoint Switzerland",
+      "admin": "Romuald Bonvin c/o Interpoint Switzerland",
+      "tech": "Frédéric Grégoire c/o Interpoint Domain Plus"
+    },
+    "nameservers": [
+      {
+        "hostname": "c.nic.cg",
+        "ipv4": [
+          {
+            "ip": "54.39.22.36",
+            "asn": 16276,
+            "as_org": "OVH",
+            "as_country": "FR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2607:5300:201:3100::2b7c",
+            "asn": 16276,
+            "as_org": "OVH",
+            "as_country": "FR"
+          }
+        ]
+      },
+      {
+        "hostname": "f.nic.cg",
+        "ipv4": [
+          {
+            "ip": "51.91.97.36",
+            "asn": 16276,
+            "as_org": "OVH",
+            "as_country": "FR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:41d0:404:200::6c01",
+            "asn": 16276,
+            "as_org": "OVH",
+            "as_country": "FR"
+          }
+        ]
+      },
+      {
+        "hostname": "p.nic.cg",
+        "ipv4": [
+          {
+            "ip": "204.61.216.155",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6155:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "s.nic.cg",
+        "ipv4": [
+          {
+            "ip": "51.79.160.242",
+            "asn": 16276,
+            "as_org": "OVH",
+            "as_country": "FR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2402:1f00:8000:800::25ed",
+            "asn": 16276,
+            "as_org": "OVH",
+            "as_country": "FR"
+          }
+        ]
+      },
+      {
+        "hostname": "sunic.sunet.se",
+        "ipv4": [
+          {
+            "ip": "192.36.125.2",
+            "asn": 1653,
+            "as_org": "SUNET SUNET Swedish University Network",
+            "as_country": "EU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:6b0:7::2",
+            "asn": 1653,
+            "as_org": "SUNET SUNET Swedish University Network",
+            "as_country": "EU"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://www.dnsafrica.net",
+    "tld_created": "1997-01-14",
+    "tld_updated": [
+      "2026-05-01"
+    ],
+    "annotations": {
+      "country_name_iso": "Congo",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

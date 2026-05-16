@@ -1,0 +1,132 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "xn--d1acj3b",
+    "tld_unicode": "дети",
+    "tld_script": "Cyrillic",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "The Foundation for Network Initiatives “The Smart Internet”",
+      "admin": "The Foundation for Network Initiatives \"The Smart Internet\"",
+      "tech": "Technical Center of Internet"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.dns.ripn.net",
+        "ipv4": [
+          {
+            "ip": "193.232.128.6",
+            "asn": 43832,
+            "as_org": "RIPN-NS5-RU-MSK",
+            "as_country": "RU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:17:0:193:232:128:6",
+            "asn": 43832,
+            "as_org": "RIPN-NS5-RU-MSK",
+            "as_country": "RU"
+          }
+        ]
+      },
+      {
+        "hostname": "b.dns.ripn.net",
+        "ipv4": [
+          {
+            "ip": "194.85.252.62",
+            "asn": 42385,
+            "as_org": "RIPN-",
+            "as_country": "RU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:16:0:194:85:252:62",
+            "asn": 42385,
+            "as_org": "RIPN-",
+            "as_country": "RU"
+          }
+        ]
+      },
+      {
+        "hostname": "d.dns.ripn.net",
+        "ipv4": [
+          {
+            "ip": "194.190.124.17",
+            "asn": 42385,
+            "as_org": "RIPN-",
+            "as_country": "RU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:18:0:194:190:124:17",
+            "asn": 42385,
+            "as_org": "RIPN-",
+            "as_country": "RU"
+          }
+        ]
+      },
+      {
+        "hostname": "e.dns.ripn.net",
+        "ipv4": [
+          {
+            "ip": "193.232.142.17",
+            "asn": 42385,
+            "as_org": "RIPN-",
+            "as_country": "RU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:15:0:193:232:142:17",
+            "asn": 42385,
+            "as_org": "RIPN-",
+            "as_country": "RU"
+          }
+        ]
+      },
+      {
+        "hostname": "f.dns.ripn.net",
+        "ipv4": [
+          {
+            "ip": "193.232.156.17",
+            "asn": 42385,
+            "as_org": "RIPN-",
+            "as_country": "RU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:14:0:193:232:156:17",
+            "asn": 42385,
+            "as_org": "RIPN-",
+            "as_country": "RU"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.dotdeti.ru",
+    "whois_server": "whois.nic.xn--d1acj3b",
+    "rdap_server": "https://whois.nic.xn--d1acj3b/rdap/",
+    "tld_created": "2014-02-13",
+    "tld_updated": [
+      "2026-04-22"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ]
+    }
+  }
+}

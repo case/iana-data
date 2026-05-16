@@ -1,0 +1,119 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "xn--j1amh",
+    "tld_unicode": "укр",
+    "tld_script": "Cyrillic",
+    "tld_iso": "ua",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Ukrainian Network Information Centre (UANIC), Inc.",
+      "admin": "Ukrainian Network Information Centre (UANIC), Inc.",
+      "tech": "Ukrainian Network Information Centre (UANIC), Inc."
+    },
+    "nameservers": [
+      {
+        "hostname": "dns.tci.net.ua",
+        "ipv4": [
+          {
+            "ip": "91.231.86.238",
+            "asn": 197726,
+            "as_org": "UKRNAMES-AS",
+            "as_country": "UA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a02:128:2:52ae:fdee:d892:347d:d892",
+            "asn": 197726,
+            "as_org": "UKRNAMES-AS",
+            "as_country": "UA"
+          }
+        ]
+      },
+      {
+        "hostname": "dns1.u-registry.com",
+        "ipv4": [
+          {
+            "ip": "51.222.128.197",
+            "asn": 16276,
+            "as_org": "OVH",
+            "as_country": "FR"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "dns3.dotukr.com",
+        "ipv4": [
+          {
+            "ip": "37.187.75.31",
+            "asn": 16276,
+            "as_org": "OVH",
+            "as_country": "FR"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "tier1.num.net.ua",
+        "ipv4": [
+          {
+            "ip": "149.202.5.226",
+            "asn": 16276,
+            "as_org": "OVH",
+            "as_country": "FR"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ukr.ns.ua",
+        "ipv4": [
+          {
+            "ip": "194.58.197.4",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:3f1:c001::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "ukr.ukrnames.ua",
+        "ipv4": [
+          {
+            "ip": "195.123.192.7",
+            "asn": 49227,
+            "as_org": "TCI-ANYCAST-NET TCI DNS-WHOIS ANYCAST",
+            "as_country": "UA"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "https://namestore.u-registry.com",
+    "whois_server": "whois.dotukr.com",
+    "tld_created": "2011-03-01",
+    "tld_updated": [
+      "2024-02-27"
+    ],
+    "annotations": {
+      "country_name_iso": "Ukraine"
+    }
+  }
+}

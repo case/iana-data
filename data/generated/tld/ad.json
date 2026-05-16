@@ -1,0 +1,112 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "ad",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Andorra Telecom",
+      "admin": "Andorra Telecom",
+      "tech": "Andorra Telecom"
+    },
+    "nameservers": [
+      {
+        "hostname": "ad.ns.nic.es",
+        "ipv4": [
+          {
+            "ip": "194.69.254.15",
+            "asn": 25354,
+            "as_org": "RED-ES-AS",
+            "as_country": "ES"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:21cc:2000::64:47",
+            "asn": 25354,
+            "as_org": "RED-ES-AS",
+            "as_country": "ES"
+          }
+        ]
+      },
+      {
+        "hostname": "anycast23.irondns.net",
+        "ipv4": [
+          {
+            "ip": "195.253.65.11",
+            "asn": 50611,
+            "as_org": "KNIPP-IRONDNS1-AS Technologiepark",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:5b0:5::b",
+            "asn": 50611,
+            "as_org": "KNIPP-IRONDNS1-AS Technologiepark",
+            "as_country": "DE"
+          }
+        ]
+      },
+      {
+        "hostname": "anycast9.irondns.net",
+        "ipv4": [
+          {
+            "ip": "195.253.64.11",
+            "asn": 8561,
+            "as_org": "KNIPPWORLDWI",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:5b0:4::b",
+            "asn": 8561,
+            "as_org": "KNIPPWORLDWI",
+            "as_country": "DE"
+          }
+        ]
+      },
+      {
+        "hostname": "ns3.nic.fr",
+        "ipv4": [
+          {
+            "ip": "192.134.0.49",
+            "asn": 2486,
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_country": "FR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:660:3006:1::1:1",
+            "asn": 2486,
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_country": "FR"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://www.domini.ad",
+    "whois_server": "whois.nic.ad",
+    "rdap_server": "https://rdap.nic.ad",
+    "tld_created": "1996-01-09",
+    "tld_updated": [
+      "2025-11-10"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Andorra",
+      "as_org_aliases": [
+        "AFNIC",
+        "Knipp Medien"
+      ]
+    }
+  }
+}

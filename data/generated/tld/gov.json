@@ -1,0 +1,110 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "gov",
+    "delegated": true,
+    "iana_tag": "sponsored",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "Cybersecurity and Infrastructure Security Agency",
+      "admin": "Cybersecurity and Infrastructure Security Agency",
+      "tech": "Cloudflare, Inc."
+    },
+    "nameservers": [
+      {
+        "hostname": "a.ns.gov",
+        "ipv4": [
+          {
+            "ip": "199.33.230.1",
+            "asn": 209242,
+            "as_org": "CLOUDFLARESPECTRUM Cloudflare, Inc.",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:503:ff40::1",
+            "asn": 209242,
+            "as_org": "CLOUDFLARESPECTRUM Cloudflare, Inc.",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "b.ns.gov",
+        "ipv4": [
+          {
+            "ip": "199.33.231.1",
+            "asn": 209242,
+            "as_org": "CLOUDFLARESPECTRUM Cloudflare, Inc.",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:503:ff41::1",
+            "asn": 209242,
+            "as_org": "CLOUDFLARESPECTRUM Cloudflare, Inc.",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "c.ns.gov",
+        "ipv4": [
+          {
+            "ip": "199.33.232.1",
+            "asn": 209242,
+            "as_org": "CLOUDFLARESPECTRUM Cloudflare, Inc.",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:503:ff42::1",
+            "asn": 209242,
+            "as_org": "CLOUDFLARESPECTRUM Cloudflare, Inc.",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "d.ns.gov",
+        "ipv4": [
+          {
+            "ip": "199.33.233.1",
+            "asn": 209242,
+            "as_org": "CLOUDFLARESPECTRUM Cloudflare, Inc.",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:503:ff43::1",
+            "asn": 209242,
+            "as_org": "CLOUDFLARESPECTRUM Cloudflare, Inc.",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://get.gov",
+    "whois_server": "whois.nic.gov",
+    "rdap_server": "https://rdap.nic.gov/rdap/",
+    "tld_created": "1985-01-01",
+    "tld_updated": [
+      "2026-03-10"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "as_org_aliases": [
+        "Cloudflare"
+      ]
+    }
+  }
+}

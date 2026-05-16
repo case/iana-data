@@ -1,0 +1,224 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "se",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "The Internet Infrastructure Foundation",
+      "admin": "The Internet Infrastructure Foundation",
+      "tech": "Netnod AB"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.ns.se",
+        "ipv4": [
+          {
+            "ip": "192.36.144.107",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:3f0:0:301::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "b.ns.se",
+        "ipv4": [
+          {
+            "ip": "192.36.133.107",
+            "asn": 39871,
+            "as_org": "NETNOD-GBG Netnod Equipment located at IX in Gothenburg",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:254c:301::53",
+            "asn": 39871,
+            "as_org": "NETNOD-GBG Netnod Equipment located at IX in Gothenburg",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "c.ns.se",
+        "ipv4": [
+          {
+            "ip": "192.36.135.107",
+            "asn": 39840,
+            "as_org": "NETNOD-SVL Netnod Equipment located at IX in Sundsvall",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:2554:301::53",
+            "asn": 39840,
+            "as_org": "NETNOD-SVL Netnod Equipment located at IX in Sundsvall",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "f.ns.se",
+        "ipv4": [
+          {
+            "ip": "192.36.134.97",
+            "asn": 39870,
+            "as_org": "NETNOD-MMO Netnod Equipment located at IX in Malmoe",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:2550:301::53",
+            "asn": 39870,
+            "as_org": "NETNOD-MMO Netnod Equipment located at IX in Malmoe",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "g.ns.se",
+        "ipv4": [
+          {
+            "ip": "194.68.134.97",
+            "asn": 20943,
+            "as_org": "NETNOD-LUL Netnod Equipment located at IX in Lulea",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:2558:301::53",
+            "asn": 20943,
+            "as_org": "NETNOD-LUL Netnod Equipment located at IX in Lulea",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "i.ns.se",
+        "ipv4": [
+          {
+            "ip": "194.146.106.22",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:1010:5::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "m.ns.se",
+        "ipv4": [
+          {
+            "ip": "194.0.11.112",
+            "asn": 31529,
+            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:e:112::53",
+            "asn": 31529,
+            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_country": "DE"
+          }
+        ]
+      },
+      {
+        "hostname": "x.ns.se",
+        "ipv4": [
+          {
+            "ip": "213.108.25.4",
+            "asn": 197564,
+            "as_org": "INTERNETSTIFTELSEN",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:124c:e000::4",
+            "asn": 197564,
+            "as_org": "INTERNETSTIFTELSEN",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "y.ns.se",
+        "ipv4": [
+          {
+            "ip": "185.159.197.150",
+            "asn": 55195,
+            "as_org": "CIRA-CLOUD1",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:10a:80aa::150",
+            "asn": 55195,
+            "as_org": "CIRA-CLOUD1",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "z.ns.se",
+        "ipv4": [
+          {
+            "ip": "185.159.198.150",
+            "asn": 394354,
+            "as_org": "CIRA-CLOUD2",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:10a:80ab::150",
+            "asn": 394354,
+            "as_org": "CIRA-CLOUD2",
+            "as_country": "CA"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://www.internetstiftelsen.se",
+    "whois_server": "whois.iis.se",
+    "tld_created": "1986-09-04",
+    "tld_updated": [
+      "2026-02-12"
+    ],
+    "annotations": {
+      "country_name_iso": "Sweden",
+      "as_org_aliases": [
+        "CIRA",
+        "DENIC"
+      ]
+    }
+  }
+}

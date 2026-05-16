@@ -1,0 +1,167 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "cl",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "NIC Chile (University of Chile)",
+      "admin": "NIC Chile\nUniversity of Chile",
+      "tech": "NIC Chile\nUniversity of Chile"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.nic.cl",
+        "ipv4": [
+          {
+            "ip": "190.124.27.10",
+            "asn": 52304,
+            "as_org": "NIC Chile",
+            "as_country": "CL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:1398:121:0:190:124:27:10",
+            "asn": 52304,
+            "as_org": "NIC Chile",
+            "as_country": "CL"
+          }
+        ]
+      },
+      {
+        "hostname": "b.nic.cl",
+        "ipv4": [
+          {
+            "ip": "200.7.4.7",
+            "asn": 52234,
+            "as_org": "NIC Chile",
+            "as_country": "CL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:1398:274:0:200:7:4:7",
+            "asn": 52234,
+            "as_org": "NIC Chile",
+            "as_country": "CL"
+          }
+        ]
+      },
+      {
+        "hostname": "c.nic.cl",
+        "ipv4": [
+          {
+            "ip": "200.16.112.16",
+            "asn": 52306,
+            "as_org": "NIC Chile",
+            "as_country": "CL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:1398:275:0:200:16:112:16",
+            "asn": 52306,
+            "as_org": "NIC Chile",
+            "as_country": "CL"
+          }
+        ]
+      },
+      {
+        "hostname": "cl-ns.anycast.pch.net",
+        "ipv4": [
+          {
+            "ip": "204.61.216.30",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6030:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "cl1-tld.d-zone.ca",
+        "ipv4": [
+          {
+            "ip": "185.159.197.56",
+            "asn": 55195,
+            "as_org": "CIRA-CLOUD1",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:10a:80aa::56",
+            "asn": 55195,
+            "as_org": "CIRA-CLOUD1",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "cl1.dnsnode.net",
+        "ipv4": [
+          {
+            "ip": "194.146.106.34",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:1010:8::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "cl2-tld.d-zone.ca",
+        "ipv4": [
+          {
+            "ip": "185.159.198.56",
+            "asn": 394354,
+            "as_org": "CIRA-CLOUD2",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:10a:80ab::56",
+            "asn": 394354,
+            "as_org": "CIRA-CLOUD2",
+            "as_country": "CA"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.cl/",
+    "whois_server": "whois.nic.cl",
+    "tld_created": "1987-12-15",
+    "tld_updated": [
+      "2021-05-28"
+    ],
+    "annotations": {
+      "country_name_iso": "Chile",
+      "as_org_aliases": [
+        "CIRA",
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

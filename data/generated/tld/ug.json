@@ -1,0 +1,114 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "ug",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Uganda Online Ltd.",
+      "admin": "Uganda Online Ltd.",
+      "tech": "East African Help Desk"
+    },
+    "nameservers": [
+      {
+        "hostname": "anycast.eahd.or.ug",
+        "ipv4": [
+          {
+            "ip": "204.61.216.60",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns-ug.afrinic.net",
+        "ipv4": [
+          {
+            "ip": "196.216.168.42",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:43f8:120::42",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ]
+      },
+      {
+        "hostname": "ns.icann.org",
+        "ipv4": [
+          {
+            "ip": "199.4.138.53",
+            "asn": 26710,
+            "as_org": "ICANN-ANYCASTED-SERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:89::53",
+            "asn": 26710,
+            "as_org": "ICANN-ANYCASTED-SERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "root.eahd.or.ug",
+        "ipv4": [
+          {
+            "ip": "212.88.97.132",
+            "asn": 20294,
+            "as_org": "MTN-",
+            "as_country": "UG"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ug.cctld.authdns.ripe.net",
+        "ipv4": [
+          {
+            "ip": "193.0.9.52",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a13:27c0:30::52",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.registry.co.ug",
+    "whois_server": "whois.co.ug",
+    "tld_created": "1995-03-08",
+    "tld_updated": [
+      "2025-09-30"
+    ],
+    "annotations": {
+      "country_name_iso": "Uganda",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

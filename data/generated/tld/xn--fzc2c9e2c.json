@@ -1,0 +1,139 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "xn--fzc2c9e2c",
+    "tld_unicode": "ලංකා",
+    "tld_script": "Sinhala",
+    "tld_iso": "lk",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "LK Domain Registry",
+      "admin": "LK Domain Registry",
+      "tech": "LK Domain Registry"
+    },
+    "nameservers": [
+      {
+        "hostname": "lk.communitydns.net",
+        "ipv4": [
+          {
+            "ip": "194.0.1.27",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "nic.lk-anycast.pch.net",
+        "ipv4": [
+          {
+            "ip": "204.61.216.27",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns-c.nic.lk",
+        "ipv4": [
+          {
+            "ip": "203.143.19.3",
+            "asn": 5087,
+            "as_org": "LANKA-COM Lanka Communication Services",
+            "as_country": "LK"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns-d.nic.lk",
+        "ipv4": [
+          {
+            "ip": "123.231.6.18",
+            "asn": 18001,
+            "as_org": "DIALOG-AS Dialog Axiata PLC.",
+            "as_country": "LK"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns-l.nic.lk",
+        "ipv4": [
+          {
+            "ip": "192.248.8.17",
+            "asn": 38229,
+            "as_org": "LEARN-LK Lanka Education & Research Network, NREN",
+            "as_country": "LK"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns-t.nic.lk",
+        "ipv4": [
+          {
+            "ip": "203.94.66.129",
+            "asn": 9329,
+            "as_org": "SLTINT-AS-AP Sri Lanka Telecom Internet",
+            "as_country": "LK"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns1.ac.lk",
+        "ipv4": [
+          {
+            "ip": "192.248.1.162",
+            "asn": 38229,
+            "as_org": "LEARN-LK Lanka Education & Research Network, NREN",
+            "as_country": "LK"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2401:dd00:1::162",
+            "asn": 38229,
+            "as_org": "LEARN-LK Lanka Education & Research Network, NREN",
+            "as_country": "LK"
+          }
+        ]
+      },
+      {
+        "hostname": "ns3.ac.lk",
+        "ipv4": [
+          {
+            "ip": "202.124.166.178",
+            "asn": 18001,
+            "as_org": "DIALOG-AS Dialog Axiata PLC.",
+            "as_country": "LK"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.domains.lk",
+    "tld_created": "2010-08-19",
+    "tld_updated": [
+      "2025-04-23"
+    ],
+    "annotations": {
+      "country_name_iso": "Sri Lanka",
+      "as_org_aliases": [
+        "CDNS",
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

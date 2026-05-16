@@ -1,0 +1,107 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "al",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Electronic and Postal Communications Authority - AKEP",
+      "admin": "Electronic and Postal Communications Authority - AKEP",
+      "tech": "Electronic and Postal Communications Authority - AKEP"
+    },
+    "nameservers": [
+      {
+        "hostname": "munnari.oz.au",
+        "ipv4": [
+          {
+            "ip": "202.29.151.3",
+            "asn": 9464,
+            "as_org": "PSU-TH-AS-AP Prince of Songkla University SritrangNET",
+            "as_country": "TH"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:3c8:9009:181::2",
+            "asn": 9464,
+            "as_org": "PSU-TH-AS-AP Prince of Songkla University SritrangNET",
+            "as_country": "TH"
+          },
+          {
+            "ip": "2001:3c8:9007:1::21",
+            "asn": 4621,
+            "as_org": "UNINET-AS-AP UNINET-",
+            "as_country": "TH"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.nic.al",
+        "ipv4": [
+          {
+            "ip": "194.1.149.230",
+            "asn": 42409,
+            "as_org": "AKEP-AS Electronic and Postal Communications Authority - AKEP",
+            "as_country": "AL"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "nsx.nic.al",
+        "ipv4": [
+          {
+            "ip": "194.0.11.108",
+            "asn": 31529,
+            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:e:108::53",
+            "asn": 31529,
+            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_country": "DE"
+          }
+        ]
+      },
+      {
+        "hostname": "rip.psg.com",
+        "ipv4": [
+          {
+            "ip": "147.28.0.39",
+            "asn": 3130,
+            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_country": "EE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:418:1::39",
+            "asn": 3130,
+            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_country": "EE"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://akep.al/e-aplikime-domain/",
+    "tld_created": "1992-04-21",
+    "tld_updated": [
+      "2023-10-12"
+    ],
+    "annotations": {
+      "country_name_iso": "Albania",
+      "as_org_aliases": [
+        "DENIC"
+      ]
+    }
+  }
+}

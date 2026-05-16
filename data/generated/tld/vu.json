@@ -1,0 +1,147 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "vu",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Telecommunications Radiocommunications and Broadcasting Regulator (TRBR)",
+      "admin": "Telecommunications, Radiocommunications and Broadcasting Regulator (TRBR)",
+      "tech": "GoDaddy Registry"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.tldns.vu",
+        "ipv4": [
+          {
+            "ip": "37.209.192.6",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dcd:1::6",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "b.tldns.vu",
+        "ipv4": [
+          {
+            "ip": "37.209.194.6",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dcd:2::6",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "c.tldns.vu",
+        "ipv4": [
+          {
+            "ip": "37.209.196.6",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dcd:3::6",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "x.tldns.vu",
+        "ipv4": [
+          {
+            "ip": "156.154.103.22",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2610:a1:1010::22",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "y.tldns.vu",
+        "ipv4": [
+          {
+            "ip": "156.154.104.22",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2610:a1:1011::22",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "z.tldns.vu",
+        "ipv4": [
+          {
+            "ip": "156.154.105.22",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2610:a1:1012::22",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.hello.vu",
+    "whois_server": "whois.dnrs.vu",
+    "tld_created": "1995-04-10",
+    "tld_updated": [
+      "2025-09-05"
+    ],
+    "annotations": {
+      "country_name_iso": "Vanuatu",
+      "as_org_aliases": [
+        "UltraDNS"
+      ]
+    }
+  }
+}

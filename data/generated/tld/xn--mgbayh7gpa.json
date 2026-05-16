@@ -1,0 +1,130 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "xn--mgbayh7gpa",
+    "tld_unicode": "الاردن",
+    "tld_script": "Arabic",
+    "tld_iso": "jo",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Ministry of Digital Economy and Entrepreneurship (MoDEE)",
+      "admin": "Ministry of Digital Economy and Entrepreneurship (MoDEE)",
+      "tech": "Ministry of Digital Economy and Entrepreneurship (MoDEE)"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.cctld-servers.net.jo",
+        "ipv4": [
+          {
+            "ip": "193.188.66.2",
+            "asn": 8934,
+            "as_org": "NITC Amman - Jordan",
+            "as_country": "JO"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a02:9c0:0:407::2",
+            "asn": 8934,
+            "as_org": "NITC Amman - Jordan",
+            "as_country": "JO"
+          }
+        ]
+      },
+      {
+        "hostname": "b.cctld-servers.net.jo",
+        "ipv4": [
+          {
+            "ip": "193.188.66.103",
+            "asn": 8934,
+            "as_org": "NITC Amman - Jordan",
+            "as_country": "JO"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a02:9c0:0:408::103",
+            "asn": 8934,
+            "as_org": "NITC Amman - Jordan",
+            "as_country": "JO"
+          }
+        ]
+      },
+      {
+        "hostname": "c.cctld-servers.net.jo",
+        "ipv4": [
+          {
+            "ip": "54.155.28.251",
+            "asn": 16509,
+            "as_org": "AMAZON-02",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a05:d018:123c:3500:3e00:7185:3a6e:e082",
+            "asn": 16509,
+            "as_org": "AMAZON-02",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "d.cctld-servers.net.jo",
+        "ipv4": [
+          {
+            "ip": "193.188.69.19",
+            "asn": 8934,
+            "as_org": "NITC Amman - Jordan",
+            "as_country": "JO"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a02:9c0:0:19::19",
+            "asn": 8934,
+            "as_org": "NITC Amman - Jordan",
+            "as_country": "JO"
+          }
+        ]
+      },
+      {
+        "hostname": "jo.cctld.authdns.ripe.net",
+        "ipv4": [
+          {
+            "ip": "193.0.9.83",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a13:27c0:30::83",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://dns.jo/",
+    "tld_created": "2010-08-20",
+    "tld_updated": [
+      "2026-02-05"
+    ],
+    "annotations": {
+      "country_name_iso": "Jordan",
+      "as_org_aliases": [
+        "Amazon"
+      ]
+    }
+  }
+}

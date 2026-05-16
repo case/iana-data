@@ -1,0 +1,123 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "va",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Holy See - Vatican City State",
+      "admin": "Department of Telecommunications",
+      "tech": "Department of Telecommunications - Vatican Internet Service Provider"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.nic.va",
+        "ipv4": [
+          {
+            "ip": "212.77.0.110",
+            "asn": 8978,
+            "as_org": "ASN-HOLYSEE Holy See Secretariat of State Department of Telecommunications",
+            "as_country": "VA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:b8:0:1:212:77:0:110",
+            "asn": 8978,
+            "as_org": "ASN-HOLYSEE Holy See Secretariat of State Department of Telecommunications",
+            "as_country": "VA"
+          }
+        ]
+      },
+      {
+        "hostname": "b.nic.va",
+        "ipv4": [
+          {
+            "ip": "212.77.0.2",
+            "asn": 8978,
+            "as_org": "ASN-HOLYSEE Holy See Secretariat of State Department of Telecommunications",
+            "as_country": "VA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:b8:0:1:212:77:0:2",
+            "asn": 8978,
+            "as_org": "ASN-HOLYSEE Holy See Secretariat of State Department of Telecommunications",
+            "as_country": "VA"
+          }
+        ]
+      },
+      {
+        "hostname": "c.nic.va",
+        "ipv4": [
+          {
+            "ip": "212.77.2.58",
+            "asn": 8978,
+            "as_org": "ASN-HOLYSEE Holy See Secretariat of State Department of Telecommunications",
+            "as_country": "VA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:b8::2:3a",
+            "asn": 8978,
+            "as_org": "ASN-HOLYSEE Holy See Secretariat of State Department of Telecommunications",
+            "as_country": "VA"
+          }
+        ]
+      },
+      {
+        "hostname": "osiris.namex.it",
+        "ipv4": [
+          {
+            "ip": "193.201.40.6",
+            "asn": 24796,
+            "as_org": "NAMEX-IXP-SERVICES Rome Internet eXchange point",
+            "as_country": "IT"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a0f:80:1::6",
+            "asn": 24796,
+            "as_org": "NAMEX-IXP-SERVICES Rome Internet eXchange point",
+            "as_country": "IT"
+          }
+        ]
+      },
+      {
+        "hostname": "seth.namex.it",
+        "ipv4": [
+          {
+            "ip": "193.201.40.7",
+            "asn": 24796,
+            "as_org": "NAMEX-IXP-SERVICES Rome Internet eXchange point",
+            "as_country": "IT"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a0f:80:1::7",
+            "asn": 24796,
+            "as_org": "NAMEX-IXP-SERVICES Rome Internet eXchange point",
+            "as_country": "IT"
+          }
+        ]
+      }
+    ],
+    "tld_created": "1995-09-11",
+    "tld_updated": [
+      "2024-12-03"
+    ],
+    "annotations": {
+      "country_name_iso": "Holy See (Vatican City State)"
+    }
+  }
+}

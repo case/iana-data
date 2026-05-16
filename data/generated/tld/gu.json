@@ -1,0 +1,91 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "gu",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "University of Guam",
+      "admin": "University of Guam",
+      "tech": "University of Guam"
+    },
+    "nameservers": [
+      {
+        "hostname": "gold.uog.edu",
+        "ipv4": [
+          {
+            "ip": "168.123.250.66",
+            "asn": 395400,
+            "as_org": "UNIVERSITY-GUAM",
+            "as_country": "GU"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "green.uog.edu",
+        "ipv4": [
+          {
+            "ip": "168.123.250.56",
+            "asn": 395400,
+            "as_org": "UNIVERSITY-GUAM",
+            "as_country": "GU"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "gu.cctld.authdns.ripe.net",
+        "ipv4": [
+          {
+            "ip": "193.0.9.78",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a13:27c0:30::78",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ]
+      },
+      {
+        "hostname": "phloem.uoregon.edu",
+        "ipv4": [
+          {
+            "ip": "128.223.32.35",
+            "asn": 3582,
+            "as_org": "UONET",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:468:d01:20::80df:2023",
+            "asn": 3582,
+            "as_org": "UONET",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://give.uog.edu/shop/",
+    "tld_created": "1994-04-15",
+    "tld_updated": [
+      "2025-09-08"
+    ],
+    "annotations": {
+      "country_name_iso": "Guam"
+    }
+  }
+}

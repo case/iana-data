@@ -1,0 +1,136 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "gr",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "ICS-FORTH GR",
+      "admin": "ICS-FORTH GR",
+      "tech": "ICS-FORTH GR"
+    },
+    "nameservers": [
+      {
+        "hostname": "estia.ics.forth.gr",
+        "ipv4": [
+          {
+            "ip": "139.91.191.3",
+            "asn": 8522,
+            "as_org": "FORTH-AS",
+            "as_country": "GR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:648:2c30::191:3",
+            "asn": 8522,
+            "as_org": "FORTH-AS",
+            "as_country": "GR"
+          }
+        ]
+      },
+      {
+        "hostname": "gr-at.ics.forth.gr",
+        "ipv4": [
+          {
+            "ip": "78.104.145.227",
+            "asn": 1120,
+            "as_org": "ACONET_SERVICES ACOnet Services @ Vienna Internet eXchange",
+            "as_country": "EU"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "gr-c.ics.forth.gr",
+        "ipv4": [
+          {
+            "ip": "194.0.1.25",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:4::19",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "gr-d.ics.forth.gr",
+        "ipv4": [
+          {
+            "ip": "194.0.11.102",
+            "asn": 31529,
+            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:e:102::53",
+            "asn": 31529,
+            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_country": "DE"
+          }
+        ]
+      },
+      {
+        "hostname": "gr-m.ics.forth.gr",
+        "ipv4": [
+          {
+            "ip": "194.0.4.10",
+            "asn": 48053,
+            "as_org": "GR-ANYCAST-DNS-CLOUD",
+            "as_country": "GR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:7::4:10",
+            "asn": 48053,
+            "as_org": "GR-ANYCAST-DNS-CLOUD",
+            "as_country": "GR"
+          }
+        ]
+      },
+      {
+        "hostname": "grdns.ics.forth.gr",
+        "ipv4": [
+          {
+            "ip": "139.91.1.1",
+            "asn": 8522,
+            "as_org": "FORTH-AS",
+            "as_country": "GR"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.gr",
+    "tld_created": "1989-02-19",
+    "tld_updated": [
+      "2022-06-16"
+    ],
+    "annotations": {
+      "country_name_iso": "Greece",
+      "as_org_aliases": [
+        "CDNS",
+        "DENIC"
+      ]
+    },
+    "idn": [
+      "xn--qxam"
+    ]
+  }
+}

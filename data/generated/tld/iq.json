@@ -1,0 +1,106 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "iq",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Communications and Media Commission (CMC)",
+      "admin": "Communications and Media Commission (CMC)",
+      "tech": "Communications and Media Commission (CMC)"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns.cmc.iq",
+        "ipv4": [
+          {
+            "ip": "194.117.57.105",
+            "asn": 35160,
+            "as_org": "IQ-CCLTD",
+            "as_country": "IQ"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns01.trs-dns.com",
+        "ipv4": [
+          {
+            "ip": "64.96.1.1",
+            "asn": 393818,
+            "as_org": "TUCOWS-TRS-DNS1",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:57:4001::1",
+            "asn": 393818,
+            "as_org": "TUCOWS-TRS-DNS1",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "ns01.trs-dns.net",
+        "ipv4": [
+          {
+            "ip": "64.96.2.1",
+            "asn": 63363,
+            "as_org": "TUCOWS-TRS-DNS2",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:57:4002::1",
+            "asn": 63363,
+            "as_org": "TUCOWS-TRS-DNS2",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "nsp-anycast.cmc.iq",
+        "ipv4": [
+          {
+            "ip": "194.117.58.42",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:8001:ad::42",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://registrar.cmc.iq",
+    "whois_server": "whois.cmc.iq",
+    "tld_created": "1997-05-09",
+    "tld_updated": [
+      "2023-12-18"
+    ],
+    "annotations": {
+      "country_name_iso": "Iraq",
+      "as_org_aliases": [
+        "Packet Clearing House",
+        "Tucows"
+      ]
+    },
+    "idn": [
+      "xn--mgbtx2b"
+    ]
+  }
+}

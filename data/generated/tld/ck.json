@@ -1,0 +1,77 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "ck",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Telecom Cook Islands Ltd.",
+      "admin": "Bluesky Cook Islands",
+      "tech": "Bluesky Cook Islands"
+    },
+    "nameservers": [
+      {
+        "hostname": "circa.mcs.vuw.ac.nz",
+        "ipv4": [
+          {
+            "ip": "130.195.5.12",
+            "asn": 23905,
+            "as_org": "VUW-AS-AP Victoria University of Wellington",
+            "as_country": "NZ"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "downstage.mcs.vuw.ac.nz",
+        "ipv4": [
+          {
+            "ip": "130.195.6.10",
+            "asn": 23905,
+            "as_org": "VUW-AS-AP Victoria University of Wellington",
+            "as_country": "NZ"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "parau.oyster.net.ck",
+        "ipv4": [
+          {
+            "ip": "202.65.32.128",
+            "asn": 10131,
+            "as_org": "CKTELECOM-CK-AP Telecom Cook Islands",
+            "as_country": "CK"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "poiparau.oyster.net.ck",
+        "ipv4": [
+          {
+            "ip": "202.65.32.127",
+            "asn": 10131,
+            "as_org": "CKTELECOM-CK-AP Telecom Cook Islands",
+            "as_country": "CK"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.vodafone.co.ck",
+    "tld_created": "1995-08-08",
+    "tld_updated": [
+      "2020-06-17"
+    ],
+    "annotations": {
+      "country_name_iso": "Cook Islands"
+    }
+  }
+}

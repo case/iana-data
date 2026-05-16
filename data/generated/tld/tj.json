@@ -1,0 +1,91 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "tj",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Information Technology Center",
+      "admin": "Information Technology Center",
+      "tech": "Information Technology Center"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns1.nic.tj",
+        "ipv4": [
+          {
+            "ip": "91.218.160.197",
+            "asn": 51346,
+            "as_org": "TOJIKTELECOM-AS",
+            "as_country": "TJ"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns2.tojikiston.com",
+        "ipv4": [
+          {
+            "ip": "193.111.11.4",
+            "asn": 24722,
+            "as_org": "BABILON-AS",
+            "as_country": "TJ"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "phloem.uoregon.edu",
+        "ipv4": [
+          {
+            "ip": "128.223.32.35",
+            "asn": 3582,
+            "as_org": "UONET",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:468:d01:20::80df:2023",
+            "asn": 3582,
+            "as_org": "UONET",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "tj.cctld.authdns.ripe.net",
+        "ipv4": [
+          {
+            "ip": "193.0.9.117",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:e0::117",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.tj",
+    "tld_created": "1997-12-11",
+    "tld_updated": [
+      "2020-03-09"
+    ],
+    "annotations": {
+      "country_name_iso": "Tajikistan"
+    }
+  }
+}

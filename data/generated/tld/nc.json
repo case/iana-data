@@ -1,0 +1,109 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "nc",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Office des Postes et Telecommunications",
+      "admin": "Office des Postes et Telecommunications",
+      "tech": "Office des Postes et Telecommunications"
+    },
+    "nameservers": [
+      {
+        "hostname": "any-ns1.nc",
+        "ipv4": [
+          {
+            "ip": "114.69.222.1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:8000:7245:de00:0:1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "nc.cctld.authdns.ripe.net",
+        "ipv4": [
+          {
+            "ip": "193.0.9.100",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a13:27c0:30::100",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.nc",
+        "ipv4": [
+          {
+            "ip": "202.87.129.16",
+            "asn": 18200,
+            "as_org": "OPT-NC-AS-AP Office des Postes et Telecommunications New-Caledonia",
+            "as_country": "NC"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2404:2200:10:1000::53:1",
+            "asn": 18200,
+            "as_org": "OPT-NC-AS-AP Office des Postes et Telecommunications New-Caledonia",
+            "as_country": "NC"
+          }
+        ]
+      },
+      {
+        "hostname": "ns2.nc",
+        "ipv4": [
+          {
+            "ip": "202.87.129.17",
+            "asn": 18200,
+            "as_org": "OPT-NC-AS-AP Office des Postes et Telecommunications New-Caledonia",
+            "as_country": "NC"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2404:2200:10:1000::53:2",
+            "asn": 18200,
+            "as_org": "OPT-NC-AS-AP Office des Postes et Telecommunications New-Caledonia",
+            "as_country": "NC"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.domaine.nc",
+    "whois_server": "whois.nc",
+    "tld_created": "1993-10-13",
+    "tld_updated": [
+      "2025-07-23"
+    ],
+    "annotations": {
+      "country_name_iso": "New Caledonia",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

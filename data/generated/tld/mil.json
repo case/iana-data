@@ -1,0 +1,139 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "mil",
+    "delegated": true,
+    "iana_tag": "sponsored",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "DoD Network Information Center",
+      "admin": "DoD Network Information Center",
+      "tech": "DoD Network Information Center"
+    },
+    "nameservers": [
+      {
+        "hostname": "con1.nipr.mil",
+        "ipv4": [
+          {
+            "ip": "199.252.157.234",
+            "asn": 721,
+            "as_org": "DNIC-ASBLK-00721-00726",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2608:140:c:157::234",
+            "asn": 5927,
+            "as_org": "DNIC-ASBLK-05800-06055",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "con2.nipr.mil",
+        "ipv4": [
+          {
+            "ip": "199.252.162.234",
+            "asn": 721,
+            "as_org": "DNIC-ASBLK-00721-00726",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2608:120:c:162::234",
+            "asn": 5927,
+            "as_org": "DNIC-ASBLK-05800-06055",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "eur1.nipr.mil",
+        "ipv4": [
+          {
+            "ip": "199.252.154.234",
+            "asn": 721,
+            "as_org": "DNIC-ASBLK-00721-00726",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2608:4122:2:154::234",
+            "asn": 5927,
+            "as_org": "DNIC-ASBLK-05800-06055",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "eur2.nipr.mil",
+        "ipv4": [
+          {
+            "ip": "199.252.143.234",
+            "asn": 721,
+            "as_org": "DNIC-ASBLK-00721-00726",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2608:4163:1:143::234",
+            "asn": 5927,
+            "as_org": "DNIC-ASBLK-05800-06055",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "pac1.nipr.mil",
+        "ipv4": [
+          {
+            "ip": "199.252.180.234",
+            "asn": 721,
+            "as_org": "DNIC-ASBLK-00721-00726",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2608:c184:1:180::234",
+            "asn": 5927,
+            "as_org": "DNIC-ASBLK-05800-06055",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "pac2.nipr.mil",
+        "ipv4": [
+          {
+            "ip": "199.252.155.234",
+            "asn": 5927,
+            "as_org": "DNIC-ASBLK-05800-06055",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2608:c144:1:155::234",
+            "asn": 5927,
+            "as_org": "DNIC-ASBLK-05800-06055",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "tld_created": "1985-01-01",
+    "tld_updated": [
+      "2026-03-10"
+    ]
+  }
+}

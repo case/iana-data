@@ -1,0 +1,190 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "nowruz",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "Emergency Back-End Registry Operator Program - ICANN",
+      "admin": "Internet Corporation for Assigned Names and Numbers (ICANN)",
+      "tech": "Nominet"
+    },
+    "nameservers": [
+      {
+        "hostname": "dns1.emdns.uk",
+        "ipv4": [
+          {
+            "ip": "213.248.217.153",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:618:401::153",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "dns2.emdns.uk",
+        "ipv4": [
+          {
+            "ip": "103.49.81.153",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2401:fd80:401::153",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "dns3.emdns.uk",
+        "ipv4": [
+          {
+            "ip": "213.248.221.153",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:618:405::153",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "dns4.emdns.uk",
+        "ipv4": [
+          {
+            "ip": "43.230.49.153",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2401:fd80:405::153",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "dnsa.emdns.uk",
+        "ipv4": [
+          {
+            "ip": "156.154.100.3",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:502:ad09::3",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "dnsb.emdns.uk",
+        "ipv4": [
+          {
+            "ip": "156.154.101.3",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:502:2eda::3",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "dnsc.emdns.uk",
+        "ipv4": [
+          {
+            "ip": "156.154.102.3",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2610:a1:1009::3",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "dnsd.emdns.uk",
+        "ipv4": [
+          {
+            "ip": "156.154.103.3",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2610:a1:1010::3",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://icann.org/ebero",
+    "rdap_server": "https://rdap.nominet.uk/nowruz/",
+    "tld_created": "2015-11-25",
+    "tld_updated": [
+      "2025-01-30"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "Nominet",
+        "UltraDNS"
+      ]
+    }
+  }
+}

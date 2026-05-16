@@ -1,0 +1,147 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "final",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "Núcleo de Informação e Coordenação do Ponto BR - NIC.br",
+      "admin": "NIC.br",
+      "tech": "NIC.br"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.dns.br",
+        "ipv4": [
+          {
+            "ip": "200.219.148.10",
+            "asn": 53035,
+            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_country": "BR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:12f8:6::10",
+            "asn": 53035,
+            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_country": "BR"
+          }
+        ]
+      },
+      {
+        "hostname": "b.dns.br",
+        "ipv4": [
+          {
+            "ip": "200.189.41.10",
+            "asn": 10906,
+            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_country": "BR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:12f8:8::10",
+            "asn": 10906,
+            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_country": "BR"
+          }
+        ]
+      },
+      {
+        "hostname": "c.dns.br",
+        "ipv4": [
+          {
+            "ip": "200.192.233.10",
+            "asn": 11284,
+            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_country": "BR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:12f8:a::10",
+            "asn": 11284,
+            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_country": "BR"
+          }
+        ]
+      },
+      {
+        "hostname": "d.dns.br",
+        "ipv4": [
+          {
+            "ip": "200.219.154.10",
+            "asn": 11644,
+            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_country": "BR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:12f8:4::10",
+            "asn": 11644,
+            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_country": "BR"
+          }
+        ]
+      },
+      {
+        "hostname": "e.dns.br",
+        "ipv4": [
+          {
+            "ip": "200.229.248.10",
+            "asn": 12136,
+            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_country": "BR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:12f8:2::10",
+            "asn": 12136,
+            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_country": "BR"
+          }
+        ]
+      },
+      {
+        "hostname": "f.dns.br",
+        "ipv4": [
+          {
+            "ip": "200.219.159.10",
+            "asn": 14650,
+            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_country": "BR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:12f8:c::10",
+            "asn": 14650,
+            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_country": "BR"
+          }
+        ]
+      }
+    ],
+    "rdap_server": "https://rdap.gtlds.nic.br/",
+    "tld_created": "2015-05-29",
+    "tld_updated": [
+      "2025-08-14"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ]
+    }
+  }
+}

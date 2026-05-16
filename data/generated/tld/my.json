@@ -1,0 +1,172 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "my",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "MYNIC Berhad",
+      "admin": "MYNIC Berhad",
+      "tech": "MYNIC Berhad"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.mynic.centralnic-dns.com",
+        "ipv4": [
+          {
+            "ip": "194.169.218.114",
+            "asn": 199330,
+            "as_org": "CENTRALNIC-ANYCAST-A CentralNic Anycast-A AS Number",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:13cc::1:114",
+            "asn": 199330,
+            "as_org": "CENTRALNIC-ANYCAST-A CentralNic Anycast-A AS Number",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "b.mynic.centralnic-dns.com",
+        "ipv4": [
+          {
+            "ip": "185.24.64.114",
+            "asn": 60890,
+            "as_org": "CENTRALNIC-ANYCAST-B CentralNic Anycast-B AS Number",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a04:2b00:13cc::1:114",
+            "asn": 60890,
+            "as_org": "CENTRALNIC-ANYCAST-B CentralNic Anycast-B AS Number",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "c.mynic.centralnic-dns.com",
+        "ipv4": [
+          {
+            "ip": "212.18.248.114",
+            "asn": 201304,
+            "as_org": "CENTRALNIC-ANYCAST-E",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a04:2b00:13ee::114",
+            "asn": 201304,
+            "as_org": "CENTRALNIC-ANYCAST-E",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "d.mynic.centralnic-dns.com",
+        "ipv4": [
+          {
+            "ip": "212.18.249.114",
+            "asn": 201303,
+            "as_org": "CENTRALNIC-ANYCAST-F",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a04:2b00:13ff::114",
+            "asn": 201303,
+            "as_org": "CENTRALNIC-ANYCAST-F",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "e.nic.my",
+        "ipv4": [
+          {
+            "ip": "152.69.217.125",
+            "asn": 31898,
+            "as_org": "ORACLE-BMC-31898",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2603:c024:4518:ad60:242::2",
+            "asn": 31898,
+            "as_org": "ORACLE-BMC-31898",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns01.trs-dns.com",
+        "ipv4": [
+          {
+            "ip": "64.96.1.1",
+            "asn": 393818,
+            "as_org": "TUCOWS-TRS-DNS1",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:57:4001::1",
+            "asn": 393818,
+            "as_org": "TUCOWS-TRS-DNS1",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "ns01.trs-dns.net",
+        "ipv4": [
+          {
+            "ip": "64.96.2.1",
+            "asn": 63363,
+            "as_org": "TUCOWS-TRS-DNS2",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:57:4002::1",
+            "asn": 63363,
+            "as_org": "TUCOWS-TRS-DNS2",
+            "as_country": "CA"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.mynic.my",
+    "whois_server": "whois.mynic.my",
+    "rdap_server": "https://rdap.mynic.my/rdap/",
+    "tld_created": "1987-06-08",
+    "tld_updated": [
+      "2026-04-18"
+    ],
+    "annotations": {
+      "rdap_source": "supplemental",
+      "country_name_iso": "Malaysia",
+      "as_org_aliases": [
+        "CentralNic",
+        "Tucows"
+      ]
+    },
+    "idn": [
+      "xn--mgbx4cd0ab"
+    ]
+  }
+}

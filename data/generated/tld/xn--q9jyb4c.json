@@ -1,0 +1,135 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "xn--q9jyb4c",
+    "tld_unicode": "みんな",
+    "tld_script": "Hiragana",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "Charleston Road Registry Inc.",
+      "admin": "Google Inc.",
+      "tech": "Google Inc."
+    },
+    "nameservers": [
+      {
+        "hostname": "ns-tld1.charlestonroadregistry.com",
+        "ipv4": [
+          {
+            "ip": "216.239.32.105",
+            "asn": 15169,
+            "as_org": "GOOGLE",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:4860:4802:32::69",
+            "asn": 15169,
+            "as_org": "GOOGLE",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns-tld2.charlestonroadregistry.com",
+        "ipv4": [
+          {
+            "ip": "216.239.34.105",
+            "asn": 15169,
+            "as_org": "GOOGLE",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:4860:4802:34::69",
+            "asn": 15169,
+            "as_org": "GOOGLE",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns-tld3.charlestonroadregistry.com",
+        "ipv4": [
+          {
+            "ip": "216.239.36.105",
+            "asn": 15169,
+            "as_org": "GOOGLE",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:4860:4802:36::69",
+            "asn": 15169,
+            "as_org": "GOOGLE",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns-tld4.charlestonroadregistry.com",
+        "ipv4": [
+          {
+            "ip": "216.239.38.105",
+            "asn": 15169,
+            "as_org": "GOOGLE",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:4860:4802:38::69",
+            "asn": 15169,
+            "as_org": "GOOGLE",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns-tld5.charlestonroadregistry.com",
+        "ipv4": [
+          {
+            "ip": "216.239.60.105",
+            "asn": 43515,
+            "as_org": "YOUTUBE YOUTUBE",
+            "as_country": "IE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:4860:4805::69",
+            "asn": 43515,
+            "as_org": "YOUTUBE YOUTUBE",
+            "as_country": "IE"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://www.registry.google",
+    "rdap_server": "https://pubapi.registry.google/rdap/",
+    "tld_created": "2013-11-13",
+    "tld_updated": [
+      "2025-04-11"
+    ],
+    "annotations": {
+      "tld_manager_alias": "Google Registry",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "Google"
+      ]
+    }
+  }
+}

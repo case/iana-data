@@ -1,0 +1,116 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "ly",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "General Authority of Communications and Informatics (GACI)",
+      "admin": "General Authority of Communications and Informatics (GACI)",
+      "tech": "Libya Telecom and Technology"
+    },
+    "nameservers": [
+      {
+        "hostname": "dns.lttnet.net",
+        "ipv4": [
+          {
+            "ip": "62.240.36.9",
+            "asn": 21003,
+            "as_org": "GPTC-AS",
+            "as_country": "LY"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "dns1.lttnet.net",
+        "ipv4": [
+          {
+            "ip": "62.68.42.9",
+            "asn": 21003,
+            "as_org": "GPTC-AS",
+            "as_country": "LY"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns-ly.afrinic.net",
+        "ipv4": [
+          {
+            "ip": "196.216.168.24",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:43f8:120::24",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ]
+      },
+      {
+        "hostname": "pch.ltt.ly",
+        "ipv4": [
+          {
+            "ip": "204.61.216.67",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6067:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "phloem.uoregon.edu",
+        "ipv4": [
+          {
+            "ip": "128.223.32.35",
+            "asn": 3582,
+            "as_org": "UONET",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:468:d01:20::80df:2023",
+            "asn": 3582,
+            "as_org": "UONET",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://wsm.ltt.ly/",
+    "whois_server": "whois.nic.ly",
+    "rdap_server": "https://rdap.nic.ly",
+    "tld_created": "1997-04-23",
+    "tld_updated": [
+      "2025-11-01"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Libya",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

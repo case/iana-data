@@ -1,0 +1,206 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "pt",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Associação DNS.PT",
+      "admin": "Associação DNS.PT",
+      "tech": "Associação DNS.PT"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.dns.pt",
+        "ipv4": [
+          {
+            "ip": "185.39.208.1",
+            "asn": 199993,
+            "as_org": "DNS",
+            "as_country": "PT"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a04:6d80::1",
+            "asn": 199993,
+            "as_org": "DNS",
+            "as_country": "PT"
+          }
+        ]
+      },
+      {
+        "hostname": "b.dns.pt",
+        "ipv4": [
+          {
+            "ip": "194.0.25.23",
+            "asn": 1921,
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_country": "AT"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:20::23",
+            "asn": 1921,
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_country": "AT"
+          }
+        ]
+      },
+      {
+        "hostname": "c.dns.pt",
+        "ipv4": [
+          {
+            "ip": "204.61.216.105",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6105:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "d.dns.pt",
+        "ipv4": [
+          {
+            "ip": "185.39.210.1",
+            "asn": 199993,
+            "as_org": "DNS",
+            "as_country": "PT"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a04:6d82::1",
+            "asn": 199993,
+            "as_org": "DNS",
+            "as_country": "PT"
+          }
+        ]
+      },
+      {
+        "hostname": "e.dns.pt",
+        "ipv4": [
+          {
+            "ip": "193.136.192.64",
+            "asn": 1930,
+            "as_org": "RCCN Fundacao para a Ciencia e a Tecnologia, I.P.",
+            "as_country": "PT"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:690:a00:4001::64",
+            "asn": 1930,
+            "as_org": "RCCN Fundacao para a Ciencia e a Tecnologia, I.P.",
+            "as_country": "PT"
+          }
+        ]
+      },
+      {
+        "hostname": "g.dns.pt",
+        "ipv4": [
+          {
+            "ip": "193.136.2.226",
+            "asn": 1930,
+            "as_org": "RCCN Fundacao para a Ciencia e a Tecnologia, I.P.",
+            "as_country": "PT"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:690:a80:4001::100",
+            "asn": 1930,
+            "as_org": "RCCN Fundacao para a Ciencia e a Tecnologia, I.P.",
+            "as_country": "PT"
+          }
+        ]
+      },
+      {
+        "hostname": "h.dns.pt",
+        "ipv4": [
+          {
+            "ip": "194.146.106.138",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:1010:35::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "ns.dns.br",
+        "ipv4": [
+          {
+            "ip": "200.160.0.5",
+            "asn": 22548,
+            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_country": "BR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:12ff:0:a20::5",
+            "asn": 22548,
+            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_country": "BR"
+          }
+        ]
+      },
+      {
+        "hostname": "ns2.nic.fr",
+        "ipv4": [
+          {
+            "ip": "192.93.0.4",
+            "asn": 2486,
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_country": "FR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:660:3005:1::1:2",
+            "asn": 2486,
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_country": "FR"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.dns.pt/",
+    "whois_server": "whois.dns.pt",
+    "tld_created": "1988-06-30",
+    "tld_updated": [
+      "2023-08-02"
+    ],
+    "annotations": {
+      "country_name_iso": "Portugal",
+      "as_org_aliases": [
+        "AFNIC",
+        "Packet Clearing House",
+        "RcodeZero"
+      ]
+    }
+  }
+}

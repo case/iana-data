@@ -1,0 +1,168 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "samsung",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "SAMSUNG SDS CO., LTD",
+      "admin": "Whois Corp.",
+      "tech": "Whois Corp."
+    },
+    "nameservers": [
+      {
+        "hostname": "n1-a1.aka-ns.net",
+        "ipv4": [
+          {
+            "ip": "23.2.10.1",
+            "asn": 21342,
+            "as_org": "AKAMAI-ASN2",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2600:1405:4800::1",
+            "asn": 21342,
+            "as_org": "AKAMAI-ASN2",
+            "as_country": "NL"
+          }
+        ]
+      },
+      {
+        "hostname": "n1-a13.aka-ns.net",
+        "ipv4": [
+          {
+            "ip": "184.29.150.1",
+            "asn": 21342,
+            "as_org": "AKAMAI-ASN2",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2600:1405:400::1",
+            "asn": 21342,
+            "as_org": "AKAMAI-ASN2",
+            "as_country": "NL"
+          }
+        ]
+      },
+      {
+        "hostname": "n1-a20.aka-ns.net",
+        "ipv4": [
+          {
+            "ip": "184.29.154.1",
+            "asn": 21342,
+            "as_org": "AKAMAI-ASN2",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2600:1405:2400::1",
+            "asn": 21342,
+            "as_org": "AKAMAI-ASN2",
+            "as_country": "NL"
+          }
+        ]
+      },
+      {
+        "hostname": "n1-a26.aka-ns.net",
+        "ipv4": [
+          {
+            "ip": "184.29.157.1",
+            "asn": 21342,
+            "as_org": "AKAMAI-ASN2",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2600:1405:3c00::1",
+            "asn": 21342,
+            "as_org": "AKAMAI-ASN2",
+            "as_country": "NL"
+          }
+        ]
+      },
+      {
+        "hostname": "n1-a4.aka-ns.net",
+        "ipv4": [
+          {
+            "ip": "23.59.162.1",
+            "asn": 21342,
+            "as_org": "AKAMAI-ASN2",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2600:1405:7800::1",
+            "asn": 21342,
+            "as_org": "AKAMAI-ASN2",
+            "as_country": "NL"
+          }
+        ]
+      },
+      {
+        "hostname": "n1-a7.aka-ns.net",
+        "ipv4": [
+          {
+            "ip": "96.16.208.1",
+            "asn": 21342,
+            "as_org": "AKAMAI-ASN2",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2600:1405:a800::1",
+            "asn": 21342,
+            "as_org": "AKAMAI-ASN2",
+            "as_country": "NL"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.dns.samsung",
+        "ipv4": [
+          {
+            "ip": "140.238.4.10",
+            "asn": 31898,
+            "as_org": "ORACLE-BMC-31898",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2603:c022:8004:5d05:ca27:7608:ff55:38fe",
+            "asn": 31898,
+            "as_org": "ORACLE-BMC-31898",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://samsungregistry.com",
+    "whois_server": "whois.nic.samsung",
+    "rdap_server": "https://nic.samsung/rdap/",
+    "tld_created": "2014-10-30",
+    "tld_updated": [
+      "2026-01-08"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ]
+    }
+  }
+}

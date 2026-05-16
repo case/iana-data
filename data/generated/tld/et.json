@@ -1,0 +1,77 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "et",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Ethio telecom",
+      "admin": "Ethio Telecom",
+      "tech": "Ethio Telecom"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.nic.et",
+        "ipv4": [
+          {
+            "ip": "197.156.74.192",
+            "asn": 24757,
+            "as_org": "EthioNet-AS",
+            "as_country": "ET"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "b.nic.et",
+        "ipv4": [
+          {
+            "ip": "197.156.74.193",
+            "asn": 24757,
+            "as_org": "EthioNet-AS",
+            "as_country": "ET"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "c.nic.et",
+        "ipv4": [
+          {
+            "ip": "196.188.116.180",
+            "asn": 24757,
+            "as_org": "EthioNet-AS",
+            "as_country": "ET"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "d.nic.et",
+        "ipv4": [
+          {
+            "ip": "196.188.116.181",
+            "asn": 24757,
+            "as_org": "EthioNet-AS",
+            "as_country": "ET"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.ethiotelecom.et",
+    "tld_created": "1995-10-15",
+    "tld_updated": [
+      "2025-09-19"
+    ],
+    "annotations": {
+      "country_name_iso": "Ethiopia"
+    }
+  }
+}

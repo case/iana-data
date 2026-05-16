@@ -1,0 +1,110 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "mg",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "NIC-MG (Network Information Center Madagascar)",
+      "admin": "NIC-MG (Network Information Center Madagascar)",
+      "tech": "NIC-MG (Network Information Center Madagascar)"
+    },
+    "nameservers": [
+      {
+        "hostname": "dns-tld.ird.fr",
+        "ipv4": [
+          {
+            "ip": "13.39.116.127",
+            "asn": 16509,
+            "as_org": "AMAZON-02",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns-mg.afrinic.net",
+        "ipv4": [
+          {
+            "ip": "196.216.168.35",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:43f8:120::35",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ]
+      },
+      {
+        "hostname": "ns-mg.malagasy.com",
+        "ipv4": [
+          {
+            "ip": "51.178.182.212",
+            "asn": 16276,
+            "as_org": "OVH",
+            "as_country": "FR"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns.nic.mg",
+        "ipv4": [
+          {
+            "ip": "196.43.214.3",
+            "asn": 37327,
+            "as_org": "NIC",
+            "as_country": "MG"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "pch.nic.mg",
+        "ipv4": [
+          {
+            "ip": "204.61.216.121",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6121:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.mg",
+    "whois_server": "whois.nic.mg",
+    "rdap_server": "http://rdap.nic.mg",
+    "tld_created": "1995-07-25",
+    "tld_updated": [
+      "2025-10-02"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Madagascar",
+      "as_org_aliases": [
+        "Amazon",
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

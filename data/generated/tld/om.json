@@ -1,0 +1,150 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "om",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Telecommunications Regulatory Authority (TRA)",
+      "admin": "Telecommunications Regulatory Authority (TRA)",
+      "tech": "Telecommunications Regulatory Authority (TRA)"
+    },
+    "nameservers": [
+      {
+        "hostname": "cctld.alpha.aridns.net.au",
+        "ipv4": [
+          {
+            "ip": "37.209.192.6",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dcd:1::6",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "cctld.beta.aridns.net.au",
+        "ipv4": [
+          {
+            "ip": "37.209.194.6",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dcd:2::6",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "cctld.delta.aridns.net.au",
+        "ipv4": [
+          {
+            "ip": "37.209.198.6",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dcd:4::6",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "cctld.gamma.aridns.net.au",
+        "ipv4": [
+          {
+            "ip": "37.209.196.6",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dcd:3::6",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.registry.om",
+        "ipv4": [
+          {
+            "ip": "185.27.88.50",
+            "asn": 60680,
+            "as_org": "OMANTRA-AS",
+            "as_country": "OM"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a00:9120:1::50",
+            "asn": 60680,
+            "as_org": "OMANTRA-AS",
+            "as_country": "OM"
+          }
+        ]
+      },
+      {
+        "hostname": "ns2.registry.om",
+        "ipv4": [
+          {
+            "ip": "185.27.89.50",
+            "asn": 60680,
+            "as_org": "OMANTRA-AS",
+            "as_country": "OM"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a00:9120:2::50",
+            "asn": 60680,
+            "as_org": "OMANTRA-AS",
+            "as_country": "OM"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.registry.om/om/en/?page_id=197",
+    "whois_server": "whois.registry.om",
+    "tld_created": "1996-04-11",
+    "tld_updated": [
+      "2017-11-21"
+    ],
+    "annotations": {
+      "country_name_iso": "Oman",
+      "as_org_aliases": [
+        "UltraDNS"
+      ]
+    },
+    "idn": [
+      "xn--mgb9awbf"
+    ]
+  }
+}
