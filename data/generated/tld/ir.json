@@ -1,0 +1,109 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "ir",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Institute for Research in Fundamental Sciences",
+      "admin": "Institute for Research in Fundamental Sciences (IPM)",
+      "tech": "Institute for Research in Fundamental Sciences (IPM)"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.nic.ir",
+        "ipv4": [
+          {
+            "ip": "193.189.123.2",
+            "asn": 39200,
+            "as_org": "IRNICANYCAST-AS",
+            "as_country": "IR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:b0:0:193:189:123:2",
+            "asn": 39200,
+            "as_org": "IRNICANYCAST-AS",
+            "as_country": "IR"
+          }
+        ]
+      },
+      {
+        "hostname": "b.nic.ir",
+        "ipv4": [
+          {
+            "ip": "193.189.122.83",
+            "asn": 35285,
+            "as_org": "IRNIC-AS",
+            "as_country": "IR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:b1:0:193:189:122:83",
+            "asn": 35285,
+            "as_org": "IRNIC-AS",
+            "as_country": "IR"
+          }
+        ]
+      },
+      {
+        "hostname": "c.nic.ir",
+        "ipv4": [
+          {
+            "ip": "45.93.171.206",
+            "asn": 48011,
+            "as_org": "DIGITURUNC",
+            "as_country": "TR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a0c:6600:4::152",
+            "asn": 48011,
+            "as_org": "DIGITURUNC",
+            "as_country": "TR"
+          }
+        ]
+      },
+      {
+        "hostname": "d.nic.ir",
+        "ipv4": [
+          {
+            "ip": "194.225.70.83",
+            "asn": 35285,
+            "as_org": "IRNIC-AS",
+            "as_country": "IR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:14e8:c:0:194:225:70:83",
+            "asn": 6736,
+            "as_org": "IRANET-IPM Institute for Research in Fundamental Sciences IPM",
+            "as_country": "IR"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.ir",
+    "whois_server": "whois.nic.ir",
+    "tld_created": "1994-04-06",
+    "tld_updated": [
+      "2026-05-14"
+    ],
+    "annotations": {
+      "country_name_iso": "Iran, Islamic Republic of"
+    },
+    "idn": [
+      "xn--mgba3a4f16a"
+    ]
+  }
+}

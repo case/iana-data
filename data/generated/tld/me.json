@@ -1,0 +1,130 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "me",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Government of Montenegro",
+      "admin": "University of Montenegro, Faculty of Electrical Engineering",
+      "tech": "Center of Information System (CIS)\nUniversity of Montenegro"
+    },
+    "nameservers": [
+      {
+        "hostname": "a0.nic.me",
+        "ipv4": [
+          {
+            "ip": "199.253.59.1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:53::1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "a2.nic.me",
+        "ipv4": [
+          {
+            "ip": "199.249.119.1",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:47::1",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ]
+      },
+      {
+        "hostname": "b0.nic.me",
+        "ipv4": [
+          {
+            "ip": "199.253.60.1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:54::1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "b2.nic.me",
+        "ipv4": [
+          {
+            "ip": "199.249.127.1",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:4f::1",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ]
+      },
+      {
+        "hostname": "c0.nic.me",
+        "ipv4": [
+          {
+            "ip": "199.253.61.1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:55::1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.domain.me",
+    "whois_server": "whois.nic.me",
+    "rdap_server": "https://rdap.identitydigital.services/rdap/",
+    "tld_created": "2007-09-24",
+    "tld_updated": [
+      "2020-10-19"
+    ],
+    "annotations": {
+      "rdap_source": "supplemental",
+      "country_name_iso": "Montenegro",
+      "as_org_aliases": [
+        "Identity Digital"
+      ]
+    }
+  }
+}

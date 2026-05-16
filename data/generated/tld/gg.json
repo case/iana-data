@@ -1,0 +1,148 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "gg",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Island Networks Ltd.",
+      "admin": "Island Networks Ltd",
+      "tech": "Island Networks Limited"
+    },
+    "nameservers": [
+      {
+        "hostname": "c.ci-servers.org",
+        "ipv4": [
+          {
+            "ip": "194.146.106.86",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:1010:22::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "dns1.nominetdns.uk",
+        "ipv4": [
+          {
+            "ip": "213.248.219.254",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:618:403::254",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "dns2.nominetdns.uk",
+        "ipv4": [
+          {
+            "ip": "103.49.83.254",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2401:fd80:403::254",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "dns3.nominetdns.uk",
+        "ipv4": [
+          {
+            "ip": "213.248.223.254",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:618:407::254",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "dns4.nominetdns.uk",
+        "ipv4": [
+          {
+            "ip": "43.230.51.254",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2401:fd80:407::254",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "e.ci-servers.net",
+        "ipv4": [
+          {
+            "ip": "204.61.216.74",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6074:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.gg",
+    "whois_server": "whois.gg",
+    "tld_created": "1996-08-07",
+    "tld_updated": [
+      "2025-07-07"
+    ],
+    "annotations": {
+      "country_name_iso": "Guernsey",
+      "as_org_aliases": [
+        "Nominet",
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

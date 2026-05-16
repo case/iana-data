@@ -1,0 +1,84 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "ge",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Caucasus Online LLC",
+      "admin": "Caucasus Online LLC",
+      "tech": "Caucasus Online LLC"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns1.nic.ge",
+        "ipv4": [
+          {
+            "ip": "185.19.99.30",
+            "asn": 20771,
+            "as_org": "CAUCASUS-CABLE-SYSTEM CCS Autonomous System",
+            "as_country": "GE"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns2.nic.ge",
+        "ipv4": [
+          {
+            "ip": "185.19.98.98",
+            "asn": 20771,
+            "as_org": "CAUCASUS-CABLE-SYSTEM CCS Autonomous System",
+            "as_country": "GE"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns3.nic.ge",
+        "ipv4": [
+          {
+            "ip": "3.66.58.155",
+            "asn": 16509,
+            "as_org": "AMAZON-02",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns4.nic.ge",
+        "ipv4": [
+          {
+            "ip": "35.153.81.228",
+            "asn": 14618,
+            "as_org": "AMAZON-AES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://nic.ge",
+    "whois_server": "whois.nic.ge",
+    "tld_created": "1992-12-02",
+    "tld_updated": [
+      "2025-06-11"
+    ],
+    "annotations": {
+      "country_name_iso": "Georgia",
+      "as_org_aliases": [
+        "Amazon"
+      ]
+    },
+    "idn": [
+      "xn--node"
+    ]
+  }
+}

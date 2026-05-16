@@ -1,0 +1,148 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "mx",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "NIC-Mexico\nITESM - Campus Monterrey",
+      "admin": "NIC-Mexico, ITESM - Campus Monterrey",
+      "tech": "NIC-Mexico, ITESM - Campus Monterrey"
+    },
+    "nameservers": [
+      {
+        "hostname": "c.mx-ns.mx",
+        "ipv4": [
+          {
+            "ip": "192.100.224.1",
+            "asn": 28499,
+            "as_org": "Network Information Center Mexico",
+            "as_country": "MX"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:1258::1",
+            "asn": 28499,
+            "as_org": "Network Information Center Mexico",
+            "as_country": "MX"
+          }
+        ]
+      },
+      {
+        "hostname": "e.mx-ns.mx",
+        "ipv4": [
+          {
+            "ip": "189.201.244.1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2801:c4:c0::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "i.mx-ns.mx",
+        "ipv4": [
+          {
+            "ip": "207.248.68.1",
+            "asn": 28500,
+            "as_org": "Network Information Center Mexico",
+            "as_country": "MX"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2801:c4:d0::1",
+            "asn": 28500,
+            "as_org": "Network Information Center Mexico",
+            "as_country": "MX"
+          }
+        ]
+      },
+      {
+        "hostname": "m.mx-ns.mx",
+        "ipv4": [
+          {
+            "ip": "200.94.176.1",
+            "asn": 28498,
+            "as_org": "Network Information Center Mexico",
+            "as_country": "MX"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:13c7:7000::1",
+            "asn": 28498,
+            "as_org": "Network Information Center Mexico",
+            "as_country": "MX"
+          }
+        ]
+      },
+      {
+        "hostname": "o.mx-ns.mx",
+        "ipv4": [
+          {
+            "ip": "200.23.1.1",
+            "asn": 28498,
+            "as_org": "Network Information Center Mexico",
+            "as_country": "MX"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:1201::1",
+            "asn": 28498,
+            "as_org": "Network Information Center Mexico",
+            "as_country": "MX"
+          }
+        ]
+      },
+      {
+        "hostname": "x.mx-ns.mx",
+        "ipv4": [
+          {
+            "ip": "201.131.252.1",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:1201:10::1",
+            "asn": 27661,
+            "as_org": "Network Information Center Mexico",
+            "as_country": "MX"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.registry.mx/",
+    "whois_server": "whois.mx",
+    "tld_created": "1989-02-01",
+    "tld_updated": [
+      "2026-02-28"
+    ],
+    "annotations": {
+      "country_name_iso": "Mexico",
+      "as_org_aliases": [
+        "Packet Clearing House",
+        "UltraDNS"
+      ]
+    }
+  }
+}

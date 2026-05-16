@@ -2,10 +2,12 @@
 
 import json
 from pathlib import Path
+from types import SimpleNamespace
 
 import pytest
+from _pytest.monkeypatch import MonkeyPatch
 
-from src.build.tlds import build_tlds_json
+from src.build.tlds import OutputPaths, build_tlds_json
 from src.parse.rdap_json import parse_rdap_json
 from src.parse.root_db_html import parse_root_db_html
 
@@ -14,228 +16,192 @@ FIXTURES_DIR = Path(__file__).parent.parent / "fixtures" / "source" / "core"
 
 @pytest.fixture
 def temp_output(tmp_path, monkeypatch):
-    """Fixture to redirect build output to temp directory."""
-    output_file = tmp_path / "tlds.json"
-    metadata_file = tmp_path / "metadata.json"
-    monkeypatch.setattr("src.build.tlds.TLDS_OUTPUT_FILE", str(output_file))
-    monkeypatch.setattr("src.utilities.metadata.METADATA_FILE", str(metadata_file))
-    return output_file
+    """Function-scoped OutputPaths under tmp_path.
+
+    Tests that need fresh state per invocation (idempotency, cold-start,
+    injected write errors) use this fixture and pass it to build_tlds_json.
+    """
+    monkeypatch.setattr(
+        "src.utilities.metadata.METADATA_FILE", str(tmp_path / "metadata.json")
+    )
+    return OutputPaths(
+        tlds_json=tmp_path / "tlds.json",
+        tlds_index=tmp_path / "tlds-index.json",
+        tld_dir=tmp_path / "tld",
+    )
 
 
-def test_build_tlds_json_creates_file(temp_output):
-    """Test that build_tlds_json creates the output file."""
-    result = build_tlds_json()
+@pytest.fixture(scope="module")
+def shared_build(tmp_path_factory):
+    """Module-scoped single build of all outputs, reused by read-only tests.
 
-    # Should return result dict
-    assert "total_tlds" in result
-    assert "output_file" in result
+    build_tlds_json writes 1596 files per call. Sharing one build across
+    all read-only inspection tests in this module cuts test-file runtime
+    roughly by the number of read-only tests.
+    """
+    tmp = tmp_path_factory.mktemp("shared_build")
+    mp = MonkeyPatch()
+    mp.setattr("src.utilities.metadata.METADATA_FILE", str(tmp / "metadata.json"))
+    paths = OutputPaths(
+        tlds_json=tmp / "tlds.json",
+        tlds_index=tmp / "tlds-index.json",
+        tld_dir=tmp / "tld",
+    )
+    result = build_tlds_json(paths)
+    yield SimpleNamespace(
+        tlds_json=paths.tlds_json,
+        tlds_index=paths.tlds_index,
+        tld_dir=paths.tld_dir,
+        result=result,
+    )
+    mp.undo()
 
-    # Should create output file
-    assert temp_output.exists()
+
+def test_build_tlds_json_creates_file(shared_build):
+    """build_tlds_json returns the expected result keys and writes tlds.json."""
+    assert "total_tlds" in shared_build.result
+    assert "output_file" in shared_build.result
+    assert shared_build.tlds_json.exists()
 
 
-def test_build_tlds_json_has_correct_structure(temp_output):
-    """Test that generated tlds.json has correct top-level structure."""
-    build_tlds_json()
-
-    with open(temp_output) as f:
+def test_build_tlds_json_has_correct_structure(shared_build):
+    """tlds.json has the expected top-level structure."""
+    with open(shared_build.tlds_json) as f:
         data = json.load(f)
 
-    # Check top-level fields
     assert "description" in data
     assert "publication" in data
     assert "sources" in data
     assert "tlds" in data
-
-    # Check sources structure
     assert "iana_root_db" in data["sources"]
     assert "iana_rdap" in data["sources"]
-
-    # Check tlds is a list
     assert isinstance(data["tlds"], list)
 
 
-def test_build_tlds_json_tld_count_matches_source(temp_output):
-    """Test that number of TLDs in output matches root zone source."""
-    # Parse root zone to get expected count
+def test_build_tlds_json_tld_count_matches_source(shared_build):
+    """Number of TLDs in output matches root zone source."""
     root_zone_entries = parse_root_db_html()
     expected_count = len(root_zone_entries)
 
-    # Build and check output
-    result = build_tlds_json()
+    assert shared_build.result["total_tlds"] == expected_count
 
-    assert result["total_tlds"] == expected_count
-
-    # Also verify in the file itself
-
-    with open(temp_output) as f:
+    with open(shared_build.tlds_json) as f:
         data = json.load(f)
-
     assert len(data["tlds"]) == expected_count
 
 
-def test_build_tlds_json_has_required_fields(temp_output):
-    """Test that each TLD entry has required fields."""
-    build_tlds_json()
-
-    with open(temp_output) as f:
+def test_build_tlds_json_has_required_fields(shared_build):
+    """Each TLD entry has required fields."""
+    with open(shared_build.tlds_json) as f:
         data = json.load(f)
 
-    # Check first few entries have required fields
     for tld_entry in data["tlds"][:10]:
         assert "tld" in tld_entry
         assert "delegated" in tld_entry
         assert "iana_tag" in tld_entry
         assert "type" in tld_entry
-        # tld_manager is now in orgs object, which is optional for undelegated TLDs
 
 
-def test_build_tlds_json_strips_leading_dots(temp_output):
-    """Test that TLDs in output don't have leading dots."""
-    build_tlds_json()
-
-    with open(temp_output) as f:
+def test_build_tlds_json_strips_leading_dots(shared_build):
+    """TLDs in output don't have leading dots."""
+    with open(shared_build.tlds_json) as f:
         data = json.load(f)
 
-    # Check that no TLD starts with a dot
     for tld_entry in data["tlds"]:
         assert not tld_entry["tld"].startswith(".")
 
 
-def test_build_tlds_json_derives_type_correctly(temp_output):
-    """Test that type field is correctly derived from iana_tag."""
-    build_tlds_json()
-
-    with open(temp_output) as f:
+def test_build_tlds_json_derives_type_correctly(shared_build):
+    """type field is correctly derived from iana_tag."""
+    with open(shared_build.tlds_json) as f:
         data = json.load(f)
 
     for tld_entry in data["tlds"]:
         iana_tag = tld_entry["iana_tag"]
         derived_type = tld_entry["type"]
 
-        # Check derivation logic
         if iana_tag == "country-code":
             assert derived_type == "cctld"
         else:
             assert derived_type == "gtld"
 
 
-def test_build_tlds_json_delegated_status(temp_output):
-    """Test that delegated status is correctly set."""
-    build_tlds_json()
-
-    with open(temp_output) as f:
+def test_build_tlds_json_delegated_status(shared_build):
+    """delegated TLDs have orgs with tld_manager."""
+    with open(shared_build.tlds_json) as f:
         data = json.load(f)
 
     for tld_entry in data["tlds"]:
-        delegated = tld_entry["delegated"]
-
-        # Check logic: delegated TLDs should have orgs with tld_manager
-        if delegated:
+        if tld_entry["delegated"]:
             assert "orgs" in tld_entry
             assert "tld_manager" in tld_entry["orgs"]
-        # Undelegated TLDs may or may not have orgs
 
 
-def test_build_tlds_json_rdap_servers_present(temp_output):
-    """Test that RDAP servers are included for TLDs that have them."""
-    # Get RDAP lookup to know which TLDs should have servers
+def test_build_tlds_json_rdap_servers_present(shared_build):
+    """RDAP servers are included for TLDs that have them."""
     rdap_lookup = parse_rdap_json()
 
-    build_tlds_json()
-
-    with open(temp_output) as f:
+    with open(shared_build.tlds_json) as f:
         data = json.load(f)
 
-    # Build a map of TLD to entry for easy lookup
     tld_map = {entry["tld"]: entry for entry in data["tlds"]}
 
-    # Check a few TLDs that should have RDAP servers
     for tld in list(rdap_lookup.keys())[:5]:
         if tld in tld_map:
             entry = tld_map[tld]
-            # RDAP server should be present (from page data or bootstrap)
             assert "rdap_server" in entry
-            # Should also have rdap_source annotation
             assert "annotations" in entry
             assert "rdap_source" in entry["annotations"]
 
 
-def test_build_tlds_json_idn_unicode_field(temp_output):
-    """Test that IDN TLDs have tld_unicode field."""
-    build_tlds_json()
-
-    with open(temp_output) as f:
+def test_build_tlds_json_idn_unicode_field(shared_build):
+    """IDN TLDs have a tld_unicode field whose value isn't the A-label."""
+    with open(shared_build.tlds_json) as f:
         data = json.load(f)
 
-    # Find an IDN TLD (starts with xn--)
     idn_tlds = [entry for entry in data["tlds"] if entry["tld"].startswith("xn--")]
 
     if idn_tlds:
-        # At least one IDN should have tld_unicode
         idn_with_unicode = [e for e in idn_tlds if "tld_unicode" in e]
         assert len(idn_with_unicode) > 0
 
-        # Check that tld_unicode is different from tld
         for entry in idn_with_unicode:
             assert entry["tld_unicode"] != entry["tld"]
-            # Unicode version should not start with xn--
             assert not entry["tld_unicode"].startswith("xn--")
 
 
-def test_build_tlds_json_publication_timestamp_format(temp_output):
-    """Test that publication timestamp uses correct format (seconds + Z)."""
-    build_tlds_json()
-
-    with open(temp_output) as f:
+def test_build_tlds_json_publication_timestamp_format(shared_build):
+    """publication timestamp uses YYYY-MM-DDTHH:MM:SSZ (no microseconds)."""
+    with open(shared_build.tlds_json) as f:
         data = json.load(f)
 
     publication = data["publication"]
-
-    # Should end with Z
     assert publication.endswith("Z")
-
-    # Should not have microseconds (no decimal point)
     assert "." not in publication
-
-    # Should match format YYYY-MM-DDTHH:MM:SSZ
-    # Length should be 20 characters
     assert len(publication) == 20
 
 
-def test_build_tlds_json_delegated_count_matches_root_db(temp_output):
-    """Test that delegated TLD count matches root zone DB assigned entries."""
-    # Parse root zone DB to get expected delegated count
+def test_build_tlds_json_delegated_count_matches_root_db(shared_build):
+    """Delegated TLD count matches root zone DB assigned entries."""
     root_zone_entries = parse_root_db_html()
     expected_delegated_count = sum(
         1 for entry in root_zone_entries if entry["manager"] != "Not assigned"
     )
 
-    # Build and check output
-    build_tlds_json()
-
-    with open(temp_output) as f:
+    with open(shared_build.tlds_json) as f:
         data = json.load(f)
 
-    # Count delegated TLDs in output
     delegated_tlds = [entry for entry in data["tlds"] if entry["delegated"]]
-    actual_delegated_count = len(delegated_tlds)
-
-    # Should match the root DB (our source of truth for delegation)
-    assert actual_delegated_count == expected_delegated_count
+    assert len(delegated_tlds) == expected_delegated_count
 
 
-def test_build_tlds_json_ascii_cctld_has_country_name(temp_output):
-    """Test that ASCII ccTLDs have country_name_iso in annotations."""
-    build_tlds_json()
-
-    with open(temp_output) as f:
+def test_build_tlds_json_ascii_cctld_has_country_name(shared_build):
+    """ASCII ccTLDs have country_name_iso in annotations."""
+    with open(shared_build.tlds_json) as f:
         data = json.load(f)
 
-    # Build a map of TLD to entry
     tld_map = {entry["tld"]: entry for entry in data["tlds"]}
 
-    # Test some ASCII ccTLDs
     test_cctlds = {
         "us": "United States",
         "gb": "United Kingdom",
@@ -252,38 +218,28 @@ def test_build_tlds_json_ascii_cctld_has_country_name(temp_output):
         assert entry["annotations"]["country_name_iso"] == expected_name
 
 
-def test_build_tlds_json_idn_cctld_has_country_name(temp_output):
-    """Test that IDN ccTLDs have country_name_iso in annotations."""
-    build_tlds_json()
-
-    with open(temp_output) as f:
+def test_build_tlds_json_idn_cctld_has_country_name(shared_build):
+    """IDN ccTLDs have country_name_iso in annotations."""
+    with open(shared_build.tlds_json) as f:
         data = json.load(f)
 
-    # Find IDN ccTLDs (have tld_iso field)
     idn_cctlds = [entry for entry in data["tlds"] if "tld_iso" in entry]
-
     assert len(idn_cctlds) > 0, "Should have at least some IDN ccTLDs"
 
-    # Check that they all have country_name_iso
     for entry in idn_cctlds:
         assert "annotations" in entry
         assert "country_name_iso" in entry["annotations"]
-        # Country name should be non-empty string
         assert isinstance(entry["annotations"]["country_name_iso"], str)
         assert len(entry["annotations"]["country_name_iso"]) > 0
 
 
-def test_build_tlds_json_cctld_overrides(temp_output):
-    """Test that ccTLD overrides (ac, eu, su, uk) have correct country names."""
-    build_tlds_json()
-
-    with open(temp_output) as f:
+def test_build_tlds_json_cctld_overrides(shared_build):
+    """ccTLD overrides (ac, eu, su, uk) have correct country names."""
+    with open(shared_build.tlds_json) as f:
         data = json.load(f)
 
-    # Build a map of TLD to entry
     tld_map = {entry["tld"]: entry for entry in data["tlds"]}
 
-    # Test overrides (not in ISO 3166-1)
     overrides = {
         "ac": "Ascension Island",
         "eu": "European Union",
@@ -299,23 +255,205 @@ def test_build_tlds_json_cctld_overrides(temp_output):
             assert entry["annotations"]["country_name_iso"] == expected_name
 
 
-def test_build_tlds_json_gtld_no_country_name(temp_output):
-    """Test that gTLDs do not have country_name_iso."""
-    build_tlds_json()
-
-    with open(temp_output) as f:
+def test_build_tlds_json_gtld_no_country_name(shared_build):
+    """gTLDs do not have country_name_iso."""
+    with open(shared_build.tlds_json) as f:
         data = json.load(f)
 
-    # Find gTLDs
     gtlds = [entry for entry in data["tlds"] if entry["type"] == "gtld"]
 
-    # Check some common gTLDs
     gtld_tlds = [e["tld"] for e in gtlds]
     test_gtlds = ["com", "org", "net", "info", "biz"]
 
     for gtld in test_gtlds:
         if gtld in gtld_tlds:
             entry = [e for e in gtlds if e["tld"] == gtld][0]
-            # Should not have country_name_iso
             if "annotations" in entry:
                 assert "country_name_iso" not in entry["annotations"]
+
+
+def test_per_tld_files_exist(shared_build):
+    """Per-TLD files are written for known TLDs."""
+    for slug in ("com", "uk", "aaa"):
+        path = shared_build.tld_dir / f"{slug}.json"
+        assert path.exists(), f"{path} missing"
+
+
+def test_per_tld_file_count_matches_tlds_json(shared_build):
+    """One per-TLD file per entry in tlds.json."""
+    with open(shared_build.tlds_json) as f:
+        tlds_json = json.load(f)
+
+    file_count = len(list(shared_build.tld_dir.glob("*.json")))
+    assert file_count == len(tlds_json["tlds"])
+
+
+def test_idn_filename_uses_a_label(shared_build):
+    """IDN per-TLD files are named by A-label, not U-label."""
+    with open(shared_build.tlds_json) as f:
+        tlds_json = json.load(f)
+
+    idn_entries = [e for e in tlds_json["tlds"] if e["tld"].startswith("xn--")]
+    assert idn_entries, "Expected at least one IDN TLD in source data"
+
+    for entry in idn_entries:
+        a_label_file = shared_build.tld_dir / f"{entry['tld']}.json"
+        assert a_label_file.exists(), f"Missing A-label file {a_label_file}"
+        if "tld_unicode" in entry:
+            u_label_file = shared_build.tld_dir / f"{entry['tld_unicode']}.json"
+            assert not u_label_file.exists(), (
+                f"U-label file should not exist: {u_label_file}"
+            )
+
+
+def test_per_tld_file_content_matches_tlds_json(shared_build):
+    """Per-TLD file 'tld' key deep-equals the corresponding entry in tlds.json."""
+    with open(shared_build.tlds_json) as f:
+        tlds_json = json.load(f)
+
+    by_slug = {entry["tld"]: entry for entry in tlds_json["tlds"]}
+
+    # Sample a mix: common gTLDs, a ccTLD, an IDN.
+    # Sort the IDN candidates so the test picks the same one each run.
+    sample_slugs = ["com", "uk", "aaa"]
+    idn_slugs = sorted(s for s in by_slug if s.startswith("xn--"))
+    if idn_slugs:
+        sample_slugs.append(idn_slugs[0])
+
+    for slug in sample_slugs:
+        if slug not in by_slug:
+            continue
+        with open(shared_build.tld_dir / f"{slug}.json") as f:
+            per_tld = json.load(f)
+        assert per_tld["tld"] == by_slug[slug]
+
+
+def test_per_tld_file_is_self_contained(shared_build):
+    """Each per-TLD file carries publication and sources alongside the TLD record."""
+    with open(shared_build.tld_dir / "com.json") as f:
+        per_tld = json.load(f)
+
+    assert "publication" in per_tld
+    assert "sources" in per_tld
+    assert "tld" in per_tld
+    assert "iana_root_db" in per_tld["sources"]
+    assert "iana_rdap" in per_tld["sources"]
+
+
+def test_per_tld_file_publication_matches_tlds_json(shared_build):
+    """All artifacts share the same publication timestamp from one build."""
+    with open(shared_build.tlds_json) as f:
+        bulk_publication = json.load(f)["publication"]
+    with open(shared_build.tlds_index) as f:
+        index_publication = json.load(f)["publication"]
+    with open(shared_build.tld_dir / "com.json") as f:
+        per_tld_publication = json.load(f)["publication"]
+
+    assert bulk_publication == index_publication == per_tld_publication
+
+
+def test_index_has_one_entry_per_tld(shared_build):
+    """Index lists every TLD exactly once and count agrees."""
+    with open(shared_build.tlds_json) as f:
+        tlds_json = json.load(f)
+    with open(shared_build.tlds_index) as f:
+        index = json.load(f)
+
+    assert len(index["tlds"]) == len(tlds_json["tlds"])
+    assert index["count"] == len(index["tlds"])
+
+    bulk_slugs = {entry["tld"] for entry in tlds_json["tlds"]}
+    index_slugs = {entry["tld"] for entry in index["tlds"]}
+    assert bulk_slugs == index_slugs
+
+
+def test_index_entry_shape(shared_build):
+    """Index entries have only the documented fields; tld_unicode is conditional on IDN."""
+    with open(shared_build.tlds_index) as f:
+        index = json.load(f)
+
+    by_slug = {entry["tld"]: entry for entry in index["tlds"]}
+
+    optional_fields = {"tld_unicode", "tld_created", "tld_updated"}
+    required_fields = {"tld", "type", "delegated"}
+    allowed = required_fields | optional_fields
+
+    for entry in index["tlds"]:
+        assert required_fields.issubset(entry.keys()), (
+            f"Missing required fields in {entry}"
+        )
+        extra = set(entry.keys()) - allowed
+        assert not extra, f"Unexpected fields {extra} in {entry}"
+
+    idn_slug = next((s for s in by_slug if s.startswith("xn--")), None)
+    assert idn_slug, "Expected at least one IDN TLD in index"
+    assert "tld_unicode" in by_slug[idn_slug]
+    assert not by_slug[idn_slug]["tld_unicode"].startswith("xn--")
+
+    assert "com" in by_slug
+    assert "tld_unicode" not in by_slug["com"]
+
+
+def test_empty_tld_dir_recovery(temp_output):
+    """Build populates tld_dir from scratch when it doesn't exist (cold start)."""
+    assert not temp_output.tld_dir.exists()
+
+    build_tlds_json(temp_output)
+
+    assert temp_output.tld_dir.is_dir()
+    files = list(temp_output.tld_dir.glob("*.json"))
+    assert len(files) > 0
+
+
+def test_build_aborts_index_when_per_tld_write_fails(temp_output, monkeypatch):
+    """If a per-TLD write errors, the index is not written and the build returns an error.
+
+    Guards the canonical-data invariant: the index never references a TLD
+    whose per-TLD file failed to write. The test injects an error for one
+    specific slug and asserts the index file was not created.
+    """
+    import src.build.tlds as tlds_module
+
+    real_write = tlds_module.write_json_if_changed
+    failing_slug = "com"
+
+    def flaky_write(filepath, data, **kwargs):
+        if str(filepath).endswith(f"/{failing_slug}.json"):
+            return (False, "error")
+        return real_write(filepath, data, **kwargs)
+
+    monkeypatch.setattr(tlds_module, "write_json_if_changed", flaky_write)
+
+    result = build_tlds_json(temp_output)
+
+    assert "error" in result, f"Expected error in result, got {result}"
+    assert failing_slug in result["error"] or "per-TLD" in result["error"]
+    assert not temp_output.tlds_index.exists(), (
+        "Index was written despite a per-TLD write failure"
+    )
+
+
+def test_idempotent_second_run(temp_output):
+    """A second build with the same source data rewrites zero per-TLD files.
+
+    Verifies that write_json_if_changed's exclude_fields=["publication"]
+    actually suppresses writes when only the timestamp would change.
+    """
+    build_tlds_json(temp_output)
+    mtimes_before = {
+        p: p.stat().st_mtime_ns for p in temp_output.tld_dir.glob("*.json")
+    }
+    index_mtime_before = temp_output.tlds_index.stat().st_mtime_ns
+
+    build_tlds_json(temp_output)
+    mtimes_after = {p: p.stat().st_mtime_ns for p in temp_output.tld_dir.glob("*.json")}
+    index_mtime_after = temp_output.tlds_index.stat().st_mtime_ns
+
+    assert mtimes_before.keys() == mtimes_after.keys(), "File set changed between runs"
+    unchanged = [p for p in mtimes_before if mtimes_before[p] == mtimes_after[p]]
+    assert len(unchanged) == len(mtimes_before), (
+        f"{len(mtimes_before) - len(unchanged)} per-TLD files were rewritten on a no-op second run"
+    )
+    assert index_mtime_before == index_mtime_after, (
+        "Index was rewritten on a no-op second run"
+    )

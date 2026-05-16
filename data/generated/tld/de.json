@@ -1,0 +1,149 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "de",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "DENIC eG",
+      "admin": "DENIC eG",
+      "tech": "DENIC eG"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.nic.de",
+        "ipv4": [
+          {
+            "ip": "194.0.0.53",
+            "asn": 31529,
+            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:2::53",
+            "asn": 31529,
+            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_country": "DE"
+          }
+        ]
+      },
+      {
+        "hostname": "f.nic.de",
+        "ipv4": [
+          {
+            "ip": "81.91.164.5",
+            "asn": 8763,
+            "as_org": "DENIC-AS Theodor-Stern-Kai 1",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a02:568:0:2::53",
+            "asn": 8763,
+            "as_org": "DENIC-AS Theodor-Stern-Kai 1",
+            "as_country": "DE"
+          }
+        ]
+      },
+      {
+        "hostname": "l.de.net",
+        "ipv4": [
+          {
+            "ip": "77.67.63.105",
+            "asn": 3257,
+            "as_org": "GTT-BACKBONE GTT",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:668:1f:11::105",
+            "asn": 3257,
+            "as_org": "GTT-BACKBONE GTT",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "n.de.net",
+        "ipv4": [
+          {
+            "ip": "194.146.107.6",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:1011:1::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "s.de.net",
+        "ipv4": [
+          {
+            "ip": "195.243.137.26",
+            "asn": 3320,
+            "as_org": "DTAG Internet service provider operations",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2003:8:14::53",
+            "asn": 3320,
+            "as_org": "DTAG Internet service provider operations",
+            "as_country": "DE"
+          }
+        ]
+      },
+      {
+        "hostname": "z.nic.de",
+        "ipv4": [
+          {
+            "ip": "194.246.96.1",
+            "asn": 31529,
+            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a02:568:fe02::de",
+            "asn": 31529,
+            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_country": "DE"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.denic.de/",
+    "whois_server": "whois.denic.de",
+    "rdap_server": "https://rdap.denic.de/",
+    "tld_created": "1986-11-05",
+    "tld_updated": [
+      "2023-04-04"
+    ],
+    "annotations": {
+      "rdap_source": "supplemental",
+      "country_name_iso": "Germany",
+      "as_org_aliases": [
+        "DENIC"
+      ]
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "xn--lgbbat1ad8j",
+    "tld_unicode": "الجزائر",
+    "tld_script": "Arabic",
+    "tld_iso": "dz",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "CERIST",
+      "admin": "CERIST",
+      "tech": "CERIST"
+    },
+    "nameservers": [
+      {
+        "hostname": "idn1.nic.dz",
+        "ipv4": [
+          {
+            "ip": "193.194.64.243",
+            "asn": 3208,
+            "as_org": "ARN",
+            "as_country": "DZ"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "idn2.nic.dz",
+        "ipv4": [
+          {
+            "ip": "213.179.160.68",
+            "asn": 16214,
+            "as_org": "CERIST",
+            "as_country": "DZ"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.nic.dz",
+    "whois_server": "whois.nic.dz",
+    "tld_created": "2011-02-05",
+    "tld_updated": [
+      "2025-10-01"
+    ],
+    "annotations": {
+      "country_name_iso": "Algeria"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "er",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Eritrea Telecommunication Services Corporation (EriTel)",
+      "admin": "Eritrea Telecommunications Corporation",
+      "tech": "Eritrea Telecommunications Corporation"
+    },
+    "nameservers": [
+      {
+        "hostname": "er.cctld.authdns.ripe.net",
+        "ipv4": [
+          {
+            "ip": "193.0.9.72",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a13:27c0:30::72",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ]
+      },
+      {
+        "hostname": "sawanew.noc.net.er",
+        "ipv4": [
+          {
+            "ip": "196.200.96.1",
+            "asn": 30987,
+            "as_org": "ERITEL-AS",
+            "as_country": "ER"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "zaranew.noc.net.er",
+        "ipv4": [
+          {
+            "ip": "196.200.96.2",
+            "asn": 30987,
+            "as_org": "ERITEL-AS",
+            "as_country": "ER"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "tld_created": "1996-09-24",
+    "tld_updated": [
+      "2025-10-28"
+    ],
+    "annotations": {
+      "country_name_iso": "Eritrea"
+    }
+  }
+}

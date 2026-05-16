@@ -1,0 +1,173 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "qa",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Communications Regulatory Authority",
+      "admin": "Communications Regulatory Authority",
+      "tech": "Communications Regulatory Authority"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.registry.qa",
+        "ipv4": [
+          {
+            "ip": "178.23.16.104",
+            "asn": 42298,
+            "as_org": "GCC-MPLS-PEERING GCC MPLS peering",
+            "as_country": "QA"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "b.registry.qa",
+        "ipv4": [
+          {
+            "ip": "178.23.17.104",
+            "asn": 42298,
+            "as_org": "GCC-MPLS-PEERING GCC MPLS peering",
+            "as_country": "QA"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "c.registry.qa",
+        "ipv4": [
+          {
+            "ip": "212.77.192.10",
+            "asn": 8781,
+            "as_org": "QA-ISP",
+            "as_country": "QA"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "d.registry.qa",
+        "ipv4": [
+          {
+            "ip": "212.77.192.13",
+            "asn": 8781,
+            "as_org": "QA-ISP",
+            "as_country": "QA"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "e.registry.qa",
+        "ipv4": [
+          {
+            "ip": "178.23.20.60",
+            "asn": 42298,
+            "as_org": "GCC-MPLS-PEERING GCC MPLS peering",
+            "as_country": "QA"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "f.registry.qa",
+        "ipv4": [
+          {
+            "ip": "37.209.192.6",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dcd:1::6",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "g.registry.qa",
+        "ipv4": [
+          {
+            "ip": "37.209.194.6",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dcd:2::6",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "h.registry.qa",
+        "ipv4": [
+          {
+            "ip": "178.23.22.60",
+            "asn": 42298,
+            "as_org": "GCC-MPLS-PEERING GCC MPLS peering",
+            "as_country": "QA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a0c:a640:1:22::60",
+            "asn": 42298,
+            "as_org": "GCC-MPLS-PEERING GCC MPLS peering",
+            "as_country": "QA"
+          }
+        ]
+      },
+      {
+        "hostname": "i.registry.qa",
+        "ipv4": [
+          {
+            "ip": "204.61.216.62",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6062:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://www.cra.gov.qa/",
+    "whois_server": "whois.registry.qa",
+    "tld_created": "1996-06-12",
+    "tld_updated": [
+      "2022-02-07"
+    ],
+    "annotations": {
+      "country_name_iso": "Qatar",
+      "as_org_aliases": [
+        "Packet Clearing House",
+        "UltraDNS"
+      ]
+    },
+    "idn": [
+      "xn--wgbl6a"
+    ]
+  }
+}

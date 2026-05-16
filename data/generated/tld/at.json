@@ -1,0 +1,166 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "at",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "nic.at GmbH",
+      "admin": "nic.at GmbH",
+      "tech": "nic.at GmbH c/o Vienna University Computer Center"
+    },
+    "nameservers": [
+      {
+        "hostname": "d.ns.at",
+        "ipv4": [
+          {
+            "ip": "81.91.161.98",
+            "asn": 8763,
+            "as_org": "DENIC-AS Theodor-Stern-Kai 1",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a02:568:20:1::d",
+            "asn": 8763,
+            "as_org": "DENIC-AS Theodor-Stern-Kai 1",
+            "as_country": "DE"
+          }
+        ]
+      },
+      {
+        "hostname": "j.ns.at",
+        "ipv4": [
+          {
+            "ip": "194.146.106.50",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:1010:12::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "n.ns.at",
+        "ipv4": [
+          {
+            "ip": "81.91.173.130",
+            "asn": 8763,
+            "as_org": "DENIC-AS Theodor-Stern-Kai 1",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a02:568:281::130",
+            "asn": 8763,
+            "as_org": "DENIC-AS Theodor-Stern-Kai 1",
+            "as_country": "DE"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.univie.ac.at",
+        "ipv4": [
+          {
+            "ip": "78.104.144.2",
+            "asn": 1853,
+            "as_org": "ACONET ACOnet Backbone",
+            "as_country": "AT"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:628:2030:4301::2",
+            "asn": 1853,
+            "as_org": "ACONET ACOnet Backbone",
+            "as_country": "AT"
+          }
+        ]
+      },
+      {
+        "hostname": "ns2.univie.ac.at",
+        "ipv4": [
+          {
+            "ip": "192.92.125.2",
+            "asn": 35052,
+            "as_org": "AS_AT_TLD_SERVICES Vienna University",
+            "as_country": "AT"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:1c::2",
+            "asn": 35052,
+            "as_org": "AS_AT_TLD_SERVICES Vienna University",
+            "as_country": "AT"
+          }
+        ]
+      },
+      {
+        "hostname": "r.ns.at",
+        "ipv4": [
+          {
+            "ip": "194.0.25.10",
+            "asn": 1921,
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_country": "AT"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:20::10",
+            "asn": 1921,
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_country": "AT"
+          }
+        ]
+      },
+      {
+        "hostname": "u.ns.at",
+        "ipv4": [
+          {
+            "ip": "185.102.12.2",
+            "asn": 1921,
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_country": "AT"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a02:850:ffff::2",
+            "asn": 1921,
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_country": "AT"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.at/",
+    "whois_server": "whois.nic.at",
+    "tld_created": "1988-01-20",
+    "tld_updated": [
+      "2025-05-14"
+    ],
+    "annotations": {
+      "country_name_iso": "Austria",
+      "as_org_aliases": [
+        "RcodeZero"
+      ]
+    }
+  }
+}

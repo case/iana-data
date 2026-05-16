@@ -1,0 +1,90 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "jm",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "University of West Indies",
+      "admin": "Mona Information Technology Services\nUniversity of the West Indies",
+      "tech": "Mona Information Technology Services\nUniversity of the West Indies"
+    },
+    "nameservers": [
+      {
+        "hostname": "jm.cctld.authdns.ripe.net",
+        "ipv4": [
+          {
+            "ip": "193.0.9.82",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a13:27c0:30::82",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ]
+      },
+      {
+        "hostname": "ns.jm",
+        "ipv4": [
+          {
+            "ip": "196.2.1.6",
+            "asn": 3586,
+            "as_org": "JAMNET",
+            "as_country": "JM"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns3-jm.fsl.org.jm",
+        "ipv4": [
+          {
+            "ip": "196.3.191.66",
+            "asn": 22306,
+            "as_org": "FISC-",
+            "as_country": "JM"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "phloem.uoregon.edu",
+        "ipv4": [
+          {
+            "ip": "128.223.32.35",
+            "asn": 3582,
+            "as_org": "UONET",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:468:d01:20::80df:2023",
+            "asn": 3582,
+            "as_org": "UONET",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "tld_created": "1991-09-24",
+    "tld_updated": [
+      "2025-07-10"
+    ],
+    "annotations": {
+      "country_name_iso": "Jamaica"
+    }
+  }
+}

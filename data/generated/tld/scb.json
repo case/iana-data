@@ -1,0 +1,97 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "scb",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "The Siam Commercial Bank Public Company Limited (\"SCB\")",
+      "admin": "The Siam Commercial Bank Public Company Limited (\"SCB\")",
+      "tech": "Thai Name Server Co., Ltd."
+    },
+    "nameservers": [
+      {
+        "hostname": "c.nic.scb",
+        "ipv4": [
+          {
+            "ip": "194.0.1.35",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:4::23",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "nn1.nic.scb",
+        "ipv4": [
+          {
+            "ip": "194.58.198.136",
+            "asn": 56908,
+            "as_org": "NETNOD-NDS $Id: aut-num_AS56908,v 1.1 20160307 11:15:51 mem Exp $",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:3f1:3032:8001::136",
+            "asn": 56908,
+            "as_org": "NETNOD-NDS $Id: aut-num_AS56908,v 1.1 20160307 11:15:51 mem Exp $",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "rz.nic.scb",
+        "ipv4": [
+          {
+            "ip": "194.0.25.42",
+            "asn": 1921,
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_country": "AT"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:20::42",
+            "asn": 1921,
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_country": "AT"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://www.scb.co.th/en/personal-banking/top-level-domain.html",
+    "whois_server": "whois.nic.scb",
+    "rdap_server": "https://rdap.nic.scb/",
+    "tld_created": "2014-06-26",
+    "tld_updated": [
+      "2024-05-31"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "brand",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "CDNS",
+        "RcodeZero"
+      ]
+    }
+  }
+}

@@ -11,20 +11,16 @@ help:
 	@echo "  make checkly-info              Show Checkly info"
 	@echo "  make checkly-preview-deploy    Deploy Checkly checks (preview)"
 	@echo "  make checkly-test              Run Checkly tests"
-	@echo "  make coverage                  Run tests with coverage report"
-	@echo "  make deps                      Install dependencies (uv sync, npm install)"
 	@echo "  make download-core             Download core IANA data files"
 	@echo "  make download-iptoasn          Download iptoasn data for ASN lookups"
 	@echo "  make download-tld-pages        Download TLD pages (optional GROUPS=...)"
 	@echo "  make generate-idn-mapping      Generate IDN script mapping"
-	@echo "  make lint                      Run ruff linter"
-	@echo "  make test                      Run linter, typecheck, and tests"
 	@echo "  make typecheck                 Run pyright type checker"
-
-.PHONY: deps
-deps:
-	uv sync
-	npm install
+	@echo ""
+	@echo "Scripts (run directly, not via make):"
+	@echo "  bin/setup                      Install dependencies (uv sync, pnpm install)"
+	@echo "  bin/lint                       Run ruff check, ruff format check, pyright"
+	@echo "  bin/test                       Run lint then pytest"
 
 .PHONY: download-core
 download-core:
@@ -62,10 +58,6 @@ analyze-registry-agreements:
 analyze-tlds-json:
 	uv run python scripts/analyze_tlds_json.py
 
-.PHONY: lint
-lint:
-	uv run ruff check src/ tests/
-
 .PHONY: typecheck
 typecheck:
 	uv run pyright src/
@@ -73,14 +65,6 @@ typecheck:
 .PHONY: check-circular-imports
 check-circular-imports:
 	uv run pydeps src --no-output
-
-.PHONY: test
-test: lint typecheck
-	uv run pytest
-
-.PHONY: coverage
-coverage: lint
-	uv run pytest --cov=src --cov-report=term-missing
 
 .PHONY: checkly-test
 checkly-test:

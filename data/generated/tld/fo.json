@@ -1,0 +1,149 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "fo",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "FO Council",
+      "admin": "CEO",
+      "tech": "CentralNic"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.nic.fo",
+        "ipv4": [
+          {
+            "ip": "194.169.218.27",
+            "asn": 199330,
+            "as_org": "CENTRALNIC-ANYCAST-A CentralNic Anycast-A AS Number",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:13cc::1:27",
+            "asn": 199330,
+            "as_org": "CENTRALNIC-ANYCAST-A CentralNic Anycast-A AS Number",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "b.nic.fo",
+        "ipv4": [
+          {
+            "ip": "185.24.64.27",
+            "asn": 60890,
+            "as_org": "CENTRALNIC-ANYCAST-B CentralNic Anycast-B AS Number",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a04:2b00:13cc::1:27",
+            "asn": 60890,
+            "as_org": "CENTRALNIC-ANYCAST-B CentralNic Anycast-B AS Number",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "c.nic.fo",
+        "ipv4": [
+          {
+            "ip": "212.18.248.27",
+            "asn": 201304,
+            "as_org": "CENTRALNIC-ANYCAST-E",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a04:2b00:13ee::27",
+            "asn": 201304,
+            "as_org": "CENTRALNIC-ANYCAST-E",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "d.nic.fo",
+        "ipv4": [
+          {
+            "ip": "212.18.249.27",
+            "asn": 201303,
+            "as_org": "CENTRALNIC-ANYCAST-F",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a04:2b00:13ff::27",
+            "asn": 201303,
+            "as_org": "CENTRALNIC-ANYCAST-F",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "mimi.nic.fo",
+        "ipv4": [
+          {
+            "ip": "77.72.229.243",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:3f0:0:315::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "xn--gurun-jta.nic.fo",
+        "ipv4": [
+          {
+            "ip": "194.146.106.158",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:1010:40::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.fo/",
+    "whois_server": "whois.nic.fo",
+    "rdap_server": "https://rdap.centralnic.com/fo",
+    "tld_created": "1993-05-14",
+    "tld_updated": [
+      "2026-02-13"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Faroe Islands",
+      "as_org_aliases": [
+        "CentralNic"
+      ]
+    }
+  }
+}

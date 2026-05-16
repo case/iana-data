@@ -1,0 +1,189 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "pr",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Gauss Research Laboratory Inc.",
+      "admin": "Gauss Research Laboratory Inc.",
+      "tech": "Gauss Research Laboratory Inc."
+    },
+    "nameservers": [
+      {
+        "hostname": "a.lactld.org",
+        "ipv4": [
+          {
+            "ip": "200.0.68.10",
+            "asn": 61455,
+            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_country": "UY"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2801:14:a000::10",
+            "asn": 61455,
+            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_country": "UY"
+          }
+        ]
+      },
+      {
+        "hostname": "a0.pr.afilias-nst.info",
+        "ipv4": [
+          {
+            "ip": "199.254.59.17",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:25::17",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "a2.pr.afilias-nst.info",
+        "ipv4": [
+          {
+            "ip": "199.249.116.17",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:44::17",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ]
+      },
+      {
+        "hostname": "b0.pr.afilias-nst.org",
+        "ipv4": [
+          {
+            "ip": "199.254.60.17",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:26::17",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "b2.pr.afilias-nst.org",
+        "ipv4": [
+          {
+            "ip": "199.249.124.17",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:4c::17",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ]
+      },
+      {
+        "hostname": "c0.pr.afilias-nst.info",
+        "ipv4": [
+          {
+            "ip": "199.254.61.17",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:27::17",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "d0.pr.afilias-nst.org",
+        "ipv4": [
+          {
+            "ip": "199.254.62.17",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:28::17",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "pr-dns.denic.de",
+        "ipv4": [
+          {
+            "ip": "194.0.11.111",
+            "asn": 31529,
+            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:e:111::53",
+            "asn": 31529,
+            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_country": "DE"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.pr",
+    "whois_server": "whois.afilias-srs.net",
+    "rdap_server": "https://rdap.identitydigital.services/rdap/",
+    "tld_created": "1989-08-27",
+    "tld_updated": [
+      "2022-07-20"
+    ],
+    "annotations": {
+      "rdap_source": "supplemental",
+      "country_name_iso": "Puerto Rico",
+      "as_org_aliases": [
+        "DENIC",
+        "Identity Digital",
+        "LACTLD"
+      ]
+    }
+  }
+}

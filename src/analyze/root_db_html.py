@@ -40,7 +40,9 @@ def analyze_root_db_html(filepath: Path) -> int:
     delegated_total_generic = sum(delegated_by_type.get(t, 0) for t in generic_types)
 
     # Count delegated IDNs (domains starting with .xn--)
-    delegated_idn_entries = [e for e in delegated_entries if e.get("domain", "").startswith(".xn--")]
+    delegated_idn_entries = [
+        e for e in delegated_entries if e.get("domain", "").startswith(".xn--")
+    ]
     delegated_total_idns = len(delegated_idn_entries)
 
     # Count delegated IDNs by type

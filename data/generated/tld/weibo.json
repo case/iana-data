@@ -1,0 +1,114 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "weibo",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "Sina Corporation",
+      "admin": "Sina Corporation",
+      "tech": "Afilias"
+    },
+    "nameservers": [
+      {
+        "hostname": "a0.nic.weibo",
+        "ipv4": [
+          {
+            "ip": "65.22.56.41",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:36::41",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "a2.nic.weibo",
+        "ipv4": [
+          {
+            "ip": "65.22.59.41",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:39::41",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ]
+      },
+      {
+        "hostname": "b0.nic.weibo",
+        "ipv4": [
+          {
+            "ip": "65.22.57.41",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:37::41",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "c0.nic.weibo",
+        "ipv4": [
+          {
+            "ip": "65.22.58.41",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:38::41",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.sina.com",
+    "whois_server": "whois.nic.weibo",
+    "rdap_server": "https://rdap.identitydigital.services/rdap/",
+    "tld_created": "2016-02-29",
+    "tld_updated": [
+      "2023-08-08"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "Identity Digital"
+      ]
+    }
+  }
+}

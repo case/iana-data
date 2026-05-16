@@ -1,0 +1,114 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "vegas",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "Dot Vegas, Inc.",
+      "admin": "Dot Vegas Inc.",
+      "tech": "Afilias"
+    },
+    "nameservers": [
+      {
+        "hostname": "a0.nic.vegas",
+        "ipv4": [
+          {
+            "ip": "65.22.68.17",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:42::17",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "a2.nic.vegas",
+        "ipv4": [
+          {
+            "ip": "65.22.71.17",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:45::17",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ]
+      },
+      {
+        "hostname": "b0.nic.vegas",
+        "ipv4": [
+          {
+            "ip": "65.22.69.17",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:43::17",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "c0.nic.vegas",
+        "ipv4": [
+          {
+            "ip": "65.22.70.17",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:44::17",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.vegas",
+    "whois_server": "whois.nic.vegas",
+    "rdap_server": "https://rdap.identitydigital.services/rdap/",
+    "tld_created": "2014-03-20",
+    "tld_updated": [
+      "2023-08-03"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "Identity Digital"
+      ]
+    }
+  }
+}

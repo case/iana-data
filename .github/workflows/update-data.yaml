@@ -28,8 +28,10 @@ jobs:
           enable-cache: true
           version-file: "pyproject.toml"
 
+      - uses: pnpm/action-setup@0e279bb959325dab635dd2c09392533439d90093  # v6.0.8
+
       - name: Install dependencies
-        run: make deps
+        run: bin/setup
 
       # Download core IANA files
       - name: Download core data (RDAP, TLD list, root zone DB)
@@ -206,7 +208,7 @@ jobs:
         if: steps.source-check.outputs.source_changed == 'true'
         run: |
           set -o pipefail
-          make test 2>&1 | tee test-output.log
+          bin/test 2>&1 | tee test-output.log
 
       - name: Notification if tests fail
         if: failure() && steps.run-tests.outcome == 'failure'

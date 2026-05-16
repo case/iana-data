@@ -1,0 +1,116 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "crown",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "Crown Equipment Corporation",
+      "admin": "Crown Equipment Corporation",
+      "tech": "Canadian Internet Registration Authority (CIRA)"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.ns.nic.crown",
+        "ipv4": [
+          {
+            "ip": "185.159.197.5",
+            "asn": 55195,
+            "as_org": "CIRA-CLOUD1",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:10a:80aa::5",
+            "asn": 55195,
+            "as_org": "CIRA-CLOUD1",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "b.ns.nic.crown",
+        "ipv4": [
+          {
+            "ip": "185.159.198.5",
+            "asn": 394354,
+            "as_org": "CIRA-CLOUD2",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:10a:80ab::5",
+            "asn": 394354,
+            "as_org": "CIRA-CLOUD2",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "c.ns.nic.crown",
+        "ipv4": [
+          {
+            "ip": "45.142.220.101",
+            "asn": 208366,
+            "as_org": "DENIC-SERVICES",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a0e:dbc0::101",
+            "asn": 208366,
+            "as_org": "DENIC-SERVICES",
+            "as_country": "DE"
+          }
+        ]
+      },
+      {
+        "hostname": "d.ns.nic.crown",
+        "ipv4": [
+          {
+            "ip": "185.159.199.5",
+            "asn": 396501,
+            "as_org": "CIRA-5",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:10a:80ac::5",
+            "asn": 396501,
+            "as_org": "CIRA-5",
+            "as_country": "CA"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.crown.com/",
+    "whois_server": "whois.nic.crown",
+    "rdap_server": "https://rdap.crown.fury.ca/rdap/",
+    "tld_created": "2015-06-04",
+    "tld_updated": [
+      "2026-01-22"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "brand",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "CIRA",
+        "DENIC"
+      ]
+    }
+  }
+}

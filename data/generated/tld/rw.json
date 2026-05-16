@@ -1,0 +1,161 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "rw",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Rwanda Internet Community and Technology  Alliance (RICTA) Ltd",
+      "admin": "Rwanda Internet Community and Technology  Alliance (RICTA) Ltd",
+      "tech": "Rwanda Internet Community and Technology  Alliance (RICTA) Ltd"
+    },
+    "nameservers": [
+      {
+        "hostname": "dnsnode.ricta.org.rw",
+        "ipv4": [
+          {
+            "ip": "77.72.229.254",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:3f0:0:306::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "ns-afrinic.ricta.org.rw",
+        "ipv4": [
+          {
+            "ip": "196.216.168.28",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:43f8:120::28",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.gransy.ricta.org.rw",
+        "ipv4": [
+          {
+            "ip": "185.38.108.108",
+            "asn": 60592,
+            "as_org": "GRANSY Gransy s.r.o. gransy.com",
+            "as_country": "CZ"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a00:fea0:dead::beef",
+            "asn": 60592,
+            "as_org": "GRANSY Gransy s.r.o. gransy.com",
+            "as_country": "CZ"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.ricta.org.rw",
+        "ipv4": [
+          {
+            "ip": "196.49.7.188",
+            "asn": 328014,
+            "as_org": "RINEX",
+            "as_country": "RW"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:43f8:151:2504::188",
+            "asn": 328014,
+            "as_org": "RINEX",
+            "as_country": "RW"
+          }
+        ]
+      },
+      {
+        "hostname": "ns2.ricta.org.rw",
+        "ipv4": [
+          {
+            "ip": "196.49.7.186",
+            "asn": 328014,
+            "as_org": "RINEX",
+            "as_country": "RW"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:43f8:151:2504::186",
+            "asn": 328014,
+            "as_org": "RINEX",
+            "as_country": "RW"
+          }
+        ]
+      },
+      {
+        "hostname": "ns3.ricta.org.rw",
+        "ipv4": [
+          {
+            "ip": "41.138.85.98",
+            "asn": 37124,
+            "as_org": "tigo-rw-as",
+            "as_country": "RW"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "pch.ricta.org.rw",
+        "ipv4": [
+          {
+            "ip": "204.61.216.91",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6091:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://registry.ricta.org.rw",
+    "whois_server": "whois.ricta.org.rw",
+    "rdap_server": "https://rdap.ricta.org.rw",
+    "tld_created": "1996-10-21",
+    "tld_updated": [
+      "2025-08-26"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Rwanda",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

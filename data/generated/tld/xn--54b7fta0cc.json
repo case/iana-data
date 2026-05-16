@@ -1,0 +1,92 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "xn--54b7fta0cc",
+    "tld_unicode": "বাংলা",
+    "tld_script": "Bengali",
+    "tld_iso": "bd",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Posts and Telecommunications Division",
+      "admin": "Posts and Telecommunications Division",
+      "tech": "Bangladesh Telecommunications Company Limited (BTCL)"
+    },
+    "nameservers": [
+      {
+        "hostname": "bayanno.btcl.net.bd",
+        "ipv4": [
+          {
+            "ip": "180.211.212.213",
+            "asn": 17494,
+            "as_org": "BTTB-AS-AP Telecom Operator & Internet Service Provider as well",
+            "as_country": "BD"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2407:5000:88:2::3",
+            "asn": 17494,
+            "as_org": "BTTB-AS-AP Telecom Operator & Internet Service Provider as well",
+            "as_country": "BD"
+          }
+        ]
+      },
+      {
+        "hostname": "bd-ns.anycast.pch.net",
+        "ipv4": [
+          {
+            "ip": "204.61.216.108",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6108:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ekushey.btcl.net.bd",
+        "ipv4": [
+          {
+            "ip": "123.49.50.51",
+            "asn": 17494,
+            "as_org": "BTTB-AS-AP Telecom Operator & Internet Service Provider as well",
+            "as_country": "BD"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2407:5000:88:1::2",
+            "asn": 17494,
+            "as_org": "BTTB-AS-AP Telecom Operator & Internet Service Provider as well",
+            "as_country": "BD"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://domainreg.btcl.com.bd/",
+    "tld_created": "2011-03-30",
+    "tld_updated": [
+      "2024-05-29"
+    ],
+    "annotations": {
+      "country_name_iso": "Bangladesh",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

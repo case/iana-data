@@ -1,0 +1,149 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "mu",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Internet Direct Ltd",
+      "admin": "Internet Direct Ltd.",
+      "tech": "Internet Direct Ltd"
+    },
+    "nameservers": [
+      {
+        "hostname": "v0n0.tld.mu",
+        "ipv4": [
+          {
+            "ip": "199.254.59.33",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:25::33",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "v0n1.tld.mu",
+        "ipv4": [
+          {
+            "ip": "199.254.60.33",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:26::33",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "v0n2.tld.mu",
+        "ipv4": [
+          {
+            "ip": "199.254.61.33",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:27::33",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "v0n3.tld.mu",
+        "ipv4": [
+          {
+            "ip": "199.254.62.33",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:28::33",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "v2n0.tld.mu",
+        "ipv4": [
+          {
+            "ip": "199.249.116.33",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:44::33",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ]
+      },
+      {
+        "hostname": "v2n1.tld.mu",
+        "ipv4": [
+          {
+            "ip": "199.249.124.33",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:4c::33",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.mu/",
+    "whois_server": "whois.tld.mu",
+    "rdap_server": "https://rdap.identitydigital.services/rdap/",
+    "tld_created": "1995-10-06",
+    "tld_updated": [
+      "2025-02-26"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Mauritius",
+      "as_org_aliases": [
+        "Identity Digital"
+      ]
+    }
+  }
+}

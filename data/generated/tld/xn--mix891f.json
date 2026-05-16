@@ -1,0 +1,169 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "xn--mix891f",
+    "tld_unicode": "澳門",
+    "tld_script": "Han-CJK",
+    "tld_iso": "mo",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Macao Post and Telecommunications Bureau (CTT)",
+      "admin": "Macao Network Information Centre (MONIC) - HNET Asia",
+      "tech": "Macao Network Information Centre (MONIC) - HNET Asia"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.monic.mo",
+        "ipv4": [
+          {
+            "ip": "202.175.87.47",
+            "asn": 4609,
+            "as_org": "CTM-MO Companhia de Telecomunicacoes de Macau SARL",
+            "as_country": "MO"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:f90:2:8::2",
+            "asn": 4609,
+            "as_org": "CTM-MO Companhia de Telecomunicacoes de Macau SARL",
+            "as_country": "MO"
+          }
+        ]
+      },
+      {
+        "hostname": "b.monic.mo",
+        "ipv4": [
+          {
+            "ip": "202.175.87.48",
+            "asn": 4609,
+            "as_org": "CTM-MO Companhia de Telecomunicacoes de Macau SARL",
+            "as_country": "MO"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:f90:2:8::3",
+            "asn": 4609,
+            "as_org": "CTM-MO Companhia de Telecomunicacoes de Macau SARL",
+            "as_country": "MO"
+          }
+        ]
+      },
+      {
+        "hostname": "c.monic.mo",
+        "ipv4": [
+          {
+            "ip": "202.175.87.49",
+            "asn": 4609,
+            "as_org": "CTM-MO Companhia de Telecomunicacoes de Macau SARL",
+            "as_country": "MO"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:f90:2:8::4",
+            "asn": 4609,
+            "as_org": "CTM-MO Companhia de Telecomunicacoes de Macau SARL",
+            "as_country": "MO"
+          }
+        ]
+      },
+      {
+        "hostname": "d.monic.mo",
+        "ipv4": [
+          {
+            "ip": "202.175.51.115",
+            "asn": 4609,
+            "as_org": "CTM-MO Companhia de Telecomunicacoes de Macau SARL",
+            "as_country": "MO"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:f90:8::2",
+            "asn": 4609,
+            "as_org": "CTM-MO Companhia de Telecomunicacoes de Macau SARL",
+            "as_country": "MO"
+          }
+        ]
+      },
+      {
+        "hostname": "e.monic.mo",
+        "ipv4": [
+          {
+            "ip": "202.175.51.116",
+            "asn": 4609,
+            "as_org": "CTM-MO Companhia de Telecomunicacoes de Macau SARL",
+            "as_country": "MO"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:f90:8::3",
+            "asn": 4609,
+            "as_org": "CTM-MO Companhia de Telecomunicacoes de Macau SARL",
+            "as_country": "MO"
+          }
+        ]
+      },
+      {
+        "hostname": "ns17.cdns.net",
+        "ipv4": [
+          {
+            "ip": "194.0.1.17",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:4::11",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "ns2.cuhk.edu.hk",
+        "ipv4": [
+          {
+            "ip": "137.189.6.21",
+            "asn": 3661,
+            "as_org": "ERX-CUHKNET The Chinese University of Hong Kong",
+            "as_country": "HK"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2405:3000:3:6::15",
+            "asn": 3661,
+            "as_org": "ERX-CUHKNET The Chinese University of Hong Kong",
+            "as_country": "HK"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://www.monic.mo",
+    "whois_server": "whois.monic.mo",
+    "tld_created": "2015-04-21",
+    "tld_updated": [
+      "2023-03-07"
+    ],
+    "annotations": {
+      "country_name_iso": "Macao",
+      "as_org_aliases": [
+        "CDNS"
+      ]
+    }
+  }
+}

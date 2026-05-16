@@ -1,0 +1,79 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "gm",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "GM-NIC",
+      "admin": "GM-NIC",
+      "tech": "CYPDOM"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns-gm.afrinic.net",
+        "ipv4": [
+          {
+            "ip": "196.216.168.29",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:43f8:120::29",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.nic.gm",
+        "ipv4": [
+          {
+            "ip": "194.63.250.217",
+            "asn": 12996,
+            "as_org": "DOMENESHOP Oslo, Norway",
+            "as_country": "NO"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns2.nic.gm",
+        "ipv4": [
+          {
+            "ip": "209.250.227.199",
+            "asn": 20473,
+            "as_org": "AS-VULTR",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a05:f480:1000:235:5400:4ff:fee5:2f89",
+            "asn": 20473,
+            "as_org": "AS-VULTR",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.gm",
+    "tld_created": "1997-03-28",
+    "tld_updated": [
+      "2025-02-27"
+    ],
+    "annotations": {
+      "country_name_iso": "Gambia"
+    }
+  }
+}

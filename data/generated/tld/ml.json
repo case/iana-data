@@ -1,0 +1,104 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "ml",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Agence des Technologies de l’Information et de la Communication",
+      "admin": "Agence des Technologies de l’Information et de la Communication",
+      "tech": "Agence des Technologies de l'Information et de la Communication"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.nic.ml",
+        "ipv4": [
+          {
+            "ip": "196.10.220.136",
+            "asn": 30985,
+            "as_org": "IKATELNET",
+            "as_country": "ML"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "b.nic.ml",
+        "ipv4": [
+          {
+            "ip": "165.90.218.166",
+            "asn": 36864,
+            "as_org": "AFRIBONEMALI-AS",
+            "as_country": "ML"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2c0f:f900:2:3::2",
+            "asn": 36864,
+            "as_org": "AFRIBONEMALI-AS",
+            "as_country": "ML"
+          }
+        ]
+      },
+      {
+        "hostname": "c.nic.ml",
+        "ipv4": [
+          {
+            "ip": "204.61.216.144",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6144:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "d.nic.ml",
+        "ipv4": [
+          {
+            "ip": "196.216.168.37",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:43f8:120::37",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.ml",
+    "whois_server": "whois.nic.ml",
+    "rdap_server": "https://rdap.nic.ml",
+    "tld_created": "1993-09-29",
+    "tld_updated": [
+      "2025-12-03"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Mali",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

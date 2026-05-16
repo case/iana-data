@@ -1,0 +1,114 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "organic",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "Identity Digital Limited",
+      "admin": "Identity Digital Limited",
+      "tech": "Identity Digital Limited"
+    },
+    "nameservers": [
+      {
+        "hostname": "a0.nic.organic",
+        "ipv4": [
+          {
+            "ip": "65.22.20.40",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:16::40",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "a2.nic.organic",
+        "ipv4": [
+          {
+            "ip": "65.22.23.40",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:19::40",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ]
+      },
+      {
+        "hostname": "b0.nic.organic",
+        "ipv4": [
+          {
+            "ip": "65.22.21.40",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:17::40",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "c0.nic.organic",
+        "ipv4": [
+          {
+            "ip": "65.22.22.40",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:18::40",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://www.identity.digital/",
+    "rdap_server": "https://rdap.identitydigital.services/rdap/",
+    "tld_created": "2014-05-29",
+    "tld_updated": [
+      "2025-09-04"
+    ],
+    "annotations": {
+      "tld_manager_alias": "Identity Digital",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "Identity Digital"
+      ]
+    }
+  }
+}

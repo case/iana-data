@@ -1,0 +1,111 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "md",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "IP Serviciul Tehnologia Informatiei si Securitate Cibernetica",
+      "admin": "IP Serviciul Tehnologia Informatiei si Securitate Cibernetica",
+      "tech": "IP Serviciul Tehnologia Informatiei si Securitate Cibernetica"
+    },
+    "nameservers": [
+      {
+        "hostname": "nsa.tld.md",
+        "ipv4": [
+          {
+            "ip": "185.108.181.191",
+            "asn": 39279,
+            "as_org": "CTS-",
+            "as_country": "MD"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "nsb.tld.md",
+        "ipv4": [
+          {
+            "ip": "185.108.181.192",
+            "asn": 39279,
+            "as_org": "CTS-",
+            "as_country": "MD"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "nsc.dns.md",
+        "ipv4": [
+          {
+            "ip": "144.217.93.2",
+            "asn": 16276,
+            "as_org": "OVH",
+            "as_country": "FR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2607:5300:201:3100::2f69",
+            "asn": 16276,
+            "as_org": "OVH",
+            "as_country": "FR"
+          }
+        ]
+      },
+      {
+        "hostname": "nsf.dns.md",
+        "ipv4": [
+          {
+            "ip": "92.222.76.179",
+            "asn": 16276,
+            "as_org": "OVH",
+            "as_country": "FR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:41d0:401:3100::7162",
+            "asn": 16276,
+            "as_org": "OVH",
+            "as_country": "FR"
+          }
+        ]
+      },
+      {
+        "hostname": "nsr.dns.md",
+        "ipv4": [
+          {
+            "ip": "89.32.236.165",
+            "asn": 39279,
+            "as_org": "CTS-",
+            "as_country": "MD"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a00:c5a0:0:aaaa:89:32:236:165",
+            "asn": 0,
+            "as_org": "Not routed",
+            "as_country": "None"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.md",
+    "whois_server": "whois.nic.md",
+    "tld_created": "1994-03-24",
+    "tld_updated": [
+      "2026-03-09"
+    ],
+    "annotations": {
+      "country_name_iso": "Moldova, Republic of"
+    }
+  }
+}

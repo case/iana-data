@@ -17,6 +17,7 @@ def utc_timestamp() -> str:
     """
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
+
 GENERATED_DIR: Final[str] = "data/generated"
 METADATA_FILE: Final[str] = f"{GENERATED_DIR}/metadata.json"
 

@@ -1,0 +1,188 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "us",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Registry Services, LLC",
+      "admin": "Registry Services, LLC",
+      "tech": "Registry Services, LLC"
+    },
+    "nameservers": [
+      {
+        "hostname": "b.cctld.us",
+        "ipv4": [
+          {
+            "ip": "156.154.125.70",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:502:ad09::29",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "f.cctld.us",
+        "ipv4": [
+          {
+            "ip": "209.173.58.70",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:3682::11",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "k.cctld.us",
+        "ipv4": [
+          {
+            "ip": "156.154.128.70",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:503:e239::3:1",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "m.cctld.us",
+        "ipv4": [
+          {
+            "ip": "204.74.105.1",
+            "asn": 399169,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2610:a1:3180::53",
+            "asn": 399169,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "n.cctld.us",
+        "ipv4": [
+          {
+            "ip": "204.74.107.1",
+            "asn": 399169,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2610:a1:3280::53",
+            "asn": 399169,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "w.cctld.us",
+        "ipv4": [
+          {
+            "ip": "37.209.192.15",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dcd:1::15",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "x.cctld.us",
+        "ipv4": [
+          {
+            "ip": "37.209.194.15",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dcd:2::15",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "y.cctld.us",
+        "ipv4": [
+          {
+            "ip": "37.209.196.15",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dcd:3::15",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.us",
+    "whois_server": "whois.nic.us",
+    "rdap_server": "https://rdap.nic.us/",
+    "tld_created": "1985-02-15",
+    "tld_updated": [
+      "2024-08-29"
+    ],
+    "annotations": {
+      "tld_manager_alias": "GoDaddy Registry",
+      "rdap_source": "supplemental",
+      "country_name_iso": "United States",
+      "as_org_aliases": [
+        "UltraDNS"
+      ]
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "xn--mgbai9azgqp6j",
+    "tld_unicode": "پاکستان",
+    "tld_script": "Arabic",
+    "tld_iso": "pk",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "National Telecommunication Corporation",
+      "admin": "National Telecommunication Corporation",
+      "tech": "National Telecommunication Corporation"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns1.ntc.org.pk",
+        "ipv4": [
+          {
+            "ip": "43.250.84.53",
+            "asn": 23888,
+            "as_org": "NTC-AS-AP National Telecommunication Corporation HQ",
+            "as_country": "PK"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns2.ntc.org.pk",
+        "ipv4": [
+          {
+            "ip": "43.250.84.54",
+            "asn": 23888,
+            "as_org": "NTC-AS-AP National Telecommunication Corporation HQ",
+            "as_country": "PK"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns3.ntc.org.pk",
+        "ipv4": [
+          {
+            "ip": "36.50.76.15",
+            "asn": 152155,
+            "as_org": "SNSKIES-AS-AP SN SKIESPVT. LIMITED",
+            "as_country": "PK"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "tld_created": "2011-02-28",
+    "tld_updated": [
+      "2026-02-11"
+    ],
+    "annotations": {
+      "country_name_iso": "Pakistan"
+    }
+  }
+}

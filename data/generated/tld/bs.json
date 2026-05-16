@@ -1,0 +1,90 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "bs",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "University of The Bahamas",
+      "admin": "University of The Bahamas",
+      "tech": "University of The Bahamas"
+    },
+    "nameservers": [
+      {
+        "hostname": "anyns.dns.bs",
+        "ipv4": [
+          {
+            "ip": "204.61.216.68",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6068:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "anyns.pch.net",
+        "ipv4": [
+          {
+            "ip": "204.61.216.4",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6004:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns36.cdns.net",
+        "ipv4": [
+          {
+            "ip": "194.0.1.36",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:4::24",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.register.bs",
+    "tld_created": "1991-09-03",
+    "tld_updated": [
+      "2019-08-12"
+    ],
+    "annotations": {
+      "country_name_iso": "Bahamas",
+      "as_org_aliases": [
+        "CDNS",
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

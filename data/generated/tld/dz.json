@@ -1,0 +1,144 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "dz",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "CERIST",
+      "admin": "CERIST",
+      "tech": "CERIST"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns-dz.afrinic.net",
+        "ipv4": [
+          {
+            "ip": "196.216.168.36",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:43f8:120::36",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.nic.dz",
+        "ipv4": [
+          {
+            "ip": "193.194.64.242",
+            "asn": 3208,
+            "as_org": "ARN",
+            "as_country": "DZ"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:4340:1030:2::2",
+            "asn": 3208,
+            "as_org": "ARN",
+            "as_country": "DZ"
+          }
+        ]
+      },
+      {
+        "hostname": "ns2.nic.dz",
+        "ipv4": [
+          {
+            "ip": "213.179.160.66",
+            "asn": 16214,
+            "as_org": "CERIST",
+            "as_country": "DZ"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns3.nic.fr",
+        "ipv4": [
+          {
+            "ip": "192.134.0.49",
+            "asn": 2486,
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_country": "FR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:660:3006:1::1:1",
+            "asn": 2486,
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_country": "FR"
+          }
+        ]
+      },
+      {
+        "hostname": "ns4.nic.dz",
+        "ipv4": [
+          {
+            "ip": "204.61.216.103",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6103:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns5.nic.dz",
+        "ipv4": [
+          {
+            "ip": "193.0.9.71",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a13:27c0:30::71",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.dz",
+    "whois_server": "whois.nic.dz",
+    "tld_created": "1994-01-03",
+    "tld_updated": [
+      "2025-10-10"
+    ],
+    "annotations": {
+      "country_name_iso": "Algeria",
+      "as_org_aliases": [
+        "AFNIC",
+        "Packet Clearing House"
+      ]
+    },
+    "idn": [
+      "xn--lgbbat1ad8j"
+    ]
+  }
+}

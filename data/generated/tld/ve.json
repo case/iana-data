@@ -1,0 +1,133 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "ve",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Comisión Nacional de Telecomunicaciones (CONATEL)",
+      "admin": "NIC.VE",
+      "tech": "NIC.VE"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.lactld.org",
+        "ipv4": [
+          {
+            "ip": "200.0.68.10",
+            "asn": 61455,
+            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_country": "UY"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2801:14:a000::10",
+            "asn": 61455,
+            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_country": "UY"
+          }
+        ]
+      },
+      {
+        "hostname": "ns3.nic.ve",
+        "ipv4": [
+          {
+            "ip": "190.9.129.56",
+            "asn": 8048,
+            "as_org": "CANTV Servicios, Venezuela",
+            "as_country": "VE"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns4.nic.ve",
+        "ipv4": [
+          {
+            "ip": "190.202.128.43",
+            "asn": 8048,
+            "as_org": "CANTV Servicios, Venezuela",
+            "as_country": "VE"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns5.nic.ve",
+        "ipv4": [
+          {
+            "ip": "45.175.22.88",
+            "asn": 267892,
+            "as_org": "COMISION NACIONAL DE TELECOMUNICACIONES CONATEL NICVE",
+            "as_country": "VE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2801:18:8800:3:18ba:beff:fe61:d08b",
+            "asn": 267892,
+            "as_org": "COMISION NACIONAL DE TELECOMUNICACIONES CONATEL NICVE",
+            "as_country": "VE"
+          }
+        ]
+      },
+      {
+        "hostname": "ns6.nic.ve",
+        "ipv4": [
+          {
+            "ip": "45.175.22.4",
+            "asn": 267892,
+            "as_org": "COMISION NACIONAL DE TELECOMUNICACIONES CONATEL NICVE",
+            "as_country": "VE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2801:18:8800:1::4",
+            "asn": 267892,
+            "as_org": "COMISION NACIONAL DE TELECOMUNICACIONES CONATEL NICVE",
+            "as_country": "VE"
+          }
+        ]
+      },
+      {
+        "hostname": "ssdns-tld.nic.cl",
+        "ipv4": [
+          {
+            "ip": "200.7.5.14",
+            "asn": 52305,
+            "as_org": "NIC Chile",
+            "as_country": "CL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:1398:276:0:200:7:5:14",
+            "asn": 52305,
+            "as_org": "NIC Chile",
+            "as_country": "CL"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://nic.ve/",
+    "whois_server": "whois.nic.ve",
+    "tld_created": "1991-03-07",
+    "tld_updated": [
+      "2026-05-14"
+    ],
+    "annotations": {
+      "country_name_iso": "Venezuela, Bolivarian Republic of",
+      "as_org_aliases": [
+        "LACTLD"
+      ]
+    }
+  }
+}

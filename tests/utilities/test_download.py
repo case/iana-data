@@ -6,7 +6,11 @@ from unittest.mock import Mock, patch
 
 import httpx
 
-from src.utilities.download import download_file, download_iana_files, _download_file_impl
+from src.utilities.download import (
+    download_file,
+    download_iana_files,
+    _download_file_impl,
+)
 
 FIXTURES_DIR = Path(__file__).parent.parent / "fixtures"
 SOURCE_FIXTURES_DIR = FIXTURES_DIR / "source" / "core"
@@ -74,7 +78,9 @@ def test_download_first_time(tmp_path):
 
     with (
         patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
-        patch("src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")),
+        patch(
+            "src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")
+        ),
         patch("httpx.Client") as mock_client,
     ):
         mock_client.return_value.__enter__.return_value.get = mock_get
@@ -106,7 +112,9 @@ def test_download_with_304_not_modified(tmp_path):
     def mock_get(url, headers=None):
         # Return 304 for RDAP (has etag/last-modified in request)
         if url == "https://data.iana.org/rdap/dns.json":
-            if headers and ("If-None-Match" in headers or "If-Modified-Since" in headers):
+            if headers and (
+                "If-None-Match" in headers or "If-Modified-Since" in headers
+            ):
                 response = Mock(spec=httpx.Response)
                 response.status_code = 304
                 response.headers = {}
@@ -159,7 +167,9 @@ def test_download_with_fresh_cache(tmp_path):
             # ROOT_ZONE_DB should NOT make a request (cache is fresh)
             nonlocal root_zone_request_made
             root_zone_request_made = True
-            raise Exception("Should not make HTTP request for ROOT_ZONE_DB when cache is fresh")
+            raise Exception(
+                "Should not make HTTP request for ROOT_ZONE_DB when cache is fresh"
+            )
         raise Exception(f"Unexpected URL: {url}")
 
     # Mock "now" to be 1 hour after the fixture timestamp (within 24h cache window)
@@ -182,7 +192,9 @@ def test_download_with_fresh_cache(tmp_path):
 
         # ROOT_ZONE_DB should skip HTTP request due to fresh cache
         assert results["ROOT_ZONE_DB"] == "not_modified"
-        assert not root_zone_request_made  # No HTTP request should be made for ROOT_ZONE_DB
+        assert (
+            not root_zone_request_made
+        )  # No HTTP request should be made for ROOT_ZONE_DB
 
         # RDAP and TLD_LIST should still make requests but get 304
         assert results["RDAP_BOOTSTRAP"] == "not_modified"
@@ -201,7 +213,9 @@ def test_download_tld_list_content_unchanged(tmp_path):
     shutil.copy(METADATA_FIXTURES_DIR / "valid-metadata.json", metadata_file)
 
     # Load timestamp-only change fixture
-    timestamp_only_content = (SOURCE_FIXTURES_DIR / "tlds-timestamp-only.txt").read_text()
+    timestamp_only_content = (
+        SOURCE_FIXTURES_DIR / "tlds-timestamp-only.txt"
+    ).read_text()
 
     def mock_get(url, headers=None):
         if url == "https://data.iana.org/TLD/tlds-alpha-by-domain.txt":
@@ -250,7 +264,9 @@ def test_download_creates_source_directory(tmp_path):
 
     with (
         patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
-        patch("src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")),
+        patch(
+            "src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")
+        ),
         patch("httpx.Client") as mock_client,
     ):
         mock_client.return_value.__enter__.return_value.get = mock_get
@@ -271,7 +287,9 @@ def test_download_handles_http_error(tmp_path):
 
     with (
         patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
-        patch("src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")),
+        patch(
+            "src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")
+        ),
         patch("httpx.Client") as mock_client,
     ):
         mock_client.return_value.__enter__.return_value.get = mock_get
@@ -304,7 +322,9 @@ def test_download_file_impl_single_file(tmp_path):
 
     metadata: dict = {}
 
-    with patch("src.utilities.download.make_request_with_retry", side_effect=mock_request):
+    with patch(
+        "src.utilities.download.make_request_with_retry", side_effect=mock_request
+    ):
         mock_client = Mock(spec=httpx.Client)
         result = _download_file_impl(
             client=mock_client,
@@ -350,7 +370,9 @@ def test_download_file_impl_304_not_modified(tmp_path):
         }
     }
 
-    with patch("src.utilities.download.make_request_with_retry", side_effect=mock_request):
+    with patch(
+        "src.utilities.download.make_request_with_retry", side_effect=mock_request
+    ):
         mock_client = Mock(spec=httpx.Client)
         result = _download_file_impl(
             client=mock_client,
@@ -391,7 +413,9 @@ def test_download_file_impl_with_content_validator(tmp_path):
 
     metadata: dict = {}
 
-    with patch("src.utilities.download.make_request_with_retry", side_effect=mock_request):
+    with patch(
+        "src.utilities.download.make_request_with_retry", side_effect=mock_request
+    ):
         mock_client = Mock(spec=httpx.Client)
         result = _download_file_impl(
             client=mock_client,
@@ -430,8 +454,12 @@ def test_download_file_public_api(tmp_path):
 
     with (
         patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
-        patch("src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")),
-        patch("src.utilities.download.make_request_with_retry", side_effect=mock_request),
+        patch(
+            "src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")
+        ),
+        patch(
+            "src.utilities.download.make_request_with_retry", side_effect=mock_request
+        ),
         patch("src.utilities.download.httpx.Client") as mock_client_class,
     ):
         # Setup mock client context manager
@@ -472,7 +500,9 @@ def test_download_file_impl_with_cache_control_header(tmp_path):
 
     metadata: dict = {}
 
-    with patch("src.utilities.download.make_request_with_retry", side_effect=mock_request):
+    with patch(
+        "src.utilities.download.make_request_with_retry", side_effect=mock_request
+    ):
         mock_client = Mock(spec=httpx.Client)
         result = _download_file_impl(
             client=mock_client,
@@ -489,7 +519,10 @@ def test_download_file_impl_with_cache_control_header(tmp_path):
     # Check metadata has cache-control data
     assert "CACHED_FILE" in metadata
     assert "cache_data" in metadata["CACHED_FILE"]
-    assert metadata["CACHED_FILE"]["cache_data"]["cache_control"] == "public, max-age=86400"
+    assert (
+        metadata["CACHED_FILE"]["cache_data"]["cache_control"]
+        == "public, max-age=86400"
+    )
     assert metadata["CACHED_FILE"]["cache_data"]["cache_max_age"] == "86400"
     assert "last_downloaded" in metadata["CACHED_FILE"]["cache_data"]
 
@@ -509,7 +542,9 @@ def test_download_file_impl_with_http_error_status(tmp_path):
 
     metadata: dict = {}
 
-    with patch("src.utilities.download.make_request_with_retry", side_effect=mock_request):
+    with patch(
+        "src.utilities.download.make_request_with_retry", side_effect=mock_request
+    ):
         mock_client = Mock(spec=httpx.Client)
         result = _download_file_impl(
             client=mock_client,
@@ -517,7 +552,7 @@ def test_download_file_impl_with_http_error_status(tmp_path):
             url="https://example.com/error.txt",
             filepath=filepath,
             metadata=metadata,
-            )
+        )
 
     # Check result is error
     assert result == "error"
@@ -592,14 +627,20 @@ def test_download_tld_pages_default_base_dir(tmp_path):
         return response
 
     with (
-        patch("src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")),
-        patch("src.utilities.download.make_request_with_retry", side_effect=mock_request),
+        patch(
+            "src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")
+        ),
+        patch(
+            "src.utilities.download.make_request_with_retry", side_effect=mock_request
+        ),
         patch("httpx.Client") as mock_client_class,
     ):
         mock_client_class.return_value.__enter__.return_value.get = mock_request
 
         # Use explicit base_dir to avoid touching production
-        result = download_tld_pages(tlds=["test"], base_dir=tmp_path / "tld-pages", delay=0)
+        result = download_tld_pages(
+            tlds=["test"], base_dir=tmp_path / "tld-pages", delay=0
+        )
 
     # Verify download succeeded
     assert result["test"] == "downloaded"
@@ -633,8 +674,12 @@ def test_download_tld_pages_parses_tlds_from_file(tmp_path):
 
     with (
         patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
-        patch("src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")),
-        patch("src.utilities.download.make_request_with_retry", side_effect=mock_request),
+        patch(
+            "src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")
+        ),
+        patch(
+            "src.utilities.download.make_request_with_retry", side_effect=mock_request
+        ),
         patch("httpx.Client") as mock_client_class,
     ):
         mock_client_class.return_value.__enter__.return_value.get = mock_request
@@ -665,8 +710,12 @@ def test_download_tld_pages_fallback_on_extraction_failure(tmp_path):
     from src.utilities.download import download_tld_pages
 
     with (
-        patch("src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")),
-        patch("src.utilities.download.make_request_with_retry", side_effect=mock_request),
+        patch(
+            "src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")
+        ),
+        patch(
+            "src.utilities.download.make_request_with_retry", side_effect=mock_request
+        ),
         patch("httpx.Client") as mock_client_class,
     ):
         mock_client_class.return_value.__enter__.return_value.get = mock_request
@@ -696,13 +745,19 @@ def test_download_tld_pages_handles_non_200_response(tmp_path):
     from src.utilities.download import download_tld_pages
 
     with (
-        patch("src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")),
-        patch("src.utilities.download.make_request_with_retry", side_effect=mock_request),
+        patch(
+            "src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")
+        ),
+        patch(
+            "src.utilities.download.make_request_with_retry", side_effect=mock_request
+        ),
         patch("httpx.Client") as mock_client_class,
     ):
         mock_client_class.return_value.__enter__.return_value.get = mock_request
 
-        result = download_tld_pages(tlds=["notfound"], base_dir=tmp_path / "tld-pages", delay=0)
+        result = download_tld_pages(
+            tlds=["notfound"], base_dir=tmp_path / "tld-pages", delay=0
+        )
 
     # Should return error status
     assert result["notfound"] == "error"
@@ -720,13 +775,19 @@ def test_download_tld_pages_handles_exception(tmp_path):
     from src.utilities.download import download_tld_pages
 
     with (
-        patch("src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")),
-        patch("src.utilities.download.make_request_with_retry", side_effect=mock_request),
+        patch(
+            "src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")
+        ),
+        patch(
+            "src.utilities.download.make_request_with_retry", side_effect=mock_request
+        ),
         patch("httpx.Client") as mock_client_class,
     ):
         mock_client_class.return_value.__enter__.return_value.get = mock_request
 
-        result = download_tld_pages(tlds=["error"], base_dir=tmp_path / "tld-pages", delay=0)
+        result = download_tld_pages(
+            tlds=["error"], base_dir=tmp_path / "tld-pages", delay=0
+        )
 
     # Should return error status
     assert result["error"] == "error"
@@ -752,8 +813,12 @@ def test_download_tld_pages_delay_between_requests(tmp_path):
     from src.utilities.download import download_tld_pages
 
     with (
-        patch("src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")),
-        patch("src.utilities.download.make_request_with_retry", side_effect=mock_request),
+        patch(
+            "src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")
+        ),
+        patch(
+            "src.utilities.download.make_request_with_retry", side_effect=mock_request
+        ),
         patch("src.utilities.download.time.sleep") as mock_sleep,
         patch("httpx.Client") as mock_client_class,
     ):
@@ -761,9 +826,7 @@ def test_download_tld_pages_delay_between_requests(tmp_path):
 
         # Download 3 TLDs with delay=0.5
         result = download_tld_pages(
-            tlds=["aaa", "bbb", "ccc"],
-            base_dir=tmp_path / "tld-pages",
-            delay=0.5
+            tlds=["aaa", "bbb", "ccc"], base_dir=tmp_path / "tld-pages", delay=0.5
         )
 
     # Should download all 3
@@ -783,7 +846,9 @@ def test_download_tld_pages_empty_tld_list(tmp_path):
     generated_dir.mkdir(parents=True)
 
     # Patch metadata file to prevent writing to production
-    with patch("src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")):
+    with patch(
+        "src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")
+    ):
         # Pass empty list directly - this exercises the empty list check without needing to mock
         result = download_tld_pages(tlds=[], base_dir=tmp_path / "tld-pages", delay=0)
 
@@ -809,7 +874,9 @@ def test_download_iptoasn_success(tmp_path):
 
     with (
         patch("src.utilities.download.IPTOASN_DIR", str(iptoasn_dir)),
-        patch("src.utilities.download.make_request_with_retry", side_effect=mock_request),
+        patch(
+            "src.utilities.download.make_request_with_retry", side_effect=mock_request
+        ),
         patch("httpx.Client") as mock_client_class,
     ):
         mock_client_class.return_value.__enter__.return_value = Mock()
@@ -836,7 +903,9 @@ def test_download_iptoasn_http_error(tmp_path):
 
     with (
         patch("src.utilities.download.IPTOASN_DIR", str(iptoasn_dir)),
-        patch("src.utilities.download.make_request_with_retry", side_effect=mock_request),
+        patch(
+            "src.utilities.download.make_request_with_retry", side_effect=mock_request
+        ),
         patch("httpx.Client") as mock_client_class,
     ):
         mock_client_class.return_value.__enter__.return_value = Mock()
@@ -859,7 +928,9 @@ def test_download_iptoasn_exception(tmp_path):
 
     with (
         patch("src.utilities.download.IPTOASN_DIR", str(iptoasn_dir)),
-        patch("src.utilities.download.make_request_with_retry", side_effect=mock_request),
+        patch(
+            "src.utilities.download.make_request_with_retry", side_effect=mock_request
+        ),
         patch("httpx.Client") as mock_client_class,
     ):
         mock_client_class.return_value.__enter__.return_value = Mock()

@@ -1,0 +1,114 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "moscow",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "Foundation for Assistance for Internet Technologies and Infrastructure Development (FAITID)",
+      "admin": "Foundation for Assistance for Internet Technologies and Infrastructure Development (FAITID)",
+      "tech": "Foundation for Assistance for Internet Technologies and Infrastructure Development (FAITID)"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.dns.flexireg.ru",
+        "ipv4": [
+          {
+            "ip": "31.177.70.1",
+            "asn": 43489,
+            "as_org": "ANYCAST-AS",
+            "as_country": "RU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a02:2090:6800::1",
+            "asn": 43489,
+            "as_org": "ANYCAST-AS",
+            "as_country": "RU"
+          }
+        ]
+      },
+      {
+        "hostname": "b.dns.flexireg.net",
+        "ipv4": [
+          {
+            "ip": "195.253.64.6",
+            "asn": 8561,
+            "as_org": "KNIPPWORLDWI",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:5b0:4::6",
+            "asn": 8561,
+            "as_org": "KNIPPWORLDWI",
+            "as_country": "DE"
+          }
+        ]
+      },
+      {
+        "hostname": "c.dns.flexireg.org",
+        "ipv4": [
+          {
+            "ip": "195.253.65.6",
+            "asn": 50611,
+            "as_org": "KNIPP-IRONDNS1-AS Technologiepark",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:5b0:5::6",
+            "asn": 50611,
+            "as_org": "KNIPP-IRONDNS1-AS Technologiepark",
+            "as_country": "DE"
+          }
+        ]
+      },
+      {
+        "hostname": "d.dns.flexireg.domains",
+        "ipv4": [
+          {
+            "ip": "89.111.135.1",
+            "asn": 43489,
+            "as_org": "ANYCAST-AS",
+            "as_country": "RU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:d8:8::1",
+            "asn": 43489,
+            "as_org": "ANYCAST-AS",
+            "as_country": "RU"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.faitid.org",
+    "whois_server": "whois.nic.moscow",
+    "rdap_server": "https://rdap.flexireg.net",
+    "tld_created": "2014-04-17",
+    "tld_updated": [
+      "2025-05-29"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "Knipp Medien"
+      ]
+    }
+  }
+}

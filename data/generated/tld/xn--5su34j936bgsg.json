@@ -1,0 +1,155 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "xn--5su34j936bgsg",
+    "tld_unicode": "香格里拉",
+    "tld_script": "Han-CJK",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "Shangri-La International Hotel Management Limited",
+      "admin": "28/F. Kerry Centre",
+      "tech": "Identity Digital Limited"
+    },
+    "nameservers": [
+      {
+        "hostname": "v0n0.nic.xn--5su34j936bgsg",
+        "ipv4": [
+          {
+            "ip": "65.22.108.22",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:6a::22",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "v0n1.nic.xn--5su34j936bgsg",
+        "ipv4": [
+          {
+            "ip": "65.22.109.22",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:6b::22",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "v0n2.nic.xn--5su34j936bgsg",
+        "ipv4": [
+          {
+            "ip": "65.22.110.22",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:6c::22",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "v0n3.nic.xn--5su34j936bgsg",
+        "ipv4": [
+          {
+            "ip": "161.232.32.22",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:108::22",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "v2n0.nic.xn--5su34j936bgsg",
+        "ipv4": [
+          {
+            "ip": "65.22.111.22",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:6d::22",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ]
+      },
+      {
+        "hostname": "v2n1.nic.xn--5su34j936bgsg",
+        "ipv4": [
+          {
+            "ip": "161.232.33.22",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:109::22",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.shangri-la.com/",
+    "whois_server": "whois.nic.xn--5su34j936bgsg",
+    "rdap_server": "https://rdap.identitydigital.services/rdap/",
+    "tld_created": "2016-06-24",
+    "tld_updated": [
+      "2025-12-08"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "brand",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "Identity Digital"
+      ]
+    }
+  }
+}

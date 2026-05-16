@@ -1,0 +1,85 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "im",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Isle of Man Government",
+      "admin": "Information Systems Division,\nIsle of Man Government",
+      "tech": "Domicilium (IoM) Ltd"
+    },
+    "nameservers": [
+      {
+        "hostname": "barney.advsys.co.uk",
+        "ipv4": [
+          {
+            "ip": "217.23.160.50",
+            "asn": 15766,
+            "as_org": "DOMICILIUM-AS",
+            "as_country": "IM"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "hoppy.iom.com",
+        "ipv4": [
+          {
+            "ip": "217.23.163.140",
+            "asn": 15766,
+            "as_org": "DOMICILIUM-AS",
+            "as_country": "IM"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns4.ja.net",
+        "ipv4": [
+          {
+            "ip": "193.62.157.66",
+            "asn": 786,
+            "as_org": "JANET Jisc Services Limited",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:630:0:47::42",
+            "asn": 786,
+            "as_org": "JANET Jisc Services Limited",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "pebbles.iom.com",
+        "ipv4": [
+          {
+            "ip": "83.218.14.53",
+            "asn": 15766,
+            "as_org": "DOMICILIUM-AS",
+            "as_country": "IM"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.nic.im",
+    "whois_server": "whois.nic.im",
+    "tld_created": "1996-09-11",
+    "tld_updated": [
+      "2018-11-24"
+    ],
+    "annotations": {
+      "country_name_iso": "Isle of Man"
+    }
+  }
+}

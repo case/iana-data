@@ -1,0 +1,154 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "xn--fjq720a",
+    "tld_unicode": "娱乐",
+    "tld_script": "Han-CJK",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "Binky Moon, LLC",
+      "admin": "Identity Digital Inc.",
+      "tech": "Identity Digital Limited"
+    },
+    "nameservers": [
+      {
+        "hostname": "v0n0.nic.xn--fjq720a",
+        "ipv4": [
+          {
+            "ip": "65.22.20.66",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:16::66",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "v0n1.nic.xn--fjq720a",
+        "ipv4": [
+          {
+            "ip": "65.22.21.66",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:17::66",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "v0n2.nic.xn--fjq720a",
+        "ipv4": [
+          {
+            "ip": "65.22.22.66",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:18::66",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "v0n3.nic.xn--fjq720a",
+        "ipv4": [
+          {
+            "ip": "161.232.10.66",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:f4::66",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "v2n0.nic.xn--fjq720a",
+        "ipv4": [
+          {
+            "ip": "65.22.23.66",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:19::66",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ]
+      },
+      {
+        "hostname": "v2n1.nic.xn--fjq720a",
+        "ipv4": [
+          {
+            "ip": "161.232.11.66",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:f5::66",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://www.identity.digital/",
+    "rdap_server": "https://rdap.identitydigital.services/rdap/",
+    "tld_created": "2014-07-17",
+    "tld_updated": [
+      "2025-10-07"
+    ],
+    "annotations": {
+      "tld_manager_alias": "Identity Digital",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "Identity Digital"
+      ]
+    }
+  }
+}

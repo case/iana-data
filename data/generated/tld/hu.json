@@ -1,0 +1,168 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "hu",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Council of Hungarian Internet Providers (CHIP)",
+      "admin": "Council of Hungarian Internet Providers (CHIP)",
+      "tech": "Council of Hungarian Internet Providers (CHIP)"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.hu",
+        "ipv4": [
+          {
+            "ip": "5.28.0.97",
+            "asn": 12303,
+            "as_org": "ISZT-AS 1132 Budapest Victor Hugo u. 18-22.",
+            "as_country": "HU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a00:e6a0:3:1014::97",
+            "asn": 12303,
+            "as_org": "ISZT-AS 1132 Budapest Victor Hugo u. 18-22.",
+            "as_country": "HU"
+          }
+        ]
+      },
+      {
+        "hostname": "b.hu",
+        "ipv4": [
+          {
+            "ip": "193.41.82.18",
+            "asn": 210788,
+            "as_org": "BIX-AS",
+            "as_country": "HU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a0f:7ec0:100:100::53",
+            "asn": 210788,
+            "as_org": "BIX-AS",
+            "as_country": "HU"
+          }
+        ]
+      },
+      {
+        "hostname": "c.hu",
+        "ipv4": [
+          {
+            "ip": "195.111.1.92",
+            "asn": 1955,
+            "as_org": "HBONE-AS KIFU",
+            "as_country": "HU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:738:2:2::53",
+            "asn": 1955,
+            "as_org": "HBONE-AS KIFU",
+            "as_country": "HU"
+          }
+        ]
+      },
+      {
+        "hostname": "d.hu",
+        "ipv4": [
+          {
+            "ip": "5.28.0.99",
+            "asn": 12303,
+            "as_org": "ISZT-AS 1132 Budapest Victor Hugo u. 18-22.",
+            "as_country": "HU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a00:e6a0:3:1014::53:99",
+            "asn": 12303,
+            "as_org": "ISZT-AS 1132 Budapest Victor Hugo u. 18-22.",
+            "as_country": "HU"
+          }
+        ]
+      },
+      {
+        "hostname": "e.hu",
+        "ipv4": [
+          {
+            "ip": "194.0.25.11",
+            "asn": 1921,
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_country": "AT"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:20::11",
+            "asn": 1921,
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_country": "AT"
+          }
+        ]
+      },
+      {
+        "hostname": "f.hu",
+        "ipv4": [
+          {
+            "ip": "194.0.9.1",
+            "asn": 2486,
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_country": "FR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:c::1",
+            "asn": 2486,
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_country": "FR"
+          }
+        ]
+      },
+      {
+        "hostname": "p.hu",
+        "ipv4": [
+          {
+            "ip": "204.61.216.146",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6146:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://www.domain.hu",
+    "whois_server": "whois.nic.hu",
+    "tld_created": "1990-11-07",
+    "tld_updated": [
+      "2025-09-12"
+    ],
+    "annotations": {
+      "country_name_iso": "Hungary",
+      "as_org_aliases": [
+        "AFNIC",
+        "Packet Clearing House",
+        "RcodeZero"
+      ]
+    }
+  }
+}

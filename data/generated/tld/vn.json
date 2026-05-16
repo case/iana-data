@@ -1,0 +1,185 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "vn",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Viet Nam Internet Network Information Center (VNNIC)",
+      "admin": "Vietnam Internet Network Information Center (VNNIC)",
+      "tech": "Vietnam Internet Network Information Center (VNNIC)"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.dns-servers.vn",
+        "ipv4": [
+          {
+            "ip": "194.0.1.18",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:4::12",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "b.dns-servers.vn",
+        "ipv4": [
+          {
+            "ip": "203.119.73.105",
+            "asn": 23902,
+            "as_org": "VNNIC-AS-VN Vietnam Internet network information center VNNIC",
+            "as_country": "VN"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dc8:1:2::105",
+            "asn": 23902,
+            "as_org": "VNNIC-AS-VN Vietnam Internet network information center VNNIC",
+            "as_country": "VN"
+          }
+        ]
+      },
+      {
+        "hostname": "c.dns-servers.vn",
+        "ipv4": [
+          {
+            "ip": "203.119.38.105",
+            "asn": 24066,
+            "as_org": "VNNIC-AS-VN Vietnam Internet Network Information Center",
+            "as_country": "VN"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dc8:c000:7::105",
+            "asn": 24066,
+            "as_org": "VNNIC-AS-VN Vietnam Internet Network Information Center",
+            "as_country": "VN"
+          }
+        ]
+      },
+      {
+        "hostname": "d.dns-servers.vn",
+        "ipv4": [
+          {
+            "ip": "203.119.44.105",
+            "asn": 24089,
+            "as_org": "VNNIC-AS-AP Vietnam Internet Network Information Center",
+            "as_country": "VN"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dc8:8000:2::105",
+            "asn": 24089,
+            "as_org": "VNNIC-AS-AP Vietnam Internet Network Information Center",
+            "as_country": "VN"
+          }
+        ]
+      },
+      {
+        "hostname": "e.dns-servers.vn",
+        "ipv4": [
+          {
+            "ip": "203.119.60.105",
+            "asn": 38736,
+            "as_org": "VNNIC-AS-VN Vietnam Internet network information center VNNIC",
+            "as_country": "VN"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dc8:1000:2::105",
+            "asn": 38736,
+            "as_org": "VNNIC-AS-VN Vietnam Internet network information center VNNIC",
+            "as_country": "VN"
+          }
+        ]
+      },
+      {
+        "hostname": "f.dns-servers.vn",
+        "ipv4": [
+          {
+            "ip": "203.119.68.105",
+            "asn": 38737,
+            "as_org": "VNNIC-AS-VN Vietnam Internet network information center VNNIC",
+            "as_country": "VN"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dc8:d000:2::105",
+            "asn": 38737,
+            "as_org": "VNNIC-AS-VN Vietnam Internet network information center VNNIC",
+            "as_country": "VN"
+          }
+        ]
+      },
+      {
+        "hostname": "g.dns-servers.vn",
+        "ipv4": [
+          {
+            "ip": "204.61.216.115",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6115:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "h.dns-servers.vn",
+        "ipv4": [
+          {
+            "ip": "202.47.142.105",
+            "asn": 45554,
+            "as_org": "VNNICANYCASTDNS-AS-VN Vietnam Internet network information center VNNIC",
+            "as_country": "VN"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dc8:6000::105",
+            "asn": 45554,
+            "as_org": "VNNICANYCASTDNS-AS-VN Vietnam Internet network information center VNNIC",
+            "as_country": "VN"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://www.vnnic.vn/",
+    "tld_created": "1994-04-14",
+    "tld_updated": [
+      "2023-07-19"
+    ],
+    "annotations": {
+      "country_name_iso": "Viet Nam",
+      "as_org_aliases": [
+        "CDNS",
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

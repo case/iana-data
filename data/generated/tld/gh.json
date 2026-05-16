@@ -1,0 +1,73 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "gh",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Network Computer Systems Limited",
+      "admin": "Network Computer Systems Limited",
+      "tech": "Network Computer Systems Limited"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns.dns.br",
+        "ipv4": [
+          {
+            "ip": "200.160.0.5",
+            "asn": 22548,
+            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_country": "BR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:12ff:0:a20::5",
+            "asn": 22548,
+            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_country": "BR"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.nic.gh",
+        "ipv4": [
+          {
+            "ip": "197.253.95.251",
+            "asn": 37313,
+            "as_org": "GGoC1-AS",
+            "as_country": "GH"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns2.nic.gh",
+        "ipv4": [
+          {
+            "ip": "197.253.127.251",
+            "asn": 37313,
+            "as_org": "GGoC1-AS",
+            "as_country": "GH"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.nic.gh",
+    "whois_server": "whois.nic.gh",
+    "tld_created": "1995-01-19",
+    "tld_updated": [
+      "2023-12-11"
+    ],
+    "annotations": {
+      "country_name_iso": "Ghana"
+    }
+  }
+}

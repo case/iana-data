@@ -1,0 +1,138 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "xn--kprw13d",
+    "tld_unicode": "台湾",
+    "tld_script": "Han-CJK",
+    "tld_iso": "tw",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Taiwan Network Information Center (TWNIC)",
+      "admin": "Taiwan Network Information Center (TWNIC)",
+      "tech": "Taiwan Network Information Center (TWNIC)"
+    },
+    "nameservers": [
+      {
+        "hostname": "anytld.apnic.net",
+        "ipv4": [
+          {
+            "ip": "202.12.31.53",
+            "asn": 18366,
+            "as_org": "APNIC-ANYCAST APNIC ANYCAST ASN",
+            "as_country": "AU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dd8:12::53",
+            "asn": 18366,
+            "as_org": "APNIC-ANYCAST APNIC ANYCAST ASN",
+            "as_country": "AU"
+          }
+        ]
+      },
+      {
+        "hostname": "d.dns.tw",
+        "ipv4": [
+          {
+            "ip": "60.199.165.186",
+            "asn": 9924,
+            "as_org": "TFN-TW Taiwan Fixed Network, Telco and Network Service Provider.",
+            "as_country": "TW"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:4541:9010:7::186",
+            "asn": 9924,
+            "as_org": "TFN-TW Taiwan Fixed Network, Telco and Network Service Provider.",
+            "as_country": "TW"
+          }
+        ]
+      },
+      {
+        "hostname": "e.dns.tw",
+        "ipv4": [
+          {
+            "ip": "211.20.231.11",
+            "asn": 3462,
+            "as_org": "HINET Data Communication Business Group",
+            "as_country": "TW"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:b000:1e0:c000::11",
+            "asn": 3462,
+            "as_org": "HINET Data Communication Business Group",
+            "as_country": "TW"
+          }
+        ]
+      },
+      {
+        "hostname": "f.dns.tw",
+        "ipv4": [
+          {
+            "ip": "40.65.125.222",
+            "asn": 8075,
+            "as_org": "MICROSOFT-CORP-MSN-AS-BLOCK",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "g.dns.tw",
+        "ipv4": [
+          {
+            "ip": "34.141.111.176",
+            "asn": 396982,
+            "as_org": "GOOGLE-CLOUD-PLATFORM",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "h.dns.tw",
+        "ipv4": [
+          {
+            "ip": "204.61.216.119",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6119:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://rs.twnic.net.tw",
+    "whois_server": "whois.twnic.net.tw",
+    "tld_created": "2010-07-14",
+    "tld_updated": [
+      "2026-04-24"
+    ],
+    "annotations": {
+      "country_name_iso": "Taiwan, Province of China",
+      "as_org_aliases": [
+        "Google",
+        "Microsoft",
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

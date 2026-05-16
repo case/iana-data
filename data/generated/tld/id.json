@@ -1,0 +1,127 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "id",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Perkumpulan Pengelola Nama Domain Internet Indonesia (PANDI)",
+      "admin": "Perkumpulan Pengelola Nama Domain Internet Indonesia (PANDI)",
+      "tech": "Perkumpulan Pengelola Nama Domain Internet Indonesia (PANDI)"
+    },
+    "nameservers": [
+      {
+        "hostname": "b.dns.id",
+        "ipv4": [
+          {
+            "ip": "103.19.179.179",
+            "asn": 132647,
+            "as_org": "IDNIC-PANDI-AS-ID Pengelola Nama Domain Internet Indonesia",
+            "as_country": "ID"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2402:ee80:b::b",
+            "asn": 132647,
+            "as_org": "IDNIC-PANDI-AS-ID Pengelola Nama Domain Internet Indonesia",
+            "as_country": "ID"
+          }
+        ]
+      },
+      {
+        "hostname": "c.dns.id",
+        "ipv4": [
+          {
+            "ip": "103.19.178.178",
+            "asn": 132647,
+            "as_org": "IDNIC-PANDI-AS-ID Pengelola Nama Domain Internet Indonesia",
+            "as_country": "ID"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2402:ee80:c::c",
+            "asn": 132647,
+            "as_org": "IDNIC-PANDI-AS-ID Pengelola Nama Domain Internet Indonesia",
+            "as_country": "ID"
+          }
+        ]
+      },
+      {
+        "hostname": "d.dns.id",
+        "ipv4": [
+          {
+            "ip": "45.126.57.57",
+            "asn": 132647,
+            "as_org": "IDNIC-PANDI-AS-ID Pengelola Nama Domain Internet Indonesia",
+            "as_country": "ID"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2402:ee80:d::d",
+            "asn": 132647,
+            "as_org": "IDNIC-PANDI-AS-ID Pengelola Nama Domain Internet Indonesia",
+            "as_country": "ID"
+          }
+        ]
+      },
+      {
+        "hostname": "e.dns.id",
+        "ipv4": [
+          {
+            "ip": "103.19.177.177",
+            "asn": 132647,
+            "as_org": "IDNIC-PANDI-AS-ID Pengelola Nama Domain Internet Indonesia",
+            "as_country": "ID"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:df5:4000:4::4",
+            "asn": 132647,
+            "as_org": "IDNIC-PANDI-AS-ID Pengelola Nama Domain Internet Indonesia",
+            "as_country": "ID"
+          }
+        ]
+      },
+      {
+        "hostname": "ns4.apnic.net",
+        "ipv4": [
+          {
+            "ip": "202.12.31.53",
+            "asn": 18366,
+            "as_org": "APNIC-ANYCAST APNIC ANYCAST ASN",
+            "as_country": "AU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dd8:12::53",
+            "asn": 18366,
+            "as_org": "APNIC-ANYCAST APNIC ANYCAST ASN",
+            "as_country": "AU"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://pandi.id",
+    "whois_server": "whois.id",
+    "rdap_server": "https://rdap.pandi.id/rdap/",
+    "tld_created": "1993-02-27",
+    "tld_updated": [
+      "2023-11-22"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Indonesia"
+    }
+  }
+}

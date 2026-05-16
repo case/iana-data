@@ -1,0 +1,116 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "xn--vermgensberatung-pwb",
+    "tld_unicode": "vermögensberatung",
+    "tld_script": "Latin",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "Deutsche Vermögensberatung Aktiengesellschaft DVAG",
+      "admin": "Deutsche Vermögensberatung Aktiengesellschaft DVAG",
+      "tech": "CentralNic"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.nic.xn--vermgensberatung-pwb",
+        "ipv4": [
+          {
+            "ip": "194.169.218.106",
+            "asn": 199330,
+            "as_org": "CENTRALNIC-ANYCAST-A CentralNic Anycast-A AS Number",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:13cc::1:106",
+            "asn": 199330,
+            "as_org": "CENTRALNIC-ANYCAST-A CentralNic Anycast-A AS Number",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "b.nic.xn--vermgensberatung-pwb",
+        "ipv4": [
+          {
+            "ip": "185.24.64.106",
+            "asn": 60890,
+            "as_org": "CENTRALNIC-ANYCAST-B CentralNic Anycast-B AS Number",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a04:2b00:13cc::1:106",
+            "asn": 60890,
+            "as_org": "CENTRALNIC-ANYCAST-B CentralNic Anycast-B AS Number",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "c.nic.xn--vermgensberatung-pwb",
+        "ipv4": [
+          {
+            "ip": "212.18.248.106",
+            "asn": 201304,
+            "as_org": "CENTRALNIC-ANYCAST-E",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a04:2b00:13ee::106",
+            "asn": 201304,
+            "as_org": "CENTRALNIC-ANYCAST-E",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "d.nic.xn--vermgensberatung-pwb",
+        "ipv4": [
+          {
+            "ip": "212.18.249.106",
+            "asn": 201303,
+            "as_org": "CENTRALNIC-ANYCAST-F",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a04:2b00:13ff::106",
+            "asn": 201303,
+            "as_org": "CENTRALNIC-ANYCAST-F",
+            "as_country": "GB"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.dvag-registry.de",
+    "whois_server": "whois.nic.xn--vermgensberatung-pwb",
+    "rdap_server": "https://rdap.centralnic.com/xn--vermgensberatung-pwb",
+    "tld_created": "2014-09-18",
+    "tld_updated": [
+      "2023-10-16"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "CentralNic"
+      ]
+    }
+  }
+}

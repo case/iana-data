@@ -1,0 +1,149 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "dk",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Dansk Internet Forum",
+      "admin": "Punktum dk A/S",
+      "tech": "Punktum dk A/S"
+    },
+    "nameservers": [
+      {
+        "hostname": "b.nic.dk",
+        "ipv4": [
+          {
+            "ip": "193.163.102.222",
+            "asn": 39839,
+            "as_org": "DK-PUNKTUM The .DK TLD Registry",
+            "as_country": "DK"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:630:0:80::53",
+            "asn": 39839,
+            "as_org": "DK-PUNKTUM The .DK TLD Registry",
+            "as_country": "DK"
+          }
+        ]
+      },
+      {
+        "hostname": "c.nic.dk",
+        "ipv4": [
+          {
+            "ip": "185.159.199.45",
+            "asn": 396501,
+            "as_org": "CIRA-5",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:10a:80ac::45",
+            "asn": 396501,
+            "as_org": "CIRA-5",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "h.nic.dk",
+        "ipv4": [
+          {
+            "ip": "46.30.126.214",
+            "asn": 47527,
+            "as_org": "DLX-AS",
+            "as_country": "DK"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a00:1b18:1:2::53",
+            "asn": 47527,
+            "as_org": "DLX-AS",
+            "as_country": "DK"
+          }
+        ]
+      },
+      {
+        "hostname": "l.nic.dk",
+        "ipv4": [
+          {
+            "ip": "130.226.213.138",
+            "asn": 1835,
+            "as_org": "FSKNET-DK Forskningsnettet - Danish network for Research and Education",
+            "as_country": "EU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:878:0:e000:82:e2:d5:8a",
+            "asn": 1835,
+            "as_org": "FSKNET-DK Forskningsnettet - Danish network for Research and Education",
+            "as_country": "EU"
+          }
+        ]
+      },
+      {
+        "hostname": "s.nic.dk",
+        "ipv4": [
+          {
+            "ip": "194.0.28.7",
+            "asn": 48283,
+            "as_org": "SIDN-ANYCAST",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:2c:0:194:0:28:7",
+            "asn": 48283,
+            "as_org": "SIDN-ANYCAST",
+            "as_country": "NL"
+          }
+        ]
+      },
+      {
+        "hostname": "t.nic.dk",
+        "ipv4": [
+          {
+            "ip": "185.43.134.16",
+            "asn": 25192,
+            "as_org": "CZNIC-AS",
+            "as_country": "CZ"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:148f:fffd::16",
+            "asn": 200070,
+            "as_org": "CZNIC-AS2",
+            "as_country": "CZ"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://punktum.dk/",
+    "whois_server": "whois.punktum.dk",
+    "tld_created": "1987-07-14",
+    "tld_updated": [
+      "2025-10-30"
+    ],
+    "annotations": {
+      "country_name_iso": "Denmark",
+      "as_org_aliases": [
+        "CIRA",
+        "CZNIC",
+        "SIDN"
+      ]
+    }
+  }
+}

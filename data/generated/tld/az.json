@@ -1,0 +1,94 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "az",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "IntraNS",
+      "admin": "IntraNS",
+      "tech": "IntraNS"
+    },
+    "nameservers": [
+      {
+        "hostname": "az.hostmaster.ua",
+        "ipv4": [
+          {
+            "ip": "195.47.253.13",
+            "asn": 29067,
+            "as_org": "UATLD-AS UA ccTLD Manager",
+            "as_country": "UA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:258::13",
+            "asn": 29067,
+            "as_org": "UATLD-AS UA ccTLD Manager",
+            "as_country": "UA"
+          }
+        ]
+      },
+      {
+        "hostname": "ns13.intrans.az",
+        "ipv4": [
+          {
+            "ip": "217.14.111.13",
+            "asn": 15815,
+            "as_org": "INTRANS-AS",
+            "as_country": "AZ"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns3.intrans.az",
+        "ipv4": [
+          {
+            "ip": "148.251.2.246",
+            "asn": 24940,
+            "as_org": "HETZNER-AS",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "rip.psg.com",
+        "ipv4": [
+          {
+            "ip": "147.28.0.39",
+            "asn": 3130,
+            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_country": "EE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:418:1::39",
+            "asn": 3130,
+            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_country": "EE"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.whois.az/",
+    "tld_created": "1993-08-25",
+    "tld_updated": [
+      "2025-11-21"
+    ],
+    "annotations": {
+      "country_name_iso": "Azerbaijan",
+      "as_org_aliases": [
+        "Hetzner"
+      ]
+    }
+  }
+}

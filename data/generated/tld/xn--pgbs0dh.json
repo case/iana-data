@@ -1,0 +1,151 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "xn--pgbs0dh",
+    "tld_unicode": "تونس",
+    "tld_script": "Arabic",
+    "tld_iso": "tn",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Agence Tunisienne d'Internet",
+      "admin": "Agence Tunisienne d'Internet",
+      "tech": "Agence Tunisienne d'Internet"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns-tn.afrinic.net",
+        "ipv4": [
+          {
+            "ip": "196.216.168.25",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:43f8:120::25",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.ati.tn",
+        "ipv4": [
+          {
+            "ip": "41.228.62.63",
+            "asn": 2609,
+            "as_org": "TN-BB-AS Tunisia BackBone AS",
+            "as_country": "TN"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2c0f:fab0:ffff:4:41:228:62:63",
+            "asn": 2609,
+            "as_org": "TN-BB-AS Tunisia BackBone AS",
+            "as_country": "TN"
+          }
+        ]
+      },
+      {
+        "hostname": "ns2.ati.tn",
+        "ipv4": [
+          {
+            "ip": "41.228.63.62",
+            "asn": 2609,
+            "as_org": "TN-BB-AS Tunisia BackBone AS",
+            "as_country": "TN"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2c0f:fab0:ffff:5:41:228:63:62",
+            "asn": 2609,
+            "as_org": "TN-BB-AS Tunisia BackBone AS",
+            "as_country": "TN"
+          }
+        ]
+      },
+      {
+        "hostname": "ns2.nic.fr",
+        "ipv4": [
+          {
+            "ip": "192.93.0.4",
+            "asn": 2486,
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_country": "FR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:660:3005:1::1:2",
+            "asn": 2486,
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_country": "FR"
+          }
+        ]
+      },
+      {
+        "hostname": "pch.ati.tn",
+        "ipv4": [
+          {
+            "ip": "204.61.216.94",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6094:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "rip.psg.com",
+        "ipv4": [
+          {
+            "ip": "147.28.0.39",
+            "asn": 3130,
+            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_country": "EE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:418:1::39",
+            "asn": 3130,
+            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_country": "EE"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.ati.tn",
+    "whois_server": "whois.ati.tn",
+    "tld_created": "2010-08-19",
+    "tld_updated": [
+      "2023-03-07"
+    ],
+    "annotations": {
+      "country_name_iso": "Tunisia",
+      "as_org_aliases": [
+        "AFNIC",
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

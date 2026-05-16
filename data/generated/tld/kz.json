@@ -1,0 +1,93 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "kz",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Association of IT Companies of Kazakhstan",
+      "admin": "Association of IT Companies of Kazakhstan",
+      "tech": "KazNIC Organization"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns.nic.kz",
+        "ipv4": [
+          {
+            "ip": "194.0.21.5",
+            "asn": 51833,
+            "as_org": "NICKZ-AS for anycast DNS",
+            "as_country": "KZ"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:98:1::5",
+            "asn": 51833,
+            "as_org": "NICKZ-AS for anycast DNS",
+            "as_country": "KZ"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.nic.kz",
+        "ipv4": [
+          {
+            "ip": "185.79.212.7",
+            "asn": 206768,
+            "as_org": "DNS2KZ-AS",
+            "as_country": "KZ"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:7640:9000::7",
+            "asn": 206768,
+            "as_org": "DNS2KZ-AS",
+            "as_country": "KZ"
+          }
+        ]
+      },
+      {
+        "hostname": "ns2.nic.kz",
+        "ipv4": [
+          {
+            "ip": "204.61.216.143",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6143:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.kz",
+    "whois_server": "whois.nic.kz",
+    "tld_created": "1994-09-19",
+    "tld_updated": [
+      "2023-01-24"
+    ],
+    "annotations": {
+      "country_name_iso": "Kazakhstan",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ]
+    },
+    "idn": [
+      "xn--80ao21a"
+    ]
+  }
+}

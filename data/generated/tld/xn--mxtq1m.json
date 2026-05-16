@@ -1,0 +1,113 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "xn--mxtq1m",
+    "tld_unicode": "政府",
+    "tld_script": "Han-CJK",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "Net-Chinese Co., Ltd.",
+      "admin": "Taiwan Network Information Center (TWNIC)",
+      "tech": "Taiwan Network Information Center (TWNIC)"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.nic.xn--mxtq1m",
+        "ipv4": [
+          {
+            "ip": "202.169.175.130",
+            "asn": 9264,
+            "as_org": "ASNET Academia Sinica",
+            "as_country": "TW"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:c08:175:128::175:128",
+            "asn": 9264,
+            "as_org": "ASNET Academia Sinica",
+            "as_country": "TW"
+          }
+        ]
+      },
+      {
+        "hostname": "b.nic.xn--mxtq1m",
+        "ipv4": [
+          {
+            "ip": "203.73.24.25",
+            "asn": 4780,
+            "as_org": "SEEDNET Digital United Inc.",
+            "as_country": "TW"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:cd8:800::25",
+            "asn": 4780,
+            "as_org": "SEEDNET Digital United Inc.",
+            "as_country": "TW"
+          }
+        ]
+      },
+      {
+        "hostname": "c.nic.xn--mxtq1m",
+        "ipv4": [
+          {
+            "ip": "211.20.231.7",
+            "asn": 3462,
+            "as_org": "HINET Data Communication Business Group",
+            "as_country": "TW"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:b000:1e0:c000::7",
+            "asn": 3462,
+            "as_org": "HINET Data Communication Business Group",
+            "as_country": "TW"
+          }
+        ]
+      },
+      {
+        "hostname": "d.nic.xn--mxtq1m",
+        "ipv4": [
+          {
+            "ip": "60.199.165.185",
+            "asn": 9924,
+            "as_org": "TFN-TW Taiwan Fixed Network, Telco and Network Service Provider.",
+            "as_country": "TW"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:4541:9010:7::185",
+            "asn": 9924,
+            "as_org": "TFN-TW Taiwan Fixed Network, Telco and Network Service Provider.",
+            "as_country": "TW"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.netc.tw",
+    "whois_server": "whois.nic.xn--mxtq1m",
+    "rdap_server": "https://rdap.twnic.tw/rdap/",
+    "tld_created": "2015-01-08",
+    "tld_updated": [
+      "2024-12-17"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ]
+    }
+  }
+}

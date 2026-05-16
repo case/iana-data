@@ -1,0 +1,83 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "ki",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Ministry of Information, Communications and Transport (MICT)",
+      "admin": "Ministry of Information, Communications and Transport",
+      "tech": "Communications Commission of Kiribati"
+    },
+    "nameservers": [
+      {
+        "hostname": "anycastdns1.nic.ki",
+        "ipv4": [
+          {
+            "ip": "185.38.108.108",
+            "asn": 60592,
+            "as_org": "GRANSY Gransy s.r.o. gransy.com",
+            "as_country": "CZ"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a00:fea0:dead::beef",
+            "asn": 60592,
+            "as_org": "GRANSY Gransy s.r.o. gransy.com",
+            "as_country": "CZ"
+          }
+        ]
+      },
+      {
+        "hostname": "anycastdns2.nic.ki",
+        "ipv4": [
+          {
+            "ip": "185.28.194.194",
+            "asn": 60592,
+            "as_org": "GRANSY Gransy s.r.o. gransy.com",
+            "as_country": "CZ"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "pch.nic.ki",
+        "ipv4": [
+          {
+            "ip": "204.61.216.26",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6026:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.ki",
+    "whois_server": "whois.nic.ki",
+    "tld_created": "1995-04-19",
+    "tld_updated": [
+      "2024-02-06"
+    ],
+    "annotations": {
+      "country_name_iso": "Kiribati",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

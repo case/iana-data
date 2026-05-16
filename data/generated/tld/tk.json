@@ -1,0 +1,106 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "tk",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Telecommunication Tokelau Corporation (Teletok)",
+      "admin": "Telecommunication Tokelau Corporation (Teletok)",
+      "tech": "BV Dot TK"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.ns.tk",
+        "ipv4": [
+          {
+            "ip": "194.0.38.1",
+            "asn": 57382,
+            "as_org": "TK1",
+            "as_country": "TK"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:50::1",
+            "asn": 57382,
+            "as_org": "TK1",
+            "as_country": "TK"
+          }
+        ]
+      },
+      {
+        "hostname": "b.ns.tk",
+        "ipv4": [
+          {
+            "ip": "194.0.39.1",
+            "asn": 57382,
+            "as_org": "TK1",
+            "as_country": "TK"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:54::1",
+            "asn": 57382,
+            "as_org": "TK1",
+            "as_country": "TK"
+          }
+        ]
+      },
+      {
+        "hostname": "c.ns.tk",
+        "ipv4": [
+          {
+            "ip": "194.0.40.1",
+            "asn": 198147,
+            "as_org": "TK2",
+            "as_country": "TK"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:58::1",
+            "asn": 198147,
+            "as_org": "TK2",
+            "as_country": "TK"
+          }
+        ]
+      },
+      {
+        "hostname": "d.ns.tk",
+        "ipv4": [
+          {
+            "ip": "194.0.41.1",
+            "asn": 198147,
+            "as_org": "TK2",
+            "as_country": "TK"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:5c::1",
+            "asn": 198147,
+            "as_org": "TK2",
+            "as_country": "TK"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.dot.tk",
+    "whois_server": "whois.dot.tk",
+    "tld_created": "1997-11-07",
+    "tld_updated": [
+      "2019-02-12"
+    ],
+    "annotations": {
+      "country_name_iso": "Tokelau"
+    }
+  }
+}

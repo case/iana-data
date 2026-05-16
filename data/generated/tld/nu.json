@@ -1,0 +1,148 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "nu",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "The IUSN Foundation",
+      "admin": "The IUSN Foundation",
+      "tech": "The Internet Infrastructure Foundation"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.ns.nu",
+        "ipv4": [
+          {
+            "ip": "194.146.106.22",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:1010:5::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "c.ns.nu",
+        "ipv4": [
+          {
+            "ip": "192.36.144.107",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:3f0:0:301::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "d.ns.nu",
+        "ipv4": [
+          {
+            "ip": "213.108.25.4",
+            "asn": 197564,
+            "as_org": "INTERNETSTIFTELSEN",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:124c:e000::4",
+            "asn": 197564,
+            "as_org": "INTERNETSTIFTELSEN",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "m.ns.nu",
+        "ipv4": [
+          {
+            "ip": "194.0.11.112",
+            "asn": 31529,
+            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:e:112::53",
+            "asn": 31529,
+            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_country": "DE"
+          }
+        ]
+      },
+      {
+        "hostname": "y.ns.nu",
+        "ipv4": [
+          {
+            "ip": "185.159.197.150",
+            "asn": 55195,
+            "as_org": "CIRA-CLOUD1",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:10a:80aa::150",
+            "asn": 55195,
+            "as_org": "CIRA-CLOUD1",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "z.ns.nu",
+        "ipv4": [
+          {
+            "ip": "185.159.198.150",
+            "asn": 394354,
+            "as_org": "CIRA-CLOUD2",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:10a:80ab::150",
+            "asn": 394354,
+            "as_org": "CIRA-CLOUD2",
+            "as_country": "CA"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://www.internetstiftelsen.se",
+    "whois_server": "whois.iis.nu",
+    "tld_created": "1997-06-20",
+    "tld_updated": [
+      "2025-07-03"
+    ],
+    "annotations": {
+      "country_name_iso": "Niue",
+      "as_org_aliases": [
+        "CIRA",
+        "DENIC"
+      ]
+    }
+  }
+}

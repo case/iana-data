@@ -1,0 +1,66 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "xn--mgbpl2fh",
+    "tld_unicode": "سودان",
+    "tld_script": "Arabic",
+    "tld_iso": "sd",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Sudan Internet Society",
+      "admin": "Sudan Internet Society",
+      "tech": "Sudan Internet Society"
+    },
+    "nameservers": [
+      {
+        "hostname": "ans1.sis.sd",
+        "ipv4": [
+          {
+            "ip": "196.29.166.134",
+            "asn": 0,
+            "as_org": "Not routed",
+            "as_country": "None"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "pch.sis.sd",
+        "ipv4": [
+          {
+            "ip": "204.61.216.97",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6097:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://domains.sd",
+    "tld_created": "2012-11-20",
+    "tld_updated": [
+      "2023-03-07"
+    ],
+    "annotations": {
+      "country_name_iso": "Sudan",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

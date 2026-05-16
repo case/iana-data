@@ -77,6 +77,7 @@ def test_root_db_content_changed_handles_file_read_error(tmp_path, monkeypatch):
 
     # Make file unreadable by mocking Path.read_text
     from pathlib import Path
+
     original_read_text = Path.read_text
 
     def mock_read_text(self, *args, **kwargs):

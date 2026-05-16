@@ -1,0 +1,94 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "ht",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Consortium FDS/RDDH",
+      "admin": "Fondation Réseau de Développement Durable d'Haïti/ Faculté Des Sciences - UEH",
+      "tech": "Faculté des Sciences de l'Université d'Etat d'Haïti/ FRDDH"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.lactld.org",
+        "ipv4": [
+          {
+            "ip": "200.0.68.10",
+            "asn": 61455,
+            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_country": "UY"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2801:14:a000::10",
+            "asn": 61455,
+            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_country": "UY"
+          }
+        ]
+      },
+      {
+        "hostname": "ns-ht.nic.fr",
+        "ipv4": [
+          {
+            "ip": "194.0.9.1",
+            "asn": 2486,
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_country": "FR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:c::1",
+            "asn": 2486,
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_country": "FR"
+          }
+        ]
+      },
+      {
+        "hostname": "pch.nic.ht",
+        "ipv4": [
+          {
+            "ip": "204.61.216.38",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6038:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.ht",
+    "whois_server": "whois.nic.ht",
+    "rdap_server": "https://rdap.nic.ht/",
+    "tld_created": "1997-03-06",
+    "tld_updated": [
+      "2025-03-05"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Haiti",
+      "as_org_aliases": [
+        "AFNIC",
+        "LACTLD",
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

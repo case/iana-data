@@ -1,0 +1,108 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "lr",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Data Technology Solutions, Inc.",
+      "admin": "Data Technology Solutions, Inc.",
+      "tech": "5147 Crystal Springs Drive NE"
+    },
+    "nameservers": [
+      {
+        "hostname": "fork.sth.dnsnode.net",
+        "ipv4": [
+          {
+            "ip": "77.72.229.254",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:3f0:0:306::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "ns-lr.afrinic.net",
+        "ipv4": [
+          {
+            "ip": "196.216.168.61",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:43f8:120::61",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.rg.net",
+        "ipv4": [
+          {
+            "ip": "46.224.94.61",
+            "asn": 24940,
+            "as_org": "HETZNER-AS",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:4f8:1c1a:5360::1",
+            "asn": 24940,
+            "as_org": "HETZNER-AS",
+            "as_country": "DE"
+          }
+        ]
+      },
+      {
+        "hostname": "rip.psg.com",
+        "ipv4": [
+          {
+            "ip": "147.28.0.39",
+            "asn": 3130,
+            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_country": "EE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:418:1::39",
+            "asn": 3130,
+            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_country": "EE"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://psg.com/dns/lr",
+    "tld_created": "1997-04-09",
+    "tld_updated": [
+      "2026-01-10"
+    ],
+    "annotations": {
+      "country_name_iso": "Liberia",
+      "as_org_aliases": [
+        "Hetzner"
+      ]
+    }
+  }
+}

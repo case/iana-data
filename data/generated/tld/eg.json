@@ -1,0 +1,82 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "eg",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Egyptian Universities Network (EUN), Supreme Council of Universities",
+      "admin": "Egyptian Universities Network (EUN)\nSupreme Council of Universities",
+      "tech": "Egyptian Universities Network (EUN)\nSupreme Council of Universities"
+    },
+    "nameservers": [
+      {
+        "hostname": "dns-eg.univie.ac.at",
+        "ipv4": [
+          {
+            "ip": "78.104.145.8",
+            "asn": 1120,
+            "as_org": "ACONET_SERVICES ACOnet Services @ Vienna Internet eXchange",
+            "as_country": "EU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:628:453:bb::8",
+            "asn": 1120,
+            "as_org": "ACONET_SERVICES ACOnet Services @ Vienna Internet eXchange",
+            "as_country": "EU"
+          }
+        ]
+      },
+      {
+        "hostname": "frcu.eun.eg",
+        "ipv4": [
+          {
+            "ip": "193.227.1.1",
+            "asn": 2561,
+            "as_org": "EUN",
+            "as_country": "EG"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "rip.psg.com",
+        "ipv4": [
+          {
+            "ip": "147.28.0.39",
+            "asn": 3130,
+            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_country": "EE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:418:1::39",
+            "asn": 3130,
+            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_country": "EE"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.egregistry.eg/",
+    "tld_created": "1990-11-30",
+    "tld_updated": [
+      "2025-08-22"
+    ],
+    "annotations": {
+      "country_name_iso": "Egypt"
+    },
+    "idn": [
+      "xn--wgbh1c"
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "kp",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Star Joint Venture Company",
+      "admin": "Star Joint Venture Company",
+      "tech": "Star Joint Venture Company"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns1.kptc.kp",
+        "ipv4": [
+          {
+            "ip": "175.45.176.15",
+            "asn": 131279,
+            "as_org": "STAR-KP Ryugyong-dong",
+            "as_country": "KP"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns2.kptc.kp",
+        "ipv4": [
+          {
+            "ip": "175.45.176.16",
+            "asn": 131279,
+            "as_org": "STAR-KP Ryugyong-dong",
+            "as_country": "KP"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.star.co.kp",
+    "tld_created": "2007-09-24",
+    "tld_updated": [
+      "2026-05-14"
+    ],
+    "annotations": {
+      "country_name_iso": "Korea, Democratic People's Republic of"
+    }
+  }
+}

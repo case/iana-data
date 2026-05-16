@@ -1,0 +1,96 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "apple",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "Apple Inc.",
+      "admin": "Apple, Inc.",
+      "tech": "Packet Clearing House"
+    },
+    "nameservers": [
+      {
+        "hostname": "apple-ns.pch.net",
+        "ipv4": [
+          {
+            "ip": "203.119.88.1",
+            "asn": 187,
+            "as_org": "DNSCAST-AS",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dd8:7:6001:dc::1",
+            "asn": 187,
+            "as_org": "DNSCAST-AS",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "c.ns.apple.com",
+        "ipv4": [
+          {
+            "ip": "204.19.119.1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:171:800:714::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "d.ns.apple.com",
+        "ipv4": [
+          {
+            "ip": "204.26.57.1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:171:801:714::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://www.nic.apple/",
+    "rdap_server": "https://rdap.nic.apple/",
+    "tld_created": "2015-07-02",
+    "tld_updated": [
+      "2025-11-10"
+    ],
+    "annotations": {
+      "tld_manager_alias": "Apple",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "brand",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

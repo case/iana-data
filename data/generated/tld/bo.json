@@ -1,0 +1,103 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "bo",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Agencia para el Desarrollo de la Información de la Sociedad en Bolivia",
+      "admin": "Agencia para el Desarrollo de la Información de la Sociedad en Bolivia",
+      "tech": "Agencia para el Desarrollo de la Información de la Sociedad en Bolivia"
+    },
+    "nameservers": [
+      {
+        "hostname": "anycast.ns.nic.bo",
+        "ipv4": [
+          {
+            "ip": "204.61.216.48",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6048:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns.dns.br",
+        "ipv4": [
+          {
+            "ip": "200.160.0.5",
+            "asn": 22548,
+            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_country": "BR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:12ff:0:a20::5",
+            "asn": 22548,
+            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_country": "BR"
+          }
+        ]
+      },
+      {
+        "hostname": "ns.nic.bo",
+        "ipv4": [
+          {
+            "ip": "166.114.1.40",
+            "asn": 52250,
+            "as_org": "Ag para el Desarrollo de la Sociedad de la Inf en Bolivia - ADSIB",
+            "as_country": "BO"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns2.nic.fr",
+        "ipv4": [
+          {
+            "ip": "192.93.0.4",
+            "asn": 2486,
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_country": "FR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:660:3005:1::1:2",
+            "asn": 2486,
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_country": "FR"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.bo",
+    "whois_server": "whois.nic.bo",
+    "tld_created": "1991-02-26",
+    "tld_updated": [
+      "2024-05-23"
+    ],
+    "annotations": {
+      "country_name_iso": "Bolivia, Plurinational State of",
+      "as_org_aliases": [
+        "AFNIC",
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "xn--3e0b707e",
+    "tld_unicode": "한국",
+    "tld_script": "Hangul",
+    "tld_iso": "kr",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "KISA (Korea Internet & Security Agency)",
+      "admin": "KISA (Korea Internet &amp; Security Agency)",
+      "tech": "KISA (Korea Internet &amp; Security Agency)"
+    },
+    "nameservers": [
+      {
+        "hostname": "b.dns.kr",
+        "ipv4": [
+          {
+            "ip": "210.101.60.1",
+            "asn": 131098,
+            "as_org": "BDNSKR-AS-KR Korea Internet Security Agency",
+            "as_country": "KR"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "c.dns.kr",
+        "ipv4": [
+          {
+            "ip": "210.101.61.1",
+            "asn": 131099,
+            "as_org": "CDNSKR-AS-KR Korea Internet Security Agency",
+            "as_country": "KR"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "d.dns.kr",
+        "ipv4": [
+          {
+            "ip": "203.83.159.1",
+            "asn": 23599,
+            "as_org": "DDNSKR-KR Korea Internet Security Agency",
+            "as_country": "KR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dcc:4::1",
+            "asn": 23599,
+            "as_org": "DDNSKR-KR Korea Internet Security Agency",
+            "as_country": "KR"
+          }
+        ]
+      },
+      {
+        "hostname": "e.dns.kr",
+        "ipv4": [
+          {
+            "ip": "202.30.124.100",
+            "asn": 23596,
+            "as_org": "EDNSKR-KR Korea Internet Security Agency",
+            "as_country": "KR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dcc:5::100",
+            "asn": 23596,
+            "as_org": "EDNSKR-KR Korea Internet Security Agency",
+            "as_country": "KR"
+          }
+        ]
+      },
+      {
+        "hostname": "f.dns.kr",
+        "ipv4": [
+          {
+            "ip": "210.101.62.1",
+            "asn": 131100,
+            "as_org": "FDNSKR-AS-KR Korea Internet Security Agency",
+            "as_country": "KR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dcc:6::1",
+            "asn": 131100,
+            "as_org": "FDNSKR-AS-KR Korea Internet Security Agency",
+            "as_country": "KR"
+          }
+        ]
+      },
+      {
+        "hostname": "g.dns.kr",
+        "ipv4": [
+          {
+            "ip": "202.31.190.1",
+            "asn": 23600,
+            "as_org": "GDNSKR-KR Korea Internet Security Agency",
+            "as_country": "KR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dc5:a::1",
+            "asn": 23600,
+            "as_org": "GDNSKR-KR Korea Internet Security Agency",
+            "as_country": "KR"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.or.kr",
+    "whois_server": "whois.kr",
+    "tld_created": "2011-02-05",
+    "tld_updated": [
+      "2023-03-07"
+    ],
+    "annotations": {
+      "country_name_iso": "Korea, Republic of"
+    }
+  }
+}

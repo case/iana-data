@@ -1,0 +1,110 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "sn",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Universite Cheikh Anta Diop",
+      "admin": "Centre Universitaire de Recherche et de formations aux technologies Internet (CURI)",
+      "tech": "CURI - NIC Senegal"
+    },
+    "nameservers": [
+      {
+        "hostname": "dns-tld.ird.fr",
+        "ipv4": [
+          {
+            "ip": "13.39.116.127",
+            "asn": 16509,
+            "as_org": "AMAZON-02",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns-sn.nic.fr",
+        "ipv4": [
+          {
+            "ip": "194.0.9.1",
+            "asn": 2486,
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_country": "FR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:c::1",
+            "asn": 2486,
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_country": "FR"
+          }
+        ]
+      },
+      {
+        "hostname": "ns.ucad.sn",
+        "ipv4": [
+          {
+            "ip": "196.1.95.1",
+            "asn": 8346,
+            "as_org": "SONATEL SONATEL-AS Autonomous System",
+            "as_country": "SN"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns1.sonatel.sn",
+        "ipv4": [
+          {
+            "ip": "213.154.64.11",
+            "asn": 8346,
+            "as_org": "SONATEL SONATEL-AS Autonomous System",
+            "as_country": "SN"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "sn.cctld.authdns.ripe.net",
+        "ipv4": [
+          {
+            "ip": "193.0.9.111",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a13:27c0:30::111",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://www.cctld.sn",
+    "whois_server": "whois.nic.sn",
+    "rdap_server": "https://rdap.nic.sn/whois43/",
+    "tld_created": "1993-03-19",
+    "tld_updated": [
+      "2026-03-12"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Senegal",
+      "as_org_aliases": [
+        "AFNIC",
+        "Amazon"
+      ]
+    }
+  }
+}

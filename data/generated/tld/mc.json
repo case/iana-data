@@ -1,0 +1,88 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "mc",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Direction des Plateformes et des Ressources Numériques",
+      "admin": "Direction des Plateformes et des Ressources Numériques",
+      "tech": "Direction des Plateformes et des Ressources Numériques"
+    },
+    "nameservers": [
+      {
+        "hostname": "mc.cctld.authdns.ripe.net",
+        "ipv4": [
+          {
+            "ip": "193.0.9.92",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a13:27c0:30::92",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.nic.mc",
+        "ipv4": [
+          {
+            "ip": "185.243.3.205",
+            "asn": 6758,
+            "as_org": "AS6758",
+            "as_country": "MC"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns2.nic.mc",
+        "ipv4": [
+          {
+            "ip": "13.36.89.111",
+            "asn": 16509,
+            "as_org": "AMAZON-02",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns3.nic.mc",
+        "ipv4": [
+          {
+            "ip": "15.237.153.29",
+            "asn": 16509,
+            "as_org": "AMAZON-02",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "https://www.nic.mc/",
+    "whois_server": "whois.nic.mc",
+    "tld_created": "1995-01-20",
+    "tld_updated": [
+      "2025-12-15"
+    ],
+    "annotations": {
+      "country_name_iso": "Monaco",
+      "as_org_aliases": [
+        "Amazon"
+      ]
+    }
+  }
+}

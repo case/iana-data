@@ -45,7 +45,9 @@ def parse_tld_page(html: str) -> dict[str, Any]:
             if "country-code" in text.lower():
                 result["is_cctld"] = True
                 # Check for IDN mapping
-                iso_match = re.search(r"designated for two-letter country code ([A-Z]{2})", text)
+                iso_match = re.search(
+                    r"designated for two-letter country code ([A-Z]{2})", text
+                )
                 if iso_match:
                     result["tld_iso"] = iso_match.group(1).lower()
             elif "generic" in text.lower():
@@ -114,11 +116,13 @@ def parse_tld_page(html: str) -> dict[str, Any]:
                             # Not a valid IP, skip
                             pass
 
-                nameservers.append({
-                    "hostname": hostname,
-                    "ipv4": ipv4_list,
-                    "ipv6": ipv6_list,
-                })
+                nameservers.append(
+                    {
+                        "hostname": hostname,
+                        "ipv4": ipv4_list,
+                        "ipv6": ipv6_list,
+                    }
+                )
         if nameservers:
             break  # Found the nameservers table
 
@@ -127,7 +131,9 @@ def parse_tld_page(html: str) -> dict[str, Any]:
 
     # Extract registry information using regex on full HTML
     # Registry URL
-    url_match = re.search(r'URL for registration services:</b>\s*<a href="([^"]+)"', html)
+    url_match = re.search(
+        r'URL for registration services:</b>\s*<a href="([^"]+)"', html
+    )
     if url_match:
         result["registry_url"] = url_match.group(1)
 
@@ -164,10 +170,7 @@ def parse_tld_page(html: str) -> dict[str, Any]:
                 li_text = li.text()
                 date_match = re.search(r"\((\d{4}-\d{2}-\d{2})\)", li_text)
                 if title and date_match:
-                    iana_reports.append({
-                        "title": title,
-                        "date": date_match.group(1)
-                    })
+                    iana_reports.append({"title": title, "date": date_match.group(1)})
 
     if iana_reports:
         result["iana_reports"] = iana_reports

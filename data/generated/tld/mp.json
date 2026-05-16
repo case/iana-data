@@ -1,0 +1,80 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "mp",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Saipan Datacom, Inc.",
+      "admin": "Saipan Datacom, Inc.",
+      "tech": "Saipan Datacom, Inc."
+    },
+    "nameservers": [
+      {
+        "hostname": "ns1.nic.mp",
+        "ipv4": [
+          {
+            "ip": "16.162.31.128",
+            "asn": 16509,
+            "as_org": "AMAZON-02",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns2.nic.mp",
+        "ipv4": [
+          {
+            "ip": "16.163.54.122",
+            "asn": 16509,
+            "as_org": "AMAZON-02",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns3.nic.mp",
+        "ipv4": [
+          {
+            "ip": "75.101.129.89",
+            "asn": 14618,
+            "as_org": "AMAZON-AES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns4.nic.mp",
+        "ipv4": [
+          {
+            "ip": "75.101.133.101",
+            "asn": 14618,
+            "as_org": "AMAZON-AES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "https://get.mp/",
+    "tld_created": "1996-10-22",
+    "tld_updated": [
+      "2022-05-06"
+    ],
+    "annotations": {
+      "country_name_iso": "Northern Mariana Islands",
+      "as_org_aliases": [
+        "Amazon"
+      ]
+    }
+  }
+}

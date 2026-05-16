@@ -1,0 +1,96 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "schaeffler",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "Schaeffler Technologies AG & Co. KG",
+      "admin": "LEMARIT GmbH",
+      "tech": "LEMARIT GmbH"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.dns.nic.schaeffler",
+        "ipv4": [
+          {
+            "ip": "194.0.25.34",
+            "asn": 1921,
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_country": "AT"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:20::34",
+            "asn": 1921,
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_country": "AT"
+          }
+        ]
+      },
+      {
+        "hostname": "m.dns.nic.schaeffler",
+        "ipv4": [
+          {
+            "ip": "194.0.26.14",
+            "asn": 201612,
+            "as_org": "NICAT-MINICAST-AS",
+            "as_country": "AT"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:10e0::14",
+            "asn": 201612,
+            "as_org": "NICAT-MINICAST-AS",
+            "as_country": "AT"
+          }
+        ]
+      },
+      {
+        "hostname": "n.dns.nic.schaeffler",
+        "ipv4": [
+          {
+            "ip": "194.0.24.14",
+            "asn": 201612,
+            "as_org": "NICAT-MINICAST-AS",
+            "as_country": "AT"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:24::14",
+            "asn": 201612,
+            "as_org": "NICAT-MINICAST-AS",
+            "as_country": "AT"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.schaeffler.com",
+    "whois_server": "whois.afilias-srs.net",
+    "rdap_server": "https://rdap.nic.schaeffler/",
+    "tld_created": "2015-12-17",
+    "tld_updated": [
+      "2023-05-04"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "brand",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "RcodeZero"
+      ]
+    }
+  }
+}

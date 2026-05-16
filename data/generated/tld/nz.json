@@ -1,0 +1,166 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "nz",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "InternetNZ",
+      "admin": "InternetNZ",
+      "tech": "InternetNZ"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns1.dns.net.nz",
+        "ipv4": [
+          {
+            "ip": "202.46.190.130",
+            "asn": 45809,
+            "as_org": "NZRS-AS-AP ASN for .nz registry content",
+            "as_country": "NZ"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dce:2000:2::130",
+            "asn": 45809,
+            "as_org": "NZRS-AS-AP ASN for .nz registry content",
+            "as_country": "NZ"
+          }
+        ]
+      },
+      {
+        "hostname": "ns2.dns.net.nz",
+        "ipv4": [
+          {
+            "ip": "202.46.187.130",
+            "asn": 38064,
+            "as_org": "NZ-AS-NS1-AP ASN for anycast peering of",
+            "as_country": "NZ"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dce:7000:2::130",
+            "asn": 45285,
+            "as_org": "NZ-AS-NS2-AP ASN for anycast peering",
+            "as_country": "NZ"
+          }
+        ]
+      },
+      {
+        "hostname": "ns3.dns.net.nz",
+        "ipv4": [
+          {
+            "ip": "202.46.188.130",
+            "asn": 45285,
+            "as_org": "NZ-AS-NS2-AP ASN for anycast peering",
+            "as_country": "NZ"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dce:d453::53",
+            "asn": 45285,
+            "as_org": "NZ-AS-NS2-AP ASN for anycast peering",
+            "as_country": "NZ"
+          }
+        ]
+      },
+      {
+        "hostname": "ns4.dns.net.nz",
+        "ipv4": [
+          {
+            "ip": "202.46.189.130",
+            "asn": 45285,
+            "as_org": "NZ-AS-NS2-AP ASN for anycast peering",
+            "as_country": "NZ"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dce:d454::53",
+            "asn": 45285,
+            "as_org": "NZ-AS-NS2-AP ASN for anycast peering",
+            "as_country": "NZ"
+          }
+        ]
+      },
+      {
+        "hostname": "ns5.dns.net.nz",
+        "ipv4": [
+          {
+            "ip": "185.159.197.130",
+            "asn": 55195,
+            "as_org": "CIRA-CLOUD1",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:10a:80aa::130",
+            "asn": 55195,
+            "as_org": "CIRA-CLOUD1",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "ns6.dns.net.nz",
+        "ipv4": [
+          {
+            "ip": "185.159.198.130",
+            "asn": 394354,
+            "as_org": "CIRA-CLOUD2",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:10a:80ab::130",
+            "asn": 394354,
+            "as_org": "CIRA-CLOUD2",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "ns7.dns.net.nz",
+        "ipv4": [
+          {
+            "ip": "194.146.106.54",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:1010:13::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.dnc.org.nz/",
+    "whois_server": "whois.irs.net.nz",
+    "tld_created": "1987-01-19",
+    "tld_updated": [
+      "2025-12-15"
+    ],
+    "annotations": {
+      "country_name_iso": "New Zealand",
+      "as_org_aliases": [
+        "CIRA"
+      ]
+    }
+  }
+}

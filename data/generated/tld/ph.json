@@ -1,0 +1,109 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "ph",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "PH Domain Foundation",
+      "admin": "DotPH",
+      "tech": "DotPH"
+    },
+    "nameservers": [
+      {
+        "hostname": "1.ns.ph",
+        "ipv4": [
+          {
+            "ip": "206.51.255.1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:171:805:ad2:7068::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns2.cuhk.edu.hk",
+        "ipv4": [
+          {
+            "ip": "137.189.6.21",
+            "asn": 3661,
+            "as_org": "ERX-CUHKNET The Chinese University of Hong Kong",
+            "as_country": "HK"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2405:3000:3:6::15",
+            "asn": 3661,
+            "as_org": "ERX-CUHKNET The Chinese University of Hong Kong",
+            "as_country": "HK"
+          }
+        ]
+      },
+      {
+        "hostname": "ns4.apnic.net",
+        "ipv4": [
+          {
+            "ip": "202.12.31.53",
+            "asn": 18366,
+            "as_org": "APNIC-ANYCAST APNIC ANYCAST ASN",
+            "as_country": "AU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dd8:12::53",
+            "asn": 18366,
+            "as_org": "APNIC-ANYCAST APNIC ANYCAST ASN",
+            "as_country": "AU"
+          }
+        ]
+      },
+      {
+        "hostname": "ph.communitydns.net",
+        "ipv4": [
+          {
+            "ip": "194.0.1.23",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:4::17",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://dot.ph",
+    "tld_created": "1990-09-14",
+    "tld_updated": [
+      "2024-01-30"
+    ],
+    "annotations": {
+      "country_name_iso": "Philippines",
+      "as_org_aliases": [
+        "CDNS",
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

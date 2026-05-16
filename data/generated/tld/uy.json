@@ -1,0 +1,160 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "uy",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "SeCIU - Universidad de la Republica",
+      "admin": "Servicio Central de Informatica (SECIU)",
+      "tech": "Servicio Central de Informatica (SECIU)"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.lactld.org",
+        "ipv4": [
+          {
+            "ip": "200.0.68.10",
+            "asn": 61455,
+            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_country": "UY"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2801:14:a000::10",
+            "asn": 61455,
+            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_country": "UY"
+          }
+        ]
+      },
+      {
+        "hostname": "a.nic.uy",
+        "ipv4": [
+          {
+            "ip": "164.73.128.5",
+            "asn": 1797,
+            "as_org": "Uruguay",
+            "as_country": "UY"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:1328:6::5",
+            "asn": 1797,
+            "as_org": "Uruguay",
+            "as_country": "UY"
+          }
+        ]
+      },
+      {
+        "hostname": "b.nic.uy",
+        "ipv4": [
+          {
+            "ip": "164.73.128.70",
+            "asn": 1797,
+            "as_org": "Uruguay",
+            "as_country": "UY"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "d.nic.uy",
+        "ipv4": [
+          {
+            "ip": "65.22.41.1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:1bb::1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns.dns.br",
+        "ipv4": [
+          {
+            "ip": "200.160.0.5",
+            "asn": 22548,
+            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_country": "BR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:12ff:0:a20::5",
+            "asn": 22548,
+            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_country": "BR"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.anteldata.com.uy",
+        "ipv4": [
+          {
+            "ip": "200.40.30.254",
+            "asn": 6057,
+            "as_org": "Administracion Nacional de Telecomunicaciones",
+            "as_country": "UY"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2800:a0:53:1001::1",
+            "asn": 6057,
+            "as_org": "Administracion Nacional de Telecomunicaciones",
+            "as_country": "UY"
+          }
+        ]
+      },
+      {
+        "hostname": "ns2.anteldata.com.uy",
+        "ipv4": [
+          {
+            "ip": "200.40.220.254",
+            "asn": 6057,
+            "as_org": "Administracion Nacional de Telecomunicaciones",
+            "as_country": "UY"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2800:a0:53:1002::1",
+            "asn": 6057,
+            "as_org": "Administracion Nacional de Telecomunicaciones",
+            "as_country": "UY"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.org.uy/",
+    "whois_server": "whois.nic.org.uy",
+    "tld_created": "1990-09-10",
+    "tld_updated": [
+      "2022-12-08"
+    ],
+    "annotations": {
+      "country_name_iso": "Uruguay",
+      "as_org_aliases": [
+        "Identity Digital",
+        "LACTLD"
+      ]
+    }
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "top",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "Hong Kong Zhongze International Limited",
+      "admin": "Jiangsu Bangning Science &amp; technology Co.,Ltd.",
+      "tech": "Jiangsu Bangning Science &amp; technology Co.,Ltd."
+    },
+    "nameservers": [
+      {
+        "hostname": "a.zdnscloud.cn",
+        "ipv4": [
+          {
+            "ip": "203.99.24.1",
+            "asn": 38345,
+            "as_org": "ZDNS Internet Domain Name System Beijing Engineering Resrarch Center Ltd.",
+            "as_country": "CN"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "b.zdnscloud.cn",
+        "ipv4": [
+          {
+            "ip": "203.99.25.1",
+            "asn": 38345,
+            "as_org": "ZDNS Internet Domain Name System Beijing Engineering Resrarch Center Ltd.",
+            "as_country": "CN"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "c.zdnscloud.com",
+        "ipv4": [
+          {
+            "ip": "203.99.26.1",
+            "asn": 38345,
+            "as_org": "ZDNS Internet Domain Name System Beijing Engineering Resrarch Center Ltd.",
+            "as_country": "CN"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "d.zdnscloud.com",
+        "ipv4": [
+          {
+            "ip": "203.99.27.1",
+            "asn": 38345,
+            "as_org": "ZDNS Internet Domain Name System Beijing Engineering Resrarch Center Ltd.",
+            "as_country": "CN"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "e.zdnscloud.cn",
+        "ipv4": [
+          {
+            "ip": "203.119.82.1",
+            "asn": 0,
+            "as_org": "Not routed",
+            "as_country": "None"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2401:8d00:15::1",
+            "asn": 0,
+            "as_org": "Not routed",
+            "as_country": "None"
+          }
+        ]
+      },
+      {
+        "hostname": "f.zdnscloud.cn",
+        "ipv4": [
+          {
+            "ip": "116.169.54.111",
+            "asn": 4837,
+            "as_org": "CHINA169-BACKBONE CHINA UNICOM China169 Backbone",
+            "as_country": "CN"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "i.zdnscloud.cn",
+        "ipv4": [],
+        "ipv6": [
+          {
+            "ip": "2401:8d00:1::1",
+            "asn": 38345,
+            "as_org": "ZDNS Internet Domain Name System Beijing Engineering Resrarch Center Ltd.",
+            "as_country": "CN"
+          }
+        ]
+      },
+      {
+        "hostname": "j.zdnscloud.com",
+        "ipv4": [],
+        "ipv6": [
+          {
+            "ip": "2401:8d00:2::1",
+            "asn": 24149,
+            "as_org": "ZDNS Internet Domain Name System Beijing Engineering Resrarch Center Ltd.",
+            "as_country": "CN"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.top",
+    "whois_server": "whois.nic.top",
+    "rdap_server": "https://rdap.zdnsgtld.com/top/",
+    "tld_created": "2014-07-24",
+    "tld_updated": [
+      "2026-04-15"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "ZDNS"
+      ]
+    }
+  }
+}

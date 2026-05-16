@@ -1,0 +1,149 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "tv",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Ministry of Transport, Energy, Communications and Innovations",
+      "admin": "2 Vaiaku Rd",
+      "tech": "GoDaddy Registry"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.nic.tv",
+        "ipv4": [
+          {
+            "ip": "37.209.192.6",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dcd:1::6",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "b.nic.tv",
+        "ipv4": [
+          {
+            "ip": "37.209.194.6",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dcd:2::6",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "c.nic.tv",
+        "ipv4": [
+          {
+            "ip": "37.209.196.6",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dcd:3::6",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "x.nic.tv",
+        "ipv4": [
+          {
+            "ip": "156.154.103.22",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2610:a1:1010::22",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "y.nic.tv",
+        "ipv4": [
+          {
+            "ip": "156.154.104.22",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2610:a1:1011::22",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "z.nic.tv",
+        "ipv4": [
+          {
+            "ip": "156.154.105.22",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2610:a1:1012::22",
+            "asn": 12008,
+            "as_org": "SECURITYSERVICES",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://turnon.tv/",
+    "whois_server": "whois.nic.tv",
+    "rdap_server": "https://rdap.nic.tv/",
+    "tld_created": "1996-03-18",
+    "tld_updated": [
+      "2025-09-04"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Tuvalu",
+      "as_org_aliases": [
+        "UltraDNS"
+      ]
+    }
+  }
+}

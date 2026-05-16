@@ -76,9 +76,7 @@ def make_request_with_retry(
         response = client.get(url, headers=headers)
         # Raise ServerError for 5xx to trigger retry
         if 500 <= response.status_code < 600:
-            raise ServerError(
-                f"Server returned {response.status_code} for {url}"
-            )
+            raise ServerError(f"Server returned {response.status_code} for {url}")
         return response
 
     return _request()

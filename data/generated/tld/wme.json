@@ -1,0 +1,115 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "wme",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "William Morris Endeavor Entertainment, LLC",
+      "admin": "CentralNic",
+      "tech": "CentralNic"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.nic.wme",
+        "ipv4": [
+          {
+            "ip": "194.169.218.31",
+            "asn": 199330,
+            "as_org": "CENTRALNIC-ANYCAST-A CentralNic Anycast-A AS Number",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:13cc::1:31",
+            "asn": 199330,
+            "as_org": "CENTRALNIC-ANYCAST-A CentralNic Anycast-A AS Number",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "b.nic.wme",
+        "ipv4": [
+          {
+            "ip": "185.24.64.31",
+            "asn": 60890,
+            "as_org": "CENTRALNIC-ANYCAST-B CentralNic Anycast-B AS Number",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a04:2b00:13cc::1:31",
+            "asn": 60890,
+            "as_org": "CENTRALNIC-ANYCAST-B CentralNic Anycast-B AS Number",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "c.nic.wme",
+        "ipv4": [
+          {
+            "ip": "212.18.248.31",
+            "asn": 201304,
+            "as_org": "CENTRALNIC-ANYCAST-E",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a04:2b00:13ee::31",
+            "asn": 201304,
+            "as_org": "CENTRALNIC-ANYCAST-E",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "d.nic.wme",
+        "ipv4": [
+          {
+            "ip": "212.18.249.31",
+            "asn": 201303,
+            "as_org": "CENTRALNIC-ANYCAST-F",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a04:2b00:13ff::31",
+            "asn": 201303,
+            "as_org": "CENTRALNIC-ANYCAST-F",
+            "as_country": "GB"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.wmeentertainment.com",
+    "whois_server": "whois.nic.wme",
+    "rdap_server": "https://rdap.centralnic.com/wme",
+    "tld_created": "2014-08-22",
+    "tld_updated": [
+      "2023-09-19"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "brand",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "CentralNic"
+      ]
+    }
+  }
+}

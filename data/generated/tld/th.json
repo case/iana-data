@@ -1,0 +1,146 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "th",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Thai Network Information Center Foundation",
+      "admin": "Thai Network Information Center Foundation",
+      "tech": "Thai Network Information Center Foundation"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.thains.co.th",
+        "ipv4": [
+          {
+            "ip": "122.155.23.64",
+            "asn": 9335,
+            "as_org": "CAT-CLOUD-AP CAT Telecom Public Company Limited",
+            "as_country": "TH"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:c38:2000:183::30",
+            "asn": 9335,
+            "as_org": "CAT-CLOUD-AP CAT Telecom Public Company Limited",
+            "as_country": "TH"
+          }
+        ]
+      },
+      {
+        "hostname": "b.thains.co.th",
+        "ipv4": [
+          {
+            "ip": "203.159.64.64",
+            "asn": 142437,
+            "as_org": "TNSCL-AS-AP Thai Name Server Co., Ltd.",
+            "as_country": "TH"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2405:3340:e011:3000::30",
+            "asn": 142437,
+            "as_org": "TNSCL-AS-AP Thai Name Server Co., Ltd.",
+            "as_country": "TH"
+          }
+        ]
+      },
+      {
+        "hostname": "c.thains.co.th",
+        "ipv4": [
+          {
+            "ip": "194.0.1.28",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:4::1c",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "nn1.thains.co.th",
+        "ipv4": [
+          {
+            "ip": "194.146.106.154",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:1010:39::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "ns.thnic.net",
+        "ipv4": [
+          {
+            "ip": "202.28.0.1",
+            "asn": 4621,
+            "as_org": "UNINET-AS-AP UNINET-",
+            "as_country": "TH"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "p.thains.co.th",
+        "ipv4": [
+          {
+            "ip": "204.61.216.126",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6126:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.thnic.co.th",
+    "whois_server": "whois.thnic.co.th",
+    "rdap_server": "https://rdap.thains.co.th",
+    "tld_created": "1988-09-07",
+    "tld_updated": [
+      "2025-01-23"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Thailand",
+      "as_org_aliases": [
+        "CDNS",
+        "Packet Clearing House"
+      ]
+    },
+    "idn": [
+      "xn--o3cw4h"
+    ]
+  }
+}

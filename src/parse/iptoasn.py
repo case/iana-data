@@ -44,7 +44,9 @@ def parse_iptoasn_tsv(filepath: Path) -> list[ASNRecord]:
 
             parts = line.split("\t")
             if len(parts) < 5:
-                logger.warning("Malformed line %d: expected 5 fields, got %d", line_num, len(parts))
+                logger.warning(
+                    "Malformed line %d: expected 5 fields, got %d", line_num, len(parts)
+                )
                 continue
 
             try:
@@ -55,13 +57,15 @@ def parse_iptoasn_tsv(filepath: Path) -> list[ASNRecord]:
                 # Org may contain tabs, so join remaining parts
                 org = "\t".join(parts[4:])
 
-                records.append(ASNRecord(
-                    start_ip=start_ip,
-                    end_ip=end_ip,
-                    asn=asn,
-                    country=country,
-                    org=org,
-                ))
+                records.append(
+                    ASNRecord(
+                        start_ip=start_ip,
+                        end_ip=end_ip,
+                        asn=asn,
+                        country=country,
+                        org=org,
+                    )
+                )
             except ValueError as e:
                 logger.warning("Error parsing line %d: %s", line_num, e)
                 continue
@@ -96,12 +100,10 @@ class ASNLookup:
 
         # Sort by start IP (as integer for proper ordering)
         self._ipv4_records = sorted(
-            ipv4_records,
-            key=lambda r: int(ipaddress.IPv4Address(r.start_ip))
+            ipv4_records, key=lambda r: int(ipaddress.IPv4Address(r.start_ip))
         )
         self._ipv6_records = sorted(
-            ipv6_records,
-            key=lambda r: int(ipaddress.IPv6Address(r.start_ip))
+            ipv6_records, key=lambda r: int(ipaddress.IPv6Address(r.start_ip))
         )
 
         # Pre-compute start IPs as integers for binary search

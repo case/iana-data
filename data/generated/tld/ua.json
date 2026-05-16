@@ -1,0 +1,185 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "ua",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Hostmaster Ltd.",
+      "admin": "Hostmaster Ltd.",
+      "tech": "Hostmaster Ltd"
+    },
+    "nameservers": [
+      {
+        "hostname": "bg.ns.ua",
+        "ipv4": [
+          {
+            "ip": "185.136.96.185",
+            "asn": 203391,
+            "as_org": "CLOUDNSNET Cloud DNS Ltd.",
+            "as_country": "BG"
+          },
+          {
+            "ip": "185.136.97.185",
+            "asn": 203391,
+            "as_org": "CLOUDNSNET Cloud DNS Ltd.",
+            "as_country": "BG"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a06:fb00:1::4:185",
+            "asn": 203391,
+            "as_org": "CLOUDNSNET Cloud DNS Ltd.",
+            "as_country": "BG"
+          },
+          {
+            "ip": "2a06:fb00:1::2:185",
+            "asn": 203391,
+            "as_org": "CLOUDNSNET Cloud DNS Ltd.",
+            "as_country": "BG"
+          }
+        ]
+      },
+      {
+        "hostname": "cz.ns.ua",
+        "ipv4": [
+          {
+            "ip": "185.43.134.15",
+            "asn": 25192,
+            "as_org": "CZNIC-AS",
+            "as_country": "CZ"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:148f:fffd::15",
+            "asn": 200070,
+            "as_org": "CZNIC-AS2",
+            "as_country": "CZ"
+          }
+        ]
+      },
+      {
+        "hostname": "ho1.ns.ua",
+        "ipv4": [
+          {
+            "ip": "195.47.253.1",
+            "asn": 29067,
+            "as_org": "UATLD-AS UA ccTLD Manager",
+            "as_country": "UA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:258::1",
+            "asn": 29067,
+            "as_org": "UATLD-AS UA ccTLD Manager",
+            "as_country": "UA"
+          }
+        ]
+      },
+      {
+        "hostname": "in1.ns.ua",
+        "ipv4": [
+          {
+            "ip": "74.123.224.40",
+            "asn": 18865,
+            "as_org": "AS-INTUIX",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2604:ee00:0:101::40",
+            "asn": 18865,
+            "as_org": "AS-INTUIX",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "nn.ns.ua",
+        "ipv4": [
+          {
+            "ip": "194.58.197.4",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:3f1:c001::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "pch.ns.ua",
+        "ipv4": [
+          {
+            "ip": "204.61.216.12",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6012:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "rcz.ns.ua",
+        "ipv4": [
+          {
+            "ip": "193.46.128.10",
+            "asn": 1921,
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_country": "AT"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a02:850:ffe0::10",
+            "asn": 1921,
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_country": "AT"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://www.hostmaster.ua/",
+    "whois_server": "whois.ua",
+    "rdap_server": "https://rdap.hostmaster.ua",
+    "tld_created": "1992-12-01",
+    "tld_updated": [
+      "2024-11-30"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Ukraine",
+      "as_org_aliases": [
+        "CZNIC",
+        "Packet Clearing House",
+        "RcodeZero"
+      ]
+    },
+    "idn": [
+      "xn--j1amh"
+    ]
+  }
+}

@@ -3,15 +3,23 @@
 import gzip
 import json
 import logging
+from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from ..config import IANA_URLS, IDN_SCRIPT_MAPPING_FILE, TLD_PAGES_DIR, TLDS_OUTPUT_FILE
+from ..config import (
+    IANA_URLS,
+    IDN_SCRIPT_MAPPING_FILE,
+    TLD_DIR,
+    TLD_PAGES_DIR,
+    TLDS_INDEX_FILE,
+    TLDS_OUTPUT_FILE,
+)
+from ..parse.as_org_aliases import parse_as_org_aliases
 from ..parse.country import get_country_name, is_cctld
 from ..parse.iptoasn import ASNLookup
 from ..parse.rdap_json import parse_rdap_json
-from ..utilities.download import get_iptoasn_path
 from ..parse.registry_agreement_csv import (
     RegistryAgreement,
     get_normalized_agreement_types,
@@ -20,22 +28,49 @@ from ..parse.registry_agreement_csv import (
 from ..parse.root_db_html import derive_type_from_iana_tag, parse_root_db_html
 from ..parse.supplemental_cctld_rdap import parse_supplemental_cctld_rdap
 from ..parse.tld_html import parse_tld_page
-from ..parse.as_org_aliases import parse_as_org_aliases
 from ..parse.tld_manager_aliases import parse_tld_manager_aliases
 from ..utilities.content_changed import write_json_if_changed
+from ..utilities.download import get_iptoasn_path
 from ..utilities.metadata import load_metadata, save_metadata, utc_timestamp
 from ..utilities.urls import get_tld_file_path
 
 logger = logging.getLogger(__name__)
 
 
-def build_tlds_json() -> dict:
+@dataclass(frozen=True)
+class OutputPaths:
+    """File paths build_tlds_json writes to.
+
+    Defaults come from src.config; tests pass a custom instance to redirect
+    output into a temp directory without monkeypatching module globals.
+    """
+
+    tlds_json: Path
+    tlds_index: Path
+    tld_dir: Path
+
+    @classmethod
+    def from_config(cls) -> "OutputPaths":
+        return cls(
+            tlds_json=Path(TLDS_OUTPUT_FILE),
+            tlds_index=Path(TLDS_INDEX_FILE),
+            tld_dir=Path(TLD_DIR),
+        )
+
+
+def build_tlds_json(output_paths: OutputPaths | None = None) -> dict:
     """
     Build enhanced TLD data file aggregating IANA sources.
+
+    Args:
+        output_paths: Where to write outputs. Defaults to paths from src.config.
+            Tests pass a custom instance to redirect outputs to a temp dir.
 
     Returns:
         dict: Result summary with counts
     """
+    if output_paths is None:
+        output_paths = OutputPaths.from_config()
     # Parse source files
     logger.info("Parsing source files...")
     root_zone_entries = parse_root_db_html()
@@ -74,7 +109,10 @@ def build_tlds_json() -> dict:
         except Exception as e:
             logger.warning("Error loading iptoasn data: %s", e)
     else:
-        logger.info("No iptoasn data found at %s (run 'make download-iptoasn' to enable ASN lookups)", iptoasn_path)
+        logger.info(
+            "No iptoasn data found at %s (run 'make download-iptoasn' to enable ASN lookups)",
+            iptoasn_path,
+        )
 
     # Load and parse TLD pages
     logger.info("Parsing TLD pages...")
@@ -117,23 +155,27 @@ def build_tlds_json() -> dict:
     logger.info("Building IDN mappings...")
     _add_idn_mappings(tlds)
 
+    # Build-time stamp passed to every write; write_json_if_changed skips
+    # unchanged artifacts, so per-file publication reads as "last changed".
+    publication = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    sources = {
+        "iana_root_db": IANA_URLS["ROOT_ZONE_DB"],
+        "iana_rdap": IANA_URLS["RDAP_BOOTSTRAP"],
+    }
+
     # Build output structure
     output = {
         "description": "Enhanced TLD bootstrap data, from IANA sources",
-        "publication": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "sources": {
-            "iana_root_db": IANA_URLS["ROOT_ZONE_DB"],
-            "iana_rdap": IANA_URLS["RDAP_BOOTSTRAP"],
-        },
+        "publication": publication,
+        "sources": sources,
         "tlds": tlds,
     }
 
     # Write output file (only if content changed)
-    output_path = Path(TLDS_OUTPUT_FILE)
-    logger.info(f"Writing output to {output_path}...")
+    logger.info(f"Writing output to {output_paths.tlds_json}...")
 
     changed, status = write_json_if_changed(
-        output_path,
+        output_paths.tlds_json,
         output,
         exclude_fields=["publication"],
         indent=2,
@@ -146,14 +188,131 @@ def build_tlds_json() -> dict:
             "changed": False,
             "error": "Failed to write file",
         }
+    logger.info("tlds.json: %s (changed=%s)", status, changed)
+
+    # Per-TLD files first. If any error, abort before writing the index so
+    # the on-disk state stays canonical (index never references a TLD whose
+    # per-TLD file failed to write).
+    failed_slugs, per_tld_written, per_tld_unchanged = _write_per_tld_files(
+        tlds, publication, sources, output_paths.tld_dir
+    )
+    if failed_slugs:
+        logger.error(
+            "Per-TLD write failed for %d TLD(s): %s",
+            len(failed_slugs),
+            failed_slugs[:10],
+        )
+        return {
+            "total_tlds": len(tlds),
+            "output_file": str(output_paths.tlds_json),
+            "file_size": output_paths.tlds_json.stat().st_size,
+            "changed": changed,
+            "error": f"Failed to write {len(failed_slugs)} per-TLD file(s)",
+        }
+    logger.info(
+        "Per-TLD files: %d written, %d unchanged",
+        per_tld_written,
+        per_tld_unchanged,
+    )
+
+    index_changed, index_status = _write_tlds_index(
+        tlds, publication, output_paths.tlds_index
+    )
+    if index_status == "error":
+        return {
+            "total_tlds": len(tlds),
+            "output_file": str(output_paths.tlds_json),
+            "file_size": output_paths.tlds_json.stat().st_size,
+            "changed": changed,
+            "error": "Failed to write TLD index",
+        }
+    logger.info("tlds-index.json: %s (changed=%s)", index_status, index_changed)
 
     logger.info(f"Successfully built {len(tlds)} TLD entries")
     return {
         "total_tlds": len(tlds),
-        "output_file": str(output_path),
-        "file_size": output_path.stat().st_size,
+        "output_file": str(output_paths.tlds_json),
+        "file_size": output_paths.tlds_json.stat().st_size,
         "changed": changed,
     }
+
+
+def _write_per_tld_files(
+    tlds: list[dict],
+    publication: str,
+    sources: dict[str, str],
+    tld_dir: Path,
+) -> tuple[list[str], int, int]:
+    """Write one self-contained JSON file per TLD under tld_dir.
+
+    Returns (failed_slugs, written_count, unchanged_count). The loop runs
+    to completion even after errors so the caller sees the full failure
+    set in one CI log line, not just the first failure.
+    """
+    logger.info("Writing %d per-TLD files to %s...", len(tlds), tld_dir)
+    failed: list[str] = []
+    written = 0
+    unchanged = 0
+    for entry in tlds:
+        slug = entry["tld"]
+        payload = {
+            "description": "Per-TLD bootstrap data, from IANA sources",
+            "publication": publication,
+            "sources": sources,
+            "tld": entry,
+        }
+        changed, status = write_json_if_changed(
+            tld_dir / f"{slug}.json",
+            payload,
+            exclude_fields=["publication"],
+            indent=2,
+        )
+        if status == "error":
+            failed.append(slug)
+        elif changed:
+            written += 1
+        else:
+            unchanged += 1
+    return failed, written, unchanged
+
+
+def _write_tlds_index(
+    tlds: list[dict],
+    publication: str,
+    index_path: Path,
+) -> tuple[bool, str]:
+    """Write a slim catalogue with fields for discovery, filtering, and freshness.
+
+    Returns the (changed, status) tuple from write_json_if_changed so the
+    caller can react to a write error.
+    """
+    index_entries: list[dict[str, Any]] = []
+    for entry in tlds:
+        index_entry: dict[str, Any] = {"tld": entry["tld"]}
+        if "tld_unicode" in entry:
+            index_entry["tld_unicode"] = entry["tld_unicode"]
+        index_entry["type"] = entry["type"]
+        index_entry["delegated"] = entry["delegated"]
+        if "tld_created" in entry:
+            index_entry["tld_created"] = entry["tld_created"]
+        if "tld_updated" in entry:
+            index_entry["tld_updated"] = entry["tld_updated"]
+        index_entries.append(index_entry)
+
+    index = {
+        "description": "Index of per-TLD data files at data/generated/tld/",
+        "publication": publication,
+        "count": len(index_entries),
+        "tlds": index_entries,
+    }
+
+    logger.info("Writing TLD index to %s...", index_path)
+    return write_json_if_changed(
+        index_path,
+        index,
+        exclude_fields=["publication"],
+        indent=2,
+    )
 
 
 def _build_tld_entry(
@@ -303,7 +462,9 @@ def _build_tld_entry(
     # Add registry agreement types from ICANN data (gTLDs only)
     if tld in registry_agreements:
         agreement = registry_agreements[tld]
-        agreement_types = get_normalized_agreement_types(agreement.get("agreement_types", []))
+        agreement_types = get_normalized_agreement_types(
+            agreement.get("agreement_types", [])
+        )
         if agreement_types:
             annotations["registry_agreement_types"] = agreement_types
 
@@ -464,13 +625,15 @@ def _parse_gzipped_iptoasn(filepath: Path) -> list:
                 country = parts[3]
                 org = "\t".join(parts[4:])
 
-                records.append(ASNRecord(
-                    start_ip=start_ip,
-                    end_ip=end_ip,
-                    asn=asn,
-                    country=country,
-                    org=org,
-                ))
+                records.append(
+                    ASNRecord(
+                        start_ip=start_ip,
+                        end_ip=end_ip,
+                        asn=asn,
+                        country=country,
+                        org=org,
+                    )
+                )
             except ValueError:
                 continue
 

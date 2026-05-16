@@ -1,0 +1,92 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "ax",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Ålands landskapsregering",
+      "admin": "Ålands landskapsregering",
+      "tech": "Ålands Telekommunikation Ab"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns1.aland.net",
+        "ipv4": [
+          {
+            "ip": "194.112.0.1",
+            "asn": 3238,
+            "as_org": "ALCOM",
+            "as_country": "FI"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns2.aland.net",
+        "ipv4": [
+          {
+            "ip": "194.112.0.5",
+            "asn": 3238,
+            "as_org": "ALCOM",
+            "as_country": "FI"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns3.alcom.fi",
+        "ipv4": [
+          {
+            "ip": "82.199.186.130",
+            "asn": 3238,
+            "as_org": "ALCOM",
+            "as_country": "FI"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a00:5500:1:6::130",
+            "asn": 3238,
+            "as_org": "ALCOM",
+            "as_country": "FI"
+          }
+        ]
+      },
+      {
+        "hostname": "ns4.alcom.fi",
+        "ipv4": [
+          {
+            "ip": "82.199.184.194",
+            "asn": 3238,
+            "as_org": "ALCOM",
+            "as_country": "FI"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a00:5500:1:7::194",
+            "asn": 3238,
+            "as_org": "ALCOM",
+            "as_country": "FI"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.whois.ax",
+    "whois_server": "whois.ax",
+    "tld_created": "2006-06-21",
+    "tld_updated": [
+      "2017-08-04"
+    ],
+    "annotations": {
+      "country_name_iso": "Åland Islands"
+    }
+  }
+}

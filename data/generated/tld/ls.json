@@ -1,0 +1,95 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "ls",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Lesotho Network Information Centre Proprietary (LSNIC)",
+      "admin": "Lesotho Communications Authority",
+      "tech": "Lesotho Communications Authority"
+    },
+    "nameservers": [
+      {
+        "hostname": "ls-ns.anycast.pch.net",
+        "ipv4": [
+          {
+            "ip": "204.61.216.28",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6028:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns-ls.afrinic.net",
+        "ipv4": [
+          {
+            "ip": "196.216.168.70",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:43f8:120::70",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.nic.ls",
+        "ipv4": [
+          {
+            "ip": "196.43.249.1",
+            "asn": 37505,
+            "as_org": "Lesotho-NIC",
+            "as_country": "LS"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns2.nic.ls",
+        "ipv4": [
+          {
+            "ip": "196.11.175.1",
+            "asn": 37505,
+            "as_org": "Lesotho-NIC",
+            "as_country": "LS"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.nic.ls",
+    "whois_server": "whois.nic.ls",
+    "tld_created": "1993-01-13",
+    "tld_updated": [
+      "2024-06-17"
+    ],
+    "annotations": {
+      "country_name_iso": "Lesotho",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

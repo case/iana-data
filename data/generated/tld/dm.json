@@ -1,0 +1,141 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "dm",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "DotDM Corporation",
+      "admin": "DotDM Corporation",
+      "tech": "DotDM Corporation"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns.blacknightsolutions.com",
+        "ipv4": [
+          {
+            "ip": "81.17.240.204",
+            "asn": 39122,
+            "as_org": "BLACKNIGHT-AS",
+            "as_country": "IE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:a8:dc1:33::33",
+            "asn": 39122,
+            "as_org": "BLACKNIGHT-AS",
+            "as_country": "IE"
+          }
+        ]
+      },
+      {
+        "hostname": "ns01.trs-dns.com",
+        "ipv4": [
+          {
+            "ip": "64.96.1.1",
+            "asn": 393818,
+            "as_org": "TUCOWS-TRS-DNS1",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:57:4001::1",
+            "asn": 393818,
+            "as_org": "TUCOWS-TRS-DNS1",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "ns01.trs-dns.net",
+        "ipv4": [
+          {
+            "ip": "64.96.2.1",
+            "asn": 63363,
+            "as_org": "TUCOWS-TRS-DNS2",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:57:4002::1",
+            "asn": 63363,
+            "as_org": "TUCOWS-TRS-DNS2",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "ns2.blacknightsolutions.com",
+        "ipv4": [
+          {
+            "ip": "78.153.202.4",
+            "asn": 39122,
+            "as_org": "BLACKNIGHT-AS",
+            "as_country": "IE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:a8:dc2:33::33",
+            "asn": 39122,
+            "as_org": "BLACKNIGHT-AS",
+            "as_country": "IE"
+          }
+        ]
+      },
+      {
+        "hostname": "ns2.nic.dm",
+        "ipv4": [
+          {
+            "ip": "199.127.196.35",
+            "asn": 40945,
+            "as_org": "SATTEL",
+            "as_country": "DM"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns34.cdns.net",
+        "ipv4": [
+          {
+            "ip": "194.0.1.34",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:4::22",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.dm",
+    "whois_server": "whois.dmdomains.dm",
+    "tld_created": "1991-09-03",
+    "tld_updated": [
+      "2024-05-29"
+    ],
+    "annotations": {
+      "country_name_iso": "Dominica",
+      "as_org_aliases": [
+        "CDNS",
+        "Tucows"
+      ]
+    }
+  }
+}

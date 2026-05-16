@@ -1,0 +1,260 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "arpa",
+    "delegated": true,
+    "iana_tag": "infrastructure",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "Internet Architecture Board (IAB)",
+      "admin": "Internet Architecture Board (IAB)",
+      "tech": "Internet Corporation for Assigned Names and Numbers (ICANN)"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.ns.arpa",
+        "ipv4": [
+          {
+            "ip": "198.41.0.4",
+            "asn": 25485,
+            "as_org": "VERISIGN-AS",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:503:ba3e::2:30",
+            "asn": 25485,
+            "as_org": "VERISIGN-AS",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "b.ns.arpa",
+        "ipv4": [
+          {
+            "ip": "170.247.170.2",
+            "asn": 394353,
+            "as_org": "BROOT-AS",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2801:1b8:10::b",
+            "asn": 394353,
+            "as_org": "BROOT-AS",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "c.ns.arpa",
+        "ipv4": [
+          {
+            "ip": "192.33.4.12",
+            "asn": 2149,
+            "as_org": "COGENT-2149",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:2::c",
+            "asn": 2149,
+            "as_org": "COGENT-2149",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "d.ns.arpa",
+        "ipv4": [
+          {
+            "ip": "199.7.91.13",
+            "asn": 10886,
+            "as_org": "MAX-GIGAPOP",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:2d::d",
+            "asn": 10886,
+            "as_org": "MAX-GIGAPOP",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "e.ns.arpa",
+        "ipv4": [
+          {
+            "ip": "192.203.230.10",
+            "asn": 21556,
+            "as_org": "NARC-EROOT",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:a8::e",
+            "asn": 21556,
+            "as_org": "NARC-EROOT",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "f.ns.arpa",
+        "ipv4": [
+          {
+            "ip": "192.5.5.241",
+            "asn": 3557,
+            "as_org": "ISC-AS",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:2f::f",
+            "asn": 3557,
+            "as_org": "ISC-AS",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "g.ns.arpa",
+        "ipv4": [
+          {
+            "ip": "192.112.36.4",
+            "asn": 5927,
+            "as_org": "DNIC-ASBLK-05800-06055",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:12::d0d",
+            "asn": 5927,
+            "as_org": "DNIC-ASBLK-05800-06055",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "h.ns.arpa",
+        "ipv4": [
+          {
+            "ip": "198.97.190.53",
+            "asn": 1508,
+            "as_org": "DNIC-AS-01508",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:1::53",
+            "asn": 1508,
+            "as_org": "DNIC-AS-01508",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "i.ns.arpa",
+        "ipv4": [
+          {
+            "ip": "192.36.148.17",
+            "asn": 29216,
+            "as_org": "I-ROOT DNS root name server i.root-servers.net.",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:7fe::53",
+            "asn": 29216,
+            "as_org": "I-ROOT DNS root name server i.root-servers.net.",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "k.ns.arpa",
+        "ipv4": [
+          {
+            "ip": "193.0.14.129",
+            "asn": 25152,
+            "as_org": "K-ROOT-SERVER Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:7fd::1",
+            "asn": 25152,
+            "as_org": "K-ROOT-SERVER Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ]
+      },
+      {
+        "hostname": "l.ns.arpa",
+        "ipv4": [
+          {
+            "ip": "199.7.83.42",
+            "asn": 20144,
+            "as_org": "IMRS",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:9f::42",
+            "asn": 20144,
+            "as_org": "IMRS",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "m.ns.arpa",
+        "ipv4": [
+          {
+            "ip": "202.12.27.33",
+            "asn": 7500,
+            "as_org": "M-ROOT-DNS WIDE Project",
+            "as_country": "JP"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dc3::35",
+            "asn": 7500,
+            "as_org": "M-ROOT-DNS WIDE Project",
+            "as_country": "JP"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://www.iana.org/domains/arpa",
+    "whois_server": "whois.iana.org",
+    "tld_created": "1985-01-01",
+    "tld_updated": [
+      "2023-11-27"
+    ],
+    "annotations": {
+      "as_org_aliases": [
+        "VeriSign"
+      ]
+    }
+  }
+}

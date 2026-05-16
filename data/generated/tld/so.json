@@ -1,0 +1,71 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "so",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Ministry of Post and Telecommunications",
+      "admin": "Ministry of Post and Telecommunications",
+      "tech": "soNIC"
+    },
+    "nameservers": [
+      {
+        "hostname": "d.nic.so",
+        "ipv4": [
+          {
+            "ip": "196.216.168.54",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:43f8:120::54",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ]
+      },
+      {
+        "hostname": "e.nic.so",
+        "ipv4": [
+          {
+            "ip": "204.61.216.101",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6101:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.so/",
+    "whois_server": "whois.nic.so",
+    "tld_created": "1997-08-28",
+    "tld_updated": [
+      "2016-04-18"
+    ],
+    "annotations": {
+      "country_name_iso": "Somalia",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

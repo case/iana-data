@@ -1,0 +1,113 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "xn--y9a3aq",
+    "tld_unicode": "հայ",
+    "tld_script": "Armenian",
+    "tld_iso": "am",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "\"Internet Society\" Non-governmental Organization",
+      "admin": "\"Internet Society\" Non-governmental Organization",
+      "tech": "\"Internet Society\" Non-governmental Organization"
+    },
+    "nameservers": [
+      {
+        "hostname": "fork.sth.dnsnode.net",
+        "ipv4": [
+          {
+            "ip": "77.72.229.254",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:3f0:0:306::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "ns-cdn.amnic.net",
+        "ipv4": [
+          {
+            "ip": "194.0.1.26",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:4::1a",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "ns-pch.amnic.net",
+        "ipv4": [
+          {
+            "ip": "204.61.216.96",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6096:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns-pri.nic.am",
+        "ipv4": [
+          {
+            "ip": "195.43.75.53",
+            "asn": 51354,
+            "as_org": "AM-TLD-ANYCAST-AS",
+            "as_country": "AM"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:7f9:8:53::1",
+            "asn": 51354,
+            "as_org": "AM-TLD-ANYCAST-AS",
+            "as_country": "AM"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://www.amnic.net/",
+    "whois_server": "whois.amnic.net",
+    "tld_created": "2014-11-26",
+    "tld_updated": [
+      "2024-11-25"
+    ],
+    "annotations": {
+      "country_name_iso": "Armenia",
+      "as_org_aliases": [
+        "CDNS",
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

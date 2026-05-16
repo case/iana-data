@@ -1,0 +1,96 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "bn",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Authority for Info-communications Technology Industry of Brunei Darussalam (AITI)",
+      "admin": "Authority for Info-communications Technology Industry of Brunei Darussalam",
+      "tech": "Authority for Info-communications Technology Industry of Brunei Darussalam"
+    },
+    "nameservers": [
+      {
+        "hostname": "bn-ns.anycast.pch.net",
+        "ipv4": [
+          {
+            "ip": "204.61.216.87",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6087:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.bnnic.bn",
+        "ipv4": [
+          {
+            "ip": "194.0.1.33",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns2.bnnic.bn",
+        "ipv4": [
+          {
+            "ip": "202.93.214.163",
+            "asn": 10094,
+            "as_org": "UNN-BN Unified National Networks",
+            "as_country": "BN"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns4.apnic.net",
+        "ipv4": [
+          {
+            "ip": "202.12.31.53",
+            "asn": 18366,
+            "as_org": "APNIC-ANYCAST APNIC ANYCAST ASN",
+            "as_country": "AU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dd8:12::53",
+            "asn": 18366,
+            "as_org": "APNIC-ANYCAST APNIC ANYCAST ASN",
+            "as_country": "AU"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.bnnic.bn",
+    "whois_server": "whois.bnnic.bn",
+    "tld_created": "1994-06-03",
+    "tld_updated": [
+      "2026-05-06"
+    ],
+    "annotations": {
+      "country_name_iso": "Brunei Darussalam",
+      "as_org_aliases": [
+        "CDNS",
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

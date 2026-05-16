@@ -1,0 +1,118 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "mr",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Université de Nouakchott Al Aasriya",
+      "admin": "Faculté des Sciences et Techniques",
+      "tech": "Faculte de Sciences et Techniques, UNA"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns-mr.afrinic.net",
+        "ipv4": [
+          {
+            "ip": "196.216.168.53",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:43f8:120::53",
+            "asn": 37177,
+            "as_org": "AFRINIC-ANYCAST",
+            "as_country": "MU"
+          }
+        ]
+      },
+      {
+        "hostname": "ns-mr.nic.fr",
+        "ipv4": [
+          {
+            "ip": "194.0.9.1",
+            "asn": 2486,
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_country": "FR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:c::1",
+            "asn": 2486,
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_country": "FR"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.nic.mr",
+        "ipv4": [
+          {
+            "ip": "193.146.150.193",
+            "asn": 766,
+            "as_org": "REDIRIS RedIRIS Autonomous System",
+            "as_country": "ES"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns2.nic.mr",
+        "ipv4": [
+          {
+            "ip": "82.151.64.2",
+            "asn": 29544,
+            "as_org": "MAURITEL",
+            "as_country": "MR"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns3.nic.mr",
+        "ipv4": [
+          {
+            "ip": "204.61.216.135",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6135:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.mr",
+    "whois_server": "whois.nic.mr",
+    "tld_created": "1996-04-24",
+    "tld_updated": [
+      "2021-06-04"
+    ],
+    "annotations": {
+      "country_name_iso": "Mauritania",
+      "as_org_aliases": [
+        "AFNIC",
+        "Packet Clearing House"
+      ]
+    },
+    "idn": [
+      "xn--mgbah1a3hjkrd"
+    ]
+  }
+}

@@ -2,6 +2,7 @@
 
 import json
 import shutil
+import stat
 from pathlib import Path
 
 from src.utilities.content_changed import write_json_if_changed
@@ -106,25 +107,20 @@ def test_write_json_if_changed_preserves_file_when_unchanged(tmp_path):
 
 
 def test_write_json_if_changed_handles_write_error_for_new_file(tmp_path, monkeypatch):
-    """Test error handling when writing a new file fails."""
+    """Atomic rename failure on a new file surfaces (False, 'error')."""
     filepath = tmp_path / "new-file.json"
     data = json.loads((FIXTURES_DIR / "rdap.json").read_text())
 
-    # Mock open to raise exception
-    import builtins
-    original_open = builtins.open
+    def mock_replace(*_args):
+        raise PermissionError("Cannot rename file")
 
-    def mock_open(*args, **kwargs):
-        if "w" in str(kwargs.get("mode", args[1] if len(args) > 1 else "")):
-            raise PermissionError("Cannot write file")
-        return original_open(*args, **kwargs)
-
-    monkeypatch.setattr("builtins.open", mock_open)
+    monkeypatch.setattr("os.replace", mock_replace)
 
     changed, status = write_json_if_changed(filepath, data)
 
     assert changed is False
     assert status == "error"
+    assert not filepath.exists()
 
 
 def test_write_json_if_changed_handles_corrupted_existing_file(tmp_path):
@@ -143,24 +139,19 @@ def test_write_json_if_changed_handles_corrupted_existing_file(tmp_path):
     assert json.loads(filepath.read_text()) == new_data
 
 
-def test_write_json_if_changed_handles_read_error_then_write_error(tmp_path, monkeypatch):
-    """Test error handling when reading fails AND subsequent write fails."""
+def test_write_json_if_changed_handles_read_error_then_write_error(
+    tmp_path, monkeypatch
+):
+    """Read fails AND the subsequent atomic rename also fails -> (False, 'error')."""
     filepath = tmp_path / "existing.json"
     filepath.write_text("{ invalid json }")
 
     data = json.loads((FIXTURES_DIR / "rdap.json").read_text())
 
-    # Mock open to fail on write
-    import builtins
-    original_open = builtins.open
+    def mock_replace(*_args):
+        raise PermissionError("Cannot rename file")
 
-    def mock_open(*args, **kwargs):
-        mode = kwargs.get("mode", args[1] if len(args) > 1 else "")
-        if "w" in str(mode):
-            raise PermissionError("Cannot write file")
-        return original_open(*args, **kwargs)
-
-    monkeypatch.setattr("builtins.open", mock_open)
+    monkeypatch.setattr("os.replace", mock_replace)
 
     changed, status = write_json_if_changed(filepath, data)
 
@@ -169,28 +160,74 @@ def test_write_json_if_changed_handles_read_error_then_write_error(tmp_path, mon
 
 
 def test_write_json_if_changed_handles_write_error_on_update(tmp_path, monkeypatch):
-    """Test error handling when writing updated content fails."""
+    """When the file exists and content changed but rename fails -> (False, 'error')."""
     filepath = tmp_path / "existing.json"
     shutil.copy(FIXTURES_DIR / "rdap.json", filepath)
 
     new_data = json.loads((FIXTURES_DIR / "rdap-new-content.json").read_text())
 
-    # Mock open to fail only on the write after successful read
-    import builtins
-    original_open = builtins.open
-    call_count = [0]
+    def mock_replace(*_args):
+        raise PermissionError("Cannot rename file")
 
-    def mock_open(*args, **kwargs):
-        mode = kwargs.get("mode", args[1] if len(args) > 1 else "")
-        if "w" in str(mode):
-            call_count[0] += 1
-            # Fail on write (first write attempt after read)
-            raise PermissionError("Cannot write file")
-        return original_open(*args, **kwargs)
-
-    monkeypatch.setattr("builtins.open", mock_open)
+    monkeypatch.setattr("os.replace", mock_replace)
 
     changed, status = write_json_if_changed(filepath, new_data)
 
     assert changed is False
     assert status == "error"
+
+
+def test_atomic_write_leaves_no_temp_file_on_success(tmp_path):
+    """A successful write leaves no .tmp sibling files behind."""
+    filepath = tmp_path / "new-file.json"
+    data = json.loads((FIXTURES_DIR / "rdap.json").read_text())
+
+    write_json_if_changed(filepath, data)
+
+    temp_files = [p for p in tmp_path.iterdir() if p.name != "new-file.json"]
+    assert temp_files == [], f"Unexpected leftover files: {temp_files}"
+
+
+def test_atomic_write_uses_0o644_permissions(tmp_path):
+    """The written file has 0o644 (world-readable), not NamedTemporaryFile's 0o600.
+
+    Without an explicit chmod, NamedTemporaryFile's secure-by-default 0o600
+    mode would survive os.replace and downgrade every generated file to
+    owner-only-readable. Generated artifacts are consumed by CDNs and
+    other processes; 0o644 is the umask-default expectation.
+    """
+    filepath = tmp_path / "new-file.json"
+    data = json.loads((FIXTURES_DIR / "rdap.json").read_text())
+
+    write_json_if_changed(filepath, data)
+
+    mode = stat.S_IMODE(filepath.stat().st_mode)
+    assert mode == 0o644, f"Expected 0o644, got {oct(mode)}"
+
+
+def test_atomic_write_preserves_original_when_update_fails(tmp_path, monkeypatch):
+    """If the atomic rename fails, the target file stays byte-identical.
+
+    Verifies the central guarantee of the temp-write-plus-replace pattern:
+    when the rename fails, the original target is never modified, and the
+    temp file is cleaned up so no .tmp sibling lingers.
+    """
+    filepath = tmp_path / "existing.json"
+    shutil.copy(FIXTURES_DIR / "rdap.json", filepath)
+    original_bytes = filepath.read_bytes()
+    new_data = json.loads((FIXTURES_DIR / "rdap-new-content.json").read_text())
+
+    def mock_replace(*_args):
+        raise OSError("Disk full")
+
+    monkeypatch.setattr("os.replace", mock_replace)
+
+    changed, status = write_json_if_changed(filepath, new_data)
+
+    assert changed is False
+    assert status == "error"
+    assert filepath.read_bytes() == original_bytes, (
+        "Original file was modified despite rename failure"
+    )
+    temp_files = [p for p in tmp_path.iterdir() if p.name.startswith("existing.json.")]
+    assert temp_files == [], f"Temp file lingered after failure: {temp_files}"

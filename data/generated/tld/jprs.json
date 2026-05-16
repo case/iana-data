@@ -1,0 +1,133 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "jprs",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "Japan Registry Services Co., Ltd.",
+      "admin": "Japan Registry Services Co., Ltd.",
+      "tech": "Japan Registry Services Co., Ltd."
+    },
+    "nameservers": [
+      {
+        "hostname": "tld1.nic.jprs",
+        "ipv4": [
+          {
+            "ip": "103.47.2.1",
+            "asn": 18149,
+            "as_org": "JPRS Japan Registry Service Co., Ltd.",
+            "as_country": "JP"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dda::1",
+            "asn": 18149,
+            "as_org": "JPRS Japan Registry Service Co., Ltd.",
+            "as_country": "JP"
+          }
+        ]
+      },
+      {
+        "hostname": "tld2.nic.jprs",
+        "ipv4": [
+          {
+            "ip": "117.104.133.16",
+            "asn": 2914,
+            "as_org": "NTT-DATA-2914",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:218:3001::1",
+            "asn": 2914,
+            "as_org": "NTT-DATA-2914",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "tld3.nic.jprs",
+        "ipv4": [
+          {
+            "ip": "65.22.40.1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:1ba::1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "tld4.nic.jprs",
+        "ipv4": [
+          {
+            "ip": "103.198.210.1",
+            "asn": 131905,
+            "as_org": "JPRS-GTLD Japan Registry Services Co., Ltd.",
+            "as_country": "JP"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2403:2880::1",
+            "asn": 131905,
+            "as_org": "JPRS-GTLD Japan Registry Services Co., Ltd.",
+            "as_country": "JP"
+          }
+        ]
+      },
+      {
+        "hostname": "tld5.nic.jprs",
+        "ipv4": [
+          {
+            "ip": "65.22.40.129",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:1ba::129",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://nic.jprs/",
+    "whois_server": "whois.nic.jprs",
+    "rdap_server": "https://rdap.nic.jprs/rdap/",
+    "tld_created": "2014-12-18",
+    "tld_updated": [
+      "2025-09-30"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "Identity Digital"
+      ]
+    }
+  }
+}

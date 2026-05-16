@@ -1,0 +1,152 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "cr",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "National Academy of Sciences (Academia Nacional de Ciencias)",
+      "admin": "National Academy of Sciences\nAcademia Nacional de Ciencias",
+      "tech": "National Academy of Sciences Academia Nacional de Ciencias"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.lactld.org",
+        "ipv4": [
+          {
+            "ip": "200.0.68.10",
+            "asn": 61455,
+            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_country": "UY"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2801:14:a000::10",
+            "asn": 61455,
+            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_country": "UY"
+          }
+        ]
+      },
+      {
+        "hostname": "ca1.nic.cr",
+        "ipv4": [
+          {
+            "ip": "185.159.197.100",
+            "asn": 55195,
+            "as_org": "CIRA-CLOUD1",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:10a:80aa::100",
+            "asn": 55195,
+            "as_org": "CIRA-CLOUD1",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "ca2.nic.cr",
+        "ipv4": [
+          {
+            "ip": "185.159.198.100",
+            "asn": 394354,
+            "as_org": "CIRA-CLOUD2",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:10a:80ab::100",
+            "asn": 394354,
+            "as_org": "CIRA-CLOUD2",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "de.nic.cr",
+        "ipv4": [
+          {
+            "ip": "194.0.11.107",
+            "asn": 31529,
+            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_country": "DE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:e:107::53",
+            "asn": 31529,
+            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_country": "DE"
+          }
+        ]
+      },
+      {
+        "hostname": "dns.nic.cr",
+        "ipv4": [
+          {
+            "ip": "200.107.82.100",
+            "asn": 263779,
+            "as_org": "Academia Nacional de Ciencias",
+            "as_country": "CR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:13c7:7004:1::d100",
+            "asn": 263779,
+            "as_org": "Academia Nacional de Ciencias",
+            "as_country": "CR"
+          }
+        ]
+      },
+      {
+        "hostname": "p.nic.cr",
+        "ipv4": [
+          {
+            "ip": "204.61.216.89",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6089:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.cr/",
+    "whois_server": "whois.nic.cr",
+    "rdap_server": "https://rdap.nic.cr/",
+    "tld_created": "1990-09-10",
+    "tld_updated": [
+      "2026-02-17"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Costa Rica",
+      "as_org_aliases": [
+        "CIRA",
+        "DENIC",
+        "LACTLD",
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

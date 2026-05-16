@@ -1,0 +1,165 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "mw",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Malawi Sustainable Development Network Programme (Malawi SDNP)",
+      "admin": "Malawi SDNP",
+      "tech": "Malawi SDNP"
+    },
+    "nameservers": [
+      {
+        "hostname": "chambo.sdnp.org.mw",
+        "ipv4": [
+          {
+            "ip": "102.219.183.67",
+            "asn": 328919,
+            "as_org": "OCL-AS",
+            "as_country": "MW"
+          },
+          {
+            "ip": "196.45.188.5",
+            "asn": 328919,
+            "as_org": "OCL-AS",
+            "as_country": "MW"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "domwe.sdn.mw",
+        "ipv4": [
+          {
+            "ip": "41.87.5.162",
+            "asn": 36969,
+            "as_org": "MTL-AS",
+            "as_country": "MW"
+          },
+          {
+            "ip": "196.45.190.9",
+            "asn": 36969,
+            "as_org": "MTL-AS",
+            "as_country": "MW"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "mw-e.ns.nic.cz",
+        "ipv4": [
+          {
+            "ip": "185.43.134.10",
+            "asn": 25192,
+            "as_org": "CZNIC-AS",
+            "as_country": "CZ"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:148f:fffd::10",
+            "asn": 200070,
+            "as_org": "CZNIC-AS2",
+            "as_country": "CZ"
+          }
+        ]
+      },
+      {
+        "hostname": "mw.cctld.authdns.ripe.net",
+        "ipv4": [
+          {
+            "ip": "193.0.9.99",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a13:27c0:30::99",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ]
+      },
+      {
+        "hostname": "ns4.apnic.net",
+        "ipv4": [
+          {
+            "ip": "202.12.31.53",
+            "asn": 18366,
+            "as_org": "APNIC-ANYCAST APNIC ANYCAST ASN",
+            "as_country": "AU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dd8:12::53",
+            "asn": 18366,
+            "as_org": "APNIC-ANYCAST APNIC ANYCAST ASN",
+            "as_country": "AU"
+          }
+        ]
+      },
+      {
+        "hostname": "pch1.nic.mw",
+        "ipv4": [
+          {
+            "ip": "204.61.216.131",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6131:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "rip.psg.com",
+        "ipv4": [
+          {
+            "ip": "147.28.0.39",
+            "asn": 3130,
+            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_country": "EE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:418:1::39",
+            "asn": 3130,
+            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_country": "EE"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.registrar.mw",
+    "whois_server": "whois.nic.mw",
+    "tld_created": "1997-01-03",
+    "tld_updated": [
+      "2025-08-21"
+    ],
+    "annotations": {
+      "country_name_iso": "Malawi",
+      "as_org_aliases": [
+        "CZNIC",
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

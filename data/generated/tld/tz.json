@@ -1,0 +1,131 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "tz",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Tanzania Communications Regulatory Authority",
+      "admin": "Tanzania Communications Regulatory Authority",
+      "tech": "Tanzania Communications Regulatory Authority"
+    },
+    "nameservers": [
+      {
+        "hostname": "fork.sth.dnsnode.net",
+        "ipv4": [
+          {
+            "ip": "77.72.229.254",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:3f0:0:306::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "ns.anycast.co.tz",
+        "ipv4": [
+          {
+            "ip": "204.61.216.15",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6015:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns2.tznic.or.tz",
+        "ipv4": [
+          {
+            "ip": "196.216.162.67",
+            "asn": 37045,
+            "as_org": "tznic",
+            "as_country": "TZ"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:43f8:e0:1::67",
+            "asn": 37045,
+            "as_org": "tznic",
+            "as_country": "TZ"
+          }
+        ]
+      },
+      {
+        "hostname": "rip.psg.com",
+        "ipv4": [
+          {
+            "ip": "147.28.0.39",
+            "asn": 3130,
+            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_country": "EE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:418:1::39",
+            "asn": 3130,
+            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_country": "EE"
+          }
+        ]
+      },
+      {
+        "hostname": "tz-e.ns.nic.cz",
+        "ipv4": [
+          {
+            "ip": "185.43.134.11",
+            "asn": 25192,
+            "as_org": "CZNIC-AS",
+            "as_country": "CZ"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:148f:fffd::11",
+            "asn": 200070,
+            "as_org": "CZNIC-AS2",
+            "as_country": "CZ"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://karibu.tz/",
+    "whois_server": "whois.tznic.or.tz",
+    "rdap_server": "https://whois.tznic.or.tz/rdap/",
+    "tld_created": "1995-07-14",
+    "tld_updated": [
+      "2023-07-27"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Tanzania, United Republic of",
+      "as_org_aliases": [
+        "CZNIC",
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

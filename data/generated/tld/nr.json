@@ -1,0 +1,91 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "nr",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "CENPAC NET",
+      "admin": "Government of the Republic of Nauru",
+      "tech": "Government of the Republic of Nauru"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns0.cenpac.net.nr",
+        "ipv4": [
+          {
+            "ip": "203.98.224.66",
+            "asn": 55722,
+            "as_org": "CENPAC-AS-AP Cenpac Net Inc",
+            "as_country": "NR"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns1.cenpac.net.nr",
+        "ipv4": [
+          {
+            "ip": "203.98.225.9",
+            "asn": 55722,
+            "as_org": "CENPAC-AS-AP Cenpac Net Inc",
+            "as_country": "NR"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns2.cenpac.net.nr",
+        "ipv4": [
+          {
+            "ip": "202.144.128.200",
+            "asn": 18024,
+            "as_org": "BTTELECOM-AS-AP Bhutan Telecom Ltd",
+            "as_country": "BT"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2405:d000:0:100::200",
+            "asn": 18024,
+            "as_org": "BTTELECOM-AS-AP Bhutan Telecom Ltd",
+            "as_country": "BT"
+          }
+        ]
+      },
+      {
+        "hostname": "phloem.uoregon.edu",
+        "ipv4": [
+          {
+            "ip": "128.223.32.35",
+            "asn": 3582,
+            "as_org": "UONET",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:468:d01:20::80df:2023",
+            "asn": 3582,
+            "as_org": "UONET",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.cenpac.net.nr",
+    "tld_created": "1998-03-30",
+    "tld_updated": [
+      "2020-03-09"
+    ],
+    "annotations": {
+      "country_name_iso": "Nauru"
+    }
+  }
+}

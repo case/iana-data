@@ -1,0 +1,208 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "hk",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Hong Kong Internet Registration Corporation Ltd.",
+      "admin": "Hong Kong Internet Registration Corporation Ltd.",
+      "tech": "Hong Kong Internet Registration Corporation Ltd."
+    },
+    "nameservers": [
+      {
+        "hostname": "c.hkirc.net.hk",
+        "ipv4": [
+          {
+            "ip": "203.119.2.218",
+            "asn": 9735,
+            "as_org": "HKDNR-AS-AP Hong Kong Domain Name Registration Co. Ltd",
+            "as_country": "HK"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dca:4000::cb77:2da",
+            "asn": 9735,
+            "as_org": "HKDNR-AS-AP Hong Kong Domain Name Registration Co. Ltd",
+            "as_country": "HK"
+          }
+        ]
+      },
+      {
+        "hostname": "d.hkirc.net.hk",
+        "ipv4": [
+          {
+            "ip": "203.119.87.218",
+            "asn": 9735,
+            "as_org": "HKDNR-AS-AP Hong Kong Domain Name Registration Co. Ltd",
+            "as_country": "HK"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dca:2000::cb77:57da",
+            "asn": 9735,
+            "as_org": "HKDNR-AS-AP Hong Kong Domain Name Registration Co. Ltd",
+            "as_country": "HK"
+          }
+        ]
+      },
+      {
+        "hostname": "m.hkirc.net.hk",
+        "ipv4": [
+          {
+            "ip": "125.208.49.10",
+            "asn": 24406,
+            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_country": "CN"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dc7:feff::10",
+            "asn": 24151,
+            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_country": "CN"
+          }
+        ]
+      },
+      {
+        "hostname": "t.hkirc.net.hk",
+        "ipv4": [
+          {
+            "ip": "202.12.31.53",
+            "asn": 18366,
+            "as_org": "APNIC-ANYCAST APNIC ANYCAST ASN",
+            "as_country": "AU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:dd8:12::53",
+            "asn": 18366,
+            "as_org": "APNIC-ANYCAST APNIC ANYCAST ASN",
+            "as_country": "AU"
+          }
+        ]
+      },
+      {
+        "hostname": "u.hkirc.net.hk",
+        "ipv4": [
+          {
+            "ip": "210.201.138.58",
+            "asn": 9311,
+            "as_org": "HITRON-AS-AP HITRON TECHNOLOGY INC.",
+            "as_country": "TW"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2404:0:10a0::58",
+            "asn": 17709,
+            "as_org": "APT Asia Pacific Telecom",
+            "as_country": "TW"
+          }
+        ]
+      },
+      {
+        "hostname": "v.hkirc.net.hk",
+        "ipv4": [
+          {
+            "ip": "204.61.216.46",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6046:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "x.hkirc.net.hk",
+        "ipv4": [
+          {
+            "ip": "202.45.188.39",
+            "asn": 4641,
+            "as_org": "HKIX-AS-AP The Hong Kong Internet Exchange Limited",
+            "as_country": "HK"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2405:3001:1:3a::27",
+            "asn": 4641,
+            "as_org": "HKIX-AS-AP The Hong Kong Internet Exchange Limited",
+            "as_country": "HK"
+          }
+        ]
+      },
+      {
+        "hostname": "y.hkirc.net.hk",
+        "ipv4": [
+          {
+            "ip": "137.189.6.21",
+            "asn": 3661,
+            "as_org": "ERX-CUHKNET The Chinese University of Hong Kong",
+            "as_country": "HK"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2405:3000:3:6::15",
+            "asn": 3661,
+            "as_org": "ERX-CUHKNET The Chinese University of Hong Kong",
+            "as_country": "HK"
+          }
+        ]
+      },
+      {
+        "hostname": "z.hkirc.net.hk",
+        "ipv4": [
+          {
+            "ip": "194.146.106.70",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:1010:17::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.hkirc.hk",
+    "whois_server": "whois.hkirc.hk",
+    "tld_created": "1990-01-03",
+    "tld_updated": [
+      "2026-01-07"
+    ],
+    "annotations": {
+      "country_name_iso": "Hong Kong",
+      "as_org_aliases": [
+        "CNNIC",
+        "Packet Clearing House"
+      ]
+    },
+    "idn": [
+      "xn--j6w193g"
+    ]
+  }
+}

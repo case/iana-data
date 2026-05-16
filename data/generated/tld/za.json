@@ -1,0 +1,82 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "za",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "ZA Domain Name Authority",
+      "admin": "ZA Domain Name Authority",
+      "tech": "ZA Domain Name Authority"
+    },
+    "nameservers": [
+      {
+        "hostname": "nsza.is.co.za",
+        "ipv4": [
+          {
+            "ip": "196.4.160.27",
+            "asn": 3741,
+            "as_org": "IS",
+            "as_country": "ZA"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "za-ns.anycast.pch.net",
+        "ipv4": [
+          {
+            "ip": "204.61.216.55",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6055:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "za1.dnsnode.net",
+        "ipv4": [
+          {
+            "ip": "194.146.106.78",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:1010:19::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.zadna.org.za/",
+    "tld_created": "1990-11-07",
+    "tld_updated": [
+      "2025-04-16"
+    ],
+    "annotations": {
+      "country_name_iso": "South Africa",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

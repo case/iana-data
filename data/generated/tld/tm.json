@@ -1,0 +1,152 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "tm",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "TM Domain Registry Ltd",
+      "admin": "TM Domain Registry Ltd",
+      "tech": "TM Domain Registry Ltd"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns-a1.tm",
+        "ipv4": [
+          {
+            "ip": "194.0.1.22",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:4::16",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "ns-a2.tm",
+        "ipv4": [
+          {
+            "ip": "194.0.2.22",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:5::16",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "ns-a3.tm",
+        "ipv4": [
+          {
+            "ip": "74.116.178.22",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns-a4.tm",
+        "ipv4": [
+          {
+            "ip": "74.116.179.22",
+            "asn": 42909,
+            "as_org": "COMMUNITYDNS",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns-d1.tm",
+        "ipv4": [
+          {
+            "ip": "64.251.31.180",
+            "asn": 15083,
+            "as_org": "INFOLINK-MIA-",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2607:feb8::5:8",
+            "asn": 15083,
+            "as_org": "INFOLINK-MIA-",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns-l1.tm",
+        "ipv4": [
+          {
+            "ip": "80.249.100.44",
+            "asn": 21396,
+            "as_org": "NETCONNEX NetConnex Broadband Ltd.",
+            "as_country": "GB"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a13:f040::4000:0:0:44",
+            "asn": 21396,
+            "as_org": "NETCONNEX NetConnex Broadband Ltd.",
+            "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "ns-y1.tm",
+        "ipv4": [
+          {
+            "ip": "91.208.95.22",
+            "asn": 19318,
+            "as_org": "IS-AS-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2604:a00:50:1fd::22",
+            "asn": 19318,
+            "as_org": "IS-AS-1",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.nic.tm/",
+    "whois_server": "whois.nic.tm",
+    "tld_created": "1997-05-30",
+    "tld_updated": [
+      "2025-06-18"
+    ],
+    "annotations": {
+      "country_name_iso": "Turkmenistan",
+      "as_org_aliases": [
+        "CDNS"
+      ]
+    }
+  }
+}

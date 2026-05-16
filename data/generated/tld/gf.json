@@ -1,0 +1,66 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "gf",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "CANAL+ TELECOM",
+      "admin": "CANAL+ TELECOM",
+      "tech": "CANAL+ TELECOM"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns1-fr.mediaserv.net",
+        "ipv4": [
+          {
+            "ip": "185.56.51.194",
+            "asn": 36924,
+            "as_org": "GVA-Canalbox",
+            "as_country": "CI"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns1-gp.mediaserv.net",
+        "ipv4": [
+          {
+            "ip": "213.188.172.1",
+            "asn": 21351,
+            "as_org": "CANALPLUSTELECOM",
+            "as_country": "GP"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns1-mq.mediaserv.net",
+        "ipv4": [
+          {
+            "ip": "213.16.20.3",
+            "asn": 21351,
+            "as_org": "CANALPLUSTELECOM",
+            "as_country": "GP"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "https://www.dom-enic.com",
+    "whois_server": "whois.mediaserv.net",
+    "tld_created": "1996-07-25",
+    "tld_updated": [
+      "2021-10-18"
+    ],
+    "annotations": {
+      "country_name_iso": "French Guiana"
+    }
+  }
+}

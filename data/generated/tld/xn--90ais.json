@@ -1,0 +1,121 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "xn--90ais",
+    "tld_unicode": "бел",
+    "tld_script": "Cyrillic",
+    "tld_iso": "by",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Belarusian Cloud Technologies LLC",
+      "admin": "The Operational and Analytical Center under the Aegis of the President of the Republic of Belarus",
+      "tech": "Belarusian Cloud Technologies LLC"
+    },
+    "nameservers": [
+      {
+        "hostname": "dns1.tld.becloudby.com",
+        "ipv4": [
+          {
+            "ip": "93.125.25.72",
+            "asn": 60330,
+            "as_org": "BCTBY-AS",
+            "as_country": "BY"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a00:c827:a:2::2",
+            "asn": 60330,
+            "as_org": "BCTBY-AS",
+            "as_country": "BY"
+          }
+        ]
+      },
+      {
+        "hostname": "dns2.tld.becloudby.tech",
+        "ipv4": [
+          {
+            "ip": "93.125.25.73",
+            "asn": 60330,
+            "as_org": "BCTBY-AS",
+            "as_country": "BY"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a00:c827:a:3::2",
+            "asn": 60330,
+            "as_org": "BCTBY-AS",
+            "as_country": "BY"
+          }
+        ]
+      },
+      {
+        "hostname": "dns3.tld.becloudby.tech",
+        "ipv4": [
+          {
+            "ip": "185.98.83.4",
+            "asn": 49063,
+            "as_org": "DTLN",
+            "as_country": "RU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:ba80:e:c:1::4c",
+            "asn": 49063,
+            "as_org": "DTLN",
+            "as_country": "RU"
+          }
+        ]
+      },
+      {
+        "hostname": "dns4.tld.becloudby.tech",
+        "ipv4": [
+          {
+            "ip": "31.44.1.137",
+            "asn": 208951,
+            "as_org": "AS-ITGLOBALCOM ITGLOBAL.COM",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a0e:b81:8001:1001::2",
+            "asn": 208951,
+            "as_org": "AS-ITGLOBALCOM ITGLOBAL.COM",
+            "as_country": "NL"
+          }
+        ]
+      },
+      {
+        "hostname": "dns7.tld.becloudby.com",
+        "ipv4": [
+          {
+            "ip": "31.44.5.245",
+            "asn": 208951,
+            "as_org": "AS-ITGLOBALCOM ITGLOBAL.COM",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "https://cctld.by",
+    "whois_server": "whois.cctld.by",
+    "tld_created": "2014-09-29",
+    "tld_updated": [
+      "2025-01-09"
+    ],
+    "annotations": {
+      "country_name_iso": "Belarus"
+    }
+  }
+}

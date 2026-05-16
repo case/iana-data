@@ -1,0 +1,115 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "gp",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Networking Technologies Group",
+      "admin": "Networking Technologies Group",
+      "tech": "Bull ATOS Caraibes"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.lactld.org",
+        "ipv4": [
+          {
+            "ip": "200.0.68.10",
+            "asn": 61455,
+            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_country": "UY"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2801:14:a000::10",
+            "asn": 61455,
+            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_country": "UY"
+          }
+        ]
+      },
+      {
+        "hostname": "gp.cctld.authdns.ripe.net",
+        "ipv4": [
+          {
+            "ip": "193.0.9.76",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a13:27c0:30::76",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ]
+      },
+      {
+        "hostname": "ns-gp.nic.fr",
+        "ipv4": [
+          {
+            "ip": "194.0.9.1",
+            "asn": 2486,
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_country": "FR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:c::1",
+            "asn": 2486,
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_country": "FR"
+          }
+        ]
+      },
+      {
+        "hostname": "ns1.nic.gp",
+        "ipv4": [
+          {
+            "ip": "193.218.114.2",
+            "asn": 22150,
+            "as_org": "CARRIERHOUSE",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns2.nic.gp",
+        "ipv4": [
+          {
+            "ip": "193.218.114.34",
+            "asn": 22150,
+            "as_org": "CARRIERHOUSE",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.nic.gp/",
+    "whois_server": "whois.nic.gp",
+    "tld_created": "1996-10-21",
+    "tld_updated": [
+      "2025-09-09"
+    ],
+    "annotations": {
+      "country_name_iso": "Guadeloupe",
+      "as_org_aliases": [
+        "AFNIC",
+        "LACTLD"
+      ]
+    }
+  }
+}

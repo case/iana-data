@@ -1,0 +1,103 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "pe",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Red Cientifica Peruana",
+      "admin": "Red Cientifica Peruana",
+      "tech": "Red Cientifica Peruana"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.lactld.org",
+        "ipv4": [
+          {
+            "ip": "200.0.68.10",
+            "asn": 61455,
+            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_country": "UY"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2801:14:a000::10",
+            "asn": 61455,
+            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_country": "UY"
+          }
+        ]
+      },
+      {
+        "hostname": "pch.rcp.pe",
+        "ipv4": [
+          {
+            "ip": "204.61.216.85",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:14:6085:ad::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "pe1.dnsnode.net",
+        "ipv4": [
+          {
+            "ip": "194.146.106.82",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:67c:1010:20::53",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
+            "as_country": "SE"
+          }
+        ]
+      },
+      {
+        "hostname": "quipu.rcp.net.pe",
+        "ipv4": [
+          {
+            "ip": "200.1.176.4",
+            "asn": 3132,
+            "as_org": "Red Cientifica Peruana",
+            "as_country": "PE"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.nic.pe",
+    "whois_server": "kero.yachay.pe",
+    "tld_created": "1991-11-25",
+    "tld_updated": [
+      "2026-03-25"
+    ],
+    "annotations": {
+      "country_name_iso": "Peru",
+      "as_org_aliases": [
+        "LACTLD",
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

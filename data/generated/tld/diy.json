@@ -1,0 +1,115 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "diy",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "tld_manager": "Internet Naming Co.",
+      "admin": "Internet Naming Co.",
+      "tech": "Tucows.com, Co."
+    },
+    "nameservers": [
+      {
+        "hostname": "ns01.trs-dns.com",
+        "ipv4": [
+          {
+            "ip": "64.96.1.1",
+            "asn": 393818,
+            "as_org": "TUCOWS-TRS-DNS1",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:57:4001::1",
+            "asn": 393818,
+            "as_org": "TUCOWS-TRS-DNS1",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "ns01.trs-dns.net",
+        "ipv4": [
+          {
+            "ip": "64.96.2.1",
+            "asn": 63363,
+            "as_org": "TUCOWS-TRS-DNS2",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:57:4002::1",
+            "asn": 63363,
+            "as_org": "TUCOWS-TRS-DNS2",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "ns10.trs-dns.info",
+        "ipv4": [
+          {
+            "ip": "64.78.204.1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:171:812:1534:8::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns10.trs-dns.org",
+        "ipv4": [
+          {
+            "ip": "64.78.205.1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:171:813:1534:8::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://internetnaming.co",
+    "whois_server": "whois.tucowsregistry.net",
+    "rdap_server": "https://rdap.tucowsregistry.net/rdap/",
+    "tld_created": "2016-07-21",
+    "tld_updated": [
+      "2025-12-12"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "Packet Clearing House",
+        "Tucows"
+      ]
+    }
+  }
+}

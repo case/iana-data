@@ -1,0 +1,57 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "xn--l1acc",
+    "tld_unicode": "мон",
+    "tld_script": "Cyrillic",
+    "tld_iso": "mn",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Datacom Co.,Ltd",
+      "admin": "Datacom Co.,Ltd",
+      "tech": "Datacom Co.,Ltd"
+    },
+    "nameservers": [
+      {
+        "hostname": "ns10.dns.mn",
+        "ipv4": [
+          {
+            "ip": "202.131.1.4",
+            "asn": 55342,
+            "as_org": "HOMENET6837-AS-AP Homenet",
+            "as_country": "MN"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns11.dns.mn",
+        "ipv4": [
+          {
+            "ip": "202.131.4.12",
+            "asn": 45237,
+            "as_org": "GLOBAL-MG-AS-AP Magicnet LLC",
+            "as_country": "MN"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "https://www.datacom.mn/",
+    "whois_server": "whois.mn",
+    "tld_created": "2012-06-21",
+    "tld_updated": [
+      "2025-06-18"
+    ],
+    "annotations": {
+      "country_name_iso": "Mongolia"
+    }
+  }
+}

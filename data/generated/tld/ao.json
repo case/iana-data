@@ -1,0 +1,109 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "ao",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "Ministry of Telecommunications and Information Technologies (MTTI)",
+      "admin": "Institute of Development of Information Society (‘INFOSI’)",
+      "tech": "INSTITUTO NACIONAL DE FOMENTO DA SOCIEDADE DA INFORMACAO-INFOSI"
+    },
+    "nameservers": [
+      {
+        "hostname": "a.ns.ao",
+        "ipv4": [
+          {
+            "ip": "206.51.254.4",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:171:804:ad2::4",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ao-e.ns.nic.cz",
+        "ipv4": [
+          {
+            "ip": "185.43.134.13",
+            "asn": 25192,
+            "as_org": "CZNIC-AS",
+            "as_country": "CZ"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:148f:fffd::13",
+            "asn": 200070,
+            "as_org": "CZNIC-AS2",
+            "as_country": "CZ"
+          }
+        ]
+      },
+      {
+        "hostname": "ao02.dns.pt",
+        "ipv4": [
+          {
+            "ip": "185.39.208.29",
+            "asn": 199993,
+            "as_org": "DNS",
+            "as_country": "PT"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a04:6d80::29",
+            "asn": 199993,
+            "as_org": "DNS",
+            "as_country": "PT"
+          }
+        ]
+      },
+      {
+        "hostname": "etld-1.anycast.net",
+        "ipv4": [
+          {
+            "ip": "45.54.45.54",
+            "asn": 63911,
+            "as_org": "NETACTUATE-AS-AP NetActuate, Inc",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2607:f740:45::54",
+            "asn": 63911,
+            "as_org": "NETACTUATE-AS-AP NetActuate, Inc",
+            "as_country": "US"
+          }
+        ]
+      }
+    ],
+    "registry_url": "http://www.dns.ao/",
+    "tld_created": "1995-11-15",
+    "tld_updated": [
+      "2024-09-09"
+    ],
+    "annotations": {
+      "country_name_iso": "Angola",
+      "as_org_aliases": [
+        "CZNIC",
+        "Packet Clearing House"
+      ]
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "pk",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "PKNIC",
+      "admin": "PKNIC",
+      "tech": "PKNIC"
+    },
+    "nameservers": [
+      {
+        "hostname": "root-c1.pknic.pk",
+        "ipv4": [
+          {
+            "ip": "185.159.197.160",
+            "asn": 55195,
+            "as_org": "CIRA-CLOUD1",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:10a:80aa::160",
+            "asn": 55195,
+            "as_org": "CIRA-CLOUD1",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "root-c2.pknic.pk",
+        "ipv4": [
+          {
+            "ip": "185.159.198.160",
+            "asn": 394354,
+            "as_org": "CIRA-CLOUD2",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:10a:80ab::160",
+            "asn": 394354,
+            "as_org": "CIRA-CLOUD2",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "root-e.pknic.pk",
+        "ipv4": [
+          {
+            "ip": "107.6.178.178",
+            "asn": 32475,
+            "as_org": "SINGLEHOP-LLC",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "root-s.pknic.pk",
+        "ipv4": [
+          {
+            "ip": "119.81.34.90",
+            "asn": 36351,
+            "as_org": "SOFTLAYER",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": []
+      }
+    ],
+    "registry_url": "http://www.pknic.net.pk/",
+    "whois_server": "whois.pknic.net.pk",
+    "tld_created": "1992-06-03",
+    "tld_updated": [
+      "2022-07-06"
+    ],
+    "annotations": {
+      "country_name_iso": "Pakistan",
+      "as_org_aliases": [
+        "CIRA"
+      ]
+    },
+    "idn": [
+      "xn--mgbai9azgqp6j"
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-05-15T19:11:17Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "kg",
+    "delegated": true,
+    "iana_tag": "country-code",
+    "type": "cctld",
+    "orgs": {
+      "tld_manager": "AsiaInfo Telecommunication Enterprise",
+      "admin": "AsiaInfo Telecommunication Enterprise",
+      "tech": "AsiaInfo Telecommunication Enterprise"
+    },
+    "nameservers": [
+      {
+        "hostname": "kg.cctld.authdns.ripe.net",
+        "ipv4": [
+          {
+            "ip": "193.0.9.84",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a13:27c0:30::84",
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
+          }
+        ]
+      },
+      {
+        "hostname": "ns.kg",
+        "ipv4": [
+          {
+            "ip": "195.38.160.36",
+            "asn": 8511,
+            "as_org": "AS8511-AI Bishkek, Kyrgyzstan",
+            "as_country": "KG"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a11:a380::195:38:160:36",
+            "asn": 8511,
+            "as_org": "AS8511-AI Bishkek, Kyrgyzstan",
+            "as_country": "KG"
+          }
+        ]
+      },
+      {
+        "hostname": "ns2.kg",
+        "ipv4": [
+          {
+            "ip": "195.38.160.38",
+            "asn": 8511,
+            "as_org": "AS8511-AI Bishkek, Kyrgyzstan",
+            "as_country": "KG"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a11:a380::195:38:160:38",
+            "asn": 8511,
+            "as_org": "AS8511-AI Bishkek, Kyrgyzstan",
+            "as_country": "KG"
+          }
+        ]
+      }
+    ],
+    "registry_url": "https://www.cctld.kg/",
+    "whois_server": "whois.kg",
+    "rdap_server": "http://rdap.cctld.kg/",
+    "tld_created": "1995-07-12",
+    "tld_updated": [
+      "2025-07-23"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Kyrgyzstan"
+    }
+  }
+}
