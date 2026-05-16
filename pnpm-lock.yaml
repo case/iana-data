@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       checkly:
-        specifier: 7.12.0
-        version: 7.12.0(@types/node@25.8.0)(jiti@2.6.1)(typescript@6.0.3)
+        specifier: 7.12.1
+        version: 7.12.1(@types/node@25.8.0)(jiti@2.6.1)(typescript@6.0.3)
       jiti:
         specifier: 2.6.1
         version: 2.6.1
@@ -406,8 +406,8 @@ packages:
   chardet@2.1.1:
     resolution: {integrity: sha512-PsezH1rqdV9VvyNhxxOW32/d75r01NY7TQCmOqomRo15ZSOKbpTFVsfjghxo6JloQUCGnH4k1LGu0R4yCLlWQQ==}
 
-  checkly@7.12.0:
-    resolution: {integrity: sha512-uvW1SOU4sbt50G8LTV+JwlGr/1zhrYtZUi77y9w95vrsQY3AHgeLK+x0jdwMsa2Sad3zx5XoxwJYADpuSzyP0w==}
+  checkly@7.12.1:
+    resolution: {integrity: sha512-Cjdqyx9r6mMN5k+kWdNZc1ie4Qe2ZOeF8sNZ0co8xMYu91g+NQMgWaTu0sSu96dIuE0hm05oIR9xlKNu6ggjVw==}
     engines: {node: ^18.19.0 || >=20.5.0}
     hasBin: true
     peerDependencies:
@@ -1653,7 +1653,7 @@ snapshots:
 
   chardet@2.1.1: {}
 
-  checkly@7.12.0(@types/node@25.8.0)(jiti@2.6.1)(typescript@6.0.3):
+  checkly@7.12.1(@types/node@25.8.0)(jiti@2.6.1)(typescript@6.0.3):
     dependencies:
       '@oclif/core': 4.11.2
       '@oclif/plugin-help': 6.2.48
