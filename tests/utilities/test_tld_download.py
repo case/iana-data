@@ -11,7 +11,9 @@ from src.parse import extract_main_content
 from src.utilities.download import download_tld_pages
 from src.utilities.urls import get_tld_file_path, get_tld_page_url
 
-FIXTURES_DIR = Path(__file__).parent.parent / "fixtures" / "source" / "tlds" / "html-full"
+FIXTURES_DIR = (
+    Path(__file__).parent.parent / "fixtures" / "source" / "tlds" / "html-full"
+)
 
 
 @pytest.fixture(autouse=True)
@@ -206,6 +208,7 @@ def test_download_tld_pages_multiple_tlds(tmp_path):
 
 def test_download_tld_pages_handles_404(tmp_path):
     """Test handling of 404 Not Found."""
+
     def mock_get(url, headers=None):
         response = Mock(spec=httpx.Response)
         response.status_code = 404

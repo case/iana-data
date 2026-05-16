@@ -79,7 +79,13 @@ def test_cli_download_tld_pages_flag_works():
     # Pass a specific invalid TLD to avoid actually downloading anything
     # We just want to verify the CLI accepts the flag and doesn't have import errors
     result = subprocess.run(
-        [sys.executable, "-m", "src.cli", "--download-tld-pages", "nonexistent-tld-for-testing"],
+        [
+            sys.executable,
+            "-m",
+            "src.cli",
+            "--download-tld-pages",
+            "nonexistent-tld-for-testing",
+        ],
         capture_output=True,
         text=True,
         timeout=10,
@@ -105,10 +111,7 @@ def test_cli_analyze_flag_works():
     assert "ImportError" not in result.stderr
 
 
-@pytest.mark.skipif(
-    not Path("Makefile").exists(),
-    reason="Makefile not found"
-)
+@pytest.mark.skipif(not Path("Makefile").exists(), reason="Makefile not found")
 def test_makefile_targets_exist():
     """Verify that all Makefile targets used in GitHub Actions exist.
 
@@ -116,22 +119,47 @@ def test_makefile_targets_exist():
     - make download-core
     - make download-tld-pages GROUPS="..."
     - make generate-idn-mapping
-    - make test
     - make build
+
+    Lint/test are run via bin/lint and bin/test, not via make.
     """
-    makefile_content = Path("Makefile").read_text()
+    makefile_lines = Path("Makefile").read_text().splitlines()
 
     required_targets = [
         "download-core",
         "download-tld-pages",
         "generate-idn-mapping",
-        "test",
         "build",
     ]
 
     for target in required_targets:
-        assert f".PHONY: {target}" in makefile_content or f"{target}:" in makefile_content, \
+        # Match either a .PHONY line or a recipe line, anchored so that
+        # e.g. "test" does not substring-match into "checkly-test:".
+        phony_line = f".PHONY: {target}"
+        recipe_prefix = f"{target}:"
+        found = any(
+            line == phony_line or line.startswith(recipe_prefix)
+            for line in makefile_lines
+        )
+        assert found, (
             f"Required Make target '{target}' not found in Makefile (used by GitHub Actions)"
+        )
+
+
+@pytest.mark.skipif(not Path("bin").is_dir(), reason="bin/ directory not found")
+def test_bin_scripts_are_executable():
+    """Verify bin/setup, bin/lint, bin/test exist and are executable.
+
+    GitHub Actions invokes these directly (replacing the old make
+    deps/lint/test targets); a non-executable file would fail CI at the
+    `bin/setup` step with a confusing "Permission denied".
+    """
+    import os
+
+    for name in ("setup", "lint", "test"):
+        path = Path("bin") / name
+        assert path.is_file(), f"bin/{name} is missing"
+        assert os.access(path, os.X_OK), f"bin/{name} is not executable"
 
 
 def test_all_cli_subcommands_have_help():
@@ -154,8 +182,9 @@ def test_all_cli_subcommands_have_help():
     ]
 
     for flag in required_flags:
-        assert flag in result.stdout, \
+        assert flag in result.stdout, (
             f"Required CLI flag '{flag}' not found in --help output (used by Makefile/GitHub Actions)"
+        )
 
 
 def test_package_has_no_syntax_errors():
@@ -207,5 +236,6 @@ def test_cli_entry_points_are_defined():
 
     # Should have __main__ guard or be executable
     cli_content = cli_module.read_text()
-    assert 'if __name__ == "__main__"' in cli_content or "def main(" in cli_content, \
+    assert 'if __name__ == "__main__"' in cli_content or "def main(" in cli_content, (
         "CLI module should have main entry point"
+    )

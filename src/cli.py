@@ -116,9 +116,15 @@ def main() -> int:
     if args.analyze is not None:
         # Define available analyzers
         analyzers = {
-            "tlds-txt": lambda: analyze_tlds_txt(Path(SOURCE_DIR) / SOURCE_FILES["TLD_LIST"]),
-            "root-db": lambda: analyze_root_db_html(Path(SOURCE_DIR) / SOURCE_FILES["ROOT_ZONE_DB"]),
-            "rdap": lambda: analyze_rdap_json(Path(SOURCE_DIR) / SOURCE_FILES["RDAP_BOOTSTRAP"]),
+            "tlds-txt": lambda: analyze_tlds_txt(
+                Path(SOURCE_DIR) / SOURCE_FILES["TLD_LIST"]
+            ),
+            "root-db": lambda: analyze_root_db_html(
+                Path(SOURCE_DIR) / SOURCE_FILES["ROOT_ZONE_DB"]
+            ),
+            "rdap": lambda: analyze_rdap_json(
+                Path(SOURCE_DIR) / SOURCE_FILES["RDAP_BOOTSTRAP"]
+            ),
         }
 
         # Determine which files to analyze

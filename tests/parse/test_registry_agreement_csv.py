@@ -41,7 +41,7 @@ def test_parse_registry_agreement_csv_brand_tld():
 
     assert entry["tld"] == "aaa"
     assert entry["status"] == "active"
-    assert entry["operator"] == "American Automobile Association, Inc."
+    assert entry.get("operator") == "American Automobile Association, Inc."
     assert "Brand (Spec 13)" in entry["agreement_types"]
     assert "Base" in entry["agreement_types"]
     assert "Non-Sponsored" in entry["agreement_types"]
@@ -69,7 +69,7 @@ def test_parse_registry_agreement_csv_terminated_tld():
 
     assert entry["tld"] == "abarth"
     assert entry["status"] == "terminated"
-    assert entry["operator"] == "Fiat Chrysler Automobiles N.V."
+    assert entry.get("operator") == "Fiat Chrysler Automobiles N.V."
 
 
 def test_parse_registry_agreement_csv_sponsored_tld():
@@ -92,8 +92,8 @@ def test_parse_registry_agreement_csv_idn_tld():
     entry = agreements["xn--11b4c3d"]
 
     assert entry["tld"] == "xn--11b4c3d"
-    assert entry["u_label"] == "कॉम"
-    assert entry["translation"] == "com"
+    assert entry.get("u_label") == "कॉम"
+    assert entry.get("translation") == "com"
     assert entry["status"] == "active"
 
 

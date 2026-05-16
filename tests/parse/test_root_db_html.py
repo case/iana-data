@@ -92,7 +92,9 @@ def test_parse_root_db_html_extracts_managers():
     # Find specific entries and check their managers
     entries_by_domain = {entry["domain"]: entry for entry in entries}
 
-    assert entries_by_domain[".aaa"]["manager"] == "American Automobile Association, Inc."
+    assert (
+        entries_by_domain[".aaa"]["manager"] == "American Automobile Association, Inc."
+    )
     assert entries_by_domain[".ac"]["manager"] == "Internet Computer Bureau Limited"
     assert entries_by_domain[".arpa"]["manager"] == "Internet Architecture Board (IAB)"
 
@@ -112,15 +114,11 @@ def test_parse_root_db_html_unique_managers():
 
     # Count unique gTLD managers
     generic_types = ["generic", "sponsored", "infrastructure", "generic-restricted"]
-    gtld_managers = set(
-        e["manager"] for e in delegated if e["type"] in generic_types
-    )
+    gtld_managers = set(e["manager"] for e in delegated if e["type"] in generic_types)
     assert len(gtld_managers) == 18
 
     # Count unique ccTLD managers
-    cctld_managers = set(
-        e["manager"] for e in delegated if e["type"] == "country-code"
-    )
+    cctld_managers = set(e["manager"] for e in delegated if e["type"] == "country-code")
     assert len(cctld_managers) == 10
 
     # Verify it's counting unique managers, not total TLDs

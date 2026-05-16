@@ -94,7 +94,9 @@ def test_is_cache_fresh_missing_cache_max_age():
     """Test that missing cache_max_age returns False."""
     metadata_entry = {
         "cache_data": {
-            "last_downloaded": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "last_downloaded": datetime.now(timezone.utc).strftime(
+                "%Y-%m-%dT%H:%M:%SZ"
+            ),
             "etag": "abc123",
         },
     }

@@ -3,24 +3,28 @@
 import csv
 import logging
 from pathlib import Path
-from typing import TypedDict
+from typing import NotRequired, TypedDict
 
 from ..config import REGISTRY_AGREEMENT_TYPE_MAPPING, SOURCE_DIR, SOURCE_FILES
 
 logger = logging.getLogger(__name__)
 
 
-class RegistryAgreement(TypedDict, total=False):
-    """Type for parsed registry agreement entry."""
+class RegistryAgreement(TypedDict):
+    """Type for parsed registry agreement entry.
+
+    The parser always sets tld, agreement_types, and status from required
+    CSV columns; the rest are populated only when the CSV row has them.
+    """
 
     tld: str
-    u_label: str
-    translation: str
     agreement_types: list[str]
-    operator: str
     status: str
-    agreement_date: str
-    link: str
+    u_label: NotRequired[str]
+    translation: NotRequired[str]
+    operator: NotRequired[str]
+    agreement_date: NotRequired[str]
+    link: NotRequired[str]
 
 
 def parse_agreement_types(raw_types: str) -> list[str]:
@@ -89,7 +93,9 @@ def parse_registry_agreement_csv(
 
                 entry: RegistryAgreement = {
                     "tld": tld,
-                    "agreement_types": parse_agreement_types(row.get("Agreement Type", "")),
+                    "agreement_types": parse_agreement_types(
+                        row.get("Agreement Type", "")
+                    ),
                     "status": row.get("Agreement Status", "").strip().lower(),
                 }
 

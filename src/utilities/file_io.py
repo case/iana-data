@@ -20,9 +20,7 @@ def read_json_file(filepath: Path, default: list) -> list: ...
 def read_json_file(filepath: Path, default: None = None) -> dict: ...
 
 
-def read_json_file(
-    filepath: Path, default: dict | list | None = None
-) -> dict | list:
+def read_json_file(filepath: Path, default: dict | list | None = None) -> dict | list:
     """Read and parse a JSON file with error handling.
 
     Args:

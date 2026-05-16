@@ -30,6 +30,8 @@ SOURCE_FILES: Final[dict[str, str]] = {
 MANUAL_DIR: Final[str] = "data/manual"
 GENERATED_DIR: Final[str] = "data/generated"
 TLDS_OUTPUT_FILE: Final[str] = f"{GENERATED_DIR}/tlds.json"
+TLDS_INDEX_FILE: Final[str] = f"{GENERATED_DIR}/tlds-index.json"
+TLD_DIR: Final[str] = f"{GENERATED_DIR}/tld"
 IDN_SCRIPT_MAPPING_FILE: Final[str] = f"{GENERATED_DIR}/idn-script-mapping.json"
 
 # Manual data files
