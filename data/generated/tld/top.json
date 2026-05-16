@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-16T03:38:30Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -69,17 +69,17 @@
         "ipv4": [
           {
             "ip": "203.119.82.1",
-            "asn": 0,
-            "as_org": "Not routed",
-            "as_country": "None"
+            "asn": 24149,
+            "as_org": "ZDNS Internet Domain Name System Beijing Engineering Resrarch Center Ltd.",
+            "as_country": "CN"
           }
         ],
         "ipv6": [
           {
             "ip": "2401:8d00:15::1",
-            "asn": 0,
-            "as_org": "Not routed",
-            "as_country": "None"
+            "asn": 24149,
+            "as_org": "ZDNS Internet Domain Name System Beijing Engineering Resrarch Center Ltd.",
+            "as_country": "CN"
           }
         ]
       },

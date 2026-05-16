@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-16T03:38:30Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -72,9 +72,9 @@
         "ipv6": [
           {
             "ip": "2001:67c:e0::117",
-            "asn": 197000,
-            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
-            "as_country": "NL"
+            "asn": 0,
+            "as_org": "Not routed",
+            "as_country": "None"
           }
         ]
       }

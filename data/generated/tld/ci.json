@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-16T03:38:30Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -78,8 +78,8 @@
         "ipv4": [
           {
             "ip": "196.49.0.84",
-            "asn": 36946,
-            "as_org": "CIVIX",
+            "asn": 329666,
+            "as_org": "CIVIX_Management",
             "as_country": "CI"
           }
         ],
