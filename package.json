@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "Checkly monitoring for ccTLD RDAP servers",
+  "packageManager": "pnpm@11.0.3",
   "scripts": {
     "checkly:test": "npx checkly test --config monitoring/checkly/checkly.config.ts",
     "checkly:deploy": "npx checkly deploy --config monitoring/checkly/checkly.config.ts"
