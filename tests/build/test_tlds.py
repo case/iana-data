@@ -91,15 +91,16 @@ def test_build_tlds_json_tld_count_matches_source(shared_build):
 
 
 def test_build_tlds_json_has_required_fields(shared_build):
-    """Each TLD entry has required fields."""
+    """Every TLD entry has required fields."""
     with open(shared_build.tlds_json) as f:
         data = json.load(f)
 
-    for tld_entry in data["tlds"][:10]:
-        assert "tld" in tld_entry
-        assert "delegated" in tld_entry
-        assert "iana_tag" in tld_entry
-        assert "type" in tld_entry
+    required_keys = {"tld", "delegated", "iana_tag", "type"}
+    for i, tld_entry in enumerate(data["tlds"]):
+        missing = required_keys - tld_entry.keys()
+        assert not missing, (
+            f"Entry {i} ({tld_entry.get('tld', '<no tld>')}) missing keys: {missing}"
+        )
 
 
 def test_build_tlds_json_strips_leading_dots(shared_build):

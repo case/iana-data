@@ -9,6 +9,7 @@ Agents: consult before suggesting layout, naming, dependencies, vendors, or conv
 - [Architecture](architecture.md) - current implementation: stack, layout, conventions
 
 ## Log (newest first)
+- [2026-05-16 Per-field source-of-truth](log/2026-05-16-per-field-truth.md) - each IANA source authoritative for a specific field set; reconciliation tests encode the rule
 - [2026-05-15 Per-TLD JSON publication](log/2026-05-15-per-tld-publish.md) - per-TLD files + slim index alongside bulk tlds.json
 - [2026-05-15 Atomic JSON writes](log/2026-05-15-atomic-writes.md) - NamedTemporaryFile + fsync + chmod 0o644 + os.replace pattern
 - [2026-05-15 bin/ scripts replace make targets](log/2026-05-15-bin-scripts.md) - bin/setup, bin/lint, bin/test; make retains domain targets
