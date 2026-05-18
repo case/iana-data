@@ -134,7 +134,9 @@ def analyze_concentration(profiles: list[TLDASNProfile]) -> None:
 
     print()
     print(f"Total unique ASNs hosting TLD nameservers: {total_asns}")
-    print(f"Top 10 ASNs cover {top_10_coverage} TLD associations ({100*top_10_coverage/total_tld_asn_pairs:.1f}% of all)")
+    print(
+        f"Top 10 ASNs cover {top_10_coverage} TLD associations ({100 * top_10_coverage / total_tld_asn_pairs:.1f}% of all)"
+    )
 
 
 def analyze_single_asn_risk(profiles: list[TLDASNProfile]) -> None:
@@ -148,8 +150,12 @@ def analyze_single_asn_risk(profiles: list[TLDASNProfile]) -> None:
     multi_asn_tlds = [p for p in delegated_with_ns if len(p.unique_asns) > 1]
 
     print(f"\nDelegated TLDs with nameserver IPs: {len(delegated_with_ns)}")
-    print(f"TLDs with single ASN (potential risk): {len(single_asn_tlds)} ({100*len(single_asn_tlds)/len(delegated_with_ns):.1f}%)")
-    print(f"TLDs with multiple ASNs: {len(multi_asn_tlds)} ({100*len(multi_asn_tlds)/len(delegated_with_ns):.1f}%)")
+    print(
+        f"TLDs with single ASN (potential risk): {len(single_asn_tlds)} ({100 * len(single_asn_tlds) / len(delegated_with_ns):.1f}%)"
+    )
+    print(
+        f"TLDs with multiple ASNs: {len(multi_asn_tlds)} ({100 * len(multi_asn_tlds) / len(delegated_with_ns):.1f}%)"
+    )
 
     # Group single-ASN TLDs by their ASN
     single_asn_groups: dict[int, list[TLDASNProfile]] = defaultdict(list)
@@ -158,7 +164,9 @@ def analyze_single_asn_risk(profiles: list[TLDASNProfile]) -> None:
         single_asn_groups[asn].append(profile)
 
     # Sort by count
-    sorted_groups = sorted(single_asn_groups.items(), key=lambda x: len(x[1]), reverse=True)
+    sorted_groups = sorted(
+        single_asn_groups.items(), key=lambda x: len(x[1]), reverse=True
+    )
 
     print("\nTop ASNs with single-ASN TLDs (highest risk concentration):")
     print("-" * 70)
@@ -166,7 +174,7 @@ def analyze_single_asn_risk(profiles: list[TLDASNProfile]) -> None:
         info = tld_profiles[0].asn_details.get(asn, ASNInfo(asn, "", ""))
         tld_list = ", ".join(p.tld for p in tld_profiles[:5])
         if len(tld_profiles) > 5:
-            tld_list += f", ... (+{len(tld_profiles)-5} more)"
+            tld_list += f", ... (+{len(tld_profiles) - 5} more)"
         print(f"  ASN {asn} ({info.org}, {info.country}): {len(tld_profiles)} TLDs")
         print(f"    Examples: {tld_list}")
 
@@ -175,7 +183,9 @@ def analyze_single_asn_risk(profiles: list[TLDASNProfile]) -> None:
     for profile in single_asn_tlds[:10]:
         asn = next(iter(profile.unique_asns))
         info = profile.asn_details.get(asn, ASNInfo(asn, "", ""))
-        print(f"  .{profile.tld} ({profile.tld_type}): {profile.nameserver_count} NS, {profile.ip_count} IPs, all on ASN {asn} ({info.org})")
+        print(
+            f"  .{profile.tld} ({profile.tld_type}): {profile.nameserver_count} NS, {profile.ip_count} IPs, all on ASN {asn} ({info.org})"
+        )
 
 
 def analyze_geographic_distribution(profiles: list[TLDASNProfile]) -> None:
@@ -208,12 +218,16 @@ def analyze_geographic_distribution(profiles: list[TLDASNProfile]) -> None:
 
     # Analyze ccTLDs hosted outside their country
     print("\nccTLD infrastructure location analysis:")
-    cctld_profiles = [p for p in profiles if p.tld_type == "cctld" and p.delegated and p.unique_asns]
+    cctld_profiles = [
+        p for p in profiles if p.tld_type == "cctld" and p.delegated and p.unique_asns
+    ]
 
     cctld_outside = []
     for profile in cctld_profiles:
         tld_country = profile.tld.upper()
-        asn_countries = {info.country for info in profile.asn_details.values() if info.country}
+        asn_countries = {
+            info.country for info in profile.asn_details.values() if info.country
+        }
         if asn_countries and tld_country not in asn_countries:
             cctld_outside.append((profile, asn_countries))
 
@@ -243,7 +257,7 @@ def analyze_diversity_metrics(profiles: list[TLDASNProfile]) -> None:
     max_asns = max(asn_counts)
     min_asns = min(asn_counts)
 
-    print(f"\nASN diversity per TLD:")
+    print("\nASN diversity per TLD:")
     print(f"  Average unique ASNs per TLD: {avg_asns:.2f}")
     print(f"  Minimum: {min_asns}")
     print(f"  Maximum: {max_asns}")
@@ -256,11 +270,15 @@ def analyze_diversity_metrics(profiles: list[TLDASNProfile]) -> None:
         print(f"    {count} ASN(s): {asn_distribution[count]:4d} TLDs {bar}")
 
     # Most diverse TLDs
-    most_diverse = sorted(delegated_with_asn, key=lambda p: len(p.unique_asns), reverse=True)
+    most_diverse = sorted(
+        delegated_with_asn, key=lambda p: len(p.unique_asns), reverse=True
+    )
     print("\nMost diverse TLDs (most unique ASNs):")
     for profile in most_diverse[:10]:
         countries = {info.country for info in profile.asn_details.values()}
-        print(f"  .{profile.tld}: {len(profile.unique_asns)} ASNs across {len(countries)} countries")
+        print(
+            f"  .{profile.tld}: {len(profile.unique_asns)} ASNs across {len(countries)} countries"
+        )
 
     # Compare gTLD vs ccTLD diversity
     gtld_profiles = [p for p in delegated_with_asn if p.tld_type == "gtld"]
@@ -268,11 +286,15 @@ def analyze_diversity_metrics(profiles: list[TLDASNProfile]) -> None:
 
     if gtld_profiles and cctld_profiles:
         gtld_avg = sum(len(p.unique_asns) for p in gtld_profiles) / len(gtld_profiles)
-        cctld_avg = sum(len(p.unique_asns) for p in cctld_profiles) / len(cctld_profiles)
+        cctld_avg = sum(len(p.unique_asns) for p in cctld_profiles) / len(
+            cctld_profiles
+        )
 
-        print(f"\ngTLD vs ccTLD ASN diversity:")
+        print("\ngTLD vs ccTLD ASN diversity:")
         print(f"  gTLDs ({len(gtld_profiles)} total): {gtld_avg:.2f} avg ASNs per TLD")
-        print(f"  ccTLDs ({len(cctld_profiles)} total): {cctld_avg:.2f} avg ASNs per TLD")
+        print(
+            f"  ccTLDs ({len(cctld_profiles)} total): {cctld_avg:.2f} avg ASNs per TLD"
+        )
 
 
 def analyze_ipv4_vs_ipv6(profiles: list[TLDASNProfile]) -> None:
@@ -339,8 +361,12 @@ def analyze_as_org_alias_coverage(profiles: list[TLDASNProfile]) -> None:
         else:
             uncovered_orgs[as_org] = count
 
-    coverage_pct = 100 * covered_occurrences / total_occurrences if total_occurrences > 0 else 0
-    unique_coverage_pct = 100 * covered_unique / unique_as_orgs if unique_as_orgs > 0 else 0
+    coverage_pct = (
+        100 * covered_occurrences / total_occurrences if total_occurrences > 0 else 0
+    )
+    unique_coverage_pct = (
+        100 * covered_unique / unique_as_orgs if unique_as_orgs > 0 else 0
+    )
 
     print(f"\nAS Org Aliases loaded: {len(aliases)}")
     print(f"\nTotal AS org occurrences in data: {total_occurrences}")
@@ -381,7 +407,7 @@ def main() -> None:
     print(f"Loading TLD data from {tlds_path}...")
     tlds_data = load_tlds_json(tlds_path)
 
-    print(f"Extracting ASN profiles...")
+    print("Extracting ASN profiles...")
     profiles = extract_asn_profiles(tlds_data)
 
     # Summary

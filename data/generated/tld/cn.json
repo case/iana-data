@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-16T03:38:30Z",
+  "publication": "2026-05-18T14:25:58Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -48,7 +48,7 @@
         "ipv6": [
           {
             "ip": "2001:dc7:1::1",
-            "asn": 24151,
+            "asn": 24409,
             "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
             "as_country": "CN"
           }
@@ -59,7 +59,7 @@
         "ipv4": [
           {
             "ip": "203.119.27.1",
-            "asn": 24409,
+            "asn": 24406,
             "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
             "as_country": "CN"
           }
@@ -97,7 +97,7 @@
         "ipv4": [
           {
             "ip": "203.119.29.1",
-            "asn": 24409,
+            "asn": 24151,
             "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
             "as_country": "CN"
           }
@@ -105,7 +105,7 @@
         "ipv6": [
           {
             "ip": "2001:dc7:3::1",
-            "asn": 24151,
+            "asn": 24406,
             "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
             "as_country": "CN"
           }
@@ -131,6 +131,8 @@
       "2025-07-17"
     ],
     "annotations": {
+      "tld_manager_alias": "CNNIC",
+      "tech_alias": "CNNIC",
       "country_name_iso": "China",
       "as_org_aliases": [
         "CNNIC"

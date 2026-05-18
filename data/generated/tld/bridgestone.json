@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-16T03:38:30Z",
+  "publication": "2026-05-18T14:25:58Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -40,7 +40,7 @@
         "ipv4": [
           {
             "ip": "37.209.194.4",
-            "asn": 397213,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -94,6 +94,7 @@
       "2023-06-22"
     ],
     "annotations": {
+      "tech_alias": "GMO Registry",
       "rdap_source": "IANA",
       "registry_agreement_types": [
         "base",

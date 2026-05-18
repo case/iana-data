@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-16T03:38:30Z",
+  "publication": "2026-05-18T14:25:58Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -162,8 +162,8 @@
         "ipv6": [
           {
             "ip": "2001:16a0:1:3002::2",
-            "asn": 39386,
-            "as_org": "STC-IGW-AS",
+            "asn": 25019,
+            "as_org": "SAUDINETSTC-AS",
             "as_country": "SA"
           }
         ]
@@ -181,8 +181,8 @@
         "ipv6": [
           {
             "ip": "2001:16a0:2:3002::2",
-            "asn": 39386,
-            "as_org": "STC-IGW-AS",
+            "asn": 25019,
+            "as_org": "SAUDINETSTC-AS",
             "as_country": "SA"
           }
         ]

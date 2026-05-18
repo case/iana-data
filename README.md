@@ -183,6 +183,9 @@ Here is its schema:
         // TLD Manager alias (manually curated)
         "tld_manager_alias": "string",     // Canonical parent company name, from data/manual/tld-manager-aliases.json (e.g. "Identity Digital", "Google")
 
+        // Tech operator alias (manually curated)
+        "tech_alias": "string",            // Canonical tech operator name, from data/manual/tech-aliases.json (e.g. "Identity Digital", "Google Registry"). Canonical names are kept in sync with tld_manager_alias so the two annotations can be safely joined.
+
         // RDAP metadata
         "rdap_source": "string",           // Source of RDAP server: "IANA" (canonical) or "supplemental" (from data/manual/supplemental-cctld-rdap.json)
 
@@ -264,6 +267,8 @@ Dependencies:
 
 ### Later
 
+- [ ] Add provenance (`source` URLs) for the remaining `null`-source alias entries in `data/manual/tld-manager-aliases.json` and `data/manual/tech-aliases.json` — currently only the non-obvious lineage merges cite a source
+- [ ] Continue canonicalising the long tail of `tld_manager` and `orgs.tech` operator names (mostly ccTLD/NIC operators and dotBrand corporates) — `scripts/analyze_operators.py` ranks the unaliased candidates. The two alias files should evolve together so canonical names stay aligned (enforced by `tests/integration/test_alias_consistency.py`)
 - [ ] Annotation - IDN meanings & language, maybe could derive from the individual TLD web pages?
 - [ ] Annotation - `open` or `closed` TLDs (needs discovery; may be addressed by the `brand` registry type annotation?)
 - [ ] Script to create a Sqlite db from the data - maybe purely from client side? E.g. JS could generate it "on the fly"?

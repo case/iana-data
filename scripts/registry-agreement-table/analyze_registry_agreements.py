@@ -55,13 +55,13 @@ def main() -> int:
         for row in reader:
             rows.append(row)
 
-    print(f"ICANN Registry Agreement Table Analysis")
-    print(f"=" * 50)
+    print("ICANN Registry Agreement Table Analysis")
+    print("=" * 50)
     print(f"\nTotal TLDs: {len(rows)}")
 
     # Status breakdown
     status_counts = Counter(row["Agreement Status"] for row in rows)
-    print(f"\n--- Agreement Status ---")
+    print("\n--- Agreement Status ---")
     for status, count in status_counts.most_common():
         pct = count / len(rows) * 100
         print(f"  {status:15s}: {count:4d} ({pct:5.1f}%)")
@@ -72,21 +72,27 @@ def main() -> int:
         for t in parse_agreement_types(row["Agreement Type"]):
             type_counts[t] += 1
 
-    print(f"\n--- Agreement Types ---")
+    print("\n--- Agreement Types ---")
     for agreement_type, count in type_counts.most_common():
         pct = count / len(rows) * 100
         print(f"  {agreement_type:35s}: {count:4d} ({pct:5.1f}%)")
 
     # Brand vs Non-Brand
     brand_count = sum(1 for row in rows if "Brand (Spec 13)" in row["Agreement Type"])
-    community_count = sum(1 for row in rows if "Community (Spec 12)" in row["Agreement Type"])
-    print(f"\n--- Special Categories ---")
-    print(f"  Brand TLDs (Spec 13):     {brand_count:4d} ({brand_count/len(rows)*100:5.1f}%)")
-    print(f"  Community TLDs (Spec 12): {community_count:4d} ({community_count/len(rows)*100:5.1f}%)")
+    community_count = sum(
+        1 for row in rows if "Community (Spec 12)" in row["Agreement Type"]
+    )
+    print("\n--- Special Categories ---")
+    print(
+        f"  Brand TLDs (Spec 13):     {brand_count:4d} ({brand_count / len(rows) * 100:5.1f}%)"
+    )
+    print(
+        f"  Community TLDs (Spec 12): {community_count:4d} ({community_count / len(rows) * 100:5.1f}%)"
+    )
 
     # Top operators
     operator_counts = Counter(row["Operator"] for row in rows if row["Operator"])
-    print(f"\n--- Top 15 Operators by TLD Count ---")
+    print("\n--- Top 15 Operators by TLD Count ---")
     for operator, count in operator_counts.most_common(15):
         # Truncate long names
         display_name = operator[:45] + "..." if len(operator) > 45 else operator
@@ -110,13 +116,13 @@ def main() -> int:
     if valid_dates:
         earliest = min(valid_dates)
         latest = max(valid_dates)
-        print(f"\n--- Agreement Date Range ---")
+        print("\n--- Agreement Date Range ---")
         print(f"  Earliest: {earliest.strftime('%d %b %Y')}")
         print(f"  Latest:   {latest.strftime('%d %b %Y')}")
 
         # Agreements by year
         year_counts = Counter(d.year for d in valid_dates)
-        print(f"\n--- Agreements by Year ---")
+        print("\n--- Agreements by Year ---")
         for year in sorted(year_counts.keys()):
             count = year_counts[year]
             bar = "█" * (count // 20)
@@ -124,10 +130,12 @@ def main() -> int:
 
     # Active TLDs only stats
     active_rows = [row for row in rows if row["Agreement Status"] == "active"]
-    print(f"\n--- Active TLDs Summary ---")
+    print("\n--- Active TLDs Summary ---")
     print(f"  Total active: {len(active_rows)}")
 
-    active_operators = Counter(row["Operator"] for row in active_rows if row["Operator"])
+    active_operators = Counter(
+        row["Operator"] for row in active_rows if row["Operator"]
+    )
     print(f"  Unique operators: {len(active_operators)}")
 
     # Show terminated TLDs
@@ -136,7 +144,11 @@ def main() -> int:
         print(f"\n--- Sample Terminated TLDs ({len(terminated_rows)} total) ---")
         for row in terminated_rows[:10]:
             tld = row["Top Level Domain"]
-            operator = row["Operator"][:30] + "..." if len(row["Operator"]) > 30 else row["Operator"]
+            operator = (
+                row["Operator"][:30] + "..."
+                if len(row["Operator"]) > 30
+                else row["Operator"]
+            )
             print(f"  .{tld:15s} ({operator})")
         if len(terminated_rows) > 10:
             print(f"  ... and {len(terminated_rows) - 10} more")

@@ -1,0 +1,38 @@
+{
+  "techAliases": {
+    "Identity Digital": [
+      {
+        "name": "Identity Digital Limited",
+        "source": null
+      },
+      {
+        "name": "Identity Digital Inc.",
+        "source": null
+      },
+      {
+        "name": "Afilias",
+        "source": "https://en.wikipedia.org/wiki/Identity_Digital"
+      }
+    ],
+    "Google": [
+      {
+        "name": "Google Inc.",
+        "source": null
+      },
+      {
+        "name": "Google Inc",
+        "source": null
+      }
+    ],
+    "NIXI": [
+      {
+        "name": "National Internet Exchange of India",
+        "source": null
+      },
+      {
+        "name": "National Internet eXchange of India",
+        "source": null
+      }
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-16T03:38:30Z",
+  "publication": "2026-05-18T14:25:58Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -90,8 +90,8 @@
         "ipv4": [
           {
             "ip": "204.59.1.222",
-            "asn": 16509,
-            "as_org": "AMAZON-02",
+            "asn": 51964,
+            "as_org": "ORANGE-BUSINESS-SERVICES-IPSN-ASN",
             "as_country": "US"
           }
         ],
@@ -123,10 +123,7 @@
       "2026-05-14"
     ],
     "annotations": {
-      "country_name_iso": "Cuba",
-      "as_org_aliases": [
-        "Amazon"
-      ]
+      "country_name_iso": "Cuba"
     }
   }
 }

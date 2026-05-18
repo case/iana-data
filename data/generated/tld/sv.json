@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-16T03:38:30Z",
+  "publication": "2026-05-18T14:25:58Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -59,9 +59,9 @@
         "ipv4": [
           {
             "ip": "168.243.17.2",
-            "asn": 271966,
-            "as_org": "Red Avanzada de Investigacion, Ciencia y Educacion Salvadorena",
-            "as_country": "SV"
+            "asn": 0,
+            "as_org": "Not routed",
+            "as_country": "None"
           }
         ],
         "ipv6": []

@@ -27,6 +27,7 @@ from ..parse.registry_agreement_csv import (
 )
 from ..parse.root_db_html import derive_type_from_iana_tag, parse_root_db_html
 from ..parse.supplemental_cctld_rdap import parse_supplemental_cctld_rdap
+from ..parse.tech_aliases import parse_tech_aliases
 from ..parse.tld_html import parse_tld_page
 from ..parse.tld_manager_aliases import parse_tld_manager_aliases
 from ..utilities.content_changed import write_json_if_changed
@@ -78,6 +79,7 @@ def build_tlds_json(output_paths: OutputPaths | None = None) -> dict:
     supplemental_rdap = parse_supplemental_cctld_rdap()
     registry_agreements = parse_registry_agreement_csv()
     tld_manager_aliases = parse_tld_manager_aliases()
+    tech_aliases = parse_tech_aliases()
     as_org_aliases = parse_as_org_aliases()
 
     # Load IDN script mappings
@@ -146,6 +148,7 @@ def build_tlds_json(output_paths: OutputPaths | None = None) -> dict:
             idn_script_mapping,
             registry_agreements,
             tld_manager_aliases,
+            tech_aliases,
             as_org_aliases,
             asn_lookup,
         )
@@ -323,6 +326,7 @@ def _build_tld_entry(
     idn_script_mapping: dict[str, str],
     registry_agreements: dict[str, RegistryAgreement],
     tld_manager_aliases: dict[str, str],
+    tech_aliases: dict[str, str],
     as_org_aliases: dict[str, str],
     asn_lookup: ASNLookup | None,
 ) -> dict:
@@ -337,6 +341,7 @@ def _build_tld_entry(
         idn_script_mapping: Map of IDN TLD to script name
         registry_agreements: Map of TLD to ICANN registry agreement data
         tld_manager_aliases: Map of TLD manager name to canonical alias
+        tech_aliases: Map of orgs.tech name to canonical alias
         as_org_aliases: Map of AS org name to canonical alias
         asn_lookup: Optional ASNLookup for IP-to-ASN resolution
 
@@ -387,11 +392,15 @@ def _build_tld_entry(
         if tld_manager in tld_manager_aliases:
             tld_manager_alias = tld_manager_aliases[tld_manager]
 
+    tech_alias = None
     if "orgs" in page_data:
         if "admin" in page_data["orgs"]:
             orgs["admin"] = page_data["orgs"]["admin"]
         if "tech" in page_data["orgs"]:
-            orgs["tech"] = page_data["orgs"]["tech"]
+            tech = page_data["orgs"]["tech"]
+            orgs["tech"] = tech
+            if tech in tech_aliases:
+                tech_alias = tech_aliases[tech]
 
     if orgs:
         entry["orgs"] = orgs
@@ -443,6 +452,9 @@ def _build_tld_entry(
 
     if tld_manager_alias:
         annotations["tld_manager_alias"] = tld_manager_alias
+
+    if tech_alias:
+        annotations["tech_alias"] = tech_alias
 
     if rdap_source:
         annotations["rdap_source"] = rdap_source

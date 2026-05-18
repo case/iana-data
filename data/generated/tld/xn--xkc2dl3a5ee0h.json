@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-18T14:25:58Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -104,6 +104,7 @@
     ],
     "annotations": {
       "tld_manager_alias": "NIXI",
+      "tech_alias": "NIXI",
       "country_name_iso": "India",
       "as_org_aliases": [
         "Packet Clearing House",

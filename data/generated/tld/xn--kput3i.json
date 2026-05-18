@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-16T03:38:30Z",
+  "publication": "2026-05-18T14:25:58Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -23,8 +23,8 @@
         "ipv4": [
           {
             "ip": "103.61.60.1",
-            "asn": 139137,
-            "as_org": "CAICTNET Chinese Academy of Telecommunication Research",
+            "asn": 138457,
+            "as_org": "CAICT-AS-AP China Academy of Information and Communications Technology",
             "as_country": "CN"
           }
         ],
