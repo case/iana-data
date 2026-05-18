@@ -175,12 +175,8 @@ def main() -> None:
 
     # Count nameservers and IPs
     total_nameservers = sum(len(a.nameservers) for a in analyses)
-    total_ipv4 = sum(
-        len(ns.ipv4_addresses) for a in analyses for ns in a.nameservers
-    )
-    total_ipv6 = sum(
-        len(ns.ipv6_addresses) for a in analyses for ns in a.nameservers
-    )
+    total_ipv4 = sum(len(ns.ipv4_addresses) for a in analyses for ns in a.nameservers)
+    total_ipv6 = sum(len(ns.ipv6_addresses) for a in analyses for ns in a.nameservers)
 
     print()
     print(f"Total nameserver entries: {total_nameservers}")

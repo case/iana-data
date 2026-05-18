@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-18T14:25:58Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -127,6 +127,7 @@
       "2023-03-07"
     ],
     "annotations": {
+      "tech_alias": "KISA",
       "country_name_iso": "Korea, Republic of"
     }
   }

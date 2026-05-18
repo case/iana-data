@@ -1,0 +1,156 @@
+{
+  "techAliases": {
+    "AFNIC": [
+      {
+        "name": "Association Française pour le Nommage Internet en Coopération (A.F.N.I.C.)",
+        "source": null
+      }
+    ],
+    "CentralNic": [
+      {
+        "name": "CentralNIC",
+        "source": null
+      },
+      {
+        "name": "CentralNic Registry",
+        "source": null
+      }
+    ],
+    "CIRA": [
+      {
+        "name": "Canadian Internet Registration Authority (CIRA)",
+        "source": null
+      }
+    ],
+    "CNNIC": [
+      {
+        "name": "China Internet Network Information Center (CNNIC)",
+        "source": null
+      }
+    ],
+    "DNS Belgium": [
+      {
+        "name": "DNS Belgium vzw",
+        "source": null
+      },
+      {
+        "name": "DNS Belgium vzw/asbl",
+        "source": null
+      }
+    ],
+    "GMO Registry": [
+      {
+        "name": "GMO Registry, Inc.",
+        "source": null
+      }
+    ],
+    "Google Registry": [
+      {
+        "name": "Google Inc.",
+        "source": null
+      },
+      {
+        "name": "Google Inc",
+        "source": null
+      }
+    ],
+    "Identity Digital": [
+      {
+        "name": "Identity Digital Limited",
+        "source": null
+      },
+      {
+        "name": "Identity Digital Inc.",
+        "source": null
+      },
+      {
+        "name": "Identity Digital Limited c/o Identity Digital Inc.",
+        "source": null
+      },
+      {
+        "name": "Afilias",
+        "source": "https://en.wikipedia.org/wiki/Identity_Digital"
+      },
+      {
+        "name": "Afilias Limited",
+        "source": "https://en.wikipedia.org/wiki/Identity_Digital"
+      },
+      {
+        "name": "Donuts Inc",
+        "source": "https://en.wikipedia.org/wiki/Identity_Digital"
+      },
+      {
+        "name": "Internet Computer Bureau Ltd",
+        "source": "https://en.wikipedia.org/wiki/Internet_Computer_Bureau"
+      },
+      {
+        "name": "Internet Computer Bureau Limited",
+        "source": "https://en.wikipedia.org/wiki/Internet_Computer_Bureau"
+      }
+    ],
+    "KISA": [
+      {
+        "name": "Korea Internet &amp; Security Agency (KISA)",
+        "source": null
+      },
+      {
+        "name": "KISA (Korea Internet &amp; Security Agency)",
+        "source": null
+      }
+    ],
+    "NIXI": [
+      {
+        "name": "National Internet Exchange of India",
+        "source": null
+      },
+      {
+        "name": "National Internet eXchange of India",
+        "source": null
+      }
+    ],
+    "Nominet": [
+      {
+        "name": "Nominet UK",
+        "source": null
+      }
+    ],
+    "Tucows Registry": [
+      {
+        "name": "Tucows.com, Co.",
+        "source": null
+      },
+      {
+        "name": "Tucows.com, Co",
+        "source": null
+      },
+      {
+        "name": "Tucows.com",
+        "source": null
+      }
+    ],
+    "VeriSign": [
+      {
+        "name": "Verisign, Inc.",
+        "source": null
+      },
+      {
+        "name": "VeriSign Global Registry Services",
+        "source": null
+      },
+      {
+        "name": "VeriSign Global Registry",
+        "source": null
+      },
+      {
+        "name": "VeriSign Information Services, Inc.",
+        "source": null
+      }
+    ],
+    "ZDNS": [
+      {
+        "name": "ZDNS, Ltd.",
+        "source": null
+      }
+    ]
+  }
+}

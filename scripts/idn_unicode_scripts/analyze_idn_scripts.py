@@ -11,6 +11,7 @@ from pathlib import Path
 
 try:
     import pycountry
+
     HAS_PYCOUNTRY = True
 except ImportError:
     HAS_PYCOUNTRY = False
@@ -126,20 +127,24 @@ def analyze_tld(tld: str) -> dict:
         try:
             char_name = unicodedata.name(char)
             iso_code, script_name = extract_script_from_char_name(char_name)
-            char_scripts.append({
-                "char": char,
-                "name": char_name,
-                "iso_code": iso_code,
-                "script": script_name,
-            })
+            char_scripts.append(
+                {
+                    "char": char,
+                    "name": char_name,
+                    "iso_code": iso_code,
+                    "script": script_name,
+                }
+            )
         except ValueError:
             # Character has no name
-            char_scripts.append({
-                "char": char,
-                "name": None,
-                "iso_code": "Zzzz",
-                "script": "Unknown",
-            })
+            char_scripts.append(
+                {
+                    "char": char,
+                    "name": None,
+                    "iso_code": "Zzzz",
+                    "script": "Unknown",
+                }
+            )
 
     # Determine primary script (most common)
     script_counts = Counter(c["script"] for c in char_scripts)
@@ -147,8 +152,7 @@ def analyze_tld(tld: str) -> dict:
 
     # Get ISO code for primary script
     primary_iso = next(
-        (c["iso_code"] for c in char_scripts if c["script"] == primary_script),
-        "Zzzz"
+        (c["iso_code"] for c in char_scripts if c["script"] == primary_script), "Zzzz"
     )
 
     return {

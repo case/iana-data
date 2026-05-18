@@ -46,6 +46,26 @@
         "source": null
       }
     ],
+    "CNNIC": [
+      {
+        "name": "China Internet Network Information Center (CNNIC)",
+        "source": null
+      }
+    ],
+    "Datacom": [
+      {
+        "name": "Datacom Co., Ltd.",
+        "source": null
+      },
+      {
+        "name": "Datacom Co.,Ltd",
+        "source": null
+      },
+      {
+        "name": "Datacom Co. Ltd.",
+        "source": null
+      }
+    ],
     "Dish Network": [
       {
         "name": "Dish DBS Corporation",
@@ -194,6 +214,12 @@
         "source": null
       }
     ],
+    "ICANN EBERO": [
+      {
+        "name": "Emergency Back-End Registry Operator Program - ICANN",
+        "source": "https://www.icann.org/resources/pages/ebero-2013-04-02-en"
+      }
+    ],
     "ICM Registry": [
       {
         "name": "ICM Registry AD LLC",
@@ -234,6 +260,12 @@
         "source": "https://en.wikipedia.org/wiki/Internet_Computer_Bureau"
       }
     ],
+    "Kerry Trading": [
+      {
+        "name": "Kerry Trading Co. Limited",
+        "source": null
+      }
+    ],
     "LDS": [
       {
         "name": "IRI Domain Management, LLC",
@@ -270,6 +302,16 @@
         "source": null
       }
     ],
+    "Radix": [
+      {
+        "name": "Radix Technologies Inc.",
+        "source": null
+      },
+      {
+        "name": "Radix Technologies Inc. SEZC",
+        "source": null
+      }
+    ],
     "Second Genistry": [
       {
         "name": "Employ Media LLC",
@@ -292,6 +334,12 @@
         "source": "https://www.secondgen.com/portfolio"
       }
     ],
+    "Shortdot": [
+      {
+        "name": "Shortdot SA",
+        "source": null
+      }
+    ],
     "Sony": [
       {
         "name": "Sony Computer Entertainment Inc.",
@@ -299,6 +347,18 @@
       },
       {
         "name": "Sony Corporation",
+        "source": null
+      }
+    ],
+    "TJX": [
+      {
+        "name": "The TJX Companies, Inc.",
+        "source": null
+      }
+    ],
+    "Travelers Insurance": [
+      {
+        "name": "Travelers TLD, LLC",
         "source": null
       }
     ],
@@ -323,6 +383,18 @@
       },
       {
         "name": "VeriSign Sarl",
+        "source": null
+      }
+    ],
+    "Walmart": [
+      {
+        "name": "Wal-Mart Stores, Inc.",
+        "source": null
+      }
+    ],
+    "xyz.com": [
+      {
+        "name": "XYZ.COM LLC",
         "source": null
       }
     ],

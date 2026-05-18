@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-18T14:25:58Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -101,6 +101,8 @@
       "2026-04-27"
     ],
     "annotations": {
+      "tld_manager_alias": "Radix",
+      "tech_alias": "Tucows Registry",
       "rdap_source": "IANA",
       "registry_agreement_types": [
         "base",

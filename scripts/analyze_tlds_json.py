@@ -17,14 +17,14 @@ def analyze_tlds_json() -> None:
     total_size = len(tlds_path.read_bytes())
 
     print(f"File: {tlds_path}")
-    print(f"Total size: {total_size:,} bytes ({total_size/1024/1024:.2f} MB)")
+    print(f"Total size: {total_size:,} bytes ({total_size / 1024 / 1024:.2f} MB)")
     print()
 
     # Analyze top-level fields
     print("=== Top-level fields ===")
     for key, value in data.items():
         size = len(json.dumps(value, ensure_ascii=False))
-        print(f"  {key}: {size:,} bytes ({size/1024:.1f} KB)")
+        print(f"  {key}: {size:,} bytes ({size / 1024:.1f} KB)")
 
     # Analyze per-TLD fields
     print()
@@ -40,10 +40,12 @@ def analyze_tlds_json() -> None:
     total_tld_data = sum(field_sizes.values())
     for key, size in sorted_fields:
         pct = size / total_tld_data * 100
-        print(f"  {key}: {size:,} bytes ({size/1024:.1f} KB) - {pct:.1f}%")
+        print(f"  {key}: {size:,} bytes ({size / 1024:.1f} KB) - {pct:.1f}%")
 
     print()
-    print(f"  Total TLD data: {total_tld_data:,} bytes ({total_tld_data/1024/1024:.2f} MB)")
+    print(
+        f"  Total TLD data: {total_tld_data:,} bytes ({total_tld_data / 1024 / 1024:.2f} MB)"
+    )
 
     # Analyze annotations sub-fields
     print()
@@ -56,7 +58,7 @@ def analyze_tlds_json() -> None:
                 ann_fields[key] = ann_fields.get(key, 0) + size
 
     for key, size in sorted(ann_fields.items(), key=lambda x: -x[1]):
-        print(f"  {key}: {size:,} bytes ({size/1024:.1f} KB)")
+        print(f"  {key}: {size:,} bytes ({size / 1024:.1f} KB)")
 
     # Analyze orgs sub-fields
     print()
@@ -69,14 +71,16 @@ def analyze_tlds_json() -> None:
                 orgs_fields[key] = orgs_fields.get(key, 0) + size
 
     for key, size in sorted(orgs_fields.items(), key=lambda x: -x[1]):
-        print(f"  {key}: {size:,} bytes ({size/1024:.1f} KB)")
+        print(f"  {key}: {size:,} bytes ({size / 1024:.1f} KB)")
 
     # Stats
     print()
     print("=== Stats ===")
     total_tlds = len(data["tlds"])
     with_rdap = sum(1 for t in data["tlds"] if "rdap_server" in t)
-    with_alias = sum(1 for t in data["tlds"] if t.get("orgs", {}).get("tld_manager_alias"))
+    with_alias = sum(
+        1 for t in data["tlds"] if t.get("orgs", {}).get("tld_manager_alias")
+    )
 
     print(f"  Total TLDs: {total_tlds}")
     print(f"  With rdap_server: {with_rdap}")

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-16T03:38:30Z",
+  "publication": "2026-05-18T14:25:58Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -39,9 +39,9 @@
         "ipv4": [
           {
             "ip": "196.13.202.53",
-            "asn": 0,
-            "as_org": "Not routed",
-            "as_country": "None"
+            "asn": 36948,
+            "as_org": "KENIC",
+            "as_country": "KE"
           },
           {
             "ip": "196.1.4.130",

@@ -85,7 +85,9 @@ def extract_rdap_base_url(rdap_url: str) -> str:
     return rdap_url
 
 
-def get_as_org_aliases_for_tld(tld_entry: dict, as_org_aliases: dict[str, str]) -> set[str]:
+def get_as_org_aliases_for_tld(
+    tld_entry: dict, as_org_aliases: dict[str, str]
+) -> set[str]:
     """Get all AS org aliases associated with a TLD's nameservers."""
     aliases = set()
     for ns in tld_entry.get("nameservers", []):
@@ -122,11 +124,15 @@ def print_section(title: str) -> None:
     print("=" * 80)
 
 
-def analyze_by_tld_manager(tlds_data: dict, tld_manager_aliases: dict[str, str]) -> dict[str, OperatorRDAPInfo]:
+def analyze_by_tld_manager(
+    tlds_data: dict, tld_manager_aliases: dict[str, str]
+) -> dict[str, OperatorRDAPInfo]:
     """Analyze TLDs by their TLD manager aliases."""
     print_section("ANALYSIS BY TLD MANAGER")
 
-    operators: dict[str, OperatorRDAPInfo] = defaultdict(lambda: OperatorRDAPInfo(name=""))
+    operators: dict[str, OperatorRDAPInfo] = defaultdict(
+        lambda: OperatorRDAPInfo(name="")
+    )
 
     for tld_entry in tlds_data.get("tlds", []):
         tld = tld_entry.get("tld", "")
@@ -181,19 +187,27 @@ def analyze_by_tld_manager(tlds_data: dict, tld_manager_aliases: dict[str, str])
         for alias, info in candidates:
             print(f"\n  {alias}:")
             print(f"    RDAP URLs: {', '.join(sorted(info.rdap_urls))}")
-            print(f"    gTLDs ({len(info.gtlds)}): {', '.join(sorted(info.gtlds)[:10])}")
+            print(
+                f"    gTLDs ({len(info.gtlds)}): {', '.join(sorted(info.gtlds)[:10])}"
+            )
             if len(info.gtlds) > 10:
                 print(f"      ... and {len(info.gtlds) - 10} more")
-            print(f"    ccTLDs without RDAP ({len(info.cctlds_without_rdap)}): {', '.join(sorted(info.cctlds_without_rdap))}")
+            print(
+                f"    ccTLDs without RDAP ({len(info.cctlds_without_rdap)}): {', '.join(sorted(info.cctlds_without_rdap))}"
+            )
 
     return dict(operators)
 
 
-def analyze_by_tech_contact(tlds_data: dict, tld_manager_aliases: dict[str, str]) -> dict[str, OperatorRDAPInfo]:
+def analyze_by_tech_contact(
+    tlds_data: dict, tld_manager_aliases: dict[str, str]
+) -> dict[str, OperatorRDAPInfo]:
     """Analyze TLDs by their tech contact."""
     print_section("ANALYSIS BY TECH CONTACT")
 
-    operators: dict[str, OperatorRDAPInfo] = defaultdict(lambda: OperatorRDAPInfo(name=""))
+    operators: dict[str, OperatorRDAPInfo] = defaultdict(
+        lambda: OperatorRDAPInfo(name="")
+    )
 
     for tld_entry in tlds_data.get("tlds", []):
         tld = tld_entry.get("tld", "")
@@ -257,17 +271,25 @@ def analyze_by_tech_contact(tlds_data: dict, tld_manager_aliases: dict[str, str]
             print(f"\n  {alias}:")
             print(f"    RDAP URLs: {', '.join(sorted(info.rdap_urls))}")
             if info.cctlds_with_rdap:
-                print(f"    ccTLDs with RDAP: {', '.join(sorted(info.cctlds_with_rdap))}")
-            print(f"    ccTLDs without RDAP: {', '.join(sorted(info.cctlds_without_rdap))}")
+                print(
+                    f"    ccTLDs with RDAP: {', '.join(sorted(info.cctlds_with_rdap))}"
+                )
+            print(
+                f"    ccTLDs without RDAP: {', '.join(sorted(info.cctlds_without_rdap))}"
+            )
 
     return dict(operators)
 
 
-def analyze_by_as_org(tlds_data: dict, as_org_aliases: dict[str, str]) -> dict[str, OperatorRDAPInfo]:
+def analyze_by_as_org(
+    tlds_data: dict, as_org_aliases: dict[str, str]
+) -> dict[str, OperatorRDAPInfo]:
     """Analyze TLDs by their nameserver AS organizations."""
     print_section("ANALYSIS BY NAMESERVER AS ORG")
 
-    operators: dict[str, OperatorRDAPInfo] = defaultdict(lambda: OperatorRDAPInfo(name=""))
+    operators: dict[str, OperatorRDAPInfo] = defaultdict(
+        lambda: OperatorRDAPInfo(name="")
+    )
 
     for tld_entry in tlds_data.get("tlds", []):
         tld = tld_entry.get("tld", "")
@@ -300,7 +322,9 @@ def analyze_by_as_org(tlds_data: dict, as_org_aliases: dict[str, str]) -> dict[s
                         operators[alias].cctlds_without_rdap.append(tld)
 
     # Print results - focus on operators with RDAP patterns
-    print("\nDNS operators with ccTLDs without RDAP (and known RDAP URLs from other TLDs):")
+    print(
+        "\nDNS operators with ccTLDs without RDAP (and known RDAP URLs from other TLDs):"
+    )
     print("-" * 80)
 
     # Filter to operators that provide DNS for gTLDs with RDAP
@@ -317,10 +341,14 @@ def analyze_by_as_org(tlds_data: dict, as_org_aliases: dict[str, str]) -> dict[s
             print(f"    RDAP URLs observed: {', '.join(sorted(info.rdap_urls)[:5])}")
             if len(info.rdap_urls) > 5:
                 print(f"      ... and {len(info.rdap_urls) - 5} more")
-            print(f"    gTLDs using this DNS ({len(info.gtlds)}): {', '.join(sorted(info.gtlds)[:8])}")
+            print(
+                f"    gTLDs using this DNS ({len(info.gtlds)}): {', '.join(sorted(info.gtlds)[:8])}"
+            )
             if len(info.gtlds) > 8:
                 print(f"      ... and {len(info.gtlds) - 8} more")
-            print(f"    ccTLDs without RDAP ({len(info.cctlds_without_rdap)}): {', '.join(sorted(info.cctlds_without_rdap))}")
+            print(
+                f"    ccTLDs without RDAP ({len(info.cctlds_without_rdap)}): {', '.join(sorted(info.cctlds_without_rdap))}"
+            )
 
     return dict(operators)
 
@@ -330,7 +358,14 @@ def analyze_by_nameserver_pattern(tlds_data: dict) -> None:
     print_section("ANALYSIS BY NAMESERVER HOSTNAME PATTERNS")
 
     # Map base nameserver hostnames to TLDs and their RDAP status
-    ns_to_tlds: dict[str, dict] = defaultdict(lambda: {"gtlds_with_rdap": [], "cctlds_with_rdap": [], "cctlds_without_rdap": [], "rdap_urls": set()})
+    ns_to_tlds: dict[str, dict] = defaultdict(
+        lambda: {
+            "gtlds_with_rdap": [],
+            "cctlds_with_rdap": [],
+            "cctlds_without_rdap": [],
+            "rdap_urls": set(),
+        }
+    )
 
     for tld_entry in tlds_data.get("tlds", []):
         tld = tld_entry.get("tld", "")
@@ -345,7 +380,9 @@ def analyze_by_nameserver_pattern(tlds_data: dict) -> None:
 
         for hostname in base_hostnames:
             if rdap_server:
-                ns_to_tlds[hostname]["rdap_urls"].add(extract_rdap_base_url(rdap_server))
+                ns_to_tlds[hostname]["rdap_urls"].add(
+                    extract_rdap_base_url(rdap_server)
+                )
 
             if tld_type == "gtld":
                 if rdap_server:
@@ -377,18 +414,28 @@ def analyze_by_nameserver_pattern(tlds_data: dict) -> None:
             if info["rdap_urls"]:
                 print(f"    RDAP URLs: {', '.join(sorted(info['rdap_urls'])[:3])}")
             if info["gtlds_with_rdap"]:
-                print(f"    gTLDs with RDAP: {', '.join(sorted(info['gtlds_with_rdap'])[:5])}")
+                print(
+                    f"    gTLDs with RDAP: {', '.join(sorted(info['gtlds_with_rdap'])[:5])}"
+                )
             if info["cctlds_with_rdap"]:
-                print(f"    ccTLDs with RDAP: {', '.join(sorted(info['cctlds_with_rdap']))}")
-            print(f"    ccTLDs without RDAP: {', '.join(sorted(info['cctlds_without_rdap']))}")
+                print(
+                    f"    ccTLDs with RDAP: {', '.join(sorted(info['cctlds_with_rdap']))}"
+                )
+            print(
+                f"    ccTLDs without RDAP: {', '.join(sorted(info['cctlds_without_rdap']))}"
+            )
 
 
-def generate_rdap_probe_candidates(tlds_data: dict, tld_manager_aliases: dict[str, str], as_org_aliases: dict[str, str]) -> None:
+def generate_rdap_probe_candidates(
+    tlds_data: dict, tld_manager_aliases: dict[str, str], as_org_aliases: dict[str, str]
+) -> None:
     """Generate a list of RDAP URLs to probe for ccTLDs."""
     print_section("RDAP PROBE CANDIDATES")
 
     # Collect all evidence for each ccTLD
-    cctld_evidence: dict[str, dict] = defaultdict(lambda: {"rdap_urls": set(), "reasons": []})
+    cctld_evidence: dict[str, dict] = defaultdict(
+        lambda: {"rdap_urls": set(), "reasons": []}
+    )
 
     for tld_entry in tlds_data.get("tlds", []):
         tld = tld_entry.get("tld", "")
@@ -414,7 +461,9 @@ def generate_rdap_probe_candidates(tlds_data: dict, tld_manager_aliases: dict[st
             cctld_evidence[tld]["rdap_urls"].add("https://rdap.centralnic.com/")
             cctld_evidence[tld]["reasons"].append("DNS on CentralNic AS")
         if "Identity Digital" in as_aliases:
-            cctld_evidence[tld]["rdap_urls"].add("https://rdap.identitydigital.services/rdap/")
+            cctld_evidence[tld]["rdap_urls"].add(
+                "https://rdap.identitydigital.services/rdap/"
+            )
             cctld_evidence[tld]["reasons"].append("DNS on Identity Digital AS")
 
     # Print candidates
@@ -447,12 +496,16 @@ def main() -> None:
     tld_manager_aliases = load_tld_manager_aliases()
     as_org_aliases = load_as_org_aliases()
 
-    print(f"  TLD manager aliases: {len(tld_manager_aliases)} names -> canonical aliases")
+    print(
+        f"  TLD manager aliases: {len(tld_manager_aliases)} names -> canonical aliases"
+    )
     print(f"  AS org aliases: {len(as_org_aliases)} names -> canonical aliases")
 
     # Count TLDs
     tlds = tlds_data.get("tlds", [])
-    delegated_cctlds = [t for t in tlds if t.get("delegated") and t.get("type") == "cctld"]
+    delegated_cctlds = [
+        t for t in tlds if t.get("delegated") and t.get("type") == "cctld"
+    ]
     cctlds_with_rdap = [t for t in delegated_cctlds if t.get("rdap_server")]
     cctlds_without_rdap = [t for t in delegated_cctlds if not t.get("rdap_server")]
 

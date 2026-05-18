@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-16T03:38:30Z",
+  "publication": "2026-05-18T14:25:58Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -21,9 +21,9 @@
         "ipv4": [
           {
             "ip": "198.32.126.50",
-            "asn": 62,
-            "as_org": "CONE",
-            "as_country": "US"
+            "asn": 24474,
+            "as_org": "ASNPANYCAST Nepal Internet Exchange NP Anycast",
+            "as_country": "NP"
           }
         ],
         "ipv6": []

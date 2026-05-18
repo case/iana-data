@@ -114,6 +114,7 @@ def main() -> None:
         # Expand IPv6 to full form for prefix extraction
         try:
             import ipaddress
+
             addr = ipaddress.IPv6Address(ip)
             # Get first 48 bits (3 groups of 16 bits)
             exploded = addr.exploded
