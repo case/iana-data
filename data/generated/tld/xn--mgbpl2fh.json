@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-18T14:25:58Z",
+  "publication": "2026-05-19T03:37:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -24,9 +24,9 @@
         "ipv4": [
           {
             "ip": "196.29.166.134",
-            "asn": 0,
-            "as_org": "Not routed",
-            "as_country": "None"
+            "asn": 33788,
+            "as_org": "KANARTEL",
+            "as_country": "SD"
           }
         ],
         "ipv6": []
