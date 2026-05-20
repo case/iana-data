@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-19T03:37:17Z",
+  "publication": "2026-05-20T03:39:49Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -70,8 +70,8 @@
         "ipv6": [
           {
             "ip": "2001:148f:fffd::12",
-            "asn": 200070,
-            "as_org": "CZNIC-AS2",
+            "asn": 25192,
+            "as_org": "CZNIC-AS",
             "as_country": "CZ"
           }
         ]
@@ -81,8 +81,8 @@
         "ipv4": [
           {
             "ip": "194.149.137.168",
-            "asn": 5379,
-            "as_org": "MK-UKIM-1",
+            "asn": 52188,
+            "as_org": "MK-UKIM-FCSE",
             "as_country": "MK"
           }
         ],

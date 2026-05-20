@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-19T03:37:17Z",
+  "publication": "2026-05-20T03:39:49Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -131,12 +131,12 @@
         ]
       }
     ],
-    "registry_url": "http://www.one.com/",
+    "registry_url": "https://get.one/",
     "whois_server": "whois.nic.one",
     "rdap_server": "https://rdap.nic.one/",
     "tld_created": "2014-12-18",
     "tld_updated": [
-      "2023-12-05"
+      "2026-05-19"
     ],
     "annotations": {
       "rdap_source": "IANA",
