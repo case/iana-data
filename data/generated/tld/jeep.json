@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-18T14:25:58Z",
+  "publication": "2026-05-21T03:40:31Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,28 +13,9 @@
     "orgs": {
       "tld_manager": "FCA US LLC.",
       "admin": "FCA US LLC.",
-      "tech": "Afilias"
+      "tech": "Identity Digital Limited"
     },
     "nameservers": [
-      {
-        "hostname": "a0.nic.jeep",
-        "ipv4": [
-          {
-            "ip": "65.22.76.41",
-            "asn": 12041,
-            "as_org": "AS-AFILIAS1",
-            "as_country": "US"
-          }
-        ],
-        "ipv6": [
-          {
-            "ip": "2a01:8840:4a::41",
-            "asn": 12041,
-            "as_org": "AS-AFILIAS1",
-            "as_country": "US"
-          }
-        ]
-      },
       {
         "hostname": "a2.nic.jeep",
         "ipv4": [
@@ -51,25 +32,6 @@
             "asn": 207266,
             "as_org": "AFILIAS-SECONDARY-DNS",
             "as_country": "IE"
-          }
-        ]
-      },
-      {
-        "hostname": "b0.nic.jeep",
-        "ipv4": [
-          {
-            "ip": "65.22.77.41",
-            "asn": 12041,
-            "as_org": "AS-AFILIAS1",
-            "as_country": "US"
-          }
-        ],
-        "ipv6": [
-          {
-            "ip": "2a01:8840:4b::41",
-            "asn": 12041,
-            "as_org": "AS-AFILIAS1",
-            "as_country": "US"
           }
         ]
       },
@@ -91,6 +53,63 @@
             "as_country": "US"
           }
         ]
+      },
+      {
+        "hostname": "v0n0.nic.jeep",
+        "ipv4": [
+          {
+            "ip": "65.22.104.29",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:66::29",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "v0n1.nic.jeep",
+        "ipv4": [
+          {
+            "ip": "65.22.105.29",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:67::29",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "v0n2.nic.jeep",
+        "ipv4": [
+          {
+            "ip": "65.22.106.29",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a01:8840:68::29",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
       }
     ],
     "registry_url": "http://www.fcausllc.com/",
@@ -98,7 +117,7 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "2016-07-07",
     "tld_updated": [
-      "2023-08-11"
+      "2026-05-20"
     ],
     "annotations": {
       "tld_manager_alias": "Fiat Chrysler",
