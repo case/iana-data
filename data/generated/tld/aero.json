@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-18T14:25:58Z",
+  "publication": "2026-05-22T03:41:00Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -12,8 +12,8 @@
     "type": "gtld",
     "orgs": {
       "tld_manager": "Societe Internationale de Telecommunications Aeronautique (SITA INC USA)",
-      "admin": "SITA SC",
-      "tech": "Afilias"
+      "admin": "Identity Digital Inc.",
+      "tech": "Identity Digital Limited"
     },
     "nameservers": [
       {
@@ -117,7 +117,7 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "2001-12-21",
     "tld_updated": [
-      "2026-03-10"
+      "2026-05-21"
     ],
     "annotations": {
       "tech_alias": "Identity Digital",
