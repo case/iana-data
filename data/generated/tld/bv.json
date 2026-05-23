@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-23T03:36:42Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,25 @@
       "tech": "Norid A/S"
     },
     "nameservers": [
+      {
+        "hostname": "a.nic.bv",
+        "ipv4": [
+          {
+            "ip": "158.38.61.97",
+            "asn": 224,
+            "as_org": "UNINETT UNINETT, The Norwegian University & Research Network",
+            "as_country": "NO"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:700:4603::1",
+            "asn": 224,
+            "as_org": "UNINETT UNINETT, The Norwegian University & Research Network",
+            "as_country": "NO"
+          }
+        ]
+      },
       {
         "hostname": "nac.no",
         "ipv4": [
@@ -134,7 +153,7 @@
     "registry_url": "https://www.norid.no/en/omnorid/toppdomenet-bv/",
     "tld_created": "1997-08-21",
     "tld_updated": [
-      "2022-01-14"
+      "2026-05-22"
     ],
     "annotations": {
       "country_name_iso": "Bouvet Island"

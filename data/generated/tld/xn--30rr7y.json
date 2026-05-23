@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-23T03:36:42Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -116,11 +116,11 @@
       }
     ],
     "registry_url": "http://www.cishan.wang",
-    "whois_server": "whois.zdns.cn",
+    "whois_server": "whois.gtld.zdns.cn",
     "rdap_server": "https://rdap.zdnsgtld.com/xn--30rr7y",
     "tld_created": "2015-03-12",
     "tld_updated": [
-      "2026-04-02"
+      "2026-05-22"
     ],
     "annotations": {
       "rdap_source": "IANA",

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-23T03:36:42Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -28,10 +28,10 @@
         ],
         "ipv6": [
           {
-            "ip": "2400:cb00:2049:1::a29f:1835",
-            "asn": 13335,
-            "as_org": "CLOUDFLARENET",
-            "as_country": "US"
+            "ip": "2620:49:1::10",
+            "asn": 16686,
+            "as_org": "EDNS",
+            "as_country": "CA"
           }
         ]
       },
@@ -39,18 +39,18 @@
         "hostname": "ns2.nic.bb",
         "ipv4": [
           {
-            "ip": "198.41.222.254",
-            "asn": 13335,
-            "as_org": "CLOUDFLARENET",
-            "as_country": "US"
+            "ip": "64.68.193.10",
+            "asn": 16686,
+            "as_org": "EDNS",
+            "as_country": "CA"
           }
         ],
         "ipv6": [
           {
-            "ip": "2400:cb00:2049:1::c629:defe",
-            "asn": 13335,
-            "as_org": "CLOUDFLARENET",
-            "as_country": "US"
+            "ip": "2620:49:2::10",
+            "asn": 16686,
+            "as_org": "EDNS",
+            "as_country": "CA"
           }
         ]
       },
@@ -91,30 +91,15 @@
             "as_country": "CA"
           }
         ]
-      },
-      {
-        "hostname": "ns5.nic.bb",
-        "ipv4": [
-          {
-            "ip": "200.50.92.195",
-            "asn": 14813,
-            "as_org": "BB-COLUMBUS",
-            "as_country": "BB"
-          }
-        ],
-        "ipv6": []
       }
     ],
     "registry_url": "http://www.whois.telecoms.gov.bb/",
     "tld_created": "1991-09-03",
     "tld_updated": [
-      "2022-03-08"
+      "2026-05-22"
     ],
     "annotations": {
-      "country_name_iso": "Barbados",
-      "as_org_aliases": [
-        "Cloudflare"
-      ]
+      "country_name_iso": "Barbados"
     }
   }
 }

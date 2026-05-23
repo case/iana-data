@@ -1,6 +1,6 @@
 {
   "description": "Index of per-TLD data files at data/generated/tld/",
-  "publication": "2026-05-22T03:41:00Z",
+  "publication": "2026-05-23T03:36:42Z",
   "count": 1594,
   "tlds": [
     {
@@ -1062,7 +1062,7 @@
       "delegated": true,
       "tld_created": "1991-09-03",
       "tld_updated": [
-        "2022-03-08"
+        "2026-05-22"
       ]
     },
     {
@@ -1746,7 +1746,7 @@
       "delegated": true,
       "tld_created": "1997-08-21",
       "tld_updated": [
-        "2022-01-14"
+        "2026-05-22"
       ]
     },
     {
@@ -12256,7 +12256,7 @@
       "delegated": true,
       "tld_created": "2013-12-12",
       "tld_updated": [
-        "2026-04-02"
+        "2026-05-22"
       ]
     },
     {
@@ -12659,7 +12659,7 @@
       "delegated": true,
       "tld_created": "2015-03-12",
       "tld_updated": [
-        "2026-04-02"
+        "2026-05-22"
       ]
     },
     {
@@ -12669,7 +12669,7 @@
       "delegated": true,
       "tld_created": "2013-12-12",
       "tld_updated": [
-        "2026-04-02"
+        "2026-05-22"
       ]
     },
     {
@@ -12759,7 +12759,7 @@
       "delegated": true,
       "tld_created": "2014-11-06",
       "tld_updated": [
-        "2026-04-02"
+        "2026-05-22"
       ]
     },
     {
@@ -12855,7 +12855,7 @@
       "delegated": true,
       "tld_created": "2013-12-12",
       "tld_updated": [
-        "2026-04-02"
+        "2026-05-22"
       ]
     },
     {
@@ -12975,7 +12975,7 @@
       "delegated": true,
       "tld_created": "2015-03-12",
       "tld_updated": [
-        "2026-04-02"
+        "2026-05-22"
       ]
     },
     {
@@ -13105,7 +13105,7 @@
       "delegated": true,
       "tld_created": "2014-02-27",
       "tld_updated": [
-        "2026-04-02"
+        "2026-05-22"
       ]
     },
     {
@@ -13165,7 +13165,7 @@
       "delegated": true,
       "tld_created": "2015-08-06",
       "tld_updated": [
-        "2026-04-02"
+        "2026-05-22"
       ]
     },
     {
@@ -13395,7 +13395,7 @@
       "delegated": true,
       "tld_created": "2014-11-20",
       "tld_updated": [
-        "2026-04-02"
+        "2026-05-22"
       ]
     },
     {
