@@ -11,16 +11,21 @@ from typing import Any
 from ..config import (
     IANA_URLS,
     IDN_SCRIPT_MAPPING_FILE,
+    ORGANIZATIONS_OUTPUT_FILE,
     TLD_DIR,
     TLD_PAGES_DIR,
     TLDS_INDEX_FILE,
     TLDS_OUTPUT_FILE,
 )
-from ..parse.as_org_aliases import parse_as_org_aliases
 from ..parse.country import get_country_name, is_cctld
 from ..parse.gtlds_json import GtldRecord, parse_gtlds_json
 from ..parse.iptoasn import ASNLookup
 from ..parse.manual_annotations import parse_manual_annotations
+from ..parse.organizations import (
+    OrgResolver,
+    build_resolver,
+    parse_organizations_manual,
+)
 from ..parse.rdap_json import parse_rdap_json
 from ..parse.registry_agreement_csv import (
     RegistryAgreement,
@@ -29,13 +34,12 @@ from ..parse.registry_agreement_csv import (
 )
 from ..parse.root_db_html import derive_type_from_iana_tag, parse_root_db_html
 from ..parse.supplemental_cctld_rdap import parse_supplemental_cctld_rdap
-from ..parse.tech_aliases import parse_tech_aliases
 from ..parse.tld_html import parse_tld_page
-from ..parse.tld_manager_aliases import parse_tld_manager_aliases
 from ..utilities.content_changed import write_json_if_changed
 from ..utilities.download import get_iptoasn_path
 from ..utilities.metadata import load_metadata, save_metadata, utc_timestamp
 from ..utilities.urls import get_tld_file_path
+from .organizations import build_organizations_json
 
 logger = logging.getLogger(__name__)
 
@@ -51,6 +55,7 @@ class OutputPaths:
     tlds_json: Path
     tlds_index: Path
     tld_dir: Path
+    organizations_json: Path
 
     @classmethod
     def from_config(cls) -> "OutputPaths":
@@ -58,6 +63,7 @@ class OutputPaths:
             tlds_json=Path(TLDS_OUTPUT_FILE),
             tlds_index=Path(TLDS_INDEX_FILE),
             tld_dir=Path(TLD_DIR),
+            organizations_json=Path(ORGANIZATIONS_OUTPUT_FILE),
         )
 
 
@@ -82,9 +88,8 @@ def build_tlds_json(output_paths: OutputPaths | None = None) -> dict:
     registry_agreements = parse_registry_agreement_csv()
     gtld_records = parse_gtlds_json()
     manual_annotations = parse_manual_annotations()
-    tld_manager_aliases = parse_tld_manager_aliases()
-    tech_aliases = parse_tech_aliases()
-    as_org_aliases = parse_as_org_aliases()
+    manual_orgs = parse_organizations_manual()
+    resolver = build_resolver(manual_orgs)
 
     # Load IDN script mappings
     idn_script_mapping = {}
@@ -153,9 +158,7 @@ def build_tlds_json(output_paths: OutputPaths | None = None) -> dict:
             registry_agreements,
             gtld_records,
             manual_annotations,
-            tld_manager_aliases,
-            tech_aliases,
-            as_org_aliases,
+            resolver,
             asn_lookup,
         )
         tlds.append(tld_entry)
@@ -236,6 +239,10 @@ def build_tlds_json(output_paths: OutputPaths | None = None) -> dict:
             "error": "Failed to write TLD index",
         }
     logger.info("tlds-index.json: %s (changed=%s)", index_status, index_changed)
+
+    build_organizations_json(
+        tlds, manual_orgs, resolver, output_paths.organizations_json
+    )
 
     logger.info(f"Successfully built {len(tlds)} TLD entries")
     return {
@@ -324,6 +331,20 @@ def _write_tlds_index(
     )
 
 
+def _add_org_annotation(
+    annotations: dict[str, str | list[str]],
+    resolver: OrgResolver,
+    source: str,
+    raw: str | None,
+    prefix: str,
+) -> None:
+    """Emit ``<prefix>_alias`` (display_name) and ``<prefix>_slug`` (FK) if raw resolves."""
+    org = resolver.resolve(source, raw)
+    if org:
+        annotations[f"{prefix}_alias"] = org["display_name"]
+        annotations[f"{prefix}_slug"] = org["slug"]
+
+
 def _build_tld_entry(
     root_zone_entry: dict,
     rdap_lookup: dict[str, str],
@@ -333,9 +354,7 @@ def _build_tld_entry(
     registry_agreements: dict[str, RegistryAgreement],
     gtld_records: dict[str, GtldRecord],
     manual_annotations: dict[str, dict[str, str]],
-    tld_manager_aliases: dict[str, str],
-    tech_aliases: dict[str, str],
-    as_org_aliases: dict[str, str],
+    resolver: OrgResolver,
     asn_lookup: ASNLookup | None,
 ) -> dict:
     """
@@ -350,9 +369,7 @@ def _build_tld_entry(
         registry_agreements: Map of TLD to ICANN registry agreement data
         gtld_records: Map of TLD to ICANN gTLDs-report data (orgs.icann.*)
         manual_annotations: Map of TLD to hand-curated annotation fields
-        tld_manager_aliases: Map of TLD manager name to canonical alias
-        tech_aliases: Map of orgs.tech name to canonical alias
-        as_org_aliases: Map of AS org name to canonical alias
+        resolver: Resolves raw per-source org strings to canonical org records
         asn_lookup: Optional ASNLookup for IP-to-ASN resolution
 
     Returns:
@@ -396,22 +413,13 @@ def _build_tld_entry(
     # Build orgs object (canonical data only), nested by source.
     orgs: dict[str, Any] = {}
     iana_roles: dict[str, str] = {}
-    tld_manager_alias = None
     if tld_manager != "Not assigned":
         iana_roles["sponsor"] = tld_manager
-        # Track alias for annotations (non-canonical, manually curated)
-        if tld_manager in tld_manager_aliases:
-            tld_manager_alias = tld_manager_aliases[tld_manager]
-
-    tech_alias = None
     if "orgs" in page_data:
         if "admin" in page_data["orgs"]:
             iana_roles["admin"] = page_data["orgs"]["admin"]
         if "tech" in page_data["orgs"]:
-            tech = page_data["orgs"]["tech"]
-            iana_roles["tech"] = tech
-            if tech in tech_aliases:
-                tech_alias = tech_aliases[tech]
+            iana_roles["tech"] = page_data["orgs"]["tech"]
 
     # Roles grouped by source: orgs.iana from the IANA root DB + per-TLD pages,
     # orgs.icann from the ICANN gTLDs report (gTLDs only; ccTLDs are absent).
@@ -423,15 +431,14 @@ def _build_tld_entry(
     if orgs:
         entry["orgs"] = orgs
 
-    # Add nameservers from page data (with ASN enrichment if available)
-    # Also collect unique AS org aliases for annotations
-    as_org_aliases_found: set[str] = set()
+    # Enrich nameservers with ASN data; collect hosting orgs as slug -> display_name.
+    as_org_found: dict[str, str] = {}
     if "nameservers" in page_data:
         entry["nameservers"] = _enrich_nameservers_with_asn(
             page_data["nameservers"],
             asn_lookup,
-            as_org_aliases,
-            as_org_aliases_found,
+            resolver,
+            as_org_found,
         )
 
     # Add registry information
@@ -468,11 +475,25 @@ def _build_tld_entry(
     # Add annotations if needed (non-canonical / derived data)
     annotations: dict[str, str | list[str]] = {}
 
-    if tld_manager_alias:
-        annotations["tld_manager_alias"] = tld_manager_alias
-
-    if tech_alias:
-        annotations["tech_alias"] = tech_alias
+    # Resolve each registry org position to organizations.json, denormalizing
+    # its display_name (label) and slug (FK) whenever the raw value resolves.
+    sponsor = tld_manager if tld_manager != "Not assigned" else None
+    page_orgs = page_data.get("orgs", {})
+    icann_record = gtld_records.get(tld)
+    _add_org_annotation(annotations, resolver, "iana", sponsor, "iana_sponsor")
+    _add_org_annotation(
+        annotations, resolver, "iana", page_orgs.get("admin"), "iana_admin"
+    )
+    _add_org_annotation(
+        annotations, resolver, "iana", page_orgs.get("tech"), "iana_tech"
+    )
+    _add_org_annotation(
+        annotations,
+        resolver,
+        "icann",
+        icann_record.get("registry_operator") if icann_record else None,
+        "icann_registry_operator",
+    )
 
     if rdap_source:
         annotations["rdap_source"] = rdap_source
@@ -503,9 +524,12 @@ def _build_tld_entry(
         if translation:
             annotations["icann_translation_en"] = translation
 
-    # Add AS org aliases for nameserver infrastructure
-    if as_org_aliases_found:
-        annotations["as_org_aliases"] = sorted(as_org_aliases_found)
+    # Nameserver infra operators: both arrays sorted by slug so they stay
+    # strictly parallel (index i is one org's slug and its display_name).
+    if as_org_found:
+        ordered_slugs = sorted(as_org_found)
+        annotations["as_org_aliases"] = [as_org_found[slug] for slug in ordered_slugs]
+        annotations["as_org_slugs"] = ordered_slugs
 
     # Editorial per-TLD annotations. geographic_scope falls back to "country"
     # for ccTLDs (the only mechanically derivable level); everything else is
@@ -556,8 +580,8 @@ def _add_idn_mappings(tlds: list[dict]) -> None:
 def _enrich_nameservers_with_asn(
     nameservers: list[dict[str, Any]],
     asn_lookup: ASNLookup | None,
-    as_org_aliases: dict[str, str],
-    as_org_aliases_found: set[str],
+    resolver: OrgResolver,
+    as_org_found: dict[str, str],
 ) -> list[dict[str, Any]]:
     """
     Transform nameserver IP strings to objects with ASN metadata.
@@ -565,8 +589,8 @@ def _enrich_nameservers_with_asn(
     Args:
         nameservers: List of nameserver dicts with hostname, ipv4, ipv6 arrays
         asn_lookup: Optional ASNLookup for IP-to-ASN resolution
-        as_org_aliases: Map of AS org name to canonical alias
-        as_org_aliases_found: Set to collect found aliases (modified in place)
+        resolver: Resolves raw AS-org names to canonical org records
+        as_org_found: slug -> display_name, collected in place for resolved orgs
 
     Returns:
         Transformed nameservers with IP objects containing ASN data
@@ -580,23 +604,13 @@ def _enrich_nameservers_with_asn(
             "ipv6": [],
         }
 
-        # Transform IPv4 addresses
-        for ip in ns.get("ipv4", []):
-            ip_obj = _ip_to_asn_object(ip, asn_lookup)
-            enriched_ns["ipv4"].append(ip_obj)
-            # Collect AS org alias if found
-            as_org = ip_obj.get("as_org", "")
-            if as_org in as_org_aliases:
-                as_org_aliases_found.add(as_org_aliases[as_org])
-
-        # Transform IPv6 addresses
-        for ip in ns.get("ipv6", []):
-            ip_obj = _ip_to_asn_object(ip, asn_lookup)
-            enriched_ns["ipv6"].append(ip_obj)
-            # Collect AS org alias if found
-            as_org = ip_obj.get("as_org", "")
-            if as_org in as_org_aliases:
-                as_org_aliases_found.add(as_org_aliases[as_org])
+        for key in ("ipv4", "ipv6"):
+            for ip in ns.get(key, []):
+                ip_obj = _ip_to_asn_object(ip, asn_lookup)
+                enriched_ns[key].append(ip_obj)
+                org = resolver.resolve("asn", ip_obj.get("as_org"))
+                if org:
+                    as_org_found[org["slug"]] = org["display_name"]
 
         result.append(enriched_ns)
 

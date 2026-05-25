@@ -11,7 +11,6 @@ from _pytest.monkeypatch import MonkeyPatch
 from src.build.tlds import OutputPaths, build_tlds_json
 from src.parse.rdap_json import parse_rdap_json
 from src.parse.root_db_html import parse_root_db_html
-from src.parse.tech_aliases import parse_tech_aliases
 
 FIXTURES_DIR = Path(__file__).parent.parent / "fixtures" / "source" / "core"
 
@@ -30,6 +29,7 @@ def temp_output(tmp_path, monkeypatch):
         tlds_json=tmp_path / "tlds.json",
         tlds_index=tmp_path / "tlds-index.json",
         tld_dir=tmp_path / "tld",
+        organizations_json=tmp_path / "organizations.json",
     )
 
 
@@ -48,12 +48,14 @@ def shared_build(tmp_path_factory):
         tlds_json=tmp / "tlds.json",
         tlds_index=tmp / "tlds-index.json",
         tld_dir=tmp / "tld",
+        organizations_json=tmp / "organizations.json",
     )
     result = build_tlds_json(paths)
     yield SimpleNamespace(
         tlds_json=paths.tlds_json,
         tlds_index=paths.tlds_index,
         tld_dir=paths.tld_dir,
+        organizations_json=paths.organizations_json,
         result=result,
     )
     mp.undo()
@@ -442,73 +444,25 @@ def test_build_tlds_json_gtld_no_country_name(shared_build):
                 assert "country_name_iso" not in entry["annotations"]
 
 
-def test_build_tlds_json_tech_alias_annotation(shared_build):
-    """TLDs whose orgs.tech matches data/manual/tech-aliases.json get annotations.tech_alias.
-
-    Picks a TLD known to have 'Identity Digital Limited' as orgs.tech in
-    current source data and asserts the canonical alias is set.
-    """
+def test_build_tlds_json_org_annotations_use_alias_and_slug(shared_build):
+    """Resolved registry orgs get both a display-name alias and a slug FK;
+    the retired flat alias keys are gone everywhere."""
     with open(shared_build.tlds_json) as f:
         data = json.load(f)
 
-    tld_map = {entry["tld"]: entry for entry in data["tlds"]}
-
-    id_aliased = [
+    id_tlds = [
         entry
         for entry in data["tlds"]
-        if entry.get("annotations", {}).get("tech_alias") == "Identity Digital"
+        if entry.get("annotations", {}).get("iana_tech_slug") == "identity-digital"
     ]
-    assert id_aliased, "Expected at least one TLD with tech_alias='Identity Digital'"
-
-    id_raw_names = {
-        "Identity Digital Limited",
-        "Identity Digital Inc.",
-        "Identity Digital Limited c/o Identity Digital Inc.",
-        "Afilias",
-        "Afilias Limited",
-        "Donuts Inc",
-        "Internet Computer Bureau Ltd",
-        "Internet Computer Bureau Limited",
-    }
-    for entry in id_aliased:
-        tech = entry.get("orgs", {}).get("iana", {}).get("tech")
-        assert tech in id_raw_names, (
-            f"{entry['tld']} has tech_alias='Identity Digital' but unexpected orgs.iana.tech={tech!r}"
-        )
-
-    abbott = tld_map.get("abbott")
-    if (
-        abbott
-        and abbott.get("orgs", {}).get("iana", {}).get("tech")
-        == "Identity Digital Limited"
-    ):
-        assert abbott["annotations"]["tech_alias"] == "Identity Digital"
-
-
-def test_build_tlds_json_tech_alias_only_set_for_known_aliases(shared_build):
-    """A TLD gets annotations.tech_alias iff its orgs.iana.tech is in tech-aliases.json.
-
-    Guards against regressions where the alias is set for every TLD,
-    hardcoded, or omitted when it should be present.
-    """
-    with open(shared_build.tlds_json) as f:
-        data = json.load(f)
-
-    tech_aliases = parse_tech_aliases()
+    assert id_tlds, "expected TLDs whose tech operator resolves to identity-digital"
+    for entry in id_tlds:
+        assert entry["annotations"]["iana_tech_alias"] == "Identity Digital"
 
     for entry in data["tlds"]:
-        tech = entry.get("orgs", {}).get("iana", {}).get("tech")
-        actual_alias = entry.get("annotations", {}).get("tech_alias")
-        if tech and tech in tech_aliases:
-            assert actual_alias == tech_aliases[tech], (
-                f"{entry['tld']}: orgs.iana.tech={tech!r} should alias to "
-                f"{tech_aliases[tech]!r}, got {actual_alias!r}"
-            )
-        else:
-            assert actual_alias is None, (
-                f"{entry['tld']}: orgs.iana.tech={tech!r} is not in tech-aliases.json "
-                f"but has annotations.tech_alias={actual_alias!r}"
-            )
+        annotations = entry.get("annotations", {})
+        assert "tech_alias" not in annotations
+        assert "tld_manager_alias" not in annotations
 
 
 def test_per_tld_files_exist(shared_build):
