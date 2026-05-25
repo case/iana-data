@@ -465,6 +465,18 @@ def test_build_tlds_json_org_annotations_use_alias_and_slug(shared_build):
         assert "tld_manager_alias" not in annotations
 
 
+def test_build_does_not_rewrite_iptoasn_metadata(temp_output, tmp_path):
+    """Build loads iptoasn data but must not touch metadata.json; the download
+    step owns IPTOASN.last_downloaded."""
+    metadata_path = tmp_path / "metadata.json"
+    sentinel = {"IPTOASN": {"last_downloaded": "2020-01-01T00:00:00Z"}}
+    metadata_path.write_text(json.dumps(sentinel))
+
+    build_tlds_json(temp_output)
+
+    assert json.loads(metadata_path.read_text()) == sentinel
+
+
 def test_per_tld_files_exist(shared_build):
     """Per-TLD files are written for known TLDs."""
     for slug in ("com", "uk", "aaa"):

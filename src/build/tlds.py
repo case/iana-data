@@ -37,7 +37,6 @@ from ..parse.supplemental_cctld_rdap import parse_supplemental_cctld_rdap
 from ..parse.tld_html import parse_tld_page
 from ..utilities.content_changed import write_json_if_changed
 from ..utilities.download import get_iptoasn_path
-from ..utilities.metadata import load_metadata, save_metadata, utc_timestamp
 from ..utilities.urls import get_tld_file_path
 from .organizations import build_organizations_json
 
@@ -111,12 +110,6 @@ def build_tlds_json(output_paths: OutputPaths | None = None) -> dict:
             records = _parse_gzipped_iptoasn(iptoasn_path)
             asn_lookup = ASNLookup(records)
             logger.info("Loaded %d ASN records", len(records))
-            # Update metadata to track when iptoasn data was used
-            metadata = load_metadata()
-            metadata["IPTOASN"] = {
-                "last_downloaded": utc_timestamp(),
-            }
-            save_metadata(metadata)
         except Exception as e:
             logger.warning("Error loading iptoasn data: %s", e)
     else:
