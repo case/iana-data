@@ -240,6 +240,12 @@ Here is its schema:
 }
 ```
 
+## Identifiers: A-labels vs Unicode
+
+Every TLD is identified by its **A-label** — the ASCII form, including `xn--` punycode for IDNs (e.g. `xn--80adxhks`). The A-label is the canonical key and the only form used for joins and references: the `tld` field, per-TLD filenames, the index keys, and every TLD in `organizations.json` `roles`. A-labels are stable and unambiguous (the U-label depends on Unicode normalization and IDNA version), which keeps cross-file joins exact.
+
+The **U-label** — the rendered Unicode form (e.g. `москва`) — is display-only and appears solely in the `tld_unicode` field, alongside the A-label, never as a key or reference. Consumers that render a name resolve the A-label to `tld_unicode`; they never key on it.
+
 ## `organizations.json`
 
 The `data/generated/organizations.json` file is the canonical record of the organizations that play roles for TLDs, with a reverse-index of those roles. It is built from a hand-curated identity seed (`data/manual/organizations.json`) joined against `tlds.json`, and replaces the old per-role alias files.
