@@ -42,13 +42,7 @@
     }
   },
   "TLD_HTML": {
-<<<<<<< Updated upstream
-    "last_checked": "2026-05-24T03:34:16Z"
-||||||| Stash base
-    "last_checked": "2026-05-23T03:33:02Z"
-=======
     "last_checked": "2026-05-24T22:32:26Z"
->>>>>>> Stashed changes
   },
   "REGISTRY_AGREEMENT_TABLE": {
     "headers": {
@@ -64,6 +58,6 @@
     }
   },
   "IPTOASN": {
-    "last_downloaded": "2026-05-24T22:45:16Z"
+    "last_downloaded": "2026-05-25T04:50:14Z"
   }
 }
