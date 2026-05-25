@@ -162,6 +162,22 @@ def test_roles_round_trip_with_asn_annotations(built):
             )
 
 
+def test_role_tlds_are_ascii_keys_in_tlds_json(built):
+    """Every TLD in roles is an A-label (ASCII) and a real tlds.json key. Encodes
+    the identifier standard: A-labels are the join key, U-labels are display-only."""
+    bad = []
+    for org in built.orgs:
+        for source, roles in org.get("roles", {}).items():
+            for role, tld_list in roles.items():
+                for tld in tld_list:
+                    if not tld.isascii():
+                        bad.append((org["slug"], source, role, tld, "non-ascii"))
+                    elif tld not in built.tlds:
+                        bad.append((org["slug"], source, role, tld, "unknown-tld"))
+
+    assert bad == [], f"role TLDs that are non-ASCII or not a tlds.json key: {bad[:10]}"
+
+
 def test_source_names_appear_in_raw_data(built):
     """Every source_names string must occur as a raw value in tlds.json for that
     source. A string that matches nothing is a stale/typo'd curation entry that
