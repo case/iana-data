@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-24T22:45:17Z",
+  "publication": "2026-05-25T04:50:15Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -11,9 +11,6 @@
     "iana_tag": "infrastructure",
     "type": "infrastructure",
     "orgs": {
-      "tld_manager": "Internet Architecture Board (IAB)",
-      "admin": "Internet Architecture Board (IAB)",
-      "tech": "Internet Corporation for Assigned Names and Numbers (ICANN)",
       "iana": {
         "sponsor": "Internet Architecture Board (IAB)",
         "admin": "Internet Architecture Board (IAB)",
