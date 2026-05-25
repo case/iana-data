@@ -9,6 +9,7 @@ Agents: consult before suggesting layout, naming, dependencies, vendors, or conv
 - [Architecture](architecture.md) - current implementation: stack, layout, conventions
 
 ## Log (newest first)
+- [2026-05-24 Typed-graph ingest](log/2026-05-24-typed-graph-ingest.md) - orgs.icann.* + per-TLD annotations + infrastructure type; organizations.json seeded (not yet consumed by build)
 - [2026-05-24 ETL source-fidelity](log/2026-05-24-etl-source-fidelity.md) - Extract stores verbatim <main> slice; Transform decodes entities + selects fields (fixes &amp; in orgs)
 - [2026-05-17 orgs.tech aliasing](log/2026-05-17-tech-aliases.md) - tech-aliases.json + annotations.tech_alias, parallel to tld_manager_alias
 - [2026-05-16 Per-field source-of-truth](log/2026-05-16-per-field-truth.md) - each IANA source authoritative for a specific field set; reconciliation tests encode the rule
