@@ -27,6 +27,11 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+# actions: read is needed to pull the iptoasn artifact across workflows.
+permissions:
+  contents: read
+  actions: read
+
 jobs:
   Tests:
     runs-on: ubuntu-24.04
@@ -45,6 +50,30 @@ jobs:
 
       - name: Install dependencies
         run: bin/setup
+
+      # iptoasn is required build data; reuse the artifact update-iptoasn
+      # publishes daily (45-day retention).
+      - name: Find latest iptoasn artifact run
+        id: iptoasn-run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          run_id=$(gh run list --workflow=update-iptoasn.yaml --status=success \
+            --limit=1 --json databaseId -q '.[0].databaseId')
+          if [ -z "$run_id" ]; then
+            echo "::error::No successful update-iptoasn run found; cannot fetch required iptoasn data"
+            exit 1
+          fi
+          echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+
+      - name: Download iptoasn artifact
+        uses: actions/download-artifact@v8
+        with:
+          pattern: iptoasn-*
+          path: data/source/iptoasn
+          github-token: ${{ github.token }}
+          run-id: ${{ steps.iptoasn-run.outputs.run_id }}
+          merge-multiple: true
 
       - name: Run tests
         run: |
