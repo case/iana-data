@@ -860,8 +860,9 @@ def test_download_tld_pages_empty_tld_list(tmp_path):
 
 
 def test_download_iptoasn_success(tmp_path):
-    """Test successful download of iptoasn data."""
+    """A successful iptoasn download writes the file and records last_downloaded."""
     from src.utilities.download import download_iptoasn
+    from src.utilities.metadata import load_metadata
 
     iptoasn_dir = tmp_path / "data" / "source" / "iptoasn"
 
@@ -874,6 +875,7 @@ def test_download_iptoasn_success(tmp_path):
 
     with (
         patch("src.utilities.download.IPTOASN_DIR", str(iptoasn_dir)),
+        patch("src.utilities.metadata.METADATA_FILE", str(tmp_path / "metadata.json")),
         patch(
             "src.utilities.download.make_request_with_retry", side_effect=mock_request
         ),
@@ -883,10 +885,12 @@ def test_download_iptoasn_success(tmp_path):
         mock_client_class.return_value.__exit__.return_value = False
 
         result = download_iptoasn()
+        metadata = load_metadata()
 
     assert result == "downloaded"
     assert (iptoasn_dir / "ip2asn-combined.tsv.gz").exists()
     assert (iptoasn_dir / "ip2asn-combined.tsv.gz").read_bytes() == b"fake gzip content"
+    assert metadata["IPTOASN"]["last_downloaded"]
 
 
 def test_download_iptoasn_http_error(tmp_path):

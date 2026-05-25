@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T04:50:15Z",
+  "publication": "2026-05-25T17:27:52Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -124,11 +124,18 @@
       "2025-07-18"
     ],
     "annotations": {
-      "tld_manager_alias": "CNNIC",
-      "tech_alias": "CNNIC",
+      "iana_sponsor_alias": "CNNIC",
+      "iana_sponsor_slug": "cnnic",
+      "iana_admin_alias": "CNNIC",
+      "iana_admin_slug": "cnnic",
+      "iana_tech_alias": "CNNIC",
+      "iana_tech_slug": "cnnic",
       "country_name_iso": "China",
       "as_org_aliases": [
         "CNNIC"
+      ],
+      "as_org_slugs": [
+        "cnnic"
       ],
       "geographic_scope": "country"
     }

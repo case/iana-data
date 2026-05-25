@@ -53,6 +53,7 @@ def tlds_data(tmp_path_factory):
         tlds_json=tmp / "tlds.json",
         tlds_index=tmp / "tlds-index.json",
         tld_dir=tmp / "tld",
+        organizations_json=tmp / "organizations.json",
     )
     try:
         build_tlds_json(paths)

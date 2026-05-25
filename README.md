@@ -195,11 +195,17 @@ Here is its schema:
       // --- Annotations (supplemental/derived/non-canonical data) ---
       "annotations": {                     // [OPTIONAL - omit entire object if no annotations]
 
-        // TLD Manager alias (manually curated)
-        "tld_manager_alias": "string",     // Canonical parent company name, from data/manual/tld-manager-aliases.json (e.g. "Identity Digital", "Google")
-
-        // Tech operator alias (manually curated)
-        "tech_alias": "string",            // Canonical tech operator name, from data/manual/tech-aliases.json (e.g. "Identity Digital", "Google Registry"). Canonical names are kept in sync with tld_manager_alias so the two annotations can be safely joined.
+        // Canonical org resolution (each registry org position resolved against
+        // organizations.json). Emitted when the raw org value resolves to a record
+        // there: *_alias is the human display_name, *_slug is the stable FK.
+        "iana_sponsor_alias": "string",            // Sponsoring org display_name [OPTIONAL]
+        "iana_sponsor_slug": "string",             // FK into organizations.json [OPTIONAL]
+        "iana_admin_alias": "string",              // Administrative contact org display_name [OPTIONAL]
+        "iana_admin_slug": "string",               // FK into organizations.json [OPTIONAL]
+        "iana_tech_alias": "string",               // Technical contact org display_name [OPTIONAL]
+        "iana_tech_slug": "string",                // FK into organizations.json [OPTIONAL]
+        "icann_registry_operator_alias": "string", // Registry Operator display_name [OPTIONAL - gTLDs]
+        "icann_registry_operator_slug": "string",  // FK into organizations.json [OPTIONAL - gTLDs]
 
         // RDAP metadata
         "rdap_source": "string",           // Source of RDAP server: "IANA" (canonical) or "supplemental" (from data/manual/supplemental-cctld-rdap.json)
@@ -217,8 +223,9 @@ Here is its schema:
         "registry_agreement_types": ["string"], // Array of agreement types: "base" | "brand" | "community" | "sponsored" | "non_sponsored"
         "icann_translation_en": "string",  // ICANN's raw English Translation of an IDN label, source-faithful [OPTIONAL - IDN gTLDs only]
 
-        // AS Org aliases (DNS infrastructure providers, from data/manual/as-org-aliases.json)
-        "as_org_aliases": ["string"],      // Array of canonical DNS provider names for nameserver infrastructure (e.g. ["CentralNic"], ["Identity Digital", "VeriSign"])
+        // AS Org infrastructure operators (resolved against organizations.json)
+        "as_org_aliases": ["string"],      // Canonical DNS provider display_names hosting nameservers (e.g. ["Identity Digital", "VeriSign"])
+        "as_org_slugs": ["string"],        // FKs into organizations.json, parallel to as_org_aliases
 
         // General notes
         "notes": [                         // Array of timestamped notes
@@ -232,6 +239,20 @@ Here is its schema:
   ]
 }
 ```
+
+## Identifiers: A-labels vs Unicode
+
+Every TLD is identified by its **A-label** — the ASCII form, including `xn--` punycode for IDNs (e.g. `xn--80adxhks`). The A-label is the canonical key and the only form used for joins and references: the `tld` field, per-TLD filenames, the index keys, and every TLD in `organizations.json` `roles`. A-labels are stable and unambiguous (the U-label depends on Unicode normalization and IDNA version), which keeps cross-file joins exact.
+
+The **U-label** — the rendered Unicode form (e.g. `москва`) — is display-only and appears solely in the `tld_unicode` field, alongside the A-label, never as a key or reference. Consumers that render a name resolve the A-label to `tld_unicode`; they never key on it.
+
+## `organizations.json`
+
+The `data/generated/organizations.json` file is the canonical record of the organizations that play roles for TLDs, with a reverse-index of those roles. It is built from a hand-curated identity seed (`data/manual/organizations.json`) joined against `tlds.json`, and replaces the old per-role alias files.
+
+Each org carries an editorial `display_name` and a stable kebab-case `slug` (the foreign key the `tlds.json` annotations point at via `*_slug`), the verbatim `source_names` each source records (grouped `iana` / `icann` / `asn`), hand-added historical `aliases`, a `homepage`, and a generated `roles` reverse-index grouped by source: `iana.{sponsor,admin,tech}`, `icann.{registry_operator}`, `asn.{operator}`. Entity type and TLD counts are derivable from `roles`, so they are not stored. `orgs[]` is sorted by `slug`.
+
+> **Consolidated subset:** this currently covers the curated multi-source organizations only. The single-source long tail (orgs that appear under one exact name in one source) is not yet included, so the absence of a TLD's operator here does not mean it has none.
 
 ## Local usage
 

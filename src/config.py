@@ -34,15 +34,14 @@ GENERATED_DIR: Final[str] = "data/generated"
 TLDS_OUTPUT_FILE: Final[str] = f"{GENERATED_DIR}/tlds.json"
 TLDS_INDEX_FILE: Final[str] = f"{GENERATED_DIR}/tlds-index.json"
 TLD_DIR: Final[str] = f"{GENERATED_DIR}/tld"
+ORGANIZATIONS_OUTPUT_FILE: Final[str] = f"{GENERATED_DIR}/organizations.json"
 IDN_SCRIPT_MAPPING_FILE: Final[str] = f"{GENERATED_DIR}/idn-script-mapping.json"
 
 # Manual data files
 MANUAL_FILES: Final[dict[str, str]] = {
     "ANNOTATIONS": "annotations.json",
-    "AS_ORG_ALIASES": "as-org-aliases.json",
+    "ORGANIZATIONS": "organizations.json",
     "SUPPLEMENTAL_CCTLD_RDAP": "supplemental-cctld-rdap.json",
-    "TECH_ALIASES": "tech-aliases.json",
-    "TLD_MANAGER_ALIASES": "tld-manager-aliases.json",
 }
 
 # Test fixtures

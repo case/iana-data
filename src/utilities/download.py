@@ -255,6 +255,9 @@ def download_iptoasn() -> str:
                     f.write(response.content)
                 size_mb = len(response.content) / (1024 * 1024)
                 logger.info("  → %s (%.1f MB)", filepath, size_mb)
+                metadata = load_metadata()
+                metadata["IPTOASN"] = {"last_downloaded": utc_timestamp()}
+                save_metadata(metadata)
                 return "downloaded"
             else:
                 logger.error("HTTP %d for %s", response.status_code, IPTOASN_URL)
