@@ -13,6 +13,7 @@ concurrency:
 
 permissions:
   contents: write
+  actions: read # pull the iptoasn artifact from the update-iptoasn workflow
 
 jobs:
   update-data:
@@ -93,22 +94,19 @@ jobs:
       # Download iptoasn artifact (uploaded by update-iptoasn workflow)
       - name: Get latest iptoasn workflow run
         id: get-iptoasn-run
-        continue-on-error: true
         run: |
           RUN_ID=$(gh run list --workflow=update-iptoasn.yaml --status=success --limit=1 --json databaseId -q '.[0].databaseId')
-          if [ -n "$RUN_ID" ]; then
-            echo "run_id=$RUN_ID" >> $GITHUB_OUTPUT
-            echo "Found successful iptoasn workflow run: $RUN_ID"
-          else
-            echo "No successful iptoasn workflow run found"
+          if [ -z "$RUN_ID" ]; then
+            echo "::error::No successful update-iptoasn run found; cannot fetch required iptoasn data"
+            exit 1
           fi
+          echo "run_id=$RUN_ID" >> "$GITHUB_OUTPUT"
+          echo "Found successful iptoasn workflow run: $RUN_ID"
         env:
           GH_TOKEN: ${{ github.token }}
 
       - name: Download iptoasn artifact
         id: download-iptoasn
-        if: steps.get-iptoasn-run.outputs.run_id != ''
-        continue-on-error: true
         uses: actions/download-artifact@v8
         with:
           pattern: iptoasn-*
