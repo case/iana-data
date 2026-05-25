@@ -11,6 +11,7 @@ IANA_URLS: Final[dict[str, str]] = {
 
 ICANN_URLS: Final[dict[str, str]] = {
     "REGISTRY_AGREEMENT_TABLE": "https://www.icann.org/en/registry-agreements/csvdownload",
+    "GTLDS_JSON": "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json",
 }
 
 IPTOASN_URL: Final[str] = "https://iptoasn.com/data/ip2asn-combined.tsv.gz"
@@ -25,6 +26,7 @@ SOURCE_FILES: Final[dict[str, str]] = {
     "TLD_LIST": "iana-tlds.txt",
     "ROOT_ZONE_DB": "iana-root.html",
     "REGISTRY_AGREEMENT_TABLE": "icann-registry-agreement-table.csv",
+    "GTLDS_JSON": "icann-gtlds.json",
 }
 
 MANUAL_DIR: Final[str] = "data/manual"
@@ -36,6 +38,7 @@ IDN_SCRIPT_MAPPING_FILE: Final[str] = f"{GENERATED_DIR}/idn-script-mapping.json"
 
 # Manual data files
 MANUAL_FILES: Final[dict[str, str]] = {
+    "ANNOTATIONS": "annotations.json",
     "AS_ORG_ALIASES": "as-org-aliases.json",
     "SUPPLEMENTAL_CCTLD_RDAP": "supplemental-cctld-rdap.json",
     "TECH_ALIASES": "tech-aliases.json",

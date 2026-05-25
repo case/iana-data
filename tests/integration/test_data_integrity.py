@@ -6,6 +6,7 @@ from pathlib import Path
 import pytest
 
 from src.config import MANUAL_DIR, SOURCE_DIR, SOURCE_FILES, TLDS_OUTPUT_FILE
+from src.parse.manual_annotations import parse_manual_annotations
 from src.parse.rdap_json import parse_rdap_json
 from src.parse.root_db_html import parse_root_db_html
 from src.parse.supplemental_cctld_rdap import parse_supplemental_cctld_rdap
@@ -218,6 +219,106 @@ def test_total_tlds_math_is_correct():
         f"{calculated_total}, but root DB has {total_count} total TLDs. "
         f"These should match. Difference: {total_count - calculated_total}"
     )
+
+
+# --- ICANN gTLDs Report Source Invariants ---
+#
+# These guard assumptions baked into the gTLDs parser against the live source
+# file. If ICANN changes the data in a way that trips one, the parser/schema
+# needs a deliberate review rather than silently shipping wrong output.
+
+
+def _load_gtlds_source() -> list[dict]:
+    """Load the raw ICANN gTLDs report records from the source directory."""
+    path = Path(SOURCE_DIR) / SOURCE_FILES["GTLDS_JSON"]
+    if not path.exists():
+        pytest.skip(f"gTLDs source not found at {path}. Run the download script first.")
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)["gTLDs"]
+
+
+def test_gtlds_registry_class_domain_name_list_still_all_null():
+    """registryClassDomainNameList is null in every record.
+
+    The parser drops this field because it carries no data and no published
+    meaning. If ICANN ever populates it, this fails so we can re-evaluate.
+    """
+    records = _load_gtlds_source()
+    populated = [r["gTLD"] for r in records if r.get("registryClassDomainNameList")]
+
+    assert populated == [], (
+        f"registryClassDomainNameList is now populated for {len(populated)} TLD(s): "
+        f"{populated[:10]}. The dropped-field decision needs review."
+    )
+
+
+def test_gtlds_third_level_registration_is_known_set():
+    """thirdOrLowerLevelRegistration true only for the known third-level gTLDs.
+
+    A new entrant means a registry started permitting third-level registration,
+    which is product-relevant and worth a deliberate look.
+    """
+    records = _load_gtlds_source()
+    third_level = {
+        r["gTLD"] for r in records if r.get("thirdOrLowerLevelRegistration") is True
+    }
+
+    assert third_level <= {"museum", "name", "pro"}, (
+        f"Unexpected third-level gTLD(s): {sorted(third_level - {'museum', 'name', 'pro'})}"
+    )
+
+
+def test_gtlds_ulabel_matches_idna_decode():
+    """Computed Unicode label equals ICANN's published uLabel for every IDN gTLD.
+
+    tld_unicode is computed locally via the stdlib IDNA codec (IDNA2003). ICANN's
+    uLabel is authoritative (IDNA2008). They agree for today's gTLDs; a future IDN
+    using a divergent character (German eszett, Greek final sigma, ZWJ/ZWNJ) would
+    decode differently locally, and this oracle would catch it.
+    """
+    records = _load_gtlds_source()
+    mismatches = []
+    for r in records:
+        tld, ulabel = r["gTLD"], r.get("uLabel")
+        if not tld.startswith("xn--") or not ulabel:
+            continue
+        computed = tld.encode("ascii").decode("idna")
+        if computed != ulabel:
+            mismatches.append({"tld": tld, "computed": computed, "uLabel": ulabel})
+
+    assert mismatches == [], (
+        f"IDNA decode disagrees with ICANN uLabel: {mismatches[:5]}"
+    )
+
+
+# --- Manual Annotations Validation ---
+
+
+def test_manual_annotations_values_are_valid():
+    """Hand-curated annotations use valid enum values and key only real TLDs.
+
+    Catches typos in the manual file (a misspelled scope, a stray TLD) before
+    they ship as silent garbage in tlds.json.
+    """
+    annotations = parse_manual_annotations()
+    assert annotations, "Manual annotations file should not be empty"
+
+    valid_scopes = {"city", "subdivision", "country", "supranational"}
+    root_db_path = Path(SOURCE_DIR) / SOURCE_FILES["ROOT_ZONE_DB"]
+    known_tlds = {e["domain"].lstrip(".") for e in parse_root_db_html(root_db_path)}
+
+    bad_tlds = sorted(set(annotations) - known_tlds)
+    assert not bad_tlds, f"Annotations reference unknown TLD(s): {bad_tlds}"
+
+    for tld, fields in annotations.items():
+        scope = fields.get("geographic_scope")
+        assert scope is None or scope in valid_scopes, (
+            f"{tld}: invalid geographic_scope {scope!r}"
+        )
+        culture = fields.get("cultural_affiliation")
+        assert culture is None or (isinstance(culture, str) and culture), (
+            f"{tld}: invalid cultural_affiliation {culture!r}"
+        )
 
 
 # --- ASN Data Integrity Tests ---

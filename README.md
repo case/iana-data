@@ -105,6 +105,8 @@ There are a few challenges with these data files, for example:
 
 The `data/generated/tlds.json` file is an "enhanced" bootstrap file, which aggregates the myriad pieces of related data for a given TLD, into a single file and data structure.
 
+The file includes both currently-delegated TLDs and previously-delegated TLDs that have since been removed from the root (retired brand gTLDs, dissolved-country ccTLDs, etc.). Filter on `delegated == true` for the current live set.
+
 Here is its schema:
 
 ```jsonc
@@ -126,7 +128,7 @@ Here is its schema:
       "tld_script": "string",              // Unicode script name for IDNs (e.g. "Han-CJK", "Arabic", "Cyrillic") [OPTIONAL - IDNs only]
       "tld_iso": "string",                 // ISO 3166-1 alpha-2 ccTLD this IDN is equivalent to (e.g. "cn") [OPTIONAL - IDN ccTLDs only]
       "idn": ["string"],                   // Array of IDN variants of this ccTLD (e.g. ["xn--fiqs8s", "xn--fiqz9s"]) [OPTIONAL - ISO ccTLDs only]
-      "delegated": boolean,                // true if TLD Manager is assigned, false if "Not assigned" [REQUIRED]
+      "delegated": boolean,                // true if TLD Manager is assigned, false if "Not assigned"; removed/retired TLDs are retained with false [REQUIRED]
       "iana_tag": "string",                // IANA tag: "generic" | "country-code" | "sponsored" | "infrastructure" | "generic-restricted" | "test" [REQUIRED]
       "type": "string",                    // Derived type: "gtld" | "cctld" [REQUIRED]
 

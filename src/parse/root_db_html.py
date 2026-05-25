@@ -126,10 +126,12 @@ def derive_type_from_iana_tag(iana_tag: str) -> str:
         iana_tag: IANA tag value (e.g., "generic", "country-code")
 
     Returns:
-        str: Either "gtld" or "cctld"
+        str: "cctld", "infrastructure", or "gtld" (the catch-all bucket)
     """
     if iana_tag == "country-code":
         return "cctld"
+    if iana_tag == "infrastructure":
+        return "infrastructure"
     return "gtld"
 
 

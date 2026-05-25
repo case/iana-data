@@ -1,0 +1,5 @@
+{
+  "amsterdam": { "geographic_scope": "city" },
+  "arab": { "cultural_affiliation": "arab" },
+  "eus": { "geographic_scope": "subdivision", "cultural_affiliation": "basque" }
+}

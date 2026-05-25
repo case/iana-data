@@ -186,9 +186,9 @@ def test_derive_type_from_iana_tag_sponsored():
 
 
 def test_derive_type_from_iana_tag_infrastructure():
-    """Test that derive_type_from_iana_tag returns gtld for infrastructure."""
+    """Test that derive_type_from_iana_tag returns infrastructure for infrastructure."""
     result = derive_type_from_iana_tag("infrastructure")
-    assert result == "gtld"
+    assert result == "infrastructure"
 
 
 def test_derive_type_from_iana_tag_generic_restricted():

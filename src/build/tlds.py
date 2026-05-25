@@ -18,7 +18,9 @@ from ..config import (
 )
 from ..parse.as_org_aliases import parse_as_org_aliases
 from ..parse.country import get_country_name, is_cctld
+from ..parse.gtlds_json import GtldRecord, parse_gtlds_json
 from ..parse.iptoasn import ASNLookup
+from ..parse.manual_annotations import parse_manual_annotations
 from ..parse.rdap_json import parse_rdap_json
 from ..parse.registry_agreement_csv import (
     RegistryAgreement,
@@ -78,6 +80,8 @@ def build_tlds_json(output_paths: OutputPaths | None = None) -> dict:
     rdap_lookup = parse_rdap_json()
     supplemental_rdap = parse_supplemental_cctld_rdap()
     registry_agreements = parse_registry_agreement_csv()
+    gtld_records = parse_gtlds_json()
+    manual_annotations = parse_manual_annotations()
     tld_manager_aliases = parse_tld_manager_aliases()
     tech_aliases = parse_tech_aliases()
     as_org_aliases = parse_as_org_aliases()
@@ -147,6 +151,8 @@ def build_tlds_json(output_paths: OutputPaths | None = None) -> dict:
             page_data,
             idn_script_mapping,
             registry_agreements,
+            gtld_records,
+            manual_annotations,
             tld_manager_aliases,
             tech_aliases,
             as_org_aliases,
@@ -325,6 +331,8 @@ def _build_tld_entry(
     page_data: dict[str, Any],
     idn_script_mapping: dict[str, str],
     registry_agreements: dict[str, RegistryAgreement],
+    gtld_records: dict[str, GtldRecord],
+    manual_annotations: dict[str, dict[str, str]],
     tld_manager_aliases: dict[str, str],
     tech_aliases: dict[str, str],
     as_org_aliases: dict[str, str],
@@ -340,6 +348,8 @@ def _build_tld_entry(
         page_data: Parsed data from TLD detail page
         idn_script_mapping: Map of IDN TLD to script name
         registry_agreements: Map of TLD to ICANN registry agreement data
+        gtld_records: Map of TLD to ICANN gTLDs-report data (orgs.icann.*)
+        manual_annotations: Map of TLD to hand-curated annotation fields
         tld_manager_aliases: Map of TLD manager name to canonical alias
         tech_aliases: Map of orgs.tech name to canonical alias
         as_org_aliases: Map of AS org name to canonical alias
@@ -384,10 +394,12 @@ def _build_tld_entry(
     entry["type"] = derive_type_from_iana_tag(iana_tag)
 
     # Build orgs object (canonical data only)
-    orgs: dict[str, str] = {}
+    orgs: dict[str, Any] = {}
+    iana_roles: dict[str, str] = {}
     tld_manager_alias = None
     if tld_manager != "Not assigned":
         orgs["tld_manager"] = tld_manager
+        iana_roles["sponsor"] = tld_manager
         # Track alias for annotations (non-canonical, manually curated)
         if tld_manager in tld_manager_aliases:
             tld_manager_alias = tld_manager_aliases[tld_manager]
@@ -396,11 +408,21 @@ def _build_tld_entry(
     if "orgs" in page_data:
         if "admin" in page_data["orgs"]:
             orgs["admin"] = page_data["orgs"]["admin"]
+            iana_roles["admin"] = page_data["orgs"]["admin"]
         if "tech" in page_data["orgs"]:
             tech = page_data["orgs"]["tech"]
             orgs["tech"] = tech
+            iana_roles["tech"] = tech
             if tech in tech_aliases:
                 tech_alias = tech_aliases[tech]
+
+    # The same roles, grouped by their source. The flat fields above are kept
+    # for now and the nested form is added alongside. orgs.icann is present
+    # only for gTLDs (ccTLDs are absent from the ICANN gTLDs report).
+    if iana_roles:
+        orgs["iana"] = iana_roles
+    if tld in gtld_records:
+        orgs["icann"] = gtld_records[tld]
 
     if orgs:
         entry["orgs"] = orgs
@@ -479,10 +501,27 @@ def _build_tld_entry(
         )
         if agreement_types:
             annotations["registry_agreement_types"] = agreement_types
+        # ICANN's raw Translation of an IDN label, kept source-faithful (typos
+        # and romanizations preserved); no curated meaning is derived here.
+        translation = agreement.get("translation")
+        if translation:
+            annotations["icann_translation_en"] = translation
 
     # Add AS org aliases for nameserver infrastructure
     if as_org_aliases_found:
         annotations["as_org_aliases"] = sorted(as_org_aliases_found)
+
+    # Editorial per-TLD annotations. geographic_scope falls back to "country"
+    # for ccTLDs (the only mechanically derivable level); everything else is
+    # hand-curated and absent when it does not apply.
+    manual = manual_annotations.get(tld, {})
+    geographic_scope = manual.get("geographic_scope")
+    if geographic_scope is None and iana_tag == "country-code":
+        geographic_scope = "country"
+    if geographic_scope:
+        annotations["geographic_scope"] = geographic_scope
+    if manual.get("cultural_affiliation"):
+        annotations["cultural_affiliation"] = manual["cultural_affiliation"]
 
     if annotations:
         entry["annotations"] = annotations

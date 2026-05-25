@@ -62,6 +62,20 @@ jobs:
           title: "ICANN registry agreement download failed"
           message: "❌ Failed to download ICANN registry agreement table"
 
+      - name: Download ICANN gTLDs JSON report
+        id: download-gtlds
+        continue-on-error: true
+        run: uv run python scripts/gtlds/download_gtlds.py
+
+      - name: Notification if gTLDs report download fails
+        if: steps.download-gtlds.outcome == 'failure'
+        uses: ./.github/actions/pushover
+        with:
+          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
+          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
+          title: "ICANN gTLDs report download failed"
+          message: "❌ Failed to download ICANN gTLDs JSON report"
+
       - name: Generate IDN script mappings
         id: generate-idn-mapping
         continue-on-error: true

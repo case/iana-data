@@ -1,5 +1,6 @@
 """Integration tests for TLD build process."""
 
+import html
 import json
 from pathlib import Path
 from types import SimpleNamespace
@@ -124,8 +125,21 @@ def test_build_tlds_json_derives_type_correctly(shared_build):
 
         if iana_tag == "country-code":
             assert derived_type == "cctld"
+        elif iana_tag == "infrastructure":
+            assert derived_type == "infrastructure"
         else:
             assert derived_type == "gtld"
+
+
+def test_build_tlds_json_arpa_is_infrastructure_type(shared_build):
+    """.arpa is the lone infrastructure TLD and is typed as such, not gtld."""
+    with open(shared_build.tlds_json) as f:
+        data = json.load(f)
+
+    arpa = {e["tld"]: e for e in data["tlds"]}["arpa"]
+
+    assert arpa["iana_tag"] == "infrastructure"
+    assert arpa["type"] == "infrastructure"
 
 
 def test_build_tlds_json_delegated_status(shared_build):
@@ -255,6 +269,159 @@ def test_build_tlds_json_cctld_overrides(shared_build):
             assert "annotations" in entry
             assert "country_name_iso" in entry["annotations"]
             assert entry["annotations"]["country_name_iso"] == expected_name
+
+
+def test_build_tlds_json_orgs_iana_mirrors_flat_fields(shared_build):
+    """orgs.iana.{sponsor,admin,tech} mirrors the flat orgs.* fields."""
+    with open(shared_build.tlds_json) as f:
+        data = json.load(f)
+
+    tld_map = {entry["tld"]: entry for entry in data["tlds"]}
+    orgs = tld_map["bestbuy"]["orgs"]
+
+    assert orgs["iana"]["sponsor"] == orgs["tld_manager"]
+    assert orgs["iana"]["admin"] == orgs["admin"]
+    assert orgs["iana"]["tech"] == orgs["tech"]
+
+
+def test_build_tlds_json_orgs_flat_fields_retained(shared_build):
+    """The flat orgs.* fields stay in place alongside the nested form."""
+    with open(shared_build.tlds_json) as f:
+        data = json.load(f)
+
+    orgs = {e["tld"]: e for e in data["tlds"]}["bestbuy"]["orgs"]
+
+    assert orgs["tld_manager"] == "BBY Solutions, Inc."
+    assert "admin" in orgs
+    assert "tech" in orgs
+
+
+def test_build_tlds_json_no_html_entities_in_any_field(shared_build):
+    """No HTML entity (e.g. &amp;) survives into any generated string field.
+
+    End-to-end guard for the Extract-faithful / Transform-decodes policy: every
+    field the parser extracts from HTML (orgs, registry_url, whois/rdap, etc.)
+    must carry a literal '&', never '&amp;'. unescape(v) != v flags a real
+    entity; a bare '&' (e.g. "AT&T") is left unchanged.
+    """
+    with open(shared_build.tlds_json) as f:
+        data = json.load(f)
+
+    def strings(node):
+        if isinstance(node, str):
+            yield node
+        elif isinstance(node, dict):
+            for value in node.values():
+                yield from strings(value)
+        elif isinstance(node, list):
+            for item in node:
+                yield from strings(item)
+
+    offenders = [
+        (entry["tld"], value)
+        for entry in data["tlds"]
+        for value in strings(entry)
+        if html.unescape(value) != value
+    ]
+
+    assert not offenders, f"HTML entities leaked into generated data: {offenders[:10]}"
+
+
+def test_build_tlds_json_orgs_icann_populated_for_gtld(shared_build):
+    """gTLDs carry orgs.icann.* from the ICANN gTLDs report."""
+    with open(shared_build.tlds_json) as f:
+        data = json.load(f)
+
+    icann = {e["tld"]: e for e in data["tlds"]}["bestbuy"]["orgs"]["icann"]
+
+    assert icann["registry_operator"] == "BBY Solutions, Inc."
+    assert icann["specification_13"] is True
+    assert icann["contract_terminated"] is False
+    assert icann["date_delegated"] == "2016-07-19"
+
+
+def test_build_tlds_json_orgs_icann_absent_for_cctld(shared_build):
+    """ccTLDs are not in the ICANN gTLDs report, so they have no orgs.icann."""
+    with open(shared_build.tlds_json) as f:
+        data = json.load(f)
+
+    orgs = {e["tld"]: e for e in data["tlds"]}["de"]["orgs"]
+
+    assert "icann" not in orgs
+    assert "iana" in orgs  # IANA roles still present for ccTLDs
+
+
+def test_build_tlds_json_icann_translation_annotation(shared_build):
+    """IDN gTLDs carry ICANN's raw Translation as annotations.icann_translation_en."""
+    with open(shared_build.tlds_json) as f:
+        data = json.load(f)
+
+    entry = {e["tld"]: e for e in data["tlds"]}["xn--1ck2e1b"]  # セール
+
+    assert entry["annotations"]["icann_translation_en"] == "sale"
+
+
+def test_build_tlds_json_geographic_scope_and_culture_for_gtld(shared_build):
+    """A geographic+cultural gTLD carries both editorial annotations."""
+    with open(shared_build.tlds_json) as f:
+        data = json.load(f)
+
+    annotations = {e["tld"]: e for e in data["tlds"]}["eus"]["annotations"]
+
+    assert annotations["geographic_scope"] == "subdivision"
+    assert annotations["cultural_affiliation"] == "basque"
+
+
+def test_build_tlds_json_city_gtld_scope(shared_build):
+    """A city gTLD carries geographic_scope 'city'."""
+    with open(shared_build.tlds_json) as f:
+        data = json.load(f)
+
+    assert {e["tld"]: e for e in data["tlds"]}["amsterdam"]["annotations"][
+        "geographic_scope"
+    ] == "city"
+
+
+def test_build_tlds_json_cultural_only_gtld_has_no_scope(shared_build):
+    """A culture-only gTLD (no place parent) has cultural_affiliation but no scope."""
+    with open(shared_build.tlds_json) as f:
+        data = json.load(f)
+
+    annotations = {e["tld"]: e for e in data["tlds"]}["arab"]["annotations"]
+
+    assert annotations["cultural_affiliation"] == "arab"
+    assert "geographic_scope" not in annotations
+
+
+def test_build_tlds_json_cctld_geographic_scope_derived_country(shared_build):
+    """ccTLDs get geographic_scope 'country' derived in the build, not from the file."""
+    with open(shared_build.tlds_json) as f:
+        data = json.load(f)
+
+    assert {e["tld"]: e for e in data["tlds"]}["de"]["annotations"][
+        "geographic_scope"
+    ] == "country"
+
+
+def test_build_tlds_json_eu_scope_overrides_country_default(shared_build):
+    """.eu is a country-code TLD but the manual file overrides its scope to supranational."""
+    with open(shared_build.tlds_json) as f:
+        data = json.load(f)
+
+    assert {e["tld"]: e for e in data["tlds"]}["eu"]["annotations"][
+        "geographic_scope"
+    ] == "supranational"
+
+
+def test_build_tlds_json_plain_gtld_has_no_editorial_scope(shared_build):
+    """A non-geographic, non-cultural gTLD carries neither editorial annotation."""
+    with open(shared_build.tlds_json) as f:
+        data = json.load(f)
+
+    annotations = {e["tld"]: e for e in data["tlds"]}["com"].get("annotations", {})
+
+    assert "geographic_scope" not in annotations
+    assert "cultural_affiliation" not in annotations
 
 
 def test_build_tlds_json_gtld_no_country_name(shared_build):

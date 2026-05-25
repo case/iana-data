@@ -1,0 +1,841 @@
+[
+  {
+    "display_name": "AFNIC",
+    "slug": "afnic",
+    "source_names": {
+      "iana": [
+        "AFNIC",
+        "Association Française pour le Nommage Internet en Coopération (A.F.N.I.C.)"
+      ],
+      "asn": [
+        "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.afnic.fr/"
+  },
+  {
+    "display_name": "Amazon",
+    "slug": "amazon",
+    "source_names": {
+      "iana": [
+        "AWS Registry LLC",
+        "Amazon Registry Services, INC",
+        "Amazon Registry Services, Inc."
+      ],
+      "icann": [
+        "AWS Registry LLC",
+        "Amazon Registry Services, Inc."
+      ],
+      "asn": [
+        "AMAZON-02",
+        "AMAZON-AES"
+      ]
+    },
+    "aliases": [
+      "Amazon Registry"
+    ],
+    "homepage": "https://www.registry.amazon/"
+  },
+  {
+    "display_name": "Apple",
+    "slug": "apple",
+    "source_names": {
+      "iana": [
+        "Apple Inc.",
+        "Beats Electronics, LLC"
+      ],
+      "icann": [
+        "Apple Inc.",
+        "Beats Electronics, LLC"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.apple.com/"
+  },
+  {
+    "display_name": "Audi",
+    "slug": "audi",
+    "source_names": {
+      "iana": [
+        "AUDI Aktiengesellschaft",
+        "Automobili Lamborghini S.p.A."
+      ],
+      "icann": [
+        "AUDI Aktiengesellschaft",
+        "Automobili Lamborghini S.p.A."
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.audi.com/"
+  },
+  {
+    "display_name": "BMW",
+    "slug": "bmw",
+    "source_names": {
+      "iana": [
+        "Bayerische Motoren Werke Aktiengesellschaft"
+      ],
+      "icann": [
+        "Bayerische Motoren Werke Aktiengesellschaft"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.bmwgroup.com/"
+  },
+  {
+    "display_name": "CentralNic",
+    "slug": "centralnic",
+    "source_names": {
+      "iana": [
+        "CentralNIC",
+        "CentralNic",
+        "CentralNic Registry"
+      ],
+      "asn": [
+        "CENTRALNIC-ANYCAST-A CentralNic Anycast-A AS Number",
+        "CENTRALNIC-ANYCAST-B CentralNic Anycast-B AS Number",
+        "CENTRALNIC-ANYCAST-E",
+        "CENTRALNIC-ANYCAST-F"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://centralnicregistry.com/"
+  },
+  {
+    "display_name": "CIRA",
+    "slug": "cira",
+    "source_names": {
+      "iana": [
+        "CIRA",
+        "Canadian Internet Registration Authority (CIRA)"
+      ],
+      "asn": [
+        "CIRA-5",
+        "CIRA-CLOUD1",
+        "CIRA-CLOUD2"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.cira.ca/"
+  },
+  {
+    "display_name": "Cloudflare",
+    "slug": "cloudflare",
+    "source_names": {
+      "asn": [
+        "CLOUDFLARESPECTRUM Cloudflare, Inc."
+      ]
+    },
+    "aliases": [
+      "CLOUDFLARENET"
+    ],
+    "homepage": "https://www.cloudflare.com/"
+  },
+  {
+    "display_name": "CNNIC",
+    "slug": "cnnic",
+    "source_names": {
+      "iana": [
+        "China Internet Network Information Center (CNNIC)"
+      ],
+      "icann": [
+        "China Internet Network Information Center (CNNIC)"
+      ],
+      "asn": [
+        "CNNIC-CRITICAL-AP China Internet Network Infomation Center"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.cnnic.com.cn/"
+  },
+  {
+    "display_name": "Community DNS",
+    "slug": "community-dns",
+    "source_names": {
+      "asn": [
+        "COMMUNITYDNS"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.communitydns.net/"
+  },
+  {
+    "display_name": "CZNIC",
+    "slug": "cznic",
+    "source_names": {
+      "asn": [
+        "CZNIC-AS",
+        "CZNIC-AS2"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.nic.cz/"
+  },
+  {
+    "display_name": "Datacom Mongolia",
+    "slug": "datacom-mongolia",
+    "source_names": {
+      "iana": [
+        "Datacom Co. Ltd.",
+        "Datacom Co., Ltd.",
+        "Datacom Co.,Ltd"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.datacom.mn/"
+  },
+  {
+    "display_name": "DENIC",
+    "slug": "denic",
+    "source_names": {
+      "asn": [
+        "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+        "DENIC-SERVICES"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.denic.de/"
+  },
+  {
+    "display_name": "Dish Network",
+    "slug": "dish-network",
+    "source_names": {
+      "iana": [
+        "DISH Technologies L.L.C.",
+        "Dish DBS Corporation"
+      ],
+      "icann": [
+        "DISH Technologies L.L.C.",
+        "Dish DBS Corporation"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.dish.com/"
+  },
+  {
+    "display_name": "DNS Belgium",
+    "slug": "dns-belgium",
+    "source_names": {
+      "iana": [
+        "DNS Belgium vzw",
+        "DNS Belgium vzw/asbl"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.dnsbelgium.be/"
+  },
+  {
+    "display_name": "DotCooperation",
+    "slug": "dot-cooperation",
+    "source_names": {
+      "iana": [
+        "DotCooperation LLC",
+        "DotCooperation, LLC"
+      ],
+      "icann": [
+        "DotCooperation LLC"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://identity.coop/"
+  },
+  {
+    "display_name": "fTLD Registry",
+    "slug": "ftld-registry",
+    "source_names": {
+      "iana": [
+        "fTLD Registry Services LLC",
+        "fTLD Registry Services, LLC"
+      ],
+      "icann": [
+        "fTLD Registry Services LLC"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://ftld.com/"
+  },
+  {
+    "display_name": "GMO Registry",
+    "slug": "gmo-registry",
+    "source_names": {
+      "iana": [
+        "GMO Internet, Inc.",
+        "GMO Registry",
+        "GMO Registry, Inc."
+      ],
+      "icann": [
+        "GMO Internet, Inc.",
+        "GMO Registry, Inc."
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.gmoregistry.com/"
+  },
+  {
+    "display_name": "GoDaddy Registry",
+    "slug": "godaddy-registry",
+    "source_names": {
+      "iana": [
+        "Go Daddy East, LLC",
+        "GoDaddy Registry",
+        "Registry Services, LLC"
+      ],
+      "icann": [
+        "Go Daddy East, LLC",
+        "Registry Services, LLC"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://registry.godaddy/"
+  },
+  {
+    "display_name": "Google",
+    "slug": "google",
+    "source_names": {
+      "iana": [
+        "Charleston Road Registry Inc.",
+        "Google Inc",
+        "Google Inc."
+      ],
+      "icann": [
+        "Charleston Road Registry Inc."
+      ],
+      "asn": [
+        "GOOGLE",
+        "GOOGLE-CLOUD-PLATFORM",
+        "YOUTUBE YOUTUBE"
+      ]
+    },
+    "aliases": [
+      "Google Registry"
+    ],
+    "homepage": "https://registry.google/"
+  },
+  {
+    "display_name": "GRS Domains",
+    "slug": "grs-domains",
+    "source_names": {
+      "iana": [
+        "Blue Sky Registry Limited",
+        "Elite Registry Limited",
+        "Exclusive Registry Limited",
+        "First Registry Limited",
+        "Premier Registry Limited",
+        "dot Accountant Limited",
+        "dot Bid Limited",
+        "dot Cricket Limited",
+        "dot Date Limited",
+        "dot Faith Limited",
+        "dot Loan Limited",
+        "dot Review Limited",
+        "dot Science Limited",
+        "dot Stream Limited",
+        "dot Support Limited",
+        "dot Webcam Limited"
+      ],
+      "icann": [
+        "Blue Sky Registry Limited",
+        "Elite Registry Limited",
+        "Exclusive Registry Limited",
+        "First Registry Limited",
+        "Premier Registry Limited",
+        "dot Accountant Limited",
+        "dot Bid Limited",
+        "dot Cricket Limited",
+        "dot Date Limited",
+        "dot Faith Limited",
+        "dot Loan Limited",
+        "dot Review Limited",
+        "dot Science Limited",
+        "dot Stream Limited",
+        "dot Support Limited",
+        "dot Webcam Limited"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://grs.domains/"
+  },
+  {
+    "display_name": "HDFC",
+    "slug": "hdfc",
+    "source_names": {
+      "iana": [
+        "HDFC Bank Limited",
+        "HOUSING DEVELOPMENT FINANCE CORPORATION LIMITED"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.hdfcbank.com/"
+  },
+  {
+    "display_name": "Hetzner",
+    "slug": "hetzner",
+    "source_names": {
+      "asn": [
+        "HETZNER-AS"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.hetzner.com/"
+  },
+  {
+    "display_name": "IBM",
+    "slug": "ibm",
+    "source_names": {
+      "iana": [
+        "International Business Machines Corporation"
+      ],
+      "icann": [
+        "International Business Machines Corporation"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.ibm.com/"
+  },
+  {
+    "display_name": "ICANN EBERO",
+    "slug": "icann-ebero",
+    "source_names": {
+      "iana": [
+        "Emergency Back-End Registry Operator Program - ICANN"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.icann.org/en/contracted-parties/registry-operators/resources/emergency-back-end-registry-operator"
+  },
+  {
+    "display_name": "ICM Registry",
+    "slug": "icm-registry",
+    "source_names": {
+      "iana": [
+        "ICM Registry AD LLC",
+        "ICM Registry LLC",
+        "ICM Registry PN LLC",
+        "ICM Registry SX LLC"
+      ],
+      "icann": [
+        "ICM Registry AD LLC",
+        "ICM Registry LLC",
+        "ICM Registry PN LLC",
+        "ICM Registry SX LLC"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://icmregistry.com/"
+  },
+  {
+    "display_name": "Identity Digital",
+    "slug": "identity-digital",
+    "source_names": {
+      "iana": [
+        "Afilias",
+        "Afilias Limited",
+        "Binky Moon, LLC",
+        "Dog Beach, LLC",
+        "Donuts Inc",
+        "Identity Digital",
+        "Identity Digital Inc.",
+        "Identity Digital Limited",
+        "Identity Digital Limited c/o Identity Digital Inc.",
+        "Internet Computer Bureau Limited",
+        "Internet Computer Bureau Ltd"
+      ],
+      "icann": [
+        "Binky Moon, LLC",
+        "Dog Beach, LLC",
+        "Identity Digital Domains Limited"
+      ],
+      "asn": [
+        "AFILIAS-SECONDARY-DNS",
+        "AS-AFILIAS1"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://identity.digital/"
+  },
+  {
+    "display_name": "Kerry Trading",
+    "slug": "kerry-trading",
+    "source_names": {
+      "iana": [
+        "Kerry Trading Co. Limited"
+      ],
+      "icann": [
+        "Kerry Trading Co. Limited"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.kerryprops.com/"
+  },
+  {
+    "display_name": "KISA",
+    "slug": "kisa",
+    "source_names": {
+      "iana": [
+        "KISA (Korea Internet & Security Agency)",
+        "Korea Internet & Security Agency (KISA)"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.kisa.or.kr/"
+  },
+  {
+    "display_name": "Knipp Medien",
+    "slug": "knipp-medien",
+    "source_names": {
+      "iana": [
+        "Knipp Medien und Kommunikation GmbH"
+      ],
+      "asn": [
+        "KNIPP-IRONDNS1-AS Technologiepark",
+        "KNIPPWORLDWI"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://knipp.de"
+  },
+  {
+    "display_name": "LACTLD",
+    "slug": "lactld",
+    "source_names": {
+      "asn": [
+        "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://lactld.org/"
+  },
+  {
+    "display_name": "LDS",
+    "slug": "lds",
+    "source_names": {
+      "iana": [
+        "IRI Domain Management, LLC",
+        "IRI Domain Management, LLC (\"Applicant\")"
+      ],
+      "icann": [
+        "IRI Domain Management, LLC"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.churchofjesuschrist.org/"
+  },
+  {
+    "display_name": "Microsoft",
+    "slug": "microsoft",
+    "source_names": {
+      "iana": [
+        "Microsoft Corporation"
+      ],
+      "icann": [
+        "Microsoft Corporation"
+      ],
+      "asn": [
+        "MICROSOFT-CORP-MSN-AS-BLOCK"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.microsoft.com/"
+  },
+  {
+    "display_name": "NIXI",
+    "slug": "nixi",
+    "source_names": {
+      "iana": [
+        "National Internet Exchange of India",
+        "National Internet eXchange of India"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.registry.in/"
+  },
+  {
+    "display_name": "Nominet",
+    "slug": "nominet",
+    "source_names": {
+      "iana": [
+        "Nominet",
+        "Nominet UK"
+      ],
+      "icann": [
+        "Nominet UK"
+      ],
+      "asn": [
+        "NOMINETANYCAST"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://nominet.uk/"
+  },
+  {
+    "display_name": "Packet Clearing House",
+    "slug": "packet-clearing-house",
+    "source_names": {
+      "iana": [
+        "Packet Clearing House"
+      ],
+      "asn": [
+        "WOODYNET-1"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.pch.net/"
+  },
+  {
+    "display_name": "PIR",
+    "slug": "pir",
+    "source_names": {
+      "iana": [
+        "Public Interest Registry",
+        "Public Interest Registry (PIR)"
+      ],
+      "icann": [
+        "Public Interest Registry"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://pir.org/"
+  },
+  {
+    "display_name": "Radix",
+    "slug": "radix",
+    "source_names": {
+      "iana": [
+        "Radix Technologies Inc.",
+        "Radix Technologies Inc. SEZC"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://radix.website/"
+  },
+  {
+    "display_name": "RcodeZero",
+    "slug": "rcodezero",
+    "source_names": {
+      "asn": [
+        "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.rcodezero.at/"
+  },
+  {
+    "display_name": "Second Genistry",
+    "slug": "second-genistry",
+    "source_names": {
+      "iana": [
+        "Employ Media LLC",
+        "Medistry LLC",
+        "Real Estate Domains LLC",
+        "dotCareer LLC",
+        "dotRealEstate LLC"
+      ],
+      "icann": [
+        "Employ Media LLC",
+        "Medistry LLC",
+        "Real Estate Domains LLC",
+        "dotCareer LLC",
+        "dotRealEstate LLC"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.secondgen.com/"
+  },
+  {
+    "display_name": "Shortdot",
+    "slug": "shortdot",
+    "source_names": {
+      "iana": [
+        "Shortdot SA"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://shortdot.bond/"
+  },
+  {
+    "display_name": "SIDN",
+    "slug": "sidn",
+    "source_names": {
+      "asn": [
+        "SIDN-ANYCAST"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.sidn.nl/"
+  },
+  {
+    "display_name": "Sony",
+    "slug": "sony",
+    "source_names": {
+      "iana": [
+        "Sony Computer Entertainment Inc.",
+        "Sony Corporation"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.sony.com/"
+  },
+  {
+    "display_name": "Stellantis",
+    "slug": "stellantis",
+    "source_names": {
+      "iana": [
+        "FCA US LLC.",
+        "Fiat Chrysler Automobiles N.V."
+      ],
+      "icann": [
+        "FCA US LLC.",
+        "Fiat Chrysler Automobiles N.V."
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.stellantis.com/"
+  },
+  {
+    "display_name": "TJX",
+    "slug": "tjx",
+    "source_names": {
+      "iana": [
+        "The TJX Companies, Inc."
+      ],
+      "icann": [
+        "The TJX Companies, Inc."
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.tjx.com/"
+  },
+  {
+    "display_name": "Travelers Insurance",
+    "slug": "travelers-insurance",
+    "source_names": {
+      "iana": [
+        "Travelers TLD, LLC"
+      ],
+      "icann": [
+        "Travelers TLD, LLC"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.travelers.com/"
+  },
+  {
+    "display_name": "Tucows",
+    "slug": "tucows",
+    "source_names": {
+      "iana": [
+        "Tucows.com",
+        "Tucows.com, Co",
+        "Tucows.com, Co."
+      ],
+      "asn": [
+        "TUCOWS-TRS-DNS1",
+        "TUCOWS-TRS-DNS2"
+      ]
+    },
+    "aliases": [
+      "Tucows Registry"
+    ],
+    "homepage": "https://www.tucows.com/"
+  },
+  {
+    "display_name": "UltraDNS",
+    "slug": "ultradns",
+    "source_names": {
+      "asn": [
+        "SECURITYSERVICES"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://vercara.digicert.com/"
+  },
+  {
+    "display_name": "VeriSign",
+    "slug": "verisign",
+    "source_names": {
+      "iana": [
+        "VeriSign Global Registry",
+        "VeriSign Global Registry Services",
+        "VeriSign Information Services, Inc.",
+        "VeriSign Sarl",
+        "VeriSign, Inc.",
+        "Verisign, Inc."
+      ],
+      "icann": [
+        "VeriSign Sarl",
+        "VeriSign, Inc."
+      ],
+      "asn": [
+        "VERISIGN-AS",
+        "VGRS-AC25",
+        "VRSN-AC28",
+        "VRSN-AC50-340"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.verisign.com/"
+  },
+  {
+    "display_name": "Walmart",
+    "slug": "walmart",
+    "source_names": {
+      "iana": [
+        "Wal-Mart Stores, Inc."
+      ],
+      "icann": [
+        "Wal-Mart Stores, Inc."
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://corporate.walmart.com/"
+  },
+  {
+    "display_name": "xyz.com",
+    "slug": "xyz-com",
+    "source_names": {
+      "iana": [
+        "XYZ.COM LLC"
+      ],
+      "icann": [
+        "XYZ.COM LLC"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://gen.xyz/"
+  },
+  {
+    "display_name": "ZACR",
+    "slug": "zacr",
+    "source_names": {
+      "iana": [
+        "ZA Central Registry NPC trading as Registry.Africa",
+        "ZA Central Registry NPC trading as ZA Central Registry"
+      ],
+      "icann": [
+        "ZA Central Registry NPC trading as Registry.Africa",
+        "ZA Central Registry NPC trading as ZA Central Registry"
+      ],
+      "asn": [
+        "ZACR"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://registry.net.za/"
+  },
+  {
+    "display_name": "ZDNS",
+    "slug": "zdns",
+    "source_names": {
+      "iana": [
+        "ZDNS",
+        "ZDNS, Ltd."
+      ],
+      "asn": [
+        "ZDNS Internet Domain Name System Beijing Engineering Resrarch Center Ltd."
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.zdns.com/"
+  }
+]
