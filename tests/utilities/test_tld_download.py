@@ -117,6 +117,27 @@ def test_extract_main_content_handles_malformed_html():
     assert isinstance(main_content, str)
 
 
+def test_extract_main_content_preserves_html_entities():
+    """Extract stores source verbatim: entities are NOT decoded (Transform decodes)."""
+    full_html = (FIXTURES_DIR / "c" / "ch.html").read_text()
+
+    main_content = extract_main_content(full_html)
+
+    # The .ch org name contains '&amp;' upstream; the slice must keep it intact.
+    assert "Education &amp; Research Network" in main_content
+    assert "Education & Research Network" not in main_content
+
+
+def test_extract_main_content_preserves_html_comments():
+    """The faithful slice keeps HTML comments the old re-serializing extractor dropped."""
+    full_html = (FIXTURES_DIR / "c" / "ch.html").read_text()
+
+    main_content = extract_main_content(full_html)
+
+    assert "<!--" in main_content
+    assert "designated for Switzerland" in main_content
+
+
 def test_download_tld_pages_single_tld(tmp_path):
     """Test downloading a single TLD page."""
     # Load fixture data
@@ -490,6 +511,28 @@ def test_download_tld_pages_handles_empty_tld_list(tmp_path):
 
     # Should return empty dict when no TLDs provided
     assert results == {}
+
+
+def test_download_tld_pages_defaults_to_root_db_tlds(tmp_path):
+    """With no explicit list, the downloader sources TLDs from the root DB."""
+    full_html = (FIXTURES_DIR / "c" / "com.html").read_text()
+
+    def mock_get(url, headers=None):
+        response = Mock(spec=httpx.Response)
+        response.status_code = 200
+        response.text = full_html
+        return response
+
+    with (
+        patch("src.parse.parse_root_db_tlds", return_value=["com"]) as mock_source,
+        patch("httpx.Client") as mock_client,
+    ):
+        mock_client.return_value.__enter__.return_value.get = mock_get
+        results = download_tld_pages(base_dir=tmp_path)
+
+    mock_source.assert_called_once()
+    assert results == {"com": "downloaded"}
+    assert (tmp_path / "c" / "com.html").exists()
 
 
 def test_download_tld_pages_uses_default_from_source(tmp_path):

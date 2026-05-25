@@ -109,6 +109,15 @@ def parse_root_db_html(filepath: Path | None = None) -> list[dict]:
     return parser.entries
 
 
+def parse_root_db_tlds(filepath: Path | None = None) -> list[str]:
+    """TLD names (no leading dot) for every Root Zone DB entry, retired ones included.
+
+    The build iterates the full root DB, so the downloader uses this (not the
+    delegated-only tlds-alpha-by-domain.txt) to keep page coverage aligned.
+    """
+    return [entry["domain"].lstrip(".") for entry in parse_root_db_html(filepath)]
+
+
 def derive_type_from_iana_tag(iana_tag: str) -> str:
     """
     Derive simplified type from IANA tag.

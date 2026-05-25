@@ -1,22 +1,19 @@
 """Parser for TLD HTML pages from IANA."""
 
+import html
 import ipaddress
-import logging
 import re
-from html.parser import HTMLParser
 from typing import Any
 
 from selectolax.parser import HTMLParser as SelectolaxParser
 
-logger = logging.getLogger(__name__)
 
-
-def parse_tld_page(html: str) -> dict[str, Any]:
+def parse_tld_page(html_text: str) -> dict[str, Any]:
     """
     Parse a TLD detail page and extract structured data.
 
     Args:
-        html: HTML content of the TLD page (can be full page or just <main> content)
+        html_text: HTML content of the TLD page (full page or just <main> content)
 
     Returns:
         Dict with extracted data including:
@@ -28,7 +25,7 @@ def parse_tld_page(html: str) -> dict[str, Any]:
         - tld_created, tld_updated
         - iana_reports: list of {title, date}
     """
-    tree = SelectolaxParser(html)
+    tree = SelectolaxParser(html_text)
     result: dict[str, Any] = {}
 
     # Extract TLD from h1
@@ -132,20 +129,22 @@ def parse_tld_page(html: str) -> dict[str, Any]:
     # Extract registry information using regex on full HTML
     # Registry URL
     url_match = re.search(
-        r'URL for registration services:</b>\s*<a href="([^"]+)"', html
+        r'URL for registration services:</b>\s*<a href="([^"]+)"', html_text
     )
     if url_match:
-        result["registry_url"] = url_match.group(1)
+        # Decode entities like the org fields: an href query string may carry
+        # &amp;, which must become a literal & in derived data.
+        result["registry_url"] = html.unescape(url_match.group(1))
 
     # WHOIS server
-    whois_match = re.search(r"WHOIS Server:</b>\s*([^\s<]+)", html)
+    whois_match = re.search(r"WHOIS Server:</b>\s*([^\s<]+)", html_text)
     if whois_match:
-        result["whois_server"] = whois_match.group(1).strip()
+        result["whois_server"] = html.unescape(whois_match.group(1).strip())
 
     # RDAP server
-    rdap_match = re.search(r"RDAP Server:\s*</b>\s*([^\s<]+)", html)
+    rdap_match = re.search(r"RDAP Server:\s*</b>\s*([^\s<]+)", html_text)
     if rdap_match:
-        result["rdap_server"] = rdap_match.group(1).strip()
+        result["rdap_server"] = html.unescape(rdap_match.group(1).strip())
 
     # Extract dates
     date_p = tree.css_first("p > i")
@@ -205,7 +204,7 @@ def _extract_first_bold_after_h2(h2_node) -> str:
     pattern = rf"<h2>{re.escape(h2_text)}</h2>\s*\n?\s*<b>([^<]+)</b>"
     match = re.search(pattern, parent_html)
     if match:
-        return match.group(1).strip()
+        return html.unescape(match.group(1).strip())
 
     return ""
 
@@ -237,61 +236,31 @@ def _extract_org_after_h2(h2_node) -> str:
 
     h2_text = h2_node.text().strip()
 
-    # Find the section in the HTML
-    # Look for pattern after the h2: <b>...</b><br><br> Org Name<br
-    # Note: selectolax normalizes <br></br> to <br><br>
-    pattern = rf"<h2>{re.escape(h2_text)}</h2>\s*\n?\s*<b>[^<]+</b><br><br>\s*\n?\s*([^<]+)<br"
+    # After the h2: <b>contact name</b>, one or more <br>, then the org line.
+    # Accept 1+ <br>: a faithful slice has a single <br/>, old source had <br><br>.
+    pattern = (
+        rf"<h2>{re.escape(h2_text)}</h2>\s*\n?\s*<b>[^<]+</b>"
+        r"(?:\s*<br\s*/?>)+\s*([^<]+?)\s*<br"
+    )
     match = re.search(pattern, parent_html)
     if match:
-        return match.group(1).strip()
+        return html.unescape(match.group(1).strip())
 
     return ""
 
 
-class MainContentExtractor(HTMLParser):
-    """HTML parser to extract content within <main> tags."""
-
-    def __init__(self):
-        super().__init__()
-        self.in_main = False
-        self.main_content = []
-
-    def handle_starttag(self, tag, attrs):
-        if tag == "main":
-            self.in_main = True
-        if self.in_main:
-            attrs_str = "".join(f' {k}="{v}"' for k, v in attrs)
-            self.main_content.append(f"<{tag}{attrs_str}>")
-
-    def handle_endtag(self, tag):
-        if self.in_main:
-            self.main_content.append(f"</{tag}>")
-        if tag == "main":
-            self.in_main = False
-
-    def handle_data(self, data):
-        if self.in_main:
-            self.main_content.append(data)
-
-    def get_main_content(self):
-        """Return the extracted main content as a string."""
-        return "".join(self.main_content)
+# Verbatim <main>...</main> slice. Attribute-tolerant open tag; non-greedy so a
+# single page with one <main> is captured up to its first closing tag.
+_MAIN_SLICE_RE = re.compile(r"<main\b[^>]*>.*?</main\s*>", re.DOTALL | re.IGNORECASE)
 
 
-def extract_main_content(html: str) -> str:
+def extract_main_content(html_text: str) -> str:
     """
-    Extract the <main> content from full HTML.
+    Return the verbatim <main>...</main> slice of a page, or "" if absent.
 
-    Args:
-        html: Full HTML page content
-
-    Returns:
-        Just the <main>...</main> content, or empty string if no main tag
+    A byte-preserving selection: entities, HTML comments, and formatting are
+    kept so stored source stays faithful to upstream. Returns "" when no <main>
+    is found, so callers can fall back to the full page.
     """
-    try:
-        parser = MainContentExtractor()
-        parser.feed(html)
-        return parser.get_main_content()
-    except Exception as e:
-        logger.error("Error parsing HTML: %s", e)
-        return ""
+    match = _MAIN_SLICE_RE.search(html_text)
+    return match.group(0) if match else ""

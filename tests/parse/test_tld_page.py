@@ -244,6 +244,52 @@ def test_parse_idn_gtld_tld_display():
     assert result["tld_display"] == "कॉम"  # Hindi for "com"
 
 
+# === HTML-entity decoding + contact-PII exclusion (faithful <main> slice) ===
+
+CH_ORG = "SWITCH The Swiss Education & Research Network"
+
+
+def test_parse_ch_orgs_decode_html_entities():
+    """Org names from the faithful <main> slice decode &amp; to a literal &."""
+    html = (FIXTURES_DIR / "ch.html").read_text()
+    result = parse_tld_page(html)
+
+    assert result["orgs"]["tld_manager"] == CH_ORG
+    assert result["orgs"]["admin"] == CH_ORG
+    assert result["orgs"]["tech"] == CH_ORG
+
+
+def test_parse_ch_orgs_have_no_raw_entities():
+    """No HTML entity (&amp; etc.) survives into any extracted org string."""
+    html = (FIXTURES_DIR / "ch.html").read_text()
+    orgs = parse_tld_page(html)["orgs"]
+
+    for value in orgs.values():
+        assert "&amp;" not in value
+
+
+def test_parse_ch_orgs_exclude_contact_pii():
+    """Only the org line is extracted; contact name/email/phone are not."""
+    html = (FIXTURES_DIR / "ch.html").read_text()
+    orgs = parse_tld_page(html)["orgs"]
+
+    for value in orgs.values():
+        assert "@" not in value  # no email
+        assert "Voice" not in value and "Fax" not in value
+        assert "SWITCH TLD Administration" not in value  # admin contact role
+        assert "DNS Operations" not in value  # tech contact role
+
+
+def test_parse_xbox_orgs_distinct_admin_and_tech():
+    """Technical contact resolves to the backend operator, distinct from the manager."""
+    html = (FIXTURES_DIR / "xbox.html").read_text()
+    orgs = parse_tld_page(html)["orgs"]
+
+    assert orgs["tld_manager"] == "Microsoft Corporation"
+    assert orgs["admin"] == "Microsoft Corporation"
+    assert orgs["tech"] == "Nominet"
+
+
 # === Nameserver IP address edge case tests ===
 
 

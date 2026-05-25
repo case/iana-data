@@ -2,9 +2,25 @@
 
 from pathlib import Path
 
-from src.parse.root_db_html import derive_type_from_iana_tag, parse_root_db_html
+from src.parse.root_db_html import (
+    derive_type_from_iana_tag,
+    parse_root_db_html,
+    parse_root_db_tlds,
+)
 
 FIXTURES_DIR = Path(__file__).parent.parent / "fixtures" / "source" / "core"
+
+
+def test_parse_root_db_tlds_covers_every_entry():
+    """Names cover every root-DB entry (delegated and retired), with no leading dot."""
+    fixture_path = FIXTURES_DIR / "root.html"
+
+    names = parse_root_db_tlds(fixture_path)
+    entries = parse_root_db_html(fixture_path)
+
+    assert len(names) == len(entries)
+    assert all(not name.startswith(".") for name in names)
+    assert {f".{name}" for name in names} == {entry["domain"] for entry in entries}
 
 
 def test_parse_root_db_html_total_entries():

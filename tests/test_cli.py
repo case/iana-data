@@ -68,7 +68,7 @@ class TestDownloadTldPagesCommand:
         mock_results = {"aaa": "downloaded", "aarp": "downloaded", "abb": "downloaded"}
 
         with (
-            patch("src.cli.parse_tlds_txt", return_value=mock_tlds),
+            patch("src.cli.parse_root_db_tlds", return_value=mock_tlds),
             patch("src.cli.download_tld_pages", return_value=mock_results),
             patch.object(sys, "argv", ["cli", "--download-tld-pages", "a"]),
         ):
@@ -82,7 +82,7 @@ class TestDownloadTldPagesCommand:
         mock_results = {"com": "downloaded", "net": "error"}
 
         with (
-            patch("src.cli.parse_tlds_txt", return_value=mock_tlds),
+            patch("src.cli.parse_root_db_tlds", return_value=mock_tlds),
             patch("src.cli.download_tld_pages", return_value=mock_results),
             patch.object(sys, "argv", ["cli", "--download-tld-pages", "c", "n"]),
         ):
@@ -93,7 +93,7 @@ class TestDownloadTldPagesCommand:
     def test_download_tld_pages_no_tlds_found(self):
         """Test download TLD pages when no TLDs are found."""
         with (
-            patch("src.cli.parse_tlds_txt", return_value=[]),
+            patch("src.cli.parse_root_db_tlds", return_value=[]),
             patch.object(sys, "argv", ["cli", "--download-tld-pages"]),
         ):
             result = main()
@@ -105,7 +105,7 @@ class TestDownloadTldPagesCommand:
         mock_tlds = ["com", "net", "org"]
 
         with (
-            patch("src.cli.parse_tlds_txt", return_value=mock_tlds),
+            patch("src.cli.parse_root_db_tlds", return_value=mock_tlds),
             patch.object(sys, "argv", ["cli", "--download-tld-pages", "z"]),
         ):
             result = main()
@@ -127,7 +127,7 @@ class TestDownloadTldPagesCommand:
         assert len(xn_tlds) == 5
 
         with (
-            patch("src.cli.parse_tlds_txt", return_value=tlds),
+            patch("src.cli.parse_root_db_tlds", return_value=tlds),
             patch("src.cli.download_tld_pages") as mock_download,
             patch.object(sys, "argv", ["cli", "--download-tld-pages", "x"]),
         ):
@@ -151,7 +151,7 @@ class TestDownloadTldPagesCommand:
         xn_tlds = [t for t in tlds if t.startswith("xn--")]
 
         with (
-            patch("src.cli.parse_tlds_txt", return_value=tlds),
+            patch("src.cli.parse_root_db_tlds", return_value=tlds),
             patch("src.cli.download_tld_pages") as mock_download,
             patch.object(sys, "argv", ["cli", "--download-tld-pages", "xn--"]),
         ):
@@ -174,7 +174,7 @@ class TestDownloadTldPagesCommand:
         all_x_tlds = [t for t in tlds if t.startswith("x")]
 
         with (
-            patch("src.cli.parse_tlds_txt", return_value=tlds),
+            patch("src.cli.parse_root_db_tlds", return_value=tlds),
             patch("src.cli.download_tld_pages") as mock_download,
             patch.object(sys, "argv", ["cli", "--download-tld-pages", "x", "xn--"]),
         ):

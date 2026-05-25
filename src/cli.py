@@ -9,7 +9,7 @@ from pathlib import Path
 from .analyze import analyze_rdap_json, analyze_root_db_html, analyze_tlds_txt
 from .build import build_tlds_json
 from .config import IANA_URLS, SOURCE_DIR, SOURCE_FILES, setup_logging
-from .parse import parse_tlds_txt
+from .parse import parse_root_db_tlds
 from .utilities import download_iana_files, download_iptoasn, download_tld_pages
 
 logger = logging.getLogger(__name__)
@@ -205,9 +205,11 @@ def main() -> int:
 
     if getattr(args, "download_tld_pages", None) is not None:
         # Load TLD list from source file
-        all_tlds = parse_tlds_txt()
+        all_tlds = parse_root_db_tlds()
         if not all_tlds:
-            logger.error("No TLDs found. Run --download first to fetch the TLD list.")
+            logger.error(
+                "No TLDs found. Run --download first to fetch the root zone database."
+            )
             return 1
 
         # Filter TLDs by prefix if specified

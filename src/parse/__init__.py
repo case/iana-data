@@ -11,6 +11,7 @@ from .registry_agreement_csv import (
 from .root_db_html import (
     derive_type_from_iana_tag,
     parse_root_db_html,
+    parse_root_db_tlds,
     root_db_html_content_changed,
 )
 from .supplemental_cctld_rdap import parse_supplemental_cctld_rdap
@@ -24,6 +25,7 @@ __all__ = [
     "parse_tlds_txt",
     "tlds_txt_content_changed",
     "parse_root_db_html",
+    "parse_root_db_tlds",
     "root_db_html_content_changed",
     "derive_type_from_iana_tag",
     "parse_rdap_json",

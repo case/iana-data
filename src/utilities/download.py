@@ -151,16 +151,19 @@ def download_tld_pages(
         Dict mapping TLD to status: "downloaded", "error"
     """
     # Lazy imports to avoid circular dependency
-    from ..parse import extract_main_content, parse_tlds_txt
+    from ..parse import extract_main_content, parse_root_db_tlds
 
     if base_dir is None:
         base_dir = Path("data/source/tld-pages")
 
-    # Get TLD list if not provided
+    # Get TLD list if not provided. Source from the root DB (all TLDs the build
+    # iterates), not the delegated-only tlds.txt, so page coverage matches.
     if tlds is None:
-        tlds = parse_tlds_txt()
+        tlds = parse_root_db_tlds()
         if not tlds:
-            logger.error("No TLDs found. Run --download first to fetch the TLD list.")
+            logger.error(
+                "No TLDs found. Run --download first to fetch the root zone database."
+            )
             return {}
 
     # Load metadata
