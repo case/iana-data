@@ -144,8 +144,8 @@ def analyze_by_tld_manager(
             continue
 
         # Get TLD manager and its alias
-        orgs = tld_entry.get("orgs", {})
-        tld_manager = orgs.get("tld_manager", "")
+        orgs = tld_entry.get("orgs", {}).get("iana", {})
+        tld_manager = orgs.get("sponsor", "")
 
         # Check annotations for alias
         annotations = tld_entry.get("annotations", {})
@@ -219,7 +219,7 @@ def analyze_by_tech_contact(
             continue
 
         # Get tech contact
-        orgs = tld_entry.get("orgs", {})
+        orgs = tld_entry.get("orgs", {}).get("iana", {})
         tech = orgs.get("tech", "")
 
         if not tech:
@@ -427,7 +427,7 @@ def analyze_by_nameserver_pattern(tlds_data: dict) -> None:
 
 
 def generate_rdap_probe_candidates(
-    tlds_data: dict, tld_manager_aliases: dict[str, str], as_org_aliases: dict[str, str]
+    tlds_data: dict, as_org_aliases: dict[str, str]
 ) -> None:
     """Generate a list of RDAP URLs to probe for ccTLDs."""
     print_section("RDAP PROBE CANDIDATES")
@@ -447,7 +447,7 @@ def generate_rdap_probe_candidates(
             continue
 
         # Check tech contact
-        orgs = tld_entry.get("orgs", {})
+        orgs = tld_entry.get("orgs", {}).get("iana", {})
         tech = orgs.get("tech", "")
         if tech:
             tech_lower = tech.lower()
@@ -519,7 +519,7 @@ def main() -> None:
     analyze_by_tech_contact(tlds_data, tld_manager_aliases)
     analyze_by_as_org(tlds_data, as_org_aliases)
     analyze_by_nameserver_pattern(tlds_data)
-    generate_rdap_probe_candidates(tlds_data, tld_manager_aliases, as_org_aliases)
+    generate_rdap_probe_candidates(tlds_data, as_org_aliases)
 
     print()
     print("=" * 80)

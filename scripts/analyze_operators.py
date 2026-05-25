@@ -61,11 +61,11 @@ def main() -> None:
     managers: Counter[str] = Counter()
     techs: Counter[str] = Counter()
     for entry in tlds:
-        orgs = entry.get("orgs", {})
-        manager = orgs.get("tld_manager")
+        iana_orgs = entry.get("orgs", {}).get("iana", {})
+        manager = iana_orgs.get("sponsor")
         if manager and manager != "Not assigned":
             managers[manager] += 1
-        tech = orgs.get("tech")
+        tech = iana_orgs.get("tech")
         if tech:
             techs[tech] += 1
 

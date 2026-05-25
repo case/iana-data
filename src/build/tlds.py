@@ -393,12 +393,11 @@ def _build_tld_entry(
     # Derive type from IANA tag
     entry["type"] = derive_type_from_iana_tag(iana_tag)
 
-    # Build orgs object (canonical data only)
+    # Build orgs object (canonical data only), nested by source.
     orgs: dict[str, Any] = {}
     iana_roles: dict[str, str] = {}
     tld_manager_alias = None
     if tld_manager != "Not assigned":
-        orgs["tld_manager"] = tld_manager
         iana_roles["sponsor"] = tld_manager
         # Track alias for annotations (non-canonical, manually curated)
         if tld_manager in tld_manager_aliases:
@@ -407,18 +406,15 @@ def _build_tld_entry(
     tech_alias = None
     if "orgs" in page_data:
         if "admin" in page_data["orgs"]:
-            orgs["admin"] = page_data["orgs"]["admin"]
             iana_roles["admin"] = page_data["orgs"]["admin"]
         if "tech" in page_data["orgs"]:
             tech = page_data["orgs"]["tech"]
-            orgs["tech"] = tech
             iana_roles["tech"] = tech
             if tech in tech_aliases:
                 tech_alias = tech_aliases[tech]
 
-    # The same roles, grouped by their source. The flat fields above are kept
-    # for now and the nested form is added alongside. orgs.icann is present
-    # only for gTLDs (ccTLDs are absent from the ICANN gTLDs report).
+    # Roles grouped by source: orgs.iana from the IANA root DB + per-TLD pages,
+    # orgs.icann from the ICANN gTLDs report (gTLDs only; ccTLDs are absent).
     if iana_roles:
         orgs["iana"] = iana_roles
     if tld in gtld_records:

@@ -143,14 +143,14 @@ def test_build_tlds_json_arpa_is_infrastructure_type(shared_build):
 
 
 def test_build_tlds_json_delegated_status(shared_build):
-    """delegated TLDs have orgs with tld_manager."""
+    """delegated TLDs have orgs.iana with a sponsor."""
     with open(shared_build.tlds_json) as f:
         data = json.load(f)
 
     for tld_entry in data["tlds"]:
         if tld_entry["delegated"]:
             assert "orgs" in tld_entry
-            assert "tld_manager" in tld_entry["orgs"]
+            assert "sponsor" in tld_entry["orgs"]["iana"]
 
 
 def test_build_tlds_json_rdap_servers_present(shared_build):
@@ -271,29 +271,30 @@ def test_build_tlds_json_cctld_overrides(shared_build):
             assert entry["annotations"]["country_name_iso"] == expected_name
 
 
-def test_build_tlds_json_orgs_iana_mirrors_flat_fields(shared_build):
-    """orgs.iana.{sponsor,admin,tech} mirrors the flat orgs.* fields."""
+def test_build_tlds_json_orgs_iana_populated(shared_build):
+    """orgs.iana.{sponsor,admin,tech} carries the IANA per-TLD roles."""
     with open(shared_build.tlds_json) as f:
         data = json.load(f)
 
-    tld_map = {entry["tld"]: entry for entry in data["tlds"]}
-    orgs = tld_map["bestbuy"]["orgs"]
+    iana = {e["tld"]: e for e in data["tlds"]}["bestbuy"]["orgs"]["iana"]
 
-    assert orgs["iana"]["sponsor"] == orgs["tld_manager"]
-    assert orgs["iana"]["admin"] == orgs["admin"]
-    assert orgs["iana"]["tech"] == orgs["tech"]
+    assert iana["sponsor"] == "BBY Solutions, Inc."
+    assert iana["admin"]
+    assert iana["tech"]
 
 
-def test_build_tlds_json_orgs_flat_fields_retained(shared_build):
-    """The flat orgs.* fields stay in place alongside the nested form."""
+def test_build_tlds_json_orgs_flat_fields_removed(shared_build):
+    """The legacy flat orgs.{tld_manager,admin,tech} fields are gone; only the
+    nested orgs.iana / orgs.icann form remains."""
     with open(shared_build.tlds_json) as f:
         data = json.load(f)
 
     orgs = {e["tld"]: e for e in data["tlds"]}["bestbuy"]["orgs"]
 
-    assert orgs["tld_manager"] == "BBY Solutions, Inc."
-    assert "admin" in orgs
-    assert "tech" in orgs
+    assert "tld_manager" not in orgs
+    assert "admin" not in orgs
+    assert "tech" not in orgs
+    assert "iana" in orgs
 
 
 def test_build_tlds_json_no_html_entities_in_any_field(shared_build):
@@ -470,18 +471,22 @@ def test_build_tlds_json_tech_alias_annotation(shared_build):
         "Internet Computer Bureau Limited",
     }
     for entry in id_aliased:
-        tech = entry.get("orgs", {}).get("tech")
+        tech = entry.get("orgs", {}).get("iana", {}).get("tech")
         assert tech in id_raw_names, (
-            f"{entry['tld']} has tech_alias='Identity Digital' but unexpected orgs.tech={tech!r}"
+            f"{entry['tld']} has tech_alias='Identity Digital' but unexpected orgs.iana.tech={tech!r}"
         )
 
     abbott = tld_map.get("abbott")
-    if abbott and abbott.get("orgs", {}).get("tech") == "Identity Digital Limited":
+    if (
+        abbott
+        and abbott.get("orgs", {}).get("iana", {}).get("tech")
+        == "Identity Digital Limited"
+    ):
         assert abbott["annotations"]["tech_alias"] == "Identity Digital"
 
 
 def test_build_tlds_json_tech_alias_only_set_for_known_aliases(shared_build):
-    """A TLD gets annotations.tech_alias iff its orgs.tech is in tech-aliases.json.
+    """A TLD gets annotations.tech_alias iff its orgs.iana.tech is in tech-aliases.json.
 
     Guards against regressions where the alias is set for every TLD,
     hardcoded, or omitted when it should be present.
@@ -492,16 +497,16 @@ def test_build_tlds_json_tech_alias_only_set_for_known_aliases(shared_build):
     tech_aliases = parse_tech_aliases()
 
     for entry in data["tlds"]:
-        tech = entry.get("orgs", {}).get("tech")
+        tech = entry.get("orgs", {}).get("iana", {}).get("tech")
         actual_alias = entry.get("annotations", {}).get("tech_alias")
         if tech and tech in tech_aliases:
             assert actual_alias == tech_aliases[tech], (
-                f"{entry['tld']}: orgs.tech={tech!r} should alias to "
+                f"{entry['tld']}: orgs.iana.tech={tech!r} should alias to "
                 f"{tech_aliases[tech]!r}, got {actual_alias!r}"
             )
         else:
             assert actual_alias is None, (
-                f"{entry['tld']}: orgs.tech={tech!r} is not in tech-aliases.json "
+                f"{entry['tld']}: orgs.iana.tech={tech!r} is not in tech-aliases.json "
                 f"but has annotations.tech_alias={actual_alias!r}"
             )
 
