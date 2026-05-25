@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Societe Centrafricaine de Telecommunications (SOCATEL)",
       "admin": "Societe Centrafricaine de Telecommunications (SOCATEL)",
-      "tech": "Centrafrique TLD B.V."
+      "tech": "Centrafrique TLD B.V.",
+      "iana": {
+        "sponsor": "Societe Centrafricaine de Telecommunications (SOCATEL)",
+        "admin": "Societe Centrafricaine de Telecommunications (SOCATEL)",
+        "tech": "Centrafrique TLD B.V."
+      }
     },
     "nameservers": [
       {
@@ -100,7 +105,8 @@
       "2015-12-29"
     ],
     "annotations": {
-      "country_name_iso": "Central African Republic"
+      "country_name_iso": "Central African Republic",
+      "geographic_scope": "country"
     }
   }
 }

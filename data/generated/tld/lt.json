@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Kaunas University of Technology",
       "admin": "Kaunas University of Technology",
-      "tech": "Kaunas University of Technology"
+      "tech": "Kaunas University of Technology",
+      "iana": {
+        "sponsor": "Kaunas University of Technology",
+        "admin": "Kaunas University of Technology",
+        "tech": "Kaunas University of Technology"
+      }
     },
     "nameservers": [
       {
@@ -127,7 +132,8 @@
       "country_name_iso": "Lithuania",
       "as_org_aliases": [
         "RcodeZero"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

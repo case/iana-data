@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Holy See - Vatican City State",
       "admin": "Department of Telecommunications",
-      "tech": "Department of Telecommunications - Vatican Internet Service Provider"
+      "tech": "Department of Telecommunications - Vatican Internet Service Provider",
+      "iana": {
+        "sponsor": "Holy See - Vatican City State",
+        "admin": "Department of Telecommunications",
+        "tech": "Department of Telecommunications - Vatican Internet Service Provider"
+      }
     },
     "nameservers": [
       {
@@ -117,7 +122,8 @@
       "2024-12-03"
     ],
     "annotations": {
-      "country_name_iso": "Holy See (Vatican City State)"
+      "country_name_iso": "Holy See (Vatican City State)",
+      "geographic_scope": "country"
     }
   }
 }

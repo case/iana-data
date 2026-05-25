@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Tecnisys",
       "admin": "Tecnisys",
-      "tech": "Bahnhof AB"
+      "tech": "Bahnhof AB",
+      "iana": {
+        "sponsor": "Tecnisys",
+        "admin": "Tecnisys",
+        "tech": "Bahnhof AB"
+      }
     },
     "nameservers": [
       {
@@ -103,7 +108,8 @@
       "country_name_iso": "Sao Tome and Principe",
       "as_org_aliases": [
         "Amazon"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

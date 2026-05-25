@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Interpoint Switzerland",
       "admin": "Romuald Bonvin c/o Interpoint Switzerland",
-      "tech": "Frédéric Grégoire c/o Interpoint Domain Plus"
+      "tech": "Frédéric Grégoire c/o Interpoint Domain Plus",
+      "iana": {
+        "sponsor": "Interpoint Switzerland",
+        "admin": "Romuald Bonvin c/o Interpoint Switzerland",
+        "tech": "Frédéric Grégoire c/o Interpoint Domain Plus"
+      }
     },
     "nameservers": [
       {
@@ -121,7 +126,8 @@
       "country_name_iso": "Congo",
       "as_org_aliases": [
         "Packet Clearing House"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

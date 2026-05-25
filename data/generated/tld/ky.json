@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-18T14:25:58Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Utility Regulation and Competition Office (OfReg)",
       "admin": "Utility Regulation and Competition Office (OfReg)",
-      "tech": "Tucows.com, Co."
+      "tech": "Tucows.com, Co.",
+      "iana": {
+        "sponsor": "Utility Regulation and Competition Office (OfReg)",
+        "admin": "Utility Regulation and Competition Office (OfReg)",
+        "tech": "Tucows.com, Co."
+      }
     },
     "nameservers": [
       {
@@ -107,7 +112,8 @@
       "as_org_aliases": [
         "Packet Clearing House",
         "Tucows"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

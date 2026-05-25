@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Government of Montenegro",
       "admin": "University of Montenegro, Faculty of Electrical Engineering",
-      "tech": "Center of Information System (CIS)\nUniversity of Montenegro"
+      "tech": "Center of Information System (CIS)\nUniversity of Montenegro",
+      "iana": {
+        "sponsor": "Government of Montenegro",
+        "admin": "University of Montenegro, Faculty of Electrical Engineering",
+        "tech": "Center of Information System (CIS)\nUniversity of Montenegro"
+      }
     },
     "nameservers": [
       {
@@ -124,7 +129,8 @@
       "country_name_iso": "Montenegro",
       "as_org_aliases": [
         "Identity Digital"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

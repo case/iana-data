@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Macao Post and Telecommunications Bureau (CTT)",
       "admin": "Macao Network Information Centre (MONIC) - HNET Asia",
-      "tech": "Macao Network Information Centre (MONIC) - HNET Asia"
+      "tech": "Macao Network Information Centre (MONIC) - HNET Asia",
+      "iana": {
+        "sponsor": "Macao Post and Telecommunications Bureau (CTT)",
+        "admin": "Macao Network Information Centre (MONIC) - HNET Asia",
+        "tech": "Macao Network Information Centre (MONIC) - HNET Asia"
+      }
     },
     "nameservers": [
       {
@@ -160,7 +165,8 @@
       "country_name_iso": "Macao",
       "as_org_aliases": [
         "CDNS"
-      ]
+      ],
+      "geographic_scope": "country"
     },
     "idn": [
       "xn--mix891f"

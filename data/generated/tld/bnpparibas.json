@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-18T14:25:58Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,23 @@
     "orgs": {
       "tld_manager": "BNP Paribas",
       "admin": "BNP Paribas",
-      "tech": "Identity Digital Limited"
+      "tech": "Identity Digital Limited",
+      "iana": {
+        "sponsor": "BNP Paribas",
+        "admin": "BNP Paribas",
+        "tech": "Identity Digital Limited"
+      },
+      "icann": {
+        "registry_operator": "BNP Paribas",
+        "specification_13": true,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1283-71884",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2014-05-29",
+        "date_delegated": "2014-08-14",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,23 @@
     "orgs": {
       "tld_manager": "The Siam Commercial Bank Public Company Limited (\"SCB\")",
       "admin": "The Siam Commercial Bank Public Company Limited (\"SCB\")",
-      "tech": "Thai Name Server Co., Ltd."
+      "tech": "Thai Name Server Co., Ltd.",
+      "iana": {
+        "sponsor": "The Siam Commercial Bank Public Company Limited (\"SCB\")",
+        "admin": "The Siam Commercial Bank Public Company Limited (\"SCB\")",
+        "tech": "Thai Name Server Co., Ltd."
+      },
+      "icann": {
+        "registry_operator": "The Siam Commercial Bank Public Company Limited (\"SCB\")",
+        "specification_13": true,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1197-50009",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2014-02-20",
+        "date_delegated": "2014-07-11",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-19T03:37:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,23 @@
     "orgs": {
       "tld_manager": "dotCareer LLC",
       "admin": "dotCareer LLC",
-      "tech": "Nominet"
+      "tech": "Nominet",
+      "iana": {
+        "sponsor": "dotCareer LLC",
+        "admin": "dotCareer LLC",
+        "tech": "Nominet"
+      },
+      "icann": {
+        "registry_operator": "dotCareer LLC",
+        "specification_13": false,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-907-61259",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2013-10-09",
+        "date_delegated": "2014-04-11",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {
@@ -21,8 +37,8 @@
         "ipv4": [
           {
             "ip": "213.248.219.121",
-            "asn": 137502,
-            "as_org": "NOMINET-AS-AP NOMINET UK",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
             "as_country": "GB"
           }
         ],
@@ -40,8 +56,8 @@
         "ipv4": [
           {
             "ip": "103.49.83.121",
-            "asn": 137502,
-            "as_org": "NOMINET-AS-AP NOMINET UK",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
             "as_country": "GB"
           }
         ],

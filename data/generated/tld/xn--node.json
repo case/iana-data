@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,7 +16,12 @@
     "orgs": {
       "tld_manager": "Information Technologies Development Center (ITDC)",
       "admin": "Information Technologies Development Center (ITDC)",
-      "tech": "Cloud9 LTD"
+      "tech": "Cloud9 LTD",
+      "iana": {
+        "sponsor": "Information Technologies Development Center (ITDC)",
+        "admin": "Information Technologies Development Center (ITDC)",
+        "tech": "Cloud9 LTD"
+      }
     },
     "nameservers": [
       {
@@ -67,7 +72,8 @@
       "country_name_iso": "Georgia",
       "as_org_aliases": [
         "Packet Clearing House"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

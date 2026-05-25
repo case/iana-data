@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-19T03:37:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Telecommunications Radiocommunications and Broadcasting Regulator (TRBR)",
       "admin": "Telecommunications, Radiocommunications and Broadcasting Regulator (TRBR)",
-      "tech": "GoDaddy Registry"
+      "tech": "GoDaddy Registry",
+      "iana": {
+        "sponsor": "Telecommunications Radiocommunications and Broadcasting Regulator (TRBR)",
+        "admin": "Telecommunications, Radiocommunications and Broadcasting Regulator (TRBR)",
+        "tech": "GoDaddy Registry"
+      }
     },
     "nameservers": [
       {
@@ -40,7 +45,7 @@
         "ipv4": [
           {
             "ip": "37.209.194.6",
-            "asn": 397213,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -141,7 +146,8 @@
       "country_name_iso": "Vanuatu",
       "as_org_aliases": [
         "UltraDNS"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

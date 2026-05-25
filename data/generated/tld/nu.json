@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "The IUSN Foundation",
       "admin": "The IUSN Foundation",
-      "tech": "The Internet Infrastructure Foundation"
+      "tech": "The Internet Infrastructure Foundation",
+      "iana": {
+        "sponsor": "The IUSN Foundation",
+        "admin": "The IUSN Foundation",
+        "tech": "The Internet Infrastructure Foundation"
+      }
     },
     "nameservers": [
       {
@@ -142,7 +147,8 @@
       "as_org_aliases": [
         "CIRA",
         "DENIC"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

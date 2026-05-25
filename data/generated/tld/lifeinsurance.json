@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-19T03:37:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,23 @@
     "orgs": {
       "tld_manager": "American Council of Life Insurers",
       "admin": "American Council of Life Insurers (ACLI)",
-      "tech": "GoDaddy Registry"
+      "tech": "GoDaddy Registry",
+      "iana": {
+        "sponsor": "American Council of Life Insurers",
+        "admin": "American Council of Life Insurers (ACLI)",
+        "tech": "GoDaddy Registry"
+      },
+      "icann": {
+        "registry_operator": "American Council of Life Insurers",
+        "specification_13": false,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1160-79590",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2015-01-15",
+        "date_delegated": "2016-01-19",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {
@@ -40,7 +56,7 @@
         "ipv4": [
           {
             "ip": "37.209.194.9",
-            "asn": 397213,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }

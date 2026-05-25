@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-18T14:25:58Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -12,8 +12,24 @@
     "type": "gtld",
     "orgs": {
       "tld_manager": "BB&T Corporation",
-      "admin": "BB&amp;T Corporation",
-      "tech": "Identity Digital Inc."
+      "admin": "BB&T Corporation",
+      "tech": "Identity Digital Inc.",
+      "iana": {
+        "sponsor": "BB&T Corporation",
+        "admin": "BB&T Corporation",
+        "tech": "Identity Digital Inc."
+      },
+      "icann": {
+        "registry_operator": "BB&T Corporation",
+        "specification_13": true,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1860-74210",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2015-07-23",
+        "date_delegated": "2016-07-15",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {

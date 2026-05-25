@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Autorité de Régulation des Communications Electroniques et des Postes (ARCEP)",
       "admin": "ARCEP",
-      "tech": "C.A.F.E. Informatique et Telecommunications"
+      "tech": "C.A.F.E. Informatique et Telecommunications",
+      "iana": {
+        "sponsor": "Autorité de Régulation des Communications Electroniques et des Postes (ARCEP)",
+        "admin": "ARCEP",
+        "tech": "C.A.F.E. Informatique et Telecommunications"
+      }
     },
     "nameservers": [
       {
@@ -148,7 +153,8 @@
       "2021-03-08"
     ],
     "annotations": {
-      "country_name_iso": "Togo"
+      "country_name_iso": "Togo",
+      "geographic_scope": "country"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,7 +16,12 @@
     "orgs": {
       "tld_manager": "Belarusian Cloud Technologies LLC",
       "admin": "The Operational and Analytical Center under the Aegis of the President of the Republic of Belarus",
-      "tech": "Belarusian Cloud Technologies LLC"
+      "tech": "Belarusian Cloud Technologies LLC",
+      "iana": {
+        "sponsor": "Belarusian Cloud Technologies LLC",
+        "admin": "The Operational and Analytical Center under the Aegis of the President of the Republic of Belarus",
+        "tech": "Belarusian Cloud Technologies LLC"
+      }
     },
     "nameservers": [
       {
@@ -115,7 +120,8 @@
       "2025-01-09"
     ],
     "annotations": {
-      "country_name_iso": "Belarus"
+      "country_name_iso": "Belarus",
+      "geographic_scope": "country"
     }
   }
 }

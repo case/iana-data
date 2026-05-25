@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-18T14:25:58Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,7 +16,12 @@
     "orgs": {
       "tld_manager": "Datacom Co.,Ltd",
       "admin": "Datacom Co.,Ltd",
-      "tech": "Datacom Co.,Ltd"
+      "tech": "Datacom Co.,Ltd",
+      "iana": {
+        "sponsor": "Datacom Co.,Ltd",
+        "admin": "Datacom Co.,Ltd",
+        "tech": "Datacom Co.,Ltd"
+      }
     },
     "nameservers": [
       {
@@ -52,7 +57,8 @@
     ],
     "annotations": {
       "tld_manager_alias": "Datacom",
-      "country_name_iso": "Mongolia"
+      "country_name_iso": "Mongolia",
+      "geographic_scope": "country"
     }
   }
 }

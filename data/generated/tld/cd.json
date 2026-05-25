@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Office Congolais des Postes et Télécommunications - OCPT",
       "admin": "SCPT",
-      "tech": "Office Congolais des Postes et Télécommunications - OCPT"
+      "tech": "Office Congolais des Postes et Télécommunications - OCPT",
+      "iana": {
+        "sponsor": "Office Congolais des Postes et Télécommunications - OCPT",
+        "admin": "SCPT",
+        "tech": "Office Congolais des Postes et Télécommunications - OCPT"
+      }
     },
     "nameservers": [
       {
@@ -62,7 +67,8 @@
       "country_name_iso": "Congo, The Democratic Republic of the",
       "as_org_aliases": [
         "Packet Clearing House"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

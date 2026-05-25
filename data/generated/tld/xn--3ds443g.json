@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-19T03:37:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -15,7 +15,23 @@
     "orgs": {
       "tld_manager": "Beijing TLD Registry Technology Limited",
       "admin": "Beijing TLD Registry Technology Limited",
-      "tech": "Beijing Tele-info Technology Co., Ltd."
+      "tech": "Beijing Tele-info Technology Co., Ltd.",
+      "iana": {
+        "sponsor": "Beijing TLD Registry Technology Limited",
+        "admin": "Beijing TLD Registry Technology Limited",
+        "tech": "Beijing Tele-info Technology Co., Ltd."
+      },
+      "icann": {
+        "registry_operator": "Beijing TLD Registry Technology Limited",
+        "specification_13": false,
+        "third_or_lower_level_registration": false,
+        "application_id": null,
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2013-09-08",
+        "date_delegated": "2014-01-02",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {
@@ -23,8 +39,8 @@
         "ipv4": [
           {
             "ip": "103.61.60.1",
-            "asn": 139137,
-            "as_org": "CAICTNET Chinese Academy of Telecommunication Research",
+            "asn": 138457,
+            "as_org": "CAICT-AS-AP China Academy of Information and Communications Technology",
             "as_country": "CN"
           }
         ],
@@ -94,6 +110,7 @@
         "base",
         "non_sponsored"
       ],
+      "icann_translation_en": "online",
       "as_org_aliases": [
         "Microsoft"
       ]

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -15,7 +15,23 @@
     "orgs": {
       "tld_manager": "Rusnames Limited",
       "admin": "RUSNAMES LIMITED",
-      "tech": "RUSNAMES LIMITED"
+      "tech": "RUSNAMES LIMITED",
+      "iana": {
+        "sponsor": "Rusnames Limited",
+        "admin": "RUSNAMES LIMITED",
+        "tech": "RUSNAMES LIMITED"
+      },
+      "icann": {
+        "registry_operator": "Rusnames Limited",
+        "specification_13": false,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1957-68557",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2013-12-12",
+        "date_delegated": "2014-09-27",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {
@@ -89,6 +105,7 @@
         "community",
         "non_sponsored"
       ],
+      "icann_translation_en": "russian speaking community",
       "as_org_aliases": [
         "Packet Clearing House"
       ]

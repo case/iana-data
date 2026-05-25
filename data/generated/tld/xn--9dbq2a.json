@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-19T03:37:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -15,7 +15,23 @@
     "orgs": {
       "tld_manager": "VeriSign Sarl",
       "admin": "Verisign, Inc.",
-      "tech": "Verisign, Inc."
+      "tech": "Verisign, Inc.",
+      "iana": {
+        "sponsor": "VeriSign Sarl",
+        "admin": "Verisign, Inc.",
+        "tech": "Verisign, Inc."
+      },
+      "icann": {
+        "registry_operator": "VeriSign Sarl",
+        "specification_13": false,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1254-29622",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2015-01-15",
+        "date_delegated": "2015-07-28",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {
@@ -23,16 +39,16 @@
         "ipv4": [
           {
             "ip": "192.42.173.30",
-            "asn": 10515,
-            "as_org": "CLT-NIC",
+            "asn": 397204,
+            "as_org": "VRSN-AC28",
             "as_country": "US"
           }
         ],
         "ipv6": [
           {
             "ip": "2001:500:120::30",
-            "asn": 10515,
-            "as_org": "CLT-NIC",
+            "asn": 397204,
+            "as_org": "VRSN-AC28",
             "as_country": "US"
           }
         ]
@@ -61,16 +77,16 @@
         "ipv4": [
           {
             "ip": "192.42.175.30",
-            "asn": 36623,
-            "as_org": "HGTLD",
+            "asn": 36625,
+            "as_org": "KGTLD",
             "as_country": "US"
           }
         ],
         "ipv6": [
           {
             "ip": "2001:500:122::30",
-            "asn": 36623,
-            "as_org": "HGTLD",
+            "asn": 25485,
+            "as_org": "VERISIGN-AS",
             "as_country": "US"
           }
         ]
@@ -110,6 +126,7 @@
         "base",
         "non_sponsored"
       ],
+      "icann_translation_en": "com",
       "as_org_aliases": [
         "VeriSign"
       ]

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-19T03:37:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,23 @@
     "orgs": {
       "tld_manager": "Ford Motor Company",
       "admin": "Ford Motor Company, IT Operations",
-      "tech": "GoDaddy Registry"
+      "tech": "GoDaddy Registry",
+      "iana": {
+        "sponsor": "Ford Motor Company",
+        "admin": "Ford Motor Company, IT Operations",
+        "tech": "GoDaddy Registry"
+      },
+      "icann": {
+        "registry_operator": "Ford Motor Company",
+        "specification_13": true,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1310-12426",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2014-11-13",
+        "date_delegated": "2015-12-18",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {
@@ -40,7 +56,7 @@
         "ipv4": [
           {
             "ip": "37.209.194.9",
-            "asn": 397213,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }

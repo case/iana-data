@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,7 +16,12 @@
     "orgs": {
       "tld_manager": "Coordination Center for TLD RU",
       "admin": "Coordination Center for TLD RU",
-      "tech": "Technical Center of Internet"
+      "tech": "Technical Center of Internet",
+      "iana": {
+        "sponsor": "Coordination Center for TLD RU",
+        "admin": "Coordination Center for TLD RU",
+        "tech": "Technical Center of Internet"
+      }
     },
     "nameservers": [
       {
@@ -122,7 +127,8 @@
       "2025-10-22"
     ],
     "annotations": {
-      "country_name_iso": "Russian Federation"
+      "country_name_iso": "Russian Federation",
+      "geographic_scope": "country"
     }
   }
 }

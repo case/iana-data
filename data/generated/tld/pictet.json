@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-18T14:25:58Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -12,8 +12,24 @@
     "type": "gtld",
     "orgs": {
       "tld_manager": "Banque Pictet & Cie SA",
-      "admin": "Banque Pictet &amp; Cie SA",
-      "tech": "Identity Digital Inc."
+      "admin": "Banque Pictet & Cie SA",
+      "tech": "Identity Digital Inc.",
+      "iana": {
+        "sponsor": "Banque Pictet & Cie SA",
+        "admin": "Banque Pictet & Cie SA",
+        "tech": "Identity Digital Inc."
+      },
+      "icann": {
+        "registry_operator": "Banque Pictet & Cie SA",
+        "specification_13": true,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1314-50545",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2014-06-26",
+        "date_delegated": "2015-03-07",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {

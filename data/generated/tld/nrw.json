@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-19T03:37:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,23 @@
     "orgs": {
       "tld_manager": "Minds + Machines GmbH",
       "admin": "GoDaddy Registry",
-      "tech": "GoDaddy Registry"
+      "tech": "GoDaddy Registry",
+      "iana": {
+        "sponsor": "Minds + Machines GmbH",
+        "admin": "GoDaddy Registry",
+        "tech": "GoDaddy Registry"
+      },
+      "icann": {
+        "registry_operator": "Minds + Machines GmbH",
+        "specification_13": false,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-994-3470",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2013-11-21",
+        "date_delegated": "2014-07-11",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {
@@ -116,7 +132,7 @@
         "ipv4": [
           {
             "ip": "37.209.194.2",
-            "asn": 397213,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -185,7 +201,8 @@
       "as_org_aliases": [
         "Knipp Medien",
         "UltraDNS"
-      ]
+      ],
+      "geographic_scope": "subdivision"
     }
   }
 }

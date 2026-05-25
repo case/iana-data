@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Register.BG",
       "admin": "Register.BG",
-      "tech": "Register.BG"
+      "tech": "Register.BG",
+      "iana": {
+        "sponsor": "Register.BG",
+        "admin": "Register.BG",
+        "tech": "Register.BG"
+      }
     },
     "nameservers": [
       {
@@ -141,7 +146,8 @@
       "country_name_iso": "Bulgaria",
       "as_org_aliases": [
         "Packet Clearing House"
-      ]
+      ],
+      "geographic_scope": "country"
     },
     "idn": [
       "xn--90ae"

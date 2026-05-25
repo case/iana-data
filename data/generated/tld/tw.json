@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Taiwan Network Information Center (TWNIC)",
       "admin": "Taiwan Network Information Center (TWNIC)",
-      "tech": "Taiwan Network Information Center (TWNIC)"
+      "tech": "Taiwan Network Information Center (TWNIC)",
+      "iana": {
+        "sponsor": "Taiwan Network Information Center (TWNIC)",
+        "admin": "Taiwan Network Information Center (TWNIC)",
+        "tech": "Taiwan Network Information Center (TWNIC)"
+      }
     },
     "nameservers": [
       {
@@ -188,7 +193,8 @@
         "Google",
         "Microsoft",
         "Packet Clearing House"
-      ]
+      ],
+      "geographic_scope": "country"
     },
     "idn": [
       "xn--kprw13d",

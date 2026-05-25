@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-18T14:25:58Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,23 @@
     "orgs": {
       "tld_manager": "Punto 2012 Sociedad Anonima Promotora de Inversion de Capital Variable",
       "admin": "Punto 2012 Sociedad Anonima Promotora de Inversion de Capital Variable",
-      "tech": "Tucows.com, Co."
+      "tech": "Tucows.com, Co.",
+      "iana": {
+        "sponsor": "Punto 2012 Sociedad Anonima Promotora de Inversion de Capital Variable",
+        "admin": "Punto 2012 Sociedad Anonima Promotora de Inversion de Capital Variable",
+        "tech": "Tucows.com, Co."
+      },
+      "icann": {
+        "registry_operator": "Punto 2012 Sociedad Anonima Promotora de Inversion de Capital Variable",
+        "specification_13": false,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1712-32476",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2013-12-19",
+        "date_delegated": "2014-04-02",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {

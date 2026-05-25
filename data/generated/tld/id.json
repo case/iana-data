@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Perkumpulan Pengelola Nama Domain Internet Indonesia (PANDI)",
       "admin": "Perkumpulan Pengelola Nama Domain Internet Indonesia (PANDI)",
-      "tech": "Perkumpulan Pengelola Nama Domain Internet Indonesia (PANDI)"
+      "tech": "Perkumpulan Pengelola Nama Domain Internet Indonesia (PANDI)",
+      "iana": {
+        "sponsor": "Perkumpulan Pengelola Nama Domain Internet Indonesia (PANDI)",
+        "admin": "Perkumpulan Pengelola Nama Domain Internet Indonesia (PANDI)",
+        "tech": "Perkumpulan Pengelola Nama Domain Internet Indonesia (PANDI)"
+      }
     },
     "nameservers": [
       {
@@ -121,7 +126,8 @@
     ],
     "annotations": {
       "rdap_source": "IANA",
-      "country_name_iso": "Indonesia"
+      "country_name_iso": "Indonesia",
+      "geographic_scope": "country"
     }
   }
 }

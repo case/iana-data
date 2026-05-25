@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Telecommunication Tokelau Corporation (Teletok)",
       "admin": "Telecommunication Tokelau Corporation (Teletok)",
-      "tech": "BV Dot TK"
+      "tech": "BV Dot TK",
+      "iana": {
+        "sponsor": "Telecommunication Tokelau Corporation (Teletok)",
+        "admin": "Telecommunication Tokelau Corporation (Teletok)",
+        "tech": "BV Dot TK"
+      }
     },
     "nameservers": [
       {
@@ -100,7 +105,8 @@
       "2019-02-12"
     ],
     "annotations": {
-      "country_name_iso": "Tokelau"
+      "country_name_iso": "Tokelau",
+      "geographic_scope": "country"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Internet Direct Ltd",
       "admin": "Internet Direct Ltd.",
-      "tech": "Internet Direct Ltd"
+      "tech": "Internet Direct Ltd",
+      "iana": {
+        "sponsor": "Internet Direct Ltd",
+        "admin": "Internet Direct Ltd.",
+        "tech": "Internet Direct Ltd"
+      }
     },
     "nameservers": [
       {
@@ -143,7 +148,8 @@
       "country_name_iso": "Mauritius",
       "as_org_aliases": [
         "Identity Digital"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

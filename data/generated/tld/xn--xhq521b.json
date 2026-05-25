@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-19T03:37:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -15,7 +15,23 @@
     "orgs": {
       "tld_manager": "Guangzhou YU Wei Information Technology Co., Ltd.",
       "admin": "Guangzhou YU Wei Information Technology Co., Ltd.",
-      "tech": "Guangzhou YU Wei Information Technology Co., Ltd."
+      "tech": "Guangzhou YU Wei Information Technology Co., Ltd.",
+      "iana": {
+        "sponsor": "Guangzhou YU Wei Information Technology Co., Ltd.",
+        "admin": "Guangzhou YU Wei Information Technology Co., Ltd.",
+        "tech": "Guangzhou YU Wei Information Technology Co., Ltd."
+      },
+      "icann": {
+        "registry_operator": "Guangzhou YU Wei Information Technology Co., Ltd.",
+        "specification_13": false,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1121-17301",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2013-11-14",
+        "date_delegated": "2014-08-14",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {
@@ -42,7 +58,7 @@
         "ipv4": [
           {
             "ip": "42.83.131.1",
-            "asn": 24151,
+            "asn": 24406,
             "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
             "as_country": "CN"
           }
@@ -80,7 +96,7 @@
         "ipv4": [
           {
             "ip": "42.83.133.1",
-            "asn": 24406,
+            "asn": 24151,
             "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
             "as_country": "CN"
           }
@@ -113,6 +129,7 @@
         "base",
         "non_sponsored"
       ],
+      "icann_translation_en": "guangdong",
       "as_org_aliases": [
         "CNNIC"
       ]

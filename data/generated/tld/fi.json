@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Finnish Transport and Communications Agency Traficom",
       "admin": "Finnish Transport and Communications Agency Traficom",
-      "tech": "Finnish Transport and Communications Agency Traficom"
+      "tech": "Finnish Transport and Communications Agency Traficom",
+      "iana": {
+        "sponsor": "Finnish Transport and Communications Agency Traficom",
+        "admin": "Finnish Transport and Communications Agency Traficom",
+        "tech": "Finnish Transport and Communications Agency Traficom"
+      }
     },
     "nameservers": [
       {
@@ -223,7 +228,8 @@
         "DENIC",
         "Packet Clearing House",
         "RcodeZero"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-18T14:25:58Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,23 @@
     "orgs": {
       "tld_manager": "Binky Moon, LLC",
       "admin": "Identity Digital Inc.",
-      "tech": "Identity Digital Limited"
+      "tech": "Identity Digital Limited",
+      "iana": {
+        "sponsor": "Binky Moon, LLC",
+        "admin": "Identity Digital Inc.",
+        "tech": "Identity Digital Limited"
+      },
+      "icann": {
+        "registry_operator": "Binky Moon, LLC",
+        "specification_13": false,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1572-10553",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2013-11-14",
+        "date_delegated": "2014-08-22",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {

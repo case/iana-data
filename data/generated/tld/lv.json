@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "University of Latvia, Institute of Mathematics and Computer Science, Department of Network Solutions (DNS)",
       "admin": "Institute of Mathematics and Computer Science\nDepartment of Network Solutions (DNS)",
-      "tech": "Institute of Mathematics and Computer Science\nDepartment of Network Solutions (DNS)"
+      "tech": "Institute of Mathematics and Computer Science\nDepartment of Network Solutions (DNS)",
+      "iana": {
+        "sponsor": "University of Latvia, Institute of Mathematics and Computer Science, Department of Network Solutions (DNS)",
+        "admin": "Institute of Mathematics and Computer Science\nDepartment of Network Solutions (DNS)",
+        "tech": "Institute of Mathematics and Computer Science\nDepartment of Network Solutions (DNS)"
+      }
     },
     "nameservers": [
       {
@@ -153,7 +158,8 @@
       "country_name_iso": "Latvia",
       "as_org_aliases": [
         "CIRA"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

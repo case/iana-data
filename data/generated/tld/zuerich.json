@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,23 @@
     "orgs": {
       "tld_manager": "Kanton Zürich (Canton of Zurich)",
       "admin": "Kanton Zürich (Canton of Zurich)",
-      "tech": "CentralNic"
+      "tech": "CentralNic",
+      "iana": {
+        "sponsor": "Kanton Zürich (Canton of Zurich)",
+        "admin": "Kanton Zürich (Canton of Zurich)",
+        "tech": "CentralNic"
+      },
+      "icann": {
+        "registry_operator": "Kanton Zürich (Canton of Zurich)",
+        "specification_13": false,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-968-87792",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2014-11-07",
+        "date_delegated": "2014-12-25",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {
@@ -108,7 +124,8 @@
       ],
       "as_org_aliases": [
         "CentralNic"
-      ]
+      ],
+      "geographic_scope": "city"
     }
   }
 }

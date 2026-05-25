@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,23 @@
     "orgs": {
       "tld_manager": "Kuwait Finance House",
       "admin": "Kuwait Finance House",
-      "tech": "Kuwaitnet General Trading &amp; Contracting Co"
+      "tech": "Kuwaitnet General Trading & Contracting Co",
+      "iana": {
+        "sponsor": "Kuwait Finance House",
+        "admin": "Kuwait Finance House",
+        "tech": "Kuwaitnet General Trading & Contracting Co"
+      },
+      "icann": {
+        "registry_operator": "Kuwait Finance House",
+        "specification_13": false,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-2099-6189",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2014-12-04",
+        "date_delegated": "2015-12-15",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {

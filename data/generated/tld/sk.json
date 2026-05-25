@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "SK-NIC, a.s.",
       "admin": "Ministry of Investments, Regional development and Informatization of the Slovak Republic",
-      "tech": "SK-NIC, a.s."
+      "tech": "SK-NIC, a.s.",
+      "iana": {
+        "sponsor": "SK-NIC, a.s.",
+        "admin": "Ministry of Investments, Regional development and Informatization of the Slovak Republic",
+        "tech": "SK-NIC, a.s."
+      }
     },
     "nameservers": [
       {
@@ -103,7 +108,8 @@
       "country_name_iso": "Slovakia",
       "as_org_aliases": [
         "CentralNic"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

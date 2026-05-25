@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,23 @@
     "orgs": {
       "tld_manager": "SEAT, S.A. (Sociedad Unipersonal)",
       "admin": "CORE Association",
-      "tech": "CORE Association"
+      "tech": "CORE Association",
+      "iana": {
+        "sponsor": "SEAT, S.A. (Sociedad Unipersonal)",
+        "admin": "CORE Association",
+        "tech": "CORE Association"
+      },
+      "icann": {
+        "registry_operator": "SEAT, S.A. (Sociedad Unipersonal)",
+        "specification_13": true,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1879-27918",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2014-05-22",
+        "date_delegated": "2015-04-18",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {

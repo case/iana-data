@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-18T14:25:58Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,23 @@
     "orgs": {
       "tld_manager": "UPS Market Driver, Inc.",
       "admin": "UPS Market Driver, Inc.",
-      "tech": "Afilias"
+      "tech": "Afilias",
+      "iana": {
+        "sponsor": "UPS Market Driver, Inc.",
+        "admin": "UPS Market Driver, Inc.",
+        "tech": "Afilias"
+      },
+      "icann": {
+        "registry_operator": "UPS Market Driver, Inc.",
+        "specification_13": true,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1874-94992",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2015-06-25",
+        "date_delegated": "2016-05-31",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {

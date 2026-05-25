@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-19T03:37:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Hong Kong Internet Registration Corporation Ltd.",
       "admin": "Hong Kong Internet Registration Corporation Ltd.",
-      "tech": "Hong Kong Internet Registration Corporation Ltd."
+      "tech": "Hong Kong Internet Registration Corporation Ltd.",
+      "iana": {
+        "sponsor": "Hong Kong Internet Registration Corporation Ltd.",
+        "admin": "Hong Kong Internet Registration Corporation Ltd.",
+        "tech": "Hong Kong Internet Registration Corporation Ltd."
+      }
     },
     "nameservers": [
       {
@@ -59,7 +64,7 @@
         "ipv4": [
           {
             "ip": "125.208.49.10",
-            "asn": 24151,
+            "asn": 24406,
             "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
             "as_country": "CN"
           }
@@ -199,7 +204,8 @@
       "as_org_aliases": [
         "CNNIC",
         "Packet Clearing House"
-      ]
+      ],
+      "geographic_scope": "country"
     },
     "idn": [
       "xn--j6w193g"

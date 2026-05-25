@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "CANAL+ TELECOM",
       "admin": "CANAL+ TELECOM",
-      "tech": "CANAL+ TELECOM"
+      "tech": "CANAL+ TELECOM",
+      "iana": {
+        "sponsor": "CANAL+ TELECOM",
+        "admin": "CANAL+ TELECOM",
+        "tech": "CANAL+ TELECOM"
+      }
     },
     "nameservers": [
       {
@@ -60,7 +65,8 @@
       "2021-10-18"
     ],
     "annotations": {
-      "country_name_iso": "Martinique"
+      "country_name_iso": "Martinique",
+      "geographic_scope": "country"
     }
   }
 }

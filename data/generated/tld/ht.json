@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Consortium FDS/RDDH",
       "admin": "Fondation Réseau de Développement Durable d'Haïti/ Faculté Des Sciences - UEH",
-      "tech": "Faculté des Sciences de l'Université d'Etat d'Haïti/ FRDDH"
+      "tech": "Faculté des Sciences de l'Université d'Etat d'Haïti/ FRDDH",
+      "iana": {
+        "sponsor": "Consortium FDS/RDDH",
+        "admin": "Fondation Réseau de Développement Durable d'Haïti/ Faculté Des Sciences - UEH",
+        "tech": "Faculté des Sciences de l'Université d'Etat d'Haïti/ FRDDH"
+      }
     },
     "nameservers": [
       {
@@ -88,7 +93,8 @@
         "AFNIC",
         "LACTLD",
         "Packet Clearing House"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

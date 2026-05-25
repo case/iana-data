@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-19T03:37:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,23 @@
     "orgs": {
       "tld_manager": "Motion Picture Domain Registry Pty Ltd",
       "admin": "Motion Picture Domain Registry Pty Ltd",
-      "tech": "Motion Picture Domain Registry"
+      "tech": "Motion Picture Domain Registry",
+      "iana": {
+        "sponsor": "Motion Picture Domain Registry Pty Ltd",
+        "admin": "Motion Picture Domain Registry Pty Ltd",
+        "tech": "Motion Picture Domain Registry"
+      },
+      "icann": {
+        "registry_operator": "Motion Picture Domain Registry Pty Ltd",
+        "specification_13": false,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1802-37358",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2015-01-08",
+        "date_delegated": "2015-03-24",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {
@@ -40,7 +56,7 @@
         "ipv4": [
           {
             "ip": "37.209.194.10",
-            "asn": 397213,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -78,7 +94,7 @@
         "ipv4": [
           {
             "ip": "156.154.172.82",
-            "asn": 19905,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -86,7 +102,7 @@
         "ipv6": [
           {
             "ip": "2610:a1:1074::1:82",
-            "asn": 19905,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -97,7 +113,7 @@
         "ipv4": [
           {
             "ip": "156.154.173.82",
-            "asn": 19905,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -105,7 +121,7 @@
         "ipv6": [
           {
             "ip": "2610:a1:1075::1:82",
-            "asn": 19905,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -116,7 +132,7 @@
         "ipv4": [
           {
             "ip": "156.154.174.82",
-            "asn": 19905,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -124,7 +140,7 @@
         "ipv6": [
           {
             "ip": "2610:a1:1076::1:82",
-            "asn": 19905,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }

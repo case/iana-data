@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Ministry of Communications and IT",
       "admin": "Ministry of Communications and IT",
-      "tech": "Ministry of Communications and IT"
+      "tech": "Ministry of Communications and IT",
+      "iana": {
+        "sponsor": "Ministry of Communications and IT",
+        "admin": "Ministry of Communications and IT",
+        "tech": "Ministry of Communications and IT"
+      }
     },
     "nameservers": [
       {
@@ -77,7 +82,8 @@
       "country_name_iso": "Afghanistan",
       "as_org_aliases": [
         "Packet Clearing House"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "SIDN (Stichting Internet Domeinregistratie Nederland)",
       "admin": "SIDN (Stichting Internet Domeinregistratie Nederland)",
-      "tech": "SIDN (Stichting Internet Domeinregistratie Nederland)"
+      "tech": "SIDN (Stichting Internet Domeinregistratie Nederland)",
+      "iana": {
+        "sponsor": "SIDN (Stichting Internet Domeinregistratie Nederland)",
+        "admin": "SIDN (Stichting Internet Domeinregistratie Nederland)",
+        "tech": "SIDN (Stichting Internet Domeinregistratie Nederland)"
+      }
     },
     "nameservers": [
       {
@@ -88,7 +93,8 @@
         "CIRA",
         "RcodeZero",
         "SIDN"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

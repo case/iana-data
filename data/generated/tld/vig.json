@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-18T14:25:58Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,23 @@
     "orgs": {
       "tld_manager": "VIENNA INSURANCE GROUP AG Wiener Versicherung Gruppe",
       "admin": "VIENNA INSURANCE GROUP AG Wiener Versicherung Gruppe",
-      "tech": "Afilias"
+      "tech": "Afilias",
+      "iana": {
+        "sponsor": "VIENNA INSURANCE GROUP AG Wiener Versicherung Gruppe",
+        "admin": "VIENNA INSURANCE GROUP AG Wiener Versicherung Gruppe",
+        "tech": "Afilias"
+      },
+      "icann": {
+        "registry_operator": "VIENNA INSURANCE GROUP AG Wiener Versicherung Gruppe",
+        "specification_13": true,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-918-87536",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2015-05-14",
+        "date_delegated": "2016-04-06",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {

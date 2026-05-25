@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-19T03:37:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -12,8 +12,24 @@
     "type": "gtld",
     "orgs": {
       "tld_manager": "Abu Dhabi Systems and Information Centre",
-      "admin": "Abu Dhabi Systems &amp; Information Centre",
-      "tech": "Telecommunications Regulatory Authority of UAE"
+      "admin": "Abu Dhabi Systems & Information Centre",
+      "tech": "Telecommunications Regulatory Authority of UAE",
+      "iana": {
+        "sponsor": "Abu Dhabi Systems and Information Centre",
+        "admin": "Abu Dhabi Systems & Information Centre",
+        "tech": "Telecommunications Regulatory Authority of UAE"
+      },
+      "icann": {
+        "registry_operator": "Abu Dhabi Systems and Information Centre",
+        "specification_13": false,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1924-90958",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2015-07-30",
+        "date_delegated": "2016-04-06",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {
@@ -40,7 +56,7 @@
         "ipv4": [
           {
             "ip": "37.209.194.10",
-            "asn": 397213,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -107,7 +123,8 @@
       ],
       "as_org_aliases": [
         "UltraDNS"
-      ]
+      ],
+      "geographic_scope": "city"
     }
   }
 }

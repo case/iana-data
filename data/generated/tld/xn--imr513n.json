@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -15,7 +15,23 @@
     "orgs": {
       "tld_manager": "Internet DotTrademark Organisation Limited",
       "admin": "Internet DotTrademark Organisation Limited",
-      "tech": "Internet DotTrademark Organisation Limited"
+      "tech": "Internet DotTrademark Organisation Limited",
+      "iana": {
+        "sponsor": "Internet DotTrademark Organisation Limited",
+        "admin": "Internet DotTrademark Organisation Limited",
+        "tech": "Internet DotTrademark Organisation Limited"
+      },
+      "icann": {
+        "registry_operator": "Internet DotTrademark Organisation Limited",
+        "specification_13": false,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1103-5695",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2014-12-11",
+        "date_delegated": "2015-05-30",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {
@@ -126,6 +142,7 @@
         "base",
         "non_sponsored"
       ],
+      "icann_translation_en": "restaurant",
       "as_org_aliases": [
         "ZDNS"
       ]

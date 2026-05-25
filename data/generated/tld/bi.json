@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Centre National de l'Informatique",
       "admin": "Centre National de l'Informatique",
-      "tech": "Centre National de l'Informatique"
+      "tech": "Centre National de l'Informatique",
+      "iana": {
+        "sponsor": "Centre National de l'Informatique",
+        "admin": "Centre National de l'Informatique",
+        "tech": "Centre National de l'Informatique"
+      }
     },
     "nameservers": [
       {
@@ -108,7 +113,8 @@
       "country_name_iso": "Burundi",
       "as_org_aliases": [
         "Packet Clearing House"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

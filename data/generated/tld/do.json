@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Pontificia Universidad Catolica Madre y Maestra, Recinto Santo Tomas de Aquino",
       "admin": "Pontificia Universidad Catolica Madre y Maestra Campus Santo Tomas de Aquino",
-      "tech": "Pontificia Universidad Catolica Madre y Maestra"
+      "tech": "Pontificia Universidad Catolica Madre y Maestra",
+      "iana": {
+        "sponsor": "Pontificia Universidad Catolica Madre y Maestra, Recinto Santo Tomas de Aquino",
+        "admin": "Pontificia Universidad Catolica Madre y Maestra Campus Santo Tomas de Aquino",
+        "tech": "Pontificia Universidad Catolica Madre y Maestra"
+      }
     },
     "nameservers": [
       {
@@ -161,7 +166,8 @@
       "as_org_aliases": [
         "LACTLD",
         "Packet Clearing House"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

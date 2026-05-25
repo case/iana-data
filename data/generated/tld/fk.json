@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Falkland Islands Government",
       "admin": "Falkland Islands Government",
-      "tech": "Sure South Atlantic Ltd."
+      "tech": "Sure South Atlantic Ltd.",
+      "iana": {
+        "sponsor": "Falkland Islands Government",
+        "admin": "Falkland Islands Government",
+        "tech": "Sure South Atlantic Ltd."
+      }
     },
     "nameservers": [
       {
@@ -59,7 +64,8 @@
       "2024-10-17"
     ],
     "annotations": {
-      "country_name_iso": "Falkland Islands (Malvinas)"
+      "country_name_iso": "Falkland Islands (Malvinas)",
+      "geographic_scope": "country"
     }
   }
 }

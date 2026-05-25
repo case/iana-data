@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-19T03:37:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "SONITEL",
       "admin": "SONITEL",
-      "tech": "SONITEL"
+      "tech": "SONITEL",
+      "iana": {
+        "sponsor": "SONITEL",
+        "admin": "SONITEL",
+        "tech": "SONITEL"
+      }
     },
     "nameservers": [
       {
@@ -41,9 +46,9 @@
         "ipv6": [
           {
             "ip": "2001:67c:e0::101",
-            "asn": 0,
-            "as_org": "Not routed",
-            "as_country": "None"
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
           }
         ]
       },
@@ -85,7 +90,8 @@
       "2023-11-09"
     ],
     "annotations": {
-      "country_name_iso": "Niger"
+      "country_name_iso": "Niger",
+      "geographic_scope": "country"
     }
   }
 }

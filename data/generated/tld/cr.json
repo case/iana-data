@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "National Academy of Sciences (Academia Nacional de Ciencias)",
       "admin": "National Academy of Sciences\nAcademia Nacional de Ciencias",
-      "tech": "National Academy of Sciences Academia Nacional de Ciencias"
+      "tech": "National Academy of Sciences Academia Nacional de Ciencias",
+      "iana": {
+        "sponsor": "National Academy of Sciences (Academia Nacional de Ciencias)",
+        "admin": "National Academy of Sciences\nAcademia Nacional de Ciencias",
+        "tech": "National Academy of Sciences Academia Nacional de Ciencias"
+      }
     },
     "nameservers": [
       {
@@ -146,7 +151,8 @@
         "DENIC",
         "LACTLD",
         "Packet Clearing House"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

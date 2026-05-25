@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-18T14:25:58Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Korea Internet & Security Agency (KISA)",
       "admin": "Korea Network Information Center (KRNIC)",
-      "tech": "Korea Internet &amp; Security Agency (KISA)"
+      "tech": "Korea Internet & Security Agency (KISA)",
+      "iana": {
+        "sponsor": "Korea Internet & Security Agency (KISA)",
+        "admin": "Korea Network Information Center (KRNIC)",
+        "tech": "Korea Internet & Security Agency (KISA)"
+      }
     },
     "nameservers": [
       {
@@ -124,8 +129,8 @@
       "2026-01-07"
     ],
     "annotations": {
-      "tech_alias": "KISA",
-      "country_name_iso": "Korea, Republic of"
+      "country_name_iso": "Korea, Republic of",
+      "geographic_scope": "country"
     },
     "idn": [
       "xn--3e0b707e"

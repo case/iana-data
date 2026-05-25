@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Government of Samoa Ministry of Foreign Affairs & Trade",
       "admin": "Computer Services Ltd.",
-      "tech": "Global Domains International"
+      "tech": "Global Domains International",
+      "iana": {
+        "sponsor": "Government of Samoa Ministry of Foreign Affairs & Trade",
+        "admin": "Computer Services Ltd.",
+        "tech": "Global Domains International"
+      }
     },
     "nameservers": [
       {
@@ -110,7 +115,8 @@
       "2021-05-26"
     ],
     "annotations": {
-      "country_name_iso": "Samoa"
+      "country_name_iso": "Samoa",
+      "geographic_scope": "country"
     }
   }
 }

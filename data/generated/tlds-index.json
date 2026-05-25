@@ -1,6 +1,6 @@
 {
   "description": "Index of per-TLD data files at data/generated/tld/",
-  "publication": "2026-05-23T03:36:42Z",
+  "publication": "2026-05-24T22:45:17Z",
   "count": 1594,
   "tlds": [
     {
@@ -671,7 +671,7 @@
     },
     {
       "tld": "arpa",
-      "type": "gtld",
+      "type": "infrastructure",
       "delegated": true,
       "tld_created": "1985-01-01",
       "tld_updated": [
@@ -12553,7 +12553,7 @@
       "delegated": true,
       "tld_created": "2015-04-30",
       "tld_updated": [
-        "2025-05-01"
+        "2026-02-02"
       ]
     },
     {

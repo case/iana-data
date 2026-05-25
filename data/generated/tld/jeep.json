@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-21T03:40:31Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,23 @@
     "orgs": {
       "tld_manager": "FCA US LLC.",
       "admin": "FCA US LLC.",
-      "tech": "Identity Digital Limited"
+      "tech": "Identity Digital Limited",
+      "iana": {
+        "sponsor": "FCA US LLC.",
+        "admin": "FCA US LLC.",
+        "tech": "Identity Digital Limited"
+      },
+      "icann": {
+        "registry_operator": "FCA US LLC.",
+        "specification_13": true,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-2056-76990",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2015-07-30",
+        "date_delegated": "2016-07-28",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {

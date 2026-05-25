@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-18T14:25:58Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,23 @@
     "orgs": {
       "tld_manager": "Kerry Trading Co. Limited",
       "admin": "Kerry Trading Co. Limited",
-      "tech": "Identity Digital Inc."
+      "tech": "Identity Digital Inc.",
+      "iana": {
+        "sponsor": "Kerry Trading Co. Limited",
+        "admin": "Kerry Trading Co. Limited",
+        "tech": "Identity Digital Inc."
+      },
+      "icann": {
+        "registry_operator": "Kerry Trading Co. Limited",
+        "specification_13": false,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-928-47602",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2015-04-30",
+        "date_delegated": "2016-03-05",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {

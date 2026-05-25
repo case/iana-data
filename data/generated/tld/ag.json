@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-18T14:25:58Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "UHSA School of Medicine",
       "admin": "UHSA School of Medicine",
-      "tech": "Afilias Limited"
+      "tech": "Afilias Limited",
+      "iana": {
+        "sponsor": "UHSA School of Medicine",
+        "admin": "UHSA School of Medicine",
+        "tech": "Afilias Limited"
+      }
     },
     "nameservers": [
       {
@@ -144,7 +149,8 @@
       "country_name_iso": "Antigua and Barbuda",
       "as_org_aliases": [
         "Identity Digital"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

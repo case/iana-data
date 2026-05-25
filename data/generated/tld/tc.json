@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Melrex TC",
       "admin": "TCI Telecommunications Commission",
-      "tech": "NIC TC Internet Hizmetleri A.S."
+      "tech": "NIC TC Internet Hizmetleri A.S.",
+      "iana": {
+        "sponsor": "Melrex TC",
+        "admin": "TCI Telecommunications Commission",
+        "tech": "NIC TC Internet Hizmetleri A.S."
+      }
     },
     "nameservers": [
       {
@@ -148,7 +153,8 @@
       "2026-03-27"
     ],
     "annotations": {
-      "country_name_iso": "Turks and Caicos Islands"
+      "country_name_iso": "Turks and Caicos Islands",
+      "geographic_scope": "country"
     }
   }
 }

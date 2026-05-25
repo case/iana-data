@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "CZ.NIC, z.s.p.o",
       "admin": "CZ.NIC, z.s.p.o.",
-      "tech": "CZ.NIC, z.s.p.o."
+      "tech": "CZ.NIC, z.s.p.o.",
+      "iana": {
+        "sponsor": "CZ.NIC, z.s.p.o",
+        "admin": "CZ.NIC, z.s.p.o.",
+        "tech": "CZ.NIC, z.s.p.o."
+      }
     },
     "nameservers": [
       {
@@ -105,7 +110,8 @@
       "country_name_iso": "Czechia",
       "as_org_aliases": [
         "CZNIC"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

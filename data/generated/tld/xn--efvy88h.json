@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-23T03:36:42Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -15,7 +15,23 @@
     "orgs": {
       "tld_manager": "Guangzhou YU Wei Information and Technology Co.,Ltd",
       "admin": "Guangzhou YU Wei Information and Technology Co.,Ltd",
-      "tech": "Guangzhou YU Wei Information and Technology Co.,Ltd"
+      "tech": "Guangzhou YU Wei Information and Technology Co.,Ltd",
+      "iana": {
+        "sponsor": "Guangzhou YU Wei Information and Technology Co.,Ltd",
+        "admin": "Guangzhou YU Wei Information and Technology Co.,Ltd",
+        "tech": "Guangzhou YU Wei Information and Technology Co.,Ltd"
+      },
+      "icann": {
+        "registry_operator": "Guangzhou YU Wei Information Technology Co., Ltd.",
+        "specification_13": false,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1309-40591",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2014-08-22",
+        "date_delegated": "2015-08-24",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {
@@ -128,6 +144,7 @@
         "base",
         "non_sponsored"
       ],
+      "icann_translation_en": "news",
       "as_org_aliases": [
         "ZDNS"
       ]

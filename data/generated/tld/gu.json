@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "University of Guam",
       "admin": "University of Guam",
-      "tech": "University of Guam"
+      "tech": "University of Guam",
+      "iana": {
+        "sponsor": "University of Guam",
+        "admin": "University of Guam",
+        "tech": "University of Guam"
+      }
     },
     "nameservers": [
       {
@@ -85,7 +90,8 @@
       "2025-09-08"
     ],
     "annotations": {
-      "country_name_iso": "Guam"
+      "country_name_iso": "Guam",
+      "geographic_scope": "country"
     }
   }
 }

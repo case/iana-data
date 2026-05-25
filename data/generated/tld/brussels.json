@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-18T14:25:58Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,23 @@
     "orgs": {
       "tld_manager": "DNS.be vzw",
       "admin": "DNS Belgium vzw",
-      "tech": "DNS Belgium vzw"
+      "tech": "DNS Belgium vzw",
+      "iana": {
+        "sponsor": "DNS.be vzw",
+        "admin": "DNS Belgium vzw",
+        "tech": "DNS Belgium vzw"
+      },
+      "icann": {
+        "registry_operator": "DNS.be vzw",
+        "specification_13": false,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1867-3276",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2014-02-06",
+        "date_delegated": "2014-06-18",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {
@@ -147,7 +163,8 @@
       "as_org_aliases": [
         "RcodeZero",
         "UltraDNS"
-      ]
+      ],
+      "geographic_scope": "city"
     }
   }
 }

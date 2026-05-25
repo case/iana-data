@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Communications and Media Commission (CMC)",
       "admin": "Communications and Media Commission (CMC)",
-      "tech": "Communications and Media Commission (CMC)"
+      "tech": "Communications and Media Commission (CMC)",
+      "iana": {
+        "sponsor": "Communications and Media Commission (CMC)",
+        "admin": "Communications and Media Commission (CMC)",
+        "tech": "Communications and Media Commission (CMC)"
+      }
     },
     "nameservers": [
       {
@@ -97,7 +102,8 @@
       "as_org_aliases": [
         "Packet Clearing House",
         "Tucows"
-      ]
+      ],
+      "geographic_scope": "country"
     },
     "idn": [
       "xn--mgbtx2b"

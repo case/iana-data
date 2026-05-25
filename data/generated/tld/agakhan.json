@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-18T14:25:58Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,23 @@
     "orgs": {
       "tld_manager": "Fondation Aga Khan (Aga Khan Foundation)",
       "admin": "Fondation Aga Khan (Aga Khan Foundation)",
-      "tech": "Afilias"
+      "tech": "Afilias",
+      "iana": {
+        "sponsor": "Fondation Aga Khan (Aga Khan Foundation)",
+        "admin": "Fondation Aga Khan (Aga Khan Foundation)",
+        "tech": "Afilias"
+      },
+      "icann": {
+        "registry_operator": "Fondation Aga Khan (Aga Khan Foundation)",
+        "specification_13": false,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1013-32567",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2015-04-23",
+        "date_delegated": "2016-04-16",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,23 @@
     "orgs": {
       "tld_manager": "Smart Communications, Inc. (SMART)",
       "admin": "Smart Communications, Inc.",
-      "tech": "CentralNic"
+      "tech": "CentralNic",
+      "iana": {
+        "sponsor": "Smart Communications, Inc. (SMART)",
+        "admin": "Smart Communications, Inc.",
+        "tech": "CentralNic"
+      },
+      "icann": {
+        "registry_operator": "Smart Communications, Inc. (SMART)",
+        "specification_13": true,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-2139-55785",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2015-07-09",
+        "date_delegated": "2016-07-15",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-23T03:36:42Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -15,7 +15,23 @@
     "orgs": {
       "tld_manager": "Excellent First Limited",
       "admin": "Excellent First Limited",
-      "tech": "Excellent First Limited"
+      "tech": "Excellent First Limited",
+      "iana": {
+        "sponsor": "Excellent First Limited",
+        "admin": "Excellent First Limited",
+        "tech": "Excellent First Limited"
+      },
+      "icann": {
+        "registry_operator": "Excellent First Limited",
+        "specification_13": false,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-961-6109",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2014-06-12",
+        "date_delegated": "2015-03-31",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {
@@ -128,6 +144,7 @@
         "base",
         "non_sponsored"
       ],
+      "icann_translation_en": "charity",
       "as_org_aliases": [
         "ZDNS"
       ]

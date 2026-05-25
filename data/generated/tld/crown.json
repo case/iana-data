@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-18T14:25:58Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,23 @@
     "orgs": {
       "tld_manager": "Crown Equipment Corporation",
       "admin": "Crown Equipment Corporation",
-      "tech": "Canadian Internet Registration Authority (CIRA)"
+      "tech": "Canadian Internet Registration Authority (CIRA)",
+      "iana": {
+        "sponsor": "Crown Equipment Corporation",
+        "admin": "Crown Equipment Corporation",
+        "tech": "Canadian Internet Registration Authority (CIRA)"
+      },
+      "icann": {
+        "registry_operator": "Crown Equipment Corporation",
+        "specification_13": true,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1277-15200",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2014-10-24",
+        "date_delegated": "2015-06-19",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {

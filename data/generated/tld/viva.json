@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,23 @@
     "orgs": {
       "tld_manager": "Saudi Telecom Company",
       "admin": "CentralNic",
-      "tech": "CentralNic"
+      "tech": "CentralNic",
+      "iana": {
+        "sponsor": "Saudi Telecom Company",
+        "admin": "CentralNic",
+        "tech": "CentralNic"
+      },
+      "icann": {
+        "registry_operator": "Saudi Telecom Company",
+        "specification_13": false,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1933-773",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2014-11-07",
+        "date_delegated": "2015-08-28",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {

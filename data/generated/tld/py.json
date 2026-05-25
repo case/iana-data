@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "NIC-PY",
       "admin": "LED-UCA",
-      "tech": "Centro Nacional de Computación (CNC-UNA)"
+      "tech": "Centro Nacional de Computación (CNC-UNA)",
+      "iana": {
+        "sponsor": "NIC-PY",
+        "admin": "LED-UCA",
+        "tech": "Centro Nacional de Computación (CNC-UNA)"
+      }
     },
     "nameservers": [
       {
@@ -115,7 +120,8 @@
       "as_org_aliases": [
         "LACTLD",
         "Packet Clearing House"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

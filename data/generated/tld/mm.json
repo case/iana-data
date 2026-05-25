@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-19T03:37:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Ministry of Transport and Communications",
       "admin": "Posts and Telecommunications Department",
-      "tech": "Posts and Telecommunications Department"
+      "tech": "Posts and Telecommunications Department",
+      "iana": {
+        "sponsor": "Ministry of Transport and Communications",
+        "admin": "Posts and Telecommunications Department",
+        "tech": "Posts and Telecommunications Department"
+      }
     },
     "nameservers": [
       {
@@ -33,7 +38,7 @@
         "ipv4": [
           {
             "ip": "37.209.194.4",
-            "asn": 397213,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -75,7 +80,8 @@
       "country_name_iso": "Myanmar",
       "as_org_aliases": [
         "UltraDNS"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

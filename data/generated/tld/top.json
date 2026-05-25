@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-19T03:37:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -12,8 +12,24 @@
     "type": "gtld",
     "orgs": {
       "tld_manager": "Hong Kong Zhongze International Limited",
-      "admin": "Jiangsu Bangning Science &amp; technology Co.,Ltd.",
-      "tech": "Jiangsu Bangning Science &amp; technology Co.,Ltd."
+      "admin": "Jiangsu Bangning Science & technology Co.,Ltd.",
+      "tech": "Jiangsu Bangning Science & technology Co.,Ltd.",
+      "iana": {
+        "sponsor": "Hong Kong Zhongze International Limited",
+        "admin": "Jiangsu Bangning Science & technology Co.,Ltd.",
+        "tech": "Jiangsu Bangning Science & technology Co.,Ltd."
+      },
+      "icann": {
+        "registry_operator": "Hong Kong Zhongze International Limited",
+        "specification_13": false,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1935-70970",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2014-03-20",
+        "date_delegated": "2014-08-03",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {
@@ -69,17 +85,17 @@
         "ipv4": [
           {
             "ip": "203.119.82.1",
-            "asn": 24149,
-            "as_org": "ZDNS Internet Domain Name System Beijing Engineering Resrarch Center Ltd.",
-            "as_country": "CN"
+            "asn": 0,
+            "as_org": "Not routed",
+            "as_country": "None"
           }
         ],
         "ipv6": [
           {
             "ip": "2401:8d00:15::1",
-            "asn": 24149,
-            "as_org": "ZDNS Internet Domain Name System Beijing Engineering Resrarch Center Ltd.",
-            "as_country": "CN"
+            "asn": 0,
+            "as_org": "Not routed",
+            "as_country": "None"
           }
         ]
       },

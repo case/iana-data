@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-18T14:25:58Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,23 @@
     "orgs": {
       "tld_manager": "HDFC Bank Limited",
       "admin": "HDFC Bank Limited",
-      "tech": "Afilias"
+      "tech": "Afilias",
+      "iana": {
+        "sponsor": "HDFC Bank Limited",
+        "admin": "HDFC Bank Limited",
+        "tech": "Afilias"
+      },
+      "icann": {
+        "registry_operator": "HDFC BANK LIMITED",
+        "specification_13": true,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1307-93169",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2015-02-12",
+        "date_delegated": "2016-02-11",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {

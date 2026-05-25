@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Autoridade Reguladora Nacional - Tecnologias de Informação e Comunicação da Guiné-Bissau",
       "admin": "Autoridade Reguladora Nacional - Tecnologias de Informação e Comunicação da Guiné-Bissau",
-      "tech": "Associação DNS.PT (DNS.PT)"
+      "tech": "Associação DNS.PT (DNS.PT)",
+      "iana": {
+        "sponsor": "Autoridade Reguladora Nacional - Tecnologias de Informação e Comunicação da Guiné-Bissau",
+        "admin": "Autoridade Reguladora Nacional - Tecnologias de Informação e Comunicação da Guiné-Bissau",
+        "tech": "Associação DNS.PT (DNS.PT)"
+      }
     },
     "nameservers": [
       {
@@ -82,7 +87,8 @@
       "country_name_iso": "Guinea-Bissau",
       "as_org_aliases": [
         "Packet Clearing House"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

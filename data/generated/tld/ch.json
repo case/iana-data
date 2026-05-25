@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -12,8 +12,13 @@
     "type": "cctld",
     "orgs": {
       "tld_manager": "SWITCH The Swiss Education & Research Network",
-      "admin": "SWITCH The Swiss Education &amp; Research Network",
-      "tech": "SWITCH The Swiss Education &amp; Research Network"
+      "admin": "SWITCH The Swiss Education & Research Network",
+      "tech": "SWITCH The Swiss Education & Research Network",
+      "iana": {
+        "sponsor": "SWITCH The Swiss Education & Research Network",
+        "admin": "SWITCH The Swiss Education & Research Network",
+        "tech": "SWITCH The Swiss Education & Research Network"
+      }
     },
     "nameservers": [
       {
@@ -125,7 +130,8 @@
       "as_org_aliases": [
         "Packet Clearing House",
         "RcodeZero"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

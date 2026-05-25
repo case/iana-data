@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -10,6 +10,19 @@
     "delegated": false,
     "iana_tag": "generic",
     "type": "gtld",
+    "orgs": {
+      "icann": {
+        "registry_operator": null,
+        "specification_13": null,
+        "third_or_lower_level_registration": null,
+        "application_id": null,
+        "registry_operator_country_code": null,
+        "date_contract_signed": null,
+        "date_delegated": "2015-12-03",
+        "contract_terminated": true,
+        "date_removed": "2020-07-17"
+      }
+    },
     "tld_created": "2015-09-24",
     "tld_updated": [
       "2020-07-17"

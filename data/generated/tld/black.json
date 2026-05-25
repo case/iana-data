@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-18T14:25:58Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,23 @@
     "orgs": {
       "tld_manager": "Identity Digital Limited",
       "admin": "Identity Digital Limited",
-      "tech": "Identity Digital Limited"
+      "tech": "Identity Digital Limited",
+      "iana": {
+        "sponsor": "Identity Digital Limited",
+        "admin": "Identity Digital Limited",
+        "tech": "Identity Digital Limited"
+      },
+      "icann": {
+        "registry_operator": "Identity Digital Domains Limited",
+        "specification_13": false,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-868-74058",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2014-01-16",
+        "date_delegated": "2014-03-27",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Norid A/S",
       "admin": "Norid A/S",
-      "tech": "Norid A/S"
+      "tech": "Norid A/S",
+      "iana": {
+        "sponsor": "Norid A/S",
+        "admin": "Norid A/S",
+        "tech": "Norid A/S"
+      }
     },
     "nameservers": [
       {
@@ -137,7 +142,8 @@
       "2022-01-14"
     ],
     "annotations": {
-      "country_name_iso": "Svalbard and Jan Mayen"
+      "country_name_iso": "Svalbard and Jan Mayen",
+      "geographic_scope": "country"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-19T03:37:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -15,7 +15,23 @@
     "orgs": {
       "tld_manager": "Amazon Registry Services, Inc.",
       "admin": "Amazon Registry Services, Inc",
-      "tech": "Nominet"
+      "tech": "Nominet",
+      "iana": {
+        "sponsor": "Amazon Registry Services, Inc.",
+        "admin": "Amazon Registry Services, Inc",
+        "tech": "Nominet"
+      },
+      "icann": {
+        "registry_operator": "Amazon Registry Services, Inc.",
+        "specification_13": true,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1318-5591",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2019-12-19",
+        "date_delegated": "2020-06-02",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {
@@ -23,8 +39,8 @@
         "ipv4": [
           {
             "ip": "213.248.218.91",
-            "asn": 137502,
-            "as_org": "NOMINET-AS-AP NOMINET UK",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
             "as_country": "GB"
           }
         ],
@@ -42,8 +58,8 @@
         "ipv4": [
           {
             "ip": "103.49.82.91",
-            "asn": 137502,
-            "as_org": "NOMINET-AS-AP NOMINET UK",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
             "as_country": "GB"
           }
         ],
@@ -185,6 +201,7 @@
         "brand",
         "non_sponsored"
       ],
+      "icann_translation_en": "amazon",
       "as_org_aliases": [
         "Nominet",
         "UltraDNS"

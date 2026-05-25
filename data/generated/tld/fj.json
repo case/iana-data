@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "The University of the South Pacific\nIT Services",
       "admin": "The University of the South Pacific, IT Services",
-      "tech": "The University of the South Pacific, IT Services"
+      "tech": "The University of the South Pacific, IT Services",
+      "iana": {
+        "sponsor": "The University of the South Pacific\nIT Services",
+        "admin": "The University of the South Pacific, IT Services",
+        "tech": "The University of the South Pacific, IT Services"
+      }
     },
     "nameservers": [
       {
@@ -110,7 +115,8 @@
       "country_name_iso": "Fiji",
       "as_org_aliases": [
         "Packet Clearing House"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

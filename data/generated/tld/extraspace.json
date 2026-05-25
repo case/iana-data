@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-18T14:25:58Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,23 @@
     "orgs": {
       "tld_manager": "Extra Space Storage LLC",
       "admin": "FairWinds Partners",
-      "tech": "Afilias"
+      "tech": "Afilias",
+      "iana": {
+        "sponsor": "Extra Space Storage LLC",
+        "admin": "FairWinds Partners",
+        "tech": "Afilias"
+      },
+      "icann": {
+        "registry_operator": "Extra Space Storage LLC",
+        "specification_13": true,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1688-1352",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2015-05-14",
+        "date_delegated": "2016-03-25",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -12,8 +12,24 @@
     "type": "gtld",
     "orgs": {
       "tld_manager": "Schwarz Domains und Services GmbH & Co. KG",
-      "admin": "Schwarz IT GmbH &amp; Co. KG",
-      "tech": "CentralNic"
+      "admin": "Schwarz IT GmbH & Co. KG",
+      "tech": "CentralNic",
+      "iana": {
+        "sponsor": "Schwarz Domains und Services GmbH & Co. KG",
+        "admin": "Schwarz IT GmbH & Co. KG",
+        "tech": "CentralNic"
+      },
+      "icann": {
+        "registry_operator": "Schwarz Domains und Services GmbH & Co. KG",
+        "specification_13": true,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1123-60314",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2014-09-18",
+        "date_delegated": "2014-12-13",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {

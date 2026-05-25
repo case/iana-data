@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "SeCIU - Universidad de la Republica",
       "admin": "Servicio Central de Informatica (SECIU)",
-      "tech": "Servicio Central de Informatica (SECIU)"
+      "tech": "Servicio Central de Informatica (SECIU)",
+      "iana": {
+        "sponsor": "SeCIU - Universidad de la Republica",
+        "admin": "Servicio Central de Informatica (SECIU)",
+        "tech": "Servicio Central de Informatica (SECIU)"
+      }
     },
     "nameservers": [
       {
@@ -154,7 +159,8 @@
       "as_org_aliases": [
         "Identity Digital",
         "LACTLD"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

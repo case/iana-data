@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -15,7 +15,23 @@
     "orgs": {
       "tld_manager": "Jiang Yu Liang Cai Technology Company Limited",
       "admin": "Second Generation, LLC",
-      "tech": "Jiang Yu Liang Cai Technology Company Limited"
+      "tech": "Jiang Yu Liang Cai Technology Company Limited",
+      "iana": {
+        "sponsor": "Jiang Yu Liang Cai Technology Company Limited",
+        "admin": "Second Generation, LLC",
+        "tech": "Jiang Yu Liang Cai Technology Company Limited"
+      },
+      "icann": {
+        "registry_operator": "Jiang Yu Liang Cai Technology Company Limited",
+        "specification_13": false,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1158-95080",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2017-08-06",
+        "date_delegated": "2018-01-24",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {
@@ -126,6 +142,7 @@
         "base",
         "non_sponsored"
       ],
+      "icann_translation_en": "recruitment",
       "as_org_aliases": [
         "ZDNS"
       ]

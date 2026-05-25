@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-19T03:37:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,23 @@
     "orgs": {
       "tld_manager": "Academic Institution: Kyoto Jyoho Gakuen",
       "admin": "GMO Registry",
-      "tech": "GMO Registry"
+      "tech": "GMO Registry",
+      "iana": {
+        "sponsor": "Academic Institution: Kyoto Jyoho Gakuen",
+        "admin": "GMO Registry",
+        "tech": "GMO Registry"
+      },
+      "icann": {
+        "registry_operator": "Academic Institution: Kyoto Jyoho Gakuen",
+        "specification_13": false,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1716-31099",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2014-11-07",
+        "date_delegated": "2015-01-28",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {
@@ -40,7 +56,7 @@
         "ipv4": [
           {
             "ip": "37.209.194.4",
-            "asn": 397213,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -101,7 +117,8 @@
       ],
       "as_org_aliases": [
         "UltraDNS"
-      ]
+      ],
+      "geographic_scope": "city"
     }
   }
 }

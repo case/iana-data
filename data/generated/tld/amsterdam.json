@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,23 @@
     "orgs": {
       "tld_manager": "Gemeente Amsterdam",
       "admin": "SIDN (Stichting Internet Domeinregistratie Nederland)",
-      "tech": "SIDN (Stichting Internet Domeinregistratie Nederland)"
+      "tech": "SIDN (Stichting Internet Domeinregistratie Nederland)",
+      "iana": {
+        "sponsor": "Gemeente Amsterdam",
+        "admin": "SIDN (Stichting Internet Domeinregistratie Nederland)",
+        "tech": "SIDN (Stichting Internet Domeinregistratie Nederland)"
+      },
+      "icann": {
+        "registry_operator": "Gemeente Amsterdam",
+        "specification_13": false,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1322-54903",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2014-07-24",
+        "date_delegated": "2014-12-25",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {
@@ -91,7 +107,8 @@
         "CIRA",
         "RcodeZero",
         "SIDN"
-      ]
+      ],
+      "geographic_scope": "city"
     }
   }
 }

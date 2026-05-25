@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-18T14:25:58Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -12,8 +12,24 @@
     "type": "gtld",
     "orgs": {
       "tld_manager": "SEW-EURODRIVE GmbH & Co KG",
-      "admin": "SEW-EURODRIVE GmbH &amp; Co KG",
-      "tech": "Afilias Limited"
+      "admin": "SEW-EURODRIVE GmbH & Co KG",
+      "tech": "Afilias Limited",
+      "iana": {
+        "sponsor": "SEW-EURODRIVE GmbH & Co KG",
+        "admin": "SEW-EURODRIVE GmbH & Co KG",
+        "tech": "Afilias Limited"
+      },
+      "icann": {
+        "registry_operator": "SEW-EURODRIVE GmbH & Co KG",
+        "specification_13": true,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-849-59039",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2014-07-17",
+        "date_delegated": "2014-12-13",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {

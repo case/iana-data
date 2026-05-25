@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,7 +16,12 @@
     "orgs": {
       "tld_manager": "Lao National Internet Center (LANIC), Ministry of Technology and Communications",
       "admin": "Lao National Internet Center (LANIC)",
-      "tech": "Lao National Internet Center (LANIC)"
+      "tech": "Lao National Internet Center (LANIC)",
+      "iana": {
+        "sponsor": "Lao National Internet Center (LANIC), Ministry of Technology and Communications",
+        "admin": "Lao National Internet Center (LANIC)",
+        "tech": "Lao National Internet Center (LANIC)"
+      }
     },
     "nameservers": [
       {
@@ -106,7 +111,8 @@
       "country_name_iso": "Lao People's Democratic Republic",
       "as_org_aliases": [
         "CentralNic"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

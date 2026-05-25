@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,7 +16,12 @@
     "orgs": {
       "tld_manager": "Agence Nationale de Réglementation des Télécommunications (ANRT)",
       "admin": "Agence Nationale de Réglementation des Télécommunications (ANRT)",
-      "tech": "Agence Nationale de Réglementation des Télécommunications (ANRT)"
+      "tech": "Agence Nationale de Réglementation des Télécommunications (ANRT)",
+      "iana": {
+        "sponsor": "Agence Nationale de Réglementation des Télécommunications (ANRT)",
+        "admin": "Agence Nationale de Réglementation des Télécommunications (ANRT)",
+        "tech": "Agence Nationale de Réglementation des Télécommunications (ANRT)"
+      }
     },
     "nameservers": [
       {
@@ -179,7 +184,8 @@
       "country_name_iso": "Morocco",
       "as_org_aliases": [
         "AFNIC"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

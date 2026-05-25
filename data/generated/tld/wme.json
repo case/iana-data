@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,23 @@
     "orgs": {
       "tld_manager": "William Morris Endeavor Entertainment, LLC",
       "admin": "CentralNic",
-      "tech": "CentralNic"
+      "tech": "CentralNic",
+      "iana": {
+        "sponsor": "William Morris Endeavor Entertainment, LLC",
+        "admin": "CentralNic",
+        "tech": "CentralNic"
+      },
+      "icann": {
+        "registry_operator": "William Morris Endeavor Entertainment, LLC",
+        "specification_13": true,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-930-41059",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2014-02-13",
+        "date_delegated": "2014-09-10",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {

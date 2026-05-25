@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,23 @@
     "orgs": {
       "tld_manager": "Firmdale Holdings Limited",
       "admin": "Firmdale Hotels",
-      "tech": "Qinetics Solutions Sdn Bhd"
+      "tech": "Qinetics Solutions Sdn Bhd",
+      "iana": {
+        "sponsor": "Firmdale Holdings Limited",
+        "admin": "Firmdale Hotels",
+        "tech": "Qinetics Solutions Sdn Bhd"
+      },
+      "icann": {
+        "registry_operator": "Firmdale Holdings Limited",
+        "specification_13": false,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1818-23087",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2014-03-27",
+        "date_delegated": "2014-11-20",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {

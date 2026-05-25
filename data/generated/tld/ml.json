@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Agence des Technologies de l’Information et de la Communication",
       "admin": "Agence des Technologies de l’Information et de la Communication",
-      "tech": "Agence des Technologies de l'Information et de la Communication"
+      "tech": "Agence des Technologies de l'Information et de la Communication",
+      "iana": {
+        "sponsor": "Agence des Technologies de l’Information et de la Communication",
+        "admin": "Agence des Technologies de l’Information et de la Communication",
+        "tech": "Agence des Technologies de l'Information et de la Communication"
+      }
     },
     "nameservers": [
       {
@@ -98,7 +103,8 @@
       "country_name_iso": "Mali",
       "as_org_aliases": [
         "Packet Clearing House"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-19T03:37:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,7 +16,12 @@
     "orgs": {
       "tld_manager": "China Internet Network Information Center (CNNIC)",
       "admin": "China Internet Network Information Center (CNNIC)",
-      "tech": "China Internet Network Information Center (CNNIC)"
+      "tech": "China Internet Network Information Center (CNNIC)",
+      "iana": {
+        "sponsor": "China Internet Network Information Center (CNNIC)",
+        "admin": "China Internet Network Information Center (CNNIC)",
+        "tech": "China Internet Network Information Center (CNNIC)"
+      }
     },
     "nameservers": [
       {
@@ -24,7 +29,7 @@
         "ipv4": [
           {
             "ip": "125.208.32.1",
-            "asn": 24406,
+            "asn": 24151,
             "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
             "as_country": "CN"
           }
@@ -43,7 +48,7 @@
         "ipv4": [
           {
             "ip": "125.208.33.1",
-            "asn": 24409,
+            "asn": 24406,
             "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
             "as_country": "CN"
           }
@@ -51,7 +56,7 @@
         "ipv6": [
           {
             "ip": "2001:dc7:ffff::1",
-            "asn": 24406,
+            "asn": 24409,
             "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
             "as_country": "CN"
           }
@@ -89,7 +94,7 @@
         "ipv6": [
           {
             "ip": "2001:dc7:fffc::1",
-            "asn": 24151,
+            "asn": 24406,
             "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
             "as_country": "CN"
           }
@@ -127,7 +132,8 @@
       "country_name_iso": "China",
       "as_org_aliases": [
         "CNNIC"
-      ]
+      ],
+      "geographic_scope": "country"
     }
   }
 }

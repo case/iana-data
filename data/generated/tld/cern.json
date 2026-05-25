@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-18T14:25:58Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,23 @@
     "orgs": {
       "tld_manager": "European Organization for Nuclear Research (\"CERN\")",
       "admin": "European Organization for Nuclear Research (\"CERN\")",
-      "tech": "Afilias"
+      "tech": "Afilias",
+      "iana": {
+        "sponsor": "European Organization for Nuclear Research (\"CERN\")",
+        "admin": "European Organization for Nuclear Research (\"CERN\")",
+        "tech": "Afilias"
+      },
+      "icann": {
+        "registry_operator": "European Organization for Nuclear Research (\"CERN\")",
+        "specification_13": true,
+        "third_or_lower_level_registration": false,
+        "application_id": "1-1082-60500",
+        "registry_operator_country_code": null,
+        "date_contract_signed": "2014-06-05",
+        "date_delegated": "2014-08-16",
+        "contract_terminated": false,
+        "date_removed": null
+      }
     },
     "nameservers": [
       {

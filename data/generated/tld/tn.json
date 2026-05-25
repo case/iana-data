@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-24T22:45:17Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,12 @@
     "orgs": {
       "tld_manager": "Agence Tunisienne d'Internet",
       "admin": "Agence Tunisienne d'Internet",
-      "tech": "Agence Tunisienne d'Internet"
+      "tech": "Agence Tunisienne d'Internet",
+      "iana": {
+        "sponsor": "Agence Tunisienne d'Internet",
+        "admin": "Agence Tunisienne d'Internet",
+        "tech": "Agence Tunisienne d'Internet"
+      }
     },
     "nameservers": [
       {
@@ -142,7 +147,8 @@
       "as_org_aliases": [
         "AFNIC",
         "Packet Clearing House"
-      ]
+      ],
+      "geographic_scope": "country"
     },
     "idn": [
       "xn--pgbs0dh"
