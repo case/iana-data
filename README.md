@@ -130,13 +130,26 @@ Here is its schema:
       "idn": ["string"],                   // Array of IDN variants of this ccTLD (e.g. ["xn--fiqs8s", "xn--fiqz9s"]) [OPTIONAL - ISO ccTLDs only]
       "delegated": boolean,                // true if TLD Manager is assigned, false if "Not assigned"; removed/retired TLDs are retained with false [REQUIRED]
       "iana_tag": "string",                // IANA tag: "generic" | "country-code" | "sponsored" | "infrastructure" | "generic-restricted" | "test" [REQUIRED]
-      "type": "string",                    // Derived type: "gtld" | "cctld" [REQUIRED]
+      "type": "string",                    // Derived type: "gtld" | "cctld" | "infrastructure" [REQUIRED]
 
-      // --- Organizations (canonical data from IANA) ---
+      // --- Organizations (canonical data, nested by source) ---
       "orgs": {                            // Organizations associated with this TLD [OPTIONAL - omit if undelegated]
-        "tld_manager": "string",           // TLD Manager name from IANA Root Zone Database [REQUIRED if orgs present]
-        "admin": "string",                 // Administrative Contact organization [OPTIONAL - omit if empty]
-        "tech": "string"                   // Technical Contact organization [OPTIONAL - omit if empty]
+        "iana": {                          // Roles per the IANA Root Zone Database + per-TLD pages [OPTIONAL - omit if none]
+          "sponsor": "string",             // Sponsoring Organisation (TLD Manager) [REQUIRED if iana present]
+          "admin": "string",               // Administrative Contact organization [OPTIONAL - omit if empty]
+          "tech": "string"                 // Technical Contact organization [OPTIONAL - omit if empty]
+        },
+        "icann": {                         // Fields from the ICANN gTLDs Report [OPTIONAL - gTLDs only, omit otherwise]
+          "registry_operator": "string",   // Registry Operator name [null if no active contract]
+          "specification_13": boolean,     // true for .Brand TLDs (Specification 13) [null if no active contract]
+          "third_or_lower_level_registration": boolean, // true only for .museum/.name/.pro [null if no active contract]
+          "application_id": "string",      // ICANN new-gTLD application ID [null if not applicable]
+          "registry_operator_country_code": "string", // ISO country code of the operator [null if absent]
+          "date_contract_signed": "string", // Registry Agreement signature date (YYYY-MM-DD) [null if absent]
+          "date_delegated": "string",      // Root-zone delegation date (YYYY-MM-DD; 1985-01-01 backfill = pre-ICANN legacy) [null if absent]
+          "contract_terminated": boolean,  // true if the Registry Agreement was terminated [always present]
+          "date_removed": "string"         // Root-zone removal date (YYYY-MM-DD); pairs with contract_terminated [null if active]
+        }
       },
 
       // --- Name Servers ---
@@ -194,8 +207,15 @@ Here is its schema:
         // Geographic metadata (derived from ISO 3166)
         "country_name_iso": "string",      // ISO 3166 country name (e.g. "Taiwan", "United States")
 
+        // Geographic scope (ccTLDs derive "country"; the rest are hand-curated in data/manual/annotations.json)
+        "geographic_scope": "string",      // "city" | "subdivision" | "country" | "supranational" [OPTIONAL - omit if not applicable]
+
+        // Cultural affiliation (hand-curated, from data/manual/annotations.json)
+        "cultural_affiliation": "string",  // Culture slug (e.g. "basque", "arab") [OPTIONAL - omit if none]
+
         // ICANN Registry Agreement metadata (gTLDs only)
         "registry_agreement_types": ["string"], // Array of agreement types: "base" | "brand" | "community" | "sponsored" | "non_sponsored"
+        "icann_translation_en": "string",  // ICANN's raw English Translation of an IDN label, source-faithful [OPTIONAL - IDN gTLDs only]
 
         // AS Org aliases (DNS infrastructure providers, from data/manual/as-org-aliases.json)
         "as_org_aliases": ["string"],      // Array of canonical DNS provider names for nameserver infrastructure (e.g. ["CentralNic"], ["Identity Digital", "VeriSign"])
@@ -270,7 +290,7 @@ Dependencies:
 ### Later
 
 - [ ] Add provenance (`source` URLs) for the remaining `null`-source alias entries in `data/manual/tld-manager-aliases.json` and `data/manual/tech-aliases.json` — currently only the non-obvious lineage merges cite a source
-- [ ] Continue canonicalising the long tail of `tld_manager` and `orgs.tech` operator names (mostly ccTLD/NIC operators and dotBrand corporates) — `scripts/analyze_operators.py` ranks the unaliased candidates. The two alias files should evolve together so canonical names stay aligned (enforced by `tests/integration/test_alias_consistency.py`)
+- [ ] Continue canonicalising the long tail of `tld_manager` and `orgs.iana.tech` operator names (mostly ccTLD/NIC operators and dotBrand corporates) — `scripts/analyze_operators.py` ranks the unaliased candidates. The two alias files should evolve together so canonical names stay aligned (enforced by `tests/integration/test_alias_consistency.py`)
 - [ ] Annotation - IDN meanings & language, maybe could derive from the individual TLD web pages?
 - [ ] Annotation - `open` or `closed` TLDs (needs discovery; may be addressed by the `brand` registry type annotation?)
 - [ ] Script to create a Sqlite db from the data - maybe purely from client side? E.g. JS could generate it "on the fly"?
