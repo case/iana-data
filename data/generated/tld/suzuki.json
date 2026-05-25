@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T04:50:15Z",
+  "publication": "2026-05-25T17:27:52Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -107,7 +107,10 @@
       "2019-08-27"
     ],
     "annotations": {
-      "tech_alias": "GMO Registry",
+      "iana_admin_alias": "GMO Registry",
+      "iana_admin_slug": "gmo-registry",
+      "iana_tech_alias": "GMO Registry",
+      "iana_tech_slug": "gmo-registry",
       "rdap_source": "IANA",
       "registry_agreement_types": [
         "base",
@@ -116,6 +119,9 @@
       ],
       "as_org_aliases": [
         "UltraDNS"
+      ],
+      "as_org_slugs": [
+        "ultradns"
       ]
     }
   }

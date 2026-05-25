@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T04:50:15Z",
+  "publication": "2026-05-25T17:27:52Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -152,7 +152,14 @@
       "2024-07-18"
     ],
     "annotations": {
-      "tld_manager_alias": "GoDaddy Registry",
+      "iana_sponsor_alias": "GoDaddy Registry",
+      "iana_sponsor_slug": "godaddy-registry",
+      "iana_admin_alias": "GoDaddy Registry",
+      "iana_admin_slug": "godaddy-registry",
+      "iana_tech_alias": "GoDaddy Registry",
+      "iana_tech_slug": "godaddy-registry",
+      "icann_registry_operator_alias": "GoDaddy Registry",
+      "icann_registry_operator_slug": "godaddy-registry",
       "rdap_source": "IANA",
       "registry_agreement_types": [
         "base",
@@ -160,6 +167,9 @@
       ],
       "as_org_aliases": [
         "UltraDNS"
+      ],
+      "as_org_slugs": [
+        "ultradns"
       ]
     }
   }

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T04:50:15Z",
+  "publication": "2026-05-25T17:27:52Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -114,8 +114,14 @@
       "2026-03-10"
     ],
     "annotations": {
-      "tld_manager_alias": "DotCooperation",
-      "tech_alias": "Tucows Registry",
+      "iana_sponsor_alias": "DotCooperation",
+      "iana_sponsor_slug": "dot-cooperation",
+      "iana_admin_alias": "DotCooperation",
+      "iana_admin_slug": "dot-cooperation",
+      "iana_tech_alias": "Tucows",
+      "iana_tech_slug": "tucows",
+      "icann_registry_operator_alias": "DotCooperation",
+      "icann_registry_operator_slug": "dot-cooperation",
       "rdap_source": "IANA",
       "registry_agreement_types": [
         "community",
@@ -124,6 +130,10 @@
       "as_org_aliases": [
         "Packet Clearing House",
         "Tucows"
+      ],
+      "as_org_slugs": [
+        "packet-clearing-house",
+        "tucows"
       ]
     }
   }

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T04:50:15Z",
+  "publication": "2026-05-25T17:27:52Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -103,11 +103,15 @@
       "2026-03-24"
     ],
     "annotations": {
-      "tech_alias": "VeriSign",
+      "iana_tech_alias": "VeriSign",
+      "iana_tech_slug": "verisign",
       "rdap_source": "IANA",
       "country_name_iso": "Cocos (Keeling) Islands",
       "as_org_aliases": [
         "VeriSign"
+      ],
+      "as_org_slugs": [
+        "verisign"
       ],
       "geographic_scope": "country"
     }

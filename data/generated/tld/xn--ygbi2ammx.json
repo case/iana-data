@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T04:50:15Z",
+  "publication": "2026-05-25T17:27:52Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -137,6 +137,9 @@
       "country_name_iso": "Palestine, State of",
       "as_org_aliases": [
         "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "packet-clearing-house"
       ],
       "geographic_scope": "country"
     }
