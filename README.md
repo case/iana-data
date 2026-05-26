@@ -246,6 +246,18 @@ Every TLD is identified by its **A-label** — the ASCII form, including `xn--` 
 
 The **U-label** — the rendered Unicode form (e.g. `москва`) — is display-only and appears solely in the `tld_unicode` field, alongside the A-label, never as a key or reference. Consumers that render a name resolve the A-label to `tld_unicode`; they never key on it.
 
+## The typed graph
+
+Alongside `tlds.json`, the build ships four derived reverse-index artifacts that model the root zone as a typed graph of four entity types plus one enum:
+
+- **Domains** — the TLDs themselves (`tlds.json`).
+- **Organizations** — registries, governance bodies, and infrastructure operators (`organizations.json`).
+- **Places** — countries, dependent territories, subdivisions, cities, and supranational regions (`places.json`).
+- **Cultures** — ethno-linguistic communities like the Basques or Welsh (`cultures.json`).
+- **Agreement types** — the ICANN registry-agreement enum (`agreements.json`).
+
+Each TLD relates to one or more Organizations through *roles* (Sponsor, Administrative Contact, Technical Contact, and — for gTLDs — ICANN Registry Operator), to zero or more Places (most ccTLDs map to one country; geographic gTLDs map to a city, subdivision, country, or supranational region), to an optional Culture, and to its agreement types. Each derived artifact is a deterministic reverse index of `tlds.json`: delete it and `make build` rebuilds it. Every cross-file relationship is enforced by referential-integrity tests, so a foreign key can never dangle and no record is ever orphaned.
+
 ## `organizations.json`
 
 The `data/generated/organizations.json` file is the canonical record of the organizations that play roles for TLDs, with a reverse-index of those roles. It is built from a hand-curated identity seed (`data/manual/organizations.json`) joined against `tlds.json`, and replaces the old per-role alias files.
@@ -253,6 +265,24 @@ The `data/generated/organizations.json` file is the canonical record of the orga
 Each org carries an editorial `display_name` and a stable kebab-case `slug` (the foreign key the `tlds.json` annotations point at via `*_slug`), the verbatim `source_names` each source records (grouped `iana` / `icann` / `asn`), hand-added historical `aliases`, a `homepage`, and a generated `roles` reverse-index grouped by source: `iana.{sponsor,admin,tech}`, `icann.{registry_operator}`, `asn.{operator}`. Entity type and TLD counts are derivable from `roles`, so they are not stored. `orgs[]` is sorted by `slug`.
 
 > **Consolidated subset:** this currently covers the curated multi-source organizations only. The single-source long tail (orgs that appear under one exact name in one source) is not yet included, so the absence of a TLD's operator here does not mean it has none.
+
+## `places.json`
+
+The `data/generated/places.json` file is the canonical record of the places associated with TLDs, with a reverse-index of their TLDs. Countries are derived mechanically from ccTLDs (ISO 3166-1 via `pycountry`); subdivisions, cities, and supranational regions come from a hand-curated seed (`data/manual/places.json`).
+
+Each place carries a stable `slug` (ISO 3166-1 alpha-2 for countries, e.g. `gb`; a recognizable short name for subdivisions, e.g. `basque-country`; the TLD for cities, e.g. `amsterdam`), an English `name_en`, a `subtype` (`country` / `subdivision` / `city` / `supranational`), the `iso_code` where one exists, a `parent` slug for hierarchy (subdivision/city → country; dependent territory → sovereign), an optional `info_link`, and the `tlds` reverse index. A sparse `iso_designation` field carries ISO 3166-1 status for the special cases: `dependent_territory` (e.g. `bm` → `gb`), `exceptionally_reserved` (`ac`), `transitionally_reserved` (`su`), and `special_area` (`aq`). `places[]` is sorted by `slug`.
+
+The United Kingdom is one place slugged `gb` (its ISO alpha-2), carrying both `.gb` and `.uk`; IDN ccTLDs fold into their country (e.g. `xn--p1ai` joins `ru`). Slugs and `tlds` are A-labels/ASCII; Unicode rendering is left to consumers.
+
+## `cultures.json`
+
+The `data/generated/cultures.json` file records the ethno-linguistic communities that at least one TLD claims affiliation with, with a reverse-index of their TLDs. It is built from a hand-curated seed (`data/manual/cultures.json`) joined against each TLD's `cultural_affiliation` annotation.
+
+Each culture carries a stable `slug` (the foreign key `cultural_affiliation` points at), an English `name_en`, an `info_link` to Wikipedia, an optional ISO 639 `language_code`, and the `tlds` reverse index. `cultures[]` is sorted by `slug`. The schema is intentionally minimal: descriptions and cross-artifact links belong on the canonical source (Wikipedia via `info_link`), not duplicated here.
+
+## `agreements.json`
+
+The `data/generated/agreements.json` file is the ICANN registry-agreement-type enum with a reverse-index of the gTLDs under each. Each record carries a canonical `slug` (`base` / `non_sponsored` / `brand` / `community` / `sponsored`), a friendly `display_name`, the verbatim ICANN string under `source_names.icann`, and the `tlds` reverse index. `agreements[]` is sorted by `slug`.
 
 ## Local usage
 
