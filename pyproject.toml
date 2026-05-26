@@ -17,6 +17,7 @@ required-version = ">=0.10"
 
 [dependency-groups]
 dev = [
+    "langcodes==3.5.1",
     "pydeps==3.0.6",
     "pyright>=1.1.409",
     "pytest>=9.0.3",

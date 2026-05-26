@@ -46,6 +46,7 @@ from ..utilities.file_io import read_json_file
 from ..utilities.urls import get_tld_file_path
 from .agreements import build_agreements_json
 from .cultures import build_cultures_json
+from .idn_language import derive_language
 from .organizations import build_organizations_json
 from .places import build_places_json
 
@@ -603,6 +604,12 @@ def _build_tld_entry(
         annotations["geographic_scope"] = geographic_scope
     if manual.get("cultural_affiliation"):
         annotations["cultural_affiliation"] = manual["cultural_affiliation"]
+
+    language = derive_language(
+        entry.get("tld_script"), entry.get("tld_iso"), manual.get("language_code")
+    )
+    if language is not None:
+        annotations["language_code"], annotations["language_name_en"] = language
 
     if annotations:
         entry["annotations"] = annotations

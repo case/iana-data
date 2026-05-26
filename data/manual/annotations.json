@@ -64,8 +64,17 @@
   "wales": {"geographic_scope": "subdivision", "cultural_affiliation": "welsh"},
   "wien": {"geographic_scope": "city"},
   "xn--80adxhks": {"geographic_scope": "city"},
+  "xn--fiqs8s": {"language_code": "zh-Hans"},
+  "xn--fiqz9s": {"language_code": "zh-Hant"},
+  "xn--j6w193g": {"language_code": "zh-Hant"},
+  "xn--kprw13d": {"language_code": "zh-Hant-TW"},
+  "xn--kpry57d": {"language_code": "zh-Hant-TW"},
   "xn--mgbca7dzdo": {"geographic_scope": "city"},
+  "xn--mix891f": {"language_code": "zh-Hant"},
   "xn--ngbrx": {"cultural_affiliation": "arab"},
+  "xn--vermgensberater-ctb": {"language_code": "de"},
+  "xn--vermgensberatung-pwb": {"language_code": "de"},
+  "xn--yfro4i67o": {"language_code": "zh-Hans"},
   "yokohama": {"geographic_scope": "city"},
   "zuerich": {"geographic_scope": "city"}
 }
