@@ -9,9 +9,14 @@ from pathlib import Path
 from typing import Any
 
 from ..config import (
+    AGREEMENTS_OUTPUT_FILE,
+    CULTURES_OUTPUT_FILE,
     IANA_URLS,
     IDN_SCRIPT_MAPPING_FILE,
+    MANUAL_DIR,
+    MANUAL_FILES,
     ORGANIZATIONS_OUTPUT_FILE,
+    PLACES_OUTPUT_FILE,
     TLD_DIR,
     TLD_PAGES_DIR,
     TLDS_INDEX_FILE,
@@ -37,8 +42,12 @@ from ..parse.supplemental_cctld_rdap import parse_supplemental_cctld_rdap
 from ..parse.tld_html import parse_tld_page
 from ..utilities.content_changed import write_json_if_changed
 from ..utilities.download import get_iptoasn_path
+from ..utilities.file_io import read_json_file
 from ..utilities.urls import get_tld_file_path
+from .agreements import build_agreements_json
+from .cultures import build_cultures_json
 from .organizations import build_organizations_json
+from .places import build_places_json
 
 logger = logging.getLogger(__name__)
 
@@ -55,6 +64,9 @@ class OutputPaths:
     tlds_index: Path
     tld_dir: Path
     organizations_json: Path
+    places_json: Path
+    cultures_json: Path
+    agreements_json: Path
 
     @classmethod
     def from_config(cls) -> "OutputPaths":
@@ -63,6 +75,9 @@ class OutputPaths:
             tlds_index=Path(TLDS_INDEX_FILE),
             tld_dir=Path(TLD_DIR),
             organizations_json=Path(ORGANIZATIONS_OUTPUT_FILE),
+            places_json=Path(PLACES_OUTPUT_FILE),
+            cultures_json=Path(CULTURES_OUTPUT_FILE),
+            agreements_json=Path(AGREEMENTS_OUTPUT_FILE),
         )
 
 
@@ -89,6 +104,15 @@ def build_tlds_json(output_paths: OutputPaths | None = None) -> dict:
     manual_annotations = parse_manual_annotations()
     manual_orgs = parse_organizations_manual()
     resolver = build_resolver(manual_orgs)
+    manual_places = read_json_file(
+        Path(MANUAL_DIR) / MANUAL_FILES["PLACES"], default={}
+    )
+    dependent_territories = read_json_file(
+        Path(MANUAL_DIR) / MANUAL_FILES["DEPENDENT_TERRITORIES"], default={}
+    )
+    manual_cultures = read_json_file(
+        Path(MANUAL_DIR) / MANUAL_FILES["CULTURES"], default={}
+    )
 
     # Load IDN script mappings
     idn_script_mapping = {}
@@ -233,9 +257,43 @@ def build_tlds_json(output_paths: OutputPaths | None = None) -> dict:
         }
     logger.info("tlds-index.json: %s (changed=%s)", index_status, index_changed)
 
-    build_organizations_json(
-        tlds, manual_orgs, resolver, output_paths.organizations_json
-    )
+    # Reverse-index artifacts. Each is called sequentially and short-circuits
+    # on a write error (same idiom as the core artifacts above), so make build
+    # never reports success with a partial dataset.
+    artifact_calls = [
+        (
+            "organizations.json",
+            lambda: build_organizations_json(
+                tlds, manual_orgs, resolver, output_paths.organizations_json
+            ),
+        ),
+        (
+            "agreements.json",
+            lambda: build_agreements_json(tlds, output_paths.agreements_json),
+        ),
+        (
+            "places.json",
+            lambda: build_places_json(
+                tlds, manual_places, dependent_territories, output_paths.places_json
+            ),
+        ),
+        (
+            "cultures.json",
+            lambda: build_cultures_json(
+                tlds, manual_cultures, output_paths.cultures_json
+            ),
+        ),
+    ]
+    for name, call in artifact_calls:
+        _changed, artifact_status = call()
+        if artifact_status == "error":
+            return {
+                "total_tlds": len(tlds),
+                "output_file": str(output_paths.tlds_json),
+                "file_size": output_paths.tlds_json.stat().st_size,
+                "changed": changed,
+                "error": f"Failed to write {name}",
+            }
 
     logger.info(f"Successfully built {len(tlds)} TLD entries")
     return {
@@ -526,11 +584,18 @@ def _build_tld_entry(
 
     # Editorial per-TLD annotations. geographic_scope falls back to "country"
     # for ccTLDs (the only mechanically derivable level); everything else is
-    # hand-curated and absent when it does not apply.
+    # hand-curated and absent when it does not apply. An IDN ccTLD inherits its
+    # country's scope so .eu's IDN variants read as supranational, not country.
     manual = manual_annotations.get(tld, {})
     geographic_scope = manual.get("geographic_scope")
     if geographic_scope is None and iana_tag == "country-code":
-        geographic_scope = "country"
+        parent_iso = entry.get("tld_iso")
+        parent_scope = (
+            manual_annotations.get(parent_iso.lower(), {}).get("geographic_scope")
+            if parent_iso
+            else None
+        )
+        geographic_scope = parent_scope or "country"
     if geographic_scope:
         annotations["geographic_scope"] = geographic_scope
     if manual.get("cultural_affiliation"):
