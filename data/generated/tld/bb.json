@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T04:50:15Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,15 @@
         "admin": "Ministry of Innovation, Science and Smart Technology",
         "tech": "Ministry of Innovation, Science and Smart Technology"
       }
+    },
+    "registry_url": "http://www.whois.telecoms.gov.bb/",
+    "tld_created": "1991-09-03",
+    "tld_updated": [
+      "2026-05-22"
+    ],
+    "annotations": {
+      "country_name_iso": "Barbados",
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -94,15 +103,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.whois.telecoms.gov.bb/",
-    "tld_created": "1991-09-03",
-    "tld_updated": [
-      "2026-05-22"
-    ],
-    "annotations": {
-      "country_name_iso": "Barbados",
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

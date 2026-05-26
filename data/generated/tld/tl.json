@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,22 @@
         "admin": "Autoridade Nacional  de Comunicações (ANC) of Timor-Leste",
         "tech": "CoCCA Registry Services (NZ) Limited"
       }
+    },
+    "registry_url": "http://www.nic.tl",
+    "whois_server": "whois.nic.tl",
+    "tld_created": "2005-03-23",
+    "tld_updated": [
+      "2022-11-21"
+    ],
+    "annotations": {
+      "country_name_iso": "Timor-Leste",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -68,22 +84,6 @@
         ],
         "ipv6": []
       }
-    ],
-    "registry_url": "http://www.nic.tl",
-    "whois_server": "whois.nic.tl",
-    "tld_created": "2005-03-23",
-    "tld_updated": [
-      "2022-11-21"
-    ],
-    "annotations": {
-      "country_name_iso": "Timor-Leste",
-      "as_org_aliases": [
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

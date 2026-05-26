@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,26 @@
         "admin": "VCS Pty Ltd",
         "tech": "Identity Digital"
       }
+    },
+    "registry_url": "http://www.nic.sc",
+    "whois_server": "whois.nic.sc",
+    "rdap_server": "https://rdap.identitydigital.services/rdap/",
+    "tld_created": "1997-05-09",
+    "tld_updated": [
+      "2025-09-09"
+    ],
+    "annotations": {
+      "iana_tech_alias": "Identity Digital",
+      "iana_tech_slug": "identity-digital",
+      "rdap_source": "supplemental",
+      "country_name_iso": "Seychelles",
+      "as_org_aliases": [
+        "Identity Digital"
+      ],
+      "as_org_slugs": [
+        "identity-digital"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -144,26 +164,6 @@
         ],
         "ipv6": []
       }
-    ],
-    "registry_url": "http://www.nic.sc",
-    "whois_server": "whois.nic.sc",
-    "rdap_server": "https://rdap.identitydigital.services/rdap/",
-    "tld_created": "1997-05-09",
-    "tld_updated": [
-      "2025-09-09"
-    ],
-    "annotations": {
-      "iana_tech_alias": "Identity Digital",
-      "iana_tech_slug": "identity-digital",
-      "rdap_source": "supplemental",
-      "country_name_iso": "Seychelles",
-      "as_org_aliases": [
-        "Identity Digital"
-      ],
-      "as_org_slugs": [
-        "identity-digital"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

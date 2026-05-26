@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,22 @@
         "admin": "Kaunas University of Technology",
         "tech": "Kaunas University of Technology"
       }
+    },
+    "registry_url": "http://www.domreg.lt",
+    "whois_server": "whois.domreg.lt",
+    "tld_created": "1992-06-03",
+    "tld_updated": [
+      "2026-05-01"
+    ],
+    "annotations": {
+      "country_name_iso": "Lithuania",
+      "as_org_aliases": [
+        "RcodeZero"
+      ],
+      "as_org_slugs": [
+        "rcodezero"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -118,22 +134,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.domreg.lt",
-    "whois_server": "whois.domreg.lt",
-    "tld_created": "1992-06-03",
-    "tld_updated": [
-      "2026-05-01"
-    ],
-    "annotations": {
-      "country_name_iso": "Lithuania",
-      "as_org_aliases": [
-        "RcodeZero"
-      ],
-      "as_org_slugs": [
-        "rcodezero"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

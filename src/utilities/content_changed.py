@@ -11,6 +11,10 @@ from typing import Any
 logger = logging.getLogger(__name__)
 
 
+def _canonical_json(data: dict[str, Any], indent: int) -> str:
+    return json.dumps(data, indent=indent, ensure_ascii=False)
+
+
 def write_json_if_changed(
     filepath: Path | str,
     data: dict[str, Any],
@@ -18,13 +22,12 @@ def write_json_if_changed(
     indent: int = 2,
 ) -> tuple[bool, str]:
     """
-    Write JSON file only if content has actually changed, atomically.
+    Write JSON file only if its serialized output would differ, atomically.
 
-    Compares new data with existing file, ignoring specified fields
-    (typically timestamps). If content is unchanged, keeps the existing
-    file and timestamp. If content has changed, writes via a same-directory
-    temp file plus os.replace so a mid-write failure cannot leave a torn
-    or truncated file on disk.
+    Compares serialized JSON (not parsed dicts) so key-order changes are
+    detected. ``exclude_fields`` strips top-level keys (e.g. timestamps)
+    before comparing. On change, writes via a same-directory temp file plus
+    os.replace.
 
     Args:
         filepath: Path to JSON file to write
@@ -64,7 +67,6 @@ def write_json_if_changed(
             logger.error("Error writing file %s: %s", filepath, write_error)
             return (False, "error")
 
-    # Compare content, excluding specified fields
     new_data_compare = deepcopy(data)
     existing_data_compare = deepcopy(existing_data)
 
@@ -72,7 +74,9 @@ def write_json_if_changed(
         new_data_compare.pop(field, None)
         existing_data_compare.pop(field, None)
 
-    if new_data_compare == existing_data_compare:
+    if _canonical_json(new_data_compare, indent) == _canonical_json(
+        existing_data_compare, indent
+    ):
         logger.debug(
             "Content unchanged for %s (excluding %s)", filepath, exclude_fields
         )

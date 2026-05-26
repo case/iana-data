@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -27,6 +27,33 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "registry_url": "https://www.identity.digital/",
+    "rdap_server": "https://rdap.identitydigital.services/rdap/",
+    "tld_created": "2014-05-08",
+    "tld_updated": [
+      "2025-09-25"
+    ],
+    "annotations": {
+      "iana_sponsor_alias": "Identity Digital",
+      "iana_sponsor_slug": "identity-digital",
+      "iana_admin_alias": "Identity Digital",
+      "iana_admin_slug": "identity-digital",
+      "iana_tech_alias": "Identity Digital",
+      "iana_tech_slug": "identity-digital",
+      "icann_registry_operator_alias": "Identity Digital",
+      "icann_registry_operator_slug": "identity-digital",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "Identity Digital"
+      ],
+      "as_org_slugs": [
+        "identity-digital"
+      ]
     },
     "nameservers": [
       {
@@ -143,33 +170,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://www.identity.digital/",
-    "rdap_server": "https://rdap.identitydigital.services/rdap/",
-    "tld_created": "2014-05-08",
-    "tld_updated": [
-      "2025-09-25"
-    ],
-    "annotations": {
-      "iana_sponsor_alias": "Identity Digital",
-      "iana_sponsor_slug": "identity-digital",
-      "iana_admin_alias": "Identity Digital",
-      "iana_admin_slug": "identity-digital",
-      "iana_tech_alias": "Identity Digital",
-      "iana_tech_slug": "identity-digital",
-      "icann_registry_operator_alias": "Identity Digital",
-      "icann_registry_operator_slug": "identity-digital",
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "as_org_aliases": [
-        "Identity Digital"
-      ],
-      "as_org_slugs": [
-        "identity-digital"
-      ]
-    }
+    ]
   }
 }

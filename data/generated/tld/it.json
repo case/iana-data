@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,22 @@
         "admin": "IIT - CNR",
         "tech": "IIT - CNR"
       }
+    },
+    "registry_url": "https://www.nic.it/",
+    "whois_server": "whois.nic.it",
+    "tld_created": "1987-12-23",
+    "tld_updated": [
+      "2025-12-17"
+    ],
+    "annotations": {
+      "country_name_iso": "Italy",
+      "as_org_aliases": [
+        "RcodeZero"
+      ],
+      "as_org_slugs": [
+        "rcodezero"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -132,22 +148,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://www.nic.it/",
-    "whois_server": "whois.nic.it",
-    "tld_created": "1987-12-23",
-    "tld_updated": [
-      "2025-12-17"
-    ],
-    "annotations": {
-      "country_name_iso": "Italy",
-      "as_org_aliases": [
-        "RcodeZero"
-      ],
-      "as_org_slugs": [
-        "rcodezero"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T04:50:15Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,16 @@
         "admin": "Institute for Research in Fundamental Sciences (IPM)",
         "tech": "Institute for Research in Fundamental Sciences (IPM)"
       }
+    },
+    "registry_url": "http://www.nic.ir",
+    "whois_server": "whois.nic.ir",
+    "tld_created": "1994-04-06",
+    "tld_updated": [
+      "2026-05-14"
+    ],
+    "annotations": {
+      "country_name_iso": "Iran, Islamic Republic of",
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -95,16 +105,6 @@
         ]
       }
     ],
-    "registry_url": "http://www.nic.ir",
-    "whois_server": "whois.nic.ir",
-    "tld_created": "1994-04-06",
-    "tld_updated": [
-      "2026-05-14"
-    ],
-    "annotations": {
-      "country_name_iso": "Iran, Islamic Republic of",
-      "geographic_scope": "country"
-    },
     "idn": [
       "xn--mgba3a4f16a"
     ]

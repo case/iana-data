@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,24 @@
         "admin": "Telecommunications, Radiocommunications and Broadcasting Regulator (TRBR)",
         "tech": "GoDaddy Registry"
       }
+    },
+    "registry_url": "http://www.hello.vu",
+    "whois_server": "whois.dnrs.vu",
+    "tld_created": "1995-04-10",
+    "tld_updated": [
+      "2025-09-05"
+    ],
+    "annotations": {
+      "iana_tech_alias": "GoDaddy Registry",
+      "iana_tech_slug": "godaddy-registry",
+      "country_name_iso": "Vanuatu",
+      "as_org_aliases": [
+        "UltraDNS"
+      ],
+      "as_org_slugs": [
+        "ultradns"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -132,24 +150,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.hello.vu",
-    "whois_server": "whois.dnrs.vu",
-    "tld_created": "1995-04-10",
-    "tld_updated": [
-      "2025-09-05"
-    ],
-    "annotations": {
-      "iana_tech_alias": "GoDaddy Registry",
-      "iana_tech_slug": "godaddy-registry",
-      "country_name_iso": "Vanuatu",
-      "as_org_aliases": [
-        "UltraDNS"
-      ],
-      "as_org_slugs": [
-        "ultradns"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -27,6 +27,35 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "registry_url": "http://www.ibm.com",
+    "whois_server": "whois.nic.ibm",
+    "rdap_server": "https://rdap.nic.ibm/",
+    "tld_created": "2014-09-25",
+    "tld_updated": [
+      "2023-11-30"
+    ],
+    "annotations": {
+      "iana_sponsor_alias": "IBM",
+      "iana_sponsor_slug": "ibm",
+      "iana_admin_alias": "IBM",
+      "iana_admin_slug": "ibm",
+      "iana_tech_alias": "IBM",
+      "iana_tech_slug": "ibm",
+      "icann_registry_operator_alias": "IBM",
+      "icann_registry_operator_slug": "ibm",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "brand",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "UltraDNS"
+      ],
+      "as_org_slugs": [
+        "ultradns"
+      ]
     },
     "nameservers": [
       {
@@ -143,35 +172,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.ibm.com",
-    "whois_server": "whois.nic.ibm",
-    "rdap_server": "https://rdap.nic.ibm/",
-    "tld_created": "2014-09-25",
-    "tld_updated": [
-      "2023-11-30"
-    ],
-    "annotations": {
-      "iana_sponsor_alias": "IBM",
-      "iana_sponsor_slug": "ibm",
-      "iana_admin_alias": "IBM",
-      "iana_admin_slug": "ibm",
-      "iana_tech_alias": "IBM",
-      "iana_tech_slug": "ibm",
-      "icann_registry_operator_alias": "IBM",
-      "icann_registry_operator_slug": "ibm",
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "brand",
-        "non_sponsored"
-      ],
-      "as_org_aliases": [
-        "UltraDNS"
-      ],
-      "as_org_slugs": [
-        "ultradns"
-      ]
-    }
+    ]
   }
 }

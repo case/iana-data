@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,24 @@
         "admin": "ARCEP BENIN",
         "tech": "JENY SAS"
       }
+    },
+    "registry_url": "http://www.nic.bj",
+    "whois_server": "whois.nic.bj",
+    "tld_created": "1996-01-18",
+    "tld_updated": [
+      "2023-04-14"
+    ],
+    "annotations": {
+      "country_name_iso": "Benin",
+      "as_org_aliases": [
+        "AFNIC",
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "afnic",
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -99,24 +117,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.nic.bj",
-    "whois_server": "whois.nic.bj",
-    "tld_created": "1996-01-18",
-    "tld_updated": [
-      "2023-04-14"
-    ],
-    "annotations": {
-      "country_name_iso": "Benin",
-      "as_org_aliases": [
-        "AFNIC",
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "afnic",
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

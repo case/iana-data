@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -27,6 +27,32 @@
         "contract_terminated": true,
         "date_removed": null
       }
+    },
+    "registry_url": "https://www.icann.org/resources/pages/ebero-2013-04-02-en",
+    "rdap_server": "https://rdap.nominet.uk/desi/",
+    "tld_created": "2014-03-06",
+    "tld_updated": [
+      "2025-01-30"
+    ],
+    "annotations": {
+      "iana_sponsor_alias": "ICANN EBERO",
+      "iana_sponsor_slug": "icann-ebero",
+      "iana_tech_alias": "Nominet",
+      "iana_tech_slug": "nominet",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "Nominet",
+        "UltraDNS"
+      ],
+      "as_org_slugs": [
+        "nominet",
+        "ultradns"
+      ],
+      "cultural_affiliation": "desi"
     },
     "nameservers": [
       {
@@ -181,32 +207,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://www.icann.org/resources/pages/ebero-2013-04-02-en",
-    "rdap_server": "https://rdap.nominet.uk/desi/",
-    "tld_created": "2014-03-06",
-    "tld_updated": [
-      "2025-01-30"
-    ],
-    "annotations": {
-      "iana_sponsor_alias": "ICANN EBERO",
-      "iana_sponsor_slug": "icann-ebero",
-      "iana_tech_alias": "Nominet",
-      "iana_tech_slug": "nominet",
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "as_org_aliases": [
-        "Nominet",
-        "UltraDNS"
-      ],
-      "as_org_slugs": [
-        "nominet",
-        "ultradns"
-      ],
-      "cultural_affiliation": "desi"
-    }
+    ]
   }
 }

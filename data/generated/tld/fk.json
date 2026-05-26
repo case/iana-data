@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T04:50:15Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,15 @@
         "admin": "Falkland Islands Government",
         "tech": "Sure South Atlantic Ltd."
       }
+    },
+    "registry_url": "http://www.sure.co.fk",
+    "tld_created": "1997-03-26",
+    "tld_updated": [
+      "2024-10-17"
+    ],
+    "annotations": {
+      "country_name_iso": "Falkland Islands (Malvinas)",
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -54,15 +63,6 @@
         ],
         "ipv6": []
       }
-    ],
-    "registry_url": "http://www.sure.co.fk",
-    "tld_created": "1997-03-26",
-    "tld_updated": [
-      "2024-10-17"
-    ],
-    "annotations": {
-      "country_name_iso": "Falkland Islands (Malvinas)",
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

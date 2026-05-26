@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T04:50:15Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,15 @@
         "admin": "Bluesky Cook Islands",
         "tech": "Bluesky Cook Islands"
       }
+    },
+    "registry_url": "http://www.vodafone.co.ck",
+    "tld_created": "1995-08-08",
+    "tld_updated": [
+      "2020-06-17"
+    ],
+    "annotations": {
+      "country_name_iso": "Cook Islands",
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -66,15 +75,6 @@
         ],
         "ipv6": []
       }
-    ],
-    "registry_url": "http://www.vodafone.co.ck",
-    "tld_created": "1995-08-08",
-    "tld_updated": [
-      "2020-06-17"
-    ],
-    "annotations": {
-      "country_name_iso": "Cook Islands",
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

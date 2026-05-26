@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -19,6 +19,22 @@
         "admin": "National Agency for Network Services (NANS)",
         "tech": "National Agency for Network Services (NANS)"
       }
+    },
+    "registry_url": "http://tld.sy",
+    "whois_server": "whois.tld.sy",
+    "tld_created": "2011-02-05",
+    "tld_updated": [
+      "2026-05-14"
+    ],
+    "annotations": {
+      "country_name_iso": "Syrian Arab Republic",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -71,22 +87,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://tld.sy",
-    "whois_server": "whois.tld.sy",
-    "tld_created": "2011-02-05",
-    "tld_updated": [
-      "2026-05-14"
-    ],
-    "annotations": {
-      "country_name_iso": "Syrian Arab Republic",
-      "as_org_aliases": [
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

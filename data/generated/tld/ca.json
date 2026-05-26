@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,32 @@
         "admin": "CIRA",
         "tech": "CIRA"
       }
+    },
+    "registry_url": "http://www.cira.ca/",
+    "whois_server": "whois.cira.ca",
+    "rdap_server": "https://rdap.ca.fury.ca/rdap/",
+    "tld_created": "1987-05-14",
+    "tld_updated": [
+      "2026-03-16"
+    ],
+    "annotations": {
+      "iana_admin_alias": "CIRA",
+      "iana_admin_slug": "cira",
+      "iana_tech_alias": "CIRA",
+      "iana_tech_slug": "cira",
+      "rdap_source": "IANA",
+      "country_name_iso": "Canada",
+      "as_org_aliases": [
+        "CIRA",
+        "DENIC",
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "cira",
+        "denic",
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -94,32 +120,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.cira.ca/",
-    "whois_server": "whois.cira.ca",
-    "rdap_server": "https://rdap.ca.fury.ca/rdap/",
-    "tld_created": "1987-05-14",
-    "tld_updated": [
-      "2026-03-16"
-    ],
-    "annotations": {
-      "iana_admin_alias": "CIRA",
-      "iana_admin_slug": "cira",
-      "iana_tech_alias": "CIRA",
-      "iana_tech_slug": "cira",
-      "rdap_source": "IANA",
-      "country_name_iso": "Canada",
-      "as_org_aliases": [
-        "CIRA",
-        "DENIC",
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "cira",
-        "denic",
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

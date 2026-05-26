@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -27,6 +27,31 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "registry_url": "https://www.live.melbourne/",
+    "whois_server": "whois.nic.melbourne",
+    "rdap_server": "https://rdap.nic.melbourne/",
+    "tld_created": "2014-07-03",
+    "tld_updated": [
+      "2024-04-17"
+    ],
+    "annotations": {
+      "iana_admin_alias": "GoDaddy Registry",
+      "iana_admin_slug": "godaddy-registry",
+      "iana_tech_alias": "GoDaddy Registry",
+      "iana_tech_slug": "godaddy-registry",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "UltraDNS"
+      ],
+      "as_org_slugs": [
+        "ultradns"
+      ],
+      "geographic_scope": "city"
     },
     "nameservers": [
       {
@@ -143,31 +168,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://www.live.melbourne/",
-    "whois_server": "whois.nic.melbourne",
-    "rdap_server": "https://rdap.nic.melbourne/",
-    "tld_created": "2014-07-03",
-    "tld_updated": [
-      "2024-04-17"
-    ],
-    "annotations": {
-      "iana_admin_alias": "GoDaddy Registry",
-      "iana_admin_slug": "godaddy-registry",
-      "iana_tech_alias": "GoDaddy Registry",
-      "iana_tech_slug": "godaddy-registry",
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "as_org_aliases": [
-        "UltraDNS"
-      ],
-      "as_org_slugs": [
-        "ultradns"
-      ],
-      "geographic_scope": "city"
-    }
+    ]
   }
 }

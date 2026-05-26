@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,26 @@
         "admin": "SWITCH The Swiss Education & Research Network",
         "tech": "SWITCH The Swiss Education & Research Network"
       }
+    },
+    "registry_url": "https://www.nic.ch/",
+    "whois_server": "whois.nic.ch",
+    "rdap_server": "https://rdap.nic.ch/",
+    "tld_created": "1987-05-20",
+    "tld_updated": [
+      "2025-11-20"
+    ],
+    "annotations": {
+      "rdap_source": "supplemental",
+      "country_name_iso": "Switzerland",
+      "as_org_aliases": [
+        "Packet Clearing House",
+        "RcodeZero"
+      ],
+      "as_org_slugs": [
+        "packet-clearing-house",
+        "rcodezero"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -113,26 +133,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://www.nic.ch/",
-    "whois_server": "whois.nic.ch",
-    "rdap_server": "https://rdap.nic.ch/",
-    "tld_created": "1987-05-20",
-    "tld_updated": [
-      "2025-11-20"
-    ],
-    "annotations": {
-      "rdap_source": "supplemental",
-      "country_name_iso": "Switzerland",
-      "as_org_aliases": [
-        "Packet Clearing House",
-        "RcodeZero"
-      ],
-      "as_org_slugs": [
-        "packet-clearing-house",
-        "rcodezero"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,28 @@
         "admin": "Academic and Research Network of Slovenia (ARNES)",
         "tech": "Academic and Research Network of Slovenia (ARNES)"
       }
+    },
+    "registry_url": "https://www.registry.si/",
+    "whois_server": "whois.register.si",
+    "rdap_server": "https://rdap.register.si/",
+    "tld_created": "1992-04-01",
+    "tld_updated": [
+      "2026-03-25"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Slovenia",
+      "as_org_aliases": [
+        "CIRA",
+        "Packet Clearing House",
+        "RcodeZero"
+      ],
+      "as_org_slugs": [
+        "cira",
+        "packet-clearing-house",
+        "rcodezero"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -132,28 +154,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://www.registry.si/",
-    "whois_server": "whois.register.si",
-    "rdap_server": "https://rdap.register.si/",
-    "tld_created": "1992-04-01",
-    "tld_updated": [
-      "2026-03-25"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "country_name_iso": "Slovenia",
-      "as_org_aliases": [
-        "CIRA",
-        "Packet Clearing House",
-        "RcodeZero"
-      ],
-      "as_org_slugs": [
-        "cira",
-        "packet-clearing-house",
-        "rcodezero"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -29,6 +29,35 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "registry_url": "http://www.verisigninc.com",
+    "whois_server": "whois.nic.xn--t60b56a",
+    "rdap_server": "https://tld-rdap.verisign.com/xn--t60b56a/v1/",
+    "tld_created": "2015-07-02",
+    "tld_updated": [
+      "2026-03-30"
+    ],
+    "annotations": {
+      "iana_sponsor_alias": "VeriSign",
+      "iana_sponsor_slug": "verisign",
+      "iana_admin_alias": "VeriSign",
+      "iana_admin_slug": "verisign",
+      "iana_tech_alias": "VeriSign",
+      "iana_tech_slug": "verisign",
+      "icann_registry_operator_alias": "VeriSign",
+      "icann_registry_operator_slug": "verisign",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "icann_translation_en": "dot net",
+      "as_org_aliases": [
+        "VeriSign"
+      ],
+      "as_org_slugs": [
+        "verisign"
+      ]
     },
     "nameservers": [
       {
@@ -107,35 +136,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.verisigninc.com",
-    "whois_server": "whois.nic.xn--t60b56a",
-    "rdap_server": "https://tld-rdap.verisign.com/xn--t60b56a/v1/",
-    "tld_created": "2015-07-02",
-    "tld_updated": [
-      "2026-03-30"
-    ],
-    "annotations": {
-      "iana_sponsor_alias": "VeriSign",
-      "iana_sponsor_slug": "verisign",
-      "iana_admin_alias": "VeriSign",
-      "iana_admin_slug": "verisign",
-      "iana_tech_alias": "VeriSign",
-      "iana_tech_slug": "verisign",
-      "icann_registry_operator_alias": "VeriSign",
-      "icann_registry_operator_slug": "verisign",
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "icann_translation_en": "dot net",
-      "as_org_aliases": [
-        "VeriSign"
-      ],
-      "as_org_slugs": [
-        "verisign"
-      ]
-    }
+    ]
   }
 }

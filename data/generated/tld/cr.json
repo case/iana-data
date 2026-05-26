@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,30 @@
         "admin": "National Academy of Sciences\nAcademia Nacional de Ciencias",
         "tech": "National Academy of Sciences Academia Nacional de Ciencias"
       }
+    },
+    "registry_url": "http://www.nic.cr/",
+    "whois_server": "whois.nic.cr",
+    "rdap_server": "https://rdap.nic.cr/",
+    "tld_created": "1990-09-10",
+    "tld_updated": [
+      "2026-02-17"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Costa Rica",
+      "as_org_aliases": [
+        "CIRA",
+        "DENIC",
+        "LACTLD",
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "cira",
+        "denic",
+        "lactld",
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -132,30 +156,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.nic.cr/",
-    "whois_server": "whois.nic.cr",
-    "rdap_server": "https://rdap.nic.cr/",
-    "tld_created": "1990-09-10",
-    "tld_updated": [
-      "2026-02-17"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "country_name_iso": "Costa Rica",
-      "as_org_aliases": [
-        "CIRA",
-        "DENIC",
-        "LACTLD",
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "cira",
-        "denic",
-        "lactld",
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T04:50:15Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -29,6 +29,22 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "registry_url": "http://www.conac.cn",
+    "whois_server": "whois.conac.cn",
+    "rdap_server": "https://rdap.conac.cn",
+    "tld_created": "2013-12-12",
+    "tld_updated": [
+      "2024-07-18"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "community",
+        "non_sponsored"
+      ],
+      "icann_translation_en": "government"
     },
     "nameservers": [
       {
@@ -112,22 +128,6 @@
         ],
         "ipv6": []
       }
-    ],
-    "registry_url": "http://www.conac.cn",
-    "whois_server": "whois.conac.cn",
-    "rdap_server": "https://rdap.conac.cn",
-    "tld_created": "2013-12-12",
-    "tld_updated": [
-      "2024-07-18"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "community",
-        "non_sponsored"
-      ],
-      "icann_translation_en": "government"
-    }
+    ]
   }
 }

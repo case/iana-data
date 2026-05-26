@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -27,6 +27,34 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "registry_url": "http://nic.foundation",
+    "whois_server": "whois.nic.foundation",
+    "rdap_server": "https://rdap.publicinterestregistry.org/rdap/",
+    "tld_created": "2014-02-06",
+    "tld_updated": [
+      "2025-08-14"
+    ],
+    "annotations": {
+      "iana_sponsor_alias": "PIR",
+      "iana_sponsor_slug": "pir",
+      "iana_admin_alias": "PIR",
+      "iana_admin_slug": "pir",
+      "iana_tech_alias": "Identity Digital",
+      "iana_tech_slug": "identity-digital",
+      "icann_registry_operator_alias": "PIR",
+      "icann_registry_operator_slug": "pir",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "Identity Digital"
+      ],
+      "as_org_slugs": [
+        "identity-digital"
+      ]
     },
     "nameservers": [
       {
@@ -143,34 +171,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://nic.foundation",
-    "whois_server": "whois.nic.foundation",
-    "rdap_server": "https://rdap.publicinterestregistry.org/rdap/",
-    "tld_created": "2014-02-06",
-    "tld_updated": [
-      "2025-08-14"
-    ],
-    "annotations": {
-      "iana_sponsor_alias": "PIR",
-      "iana_sponsor_slug": "pir",
-      "iana_admin_alias": "PIR",
-      "iana_admin_slug": "pir",
-      "iana_tech_alias": "Identity Digital",
-      "iana_tech_slug": "identity-digital",
-      "icann_registry_operator_alias": "PIR",
-      "icann_registry_operator_slug": "pir",
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "as_org_aliases": [
-        "Identity Digital"
-      ],
-      "as_org_slugs": [
-        "identity-digital"
-      ]
-    }
+    ]
   }
 }

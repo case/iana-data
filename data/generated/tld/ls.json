@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,22 @@
         "admin": "Lesotho Communications Authority",
         "tech": "Lesotho Communications Authority"
       }
+    },
+    "registry_url": "http://www.nic.ls",
+    "whois_server": "whois.nic.ls",
+    "tld_created": "1993-01-13",
+    "tld_updated": [
+      "2024-06-17"
+    ],
+    "annotations": {
+      "country_name_iso": "Lesotho",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -80,22 +96,6 @@
         ],
         "ipv6": []
       }
-    ],
-    "registry_url": "http://www.nic.ls",
-    "whois_server": "whois.nic.ls",
-    "tld_created": "1993-01-13",
-    "tld_updated": [
-      "2024-06-17"
-    ],
-    "annotations": {
-      "country_name_iso": "Lesotho",
-      "as_org_aliases": [
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

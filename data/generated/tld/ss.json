@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,24 @@
         "admin": "National Communication Authority (NCA)",
         "tech": "National Communication Authority (NCA)"
       }
+    },
+    "registry_url": "https://nic.ss/",
+    "whois_server": "whois.nic.ss",
+    "rdap_server": "https://rdap.nic.ss",
+    "tld_created": "2011-08-31",
+    "tld_updated": [
+      "2024-04-05"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "South Sudan",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -74,24 +92,6 @@
         ],
         "ipv6": []
       }
-    ],
-    "registry_url": "https://nic.ss/",
-    "whois_server": "whois.nic.ss",
-    "rdap_server": "https://rdap.nic.ss",
-    "tld_created": "2011-08-31",
-    "tld_updated": [
-      "2024-04-05"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "country_name_iso": "South Sudan",
-      "as_org_aliases": [
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

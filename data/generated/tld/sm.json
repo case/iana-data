@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,22 @@
         "admin": "Telecom Italia San Marino S.p.A.",
         "tech": "Telecom Italia San Marino S.p.A."
       }
+    },
+    "registry_url": "https://www.nic.sm",
+    "whois_server": "whois.nic.sm",
+    "tld_created": "1995-08-16",
+    "tld_updated": [
+      "2025-07-07"
+    ],
+    "annotations": {
+      "country_name_iso": "San Marino",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -80,22 +96,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://www.nic.sm",
-    "whois_server": "whois.nic.sm",
-    "tld_created": "1995-08-16",
-    "tld_updated": [
-      "2025-07-07"
-    ],
-    "annotations": {
-      "country_name_iso": "San Marino",
-      "as_org_aliases": [
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

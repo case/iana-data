@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -29,6 +29,27 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "registry_url": "http://www.yu-wei.cn/",
+    "whois_server": "whois.ngtld.cn",
+    "rdap_server": "https://restwhois.ngtld.cn/",
+    "tld_created": "2014-07-24",
+    "tld_updated": [
+      "2026-01-23"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "icann_translation_en": "guangdong",
+      "as_org_aliases": [
+        "CNNIC"
+      ],
+      "as_org_slugs": [
+        "cnnic"
+      ]
     },
     "nameservers": [
       {
@@ -112,27 +133,6 @@
         ],
         "ipv6": []
       }
-    ],
-    "registry_url": "http://www.yu-wei.cn/",
-    "whois_server": "whois.ngtld.cn",
-    "rdap_server": "https://restwhois.ngtld.cn/",
-    "tld_created": "2014-07-24",
-    "tld_updated": [
-      "2026-01-23"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "icann_translation_en": "guangdong",
-      "as_org_aliases": [
-        "CNNIC"
-      ],
-      "as_org_slugs": [
-        "cnnic"
-      ]
-    }
+    ]
   }
 }

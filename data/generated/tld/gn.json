@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,22 @@
         "admin": "Association en charge pour le Nommage Internet en Coopération de la République de Guinée 'NIC.GN'",
         "tech": "Agence Nationale de Digitalisation de l’Etat (ANDE)"
       }
+    },
+    "registry_url": "https://ande.gov.gn/dns-gn/",
+    "whois_server": "whois.ande.gov.gn",
+    "tld_created": "1994-08-09",
+    "tld_updated": [
+      "2023-12-11"
+    ],
+    "annotations": {
+      "country_name_iso": "Guinea",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -87,22 +103,6 @@
         ],
         "ipv6": []
       }
-    ],
-    "registry_url": "https://ande.gov.gn/dns-gn/",
-    "whois_server": "whois.ande.gov.gn",
-    "tld_created": "1994-08-09",
-    "tld_updated": [
-      "2023-12-11"
-    ],
-    "annotations": {
-      "country_name_iso": "Guinea",
-      "as_org_aliases": [
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

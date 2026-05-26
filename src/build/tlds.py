@@ -483,9 +483,12 @@ def _build_tld_entry(
         entry["orgs"] = orgs
 
     # Enrich nameservers with ASN data; collect hosting orgs as slug -> display_name.
+    # Hold the enriched list aside and attach it to the entry at the very end so
+    # nameservers is the last field in each TLD record (easier to skim visually).
     as_org_found: dict[str, str] = {}
+    enriched_nameservers: list[dict[str, Any]] | None = None
     if "nameservers" in page_data:
-        entry["nameservers"] = _enrich_nameservers_with_asn(
+        enriched_nameservers = _enrich_nameservers_with_asn(
             page_data["nameservers"],
             asn_lookup,
             resolver,
@@ -603,6 +606,9 @@ def _build_tld_entry(
 
     if annotations:
         entry["annotations"] = annotations
+
+    if enriched_nameservers is not None:
+        entry["nameservers"] = enriched_nameservers
 
     return entry
 

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,24 @@
         "admin": "Virgin Islands Public Telecommunications System, Inc.",
         "tech": "Virgin Islands Public Telecommunications System, Inc."
       }
+    },
+    "registry_url": "https://secure.nic.vi",
+    "whois_server": "virgil.nic.vi",
+    "rdap_server": "https://rdap.nic.vi",
+    "tld_created": "1995-08-31",
+    "tld_updated": [
+      "2024-02-26"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Virgin Islands, U.S.",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -49,24 +67,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://secure.nic.vi",
-    "whois_server": "virgil.nic.vi",
-    "rdap_server": "https://rdap.nic.vi",
-    "tld_created": "1995-08-31",
-    "tld_updated": [
-      "2024-02-26"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "country_name_iso": "Virgin Islands, U.S.",
-      "as_org_aliases": [
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

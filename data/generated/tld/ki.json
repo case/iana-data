@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,22 @@
         "admin": "Ministry of Information, Communications and Transport",
         "tech": "Communications Commission of Kiribati"
       }
+    },
+    "registry_url": "http://www.nic.ki",
+    "whois_server": "whois.nic.ki",
+    "tld_created": "1995-04-19",
+    "tld_updated": [
+      "2024-02-06"
+    ],
+    "annotations": {
+      "country_name_iso": "Kiribati",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -68,22 +84,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.nic.ki",
-    "whois_server": "whois.nic.ki",
-    "tld_created": "1995-04-19",
-    "tld_updated": [
-      "2024-02-06"
-    ],
-    "annotations": {
-      "country_name_iso": "Kiribati",
-      "as_org_aliases": [
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

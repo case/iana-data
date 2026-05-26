@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,24 @@
         "admin": "Japan Registry Services Co., Ltd.",
         "tech": "Japan Registry Services Co., Ltd."
       }
+    },
+    "registry_url": "https://jprs.jp/",
+    "whois_server": "whois.jprs.jp",
+    "tld_created": "1986-08-05",
+    "tld_updated": [
+      "2025-11-06"
+    ],
+    "annotations": {
+      "country_name_iso": "Japan",
+      "as_org_aliases": [
+        "Identity Digital",
+        "UltraDNS"
+      ],
+      "as_org_slugs": [
+        "identity-digital",
+        "ultradns"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -163,24 +181,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://jprs.jp/",
-    "whois_server": "whois.jprs.jp",
-    "tld_created": "1986-08-05",
-    "tld_updated": [
-      "2025-11-06"
-    ],
-    "annotations": {
-      "country_name_iso": "Japan",
-      "as_org_aliases": [
-        "Identity Digital",
-        "UltraDNS"
-      ],
-      "as_org_slugs": [
-        "identity-digital",
-        "ultradns"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

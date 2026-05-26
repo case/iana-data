@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -19,6 +19,21 @@
         "admin": "Posts and Telecommunications Division",
         "tech": "Bangladesh Telecommunications Company Limited (BTCL)"
       }
+    },
+    "registry_url": "http://domainreg.btcl.com.bd/",
+    "tld_created": "2011-03-30",
+    "tld_updated": [
+      "2024-05-29"
+    ],
+    "annotations": {
+      "country_name_iso": "Bangladesh",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -78,21 +93,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://domainreg.btcl.com.bd/",
-    "tld_created": "2011-03-30",
-    "tld_updated": [
-      "2024-05-29"
-    ],
-    "annotations": {
-      "country_name_iso": "Bangladesh",
-      "as_org_aliases": [
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

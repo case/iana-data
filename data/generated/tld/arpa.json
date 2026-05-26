@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,20 @@
         "admin": "Internet Architecture Board (IAB)",
         "tech": "Internet Corporation for Assigned Names and Numbers (ICANN)"
       }
+    },
+    "registry_url": "https://www.iana.org/domains/arpa",
+    "whois_server": "whois.iana.org",
+    "tld_created": "1985-01-01",
+    "tld_updated": [
+      "2023-11-27"
+    ],
+    "annotations": {
+      "as_org_aliases": [
+        "VeriSign"
+      ],
+      "as_org_slugs": [
+        "verisign"
+      ]
     },
     "nameservers": [
       {
@@ -246,20 +260,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://www.iana.org/domains/arpa",
-    "whois_server": "whois.iana.org",
-    "tld_created": "1985-01-01",
-    "tld_updated": [
-      "2023-11-27"
-    ],
-    "annotations": {
-      "as_org_aliases": [
-        "VeriSign"
-      ],
-      "as_org_slugs": [
-        "verisign"
-      ]
-    }
+    ]
   }
 }

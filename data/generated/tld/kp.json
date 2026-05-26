@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T04:50:15Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,15 @@
         "admin": "Star Joint Venture Company",
         "tech": "Star Joint Venture Company"
       }
+    },
+    "registry_url": "http://www.star.co.kp",
+    "tld_created": "2007-09-24",
+    "tld_updated": [
+      "2026-05-14"
+    ],
+    "annotations": {
+      "country_name_iso": "Korea, Democratic People's Republic of",
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -42,15 +51,6 @@
         ],
         "ipv6": []
       }
-    ],
-    "registry_url": "http://www.star.co.kp",
-    "tld_created": "2007-09-24",
-    "tld_updated": [
-      "2026-05-14"
-    ],
-    "annotations": {
-      "country_name_iso": "Korea, Democratic People's Republic of",
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,23 @@
         "admin": "LED-UCA",
         "tech": "Centro Nacional de Computación (CNC-UNA)"
       }
+    },
+    "registry_url": "http://www.nic.py",
+    "tld_created": "1991-09-09",
+    "tld_updated": [
+      "2023-01-18"
+    ],
+    "annotations": {
+      "country_name_iso": "Paraguay",
+      "as_org_aliases": [
+        "LACTLD",
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "lactld",
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -106,23 +123,6 @@
         ],
         "ipv6": []
       }
-    ],
-    "registry_url": "http://www.nic.py",
-    "tld_created": "1991-09-09",
-    "tld_updated": [
-      "2023-01-18"
-    ],
-    "annotations": {
-      "country_name_iso": "Paraguay",
-      "as_org_aliases": [
-        "LACTLD",
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "lactld",
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

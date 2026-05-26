@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,24 @@
         "admin": "Authority for Info-communications Technology Industry of Brunei Darussalam",
         "tech": "Authority for Info-communications Technology Industry of Brunei Darussalam"
       }
+    },
+    "registry_url": "http://www.bnnic.bn",
+    "whois_server": "whois.bnnic.bn",
+    "tld_created": "1994-06-03",
+    "tld_updated": [
+      "2026-05-06"
+    ],
+    "annotations": {
+      "country_name_iso": "Brunei Darussalam",
+      "as_org_aliases": [
+        "Community DNS",
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "community-dns",
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -80,24 +98,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.bnnic.bn",
-    "whois_server": "whois.bnnic.bn",
-    "tld_created": "1994-06-03",
-    "tld_updated": [
-      "2026-05-06"
-    ],
-    "annotations": {
-      "country_name_iso": "Brunei Darussalam",
-      "as_org_aliases": [
-        "Community DNS",
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "community-dns",
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

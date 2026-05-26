@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -27,6 +27,35 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "registry_url": "http://www.nic.read",
+    "rdap_server": "https://rdap.nominet.uk/read/",
+    "tld_created": "2015-11-12",
+    "tld_updated": [
+      "2025-02-14"
+    ],
+    "annotations": {
+      "iana_sponsor_alias": "Amazon",
+      "iana_sponsor_slug": "amazon",
+      "iana_admin_alias": "Amazon",
+      "iana_admin_slug": "amazon",
+      "iana_tech_alias": "Nominet",
+      "iana_tech_slug": "nominet",
+      "icann_registry_operator_alias": "Amazon",
+      "icann_registry_operator_slug": "amazon",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "Nominet",
+        "UltraDNS"
+      ],
+      "as_org_slugs": [
+        "nominet",
+        "ultradns"
+      ]
     },
     "nameservers": [
       {
@@ -181,35 +210,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.nic.read",
-    "rdap_server": "https://rdap.nominet.uk/read/",
-    "tld_created": "2015-11-12",
-    "tld_updated": [
-      "2025-02-14"
-    ],
-    "annotations": {
-      "iana_sponsor_alias": "Amazon",
-      "iana_sponsor_slug": "amazon",
-      "iana_admin_alias": "Amazon",
-      "iana_admin_slug": "amazon",
-      "iana_tech_alias": "Nominet",
-      "iana_tech_slug": "nominet",
-      "icann_registry_operator_alias": "Amazon",
-      "icann_registry_operator_slug": "amazon",
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "as_org_aliases": [
-        "Nominet",
-        "UltraDNS"
-      ],
-      "as_org_slugs": [
-        "nominet",
-        "ultradns"
-      ]
-    }
+    ]
   }
 }

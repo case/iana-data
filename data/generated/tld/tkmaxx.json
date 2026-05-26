@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -27,6 +27,32 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "registry_url": "http://www.tjx.com",
+    "rdap_server": "https://rdap.nic.tkmaxx/",
+    "tld_created": "2016-04-07",
+    "tld_updated": [
+      "2024-05-11"
+    ],
+    "annotations": {
+      "iana_sponsor_alias": "TJX",
+      "iana_sponsor_slug": "tjx",
+      "iana_tech_alias": "GoDaddy Registry",
+      "iana_tech_slug": "godaddy-registry",
+      "icann_registry_operator_alias": "TJX",
+      "icann_registry_operator_slug": "tjx",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "brand",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "UltraDNS"
+      ],
+      "as_org_slugs": [
+        "ultradns"
+      ]
     },
     "nameservers": [
       {
@@ -143,32 +169,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.tjx.com",
-    "rdap_server": "https://rdap.nic.tkmaxx/",
-    "tld_created": "2016-04-07",
-    "tld_updated": [
-      "2024-05-11"
-    ],
-    "annotations": {
-      "iana_sponsor_alias": "TJX",
-      "iana_sponsor_slug": "tjx",
-      "iana_tech_alias": "GoDaddy Registry",
-      "iana_tech_slug": "godaddy-registry",
-      "icann_registry_operator_alias": "TJX",
-      "icann_registry_operator_slug": "tjx",
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "brand",
-        "non_sponsored"
-      ],
-      "as_org_aliases": [
-        "UltraDNS"
-      ],
-      "as_org_slugs": [
-        "ultradns"
-      ]
-    }
+    ]
   }
 }

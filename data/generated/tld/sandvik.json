@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -27,6 +27,27 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "registry_url": "http://nic.sandvik",
+    "whois_server": "whois.nic.sandvik",
+    "rdap_server": "https://rdap.nic.sandvik/",
+    "tld_created": "2015-05-14",
+    "tld_updated": [
+      "2023-11-30"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "brand",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "UltraDNS"
+      ],
+      "as_org_slugs": [
+        "ultradns"
+      ]
     },
     "nameservers": [
       {
@@ -143,27 +164,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://nic.sandvik",
-    "whois_server": "whois.nic.sandvik",
-    "rdap_server": "https://rdap.nic.sandvik/",
-    "tld_created": "2015-05-14",
-    "tld_updated": [
-      "2023-11-30"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "brand",
-        "non_sponsored"
-      ],
-      "as_org_aliases": [
-        "UltraDNS"
-      ],
-      "as_org_slugs": [
-        "ultradns"
-      ]
-    }
+    ]
   }
 }

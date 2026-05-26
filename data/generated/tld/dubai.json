@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -27,6 +27,26 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "whois_server": "whois.nic.dubai",
+    "rdap_server": "https://rdap.nic.dubai/",
+    "tld_created": "2015-12-17",
+    "tld_updated": [
+      "2020-05-21"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "UltraDNS"
+      ],
+      "as_org_slugs": [
+        "ultradns"
+      ],
+      "geographic_scope": "city"
     },
     "nameservers": [
       {
@@ -105,26 +125,6 @@
           }
         ]
       }
-    ],
-    "whois_server": "whois.nic.dubai",
-    "rdap_server": "https://rdap.nic.dubai/",
-    "tld_created": "2015-12-17",
-    "tld_updated": [
-      "2020-05-21"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "as_org_aliases": [
-        "UltraDNS"
-      ],
-      "as_org_slugs": [
-        "ultradns"
-      ],
-      "geographic_scope": "city"
-    }
+    ]
   }
 }

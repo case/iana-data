@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T04:50:15Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -27,6 +27,21 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "registry_url": "http://www.alibabagroup.com",
+    "whois_server": "whois.nic.alibaba",
+    "rdap_server": "https://rdap.aliregistry.cn/rdap/",
+    "tld_created": "2016-01-08",
+    "tld_updated": [
+      "2026-05-20"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "brand",
+        "non_sponsored"
+      ]
     },
     "nameservers": [
       {
@@ -105,21 +120,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.alibabagroup.com",
-    "whois_server": "whois.nic.alibaba",
-    "rdap_server": "https://rdap.aliregistry.cn/rdap/",
-    "tld_created": "2016-01-08",
-    "tld_updated": [
-      "2026-05-20"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "brand",
-        "non_sponsored"
-      ]
-    }
+    ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -27,6 +27,34 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "registry_url": "https://nic.mom",
+    "whois_server": "whois.nic.mom",
+    "rdap_server": "https://rdap.centralnic.com/mom/",
+    "tld_created": "2015-08-13",
+    "tld_updated": [
+      "2025-08-12"
+    ],
+    "annotations": {
+      "iana_sponsor_alias": "xyz.com",
+      "iana_sponsor_slug": "xyz-com",
+      "iana_admin_alias": "xyz.com",
+      "iana_admin_slug": "xyz-com",
+      "iana_tech_alias": "CentralNic",
+      "iana_tech_slug": "centralnic",
+      "icann_registry_operator_alias": "xyz.com",
+      "icann_registry_operator_slug": "xyz-com",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "CentralNic"
+      ],
+      "as_org_slugs": [
+        "centralnic"
+      ]
     },
     "nameservers": [
       {
@@ -105,34 +133,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://nic.mom",
-    "whois_server": "whois.nic.mom",
-    "rdap_server": "https://rdap.centralnic.com/mom/",
-    "tld_created": "2015-08-13",
-    "tld_updated": [
-      "2025-08-12"
-    ],
-    "annotations": {
-      "iana_sponsor_alias": "xyz.com",
-      "iana_sponsor_slug": "xyz-com",
-      "iana_admin_alias": "xyz.com",
-      "iana_admin_slug": "xyz-com",
-      "iana_tech_alias": "CentralNic",
-      "iana_tech_slug": "centralnic",
-      "icann_registry_operator_alias": "xyz.com",
-      "icann_registry_operator_slug": "xyz-com",
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "as_org_aliases": [
-        "CentralNic"
-      ],
-      "as_org_slugs": [
-        "centralnic"
-      ]
-    }
+    ]
   }
 }

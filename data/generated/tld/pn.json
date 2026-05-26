@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,29 @@
         "admin": "Nominet",
         "tech": "Nominet"
       }
+    },
+    "registry_url": "https://nic.pn",
+    "rdap_server": "https://rdap.nominet.uk/pn/",
+    "tld_created": "1997-07-10",
+    "tld_updated": [
+      "2024-02-15"
+    ],
+    "annotations": {
+      "iana_admin_alias": "Nominet",
+      "iana_admin_slug": "nominet",
+      "iana_tech_alias": "Nominet",
+      "iana_tech_slug": "nominet",
+      "rdap_source": "IANA",
+      "country_name_iso": "Pitcairn",
+      "as_org_aliases": [
+        "Nominet",
+        "UltraDNS"
+      ],
+      "as_org_slugs": [
+        "nominet",
+        "ultradns"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -170,29 +193,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://nic.pn",
-    "rdap_server": "https://rdap.nominet.uk/pn/",
-    "tld_created": "1997-07-10",
-    "tld_updated": [
-      "2024-02-15"
-    ],
-    "annotations": {
-      "iana_admin_alias": "Nominet",
-      "iana_admin_slug": "nominet",
-      "iana_tech_alias": "Nominet",
-      "iana_tech_slug": "nominet",
-      "rdap_source": "IANA",
-      "country_name_iso": "Pitcairn",
-      "as_org_aliases": [
-        "Nominet",
-        "UltraDNS"
-      ],
-      "as_org_slugs": [
-        "nominet",
-        "ultradns"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

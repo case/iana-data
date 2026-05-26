@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,25 @@
         "admin": "TeleYemen",
         "tech": "TeleYemen"
       }
+    },
+    "whois_server": "whois.y.net.ye",
+    "rdap_server": "https://rdap.y.net.ye/",
+    "tld_created": "1996-08-19",
+    "tld_updated": [
+      "2025-03-16"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Yemen",
+      "as_org_aliases": [
+        "Knipp Medien",
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "knipp-medien",
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -113,25 +132,6 @@
           }
         ]
       }
-    ],
-    "whois_server": "whois.y.net.ye",
-    "rdap_server": "https://rdap.y.net.ye/",
-    "tld_created": "1996-08-19",
-    "tld_updated": [
-      "2025-03-16"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "country_name_iso": "Yemen",
-      "as_org_aliases": [
-        "Knipp Medien",
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "knipp-medien",
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

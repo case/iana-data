@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,22 @@
         "admin": "NIC.VE",
         "tech": "NIC.VE"
       }
+    },
+    "registry_url": "https://nic.ve/",
+    "whois_server": "whois.nic.ve",
+    "tld_created": "1991-03-07",
+    "tld_updated": [
+      "2026-05-14"
+    ],
+    "annotations": {
+      "country_name_iso": "Venezuela, Bolivarian Republic of",
+      "as_org_aliases": [
+        "LACTLD"
+      ],
+      "as_org_slugs": [
+        "lactld"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -118,22 +134,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://nic.ve/",
-    "whois_server": "whois.nic.ve",
-    "tld_created": "1991-03-07",
-    "tld_updated": [
-      "2026-05-14"
-    ],
-    "annotations": {
-      "country_name_iso": "Venezuela, Bolivarian Republic of",
-      "as_org_aliases": [
-        "LACTLD"
-      ],
-      "as_org_slugs": [
-        "lactld"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

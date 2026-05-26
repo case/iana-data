@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,26 @@
         "admin": "IE Domain Registry Limited",
         "tech": "IE Domain Registry Limited"
       }
+    },
+    "registry_url": "http://www.weare.ie",
+    "whois_server": "whois.weare.ie",
+    "tld_created": "1988-01-27",
+    "tld_updated": [
+      "2025-08-22"
+    ],
+    "annotations": {
+      "country_name_iso": "Ireland",
+      "as_org_aliases": [
+        "AFNIC",
+        "CIRA",
+        "RcodeZero"
+      ],
+      "as_org_slugs": [
+        "afnic",
+        "cira",
+        "rcodezero"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -132,26 +152,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.weare.ie",
-    "whois_server": "whois.weare.ie",
-    "tld_created": "1988-01-27",
-    "tld_updated": [
-      "2025-08-22"
-    ],
-    "annotations": {
-      "country_name_iso": "Ireland",
-      "as_org_aliases": [
-        "AFNIC",
-        "CIRA",
-        "RcodeZero"
-      ],
-      "as_org_slugs": [
-        "afnic",
-        "cira",
-        "rcodezero"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

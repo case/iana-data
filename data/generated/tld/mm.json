@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,22 @@
         "admin": "Posts and Telecommunications Department",
         "tech": "Posts and Telecommunications Department"
       }
+    },
+    "registry_url": "http://www.ptd.gov.mm/",
+    "whois_server": "whois.registry.gov.mm",
+    "tld_created": "1997-02-04",
+    "tld_updated": [
+      "2025-07-28"
+    ],
+    "annotations": {
+      "country_name_iso": "Myanmar",
+      "as_org_aliases": [
+        "UltraDNS"
+      ],
+      "as_org_slugs": [
+        "ultradns"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -66,22 +82,6 @@
         ],
         "ipv6": []
       }
-    ],
-    "registry_url": "http://www.ptd.gov.mm/",
-    "whois_server": "whois.registry.gov.mm",
-    "tld_created": "1997-02-04",
-    "tld_updated": [
-      "2025-07-28"
-    ],
-    "annotations": {
-      "country_name_iso": "Myanmar",
-      "as_org_aliases": [
-        "UltraDNS"
-      ],
-      "as_org_slugs": [
-        "ultradns"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

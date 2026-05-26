@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -27,6 +27,30 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "registry_url": "http://www.nic.fans/",
+    "whois_server": "whois.nic.fans",
+    "rdap_server": "https://rdap.centralnic.com/fans",
+    "tld_created": "2015-02-05",
+    "tld_updated": [
+      "2023-12-07"
+    ],
+    "annotations": {
+      "iana_admin_alias": "ZDNS",
+      "iana_admin_slug": "zdns",
+      "iana_tech_alias": "CentralNic",
+      "iana_tech_slug": "centralnic",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "CentralNic"
+      ],
+      "as_org_slugs": [
+        "centralnic"
+      ]
     },
     "nameservers": [
       {
@@ -105,30 +129,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.nic.fans/",
-    "whois_server": "whois.nic.fans",
-    "rdap_server": "https://rdap.centralnic.com/fans",
-    "tld_created": "2015-02-05",
-    "tld_updated": [
-      "2023-12-07"
-    ],
-    "annotations": {
-      "iana_admin_alias": "ZDNS",
-      "iana_admin_slug": "zdns",
-      "iana_tech_alias": "CentralNic",
-      "iana_tech_slug": "centralnic",
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "as_org_aliases": [
-        "CentralNic"
-      ],
-      "as_org_slugs": [
-        "centralnic"
-      ]
-    }
+    ]
   }
 }

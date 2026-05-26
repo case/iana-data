@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,26 @@
         "admin": "MYNIC Berhad",
         "tech": "MYNIC Berhad"
       }
+    },
+    "registry_url": "http://www.mynic.my",
+    "whois_server": "whois.mynic.my",
+    "rdap_server": "https://rdap.mynic.my/rdap/",
+    "tld_created": "1987-06-08",
+    "tld_updated": [
+      "2026-04-18"
+    ],
+    "annotations": {
+      "rdap_source": "supplemental",
+      "country_name_iso": "Malaysia",
+      "as_org_aliases": [
+        "CentralNic",
+        "Tucows"
+      ],
+      "as_org_slugs": [
+        "centralnic",
+        "tucows"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -152,26 +172,6 @@
         ]
       }
     ],
-    "registry_url": "http://www.mynic.my",
-    "whois_server": "whois.mynic.my",
-    "rdap_server": "https://rdap.mynic.my/rdap/",
-    "tld_created": "1987-06-08",
-    "tld_updated": [
-      "2026-04-18"
-    ],
-    "annotations": {
-      "rdap_source": "supplemental",
-      "country_name_iso": "Malaysia",
-      "as_org_aliases": [
-        "CentralNic",
-        "Tucows"
-      ],
-      "as_org_slugs": [
-        "centralnic",
-        "tucows"
-      ],
-      "geographic_scope": "country"
-    },
     "idn": [
       "xn--mgbx4cd0ab"
     ]

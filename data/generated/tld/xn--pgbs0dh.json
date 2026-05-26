@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -19,6 +19,24 @@
         "admin": "Agence Tunisienne d'Internet",
         "tech": "Agence Tunisienne d'Internet"
       }
+    },
+    "registry_url": "http://www.ati.tn",
+    "whois_server": "whois.ati.tn",
+    "tld_created": "2010-08-19",
+    "tld_updated": [
+      "2023-03-07"
+    ],
+    "annotations": {
+      "country_name_iso": "Tunisia",
+      "as_org_aliases": [
+        "AFNIC",
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "afnic",
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -135,24 +153,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.ati.tn",
-    "whois_server": "whois.ati.tn",
-    "tld_created": "2010-08-19",
-    "tld_updated": [
-      "2023-03-07"
-    ],
-    "annotations": {
-      "country_name_iso": "Tunisia",
-      "as_org_aliases": [
-        "AFNIC",
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "afnic",
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }
