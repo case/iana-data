@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-05-26T06:02:29Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -59,7 +59,9 @@
       "as_org_slugs": [
         "nominet",
         "ultradns"
-      ]
+      ],
+      "language_code": "ja",
+      "language_name_en": "Japanese"
     },
     "nameservers": [
       {

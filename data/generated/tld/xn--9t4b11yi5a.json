@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-15T19:11:17Z",
+  "publication": "2026-05-26T06:02:29Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -15,6 +15,10 @@
     "tld_created": "2007-10-19",
     "tld_updated": [
       "2020-04-02"
-    ]
+    ],
+    "annotations": {
+      "language_code": "ko",
+      "language_name_en": "Korean"
+    }
   }
 }

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-24T22:45:17Z",
+  "publication": "2026-05-26T06:02:29Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -36,7 +36,9 @@
         "community",
         "non_sponsored"
       ],
-      "icann_translation_en": "volkswagon"
+      "icann_translation_en": "volkswagon",
+      "language_code": "zh",
+      "language_name_en": "Chinese"
     }
   }
 }
