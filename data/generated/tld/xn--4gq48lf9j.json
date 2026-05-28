@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-05-28T02:11:16Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -25,6 +25,10 @@
         "date_removed": null
       }
     },
+    "tld_created": "2016-07-21",
+    "tld_updated": [
+      "2017-01-23"
+    ],
     "annotations": {
       "registry_agreement_types": [
         "base",
