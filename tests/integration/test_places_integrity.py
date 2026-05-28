@@ -130,6 +130,45 @@ def test_iso_designation_enum_and_dependent_has_parent(typed_graph):
     )
 
 
+def test_iso_reserved_and_special_records_pinned(typed_graph):
+    """Lock in the editorial shape for ISO 3166-1 reserved / special-area ccTLDs.
+
+    pycountry lists AQ as a regular country, so the place record carries
+    iso_code='AQ'; AC and SU are not in pycountry and stay null. The
+    iso_designation field captures the actual ISO 3166-1 status either way.
+    """
+    by_slug = {p["slug"]: p for p in _places(typed_graph)}
+    expected = {
+        "ac": {
+            "iso_designation": "exceptionally_reserved",
+            "parent": "sh",
+            "iso_code": None,
+        },
+        "su": {
+            "iso_designation": "transitionally_reserved",
+            "parent": None,
+            "iso_code": None,
+        },
+        "aq": {"iso_designation": "special_area", "parent": None, "iso_code": "AQ"},
+    }
+    actual = {}
+    for slug in expected:
+        place = by_slug.get(slug)
+        assert place is not None, f"places.json missing reserved-code record {slug!r}"
+        assert place["subtype"] == "country", (
+            f"{slug!r}: subtype should be 'country'; got {place['subtype']!r}"
+        )
+        assert place["tlds"] == [slug], (
+            f"{slug!r}: tlds should be [{slug!r}]; got {place['tlds']!r}"
+        )
+        actual[slug] = {
+            k: place.get(k) for k in ("iso_designation", "parent", "iso_code")
+        }
+    assert actual == expected, (
+        f"reserved-code shape drifted: expected {expected}, got {actual}"
+    )
+
+
 def test_uk_folds_to_gb(typed_graph):
     """The UK is one place slugged gb (alpha-2), carrying both .gb and .uk."""
     slugs = {p["slug"] for p in _places(typed_graph)}
