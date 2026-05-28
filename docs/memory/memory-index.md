@@ -9,7 +9,11 @@ Agents: consult before suggesting layout, naming, dependencies, vendors, or conv
 - [Architecture](architecture.md) - current implementation: stack, layout, conventions
 
 ## Log (newest first)
-- [2026-05-24 Typed-graph ingest](log/2026-05-24-typed-graph-ingest.md) - orgs.icann.* + per-TLD annotations + infrastructure type; organizations.json seeded (not yet consumed by build)
+- [2026-05-27 Brand-status pinned](log/2026-05-27-brand-status-pinned.md) - specification_13 is application-era, CSV is current; 8 known mismatches pinned by test; README "Interpreting the data" added
+- [2026-05-27 IDN language](log/2026-05-27-idn-language.md) - language_code + language_name_en for all 151 IDNs via CLDR likelySubtags + per-(script, region) and per-TLD overrides; Han-CJK Simplified/Traditional/Taiwan distinctions
+- [2026-05-25 Tier 1 artifacts live](log/2026-05-25-tier1-artifacts-live.md) - all four typed-graph artifacts built and consumed; legacy alias files deleted; new annotation primitives added; supersedes 2026-05-24 SEED ONLY note
+- [2026-05-25 Writer byte-equality](log/2026-05-25-writer-byte-equality.md) - write_json_if_changed compares serialized JSON (not dict equality), so field-order changes propagate to disk
+- [2026-05-24 Typed-graph ingest](log/2026-05-24-typed-graph-ingest.md) - orgs.icann.* + per-TLD annotations + infrastructure type; organizations.json seeded (now superseded by 2026-05-25 Tier 1 live)
 - [2026-05-24 ETL source-fidelity](log/2026-05-24-etl-source-fidelity.md) - Extract stores verbatim <main> slice; Transform decodes entities + selects fields (fixes &amp; in orgs)
 - [2026-05-17 orgs.tech aliasing](log/2026-05-17-tech-aliases.md) - tech-aliases.json + annotations.tech_alias, parallel to tld_manager_alias
 - [2026-05-16 Per-field source-of-truth](log/2026-05-16-per-field-truth.md) - each IANA source authoritative for a specific field set; reconciliation tests encode the rule
