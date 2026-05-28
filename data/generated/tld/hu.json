@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-05-28T03:42:36Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -62,8 +62,8 @@
         "ipv4": [
           {
             "ip": "193.41.82.18",
-            "asn": 210788,
-            "as_org": "BIX-AS",
+            "asn": 197792,
+            "as_org": "ISZT-INFRA-AS",
             "as_country": "HU"
           }
         ],

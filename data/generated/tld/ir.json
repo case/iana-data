@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-05-28T03:42:36Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -41,9 +41,9 @@
         "ipv6": [
           {
             "ip": "2001:678:b0:0:193:189:123:2",
-            "asn": 39200,
-            "as_org": "IRNICANYCAST-AS",
-            "as_country": "IR"
+            "asn": 0,
+            "as_org": "Not routed",
+            "as_country": "None"
           }
         ]
       },
@@ -60,9 +60,9 @@
         "ipv6": [
           {
             "ip": "2001:678:b1:0:193:189:122:83",
-            "asn": 35285,
-            "as_org": "IRNIC-AS",
-            "as_country": "IR"
+            "asn": 0,
+            "as_org": "Not routed",
+            "as_country": "None"
           }
         ]
       },
@@ -98,9 +98,9 @@
         "ipv6": [
           {
             "ip": "2001:14e8:c:0:194:225:70:83",
-            "asn": 6736,
-            "as_org": "IRANET-IPM Institute for Research in Fundamental Sciences IPM",
-            "as_country": "IR"
+            "asn": 0,
+            "as_org": "Not routed",
+            "as_country": "None"
           }
         ]
       }

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-05-28T03:42:36Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -98,16 +98,16 @@
         "ipv4": [
           {
             "ip": "192.36.134.97",
-            "asn": 39870,
-            "as_org": "NETNOD-MMO Netnod Equipment located at IX in Malmoe",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
             "as_country": "SE"
           }
         ],
         "ipv6": [
           {
             "ip": "2001:67c:2550:301::53",
-            "asn": 39870,
-            "as_org": "NETNOD-MMO Netnod Equipment located at IX in Malmoe",
+            "asn": 8674,
+            "as_org": "NETNOD-IX Netnod AB",
             "as_country": "SE"
           }
         ]

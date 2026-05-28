@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-05-28T03:42:36Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -60,8 +60,8 @@
         "ipv4": [
           {
             "ip": "81.91.164.5",
-            "asn": 8763,
-            "as_org": "DENIC-AS Theodor-Stern-Kai 1",
+            "asn": 31529,
+            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
             "as_country": "DE"
           }
         ],

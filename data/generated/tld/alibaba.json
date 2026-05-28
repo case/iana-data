@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-05-28T03:42:36Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -49,16 +49,16 @@
         "ipv4": [
           {
             "ip": "203.107.2.1",
-            "asn": 0,
-            "as_org": "Not routed",
-            "as_country": "None"
+            "asn": 45102,
+            "as_org": "ALIBABA-CN-NET Alibaba US Technology Co., Ltd.",
+            "as_country": "CN"
           }
         ],
         "ipv6": [
           {
             "ip": "2408:4000:101::1",
-            "asn": 37963,
-            "as_org": "ALIBABA-CN-NET Hangzhou Alibaba Advertising Co.,Ltd.",
+            "asn": 45102,
+            "as_org": "ALIBABA-CN-NET Alibaba US Technology Co., Ltd.",
             "as_country": "CN"
           }
         ]
@@ -68,16 +68,16 @@
         "ipv4": [
           {
             "ip": "203.107.2.2",
-            "asn": 0,
-            "as_org": "Not routed",
-            "as_country": "None"
+            "asn": 45102,
+            "as_org": "ALIBABA-CN-NET Alibaba US Technology Co., Ltd.",
+            "as_country": "CN"
           }
         ],
         "ipv6": [
           {
             "ip": "2408:4000:101::2",
-            "asn": 37963,
-            "as_org": "ALIBABA-CN-NET Hangzhou Alibaba Advertising Co.,Ltd.",
+            "asn": 45102,
+            "as_org": "ALIBABA-CN-NET Alibaba US Technology Co., Ltd.",
             "as_country": "CN"
           }
         ]
@@ -87,16 +87,16 @@
         "ipv4": [
           {
             "ip": "203.107.3.1",
-            "asn": 0,
-            "as_org": "Not routed",
-            "as_country": "None"
+            "asn": 45102,
+            "as_org": "ALIBABA-CN-NET Alibaba US Technology Co., Ltd.",
+            "as_country": "CN"
           }
         ],
         "ipv6": [
           {
             "ip": "2408:4000:102::1",
-            "asn": 37963,
-            "as_org": "ALIBABA-CN-NET Hangzhou Alibaba Advertising Co.,Ltd.",
+            "asn": 45102,
+            "as_org": "ALIBABA-CN-NET Alibaba US Technology Co., Ltd.",
             "as_country": "CN"
           }
         ]
@@ -106,16 +106,16 @@
         "ipv4": [
           {
             "ip": "203.107.3.2",
-            "asn": 0,
-            "as_org": "Not routed",
-            "as_country": "None"
+            "asn": 45102,
+            "as_org": "ALIBABA-CN-NET Alibaba US Technology Co., Ltd.",
+            "as_country": "CN"
           }
         ],
         "ipv6": [
           {
             "ip": "2408:4000:102::2",
-            "asn": 37963,
-            "as_org": "ALIBABA-CN-NET Hangzhou Alibaba Advertising Co.,Ltd.",
+            "asn": 45102,
+            "as_org": "ALIBABA-CN-NET Alibaba US Technology Co., Ltd.",
             "as_country": "CN"
           }
         ]
