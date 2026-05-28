@@ -86,3 +86,32 @@ def test_agreements_sorted_with_envelope(typed_graph):
     assert slugs == sorted(slugs)
     assert typed_graph.agreements["description"]
     assert typed_graph.agreements["sources"]
+
+
+# Pinned set of delegated gTLDs where IANA-CSV brand and ICANN specification_13
+# disagree. Rationale in README "Interpreting the data".
+KNOWN_BRAND_STATUS_MISMATCHES: frozenset[str] = frozenset(
+    {"baidu", "case", "diy", "food", "gmo", "monster", "nexus", "sbs"}
+)
+
+
+def test_known_brand_status_mismatches_are_pinned(typed_graph):
+    """Delegated gTLDs where CSV-brand and specification_13 disagree are pinned."""
+    mismatches = set()
+    for tld, entry in typed_graph.tlds.items():
+        if not entry.get("delegated") or entry.get("type") != "gtld":
+            continue
+        csv_brand = "brand" in entry.get("annotations", {}).get(
+            "registry_agreement_types", []
+        )
+        spec13 = entry.get("orgs", {}).get("icann", {}).get("specification_13")
+        if (csv_brand and spec13 is False) or (not csv_brand and spec13 is True):
+            mismatches.add(tld)
+
+    new = mismatches - KNOWN_BRAND_STATUS_MISMATCHES
+    resolved = KNOWN_BRAND_STATUS_MISMATCHES - mismatches
+    assert not new and not resolved, (
+        f"Brand-status mismatch set changed. "
+        f"New mismatches (review and add to KNOWN_BRAND_STATUS_MISMATCHES): "
+        f"{sorted(new)}. Resolved mismatches (remove from set): {sorted(resolved)}."
+    )
