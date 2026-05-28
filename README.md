@@ -223,6 +223,11 @@ Here is its schema:
         "registry_agreement_types": ["string"], // Array of agreement types: "base" | "brand" | "community" | "sponsored" | "non_sponsored"
         "icann_translation_en": "string",  // ICANN's raw English Translation of an IDN label, source-faithful [OPTIONAL - IDN gTLDs only]
 
+        // IDN language metadata (derived from tld_script via Unicode CLDR likelySubtags,
+        // with per-(script, region) and per-TLD overrides where the default is wrong)
+        "language_code": "string",         // BCP-47 code (e.g. "ar", "hi", "zh-Hant-TW") [OPTIONAL - IDN only]
+        "language_name_en": "string",      // English name (e.g. "Arabic", "Hindi", "Chinese (Taiwan)") [OPTIONAL - IDN only]
+
         // AS Org infrastructure operators (resolved against organizations.json)
         "as_org_aliases": ["string"],      // Canonical DNS provider display_names hosting nameservers (e.g. ["Identity Digital", "VeriSign"])
         "as_org_slugs": ["string"],        // FKs into organizations.json, parallel to as_org_aliases
@@ -278,7 +283,7 @@ The United Kingdom is one place slugged `gb` (its ISO alpha-2), carrying both `.
 
 The `data/generated/cultures.json` file records the ethno-linguistic communities that at least one TLD claims affiliation with, with a reverse-index of their TLDs. It is built from a hand-curated seed (`data/manual/cultures.json`) joined against each TLD's `cultural_affiliation` annotation.
 
-Each culture carries a stable `slug` (the foreign key `cultural_affiliation` points at), an English `name_en`, an `info_link` to Wikipedia, an optional ISO 639 `language_code`, and the `tlds` reverse index. `cultures[]` is sorted by `slug`. The schema is intentionally minimal: descriptions and cross-artifact links belong on the canonical source (Wikipedia via `info_link`), not duplicated here.
+Each culture carries a stable `slug` (the foreign key `cultural_affiliation` points at), an English `name_en`, an `info_link` to Wikipedia, an optional BCP-47 `language_code` (`null` for multi-lingual cultures like `swiss` / `desi` / `kiwi` / `scottish`), and the `tlds` reverse index. `cultures[]` is sorted by `slug`. The schema is intentionally minimal: descriptions and cross-artifact links belong on the canonical source (Wikipedia via `info_link`), not duplicated here.
 
 ## `agreements.json`
 
