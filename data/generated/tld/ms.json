@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,26 @@
         "admin": "MNI Networks Ltd.",
         "tech": "MNI Networks Ltd."
       }
+    },
+    "registry_url": "http://www.nic.ms",
+    "whois_server": "whois.nic.ms",
+    "rdap_server": "https://rdap.nic.ms",
+    "tld_created": "1997-03-06",
+    "tld_updated": [
+      "2024-04-17"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Montserrat",
+      "as_org_aliases": [
+        "LACTLD",
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "lactld",
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -87,26 +107,6 @@
         ],
         "ipv6": []
       }
-    ],
-    "registry_url": "http://www.nic.ms",
-    "whois_server": "whois.nic.ms",
-    "rdap_server": "https://rdap.nic.ms",
-    "tld_created": "1997-03-06",
-    "tld_updated": [
-      "2024-04-17"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "country_name_iso": "Montserrat",
-      "as_org_aliases": [
-        "LACTLD",
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "lactld",
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

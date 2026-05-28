@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,24 @@
         "admin": "Communications Regulatory Authority",
         "tech": "Communications Regulatory Authority"
       }
+    },
+    "registry_url": "https://www.cra.gov.qa/",
+    "whois_server": "whois.registry.qa",
+    "tld_created": "1996-06-12",
+    "tld_updated": [
+      "2022-02-07"
+    ],
+    "annotations": {
+      "country_name_iso": "Qatar",
+      "as_org_aliases": [
+        "Packet Clearing House",
+        "UltraDNS"
+      ],
+      "as_org_slugs": [
+        "packet-clearing-house",
+        "ultradns"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -102,7 +120,7 @@
         "ipv4": [
           {
             "ip": "37.209.194.6",
-            "asn": 397213,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -155,24 +173,6 @@
         ]
       }
     ],
-    "registry_url": "https://www.cra.gov.qa/",
-    "whois_server": "whois.registry.qa",
-    "tld_created": "1996-06-12",
-    "tld_updated": [
-      "2022-02-07"
-    ],
-    "annotations": {
-      "country_name_iso": "Qatar",
-      "as_org_aliases": [
-        "Packet Clearing House",
-        "UltraDNS"
-      ],
-      "as_org_slugs": [
-        "packet-clearing-house",
-        "ultradns"
-      ],
-      "geographic_scope": "country"
-    },
     "idn": [
       "xn--wgbl6a"
     ]

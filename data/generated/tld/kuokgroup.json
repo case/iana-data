@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -27,6 +27,34 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "registry_url": "http://www.kerryprops.com",
+    "whois_server": "whois.nic.kuokgroup",
+    "rdap_server": "https://rdap.identitydigital.services/rdap/",
+    "tld_created": "2015-12-17",
+    "tld_updated": [
+      "2023-08-11"
+    ],
+    "annotations": {
+      "iana_sponsor_alias": "Kerry Trading",
+      "iana_sponsor_slug": "kerry-trading",
+      "iana_admin_alias": "Kerry Trading",
+      "iana_admin_slug": "kerry-trading",
+      "iana_tech_alias": "Identity Digital",
+      "iana_tech_slug": "identity-digital",
+      "icann_registry_operator_alias": "Kerry Trading",
+      "icann_registry_operator_slug": "kerry-trading",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "Identity Digital"
+      ],
+      "as_org_slugs": [
+        "identity-digital"
+      ]
     },
     "nameservers": [
       {
@@ -105,34 +133,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.kerryprops.com",
-    "whois_server": "whois.nic.kuokgroup",
-    "rdap_server": "https://rdap.identitydigital.services/rdap/",
-    "tld_created": "2015-12-17",
-    "tld_updated": [
-      "2023-08-11"
-    ],
-    "annotations": {
-      "iana_sponsor_alias": "Kerry Trading",
-      "iana_sponsor_slug": "kerry-trading",
-      "iana_admin_alias": "Kerry Trading",
-      "iana_admin_slug": "kerry-trading",
-      "iana_tech_alias": "Identity Digital",
-      "iana_tech_slug": "identity-digital",
-      "icann_registry_operator_alias": "Kerry Trading",
-      "icann_registry_operator_slug": "kerry-trading",
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "as_org_aliases": [
-        "Identity Digital"
-      ],
-      "as_org_slugs": [
-        "identity-digital"
-      ]
-    }
+    ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,28 @@
         "admin": "Gauss Research Laboratory Inc.",
         "tech": "Gauss Research Laboratory Inc."
       }
+    },
+    "registry_url": "http://www.nic.pr",
+    "whois_server": "whois.afilias-srs.net",
+    "rdap_server": "https://rdap.identitydigital.services/rdap/",
+    "tld_created": "1989-08-27",
+    "tld_updated": [
+      "2022-07-20"
+    ],
+    "annotations": {
+      "rdap_source": "supplemental",
+      "country_name_iso": "Puerto Rico",
+      "as_org_aliases": [
+        "DENIC",
+        "Identity Digital",
+        "LACTLD"
+      ],
+      "as_org_slugs": [
+        "denic",
+        "identity-digital",
+        "lactld"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -170,28 +192,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.nic.pr",
-    "whois_server": "whois.afilias-srs.net",
-    "rdap_server": "https://rdap.identitydigital.services/rdap/",
-    "tld_created": "1989-08-27",
-    "tld_updated": [
-      "2022-07-20"
-    ],
-    "annotations": {
-      "rdap_source": "supplemental",
-      "country_name_iso": "Puerto Rico",
-      "as_org_aliases": [
-        "DENIC",
-        "Identity Digital",
-        "LACTLD"
-      ],
-      "as_org_slugs": [
-        "denic",
-        "identity-digital",
-        "lactld"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

@@ -1,0 +1,120 @@
+{
+  "description": "Ethno-linguistic and cultural communities claimed by TLDs in the IANA root zone, each with a reverse index of those TLDs.",
+  "publication": "2026-05-26T05:00:52Z",
+  "sources": [
+    "data/manual/cultures.json (editorial)",
+    "data/manual/annotations.json (cultural_affiliation tags)"
+  ],
+  "cultures": [
+    {
+      "slug": "arab",
+      "name_en": "Arab",
+      "info_link": "https://en.wikipedia.org/wiki/Arab_culture",
+      "language_code": "ar",
+      "tlds": [
+        "arab",
+        "xn--ngbrx"
+      ]
+    },
+    {
+      "slug": "basque",
+      "name_en": "Basque",
+      "info_link": "https://en.wikipedia.org/wiki/Culture_of_the_Basque_Country",
+      "language_code": "eu",
+      "tlds": [
+        "eus"
+      ]
+    },
+    {
+      "slug": "breton",
+      "name_en": "Breton",
+      "info_link": "https://en.wikipedia.org/wiki/Culture_of_Brittany",
+      "language_code": "br",
+      "tlds": [
+        "bzh"
+      ]
+    },
+    {
+      "slug": "catalan",
+      "name_en": "Catalan",
+      "info_link": "https://en.wikipedia.org/wiki/Culture_of_Catalonia",
+      "language_code": "ca",
+      "tlds": [
+        "cat"
+      ]
+    },
+    {
+      "slug": "desi",
+      "name_en": "Desi",
+      "info_link": "https://en.wikipedia.org/wiki/Desi",
+      "language_code": null,
+      "tlds": [
+        "desi"
+      ]
+    },
+    {
+      "slug": "galician",
+      "name_en": "Galician",
+      "info_link": "https://en.wikipedia.org/wiki/Galician_culture",
+      "language_code": "gl",
+      "tlds": [
+        "gal"
+      ]
+    },
+    {
+      "slug": "kiwi",
+      "name_en": "Kiwi",
+      "info_link": "https://en.wikipedia.org/wiki/Culture_of_New_Zealand",
+      "language_code": null,
+      "tlds": [
+        "kiwi"
+      ]
+    },
+    {
+      "slug": "kurdish",
+      "name_en": "Kurdish",
+      "info_link": "https://en.wikipedia.org/wiki/Kurdish_culture",
+      "language_code": "ku",
+      "tlds": [
+        "krd"
+      ]
+    },
+    {
+      "slug": "scottish",
+      "name_en": "Scottish",
+      "info_link": "https://en.wikipedia.org/wiki/Culture_of_Scotland",
+      "language_code": null,
+      "tlds": [
+        "scot"
+      ]
+    },
+    {
+      "slug": "swiss",
+      "name_en": "Swiss",
+      "info_link": "https://en.wikipedia.org/wiki/Culture_of_Switzerland",
+      "language_code": null,
+      "tlds": [
+        "swiss"
+      ]
+    },
+    {
+      "slug": "tatar",
+      "name_en": "Tatar",
+      "info_link": "https://en.wikipedia.org/wiki/Culture_of_Tatarstan",
+      "language_code": "tt",
+      "tlds": [
+        "tatar"
+      ]
+    },
+    {
+      "slug": "welsh",
+      "name_en": "Welsh",
+      "info_link": "https://en.wikipedia.org/wiki/Culture_of_Wales",
+      "language_code": "cy",
+      "tlds": [
+        "cymru",
+        "wales"
+      ]
+    }
+  ]
+}

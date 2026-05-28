@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -27,6 +27,34 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "registry_url": "http://mondomaine.paris.fr/",
+    "whois_server": "whois.nic.paris",
+    "rdap_server": "https://rdap.nic.paris",
+    "tld_created": "2014-03-27",
+    "tld_updated": [
+      "2025-04-29"
+    ],
+    "annotations": {
+      "iana_admin_alias": "AFNIC",
+      "iana_admin_slug": "afnic",
+      "iana_tech_alias": "AFNIC",
+      "iana_tech_slug": "afnic",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "community",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "AFNIC",
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "afnic",
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "city"
     },
     "nameservers": [
       {
@@ -86,34 +114,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://mondomaine.paris.fr/",
-    "whois_server": "whois.nic.paris",
-    "rdap_server": "https://rdap.nic.paris",
-    "tld_created": "2014-03-27",
-    "tld_updated": [
-      "2025-04-29"
-    ],
-    "annotations": {
-      "iana_admin_alias": "AFNIC",
-      "iana_admin_slug": "afnic",
-      "iana_tech_alias": "AFNIC",
-      "iana_tech_slug": "afnic",
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "community",
-        "non_sponsored"
-      ],
-      "as_org_aliases": [
-        "AFNIC",
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "afnic",
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "city"
-    }
+    ]
   }
 }

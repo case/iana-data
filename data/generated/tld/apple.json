@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -27,6 +27,32 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "registry_url": "https://www.nic.apple/",
+    "rdap_server": "https://rdap.nic.apple/",
+    "tld_created": "2015-07-02",
+    "tld_updated": [
+      "2025-11-10"
+    ],
+    "annotations": {
+      "iana_sponsor_alias": "Apple",
+      "iana_sponsor_slug": "apple",
+      "iana_tech_alias": "Packet Clearing House",
+      "iana_tech_slug": "packet-clearing-house",
+      "icann_registry_operator_alias": "Apple",
+      "icann_registry_operator_slug": "apple",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "brand",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "packet-clearing-house"
+      ]
     },
     "nameservers": [
       {
@@ -86,32 +112,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://www.nic.apple/",
-    "rdap_server": "https://rdap.nic.apple/",
-    "tld_created": "2015-07-02",
-    "tld_updated": [
-      "2025-11-10"
-    ],
-    "annotations": {
-      "iana_sponsor_alias": "Apple",
-      "iana_sponsor_slug": "apple",
-      "iana_tech_alias": "Packet Clearing House",
-      "iana_tech_slug": "packet-clearing-house",
-      "icann_registry_operator_alias": "Apple",
-      "icann_registry_operator_slug": "apple",
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "brand",
-        "non_sponsored"
-      ],
-      "as_org_aliases": [
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "packet-clearing-house"
-      ]
-    }
+    ]
   }
 }

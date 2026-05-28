@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T06:02:29Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -19,6 +19,24 @@
         "admin": "Association of IT Companies of Kazakhstan",
         "tech": "KazNIC Organization"
       }
+    },
+    "registry_url": "http://www.nic.kz/",
+    "whois_server": "whois.nic.kz",
+    "tld_created": "2011-09-15",
+    "tld_updated": [
+      "2023-03-07"
+    ],
+    "annotations": {
+      "country_name_iso": "Kazakhstan",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country",
+      "language_code": "kk",
+      "language_name_en": "Kazakh"
     },
     "nameservers": [
       {
@@ -78,22 +96,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.nic.kz/",
-    "whois_server": "whois.nic.kz",
-    "tld_created": "2011-09-15",
-    "tld_updated": [
-      "2023-03-07"
-    ],
-    "annotations": {
-      "country_name_iso": "Kazakhstan",
-      "as_org_aliases": [
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

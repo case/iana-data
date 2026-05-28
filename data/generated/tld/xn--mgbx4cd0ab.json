@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T06:02:29Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -19,6 +19,24 @@
         "admin": "MYNIC Berhad",
         "tech": "MYNIC Berhad"
       }
+    },
+    "registry_url": "http://www.mynic.my",
+    "whois_server": "whois.mynic.my",
+    "tld_created": "2011-10-22",
+    "tld_updated": [
+      "2026-04-17"
+    ],
+    "annotations": {
+      "country_name_iso": "Malaysia",
+      "as_org_aliases": [
+        "CentralNic"
+      ],
+      "as_org_slugs": [
+        "centralnic"
+      ],
+      "geographic_scope": "country",
+      "language_code": "ms",
+      "language_name_en": "Malay"
     },
     "nameservers": [
       {
@@ -116,22 +134,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.mynic.my",
-    "whois_server": "whois.mynic.my",
-    "tld_created": "2011-10-22",
-    "tld_updated": [
-      "2026-04-17"
-    ],
-    "annotations": {
-      "country_name_iso": "Malaysia",
-      "as_org_aliases": [
-        "CentralNic"
-      ],
-      "as_org_slugs": [
-        "centralnic"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

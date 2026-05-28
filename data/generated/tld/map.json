@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -27,6 +27,33 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "registry_url": "https://www.registry.google",
+    "rdap_server": "https://pubapi.registry.google/rdap/",
+    "tld_created": "2017-06-08",
+    "tld_updated": [
+      "2025-04-11"
+    ],
+    "annotations": {
+      "iana_sponsor_alias": "Google",
+      "iana_sponsor_slug": "google",
+      "iana_admin_alias": "Google",
+      "iana_admin_slug": "google",
+      "iana_tech_alias": "Google",
+      "iana_tech_slug": "google",
+      "icann_registry_operator_alias": "Google",
+      "icann_registry_operator_slug": "google",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "Google"
+      ],
+      "as_org_slugs": [
+        "google"
+      ]
     },
     "nameservers": [
       {
@@ -124,33 +151,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://www.registry.google",
-    "rdap_server": "https://pubapi.registry.google/rdap/",
-    "tld_created": "2017-06-08",
-    "tld_updated": [
-      "2025-04-11"
-    ],
-    "annotations": {
-      "iana_sponsor_alias": "Google",
-      "iana_sponsor_slug": "google",
-      "iana_admin_alias": "Google",
-      "iana_admin_slug": "google",
-      "iana_tech_alias": "Google",
-      "iana_tech_slug": "google",
-      "icann_registry_operator_alias": "Google",
-      "icann_registry_operator_slug": "google",
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "as_org_aliases": [
-        "Google"
-      ],
-      "as_org_slugs": [
-        "google"
-      ]
-    }
+    ]
   }
 }

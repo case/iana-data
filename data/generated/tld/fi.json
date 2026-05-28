@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,32 @@
         "admin": "Finnish Transport and Communications Agency Traficom",
         "tech": "Finnish Transport and Communications Agency Traficom"
       }
+    },
+    "registry_url": "https://domain.fi",
+    "whois_server": "whois.fi",
+    "rdap_server": "https://rdap.fi/rdap/rdap/",
+    "tld_created": "1986-12-17",
+    "tld_updated": [
+      "2025-09-15"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Finland",
+      "as_org_aliases": [
+        "CIRA",
+        "Community DNS",
+        "DENIC",
+        "Packet Clearing House",
+        "RcodeZero"
+      ],
+      "as_org_slugs": [
+        "cira",
+        "community-dns",
+        "denic",
+        "packet-clearing-house",
+        "rcodezero"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -208,32 +234,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://domain.fi",
-    "whois_server": "whois.fi",
-    "rdap_server": "https://rdap.fi/rdap/rdap/",
-    "tld_created": "1986-12-17",
-    "tld_updated": [
-      "2025-09-15"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "country_name_iso": "Finland",
-      "as_org_aliases": [
-        "CIRA",
-        "Community DNS",
-        "DENIC",
-        "Packet Clearing House",
-        "RcodeZero"
-      ],
-      "as_org_slugs": [
-        "cira",
-        "community-dns",
-        "denic",
-        "packet-clearing-house",
-        "rcodezero"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

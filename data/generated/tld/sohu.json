@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -27,6 +27,24 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "rdap_server": "https://rdap.zdnsgtld.com/sohu",
+    "tld_created": "2014-02-27",
+    "tld_updated": [
+      "2024-11-18"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "ZDNS"
+      ],
+      "as_org_slugs": [
+        "zdns"
+      ]
     },
     "nameservers": [
       {
@@ -125,24 +143,6 @@
           }
         ]
       }
-    ],
-    "rdap_server": "https://rdap.zdnsgtld.com/sohu",
-    "tld_created": "2014-02-27",
-    "tld_updated": [
-      "2024-11-18"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "as_org_aliases": [
-        "ZDNS"
-      ],
-      "as_org_slugs": [
-        "zdns"
-      ]
-    }
+    ]
   }
 }

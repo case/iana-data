@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T06:02:29Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -19,6 +19,24 @@
         "admin": "Macedonian Academic and Research Network MARnet",
         "tech": "Faculty of Computer Science and Engineering"
       }
+    },
+    "registry_url": "http://marnet.mk/",
+    "whois_server": "whois.marnet.mk",
+    "tld_created": "2014-04-21",
+    "tld_updated": [
+      "2024-02-21"
+    ],
+    "annotations": {
+      "country_name_iso": "North Macedonia",
+      "as_org_aliases": [
+        "CZNIC"
+      ],
+      "as_org_slugs": [
+        "cznic"
+      ],
+      "geographic_scope": "country",
+      "language_code": "mk",
+      "language_name_en": "Macedonian"
     },
     "nameservers": [
       {
@@ -90,22 +108,6 @@
         ],
         "ipv6": []
       }
-    ],
-    "registry_url": "http://marnet.mk/",
-    "whois_server": "whois.marnet.mk",
-    "tld_created": "2014-04-21",
-    "tld_updated": [
-      "2024-02-21"
-    ],
-    "annotations": {
-      "country_name_iso": "North Macedonia",
-      "as_org_aliases": [
-        "CZNIC"
-      ],
-      "as_org_slugs": [
-        "cznic"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

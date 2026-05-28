@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,26 @@
         "admin": "Centre Universitaire de Recherche et de formations aux technologies Internet (CURI)",
         "tech": "CURI - NIC Senegal"
       }
+    },
+    "registry_url": "https://www.cctld.sn",
+    "whois_server": "whois.nic.sn",
+    "rdap_server": "https://rdap.nic.sn/whois43/",
+    "tld_created": "1993-03-19",
+    "tld_updated": [
+      "2026-03-12"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Senegal",
+      "as_org_aliases": [
+        "AFNIC",
+        "Amazon"
+      ],
+      "as_org_slugs": [
+        "afnic",
+        "amazon"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -92,26 +112,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://www.cctld.sn",
-    "whois_server": "whois.nic.sn",
-    "rdap_server": "https://rdap.nic.sn/whois43/",
-    "tld_created": "1993-03-19",
-    "tld_updated": [
-      "2026-03-12"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "country_name_iso": "Senegal",
-      "as_org_aliases": [
-        "AFNIC",
-        "Amazon"
-      ],
-      "as_org_slugs": [
-        "afnic",
-        "amazon"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

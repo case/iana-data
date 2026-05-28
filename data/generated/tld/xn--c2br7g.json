@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T06:02:29Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -30,22 +30,53 @@
         "date_removed": null
       }
     },
+    "registry_url": "http://www.verisigninc.com",
+    "whois_server": "whois.nic.xn--c2br7g",
+    "rdap_server": "https://tld-rdap.verisign.com/xn--c2br7g/v1/",
+    "tld_created": "2015-07-02",
+    "tld_updated": [
+      "2026-03-30"
+    ],
+    "annotations": {
+      "iana_sponsor_alias": "VeriSign",
+      "iana_sponsor_slug": "verisign",
+      "iana_admin_alias": "VeriSign",
+      "iana_admin_slug": "verisign",
+      "iana_tech_alias": "VeriSign",
+      "iana_tech_slug": "verisign",
+      "icann_registry_operator_alias": "VeriSign",
+      "icann_registry_operator_slug": "verisign",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "icann_translation_en": "net",
+      "as_org_aliases": [
+        "VeriSign"
+      ],
+      "as_org_slugs": [
+        "verisign"
+      ],
+      "language_code": "hi",
+      "language_name_en": "Hindi"
+    },
     "nameservers": [
       {
         "hostname": "ac1.nstld.com",
         "ipv4": [
           {
             "ip": "192.42.173.30",
-            "asn": 10515,
-            "as_org": "CLT-NIC",
+            "asn": 397204,
+            "as_org": "VRSN-AC28",
             "as_country": "US"
           }
         ],
         "ipv6": [
           {
             "ip": "2001:500:120::30",
-            "asn": 10515,
-            "as_org": "CLT-NIC",
+            "asn": 397204,
+            "as_org": "VRSN-AC28",
             "as_country": "US"
           }
         ]
@@ -74,16 +105,16 @@
         "ipv4": [
           {
             "ip": "192.42.175.30",
-            "asn": 36623,
-            "as_org": "HGTLD",
+            "asn": 36625,
+            "as_org": "KGTLD",
             "as_country": "US"
           }
         ],
         "ipv6": [
           {
             "ip": "2001:500:122::30",
-            "asn": 36623,
-            "as_org": "HGTLD",
+            "asn": 25485,
+            "as_org": "VERISIGN-AS",
             "as_country": "US"
           }
         ]
@@ -107,35 +138,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.verisigninc.com",
-    "whois_server": "whois.nic.xn--c2br7g",
-    "rdap_server": "https://tld-rdap.verisign.com/xn--c2br7g/v1/",
-    "tld_created": "2015-07-02",
-    "tld_updated": [
-      "2026-03-30"
-    ],
-    "annotations": {
-      "iana_sponsor_alias": "VeriSign",
-      "iana_sponsor_slug": "verisign",
-      "iana_admin_alias": "VeriSign",
-      "iana_admin_slug": "verisign",
-      "iana_tech_alias": "VeriSign",
-      "iana_tech_slug": "verisign",
-      "icann_registry_operator_alias": "VeriSign",
-      "icann_registry_operator_slug": "verisign",
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "icann_translation_en": "net",
-      "as_org_aliases": [
-        "VeriSign"
-      ],
-      "as_org_slugs": [
-        "verisign"
-      ]
-    }
+    ]
   }
 }

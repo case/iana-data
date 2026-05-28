@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,25 @@
         "admin": "Namibian Network Information Center",
         "tech": "Namibian Network Information Center"
       }
+    },
+    "registry_url": "http://www.na-nic.com.na/",
+    "rdap_server": "https://keetmans.omadhina.co.na",
+    "tld_created": "1991-05-08",
+    "tld_updated": [
+      "2024-10-16"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Namibia",
+      "as_org_aliases": [
+        "Knipp Medien",
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "knipp-medien",
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -93,25 +112,6 @@
         ],
         "ipv6": []
       }
-    ],
-    "registry_url": "http://www.na-nic.com.na/",
-    "rdap_server": "https://keetmans.omadhina.co.na",
-    "tld_created": "1991-05-08",
-    "tld_updated": [
-      "2024-10-16"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "country_name_iso": "Namibia",
-      "as_org_aliases": [
-        "Knipp Medien",
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "knipp-medien",
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

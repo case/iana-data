@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T04:50:15Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,14 @@
         "admin": "Eritrea Telecommunications Corporation",
         "tech": "Eritrea Telecommunications Corporation"
       }
+    },
+    "tld_created": "1996-09-24",
+    "tld_updated": [
+      "2025-10-28"
+    ],
+    "annotations": {
+      "country_name_iso": "Eritrea",
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -61,14 +69,6 @@
         ],
         "ipv6": []
       }
-    ],
-    "tld_created": "1996-09-24",
-    "tld_updated": [
-      "2025-10-28"
-    ],
-    "annotations": {
-      "country_name_iso": "Eritrea",
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

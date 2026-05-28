@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T04:50:15Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -27,6 +27,20 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "registry_url": "https://nic.rio/",
+    "rdap_server": "https://rdap.gtlds.nic.br/",
+    "tld_created": "2014-05-15",
+    "tld_updated": [
+      "2025-08-14"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "geographic_scope": "city"
     },
     "nameservers": [
       {
@@ -143,20 +157,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://nic.rio/",
-    "rdap_server": "https://rdap.gtlds.nic.br/",
-    "tld_created": "2014-05-15",
-    "tld_updated": [
-      "2025-08-14"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "geographic_scope": "city"
-    }
+    ]
   }
 }

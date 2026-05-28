@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T06:02:29Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -30,6 +30,30 @@
         "date_removed": null
       }
     },
+    "registry_url": "http://www.pccs.va",
+    "whois_server": "whois.nic.xn--80aqecdr1a",
+    "rdap_server": "https://rdap.nic.xn--80aqecdr1a/",
+    "tld_created": "2016-11-16",
+    "tld_updated": [
+      "2023-12-21"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "community",
+        "non_sponsored"
+      ],
+      "icann_translation_en": "catholic",
+      "as_org_aliases": [
+        "UltraDNS"
+      ],
+      "as_org_slugs": [
+        "ultradns"
+      ],
+      "language_code": "ru",
+      "language_name_en": "Russian"
+    },
     "nameservers": [
       {
         "hostname": "a.nic.xn--80aqecdr1a",
@@ -55,7 +79,7 @@
         "ipv4": [
           {
             "ip": "37.209.194.9",
-            "asn": 397213,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -93,7 +117,7 @@
         "ipv4": [
           {
             "ip": "156.154.172.82",
-            "asn": 19905,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -101,7 +125,7 @@
         "ipv6": [
           {
             "ip": "2610:a1:1074::1:82",
-            "asn": 19905,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -112,7 +136,7 @@
         "ipv4": [
           {
             "ip": "156.154.173.82",
-            "asn": 19905,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -120,7 +144,7 @@
         "ipv6": [
           {
             "ip": "2610:a1:1075::1:82",
-            "asn": 19905,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -131,7 +155,7 @@
         "ipv4": [
           {
             "ip": "156.154.174.82",
-            "asn": 19905,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -139,34 +163,12 @@
         "ipv6": [
           {
             "ip": "2610:a1:1076::1:82",
-            "asn": 19905,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
         ]
       }
-    ],
-    "registry_url": "http://www.pccs.va",
-    "whois_server": "whois.nic.xn--80aqecdr1a",
-    "rdap_server": "https://rdap.nic.xn--80aqecdr1a/",
-    "tld_created": "2016-11-16",
-    "tld_updated": [
-      "2023-12-21"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "community",
-        "non_sponsored"
-      ],
-      "icann_translation_en": "catholic",
-      "as_org_aliases": [
-        "UltraDNS"
-      ],
-      "as_org_slugs": [
-        "ultradns"
-      ]
-    }
+    ]
   }
 }

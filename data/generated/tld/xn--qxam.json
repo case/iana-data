@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T06:02:29Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -19,6 +19,25 @@
         "admin": "ICS-FORTH GR",
         "tech": "ICS-FORTH GR"
       }
+    },
+    "registry_url": "http://www.gr",
+    "tld_created": "2015-05-06",
+    "tld_updated": [
+      "2023-03-07"
+    ],
+    "annotations": {
+      "country_name_iso": "Greece",
+      "as_org_aliases": [
+        "Community DNS",
+        "DENIC"
+      ],
+      "as_org_slugs": [
+        "community-dns",
+        "denic"
+      ],
+      "geographic_scope": "country",
+      "language_code": "el",
+      "language_name_en": "Greek"
     },
     "nameservers": [
       {
@@ -102,23 +121,6 @@
         ],
         "ipv6": []
       }
-    ],
-    "registry_url": "http://www.gr",
-    "tld_created": "2015-05-06",
-    "tld_updated": [
-      "2023-03-07"
-    ],
-    "annotations": {
-      "country_name_iso": "Greece",
-      "as_org_aliases": [
-        "Community DNS",
-        "DENIC"
-      ],
-      "as_org_slugs": [
-        "community-dns",
-        "denic"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -28,6 +28,31 @@
         "date_removed": null
       }
     },
+    "registry_url": "http://nic.toshiba",
+    "whois_server": "whois.nic.toshiba",
+    "rdap_server": "https://rdap.gmoregistry.net/rdap/",
+    "tld_created": "2014-10-09",
+    "tld_updated": [
+      "2019-08-20"
+    ],
+    "annotations": {
+      "iana_admin_alias": "GMO Registry",
+      "iana_admin_slug": "gmo-registry",
+      "iana_tech_alias": "GMO Registry",
+      "iana_tech_slug": "gmo-registry",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "brand",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "UltraDNS"
+      ],
+      "as_org_slugs": [
+        "ultradns"
+      ]
+    },
     "nameservers": [
       {
         "hostname": "a.gmoregistry.net",
@@ -53,7 +78,7 @@
         "ipv4": [
           {
             "ip": "37.209.194.4",
-            "asn": 397213,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -98,31 +123,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://nic.toshiba",
-    "whois_server": "whois.nic.toshiba",
-    "rdap_server": "https://rdap.gmoregistry.net/rdap/",
-    "tld_created": "2014-10-09",
-    "tld_updated": [
-      "2019-08-20"
-    ],
-    "annotations": {
-      "iana_admin_alias": "GMO Registry",
-      "iana_admin_slug": "gmo-registry",
-      "iana_tech_alias": "GMO Registry",
-      "iana_tech_slug": "gmo-registry",
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "brand",
-        "non_sponsored"
-      ],
-      "as_org_aliases": [
-        "UltraDNS"
-      ],
-      "as_org_slugs": [
-        "ultradns"
-      ]
-    }
+    ]
   }
 }

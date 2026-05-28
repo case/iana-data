@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -28,14 +28,39 @@
         "date_removed": null
       }
     },
+    "registry_url": "http://nic.broadway",
+    "rdap_server": "https://rdap.nominet.uk/broadway/",
+    "tld_created": "2015-10-08",
+    "tld_updated": [
+      "2025-05-28"
+    ],
+    "annotations": {
+      "iana_admin_alias": "Nominet",
+      "iana_admin_slug": "nominet",
+      "iana_tech_alias": "Nominet",
+      "iana_tech_slug": "nominet",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "Nominet",
+        "UltraDNS"
+      ],
+      "as_org_slugs": [
+        "nominet",
+        "ultradns"
+      ]
+    },
     "nameservers": [
       {
         "hostname": "dns1.nic.broadway",
         "ipv4": [
           {
             "ip": "213.248.219.38",
-            "asn": 137502,
-            "as_org": "NOMINET-AS-AP NOMINET UK",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
             "as_country": "GB"
           }
         ],
@@ -53,8 +78,8 @@
         "ipv4": [
           {
             "ip": "103.49.83.38",
-            "asn": 137502,
-            "as_org": "NOMINET-AS-AP NOMINET UK",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
             "as_country": "GB"
           }
         ],
@@ -181,31 +206,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://nic.broadway",
-    "rdap_server": "https://rdap.nominet.uk/broadway/",
-    "tld_created": "2015-10-08",
-    "tld_updated": [
-      "2025-05-28"
-    ],
-    "annotations": {
-      "iana_admin_alias": "Nominet",
-      "iana_admin_slug": "nominet",
-      "iana_tech_alias": "Nominet",
-      "iana_tech_slug": "nominet",
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "as_org_aliases": [
-        "Nominet",
-        "UltraDNS"
-      ],
-      "as_org_slugs": [
-        "nominet",
-        "ultradns"
-      ]
-    }
+    ]
   }
 }

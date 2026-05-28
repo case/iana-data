@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T06:02:29Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -19,6 +19,24 @@
         "admin": "Lao National Internet Center (LANIC)",
         "tech": "Lao National Internet Center (LANIC)"
       }
+    },
+    "registry_url": "https://www.la",
+    "whois_server": "whois.nic.la",
+    "tld_created": "2019-06-10",
+    "tld_updated": [
+      "2023-03-17"
+    ],
+    "annotations": {
+      "country_name_iso": "Lao People's Democratic Republic",
+      "as_org_aliases": [
+        "CentralNic"
+      ],
+      "as_org_slugs": [
+        "centralnic"
+      ],
+      "geographic_scope": "country",
+      "language_code": "lo",
+      "language_name_en": "Lao"
     },
     "nameservers": [
       {
@@ -97,22 +115,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://www.la",
-    "whois_server": "whois.nic.la",
-    "tld_created": "2019-06-10",
-    "tld_updated": [
-      "2023-03-17"
-    ],
-    "annotations": {
-      "country_name_iso": "Lao People's Democratic Republic",
-      "as_org_aliases": [
-        "CentralNic"
-      ],
-      "as_org_slugs": [
-        "centralnic"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

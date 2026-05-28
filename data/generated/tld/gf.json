@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T04:50:15Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,16 @@
         "admin": "CANAL+ TELECOM",
         "tech": "CANAL+ TELECOM"
       }
+    },
+    "registry_url": "https://www.dom-enic.com",
+    "whois_server": "whois.mediaserv.net",
+    "tld_created": "1996-07-25",
+    "tld_updated": [
+      "2021-10-18"
+    ],
+    "annotations": {
+      "country_name_iso": "French Guiana",
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -54,16 +64,6 @@
         ],
         "ipv6": []
       }
-    ],
-    "registry_url": "https://www.dom-enic.com",
-    "whois_server": "whois.mediaserv.net",
-    "tld_created": "1996-07-25",
-    "tld_updated": [
-      "2021-10-18"
-    ],
-    "annotations": {
-      "country_name_iso": "French Guiana",
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

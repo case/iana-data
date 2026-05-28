@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,24 @@
         "admin": "Fondation RESTENA",
         "tech": "Fondation RESTENA"
       }
+    },
+    "registry_url": "http://www.dns.lu",
+    "whois_server": "whois.dns.lu",
+    "tld_created": "1995-01-27",
+    "tld_updated": [
+      "2023-07-28"
+    ],
+    "annotations": {
+      "country_name_iso": "Luxembourg",
+      "as_org_aliases": [
+        "Community DNS",
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "community-dns",
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -132,24 +150,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.dns.lu",
-    "whois_server": "whois.dns.lu",
-    "tld_created": "1995-01-27",
-    "tld_updated": [
-      "2023-07-28"
-    ],
-    "annotations": {
-      "country_name_iso": "Luxembourg",
-      "as_org_aliases": [
-        "Community DNS",
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "community-dns",
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

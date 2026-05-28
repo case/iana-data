@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,24 @@
         "admin": "Norid A/S",
         "tech": "Norid A/S"
       }
+    },
+    "registry_url": "http://www.norid.no",
+    "whois_server": "whois.norid.no",
+    "rdap_server": "https://rdap.norid.no/",
+    "tld_created": "1987-03-17",
+    "tld_updated": [
+      "2022-01-14"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Norway",
+      "as_org_aliases": [
+        "UltraDNS"
+      ],
+      "as_org_slugs": [
+        "ultradns"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -125,24 +143,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.norid.no",
-    "whois_server": "whois.norid.no",
-    "rdap_server": "https://rdap.norid.no/",
-    "tld_created": "1987-03-17",
-    "tld_updated": [
-      "2022-01-14"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "country_name_iso": "Norway",
-      "as_org_aliases": [
-        "UltraDNS"
-      ],
-      "as_org_slugs": [
-        "ultradns"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

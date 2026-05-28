@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T06:02:29Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -30,6 +30,31 @@
         "date_removed": null
       }
     },
+    "registry_url": "http://gouwunic.com/",
+    "whois_server": "whois.nic.xn--g2xx48c",
+    "rdap_server": "https://rdap.nic.xn--g2xx48c/",
+    "tld_created": "2016-01-08",
+    "tld_updated": [
+      "2025-03-13"
+    ],
+    "annotations": {
+      "iana_tech_alias": "GoDaddy Registry",
+      "iana_tech_slug": "godaddy-registry",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "icann_translation_en": "shopping",
+      "as_org_aliases": [
+        "UltraDNS"
+      ],
+      "as_org_slugs": [
+        "ultradns"
+      ],
+      "language_code": "zh",
+      "language_name_en": "Chinese"
+    },
     "nameservers": [
       {
         "hostname": "a.nic.xn--g2xx48c",
@@ -55,7 +80,7 @@
         "ipv4": [
           {
             "ip": "37.209.194.10",
-            "asn": 397213,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -145,29 +170,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://gouwunic.com/",
-    "whois_server": "whois.nic.xn--g2xx48c",
-    "rdap_server": "https://rdap.nic.xn--g2xx48c/",
-    "tld_created": "2016-01-08",
-    "tld_updated": [
-      "2025-03-13"
-    ],
-    "annotations": {
-      "iana_tech_alias": "GoDaddy Registry",
-      "iana_tech_slug": "godaddy-registry",
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "icann_translation_en": "shopping",
-      "as_org_aliases": [
-        "UltraDNS"
-      ],
-      "as_org_slugs": [
-        "ultradns"
-      ]
-    }
+    ]
   }
 }

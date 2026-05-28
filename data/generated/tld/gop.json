@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -28,14 +28,38 @@
         "date_removed": null
       }
     },
+    "registry_url": "http://join.gop",
+    "whois_server": "whois.nic.gop",
+    "rdap_server": "https://rdap.nominet.uk/gop/",
+    "tld_created": "2014-03-06",
+    "tld_updated": [
+      "2024-01-22"
+    ],
+    "annotations": {
+      "iana_tech_alias": "Nominet",
+      "iana_tech_slug": "nominet",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "Nominet",
+        "UltraDNS"
+      ],
+      "as_org_slugs": [
+        "nominet",
+        "ultradns"
+      ]
+    },
     "nameservers": [
       {
         "hostname": "dns1.nic.gop",
         "ipv4": [
           {
             "ip": "213.248.219.39",
-            "asn": 137502,
-            "as_org": "NOMINET-AS-AP NOMINET UK",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
             "as_country": "GB"
           }
         ],
@@ -53,8 +77,8 @@
         "ipv4": [
           {
             "ip": "103.49.83.39",
-            "asn": 137502,
-            "as_org": "NOMINET-AS-AP NOMINET UK",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
             "as_country": "GB"
           }
         ],
@@ -181,30 +205,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://join.gop",
-    "whois_server": "whois.nic.gop",
-    "rdap_server": "https://rdap.nominet.uk/gop/",
-    "tld_created": "2014-03-06",
-    "tld_updated": [
-      "2024-01-22"
-    ],
-    "annotations": {
-      "iana_tech_alias": "Nominet",
-      "iana_tech_slug": "nominet",
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "as_org_aliases": [
-        "Nominet",
-        "UltraDNS"
-      ],
-      "as_org_slugs": [
-        "nominet",
-        "ultradns"
-      ]
-    }
+    ]
   }
 }

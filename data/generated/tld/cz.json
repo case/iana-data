@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,24 @@
         "admin": "CZ.NIC, z.s.p.o.",
         "tech": "CZ.NIC, z.s.p.o."
       }
+    },
+    "registry_url": "http://www.nic.cz/",
+    "whois_server": "whois.nic.cz",
+    "rdap_server": "https://rdap.nic.cz",
+    "tld_created": "1993-01-13",
+    "tld_updated": [
+      "2023-03-07"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Czechia",
+      "as_org_aliases": [
+        "CZNIC"
+      ],
+      "as_org_slugs": [
+        "cznic"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -94,24 +112,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.nic.cz/",
-    "whois_server": "whois.nic.cz",
-    "rdap_server": "https://rdap.nic.cz",
-    "tld_created": "1993-01-13",
-    "tld_updated": [
-      "2023-03-07"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "country_name_iso": "Czechia",
-      "as_org_aliases": [
-        "CZNIC"
-      ],
-      "as_org_slugs": [
-        "cznic"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

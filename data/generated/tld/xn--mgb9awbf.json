@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T06:02:29Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -19,6 +19,24 @@
         "admin": "Telecommunications Regulatory Authority (TRA)",
         "tech": "Telecommunications Regulatory Authority (TRA)"
       }
+    },
+    "registry_url": "http://www.registry.om",
+    "whois_server": "whois.registry.om",
+    "tld_created": "2011-02-05",
+    "tld_updated": [
+      "2023-03-07"
+    ],
+    "annotations": {
+      "country_name_iso": "Oman",
+      "as_org_aliases": [
+        "UltraDNS"
+      ],
+      "as_org_slugs": [
+        "ultradns"
+      ],
+      "geographic_scope": "country",
+      "language_code": "ar",
+      "language_name_en": "Arabic"
     },
     "nameservers": [
       {
@@ -45,7 +63,7 @@
         "ipv4": [
           {
             "ip": "37.209.194.6",
-            "asn": 397213,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -135,22 +153,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.registry.om",
-    "whois_server": "whois.registry.om",
-    "tld_created": "2011-02-05",
-    "tld_updated": [
-      "2023-03-07"
-    ],
-    "annotations": {
-      "country_name_iso": "Oman",
-      "as_org_aliases": [
-        "UltraDNS"
-      ],
-      "as_org_slugs": [
-        "ultradns"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

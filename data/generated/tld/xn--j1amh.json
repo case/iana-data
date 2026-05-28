@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T04:50:15Z",
+  "publication": "2026-05-26T06:02:29Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -19,6 +19,18 @@
         "admin": "Ukrainian Network Information Centre (UANIC), Inc.",
         "tech": "Ukrainian Network Information Centre (UANIC), Inc."
       }
+    },
+    "registry_url": "https://namestore.u-registry.com",
+    "whois_server": "whois.dotukr.com",
+    "tld_created": "2011-03-01",
+    "tld_updated": [
+      "2024-02-27"
+    ],
+    "annotations": {
+      "country_name_iso": "Ukraine",
+      "geographic_scope": "country",
+      "language_code": "uk",
+      "language_name_en": "Ukrainian"
     },
     "nameservers": [
       {
@@ -107,16 +119,6 @@
         ],
         "ipv6": []
       }
-    ],
-    "registry_url": "https://namestore.u-registry.com",
-    "whois_server": "whois.dotukr.com",
-    "tld_created": "2011-03-01",
-    "tld_updated": [
-      "2024-02-27"
-    ],
-    "annotations": {
-      "country_name_iso": "Ukraine",
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

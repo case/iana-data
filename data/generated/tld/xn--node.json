@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T06:02:29Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -19,6 +19,23 @@
         "admin": "Information Technologies Development Center (ITDC)",
         "tech": "Cloud9 LTD"
       }
+    },
+    "registry_url": "http://xn--lodaehvb5cdik4g.xn--node",
+    "tld_created": "2011-02-11",
+    "tld_updated": [
+      "2024-06-26"
+    ],
+    "annotations": {
+      "country_name_iso": "Georgia",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country",
+      "language_code": "ka",
+      "language_name_en": "Georgian"
     },
     "nameservers": [
       {
@@ -59,21 +76,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://xn--lodaehvb5cdik4g.xn--node",
-    "tld_created": "2011-02-11",
-    "tld_updated": [
-      "2024-06-26"
-    ],
-    "annotations": {
-      "country_name_iso": "Georgia",
-      "as_org_aliases": [
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

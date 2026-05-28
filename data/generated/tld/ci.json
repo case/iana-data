@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,24 @@
         "admin": "Autorité de Régulation des Télécommunications/TIC de Côte d’lvoire (ARTCI)",
         "tech": "Autorité de Régulation des Télécommunications/TIC de Côte d’lvoire (ARTCI)"
       }
+    },
+    "registry_url": "https://registry.nic.ci/login.jsp",
+    "whois_server": "whois.nic.ci",
+    "tld_created": "1995-02-14",
+    "tld_updated": [
+      "2025-05-12"
+    ],
+    "annotations": {
+      "country_name_iso": "Côte d'Ivoire",
+      "as_org_aliases": [
+        "AFNIC",
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "afnic",
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -80,8 +98,8 @@
         "ipv4": [
           {
             "ip": "196.49.0.84",
-            "asn": 329666,
-            "as_org": "CIVIX_Management",
+            "asn": 36946,
+            "as_org": "CIVIX",
             "as_country": "CI"
           }
         ],
@@ -106,24 +124,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://registry.nic.ci/login.jsp",
-    "whois_server": "whois.nic.ci",
-    "tld_created": "1995-02-14",
-    "tld_updated": [
-      "2025-05-12"
-    ],
-    "annotations": {
-      "country_name_iso": "Côte d'Ivoire",
-      "as_org_aliases": [
-        "AFNIC",
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "afnic",
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

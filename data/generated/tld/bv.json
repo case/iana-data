@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T04:50:15Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,15 @@
         "admin": "Norid A/S",
         "tech": "Norid A/S"
       }
+    },
+    "registry_url": "https://www.norid.no/en/omnorid/toppdomenet-bv/",
+    "tld_created": "1997-08-21",
+    "tld_updated": [
+      "2026-05-22"
+    ],
+    "annotations": {
+      "country_name_iso": "Bouvet Island",
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -151,15 +160,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://www.norid.no/en/omnorid/toppdomenet-bv/",
-    "tld_created": "1997-08-21",
-    "tld_updated": [
-      "2026-05-22"
-    ],
-    "annotations": {
-      "country_name_iso": "Bouvet Island",
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

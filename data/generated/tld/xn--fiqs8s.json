@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T06:33:22Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -20,13 +20,37 @@
         "tech": "China Internet Network Information Center (CNNIC)"
       }
     },
+    "registry_url": "http://www.cnnic.cn",
+    "whois_server": "whois.cnnic.cn",
+    "tld_created": "2010-07-09",
+    "tld_updated": [
+      "2025-07-18"
+    ],
+    "annotations": {
+      "iana_sponsor_alias": "CNNIC",
+      "iana_sponsor_slug": "cnnic",
+      "iana_admin_alias": "CNNIC",
+      "iana_admin_slug": "cnnic",
+      "iana_tech_alias": "CNNIC",
+      "iana_tech_slug": "cnnic",
+      "country_name_iso": "China",
+      "as_org_aliases": [
+        "CNNIC"
+      ],
+      "as_org_slugs": [
+        "cnnic"
+      ],
+      "geographic_scope": "country",
+      "language_code": "zh-Hans",
+      "language_name_en": "Chinese (Simplified)"
+    },
     "nameservers": [
       {
         "hostname": "h.dns.cn",
         "ipv4": [
           {
             "ip": "125.208.32.1",
-            "asn": 24406,
+            "asn": 24151,
             "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
             "as_country": "CN"
           }
@@ -45,7 +69,7 @@
         "ipv4": [
           {
             "ip": "125.208.33.1",
-            "asn": 24409,
+            "asn": 24406,
             "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
             "as_country": "CN"
           }
@@ -53,7 +77,7 @@
         "ipv6": [
           {
             "ip": "2001:dc7:ffff::1",
-            "asn": 24406,
+            "asn": 24409,
             "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
             "as_country": "CN"
           }
@@ -91,7 +115,7 @@
         "ipv6": [
           {
             "ip": "2001:dc7:fffc::1",
-            "asn": 24151,
+            "asn": 24406,
             "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
             "as_country": "CN"
           }
@@ -116,28 +140,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.cnnic.cn",
-    "whois_server": "whois.cnnic.cn",
-    "tld_created": "2010-07-09",
-    "tld_updated": [
-      "2025-07-18"
-    ],
-    "annotations": {
-      "iana_sponsor_alias": "CNNIC",
-      "iana_sponsor_slug": "cnnic",
-      "iana_admin_alias": "CNNIC",
-      "iana_admin_slug": "cnnic",
-      "iana_tech_alias": "CNNIC",
-      "iana_tech_slug": "cnnic",
-      "country_name_iso": "China",
-      "as_org_aliases": [
-        "CNNIC"
-      ],
-      "as_org_slugs": [
-        "cnnic"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

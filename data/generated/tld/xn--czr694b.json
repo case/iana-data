@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T06:02:29Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -29,6 +29,27 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "rdap_server": "https://rdap.zdnsgtld.com/xn--czr694b",
+    "tld_created": "2014-05-08",
+    "tld_updated": [
+      "2024-12-17"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "icann_translation_en": "trademark",
+      "as_org_aliases": [
+        "ZDNS"
+      ],
+      "as_org_slugs": [
+        "zdns"
+      ],
+      "language_code": "zh",
+      "language_name_en": "Chinese"
     },
     "nameservers": [
       {
@@ -127,25 +148,6 @@
           }
         ]
       }
-    ],
-    "rdap_server": "https://rdap.zdnsgtld.com/xn--czr694b",
-    "tld_created": "2014-05-08",
-    "tld_updated": [
-      "2024-12-17"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "icann_translation_en": "trademark",
-      "as_org_aliases": [
-        "ZDNS"
-      ],
-      "as_org_slugs": [
-        "zdns"
-      ]
-    }
+    ]
   }
 }

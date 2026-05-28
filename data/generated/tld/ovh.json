@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -27,6 +27,31 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "registry_url": "https://www.ovh.com",
+    "whois_server": "whois.nic.ovh",
+    "rdap_server": "https://rdap.nic.ovh",
+    "tld_created": "2014-05-01",
+    "tld_updated": [
+      "2024-09-11"
+    ],
+    "annotations": {
+      "iana_tech_alias": "AFNIC",
+      "iana_tech_slug": "afnic",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "community",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "AFNIC",
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "afnic",
+        "packet-clearing-house"
+      ]
     },
     "nameservers": [
       {
@@ -86,31 +111,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://www.ovh.com",
-    "whois_server": "whois.nic.ovh",
-    "rdap_server": "https://rdap.nic.ovh",
-    "tld_created": "2014-05-01",
-    "tld_updated": [
-      "2024-09-11"
-    ],
-    "annotations": {
-      "iana_tech_alias": "AFNIC",
-      "iana_tech_slug": "afnic",
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "community",
-        "non_sponsored"
-      ],
-      "as_org_aliases": [
-        "AFNIC",
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "afnic",
-        "packet-clearing-house"
-      ]
-    }
+    ]
   }
 }

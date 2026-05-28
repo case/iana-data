@@ -76,6 +76,21 @@ def test_write_json_if_changed_detects_array_changes(tmp_path):
     assert status == "written"
 
 
+def test_write_json_if_changed_detects_key_reorder(tmp_path):
+    """A change in dict insertion order must trigger a rewrite even though
+    parsed-dict equality would consider the data unchanged."""
+    filepath = tmp_path / "reorder.json"
+    filepath.write_text('{\n  "a": 1,\n  "b": 2\n}\n')
+
+    reordered = {"b": 2, "a": 1}
+
+    changed, status = write_json_if_changed(filepath, reordered)
+
+    assert changed is True
+    assert status == "written"
+    assert filepath.read_text().splitlines()[1].strip().startswith('"b"')
+
+
 def test_write_json_if_changed_formats_json_with_indentation(tmp_path):
     """Test that write_json_if_changed formats JSON with proper indentation."""
     filepath = tmp_path / "formatted-file.json"

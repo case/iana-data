@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-27T03:42:17Z",
+  "publication": "2026-05-28T02:11:16Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -27,6 +27,20 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "registry_url": "http://samsungregistry.com",
+    "whois_server": "whois.nic.samsung",
+    "rdap_server": "https://nic.samsung/rdap/",
+    "tld_created": "2014-10-30",
+    "tld_updated": [
+      "2026-05-26"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ]
     },
     "nameservers": [
       {
@@ -162,20 +176,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://samsungregistry.com",
-    "whois_server": "whois.nic.samsung",
-    "rdap_server": "https://nic.samsung/rdap/",
-    "tld_created": "2014-10-30",
-    "tld_updated": [
-      "2026-05-26"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ]
-    }
+    ]
   }
 }

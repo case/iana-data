@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,24 @@
         "admin": "The Internet Infrastructure Foundation",
         "tech": "Netnod AB"
       }
+    },
+    "registry_url": "https://www.internetstiftelsen.se",
+    "whois_server": "whois.iis.se",
+    "tld_created": "1986-09-04",
+    "tld_updated": [
+      "2026-02-12"
+    ],
+    "annotations": {
+      "country_name_iso": "Sweden",
+      "as_org_aliases": [
+        "CIRA",
+        "DENIC"
+      ],
+      "as_org_slugs": [
+        "cira",
+        "denic"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -80,16 +98,16 @@
         "ipv4": [
           {
             "ip": "192.36.134.97",
-            "asn": 8674,
-            "as_org": "NETNOD-IX Netnod AB",
+            "asn": 39870,
+            "as_org": "NETNOD-MMO Netnod Equipment located at IX in Malmoe",
             "as_country": "SE"
           }
         ],
         "ipv6": [
           {
             "ip": "2001:67c:2550:301::53",
-            "asn": 8674,
-            "as_org": "NETNOD-IX Netnod AB",
+            "asn": 39870,
+            "as_org": "NETNOD-MMO Netnod Equipment located at IX in Malmoe",
             "as_country": "SE"
           }
         ]
@@ -208,24 +226,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://www.internetstiftelsen.se",
-    "whois_server": "whois.iis.se",
-    "tld_created": "1986-09-04",
-    "tld_updated": [
-      "2026-02-12"
-    ],
-    "annotations": {
-      "country_name_iso": "Sweden",
-      "as_org_aliases": [
-        "CIRA",
-        "DENIC"
-      ],
-      "as_org_slugs": [
-        "cira",
-        "denic"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

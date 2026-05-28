@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -27,6 +27,29 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "registry_url": "http://www.man.eu",
+    "whois_server": "whois.nic.man",
+    "rdap_server": "https://rdap.nic.man/",
+    "tld_created": "2015-02-27",
+    "tld_updated": [
+      "2024-12-18"
+    ],
+    "annotations": {
+      "iana_tech_alias": "Knipp Medien",
+      "iana_tech_slug": "knipp-medien",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "brand",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "Knipp Medien"
+      ],
+      "as_org_slugs": [
+        "knipp-medien"
+      ]
     },
     "nameservers": [
       {
@@ -105,29 +128,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.man.eu",
-    "whois_server": "whois.nic.man",
-    "rdap_server": "https://rdap.nic.man/",
-    "tld_created": "2015-02-27",
-    "tld_updated": [
-      "2024-12-18"
-    ],
-    "annotations": {
-      "iana_tech_alias": "Knipp Medien",
-      "iana_tech_slug": "knipp-medien",
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "brand",
-        "non_sponsored"
-      ],
-      "as_org_aliases": [
-        "Knipp Medien"
-      ],
-      "as_org_slugs": [
-        "knipp-medien"
-      ]
-    }
+    ]
   }
 }

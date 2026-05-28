@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -17,14 +17,26 @@
         "tech": "Telesur"
       }
     },
+    "registry_url": "https://isp.datasur.sr/",
+    "whois_server": "whois.sr",
+    "rdap_server": "https://whois.sr/rdap/",
+    "tld_created": "1991-09-03",
+    "tld_updated": [
+      "2026-04-17"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Suriname",
+      "geographic_scope": "country"
+    },
     "nameservers": [
       {
         "hostname": "ns1.nic.sr",
         "ipv4": [
           {
             "ip": "168.195.219.210",
-            "asn": 27775,
-            "as_org": "Telecommunicationcompany Suriname - TeleSur",
+            "asn": 263799,
+            "as_org": "CARIBBEAN COMMUNICATION SERVICES",
             "as_country": "SR"
           }
         ],
@@ -69,24 +81,12 @@
         "ipv6": [
           {
             "ip": "2a0f:ff40:100:3112:2d53:cd87::",
-            "asn": 211588,
-            "as_org": "XYPHEN",
-            "as_country": "NL"
+            "asn": 0,
+            "as_org": "Not routed",
+            "as_country": "None"
           }
         ]
       }
-    ],
-    "registry_url": "https://isp.datasur.sr/",
-    "whois_server": "whois.sr",
-    "rdap_server": "https://whois.sr/rdap/",
-    "tld_created": "1991-09-03",
-    "tld_updated": [
-      "2026-04-17"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "country_name_iso": "Suriname",
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

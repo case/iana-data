@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,24 @@
         "admin": "The IUSN Foundation",
         "tech": "The Internet Infrastructure Foundation"
       }
+    },
+    "registry_url": "https://www.internetstiftelsen.se",
+    "whois_server": "whois.iis.nu",
+    "tld_created": "1997-06-20",
+    "tld_updated": [
+      "2025-07-03"
+    ],
+    "annotations": {
+      "country_name_iso": "Niue",
+      "as_org_aliases": [
+        "CIRA",
+        "DENIC"
+      ],
+      "as_org_slugs": [
+        "cira",
+        "denic"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -132,24 +150,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://www.internetstiftelsen.se",
-    "whois_server": "whois.iis.nu",
-    "tld_created": "1997-06-20",
-    "tld_updated": [
-      "2025-07-03"
-    ],
-    "annotations": {
-      "country_name_iso": "Niue",
-      "as_org_aliases": [
-        "CIRA",
-        "DENIC"
-      ],
-      "as_org_slugs": [
-        "cira",
-        "denic"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

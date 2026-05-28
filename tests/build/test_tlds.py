@@ -30,6 +30,9 @@ def temp_output(tmp_path, monkeypatch):
         tlds_index=tmp_path / "tlds-index.json",
         tld_dir=tmp_path / "tld",
         organizations_json=tmp_path / "organizations.json",
+        places_json=tmp_path / "places.json",
+        cultures_json=tmp_path / "cultures.json",
+        agreements_json=tmp_path / "agreements.json",
     )
 
 
@@ -49,6 +52,9 @@ def shared_build(tmp_path_factory):
         tlds_index=tmp / "tlds-index.json",
         tld_dir=tmp / "tld",
         organizations_json=tmp / "organizations.json",
+        places_json=tmp / "places.json",
+        cultures_json=tmp / "cultures.json",
+        agreements_json=tmp / "agreements.json",
     )
     result = build_tlds_json(paths)
     yield SimpleNamespace(

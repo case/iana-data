@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,15 @@
         "admin": "Information Technology Center",
         "tech": "Information Technology Center"
       }
+    },
+    "registry_url": "http://www.nic.tj",
+    "tld_created": "1997-12-11",
+    "tld_updated": [
+      "2020-03-09"
+    ],
+    "annotations": {
+      "country_name_iso": "Tajikistan",
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -74,21 +83,12 @@
         "ipv6": [
           {
             "ip": "2001:67c:e0::117",
-            "asn": 0,
-            "as_org": "Not routed",
-            "as_country": "None"
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_country": "NL"
           }
         ]
       }
-    ],
-    "registry_url": "http://www.nic.tj",
-    "tld_created": "1997-12-11",
-    "tld_updated": [
-      "2020-03-09"
-    ],
-    "annotations": {
-      "country_name_iso": "Tajikistan",
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

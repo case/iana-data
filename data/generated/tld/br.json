@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T04:50:15Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,18 @@
         "admin": "Comite Gestor da Internet no Brasil",
         "tech": "Registro .br"
       }
+    },
+    "registry_url": "http://registro.br/",
+    "whois_server": "whois.registro.br",
+    "rdap_server": "https://rdap.registro.br/",
+    "tld_created": "1989-04-18",
+    "tld_updated": [
+      "2023-11-14"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Brazil",
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -132,18 +144,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://registro.br/",
-    "whois_server": "whois.registro.br",
-    "rdap_server": "https://rdap.registro.br/",
-    "tld_created": "1989-04-18",
-    "tld_updated": [
-      "2023-11-14"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "country_name_iso": "Brazil",
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

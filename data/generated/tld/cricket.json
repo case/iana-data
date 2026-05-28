@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -28,6 +28,32 @@
         "date_removed": null
       }
     },
+    "registry_url": "http://nic.cricket",
+    "whois_server": "whois.nic.cricket",
+    "rdap_server": "https://rdap.nic.cricket/",
+    "tld_created": "2014-11-13",
+    "tld_updated": [
+      "2024-05-11"
+    ],
+    "annotations": {
+      "iana_sponsor_alias": "GRS Domains",
+      "iana_sponsor_slug": "grs-domains",
+      "iana_tech_alias": "GoDaddy Registry",
+      "iana_tech_slug": "godaddy-registry",
+      "icann_registry_operator_alias": "GRS Domains",
+      "icann_registry_operator_slug": "grs-domains",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "UltraDNS"
+      ],
+      "as_org_slugs": [
+        "ultradns"
+      ]
+    },
     "nameservers": [
       {
         "hostname": "a.nic.cricket",
@@ -53,7 +79,7 @@
         "ipv4": [
           {
             "ip": "37.209.194.10",
-            "asn": 397213,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -143,32 +169,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://nic.cricket",
-    "whois_server": "whois.nic.cricket",
-    "rdap_server": "https://rdap.nic.cricket/",
-    "tld_created": "2014-11-13",
-    "tld_updated": [
-      "2024-05-11"
-    ],
-    "annotations": {
-      "iana_sponsor_alias": "GRS Domains",
-      "iana_sponsor_slug": "grs-domains",
-      "iana_tech_alias": "GoDaddy Registry",
-      "iana_tech_slug": "godaddy-registry",
-      "icann_registry_operator_alias": "GRS Domains",
-      "icann_registry_operator_slug": "grs-domains",
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "as_org_aliases": [
-        "UltraDNS"
-      ],
-      "as_org_slugs": [
-        "ultradns"
-      ]
-    }
+    ]
   }
 }

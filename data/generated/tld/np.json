@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -17,15 +17,30 @@
         "tech": "Mercantile Communications Pvt. Ltd."
       }
     },
+    "registry_url": "http://www.mos.com.np",
+    "tld_created": "1995-01-25",
+    "tld_updated": [
+      "2025-07-14"
+    ],
+    "annotations": {
+      "country_name_iso": "Nepal",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country"
+    },
     "nameservers": [
       {
         "hostname": "np-ns.npix.net.np",
         "ipv4": [
           {
             "ip": "198.32.126.50",
-            "asn": 62,
-            "as_org": "CONE",
-            "as_country": "US"
+            "asn": 24474,
+            "as_org": "ASNPANYCAST Nepal Internet Exchange NP Anycast",
+            "as_country": "NP"
           }
         ],
         "ipv6": []
@@ -99,21 +114,6 @@
         ],
         "ipv6": []
       }
-    ],
-    "registry_url": "http://www.mos.com.np",
-    "tld_created": "1995-01-25",
-    "tld_updated": [
-      "2025-07-14"
-    ],
-    "annotations": {
-      "country_name_iso": "Nepal",
-      "as_org_aliases": [
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

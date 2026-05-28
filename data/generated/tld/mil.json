@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T04:50:15Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -17,6 +17,10 @@
         "tech": "DoD Network Information Center"
       }
     },
+    "tld_created": "1985-01-01",
+    "tld_updated": [
+      "2026-03-10"
+    ],
     "nameservers": [
       {
         "hostname": "con1.nipr.mil",
@@ -132,10 +136,6 @@
           }
         ]
       }
-    ],
-    "tld_created": "1985-01-01",
-    "tld_updated": [
-      "2026-03-10"
     ]
   }
 }

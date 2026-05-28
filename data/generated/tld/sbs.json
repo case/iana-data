@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -27,6 +27,32 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "registry_url": "http://nic.icu",
+    "whois_server": "whois.nic.sbs",
+    "rdap_server": "https://rdap.centralnic.com/sbs/",
+    "tld_created": "2015-09-24",
+    "tld_updated": [
+      "2024-06-19"
+    ],
+    "annotations": {
+      "iana_sponsor_alias": "Shortdot",
+      "iana_sponsor_slug": "shortdot",
+      "iana_admin_alias": "Shortdot",
+      "iana_admin_slug": "shortdot",
+      "iana_tech_alias": "CentralNic",
+      "iana_tech_slug": "centralnic",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "CentralNic"
+      ],
+      "as_org_slugs": [
+        "centralnic"
+      ]
     },
     "nameservers": [
       {
@@ -105,32 +131,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://nic.icu",
-    "whois_server": "whois.nic.sbs",
-    "rdap_server": "https://rdap.centralnic.com/sbs/",
-    "tld_created": "2015-09-24",
-    "tld_updated": [
-      "2024-06-19"
-    ],
-    "annotations": {
-      "iana_sponsor_alias": "Shortdot",
-      "iana_sponsor_slug": "shortdot",
-      "iana_admin_alias": "Shortdot",
-      "iana_admin_slug": "shortdot",
-      "iana_tech_alias": "CentralNic",
-      "iana_tech_slug": "centralnic",
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "as_org_aliases": [
-        "CentralNic"
-      ],
-      "as_org_slugs": [
-        "centralnic"
-      ]
-    }
+    ]
   }
 }

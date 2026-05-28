@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,26 @@
         "admin": "NIC-MG (Network Information Center Madagascar)",
         "tech": "NIC-MG (Network Information Center Madagascar)"
       }
+    },
+    "registry_url": "http://www.nic.mg",
+    "whois_server": "whois.nic.mg",
+    "rdap_server": "http://rdap.nic.mg",
+    "tld_created": "1995-07-25",
+    "tld_updated": [
+      "2025-10-02"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Madagascar",
+      "as_org_aliases": [
+        "Amazon",
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "amazon",
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -92,26 +112,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.nic.mg",
-    "whois_server": "whois.nic.mg",
-    "rdap_server": "http://rdap.nic.mg",
-    "tld_created": "1995-07-25",
-    "tld_updated": [
-      "2025-10-02"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "country_name_iso": "Madagascar",
-      "as_org_aliases": [
-        "Amazon",
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "amazon",
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

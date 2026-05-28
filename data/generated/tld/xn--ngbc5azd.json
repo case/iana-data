@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T06:02:29Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -30,6 +30,33 @@
         "date_removed": null
       }
     },
+    "registry_url": "http://www.dotshabaka.com",
+    "whois_server": "whois.nic.xn--ngbc5azd",
+    "rdap_server": "https://rdap.nic.xn--ngbc5azd/",
+    "tld_created": "2013-10-21",
+    "tld_updated": [
+      "2024-04-17"
+    ],
+    "annotations": {
+      "iana_admin_alias": "GoDaddy Registry",
+      "iana_admin_slug": "godaddy-registry",
+      "iana_tech_alias": "GoDaddy Registry",
+      "iana_tech_slug": "godaddy-registry",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "icann_translation_en": "web",
+      "as_org_aliases": [
+        "UltraDNS"
+      ],
+      "as_org_slugs": [
+        "ultradns"
+      ],
+      "language_code": "ar",
+      "language_name_en": "Arabic"
+    },
     "nameservers": [
       {
         "hostname": "a.nic.xn--ngbc5azd",
@@ -55,7 +82,7 @@
         "ipv4": [
           {
             "ip": "37.209.194.3",
-            "asn": 397213,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -93,7 +120,7 @@
         "ipv4": [
           {
             "ip": "156.154.172.82",
-            "asn": 19905,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -101,7 +128,7 @@
         "ipv6": [
           {
             "ip": "2610:a1:1074::1:82",
-            "asn": 19905,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -112,7 +139,7 @@
         "ipv4": [
           {
             "ip": "156.154.173.82",
-            "asn": 19905,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -120,7 +147,7 @@
         "ipv6": [
           {
             "ip": "2610:a1:1075::1:82",
-            "asn": 19905,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -131,7 +158,7 @@
         "ipv4": [
           {
             "ip": "156.154.174.82",
-            "asn": 19905,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -139,37 +166,12 @@
         "ipv6": [
           {
             "ip": "2610:a1:1076::1:82",
-            "asn": 19905,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
         ]
       }
-    ],
-    "registry_url": "http://www.dotshabaka.com",
-    "whois_server": "whois.nic.xn--ngbc5azd",
-    "rdap_server": "https://rdap.nic.xn--ngbc5azd/",
-    "tld_created": "2013-10-21",
-    "tld_updated": [
-      "2024-04-17"
-    ],
-    "annotations": {
-      "iana_admin_alias": "GoDaddy Registry",
-      "iana_admin_slug": "godaddy-registry",
-      "iana_tech_alias": "GoDaddy Registry",
-      "iana_tech_slug": "godaddy-registry",
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "icann_translation_en": "web",
-      "as_org_aliases": [
-        "UltraDNS"
-      ],
-      "as_org_slugs": [
-        "ultradns"
-      ]
-    }
+    ]
   }
 }

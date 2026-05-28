@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,24 @@
         "admin": "Hong Kong Internet Registration Corporation Ltd.",
         "tech": "Hong Kong Internet Registration Corporation Ltd."
       }
+    },
+    "registry_url": "http://www.hkirc.hk",
+    "whois_server": "whois.hkirc.hk",
+    "tld_created": "1990-01-03",
+    "tld_updated": [
+      "2026-01-07"
+    ],
+    "annotations": {
+      "country_name_iso": "Hong Kong",
+      "as_org_aliases": [
+        "CNNIC",
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "cnnic",
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -61,7 +79,7 @@
         "ipv4": [
           {
             "ip": "125.208.49.10",
-            "asn": 24151,
+            "asn": 24406,
             "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
             "as_country": "CN"
           }
@@ -190,24 +208,6 @@
         ]
       }
     ],
-    "registry_url": "http://www.hkirc.hk",
-    "whois_server": "whois.hkirc.hk",
-    "tld_created": "1990-01-03",
-    "tld_updated": [
-      "2026-01-07"
-    ],
-    "annotations": {
-      "country_name_iso": "Hong Kong",
-      "as_org_aliases": [
-        "CNNIC",
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "cnnic",
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    },
     "idn": [
       "xn--j6w193g"
     ]

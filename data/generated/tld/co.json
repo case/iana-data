@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,26 @@
         "admin": "Ministry of Information and Communications Technologies (MinTIC)",
         "tech": "CentralNic"
       }
+    },
+    "registry_url": "http://www.registry.co",
+    "whois_server": "whois.registry.co",
+    "rdap_server": "https://rdap.registry.co/co/",
+    "tld_created": "1991-12-24",
+    "tld_updated": [
+      "2026-02-17"
+    ],
+    "annotations": {
+      "iana_tech_alias": "CentralNic",
+      "iana_tech_slug": "centralnic",
+      "rdap_source": "supplemental",
+      "country_name_iso": "Colombia",
+      "as_org_aliases": [
+        "CentralNic"
+      ],
+      "as_org_slugs": [
+        "centralnic"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -94,26 +114,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.registry.co",
-    "whois_server": "whois.registry.co",
-    "rdap_server": "https://rdap.registry.co/co/",
-    "tld_created": "1991-12-24",
-    "tld_updated": [
-      "2026-02-17"
-    ],
-    "annotations": {
-      "iana_tech_alias": "CentralNic",
-      "iana_tech_slug": "centralnic",
-      "rdap_source": "supplemental",
-      "country_name_iso": "Colombia",
-      "as_org_aliases": [
-        "CentralNic"
-      ],
-      "as_org_slugs": [
-        "centralnic"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

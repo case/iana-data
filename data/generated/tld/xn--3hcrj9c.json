@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T06:02:29Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -19,6 +19,32 @@
         "admin": "National Internet eXchange of India",
         "tech": "National Internet eXchange of India"
       }
+    },
+    "registry_url": "https://registry.in",
+    "whois_server": "whois.nixiregistry.in",
+    "tld_created": "2016-04-18",
+    "tld_updated": [
+      "2026-04-16"
+    ],
+    "annotations": {
+      "iana_sponsor_alias": "NIXI",
+      "iana_sponsor_slug": "nixi",
+      "iana_admin_alias": "NIXI",
+      "iana_admin_slug": "nixi",
+      "iana_tech_alias": "NIXI",
+      "iana_tech_slug": "nixi",
+      "country_name_iso": "India",
+      "as_org_aliases": [
+        "Packet Clearing House",
+        "Tucows"
+      ],
+      "as_org_slugs": [
+        "packet-clearing-house",
+        "tucows"
+      ],
+      "geographic_scope": "country",
+      "language_code": "or",
+      "language_name_en": "Odia"
     },
     "nameservers": [
       {
@@ -97,30 +123,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://registry.in",
-    "whois_server": "whois.nixiregistry.in",
-    "tld_created": "2016-04-18",
-    "tld_updated": [
-      "2026-04-16"
-    ],
-    "annotations": {
-      "iana_sponsor_alias": "NIXI",
-      "iana_sponsor_slug": "nixi",
-      "iana_admin_alias": "NIXI",
-      "iana_admin_slug": "nixi",
-      "iana_tech_alias": "NIXI",
-      "iana_tech_slug": "nixi",
-      "country_name_iso": "India",
-      "as_org_aliases": [
-        "Packet Clearing House",
-        "Tucows"
-      ],
-      "as_org_slugs": [
-        "packet-clearing-house",
-        "tucows"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

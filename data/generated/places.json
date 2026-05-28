@@ -1,0 +1,3216 @@
+{
+  "description": "Places associated with TLDs in the IANA root zone (countries, dependent territories, subdivisions, cities, and supranational regions), each with a reverse index of its TLDs. Country slugs are ISO 3166-1 alpha-2.",
+  "publication": "2026-05-26T05:00:52Z",
+  "sources": [
+    "pycountry (ISO 3166-1 / 3166-2)",
+    "data/manual/places.json (editorial)",
+    "data/manual/dependent-territories.json (editorial; ISO 3166-1)"
+  ],
+  "places": [
+    {
+      "slug": "abudhabi",
+      "name_en": "Abu Dhabi",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "ae",
+      "info_link": "https://en.wikipedia.org/wiki/Abu_Dhabi",
+      "tlds": [
+        "abudhabi",
+        "xn--mgbca7dzdo"
+      ]
+    },
+    {
+      "slug": "ac",
+      "name_en": "Ascension Island",
+      "subtype": "country",
+      "iso_code": null,
+      "parent": "sh",
+      "tlds": [
+        "ac"
+      ],
+      "iso_designation": "exceptionally_reserved"
+    },
+    {
+      "slug": "ad",
+      "name_en": "Andorra",
+      "subtype": "country",
+      "iso_code": "AD",
+      "parent": null,
+      "tlds": [
+        "ad"
+      ]
+    },
+    {
+      "slug": "ae",
+      "name_en": "United Arab Emirates",
+      "subtype": "country",
+      "iso_code": "AE",
+      "parent": null,
+      "tlds": [
+        "ae",
+        "xn--mgbaam7a8h"
+      ]
+    },
+    {
+      "slug": "af",
+      "name_en": "Afghanistan",
+      "subtype": "country",
+      "iso_code": "AF",
+      "parent": null,
+      "tlds": [
+        "af"
+      ]
+    },
+    {
+      "slug": "africa",
+      "name_en": "Africa",
+      "subtype": "supranational",
+      "iso_code": null,
+      "parent": null,
+      "info_link": "https://en.wikipedia.org/wiki/Africa",
+      "tlds": [
+        "africa"
+      ]
+    },
+    {
+      "slug": "ag",
+      "name_en": "Antigua and Barbuda",
+      "subtype": "country",
+      "iso_code": "AG",
+      "parent": null,
+      "tlds": [
+        "ag"
+      ]
+    },
+    {
+      "slug": "ai",
+      "name_en": "Anguilla",
+      "subtype": "country",
+      "iso_code": "AI",
+      "parent": "gb",
+      "tlds": [
+        "ai"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "al",
+      "name_en": "Albania",
+      "subtype": "country",
+      "iso_code": "AL",
+      "parent": null,
+      "tlds": [
+        "al"
+      ]
+    },
+    {
+      "slug": "alsace",
+      "name_en": "Alsace",
+      "subtype": "subdivision",
+      "iso_code": null,
+      "parent": "fr",
+      "info_link": "https://en.wikipedia.org/wiki/Alsace",
+      "tlds": [
+        "alsace"
+      ]
+    },
+    {
+      "slug": "am",
+      "name_en": "Armenia",
+      "subtype": "country",
+      "iso_code": "AM",
+      "parent": null,
+      "tlds": [
+        "am",
+        "xn--y9a3aq"
+      ]
+    },
+    {
+      "slug": "amsterdam",
+      "name_en": "Amsterdam",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "nl",
+      "info_link": "https://en.wikipedia.org/wiki/Amsterdam",
+      "tlds": [
+        "amsterdam"
+      ]
+    },
+    {
+      "slug": "ao",
+      "name_en": "Angola",
+      "subtype": "country",
+      "iso_code": "AO",
+      "parent": null,
+      "tlds": [
+        "ao"
+      ]
+    },
+    {
+      "slug": "aq",
+      "name_en": "Antarctica",
+      "subtype": "country",
+      "iso_code": "AQ",
+      "parent": null,
+      "tlds": [
+        "aq"
+      ],
+      "iso_designation": "special_area"
+    },
+    {
+      "slug": "ar",
+      "name_en": "Argentina",
+      "subtype": "country",
+      "iso_code": "AR",
+      "parent": null,
+      "tlds": [
+        "ar"
+      ]
+    },
+    {
+      "slug": "as",
+      "name_en": "American Samoa",
+      "subtype": "country",
+      "iso_code": "AS",
+      "parent": "us",
+      "tlds": [
+        "as"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "asia",
+      "name_en": "Asia",
+      "subtype": "supranational",
+      "iso_code": null,
+      "parent": null,
+      "info_link": "https://en.wikipedia.org/wiki/Asia",
+      "tlds": [
+        "asia"
+      ]
+    },
+    {
+      "slug": "at",
+      "name_en": "Austria",
+      "subtype": "country",
+      "iso_code": "AT",
+      "parent": null,
+      "tlds": [
+        "at"
+      ]
+    },
+    {
+      "slug": "au",
+      "name_en": "Australia",
+      "subtype": "country",
+      "iso_code": "AU",
+      "parent": null,
+      "tlds": [
+        "au"
+      ]
+    },
+    {
+      "slug": "aw",
+      "name_en": "Aruba",
+      "subtype": "country",
+      "iso_code": "AW",
+      "parent": "nl",
+      "tlds": [
+        "aw"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "ax",
+      "name_en": "Åland Islands",
+      "subtype": "country",
+      "iso_code": "AX",
+      "parent": "fi",
+      "tlds": [
+        "ax"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "az",
+      "name_en": "Azerbaijan",
+      "subtype": "country",
+      "iso_code": "AZ",
+      "parent": null,
+      "tlds": [
+        "az"
+      ]
+    },
+    {
+      "slug": "ba",
+      "name_en": "Bosnia and Herzegovina",
+      "subtype": "country",
+      "iso_code": "BA",
+      "parent": null,
+      "tlds": [
+        "ba"
+      ]
+    },
+    {
+      "slug": "barcelona",
+      "name_en": "Barcelona",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "es",
+      "info_link": "https://en.wikipedia.org/wiki/Barcelona",
+      "tlds": [
+        "barcelona",
+        "bcn"
+      ]
+    },
+    {
+      "slug": "basque-country",
+      "name_en": "Basque Country",
+      "subtype": "subdivision",
+      "iso_code": "ES-PV",
+      "parent": "es",
+      "info_link": "https://en.wikipedia.org/wiki/Basque_Country_(autonomous_community)",
+      "tlds": [
+        "eus"
+      ]
+    },
+    {
+      "slug": "bayern",
+      "name_en": "Bavaria",
+      "subtype": "subdivision",
+      "iso_code": "DE-BY",
+      "parent": "de",
+      "info_link": "https://en.wikipedia.org/wiki/Bavaria",
+      "tlds": [
+        "bayern"
+      ]
+    },
+    {
+      "slug": "bb",
+      "name_en": "Barbados",
+      "subtype": "country",
+      "iso_code": "BB",
+      "parent": null,
+      "tlds": [
+        "bb"
+      ]
+    },
+    {
+      "slug": "bd",
+      "name_en": "Bangladesh",
+      "subtype": "country",
+      "iso_code": "BD",
+      "parent": null,
+      "tlds": [
+        "bd",
+        "xn--54b7fta0cc"
+      ]
+    },
+    {
+      "slug": "be",
+      "name_en": "Belgium",
+      "subtype": "country",
+      "iso_code": "BE",
+      "parent": null,
+      "tlds": [
+        "be"
+      ]
+    },
+    {
+      "slug": "berlin",
+      "name_en": "Berlin",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "de",
+      "info_link": "https://en.wikipedia.org/wiki/Berlin",
+      "tlds": [
+        "berlin"
+      ]
+    },
+    {
+      "slug": "bf",
+      "name_en": "Burkina Faso",
+      "subtype": "country",
+      "iso_code": "BF",
+      "parent": null,
+      "tlds": [
+        "bf"
+      ]
+    },
+    {
+      "slug": "bg",
+      "name_en": "Bulgaria",
+      "subtype": "country",
+      "iso_code": "BG",
+      "parent": null,
+      "tlds": [
+        "bg",
+        "xn--90ae"
+      ]
+    },
+    {
+      "slug": "bh",
+      "name_en": "Bahrain",
+      "subtype": "country",
+      "iso_code": "BH",
+      "parent": null,
+      "tlds": [
+        "bh",
+        "xn--mgbcpq6gpa1a"
+      ]
+    },
+    {
+      "slug": "bi",
+      "name_en": "Burundi",
+      "subtype": "country",
+      "iso_code": "BI",
+      "parent": null,
+      "tlds": [
+        "bi"
+      ]
+    },
+    {
+      "slug": "bj",
+      "name_en": "Benin",
+      "subtype": "country",
+      "iso_code": "BJ",
+      "parent": null,
+      "tlds": [
+        "bj"
+      ]
+    },
+    {
+      "slug": "bm",
+      "name_en": "Bermuda",
+      "subtype": "country",
+      "iso_code": "BM",
+      "parent": "gb",
+      "tlds": [
+        "bm"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "bn",
+      "name_en": "Brunei Darussalam",
+      "subtype": "country",
+      "iso_code": "BN",
+      "parent": null,
+      "tlds": [
+        "bn"
+      ]
+    },
+    {
+      "slug": "bo",
+      "name_en": "Bolivia, Plurinational State of",
+      "subtype": "country",
+      "iso_code": "BO",
+      "parent": null,
+      "tlds": [
+        "bo"
+      ]
+    },
+    {
+      "slug": "boston",
+      "name_en": "Boston",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "us",
+      "info_link": "https://en.wikipedia.org/wiki/Boston",
+      "tlds": [
+        "boston"
+      ]
+    },
+    {
+      "slug": "br",
+      "name_en": "Brazil",
+      "subtype": "country",
+      "iso_code": "BR",
+      "parent": null,
+      "tlds": [
+        "br"
+      ]
+    },
+    {
+      "slug": "brittany",
+      "name_en": "Brittany",
+      "subtype": "subdivision",
+      "iso_code": "FR-BRE",
+      "parent": "fr",
+      "info_link": "https://en.wikipedia.org/wiki/Brittany",
+      "tlds": [
+        "bzh"
+      ]
+    },
+    {
+      "slug": "brussels",
+      "name_en": "Brussels",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "be",
+      "info_link": "https://en.wikipedia.org/wiki/Brussels",
+      "tlds": [
+        "brussels"
+      ]
+    },
+    {
+      "slug": "bs",
+      "name_en": "Bahamas",
+      "subtype": "country",
+      "iso_code": "BS",
+      "parent": null,
+      "tlds": [
+        "bs"
+      ]
+    },
+    {
+      "slug": "bt",
+      "name_en": "Bhutan",
+      "subtype": "country",
+      "iso_code": "BT",
+      "parent": null,
+      "tlds": [
+        "bt"
+      ]
+    },
+    {
+      "slug": "bv",
+      "name_en": "Bouvet Island",
+      "subtype": "country",
+      "iso_code": "BV",
+      "parent": "no",
+      "tlds": [
+        "bv"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "bw",
+      "name_en": "Botswana",
+      "subtype": "country",
+      "iso_code": "BW",
+      "parent": null,
+      "tlds": [
+        "bw"
+      ]
+    },
+    {
+      "slug": "by",
+      "name_en": "Belarus",
+      "subtype": "country",
+      "iso_code": "BY",
+      "parent": null,
+      "tlds": [
+        "by",
+        "xn--90ais"
+      ]
+    },
+    {
+      "slug": "bz",
+      "name_en": "Belize",
+      "subtype": "country",
+      "iso_code": "BZ",
+      "parent": null,
+      "tlds": [
+        "bz"
+      ]
+    },
+    {
+      "slug": "ca",
+      "name_en": "Canada",
+      "subtype": "country",
+      "iso_code": "CA",
+      "parent": null,
+      "tlds": [
+        "ca"
+      ]
+    },
+    {
+      "slug": "capetown",
+      "name_en": "Cape Town",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "za",
+      "info_link": "https://en.wikipedia.org/wiki/Cape_Town",
+      "tlds": [
+        "capetown"
+      ]
+    },
+    {
+      "slug": "catalonia",
+      "name_en": "Catalonia",
+      "subtype": "subdivision",
+      "iso_code": "ES-CT",
+      "parent": "es",
+      "info_link": "https://en.wikipedia.org/wiki/Catalonia",
+      "tlds": [
+        "cat"
+      ]
+    },
+    {
+      "slug": "cc",
+      "name_en": "Cocos (Keeling) Islands",
+      "subtype": "country",
+      "iso_code": "CC",
+      "parent": "au",
+      "tlds": [
+        "cc"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "cd",
+      "name_en": "Congo, The Democratic Republic of the",
+      "subtype": "country",
+      "iso_code": "CD",
+      "parent": null,
+      "tlds": [
+        "cd"
+      ]
+    },
+    {
+      "slug": "cf",
+      "name_en": "Central African Republic",
+      "subtype": "country",
+      "iso_code": "CF",
+      "parent": null,
+      "tlds": [
+        "cf"
+      ]
+    },
+    {
+      "slug": "cg",
+      "name_en": "Congo",
+      "subtype": "country",
+      "iso_code": "CG",
+      "parent": null,
+      "tlds": [
+        "cg"
+      ]
+    },
+    {
+      "slug": "ch",
+      "name_en": "Switzerland",
+      "subtype": "country",
+      "iso_code": "CH",
+      "parent": null,
+      "tlds": [
+        "ch"
+      ]
+    },
+    {
+      "slug": "ci",
+      "name_en": "Côte d'Ivoire",
+      "subtype": "country",
+      "iso_code": "CI",
+      "parent": null,
+      "tlds": [
+        "ci"
+      ]
+    },
+    {
+      "slug": "ck",
+      "name_en": "Cook Islands",
+      "subtype": "country",
+      "iso_code": "CK",
+      "parent": "nz",
+      "tlds": [
+        "ck"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "cl",
+      "name_en": "Chile",
+      "subtype": "country",
+      "iso_code": "CL",
+      "parent": null,
+      "tlds": [
+        "cl"
+      ]
+    },
+    {
+      "slug": "cm",
+      "name_en": "Cameroon",
+      "subtype": "country",
+      "iso_code": "CM",
+      "parent": null,
+      "tlds": [
+        "cm"
+      ]
+    },
+    {
+      "slug": "cn",
+      "name_en": "China",
+      "subtype": "country",
+      "iso_code": "CN",
+      "parent": null,
+      "tlds": [
+        "cn",
+        "xn--fiqs8s",
+        "xn--fiqz9s"
+      ]
+    },
+    {
+      "slug": "co",
+      "name_en": "Colombia",
+      "subtype": "country",
+      "iso_code": "CO",
+      "parent": null,
+      "tlds": [
+        "co"
+      ]
+    },
+    {
+      "slug": "cologne",
+      "name_en": "Cologne",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "de",
+      "info_link": "https://en.wikipedia.org/wiki/Cologne",
+      "tlds": [
+        "cologne",
+        "koeln"
+      ]
+    },
+    {
+      "slug": "corsica",
+      "name_en": "Corsica",
+      "subtype": "subdivision",
+      "iso_code": "FR-20R",
+      "parent": "fr",
+      "info_link": "https://en.wikipedia.org/wiki/Corsica",
+      "tlds": [
+        "corsica"
+      ]
+    },
+    {
+      "slug": "cr",
+      "name_en": "Costa Rica",
+      "subtype": "country",
+      "iso_code": "CR",
+      "parent": null,
+      "tlds": [
+        "cr"
+      ]
+    },
+    {
+      "slug": "cu",
+      "name_en": "Cuba",
+      "subtype": "country",
+      "iso_code": "CU",
+      "parent": null,
+      "tlds": [
+        "cu"
+      ]
+    },
+    {
+      "slug": "cv",
+      "name_en": "Cabo Verde",
+      "subtype": "country",
+      "iso_code": "CV",
+      "parent": null,
+      "tlds": [
+        "cv"
+      ]
+    },
+    {
+      "slug": "cw",
+      "name_en": "Curaçao",
+      "subtype": "country",
+      "iso_code": "CW",
+      "parent": "nl",
+      "tlds": [
+        "cw"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "cx",
+      "name_en": "Christmas Island",
+      "subtype": "country",
+      "iso_code": "CX",
+      "parent": "au",
+      "tlds": [
+        "cx"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "cy",
+      "name_en": "Cyprus",
+      "subtype": "country",
+      "iso_code": "CY",
+      "parent": null,
+      "tlds": [
+        "cy"
+      ]
+    },
+    {
+      "slug": "cz",
+      "name_en": "Czechia",
+      "subtype": "country",
+      "iso_code": "CZ",
+      "parent": null,
+      "tlds": [
+        "cz"
+      ]
+    },
+    {
+      "slug": "de",
+      "name_en": "Germany",
+      "subtype": "country",
+      "iso_code": "DE",
+      "parent": null,
+      "tlds": [
+        "de"
+      ]
+    },
+    {
+      "slug": "dj",
+      "name_en": "Djibouti",
+      "subtype": "country",
+      "iso_code": "DJ",
+      "parent": null,
+      "tlds": [
+        "dj"
+      ]
+    },
+    {
+      "slug": "dk",
+      "name_en": "Denmark",
+      "subtype": "country",
+      "iso_code": "DK",
+      "parent": null,
+      "tlds": [
+        "dk"
+      ]
+    },
+    {
+      "slug": "dm",
+      "name_en": "Dominica",
+      "subtype": "country",
+      "iso_code": "DM",
+      "parent": null,
+      "tlds": [
+        "dm"
+      ]
+    },
+    {
+      "slug": "do",
+      "name_en": "Dominican Republic",
+      "subtype": "country",
+      "iso_code": "DO",
+      "parent": null,
+      "tlds": [
+        "do"
+      ]
+    },
+    {
+      "slug": "dubai",
+      "name_en": "Dubai",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "ae",
+      "info_link": "https://en.wikipedia.org/wiki/Dubai",
+      "tlds": [
+        "dubai"
+      ]
+    },
+    {
+      "slug": "durban",
+      "name_en": "Durban",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "za",
+      "info_link": "https://en.wikipedia.org/wiki/Durban",
+      "tlds": [
+        "durban"
+      ]
+    },
+    {
+      "slug": "dz",
+      "name_en": "Algeria",
+      "subtype": "country",
+      "iso_code": "DZ",
+      "parent": null,
+      "tlds": [
+        "dz",
+        "xn--lgbbat1ad8j"
+      ]
+    },
+    {
+      "slug": "ec",
+      "name_en": "Ecuador",
+      "subtype": "country",
+      "iso_code": "EC",
+      "parent": null,
+      "tlds": [
+        "ec"
+      ]
+    },
+    {
+      "slug": "ee",
+      "name_en": "Estonia",
+      "subtype": "country",
+      "iso_code": "EE",
+      "parent": null,
+      "tlds": [
+        "ee"
+      ]
+    },
+    {
+      "slug": "eg",
+      "name_en": "Egypt",
+      "subtype": "country",
+      "iso_code": "EG",
+      "parent": null,
+      "tlds": [
+        "eg",
+        "xn--wgbh1c"
+      ]
+    },
+    {
+      "slug": "er",
+      "name_en": "Eritrea",
+      "subtype": "country",
+      "iso_code": "ER",
+      "parent": null,
+      "tlds": [
+        "er"
+      ]
+    },
+    {
+      "slug": "es",
+      "name_en": "Spain",
+      "subtype": "country",
+      "iso_code": "ES",
+      "parent": null,
+      "tlds": [
+        "es"
+      ]
+    },
+    {
+      "slug": "et",
+      "name_en": "Ethiopia",
+      "subtype": "country",
+      "iso_code": "ET",
+      "parent": null,
+      "tlds": [
+        "et"
+      ]
+    },
+    {
+      "slug": "eu",
+      "name_en": "European Union",
+      "subtype": "supranational",
+      "iso_code": "EU",
+      "parent": null,
+      "info_link": "https://en.wikipedia.org/wiki/European_Union",
+      "tlds": [
+        "eu",
+        "xn--e1a4c",
+        "xn--qxa6a"
+      ]
+    },
+    {
+      "slug": "fi",
+      "name_en": "Finland",
+      "subtype": "country",
+      "iso_code": "FI",
+      "parent": null,
+      "tlds": [
+        "fi"
+      ]
+    },
+    {
+      "slug": "fj",
+      "name_en": "Fiji",
+      "subtype": "country",
+      "iso_code": "FJ",
+      "parent": null,
+      "tlds": [
+        "fj"
+      ]
+    },
+    {
+      "slug": "fk",
+      "name_en": "Falkland Islands (Malvinas)",
+      "subtype": "country",
+      "iso_code": "FK",
+      "parent": "gb",
+      "tlds": [
+        "fk"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "flanders",
+      "name_en": "Flanders",
+      "subtype": "subdivision",
+      "iso_code": "BE-VLG",
+      "parent": "be",
+      "info_link": "https://en.wikipedia.org/wiki/Flanders",
+      "tlds": [
+        "vlaanderen"
+      ]
+    },
+    {
+      "slug": "fm",
+      "name_en": "Micronesia, Federated States of",
+      "subtype": "country",
+      "iso_code": "FM",
+      "parent": null,
+      "tlds": [
+        "fm"
+      ]
+    },
+    {
+      "slug": "fo",
+      "name_en": "Faroe Islands",
+      "subtype": "country",
+      "iso_code": "FO",
+      "parent": "dk",
+      "tlds": [
+        "fo"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "fr",
+      "name_en": "France",
+      "subtype": "country",
+      "iso_code": "FR",
+      "parent": null,
+      "tlds": [
+        "fr"
+      ]
+    },
+    {
+      "slug": "friesland",
+      "name_en": "Friesland",
+      "subtype": "subdivision",
+      "iso_code": "NL-FR",
+      "parent": "nl",
+      "info_link": "https://en.wikipedia.org/wiki/Friesland",
+      "tlds": [
+        "frl"
+      ]
+    },
+    {
+      "slug": "ga",
+      "name_en": "Gabon",
+      "subtype": "country",
+      "iso_code": "GA",
+      "parent": null,
+      "tlds": [
+        "ga"
+      ]
+    },
+    {
+      "slug": "galicia",
+      "name_en": "Galicia",
+      "subtype": "subdivision",
+      "iso_code": "ES-GA",
+      "parent": "es",
+      "info_link": "https://en.wikipedia.org/wiki/Galicia_(Spain)",
+      "tlds": [
+        "gal"
+      ]
+    },
+    {
+      "slug": "gb",
+      "name_en": "United Kingdom",
+      "subtype": "country",
+      "iso_code": "GB",
+      "parent": null,
+      "tlds": [
+        "gb",
+        "uk"
+      ]
+    },
+    {
+      "slug": "gd",
+      "name_en": "Grenada",
+      "subtype": "country",
+      "iso_code": "GD",
+      "parent": null,
+      "tlds": [
+        "gd"
+      ]
+    },
+    {
+      "slug": "ge",
+      "name_en": "Georgia",
+      "subtype": "country",
+      "iso_code": "GE",
+      "parent": null,
+      "tlds": [
+        "ge",
+        "xn--node"
+      ]
+    },
+    {
+      "slug": "gent",
+      "name_en": "Ghent",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "be",
+      "info_link": "https://en.wikipedia.org/wiki/Ghent",
+      "tlds": [
+        "gent"
+      ]
+    },
+    {
+      "slug": "gf",
+      "name_en": "French Guiana",
+      "subtype": "country",
+      "iso_code": "GF",
+      "parent": "fr",
+      "tlds": [
+        "gf"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "gg",
+      "name_en": "Guernsey",
+      "subtype": "country",
+      "iso_code": "GG",
+      "parent": "gb",
+      "tlds": [
+        "gg"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "gh",
+      "name_en": "Ghana",
+      "subtype": "country",
+      "iso_code": "GH",
+      "parent": null,
+      "tlds": [
+        "gh"
+      ]
+    },
+    {
+      "slug": "gi",
+      "name_en": "Gibraltar",
+      "subtype": "country",
+      "iso_code": "GI",
+      "parent": "gb",
+      "tlds": [
+        "gi"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "gl",
+      "name_en": "Greenland",
+      "subtype": "country",
+      "iso_code": "GL",
+      "parent": "dk",
+      "tlds": [
+        "gl"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "gm",
+      "name_en": "Gambia",
+      "subtype": "country",
+      "iso_code": "GM",
+      "parent": null,
+      "tlds": [
+        "gm"
+      ]
+    },
+    {
+      "slug": "gn",
+      "name_en": "Guinea",
+      "subtype": "country",
+      "iso_code": "GN",
+      "parent": null,
+      "tlds": [
+        "gn"
+      ]
+    },
+    {
+      "slug": "gp",
+      "name_en": "Guadeloupe",
+      "subtype": "country",
+      "iso_code": "GP",
+      "parent": "fr",
+      "tlds": [
+        "gp"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "gq",
+      "name_en": "Equatorial Guinea",
+      "subtype": "country",
+      "iso_code": "GQ",
+      "parent": null,
+      "tlds": [
+        "gq"
+      ]
+    },
+    {
+      "slug": "gr",
+      "name_en": "Greece",
+      "subtype": "country",
+      "iso_code": "GR",
+      "parent": null,
+      "tlds": [
+        "gr",
+        "xn--qxam"
+      ]
+    },
+    {
+      "slug": "gs",
+      "name_en": "South Georgia and the South Sandwich Islands",
+      "subtype": "country",
+      "iso_code": "GS",
+      "parent": "gb",
+      "tlds": [
+        "gs"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "gt",
+      "name_en": "Guatemala",
+      "subtype": "country",
+      "iso_code": "GT",
+      "parent": null,
+      "tlds": [
+        "gt"
+      ]
+    },
+    {
+      "slug": "gu",
+      "name_en": "Guam",
+      "subtype": "country",
+      "iso_code": "GU",
+      "parent": "us",
+      "tlds": [
+        "gu"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "gw",
+      "name_en": "Guinea-Bissau",
+      "subtype": "country",
+      "iso_code": "GW",
+      "parent": null,
+      "tlds": [
+        "gw"
+      ]
+    },
+    {
+      "slug": "gy",
+      "name_en": "Guyana",
+      "subtype": "country",
+      "iso_code": "GY",
+      "parent": null,
+      "tlds": [
+        "gy"
+      ]
+    },
+    {
+      "slug": "hamburg",
+      "name_en": "Hamburg",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "de",
+      "info_link": "https://en.wikipedia.org/wiki/Hamburg",
+      "tlds": [
+        "hamburg"
+      ]
+    },
+    {
+      "slug": "helsinki",
+      "name_en": "Helsinki",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "fi",
+      "info_link": "https://en.wikipedia.org/wiki/Helsinki",
+      "tlds": [
+        "helsinki"
+      ]
+    },
+    {
+      "slug": "hk",
+      "name_en": "Hong Kong",
+      "subtype": "country",
+      "iso_code": "HK",
+      "parent": "cn",
+      "tlds": [
+        "hk",
+        "xn--j6w193g"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "hm",
+      "name_en": "Heard Island and McDonald Islands",
+      "subtype": "country",
+      "iso_code": "HM",
+      "parent": "au",
+      "tlds": [
+        "hm"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "hn",
+      "name_en": "Honduras",
+      "subtype": "country",
+      "iso_code": "HN",
+      "parent": null,
+      "tlds": [
+        "hn"
+      ]
+    },
+    {
+      "slug": "hr",
+      "name_en": "Croatia",
+      "subtype": "country",
+      "iso_code": "HR",
+      "parent": null,
+      "tlds": [
+        "hr"
+      ]
+    },
+    {
+      "slug": "ht",
+      "name_en": "Haiti",
+      "subtype": "country",
+      "iso_code": "HT",
+      "parent": null,
+      "tlds": [
+        "ht"
+      ]
+    },
+    {
+      "slug": "hu",
+      "name_en": "Hungary",
+      "subtype": "country",
+      "iso_code": "HU",
+      "parent": null,
+      "tlds": [
+        "hu"
+      ]
+    },
+    {
+      "slug": "id",
+      "name_en": "Indonesia",
+      "subtype": "country",
+      "iso_code": "ID",
+      "parent": null,
+      "tlds": [
+        "id"
+      ]
+    },
+    {
+      "slug": "ie",
+      "name_en": "Ireland",
+      "subtype": "country",
+      "iso_code": "IE",
+      "parent": null,
+      "tlds": [
+        "ie"
+      ]
+    },
+    {
+      "slug": "il",
+      "name_en": "Israel",
+      "subtype": "country",
+      "iso_code": "IL",
+      "parent": null,
+      "tlds": [
+        "il",
+        "xn--4dbrk0ce"
+      ]
+    },
+    {
+      "slug": "im",
+      "name_en": "Isle of Man",
+      "subtype": "country",
+      "iso_code": "IM",
+      "parent": "gb",
+      "tlds": [
+        "im"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "in",
+      "name_en": "India",
+      "subtype": "country",
+      "iso_code": "IN",
+      "parent": null,
+      "tlds": [
+        "in",
+        "xn--2scrj9c",
+        "xn--3hcrj9c",
+        "xn--45br5cyl",
+        "xn--45brj9c",
+        "xn--fpcrj9c3d",
+        "xn--gecrj9c",
+        "xn--h2breg3eve",
+        "xn--h2brj9c",
+        "xn--h2brj9c8c",
+        "xn--mgbbh1a",
+        "xn--mgbbh1a71e",
+        "xn--mgbgu82a",
+        "xn--rvc1e0am3e",
+        "xn--s9brj9c",
+        "xn--xkc2dl3a5ee0h"
+      ]
+    },
+    {
+      "slug": "io",
+      "name_en": "British Indian Ocean Territory",
+      "subtype": "country",
+      "iso_code": "IO",
+      "parent": "gb",
+      "tlds": [
+        "io"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "iq",
+      "name_en": "Iraq",
+      "subtype": "country",
+      "iso_code": "IQ",
+      "parent": null,
+      "tlds": [
+        "iq",
+        "xn--mgbtx2b"
+      ]
+    },
+    {
+      "slug": "ir",
+      "name_en": "Iran, Islamic Republic of",
+      "subtype": "country",
+      "iso_code": "IR",
+      "parent": null,
+      "tlds": [
+        "ir",
+        "xn--mgba3a4f16a"
+      ]
+    },
+    {
+      "slug": "is",
+      "name_en": "Iceland",
+      "subtype": "country",
+      "iso_code": "IS",
+      "parent": null,
+      "tlds": [
+        "is"
+      ]
+    },
+    {
+      "slug": "istanbul",
+      "name_en": "Istanbul",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "tr",
+      "info_link": "https://en.wikipedia.org/wiki/Istanbul",
+      "tlds": [
+        "ist",
+        "istanbul"
+      ]
+    },
+    {
+      "slug": "it",
+      "name_en": "Italy",
+      "subtype": "country",
+      "iso_code": "IT",
+      "parent": null,
+      "tlds": [
+        "it"
+      ]
+    },
+    {
+      "slug": "je",
+      "name_en": "Jersey",
+      "subtype": "country",
+      "iso_code": "JE",
+      "parent": "gb",
+      "tlds": [
+        "je"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "jm",
+      "name_en": "Jamaica",
+      "subtype": "country",
+      "iso_code": "JM",
+      "parent": null,
+      "tlds": [
+        "jm"
+      ]
+    },
+    {
+      "slug": "jo",
+      "name_en": "Jordan",
+      "subtype": "country",
+      "iso_code": "JO",
+      "parent": null,
+      "tlds": [
+        "jo",
+        "xn--mgbayh7gpa"
+      ]
+    },
+    {
+      "slug": "joburg",
+      "name_en": "Johannesburg",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "za",
+      "info_link": "https://en.wikipedia.org/wiki/Johannesburg",
+      "tlds": [
+        "joburg"
+      ]
+    },
+    {
+      "slug": "jp",
+      "name_en": "Japan",
+      "subtype": "country",
+      "iso_code": "JP",
+      "parent": null,
+      "tlds": [
+        "jp"
+      ]
+    },
+    {
+      "slug": "ke",
+      "name_en": "Kenya",
+      "subtype": "country",
+      "iso_code": "KE",
+      "parent": null,
+      "tlds": [
+        "ke"
+      ]
+    },
+    {
+      "slug": "kg",
+      "name_en": "Kyrgyzstan",
+      "subtype": "country",
+      "iso_code": "KG",
+      "parent": null,
+      "tlds": [
+        "kg"
+      ]
+    },
+    {
+      "slug": "kh",
+      "name_en": "Cambodia",
+      "subtype": "country",
+      "iso_code": "KH",
+      "parent": null,
+      "tlds": [
+        "kh"
+      ]
+    },
+    {
+      "slug": "ki",
+      "name_en": "Kiribati",
+      "subtype": "country",
+      "iso_code": "KI",
+      "parent": null,
+      "tlds": [
+        "ki"
+      ]
+    },
+    {
+      "slug": "km",
+      "name_en": "Comoros",
+      "subtype": "country",
+      "iso_code": "KM",
+      "parent": null,
+      "tlds": [
+        "km"
+      ]
+    },
+    {
+      "slug": "kn",
+      "name_en": "Saint Kitts and Nevis",
+      "subtype": "country",
+      "iso_code": "KN",
+      "parent": null,
+      "tlds": [
+        "kn"
+      ]
+    },
+    {
+      "slug": "kp",
+      "name_en": "Korea, Democratic People's Republic of",
+      "subtype": "country",
+      "iso_code": "KP",
+      "parent": null,
+      "tlds": [
+        "kp"
+      ]
+    },
+    {
+      "slug": "kr",
+      "name_en": "Korea, Republic of",
+      "subtype": "country",
+      "iso_code": "KR",
+      "parent": null,
+      "tlds": [
+        "kr",
+        "xn--3e0b707e"
+      ]
+    },
+    {
+      "slug": "kw",
+      "name_en": "Kuwait",
+      "subtype": "country",
+      "iso_code": "KW",
+      "parent": null,
+      "tlds": [
+        "kw"
+      ]
+    },
+    {
+      "slug": "ky",
+      "name_en": "Cayman Islands",
+      "subtype": "country",
+      "iso_code": "KY",
+      "parent": "gb",
+      "tlds": [
+        "ky"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "kyoto",
+      "name_en": "Kyoto",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "jp",
+      "info_link": "https://en.wikipedia.org/wiki/Kyoto",
+      "tlds": [
+        "kyoto"
+      ]
+    },
+    {
+      "slug": "kz",
+      "name_en": "Kazakhstan",
+      "subtype": "country",
+      "iso_code": "KZ",
+      "parent": null,
+      "tlds": [
+        "kz",
+        "xn--80ao21a"
+      ]
+    },
+    {
+      "slug": "la",
+      "name_en": "Lao People's Democratic Republic",
+      "subtype": "country",
+      "iso_code": "LA",
+      "parent": null,
+      "tlds": [
+        "la",
+        "xn--q7ce6a"
+      ]
+    },
+    {
+      "slug": "latin-america",
+      "name_en": "Latin America",
+      "subtype": "supranational",
+      "iso_code": null,
+      "parent": null,
+      "info_link": "https://en.wikipedia.org/wiki/Latin_America",
+      "tlds": [
+        "lat"
+      ]
+    },
+    {
+      "slug": "lb",
+      "name_en": "Lebanon",
+      "subtype": "country",
+      "iso_code": "LB",
+      "parent": null,
+      "tlds": [
+        "lb"
+      ]
+    },
+    {
+      "slug": "lc",
+      "name_en": "Saint Lucia",
+      "subtype": "country",
+      "iso_code": "LC",
+      "parent": null,
+      "tlds": [
+        "lc"
+      ]
+    },
+    {
+      "slug": "li",
+      "name_en": "Liechtenstein",
+      "subtype": "country",
+      "iso_code": "LI",
+      "parent": null,
+      "tlds": [
+        "li"
+      ]
+    },
+    {
+      "slug": "lk",
+      "name_en": "Sri Lanka",
+      "subtype": "country",
+      "iso_code": "LK",
+      "parent": null,
+      "tlds": [
+        "lk",
+        "xn--fzc2c9e2c",
+        "xn--xkc2al3hye2a"
+      ]
+    },
+    {
+      "slug": "london",
+      "name_en": "London",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "gb",
+      "info_link": "https://en.wikipedia.org/wiki/London",
+      "tlds": [
+        "london"
+      ]
+    },
+    {
+      "slug": "lr",
+      "name_en": "Liberia",
+      "subtype": "country",
+      "iso_code": "LR",
+      "parent": null,
+      "tlds": [
+        "lr"
+      ]
+    },
+    {
+      "slug": "ls",
+      "name_en": "Lesotho",
+      "subtype": "country",
+      "iso_code": "LS",
+      "parent": null,
+      "tlds": [
+        "ls"
+      ]
+    },
+    {
+      "slug": "lt",
+      "name_en": "Lithuania",
+      "subtype": "country",
+      "iso_code": "LT",
+      "parent": null,
+      "tlds": [
+        "lt"
+      ]
+    },
+    {
+      "slug": "lu",
+      "name_en": "Luxembourg",
+      "subtype": "country",
+      "iso_code": "LU",
+      "parent": null,
+      "tlds": [
+        "lu"
+      ]
+    },
+    {
+      "slug": "lv",
+      "name_en": "Latvia",
+      "subtype": "country",
+      "iso_code": "LV",
+      "parent": null,
+      "tlds": [
+        "lv"
+      ]
+    },
+    {
+      "slug": "ly",
+      "name_en": "Libya",
+      "subtype": "country",
+      "iso_code": "LY",
+      "parent": null,
+      "tlds": [
+        "ly"
+      ]
+    },
+    {
+      "slug": "ma",
+      "name_en": "Morocco",
+      "subtype": "country",
+      "iso_code": "MA",
+      "parent": null,
+      "tlds": [
+        "ma",
+        "xn--mgbc0a9azcg"
+      ]
+    },
+    {
+      "slug": "madrid",
+      "name_en": "Madrid",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "es",
+      "info_link": "https://en.wikipedia.org/wiki/Madrid",
+      "tlds": [
+        "madrid"
+      ]
+    },
+    {
+      "slug": "mc",
+      "name_en": "Monaco",
+      "subtype": "country",
+      "iso_code": "MC",
+      "parent": null,
+      "tlds": [
+        "mc"
+      ]
+    },
+    {
+      "slug": "md",
+      "name_en": "Moldova, Republic of",
+      "subtype": "country",
+      "iso_code": "MD",
+      "parent": null,
+      "tlds": [
+        "md"
+      ]
+    },
+    {
+      "slug": "me",
+      "name_en": "Montenegro",
+      "subtype": "country",
+      "iso_code": "ME",
+      "parent": null,
+      "tlds": [
+        "me"
+      ]
+    },
+    {
+      "slug": "melbourne",
+      "name_en": "Melbourne",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "au",
+      "info_link": "https://en.wikipedia.org/wiki/Melbourne",
+      "tlds": [
+        "melbourne"
+      ]
+    },
+    {
+      "slug": "mg",
+      "name_en": "Madagascar",
+      "subtype": "country",
+      "iso_code": "MG",
+      "parent": null,
+      "tlds": [
+        "mg"
+      ]
+    },
+    {
+      "slug": "mh",
+      "name_en": "Marshall Islands",
+      "subtype": "country",
+      "iso_code": "MH",
+      "parent": null,
+      "tlds": [
+        "mh"
+      ]
+    },
+    {
+      "slug": "miami",
+      "name_en": "Miami",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "us",
+      "info_link": "https://en.wikipedia.org/wiki/Miami",
+      "tlds": [
+        "miami"
+      ]
+    },
+    {
+      "slug": "mk",
+      "name_en": "North Macedonia",
+      "subtype": "country",
+      "iso_code": "MK",
+      "parent": null,
+      "tlds": [
+        "mk",
+        "xn--d1alf"
+      ]
+    },
+    {
+      "slug": "ml",
+      "name_en": "Mali",
+      "subtype": "country",
+      "iso_code": "ML",
+      "parent": null,
+      "tlds": [
+        "ml"
+      ]
+    },
+    {
+      "slug": "mm",
+      "name_en": "Myanmar",
+      "subtype": "country",
+      "iso_code": "MM",
+      "parent": null,
+      "tlds": [
+        "mm"
+      ]
+    },
+    {
+      "slug": "mn",
+      "name_en": "Mongolia",
+      "subtype": "country",
+      "iso_code": "MN",
+      "parent": null,
+      "tlds": [
+        "mn",
+        "xn--l1acc"
+      ]
+    },
+    {
+      "slug": "mo",
+      "name_en": "Macao",
+      "subtype": "country",
+      "iso_code": "MO",
+      "parent": "cn",
+      "tlds": [
+        "mo",
+        "xn--mix891f"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "moscow",
+      "name_en": "Moscow",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "ru",
+      "info_link": "https://en.wikipedia.org/wiki/Moscow",
+      "tlds": [
+        "moscow",
+        "xn--80adxhks"
+      ]
+    },
+    {
+      "slug": "mp",
+      "name_en": "Northern Mariana Islands",
+      "subtype": "country",
+      "iso_code": "MP",
+      "parent": "us",
+      "tlds": [
+        "mp"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "mq",
+      "name_en": "Martinique",
+      "subtype": "country",
+      "iso_code": "MQ",
+      "parent": "fr",
+      "tlds": [
+        "mq"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "mr",
+      "name_en": "Mauritania",
+      "subtype": "country",
+      "iso_code": "MR",
+      "parent": null,
+      "tlds": [
+        "mr",
+        "xn--mgbah1a3hjkrd"
+      ]
+    },
+    {
+      "slug": "ms",
+      "name_en": "Montserrat",
+      "subtype": "country",
+      "iso_code": "MS",
+      "parent": "gb",
+      "tlds": [
+        "ms"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "mt",
+      "name_en": "Malta",
+      "subtype": "country",
+      "iso_code": "MT",
+      "parent": null,
+      "tlds": [
+        "mt"
+      ]
+    },
+    {
+      "slug": "mu",
+      "name_en": "Mauritius",
+      "subtype": "country",
+      "iso_code": "MU",
+      "parent": null,
+      "tlds": [
+        "mu"
+      ]
+    },
+    {
+      "slug": "mv",
+      "name_en": "Maldives",
+      "subtype": "country",
+      "iso_code": "MV",
+      "parent": null,
+      "tlds": [
+        "mv"
+      ]
+    },
+    {
+      "slug": "mw",
+      "name_en": "Malawi",
+      "subtype": "country",
+      "iso_code": "MW",
+      "parent": null,
+      "tlds": [
+        "mw"
+      ]
+    },
+    {
+      "slug": "mx",
+      "name_en": "Mexico",
+      "subtype": "country",
+      "iso_code": "MX",
+      "parent": null,
+      "tlds": [
+        "mx"
+      ]
+    },
+    {
+      "slug": "my",
+      "name_en": "Malaysia",
+      "subtype": "country",
+      "iso_code": "MY",
+      "parent": null,
+      "tlds": [
+        "my",
+        "xn--mgbx4cd0ab"
+      ]
+    },
+    {
+      "slug": "mz",
+      "name_en": "Mozambique",
+      "subtype": "country",
+      "iso_code": "MZ",
+      "parent": null,
+      "tlds": [
+        "mz"
+      ]
+    },
+    {
+      "slug": "na",
+      "name_en": "Namibia",
+      "subtype": "country",
+      "iso_code": "NA",
+      "parent": null,
+      "tlds": [
+        "na"
+      ]
+    },
+    {
+      "slug": "nagoya",
+      "name_en": "Nagoya",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "jp",
+      "info_link": "https://en.wikipedia.org/wiki/Nagoya",
+      "tlds": [
+        "nagoya"
+      ]
+    },
+    {
+      "slug": "nc",
+      "name_en": "New Caledonia",
+      "subtype": "country",
+      "iso_code": "NC",
+      "parent": "fr",
+      "tlds": [
+        "nc"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "ne",
+      "name_en": "Niger",
+      "subtype": "country",
+      "iso_code": "NE",
+      "parent": null,
+      "tlds": [
+        "ne"
+      ]
+    },
+    {
+      "slug": "nf",
+      "name_en": "Norfolk Island",
+      "subtype": "country",
+      "iso_code": "NF",
+      "parent": "au",
+      "tlds": [
+        "nf"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "ng",
+      "name_en": "Nigeria",
+      "subtype": "country",
+      "iso_code": "NG",
+      "parent": null,
+      "tlds": [
+        "ng"
+      ]
+    },
+    {
+      "slug": "ni",
+      "name_en": "Nicaragua",
+      "subtype": "country",
+      "iso_code": "NI",
+      "parent": null,
+      "tlds": [
+        "ni"
+      ]
+    },
+    {
+      "slug": "nl",
+      "name_en": "Netherlands",
+      "subtype": "country",
+      "iso_code": "NL",
+      "parent": null,
+      "tlds": [
+        "nl"
+      ]
+    },
+    {
+      "slug": "no",
+      "name_en": "Norway",
+      "subtype": "country",
+      "iso_code": "NO",
+      "parent": null,
+      "tlds": [
+        "no"
+      ]
+    },
+    {
+      "slug": "north-rhine-westphalia",
+      "name_en": "North Rhine-Westphalia",
+      "subtype": "subdivision",
+      "iso_code": "DE-NW",
+      "parent": "de",
+      "info_link": "https://en.wikipedia.org/wiki/North_Rhine-Westphalia",
+      "tlds": [
+        "nrw"
+      ]
+    },
+    {
+      "slug": "np",
+      "name_en": "Nepal",
+      "subtype": "country",
+      "iso_code": "NP",
+      "parent": null,
+      "tlds": [
+        "np"
+      ]
+    },
+    {
+      "slug": "nr",
+      "name_en": "Nauru",
+      "subtype": "country",
+      "iso_code": "NR",
+      "parent": null,
+      "tlds": [
+        "nr"
+      ]
+    },
+    {
+      "slug": "nu",
+      "name_en": "Niue",
+      "subtype": "country",
+      "iso_code": "NU",
+      "parent": "nz",
+      "tlds": [
+        "nu"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "nyc",
+      "name_en": "New York City",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "us",
+      "info_link": "https://en.wikipedia.org/wiki/New_York_City",
+      "tlds": [
+        "nyc"
+      ]
+    },
+    {
+      "slug": "nz",
+      "name_en": "New Zealand",
+      "subtype": "country",
+      "iso_code": "NZ",
+      "parent": null,
+      "tlds": [
+        "nz"
+      ]
+    },
+    {
+      "slug": "okinawa",
+      "name_en": "Okinawa",
+      "subtype": "subdivision",
+      "iso_code": "JP-47",
+      "parent": "jp",
+      "info_link": "https://en.wikipedia.org/wiki/Okinawa_Prefecture",
+      "tlds": [
+        "okinawa"
+      ]
+    },
+    {
+      "slug": "om",
+      "name_en": "Oman",
+      "subtype": "country",
+      "iso_code": "OM",
+      "parent": null,
+      "tlds": [
+        "om",
+        "xn--mgb9awbf"
+      ]
+    },
+    {
+      "slug": "osaka",
+      "name_en": "Osaka",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "jp",
+      "info_link": "https://en.wikipedia.org/wiki/Osaka",
+      "tlds": [
+        "osaka"
+      ]
+    },
+    {
+      "slug": "pa",
+      "name_en": "Panama",
+      "subtype": "country",
+      "iso_code": "PA",
+      "parent": null,
+      "tlds": [
+        "pa"
+      ]
+    },
+    {
+      "slug": "paris",
+      "name_en": "Paris",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "fr",
+      "info_link": "https://en.wikipedia.org/wiki/Paris",
+      "tlds": [
+        "paris"
+      ]
+    },
+    {
+      "slug": "pe",
+      "name_en": "Peru",
+      "subtype": "country",
+      "iso_code": "PE",
+      "parent": null,
+      "tlds": [
+        "pe"
+      ]
+    },
+    {
+      "slug": "pf",
+      "name_en": "French Polynesia",
+      "subtype": "country",
+      "iso_code": "PF",
+      "parent": "fr",
+      "tlds": [
+        "pf"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "pg",
+      "name_en": "Papua New Guinea",
+      "subtype": "country",
+      "iso_code": "PG",
+      "parent": null,
+      "tlds": [
+        "pg"
+      ]
+    },
+    {
+      "slug": "ph",
+      "name_en": "Philippines",
+      "subtype": "country",
+      "iso_code": "PH",
+      "parent": null,
+      "tlds": [
+        "ph"
+      ]
+    },
+    {
+      "slug": "pk",
+      "name_en": "Pakistan",
+      "subtype": "country",
+      "iso_code": "PK",
+      "parent": null,
+      "tlds": [
+        "pk",
+        "xn--mgbai9azgqp6j"
+      ]
+    },
+    {
+      "slug": "pl",
+      "name_en": "Poland",
+      "subtype": "country",
+      "iso_code": "PL",
+      "parent": null,
+      "tlds": [
+        "pl"
+      ]
+    },
+    {
+      "slug": "pm",
+      "name_en": "Saint Pierre and Miquelon",
+      "subtype": "country",
+      "iso_code": "PM",
+      "parent": "fr",
+      "tlds": [
+        "pm"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "pn",
+      "name_en": "Pitcairn",
+      "subtype": "country",
+      "iso_code": "PN",
+      "parent": "gb",
+      "tlds": [
+        "pn"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "pr",
+      "name_en": "Puerto Rico",
+      "subtype": "country",
+      "iso_code": "PR",
+      "parent": "us",
+      "tlds": [
+        "pr"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "ps",
+      "name_en": "Palestine, State of",
+      "subtype": "country",
+      "iso_code": "PS",
+      "parent": null,
+      "tlds": [
+        "ps",
+        "xn--ygbi2ammx"
+      ]
+    },
+    {
+      "slug": "pt",
+      "name_en": "Portugal",
+      "subtype": "country",
+      "iso_code": "PT",
+      "parent": null,
+      "tlds": [
+        "pt"
+      ]
+    },
+    {
+      "slug": "pw",
+      "name_en": "Palau",
+      "subtype": "country",
+      "iso_code": "PW",
+      "parent": null,
+      "tlds": [
+        "pw"
+      ]
+    },
+    {
+      "slug": "py",
+      "name_en": "Paraguay",
+      "subtype": "country",
+      "iso_code": "PY",
+      "parent": null,
+      "tlds": [
+        "py"
+      ]
+    },
+    {
+      "slug": "qa",
+      "name_en": "Qatar",
+      "subtype": "country",
+      "iso_code": "QA",
+      "parent": null,
+      "tlds": [
+        "qa",
+        "xn--wgbl6a"
+      ]
+    },
+    {
+      "slug": "quebec",
+      "name_en": "Quebec",
+      "subtype": "subdivision",
+      "iso_code": "CA-QC",
+      "parent": "ca",
+      "info_link": "https://en.wikipedia.org/wiki/Quebec",
+      "tlds": [
+        "quebec"
+      ]
+    },
+    {
+      "slug": "re",
+      "name_en": "Réunion",
+      "subtype": "country",
+      "iso_code": "RE",
+      "parent": "fr",
+      "tlds": [
+        "re"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "rio",
+      "name_en": "Rio de Janeiro",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "br",
+      "info_link": "https://en.wikipedia.org/wiki/Rio_de_Janeiro",
+      "tlds": [
+        "rio"
+      ]
+    },
+    {
+      "slug": "ro",
+      "name_en": "Romania",
+      "subtype": "country",
+      "iso_code": "RO",
+      "parent": null,
+      "tlds": [
+        "ro"
+      ]
+    },
+    {
+      "slug": "rs",
+      "name_en": "Serbia",
+      "subtype": "country",
+      "iso_code": "RS",
+      "parent": null,
+      "tlds": [
+        "rs",
+        "xn--90a3ac"
+      ]
+    },
+    {
+      "slug": "ru",
+      "name_en": "Russian Federation",
+      "subtype": "country",
+      "iso_code": "RU",
+      "parent": null,
+      "tlds": [
+        "ru",
+        "xn--p1ai"
+      ]
+    },
+    {
+      "slug": "ruhr",
+      "name_en": "Ruhr",
+      "subtype": "subdivision",
+      "iso_code": null,
+      "parent": "de",
+      "info_link": "https://en.wikipedia.org/wiki/Ruhr",
+      "tlds": [
+        "ruhr"
+      ]
+    },
+    {
+      "slug": "rw",
+      "name_en": "Rwanda",
+      "subtype": "country",
+      "iso_code": "RW",
+      "parent": null,
+      "tlds": [
+        "rw"
+      ]
+    },
+    {
+      "slug": "ryukyu",
+      "name_en": "Ryukyu Islands",
+      "subtype": "subdivision",
+      "iso_code": null,
+      "parent": "jp",
+      "info_link": "https://en.wikipedia.org/wiki/Ryukyu_Islands",
+      "tlds": [
+        "ryukyu"
+      ]
+    },
+    {
+      "slug": "sa",
+      "name_en": "Saudi Arabia",
+      "subtype": "country",
+      "iso_code": "SA",
+      "parent": null,
+      "tlds": [
+        "sa",
+        "xn--mgberp4a5d4ar"
+      ]
+    },
+    {
+      "slug": "saarland",
+      "name_en": "Saarland",
+      "subtype": "subdivision",
+      "iso_code": "DE-SL",
+      "parent": "de",
+      "info_link": "https://en.wikipedia.org/wiki/Saarland",
+      "tlds": [
+        "saarland"
+      ]
+    },
+    {
+      "slug": "sb",
+      "name_en": "Solomon Islands",
+      "subtype": "country",
+      "iso_code": "SB",
+      "parent": null,
+      "tlds": [
+        "sb"
+      ]
+    },
+    {
+      "slug": "sc",
+      "name_en": "Seychelles",
+      "subtype": "country",
+      "iso_code": "SC",
+      "parent": null,
+      "tlds": [
+        "sc"
+      ]
+    },
+    {
+      "slug": "scotland",
+      "name_en": "Scotland",
+      "subtype": "subdivision",
+      "iso_code": "GB-SCT",
+      "parent": "gb",
+      "info_link": "https://en.wikipedia.org/wiki/Scotland",
+      "tlds": [
+        "scot"
+      ]
+    },
+    {
+      "slug": "sd",
+      "name_en": "Sudan",
+      "subtype": "country",
+      "iso_code": "SD",
+      "parent": null,
+      "tlds": [
+        "sd",
+        "xn--mgbpl2fh"
+      ]
+    },
+    {
+      "slug": "se",
+      "name_en": "Sweden",
+      "subtype": "country",
+      "iso_code": "SE",
+      "parent": null,
+      "tlds": [
+        "se"
+      ]
+    },
+    {
+      "slug": "sg",
+      "name_en": "Singapore",
+      "subtype": "country",
+      "iso_code": "SG",
+      "parent": null,
+      "tlds": [
+        "sg",
+        "xn--clchc0ea0b2g2a9gcd",
+        "xn--yfro4i67o"
+      ]
+    },
+    {
+      "slug": "sh",
+      "name_en": "Saint Helena, Ascension and Tristan da Cunha",
+      "subtype": "country",
+      "iso_code": "SH",
+      "parent": "gb",
+      "tlds": [
+        "sh"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "si",
+      "name_en": "Slovenia",
+      "subtype": "country",
+      "iso_code": "SI",
+      "parent": null,
+      "tlds": [
+        "si"
+      ]
+    },
+    {
+      "slug": "sj",
+      "name_en": "Svalbard and Jan Mayen",
+      "subtype": "country",
+      "iso_code": "SJ",
+      "parent": "no",
+      "tlds": [
+        "sj"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "sk",
+      "name_en": "Slovakia",
+      "subtype": "country",
+      "iso_code": "SK",
+      "parent": null,
+      "tlds": [
+        "sk"
+      ]
+    },
+    {
+      "slug": "sl",
+      "name_en": "Sierra Leone",
+      "subtype": "country",
+      "iso_code": "SL",
+      "parent": null,
+      "tlds": [
+        "sl"
+      ]
+    },
+    {
+      "slug": "sm",
+      "name_en": "San Marino",
+      "subtype": "country",
+      "iso_code": "SM",
+      "parent": null,
+      "tlds": [
+        "sm"
+      ]
+    },
+    {
+      "slug": "sn",
+      "name_en": "Senegal",
+      "subtype": "country",
+      "iso_code": "SN",
+      "parent": null,
+      "tlds": [
+        "sn"
+      ]
+    },
+    {
+      "slug": "so",
+      "name_en": "Somalia",
+      "subtype": "country",
+      "iso_code": "SO",
+      "parent": null,
+      "tlds": [
+        "so"
+      ]
+    },
+    {
+      "slug": "sr",
+      "name_en": "Suriname",
+      "subtype": "country",
+      "iso_code": "SR",
+      "parent": null,
+      "tlds": [
+        "sr"
+      ]
+    },
+    {
+      "slug": "ss",
+      "name_en": "South Sudan",
+      "subtype": "country",
+      "iso_code": "SS",
+      "parent": null,
+      "tlds": [
+        "ss"
+      ]
+    },
+    {
+      "slug": "st",
+      "name_en": "Sao Tome and Principe",
+      "subtype": "country",
+      "iso_code": "ST",
+      "parent": null,
+      "tlds": [
+        "st"
+      ]
+    },
+    {
+      "slug": "stockholm",
+      "name_en": "Stockholm",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "se",
+      "info_link": "https://en.wikipedia.org/wiki/Stockholm",
+      "tlds": [
+        "stockholm"
+      ]
+    },
+    {
+      "slug": "su",
+      "name_en": "Soviet Union",
+      "subtype": "country",
+      "iso_code": null,
+      "parent": null,
+      "tlds": [
+        "su"
+      ],
+      "iso_designation": "transitionally_reserved"
+    },
+    {
+      "slug": "sv",
+      "name_en": "El Salvador",
+      "subtype": "country",
+      "iso_code": "SV",
+      "parent": null,
+      "tlds": [
+        "sv"
+      ]
+    },
+    {
+      "slug": "sx",
+      "name_en": "Sint Maarten (Dutch part)",
+      "subtype": "country",
+      "iso_code": "SX",
+      "parent": "nl",
+      "tlds": [
+        "sx"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "sy",
+      "name_en": "Syrian Arab Republic",
+      "subtype": "country",
+      "iso_code": "SY",
+      "parent": null,
+      "tlds": [
+        "sy",
+        "xn--ogbpf8fl"
+      ]
+    },
+    {
+      "slug": "sydney",
+      "name_en": "Sydney",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "au",
+      "info_link": "https://en.wikipedia.org/wiki/Sydney",
+      "tlds": [
+        "sydney"
+      ]
+    },
+    {
+      "slug": "sz",
+      "name_en": "Eswatini",
+      "subtype": "country",
+      "iso_code": "SZ",
+      "parent": null,
+      "tlds": [
+        "sz"
+      ]
+    },
+    {
+      "slug": "taipei",
+      "name_en": "Taipei",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "tw",
+      "info_link": "https://en.wikipedia.org/wiki/Taipei",
+      "tlds": [
+        "taipei"
+      ]
+    },
+    {
+      "slug": "tatarstan",
+      "name_en": "Tatarstan",
+      "subtype": "subdivision",
+      "iso_code": "RU-TA",
+      "parent": "ru",
+      "info_link": "https://en.wikipedia.org/wiki/Tatarstan",
+      "tlds": [
+        "tatar"
+      ]
+    },
+    {
+      "slug": "tc",
+      "name_en": "Turks and Caicos Islands",
+      "subtype": "country",
+      "iso_code": "TC",
+      "parent": "gb",
+      "tlds": [
+        "tc"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "td",
+      "name_en": "Chad",
+      "subtype": "country",
+      "iso_code": "TD",
+      "parent": null,
+      "tlds": [
+        "td"
+      ]
+    },
+    {
+      "slug": "tf",
+      "name_en": "French Southern Territories",
+      "subtype": "country",
+      "iso_code": "TF",
+      "parent": "fr",
+      "tlds": [
+        "tf"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "tg",
+      "name_en": "Togo",
+      "subtype": "country",
+      "iso_code": "TG",
+      "parent": null,
+      "tlds": [
+        "tg"
+      ]
+    },
+    {
+      "slug": "th",
+      "name_en": "Thailand",
+      "subtype": "country",
+      "iso_code": "TH",
+      "parent": null,
+      "tlds": [
+        "th",
+        "xn--o3cw4h"
+      ]
+    },
+    {
+      "slug": "tj",
+      "name_en": "Tajikistan",
+      "subtype": "country",
+      "iso_code": "TJ",
+      "parent": null,
+      "tlds": [
+        "tj"
+      ]
+    },
+    {
+      "slug": "tk",
+      "name_en": "Tokelau",
+      "subtype": "country",
+      "iso_code": "TK",
+      "parent": "nz",
+      "tlds": [
+        "tk"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "tl",
+      "name_en": "Timor-Leste",
+      "subtype": "country",
+      "iso_code": "TL",
+      "parent": null,
+      "tlds": [
+        "tl"
+      ]
+    },
+    {
+      "slug": "tm",
+      "name_en": "Turkmenistan",
+      "subtype": "country",
+      "iso_code": "TM",
+      "parent": null,
+      "tlds": [
+        "tm"
+      ]
+    },
+    {
+      "slug": "tn",
+      "name_en": "Tunisia",
+      "subtype": "country",
+      "iso_code": "TN",
+      "parent": null,
+      "tlds": [
+        "tn",
+        "xn--pgbs0dh"
+      ]
+    },
+    {
+      "slug": "to",
+      "name_en": "Tonga",
+      "subtype": "country",
+      "iso_code": "TO",
+      "parent": null,
+      "tlds": [
+        "to"
+      ]
+    },
+    {
+      "slug": "tokyo",
+      "name_en": "Tokyo",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "jp",
+      "info_link": "https://en.wikipedia.org/wiki/Tokyo",
+      "tlds": [
+        "tokyo"
+      ]
+    },
+    {
+      "slug": "tr",
+      "name_en": "Türkiye",
+      "subtype": "country",
+      "iso_code": "TR",
+      "parent": null,
+      "tlds": [
+        "tr"
+      ]
+    },
+    {
+      "slug": "tt",
+      "name_en": "Trinidad and Tobago",
+      "subtype": "country",
+      "iso_code": "TT",
+      "parent": null,
+      "tlds": [
+        "tt"
+      ]
+    },
+    {
+      "slug": "tv",
+      "name_en": "Tuvalu",
+      "subtype": "country",
+      "iso_code": "TV",
+      "parent": null,
+      "tlds": [
+        "tv"
+      ]
+    },
+    {
+      "slug": "tw",
+      "name_en": "Taiwan, Province of China",
+      "subtype": "country",
+      "iso_code": "TW",
+      "parent": null,
+      "tlds": [
+        "tw",
+        "xn--kprw13d",
+        "xn--kpry57d"
+      ]
+    },
+    {
+      "slug": "tyrol",
+      "name_en": "Tyrol",
+      "subtype": "subdivision",
+      "iso_code": "AT-7",
+      "parent": "at",
+      "info_link": "https://en.wikipedia.org/wiki/Tyrol_(state)",
+      "tlds": [
+        "tirol"
+      ]
+    },
+    {
+      "slug": "tz",
+      "name_en": "Tanzania, United Republic of",
+      "subtype": "country",
+      "iso_code": "TZ",
+      "parent": null,
+      "tlds": [
+        "tz"
+      ]
+    },
+    {
+      "slug": "ua",
+      "name_en": "Ukraine",
+      "subtype": "country",
+      "iso_code": "UA",
+      "parent": null,
+      "tlds": [
+        "ua",
+        "xn--j1amh"
+      ]
+    },
+    {
+      "slug": "ug",
+      "name_en": "Uganda",
+      "subtype": "country",
+      "iso_code": "UG",
+      "parent": null,
+      "tlds": [
+        "ug"
+      ]
+    },
+    {
+      "slug": "us",
+      "name_en": "United States",
+      "subtype": "country",
+      "iso_code": "US",
+      "parent": null,
+      "tlds": [
+        "us"
+      ]
+    },
+    {
+      "slug": "uy",
+      "name_en": "Uruguay",
+      "subtype": "country",
+      "iso_code": "UY",
+      "parent": null,
+      "tlds": [
+        "uy"
+      ]
+    },
+    {
+      "slug": "uz",
+      "name_en": "Uzbekistan",
+      "subtype": "country",
+      "iso_code": "UZ",
+      "parent": null,
+      "tlds": [
+        "uz"
+      ]
+    },
+    {
+      "slug": "va",
+      "name_en": "Holy See (Vatican City State)",
+      "subtype": "country",
+      "iso_code": "VA",
+      "parent": null,
+      "tlds": [
+        "va"
+      ]
+    },
+    {
+      "slug": "vc",
+      "name_en": "Saint Vincent and the Grenadines",
+      "subtype": "country",
+      "iso_code": "VC",
+      "parent": null,
+      "tlds": [
+        "vc"
+      ]
+    },
+    {
+      "slug": "ve",
+      "name_en": "Venezuela, Bolivarian Republic of",
+      "subtype": "country",
+      "iso_code": "VE",
+      "parent": null,
+      "tlds": [
+        "ve"
+      ]
+    },
+    {
+      "slug": "vegas",
+      "name_en": "Las Vegas",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "us",
+      "info_link": "https://en.wikipedia.org/wiki/Las_Vegas",
+      "tlds": [
+        "vegas"
+      ]
+    },
+    {
+      "slug": "vg",
+      "name_en": "Virgin Islands, British",
+      "subtype": "country",
+      "iso_code": "VG",
+      "parent": "gb",
+      "tlds": [
+        "vg"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "vi",
+      "name_en": "Virgin Islands, U.S.",
+      "subtype": "country",
+      "iso_code": "VI",
+      "parent": "us",
+      "tlds": [
+        "vi"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "vn",
+      "name_en": "Viet Nam",
+      "subtype": "country",
+      "iso_code": "VN",
+      "parent": null,
+      "tlds": [
+        "vn"
+      ]
+    },
+    {
+      "slug": "vu",
+      "name_en": "Vanuatu",
+      "subtype": "country",
+      "iso_code": "VU",
+      "parent": null,
+      "tlds": [
+        "vu"
+      ]
+    },
+    {
+      "slug": "wales",
+      "name_en": "Wales",
+      "subtype": "subdivision",
+      "iso_code": "GB-WLS",
+      "parent": "gb",
+      "info_link": "https://en.wikipedia.org/wiki/Wales",
+      "tlds": [
+        "cymru",
+        "wales"
+      ]
+    },
+    {
+      "slug": "wf",
+      "name_en": "Wallis and Futuna",
+      "subtype": "country",
+      "iso_code": "WF",
+      "parent": "fr",
+      "tlds": [
+        "wf"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "wien",
+      "name_en": "Vienna",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "at",
+      "info_link": "https://en.wikipedia.org/wiki/Vienna",
+      "tlds": [
+        "wien"
+      ]
+    },
+    {
+      "slug": "ws",
+      "name_en": "Samoa",
+      "subtype": "country",
+      "iso_code": "WS",
+      "parent": null,
+      "tlds": [
+        "ws"
+      ]
+    },
+    {
+      "slug": "ye",
+      "name_en": "Yemen",
+      "subtype": "country",
+      "iso_code": "YE",
+      "parent": null,
+      "tlds": [
+        "ye"
+      ]
+    },
+    {
+      "slug": "yokohama",
+      "name_en": "Yokohama",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "jp",
+      "info_link": "https://en.wikipedia.org/wiki/Yokohama",
+      "tlds": [
+        "yokohama"
+      ]
+    },
+    {
+      "slug": "yt",
+      "name_en": "Mayotte",
+      "subtype": "country",
+      "iso_code": "YT",
+      "parent": "fr",
+      "tlds": [
+        "yt"
+      ],
+      "iso_designation": "dependent_territory"
+    },
+    {
+      "slug": "za",
+      "name_en": "South Africa",
+      "subtype": "country",
+      "iso_code": "ZA",
+      "parent": null,
+      "tlds": [
+        "za"
+      ]
+    },
+    {
+      "slug": "zm",
+      "name_en": "Zambia",
+      "subtype": "country",
+      "iso_code": "ZM",
+      "parent": null,
+      "tlds": [
+        "zm"
+      ]
+    },
+    {
+      "slug": "zuerich",
+      "name_en": "Zurich",
+      "subtype": "city",
+      "iso_code": null,
+      "parent": "ch",
+      "info_link": "https://en.wikipedia.org/wiki/Z%C3%BCrich",
+      "tlds": [
+        "zuerich"
+      ]
+    },
+    {
+      "slug": "zw",
+      "name_en": "Zimbabwe",
+      "subtype": "country",
+      "iso_code": "ZW",
+      "parent": null,
+      "tlds": [
+        "zw"
+      ]
+    }
+  ]
+}

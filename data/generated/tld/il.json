@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,24 @@
         "admin": "The Israel Internet Association (RA)",
         "tech": "The Israel Internet Association (RA)"
       }
+    },
+    "registry_url": "http://www.isoc.org.il/domains",
+    "whois_server": "whois.isoc.org.il",
+    "tld_created": "1985-10-24",
+    "tld_updated": [
+      "2026-02-24"
+    ],
+    "annotations": {
+      "country_name_iso": "Israel",
+      "as_org_aliases": [
+        "DENIC",
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "denic",
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -157,24 +175,6 @@
         "ipv6": []
       }
     ],
-    "registry_url": "http://www.isoc.org.il/domains",
-    "whois_server": "whois.isoc.org.il",
-    "tld_created": "1985-10-24",
-    "tld_updated": [
-      "2026-02-24"
-    ],
-    "annotations": {
-      "country_name_iso": "Israel",
-      "as_org_aliases": [
-        "DENIC",
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "denic",
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    },
     "idn": [
       "xn--4dbrk0ce"
     ]

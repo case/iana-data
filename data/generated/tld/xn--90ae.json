@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T06:02:29Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -19,6 +19,24 @@
         "admin": "Imena.BG AD",
         "tech": "Imena.BG AD"
       }
+    },
+    "registry_url": "http://www.imena.bg",
+    "whois_server": "whois.imena.bg",
+    "tld_created": "2016-03-05",
+    "tld_updated": [
+      "2023-03-07"
+    ],
+    "annotations": {
+      "country_name_iso": "Bulgaria",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country",
+      "language_code": "bg",
+      "language_name_en": "Bulgarian"
     },
     "nameservers": [
       {
@@ -135,22 +153,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.imena.bg",
-    "whois_server": "whois.imena.bg",
-    "tld_created": "2016-03-05",
-    "tld_updated": [
-      "2023-03-07"
-    ],
-    "annotations": {
-      "country_name_iso": "Bulgaria",
-      "as_org_aliases": [
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

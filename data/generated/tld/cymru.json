@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -28,14 +28,45 @@
         "date_removed": null
       }
     },
+    "registry_url": "https://eincartrefarlein.cymru/",
+    "rdap_server": "https://rdap.nominet.uk/cymru/",
+    "tld_created": "2014-07-31",
+    "tld_updated": [
+      "2025-06-10"
+    ],
+    "annotations": {
+      "iana_sponsor_alias": "Nominet",
+      "iana_sponsor_slug": "nominet",
+      "iana_admin_alias": "Nominet",
+      "iana_admin_slug": "nominet",
+      "iana_tech_alias": "Nominet",
+      "iana_tech_slug": "nominet",
+      "icann_registry_operator_alias": "Nominet",
+      "icann_registry_operator_slug": "nominet",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "Nominet",
+        "UltraDNS"
+      ],
+      "as_org_slugs": [
+        "nominet",
+        "ultradns"
+      ],
+      "geographic_scope": "subdivision",
+      "cultural_affiliation": "welsh"
+    },
     "nameservers": [
       {
         "hostname": "dns1.nic.cymru",
         "ipv4": [
           {
             "ip": "213.248.219.3",
-            "asn": 137502,
-            "as_org": "NOMINET-AS-AP NOMINET UK",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
             "as_country": "GB"
           }
         ],
@@ -53,8 +84,8 @@
         "ipv4": [
           {
             "ip": "103.49.83.3",
-            "asn": 137502,
-            "as_org": "NOMINET-AS-AP NOMINET UK",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
             "as_country": "GB"
           }
         ],
@@ -181,37 +212,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://eincartrefarlein.cymru/",
-    "rdap_server": "https://rdap.nominet.uk/cymru/",
-    "tld_created": "2014-07-31",
-    "tld_updated": [
-      "2025-06-10"
-    ],
-    "annotations": {
-      "iana_sponsor_alias": "Nominet",
-      "iana_sponsor_slug": "nominet",
-      "iana_admin_alias": "Nominet",
-      "iana_admin_slug": "nominet",
-      "iana_tech_alias": "Nominet",
-      "iana_tech_slug": "nominet",
-      "icann_registry_operator_alias": "Nominet",
-      "icann_registry_operator_slug": "nominet",
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "as_org_aliases": [
-        "Nominet",
-        "UltraDNS"
-      ],
-      "as_org_slugs": [
-        "nominet",
-        "ultradns"
-      ],
-      "geographic_scope": "subdivision",
-      "cultural_affiliation": "welsh"
-    }
+    ]
   }
 }

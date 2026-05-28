@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -27,6 +27,33 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "registry_url": "http://mindsandmachines.com",
+    "whois_server": "whois.nic.nrw",
+    "rdap_server": "https://rdap.nic.nrw/",
+    "tld_created": "2014-05-29",
+    "tld_updated": [
+      "2023-06-13"
+    ],
+    "annotations": {
+      "iana_admin_alias": "GoDaddy Registry",
+      "iana_admin_slug": "godaddy-registry",
+      "iana_tech_alias": "GoDaddy Registry",
+      "iana_tech_slug": "godaddy-registry",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "Knipp Medien",
+        "UltraDNS"
+      ],
+      "as_org_slugs": [
+        "knipp-medien",
+        "ultradns"
+      ],
+      "geographic_scope": "subdivision"
     },
     "nameservers": [
       {
@@ -129,7 +156,7 @@
         "ipv4": [
           {
             "ip": "37.209.194.2",
-            "asn": 397213,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -181,33 +208,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://mindsandmachines.com",
-    "whois_server": "whois.nic.nrw",
-    "rdap_server": "https://rdap.nic.nrw/",
-    "tld_created": "2014-05-29",
-    "tld_updated": [
-      "2023-06-13"
-    ],
-    "annotations": {
-      "iana_admin_alias": "GoDaddy Registry",
-      "iana_admin_slug": "godaddy-registry",
-      "iana_tech_alias": "GoDaddy Registry",
-      "iana_tech_slug": "godaddy-registry",
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "as_org_aliases": [
-        "Knipp Medien",
-        "UltraDNS"
-      ],
-      "as_org_slugs": [
-        "knipp-medien",
-        "ultradns"
-      ],
-      "geographic_scope": "subdivision"
-    }
+    ]
   }
 }

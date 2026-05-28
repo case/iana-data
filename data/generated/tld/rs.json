@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,24 @@
         "admin": "Serbian National Internet Domain Registry (RNIDS)",
         "tech": "Serbian National Internet Domain Registry (RNIDS)"
       }
+    },
+    "registry_url": "http://www.rnids.rs",
+    "whois_server": "whois.rnids.rs",
+    "tld_created": "2007-09-24",
+    "tld_updated": [
+      "2025-02-06"
+    ],
+    "annotations": {
+      "country_name_iso": "Serbia",
+      "as_org_aliases": [
+        "DENIC",
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "denic",
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -133,24 +151,6 @@
         ]
       }
     ],
-    "registry_url": "http://www.rnids.rs",
-    "whois_server": "whois.rnids.rs",
-    "tld_created": "2007-09-24",
-    "tld_updated": [
-      "2025-02-06"
-    ],
-    "annotations": {
-      "country_name_iso": "Serbia",
-      "as_org_aliases": [
-        "DENIC",
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "denic",
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    },
     "idn": [
       "xn--90a3ac"
     ]

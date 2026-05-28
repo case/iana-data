@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T06:02:29Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -29,6 +29,29 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "registry_url": "http://corenic.org",
+    "whois_server": "whois.nic.xn--mgbab2bd",
+    "rdap_server": "https://rdap.nic.xn--mgbab2bd/",
+    "tld_created": "2014-02-06",
+    "tld_updated": [
+      "2022-01-07"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "icann_translation_en": "bazaar",
+      "as_org_aliases": [
+        "Knipp Medien"
+      ],
+      "as_org_slugs": [
+        "knipp-medien"
+      ],
+      "language_code": "ar",
+      "language_name_en": "Arabic"
     },
     "nameservers": [
       {
@@ -107,27 +130,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://corenic.org",
-    "whois_server": "whois.nic.xn--mgbab2bd",
-    "rdap_server": "https://rdap.nic.xn--mgbab2bd/",
-    "tld_created": "2014-02-06",
-    "tld_updated": [
-      "2022-01-07"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "icann_translation_en": "bazaar",
-      "as_org_aliases": [
-        "Knipp Medien"
-      ],
-      "as_org_slugs": [
-        "knipp-medien"
-      ]
-    }
+    ]
   }
 }

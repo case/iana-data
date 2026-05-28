@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T06:02:29Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -19,6 +19,24 @@
         "admin": "Communications, Space and Technology Commission",
         "tech": "Communications, Space and Technology Commission"
       }
+    },
+    "registry_url": "http://www.nic.net.sa/",
+    "whois_server": "whois.nic.net.sa",
+    "tld_created": "2010-05-05",
+    "tld_updated": [
+      "2026-02-18"
+    ],
+    "annotations": {
+      "country_name_iso": "Saudi Arabia",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country",
+      "language_code": "ar",
+      "language_name_en": "Arabic"
     },
     "nameservers": [
       {
@@ -167,8 +185,8 @@
         "ipv6": [
           {
             "ip": "2001:16a0:1:3002::2",
-            "asn": 39386,
-            "as_org": "STC-IGW-AS",
+            "asn": 25019,
+            "as_org": "SAUDINETSTC-AS",
             "as_country": "SA"
           }
         ]
@@ -186,8 +204,8 @@
         "ipv6": [
           {
             "ip": "2001:16a0:2:3002::2",
-            "asn": 39386,
-            "as_org": "STC-IGW-AS",
+            "asn": 25019,
+            "as_org": "SAUDINETSTC-AS",
             "as_country": "SA"
           }
         ]
@@ -211,22 +229,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.nic.net.sa/",
-    "whois_server": "whois.nic.net.sa",
-    "tld_created": "2010-05-05",
-    "tld_updated": [
-      "2026-02-18"
-    ],
-    "annotations": {
-      "country_name_iso": "Saudi Arabia",
-      "as_org_aliases": [
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -27,6 +27,34 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "registry_url": "https://radix.website/",
+    "whois_server": "whois.nic.store",
+    "rdap_server": "https://rdap.radix.host/rdap/",
+    "tld_created": "2016-02-11",
+    "tld_updated": [
+      "2026-04-27"
+    ],
+    "annotations": {
+      "iana_sponsor_alias": "Radix",
+      "iana_sponsor_slug": "radix",
+      "iana_admin_alias": "Radix",
+      "iana_admin_slug": "radix",
+      "iana_tech_alias": "Tucows",
+      "iana_tech_slug": "tucows",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "Packet Clearing House",
+        "Tucows"
+      ],
+      "as_org_slugs": [
+        "packet-clearing-house",
+        "tucows"
+      ]
     },
     "nameservers": [
       {
@@ -105,34 +133,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://radix.website/",
-    "whois_server": "whois.nic.store",
-    "rdap_server": "https://rdap.radix.host/rdap/",
-    "tld_created": "2016-02-11",
-    "tld_updated": [
-      "2026-04-27"
-    ],
-    "annotations": {
-      "iana_sponsor_alias": "Radix",
-      "iana_sponsor_slug": "radix",
-      "iana_admin_alias": "Radix",
-      "iana_admin_slug": "radix",
-      "iana_tech_alias": "Tucows",
-      "iana_tech_slug": "tucows",
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "as_org_aliases": [
-        "Packet Clearing House",
-        "Tucows"
-      ],
-      "as_org_slugs": [
-        "packet-clearing-house",
-        "tucows"
-      ]
-    }
+    ]
   }
 }

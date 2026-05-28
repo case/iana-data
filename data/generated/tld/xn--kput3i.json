@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T06:02:29Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -30,14 +30,37 @@
         "date_removed": null
       }
     },
+    "registry_url": "http://www.rntd.cn",
+    "whois_server": "whois.nic.xn--kput3i",
+    "rdap_server": "https://rdap.teleinfo.cn/xn--kput3i/",
+    "tld_created": "2014-06-05",
+    "tld_updated": [
+      "2025-04-25"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "icann_translation_en": "cell",
+      "as_org_aliases": [
+        "Microsoft"
+      ],
+      "as_org_slugs": [
+        "microsoft"
+      ],
+      "language_code": "zh",
+      "language_name_en": "Chinese"
+    },
     "nameservers": [
       {
         "hostname": "ns1.teleinfo.cn",
         "ipv4": [
           {
             "ip": "103.61.60.1",
-            "asn": 139137,
-            "as_org": "CAICTNET Chinese Academy of Telecommunication Research",
+            "asn": 138457,
+            "as_org": "CAICT-AS-AP China Academy of Information and Communications Technology",
             "as_country": "CN"
           }
         ],
@@ -93,27 +116,6 @@
         ],
         "ipv6": []
       }
-    ],
-    "registry_url": "http://www.rntd.cn",
-    "whois_server": "whois.nic.xn--kput3i",
-    "rdap_server": "https://rdap.teleinfo.cn/xn--kput3i/",
-    "tld_created": "2014-06-05",
-    "tld_updated": [
-      "2025-04-25"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "icann_translation_en": "cell",
-      "as_org_aliases": [
-        "Microsoft"
-      ],
-      "as_org_slugs": [
-        "microsoft"
-      ]
-    }
+    ]
   }
 }

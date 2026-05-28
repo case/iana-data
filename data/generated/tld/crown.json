@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -27,6 +27,31 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "registry_url": "http://www.crown.com/",
+    "whois_server": "whois.nic.crown",
+    "rdap_server": "https://rdap.crown.fury.ca/rdap/",
+    "tld_created": "2015-06-04",
+    "tld_updated": [
+      "2026-01-22"
+    ],
+    "annotations": {
+      "iana_tech_alias": "CIRA",
+      "iana_tech_slug": "cira",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "brand",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "CIRA",
+        "DENIC"
+      ],
+      "as_org_slugs": [
+        "cira",
+        "denic"
+      ]
     },
     "nameservers": [
       {
@@ -105,31 +130,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.crown.com/",
-    "whois_server": "whois.nic.crown",
-    "rdap_server": "https://rdap.crown.fury.ca/rdap/",
-    "tld_created": "2015-06-04",
-    "tld_updated": [
-      "2026-01-22"
-    ],
-    "annotations": {
-      "iana_tech_alias": "CIRA",
-      "iana_tech_slug": "cira",
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "brand",
-        "non_sponsored"
-      ],
-      "as_org_aliases": [
-        "CIRA",
-        "DENIC"
-      ],
-      "as_org_slugs": [
-        "cira",
-        "denic"
-      ]
-    }
+    ]
   }
 }

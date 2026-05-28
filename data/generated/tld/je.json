@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,24 @@
         "admin": "Island Networks (Jersey) Ltd.",
         "tech": "Island Networks Limited"
       }
+    },
+    "registry_url": "http://www.nic.je",
+    "whois_server": "whois.je",
+    "tld_created": "1996-08-08",
+    "tld_updated": [
+      "2024-02-12"
+    ],
+    "annotations": {
+      "country_name_iso": "Jersey",
+      "as_org_aliases": [
+        "Nominet",
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "nominet",
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -42,8 +60,8 @@
         "ipv4": [
           {
             "ip": "213.248.219.254",
-            "asn": 137502,
-            "as_org": "NOMINET-AS-AP NOMINET UK",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
             "as_country": "GB"
           }
         ],
@@ -61,8 +79,8 @@
         "ipv4": [
           {
             "ip": "103.49.83.254",
-            "asn": 137502,
-            "as_org": "NOMINET-AS-AP NOMINET UK",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
             "as_country": "GB"
           }
         ],
@@ -132,24 +150,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.nic.je",
-    "whois_server": "whois.je",
-    "tld_created": "1996-08-08",
-    "tld_updated": [
-      "2024-02-12"
-    ],
-    "annotations": {
-      "country_name_iso": "Jersey",
-      "as_org_aliases": [
-        "Nominet",
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "nominet",
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

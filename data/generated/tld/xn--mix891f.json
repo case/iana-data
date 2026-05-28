@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T06:33:22Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -19,6 +19,24 @@
         "admin": "Macao Network Information Centre (MONIC) - HNET Asia",
         "tech": "Macao Network Information Centre (MONIC) - HNET Asia"
       }
+    },
+    "registry_url": "https://www.monic.mo",
+    "whois_server": "whois.monic.mo",
+    "tld_created": "2015-04-21",
+    "tld_updated": [
+      "2023-03-07"
+    ],
+    "annotations": {
+      "country_name_iso": "Macao",
+      "as_org_aliases": [
+        "Community DNS"
+      ],
+      "as_org_slugs": [
+        "community-dns"
+      ],
+      "geographic_scope": "country",
+      "language_code": "zh-Hant",
+      "language_name_en": "Chinese (Traditional)"
     },
     "nameservers": [
       {
@@ -154,22 +172,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://www.monic.mo",
-    "whois_server": "whois.monic.mo",
-    "tld_created": "2015-04-21",
-    "tld_updated": [
-      "2023-03-07"
-    ],
-    "annotations": {
-      "country_name_iso": "Macao",
-      "as_org_aliases": [
-        "Community DNS"
-      ],
-      "as_org_slugs": [
-        "community-dns"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

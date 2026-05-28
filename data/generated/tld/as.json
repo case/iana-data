@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -17,14 +17,32 @@
         "tech": "GDNS, LLC"
       }
     },
+    "registry_url": "http://www.nic.as",
+    "whois_server": "whois.nic.as",
+    "rdap_server": "https://rdap.nic.as",
+    "tld_created": "1997-06-12",
+    "tld_updated": [
+      "2025-12-08"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "American Samoa",
+      "as_org_aliases": [
+        "Nominet"
+      ],
+      "as_org_slugs": [
+        "nominet"
+      ],
+      "geographic_scope": "country"
+    },
     "nameservers": [
       {
         "hostname": "ns1.asnic.biz",
         "ipv4": [
           {
             "ip": "213.248.219.254",
-            "asn": 137502,
-            "as_org": "NOMINET-AS-AP NOMINET UK",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
             "as_country": "GB"
           }
         ],
@@ -42,8 +60,8 @@
         "ipv4": [
           {
             "ip": "103.49.83.254",
-            "asn": 137502,
-            "as_org": "NOMINET-AS-AP NOMINET UK",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
             "as_country": "GB"
           }
         ],
@@ -113,24 +131,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.nic.as",
-    "whois_server": "whois.nic.as",
-    "rdap_server": "https://rdap.nic.as",
-    "tld_created": "1997-06-12",
-    "tld_updated": [
-      "2025-12-08"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "country_name_iso": "American Samoa",
-      "as_org_aliases": [
-        "Nominet"
-      ],
-      "as_org_slugs": [
-        "nominet"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

@@ -29,6 +29,9 @@ def built_tlds_json(tmp_path_factory):
         tlds_index=tmp / "tlds-index.json",
         tld_dir=tmp / "tld",
         organizations_json=tmp / "organizations.json",
+        places_json=tmp / "places.json",
+        cultures_json=tmp / "cultures.json",
+        agreements_json=tmp / "agreements.json",
     )
     build_tlds_json(output_paths)
 

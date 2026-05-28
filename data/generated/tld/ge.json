@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,22 @@
         "admin": "Caucasus Online LLC",
         "tech": "Caucasus Online LLC"
       }
+    },
+    "registry_url": "http://nic.ge",
+    "whois_server": "whois.nic.ge",
+    "tld_created": "1992-12-02",
+    "tld_updated": [
+      "2025-06-11"
+    ],
+    "annotations": {
+      "country_name_iso": "Georgia",
+      "as_org_aliases": [
+        "Amazon"
+      ],
+      "as_org_slugs": [
+        "amazon"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -67,22 +83,6 @@
         "ipv6": []
       }
     ],
-    "registry_url": "http://nic.ge",
-    "whois_server": "whois.nic.ge",
-    "tld_created": "1992-12-02",
-    "tld_updated": [
-      "2025-06-11"
-    ],
-    "annotations": {
-      "country_name_iso": "Georgia",
-      "as_org_aliases": [
-        "Amazon"
-      ],
-      "as_org_slugs": [
-        "amazon"
-      ],
-      "geographic_scope": "country"
-    },
     "idn": [
       "xn--node"
     ]

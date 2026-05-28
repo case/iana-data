@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -28,6 +28,34 @@
         "date_removed": null
       }
     },
+    "registry_url": "http://nic.blackfriday/",
+    "whois_server": "whois.nic.blackfriday",
+    "rdap_server": "https://rdap.nic.blackfriday/",
+    "tld_created": "2014-04-17",
+    "tld_updated": [
+      "2024-04-16"
+    ],
+    "annotations": {
+      "iana_sponsor_alias": "GoDaddy Registry",
+      "iana_sponsor_slug": "godaddy-registry",
+      "iana_admin_alias": "GoDaddy Registry",
+      "iana_admin_slug": "godaddy-registry",
+      "iana_tech_alias": "GoDaddy Registry",
+      "iana_tech_slug": "godaddy-registry",
+      "icann_registry_operator_alias": "GoDaddy Registry",
+      "icann_registry_operator_slug": "godaddy-registry",
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "UltraDNS"
+      ],
+      "as_org_slugs": [
+        "ultradns"
+      ]
+    },
     "nameservers": [
       {
         "hostname": "a.nic.blackfriday",
@@ -53,7 +81,7 @@
         "ipv4": [
           {
             "ip": "37.209.194.10",
-            "asn": 397213,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -91,7 +119,7 @@
         "ipv4": [
           {
             "ip": "156.154.172.82",
-            "asn": 19905,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -99,7 +127,7 @@
         "ipv6": [
           {
             "ip": "2610:a1:1074::1:82",
-            "asn": 19905,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -110,7 +138,7 @@
         "ipv4": [
           {
             "ip": "156.154.173.82",
-            "asn": 19905,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -118,7 +146,7 @@
         "ipv6": [
           {
             "ip": "2610:a1:1075::1:82",
-            "asn": 19905,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -129,7 +157,7 @@
         "ipv4": [
           {
             "ip": "156.154.174.82",
-            "asn": 19905,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -137,40 +165,12 @@
         "ipv6": [
           {
             "ip": "2610:a1:1076::1:82",
-            "asn": 19905,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
         ]
       }
-    ],
-    "registry_url": "http://nic.blackfriday/",
-    "whois_server": "whois.nic.blackfriday",
-    "rdap_server": "https://rdap.nic.blackfriday/",
-    "tld_created": "2014-04-17",
-    "tld_updated": [
-      "2024-04-16"
-    ],
-    "annotations": {
-      "iana_sponsor_alias": "GoDaddy Registry",
-      "iana_sponsor_slug": "godaddy-registry",
-      "iana_admin_alias": "GoDaddy Registry",
-      "iana_admin_slug": "godaddy-registry",
-      "iana_tech_alias": "GoDaddy Registry",
-      "iana_tech_slug": "godaddy-registry",
-      "icann_registry_operator_alias": "GoDaddy Registry",
-      "icann_registry_operator_slug": "godaddy-registry",
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "as_org_aliases": [
-        "UltraDNS"
-      ],
-      "as_org_slugs": [
-        "ultradns"
-      ]
-    }
+    ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,30 @@
         "admin": "Internet Computer Bureau Limited",
         "tech": "Internet Computer Bureau Limited"
       }
+    },
+    "registry_url": "http://www.nic.ac/",
+    "whois_server": "whois.nic.ac",
+    "rdap_server": "https://rdap.identitydigital.services/rdap/",
+    "tld_created": "1997-12-19",
+    "tld_updated": [
+      "2023-03-07"
+    ],
+    "annotations": {
+      "iana_sponsor_alias": "Identity Digital",
+      "iana_sponsor_slug": "identity-digital",
+      "iana_admin_alias": "Identity Digital",
+      "iana_admin_slug": "identity-digital",
+      "iana_tech_alias": "Identity Digital",
+      "iana_tech_slug": "identity-digital",
+      "rdap_source": "supplemental",
+      "country_name_iso": "Ascension Island",
+      "as_org_aliases": [
+        "Identity Digital"
+      ],
+      "as_org_slugs": [
+        "identity-digital"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -94,30 +118,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.nic.ac/",
-    "whois_server": "whois.nic.ac",
-    "rdap_server": "https://rdap.identitydigital.services/rdap/",
-    "tld_created": "1997-12-19",
-    "tld_updated": [
-      "2023-03-07"
-    ],
-    "annotations": {
-      "iana_sponsor_alias": "Identity Digital",
-      "iana_sponsor_slug": "identity-digital",
-      "iana_admin_alias": "Identity Digital",
-      "iana_admin_slug": "identity-digital",
-      "iana_tech_alias": "Identity Digital",
-      "iana_tech_slug": "identity-digital",
-      "rdap_source": "supplemental",
-      "country_name_iso": "Ascension Island",
-      "as_org_aliases": [
-        "Identity Digital"
-      ],
-      "as_org_slugs": [
-        "identity-digital"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

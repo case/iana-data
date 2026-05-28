@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-28T02:11:16Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -35,7 +35,9 @@
         "brand",
         "non_sponsored"
       ],
-      "icann_translation_en": "number one store"
+      "icann_translation_en": "number one store",
+      "language_code": "zh",
+      "language_name_en": "Chinese"
     }
   }
 }

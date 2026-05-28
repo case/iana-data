@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,24 @@
         "admin": "Rwanda Internet Community and Technology  Alliance (RICTA) Ltd",
         "tech": "Rwanda Internet Community and Technology  Alliance (RICTA) Ltd"
       }
+    },
+    "registry_url": "https://registry.ricta.org.rw",
+    "whois_server": "whois.ricta.org.rw",
+    "rdap_server": "https://rdap.ricta.org.rw",
+    "tld_created": "1996-10-21",
+    "tld_updated": [
+      "2025-08-26"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "country_name_iso": "Rwanda",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -118,8 +136,8 @@
         "ipv4": [
           {
             "ip": "41.138.85.98",
-            "asn": 327707,
-            "as_org": "AIRTEL-",
+            "asn": 37124,
+            "as_org": "tigo-rw-as",
             "as_country": "RW"
           }
         ],
@@ -144,24 +162,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://registry.ricta.org.rw",
-    "whois_server": "whois.ricta.org.rw",
-    "rdap_server": "https://rdap.ricta.org.rw",
-    "tld_created": "1996-10-21",
-    "tld_updated": [
-      "2025-08-26"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "country_name_iso": "Rwanda",
-      "as_org_aliases": [
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

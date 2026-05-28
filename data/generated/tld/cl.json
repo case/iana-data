@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,24 @@
         "admin": "NIC Chile\nUniversity of Chile",
         "tech": "NIC Chile\nUniversity of Chile"
       }
+    },
+    "registry_url": "http://www.nic.cl/",
+    "whois_server": "whois.nic.cl",
+    "tld_created": "1987-12-15",
+    "tld_updated": [
+      "2021-05-28"
+    ],
+    "annotations": {
+      "country_name_iso": "Chile",
+      "as_org_aliases": [
+        "CIRA",
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "cira",
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -151,24 +169,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.nic.cl/",
-    "whois_server": "whois.nic.cl",
-    "tld_created": "1987-12-15",
-    "tld_updated": [
-      "2021-05-28"
-    ],
-    "annotations": {
-      "country_name_iso": "Chile",
-      "as_org_aliases": [
-        "CIRA",
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "cira",
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

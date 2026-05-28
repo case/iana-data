@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T06:02:29Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -20,15 +20,32 @@
         "tech": "Sudan Internet Society"
       }
     },
+    "registry_url": "http://domains.sd",
+    "tld_created": "2012-11-20",
+    "tld_updated": [
+      "2023-03-07"
+    ],
+    "annotations": {
+      "country_name_iso": "Sudan",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country",
+      "language_code": "ar",
+      "language_name_en": "Arabic"
+    },
     "nameservers": [
       {
         "hostname": "ans1.sis.sd",
         "ipv4": [
           {
             "ip": "196.29.166.134",
-            "asn": 33788,
-            "as_org": "KANARTEL",
-            "as_country": "SD"
+            "asn": 0,
+            "as_org": "Not routed",
+            "as_country": "None"
           }
         ],
         "ipv6": []
@@ -52,21 +69,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://domains.sd",
-    "tld_created": "2012-11-20",
-    "tld_updated": [
-      "2023-03-07"
-    ],
-    "annotations": {
-      "country_name_iso": "Sudan",
-      "as_org_aliases": [
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

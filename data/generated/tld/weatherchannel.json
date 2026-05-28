@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -28,6 +28,26 @@
         "date_removed": null
       }
     },
+    "registry_url": "https://www.weathercompany.com/",
+    "rdap_server": "https://rdap.nic.weatherchannel/",
+    "tld_created": "2016-01-22",
+    "tld_updated": [
+      "2026-03-01"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "brand",
+        "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "UltraDNS"
+      ],
+      "as_org_slugs": [
+        "ultradns"
+      ]
+    },
     "nameservers": [
       {
         "hostname": "a.nic.weatherchannel",
@@ -53,7 +73,7 @@
         "ipv4": [
           {
             "ip": "37.209.194.9",
-            "asn": 397213,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -99,7 +119,7 @@
         "ipv6": [
           {
             "ip": "2610:a1:1074::b3",
-            "asn": 19905,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -118,7 +138,7 @@
         "ipv6": [
           {
             "ip": "2610:a1:1075::b3",
-            "asn": 19905,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -137,32 +157,12 @@
         "ipv6": [
           {
             "ip": "2610:a1:1076::b3",
-            "asn": 19905,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
         ]
       }
-    ],
-    "registry_url": "https://www.weathercompany.com/",
-    "rdap_server": "https://rdap.nic.weatherchannel/",
-    "tld_created": "2016-01-22",
-    "tld_updated": [
-      "2026-03-01"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "brand",
-        "non_sponsored"
-      ],
-      "as_org_aliases": [
-        "UltraDNS"
-      ],
-      "as_org_slugs": [
-        "ultradns"
-      ]
-    }
+    ]
   }
 }

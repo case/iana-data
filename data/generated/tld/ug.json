@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,22 @@
         "admin": "Uganda Online Ltd.",
         "tech": "East African Help Desk"
       }
+    },
+    "registry_url": "http://www.registry.co.ug",
+    "whois_server": "whois.co.ug",
+    "tld_created": "1995-03-08",
+    "tld_updated": [
+      "2025-09-30"
+    ],
+    "annotations": {
+      "country_name_iso": "Uganda",
+      "as_org_aliases": [
+        "Packet Clearing House"
+      ],
+      "as_org_slugs": [
+        "packet-clearing-house"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -99,22 +115,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.registry.co.ug",
-    "whois_server": "whois.co.ug",
-    "tld_created": "1995-03-08",
-    "tld_updated": [
-      "2025-09-30"
-    ],
-    "annotations": {
-      "country_name_iso": "Uganda",
-      "as_org_aliases": [
-        "Packet Clearing House"
-      ],
-      "as_org_slugs": [
-        "packet-clearing-house"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

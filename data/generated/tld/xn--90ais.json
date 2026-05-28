@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T04:50:15Z",
+  "publication": "2026-05-26T06:02:29Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -19,6 +19,18 @@
         "admin": "The Operational and Analytical Center under the Aegis of the President of the Republic of Belarus",
         "tech": "Belarusian Cloud Technologies LLC"
       }
+    },
+    "registry_url": "https://cctld.by",
+    "whois_server": "whois.cctld.by",
+    "tld_created": "2014-09-29",
+    "tld_updated": [
+      "2025-01-09"
+    ],
+    "annotations": {
+      "country_name_iso": "Belarus",
+      "geographic_scope": "country",
+      "language_code": "be",
+      "language_name_en": "Belarusian"
     },
     "nameservers": [
       {
@@ -109,16 +121,6 @@
         ],
         "ipv6": []
       }
-    ],
-    "registry_url": "https://cctld.by",
-    "whois_server": "whois.cctld.by",
-    "tld_created": "2014-09-29",
-    "tld_updated": [
-      "2025-01-09"
-    ],
-    "annotations": {
-      "country_name_iso": "Belarus",
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

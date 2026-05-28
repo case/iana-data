@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T06:02:29Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -30,6 +30,29 @@
         "date_removed": null
       }
     },
+    "whois_server": "whois.nic.xn--ngbrx",
+    "rdap_server": "https://rdap.nic.xn--ngbrx/",
+    "tld_created": "2017-05-11",
+    "tld_updated": [
+      "2020-05-14"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "icann_translation_en": "arab",
+      "as_org_aliases": [
+        "UltraDNS"
+      ],
+      "as_org_slugs": [
+        "ultradns"
+      ],
+      "cultural_affiliation": "arab",
+      "language_code": "ar",
+      "language_name_en": "Arabic"
+    },
     "nameservers": [
       {
         "hostname": "gtld.alpha.aridns.net.au",
@@ -55,7 +78,7 @@
         "ipv4": [
           {
             "ip": "37.209.194.10",
-            "asn": 397213,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -107,26 +130,6 @@
           }
         ]
       }
-    ],
-    "whois_server": "whois.nic.xn--ngbrx",
-    "rdap_server": "https://rdap.nic.xn--ngbrx/",
-    "tld_created": "2017-05-11",
-    "tld_updated": [
-      "2020-05-14"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "icann_translation_en": "arab",
-      "as_org_aliases": [
-        "UltraDNS"
-      ],
-      "as_org_slugs": [
-        "ultradns"
-      ]
-    }
+    ]
   }
 }

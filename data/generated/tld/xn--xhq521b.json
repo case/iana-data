@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T06:02:29Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -30,6 +30,29 @@
         "date_removed": null
       }
     },
+    "registry_url": "http://www.yu-wei.cn/",
+    "whois_server": "whois.ngtld.cn",
+    "rdap_server": "https://restwhois.ngtld.cn/",
+    "tld_created": "2014-07-24",
+    "tld_updated": [
+      "2026-01-23"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "icann_translation_en": "guangdong",
+      "as_org_aliases": [
+        "CNNIC"
+      ],
+      "as_org_slugs": [
+        "cnnic"
+      ],
+      "language_code": "zh",
+      "language_name_en": "Chinese"
+    },
     "nameservers": [
       {
         "hostname": "ta.ngtld.cn",
@@ -55,7 +78,7 @@
         "ipv4": [
           {
             "ip": "42.83.131.1",
-            "asn": 24151,
+            "asn": 24406,
             "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
             "as_country": "CN"
           }
@@ -93,7 +116,7 @@
         "ipv4": [
           {
             "ip": "42.83.133.1",
-            "asn": 24406,
+            "asn": 24151,
             "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
             "as_country": "CN"
           }
@@ -112,27 +135,6 @@
         ],
         "ipv6": []
       }
-    ],
-    "registry_url": "http://www.yu-wei.cn/",
-    "whois_server": "whois.ngtld.cn",
-    "rdap_server": "https://restwhois.ngtld.cn/",
-    "tld_created": "2014-07-24",
-    "tld_updated": [
-      "2026-01-23"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "icann_translation_en": "guangdong",
-      "as_org_aliases": [
-        "CNNIC"
-      ],
-      "as_org_slugs": [
-        "cnnic"
-      ]
-    }
+    ]
   }
 }

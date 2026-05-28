@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T03:41:36Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,26 @@
         "admin": "2 Vaiaku Rd",
         "tech": "GoDaddy Registry"
       }
+    },
+    "registry_url": "https://turnon.tv/",
+    "whois_server": "whois.nic.tv",
+    "rdap_server": "https://rdap.nic.tv/",
+    "tld_created": "1996-03-18",
+    "tld_updated": [
+      "2025-09-04"
+    ],
+    "annotations": {
+      "iana_tech_alias": "GoDaddy Registry",
+      "iana_tech_slug": "godaddy-registry",
+      "rdap_source": "IANA",
+      "country_name_iso": "Tuvalu",
+      "as_org_aliases": [
+        "UltraDNS"
+      ],
+      "as_org_slugs": [
+        "ultradns"
+      ],
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -42,7 +62,7 @@
         "ipv4": [
           {
             "ip": "37.209.194.6",
-            "asn": 397213,
+            "asn": 12008,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -132,26 +152,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "https://turnon.tv/",
-    "whois_server": "whois.nic.tv",
-    "rdap_server": "https://rdap.nic.tv/",
-    "tld_created": "1996-03-18",
-    "tld_updated": [
-      "2025-09-04"
-    ],
-    "annotations": {
-      "iana_tech_alias": "GoDaddy Registry",
-      "iana_tech_slug": "godaddy-registry",
-      "rdap_source": "IANA",
-      "country_name_iso": "Tuvalu",
-      "as_org_aliases": [
-        "UltraDNS"
-      ],
-      "as_org_slugs": [
-        "ultradns"
-      ],
-      "geographic_scope": "country"
-    }
+    ]
   }
 }

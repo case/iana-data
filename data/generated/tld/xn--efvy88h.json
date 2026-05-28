@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T17:27:52Z",
+  "publication": "2026-05-26T06:02:29Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -29,6 +29,29 @@
         "contract_terminated": false,
         "date_removed": null
       }
+    },
+    "registry_url": "http://www.gd.xinhua.org",
+    "whois_server": "whois.gtld.zdns.cn",
+    "rdap_server": "https://rdap.zdnsgtld.com/XN--EFVY88H",
+    "tld_created": "2015-08-06",
+    "tld_updated": [
+      "2026-05-22"
+    ],
+    "annotations": {
+      "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
+      "icann_translation_en": "news",
+      "as_org_aliases": [
+        "ZDNS"
+      ],
+      "as_org_slugs": [
+        "zdns"
+      ],
+      "language_code": "zh",
+      "language_name_en": "Chinese"
     },
     "nameservers": [
       {
@@ -127,27 +150,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.gd.xinhua.org",
-    "whois_server": "whois.gtld.zdns.cn",
-    "rdap_server": "https://rdap.zdnsgtld.com/XN--EFVY88H",
-    "tld_created": "2015-08-06",
-    "tld_updated": [
-      "2026-05-22"
-    ],
-    "annotations": {
-      "rdap_source": "IANA",
-      "registry_agreement_types": [
-        "base",
-        "non_sponsored"
-      ],
-      "icann_translation_en": "news",
-      "as_org_aliases": [
-        "ZDNS"
-      ],
-      "as_org_slugs": [
-        "zdns"
-      ]
-    }
+    ]
   }
 }

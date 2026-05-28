@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T04:50:15Z",
+  "publication": "2026-05-26T05:23:55Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,6 +16,16 @@
         "admin": "GETESA S.A.",
         "tech": "GETESA S.A."
       }
+    },
+    "registry_url": "http://www.dominio.gq",
+    "whois_server": "whois.dominio.gq",
+    "tld_created": "1997-07-10",
+    "tld_updated": [
+      "2023-08-14"
+    ],
+    "annotations": {
+      "country_name_iso": "Equatorial Guinea",
+      "geographic_scope": "country"
     },
     "nameservers": [
       {
@@ -94,16 +104,6 @@
           }
         ]
       }
-    ],
-    "registry_url": "http://www.dominio.gq",
-    "whois_server": "whois.dominio.gq",
-    "tld_created": "1997-07-10",
-    "tld_updated": [
-      "2023-08-14"
-    ],
-    "annotations": {
-      "country_name_iso": "Equatorial Guinea",
-      "geographic_scope": "country"
-    }
+    ]
   }
 }
