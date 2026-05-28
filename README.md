@@ -141,7 +141,7 @@ Here is its schema:
         },
         "icann": {                         // Fields from the ICANN gTLDs Report [OPTIONAL - gTLDs only, omit otherwise]
           "registry_operator": "string",   // Registry Operator name [null if no active contract]
-          "specification_13": boolean,     // true for .Brand TLDs (Specification 13) [null if no active contract]
+          "specification_13": boolean,     // .Brand TLD flag (Specification 13). Application-era; see "Interpreting the data" [null if no active contract]
           "third_or_lower_level_registration": boolean, // true only for .museum/.name/.pro [null if no active contract]
           "application_id": "string",      // ICANN new-gTLD application ID [null if not applicable]
           "registry_operator_country_code": "string", // ISO country code of the operator [null if absent]
@@ -247,21 +247,57 @@ Here is its schema:
 
 ## Identifiers: A-labels vs Unicode
 
-Every TLD is identified by its **A-label** — the ASCII form, including `xn--` punycode for IDNs (e.g. `xn--80adxhks`). The A-label is the canonical key and the only form used for joins and references: the `tld` field, per-TLD filenames, the index keys, and every TLD in `organizations.json` `roles`. A-labels are stable and unambiguous (the U-label depends on Unicode normalization and IDNA version), which keeps cross-file joins exact.
+Every TLD is identified by its **A-label**: the ASCII form, including `xn--` punycode for IDNs (e.g. `xn--80adxhks`). The A-label is the canonical key and the only form used for joins and references: the `tld` field, per-TLD filenames, the index keys, and every TLD in `organizations.json` `roles`. A-labels are stable and unambiguous (the U-label depends on Unicode normalization and IDNA version), which keeps cross-file joins exact.
 
-The **U-label** — the rendered Unicode form (e.g. `москва`) — is display-only and appears solely in the `tld_unicode` field, alongside the A-label, never as a key or reference. Consumers that render a name resolve the A-label to `tld_unicode`; they never key on it.
+The **U-label** (the rendered Unicode form, e.g. `москва`) is display-only and appears solely in the `tld_unicode` field, alongside the A-label, never as a key or reference. Consumers that render a name resolve the A-label to `tld_unicode`; they never key on it.
+
+## Interpreting the data
+
+A handful of fields look obvious but carry semantic nuance worth knowing before you build on them.
+
+### `specification_13` is application-era, not current state
+
+`orgs.icann.specification_13` reflects whether the TLD was granted **Specification 13 (.Brand) status at delegation**. It is set when the registry agreement is signed and **persists in the ICANN data**, even if the brand owner later changes Brand status.
+
+For a **currently-restricted-to-brand** filter, use the CSV-derived field instead:
+
+```python
+is_currently_brand = "brand" in tld["annotations"].get("registry_agreement_types", [])
+```
+
+The CSV (`annotations.registry_agreement_types`) reflects the **current contract**; it updates when the agreement type changes. ICANN's `specification_13` flag does not.
+
+Today the two sources disagree on 8 delegated gTLDs (`baidu`, `case`, `diy`, `food`, `gmo`, `monster`, `nexus`, `sbs`); the set is pinned by `tests/integration/test_agreements_integrity.py::test_known_brand_status_mismatches_are_pinned` so future drift surfaces as a test failure.
+
+### `icann_translation_en` is source-faithful, not curated
+
+The Translation column from ICANN's registry-agreement CSV is preserved **verbatim**: typos (`大众汽车` → "volkswagon"), romanizations (`谷歌` → "google"), and place names (`москва` → "moscow") are kept as ICANN published them. About 70% are real semantic translations; the rest are transliterations or brand romanizations. There is no curated-meaning layer.
+
+For a clean "this TLD means X in English" narrative, combine `icann_translation_en` with `language_name_en` and let the reader judge from `tld_unicode`. Or filter to TLDs where `iana_tag == "generic"` and `specification_13` is false (most likely to be real translations).
+
+### `tld_unicode` is computed locally, not from a published source
+
+`tld_unicode` is produced by Python's stdlib IDNA codec (`tld.encode("ascii").decode("idna")`), which implements **IDNA2003** (RFC 3490). For today's IDN TLDs this matches ICANN's published `uLabel` exactly; a future IDN containing IDNA2008-divergent characters (German ß, Greek final sigma, ZWJ/ZWNJ) would decode differently. A cross-source verification test catches that case before the bad value ships.
+
+### `delegated: false` records are retained in `tlds.json`
+
+Removed gTLDs, retired ccTLDs (`.an` Netherlands Antilles, etc.), and IANA test TLDs all stay in `tlds.json` with `delegated: false`. The 1,594 total = 1,437 delegated + 157 non-delegated. **Filter on `delegated: true`** for the current live set; the historical retention is deliberate so removal dates and the original record stay queryable.
+
+### `language_code` and `language_name_en` are derived per-IDN, not from a published source
+
+The IDN language fields are derived from `tld_script` via Unicode CLDR `likelySubtags`, with per-(script, region) overrides for ccTLDs and per-TLD overrides in `data/manual/annotations.json` for the edge cases (Sindhi `.ڀارت` is Arabic-script but Sindhi-language; Taiwanese TLDs carry `zh-Hant-TW`; etc.). There is no IANA or ICANN language field. Registries publish IDN tables tagged with BCP-47, but those are registry-policy tags (which scripts they accept for second-level registrations), not the A-label's own language. See `src/build/idn_language.py` for the resolution rules and `tests/build/test_idn_language_provenance.py` for the CLDR provenance check.
 
 ## The typed graph
 
 Alongside `tlds.json`, the build ships four derived reverse-index artifacts that model the root zone as a typed graph of four entity types plus one enum:
 
-- **Domains** — the TLDs themselves (`tlds.json`).
-- **Organizations** — registries, governance bodies, and infrastructure operators (`organizations.json`).
-- **Places** — countries, dependent territories, subdivisions, cities, and supranational regions (`places.json`).
-- **Cultures** — ethno-linguistic communities like the Basques or Welsh (`cultures.json`).
-- **Agreement types** — the ICANN registry-agreement enum (`agreements.json`).
+- **Domains**: the TLDs themselves (`tlds.json`).
+- **Organizations**: registries, governance bodies, and infrastructure operators (`organizations.json`).
+- **Places**: countries, dependent territories, subdivisions, cities, and supranational regions (`places.json`).
+- **Cultures**: ethno-linguistic communities like the Basques or Welsh (`cultures.json`).
+- **Agreement types**: the ICANN registry-agreement enum (`agreements.json`).
 
-Each TLD relates to one or more Organizations through *roles* (Sponsor, Administrative Contact, Technical Contact, and — for gTLDs — ICANN Registry Operator), to zero or more Places (most ccTLDs map to one country; geographic gTLDs map to a city, subdivision, country, or supranational region), to an optional Culture, and to its agreement types. Each derived artifact is a deterministic reverse index of `tlds.json`: delete it and `make build` rebuilds it. Every cross-file relationship is enforced by referential-integrity tests, so a foreign key can never dangle and no record is ever orphaned.
+Each TLD relates to one or more Organizations through *roles* (Sponsor, Administrative Contact, Technical Contact, and ICANN Registry Operator for gTLDs), to zero or more Places (most ccTLDs map to one country; geographic gTLDs map to a city, subdivision, country, or supranational region), to an optional Culture, and to its agreement types. Each derived artifact is a deterministic reverse index of `tlds.json`: delete it and `make build` rebuilds it. Every cross-file relationship is enforced by referential-integrity tests, so a foreign key can never dangle and no record is ever orphaned.
 
 ## `organizations.json`
 
@@ -345,8 +381,8 @@ Dependencies:
 
 ### Later
 
-- [ ] Add provenance (`source` URLs) for the remaining `null`-source alias entries in `data/manual/tld-manager-aliases.json` and `data/manual/tech-aliases.json` — currently only the non-obvious lineage merges cite a source
-- [ ] Continue canonicalising the long tail of `tld_manager` and `orgs.iana.tech` operator names (mostly ccTLD/NIC operators and dotBrand corporates) — `scripts/analyze_operators.py` ranks the unaliased candidates. The two alias files should evolve together so canonical names stay aligned (enforced by `tests/integration/test_alias_consistency.py`)
+- [ ] Add provenance (`source` URLs) for the remaining `null`-source alias entries in `data/manual/organizations.json`. Currently only the non-obvious lineage merges cite a source.
+- [ ] Continue canonicalising the long tail of `tld_manager` and `orgs.iana.tech` operator names (mostly ccTLD/NIC operators and dotBrand corporates). `scripts/analyze_operators.py` ranks the unaliased candidates.
 - [ ] Annotation - IDN meanings & language, maybe could derive from the individual TLD web pages?
 - [ ] Annotation - `open` or `closed` TLDs (needs discovery; may be addressed by the `brand` registry type annotation?)
 - [ ] Script to create a Sqlite db from the data - maybe purely from client side? E.g. JS could generate it "on the fly"?
