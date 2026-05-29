@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-28T03:42:36Z",
+  "publication": "2026-05-29T03:44:13Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -60,8 +60,8 @@
         "ipv4": [
           {
             "ip": "213.248.219.40",
-            "asn": 137502,
-            "as_org": "NOMINET-AS-AP NOMINET UK",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
             "as_country": "GB"
           }
         ],
@@ -79,8 +79,8 @@
         "ipv4": [
           {
             "ip": "103.49.83.40",
-            "asn": 137502,
-            "as_org": "NOMINET-AS-AP NOMINET UK",
+            "asn": 43519,
+            "as_org": "NOMINETANYCAST",
             "as_country": "GB"
           }
         ],
