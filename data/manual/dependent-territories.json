@@ -1,12 +1,69 @@
 {
-  "au": ["cc", "cx", "hm", "nf"],
-  "cn": ["hk", "mo"],
-  "dk": ["fo", "gl"],
-  "fi": ["ax"],
-  "fr": ["gf", "gp", "mq", "nc", "pf", "pm", "re", "tf", "wf", "yt"],
-  "gb": ["ai", "bm", "fk", "gg", "gi", "gs", "im", "io", "je", "ky", "ms", "pn", "sh", "tc", "vg"],
-  "nl": ["aw", "cw", "sx"],
-  "no": ["bv", "sj"],
-  "nz": ["ck", "nu", "tk"],
-  "us": ["as", "gu", "mp", "pr", "vi"]
+  "au": [
+    "cc",
+    "cx",
+    "hm",
+    "nf"
+  ],
+  "cn": [
+    "hk",
+    "mo"
+  ],
+  "dk": [
+    "fo",
+    "gl"
+  ],
+  "fi": [
+    "ax"
+  ],
+  "fr": [
+    "gf",
+    "gp",
+    "mq",
+    "nc",
+    "pf",
+    "pm",
+    "re",
+    "tf",
+    "wf",
+    "yt"
+  ],
+  "gb": [
+    "ai",
+    "bm",
+    "fk",
+    "gg",
+    "gi",
+    "gs",
+    "im",
+    "io",
+    "je",
+    "ky",
+    "ms",
+    "pn",
+    "sh",
+    "tc",
+    "vg"
+  ],
+  "nl": [
+    "aw",
+    "cw",
+    "sx"
+  ],
+  "no": [
+    "bv",
+    "sj"
+  ],
+  "nz": [
+    "ck",
+    "nu",
+    "tk"
+  ],
+  "us": [
+    "as",
+    "gu",
+    "mp",
+    "pr",
+    "vi"
+  ]
 }
