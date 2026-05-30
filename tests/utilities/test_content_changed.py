@@ -5,7 +5,14 @@ import shutil
 import stat
 from pathlib import Path
 
-from src.utilities.content_changed import write_json_if_changed
+import pytest
+
+from src.utilities.content_changed import (
+    canonical_json,
+    canonicalize_json_file,
+    is_json_canonical,
+    write_json_if_changed,
+)
 
 FIXTURES_DIR = Path(__file__).parent.parent / "fixtures" / "source" / "core"
 
@@ -246,3 +253,49 @@ def test_atomic_write_preserves_original_when_update_fails(tmp_path, monkeypatch
     )
     temp_files = [p for p in tmp_path.iterdir() if p.name.startswith("existing.json.")]
     assert temp_files == [], f"Temp file lingered after failure: {temp_files}"
+
+
+def test_canonical_json_two_space_indent_unicode_no_newline():
+    out = canonical_json({"name": "São Paulo", "tlds": ["sp"]})
+    assert out == '{\n  "name": "São Paulo",\n  "tlds": [\n    "sp"\n  ]\n}'
+
+
+def test_is_json_canonical_true_for_canonical_text():
+    text = canonical_json({"a": 1, "b": None}) + "\n"
+    assert is_json_canonical(text) is True
+
+
+def test_is_json_canonical_false_for_inline_arrays():
+    # The hand-authored compact style (inline short arrays) is not canonical.
+    assert is_json_canonical('{\n  "tlds": ["a", "b"]\n}\n') is False
+
+
+def test_is_json_canonical_false_without_trailing_newline():
+    assert is_json_canonical(canonical_json({"a": 1})) is False
+
+
+def test_is_json_canonical_raises_on_invalid_json():
+    with pytest.raises(json.JSONDecodeError):
+        is_json_canonical("{not valid json")
+
+
+def test_canonicalize_json_file_rewrites_and_preserves_content(tmp_path):
+    path = tmp_path / "f.json"
+    path.write_text('{"tlds": ["a","b"], "x": 1}\n', encoding="utf-8")
+
+    changed = canonicalize_json_file(path)
+
+    assert changed is True
+    assert is_json_canonical(path.read_text(encoding="utf-8"))
+    assert json.loads(path.read_text()) == {"tlds": ["a", "b"], "x": 1}
+
+
+def test_canonicalize_json_file_noop_when_already_canonical(tmp_path):
+    path = tmp_path / "f.json"
+    canonical = canonical_json({"a": 1, "b": [1, 2]}) + "\n"
+    path.write_text(canonical, encoding="utf-8")
+
+    changed = canonicalize_json_file(path)
+
+    assert changed is False
+    assert path.read_text(encoding="utf-8") == canonical

@@ -24,7 +24,7 @@ from ..config import (
 )
 from ..parse.country import get_country_name, is_cctld
 from ..parse.gtlds_json import GtldRecord, parse_gtlds_json
-from ..parse.iptoasn import ASNLookup
+from ..parse.iptoasn import ASNLookup, ASNRecord
 from ..parse.manual_annotations import parse_manual_annotations
 from ..parse.organizations import (
     OrgResolver,
@@ -82,13 +82,18 @@ class OutputPaths:
         )
 
 
-def build_tlds_json(output_paths: OutputPaths | None = None) -> dict:
+def build_tlds_json(
+    output_paths: OutputPaths | None = None, *, preserve_asn: bool = False
+) -> dict:
     """
     Build enhanced TLD data file aggregating IANA sources.
 
     Args:
         output_paths: Where to write outputs. Defaults to paths from src.config.
             Tests pass a custom instance to redirect outputs to a temp dir.
+        preserve_asn: Keep the ASN already in the committed tlds.json instead of
+            reading the local iptoasn file, so a local refresh of other data does
+            not churn ASN from a stale snapshot.
 
     Returns:
         dict: Result summary with counts
@@ -126,22 +131,26 @@ def build_tlds_json(output_paths: OutputPaths | None = None) -> dict:
         except Exception as e:
             logger.warning("Error loading IDN script mappings: %s", e)
 
-    # Load iptoasn data for ASN lookups
+    # Load ASN data: from the committed tlds.json when preserving, else iptoasn.
     asn_lookup: ASNLookup | None = None
-    iptoasn_path = get_iptoasn_path()
-    if iptoasn_path.exists():
-        try:
-            logger.info("Loading iptoasn data from %s...", iptoasn_path)
-            records = _parse_gzipped_iptoasn(iptoasn_path)
-            asn_lookup = ASNLookup(records)
-            logger.info("Loaded %d ASN records", len(records))
-        except Exception as e:
-            logger.warning("Error loading iptoasn data: %s", e)
+    if preserve_asn:
+        logger.info("Preserving ASN from committed %s", output_paths.tlds_json)
+        asn_lookup = _asn_lookup_from_committed(output_paths.tlds_json)
     else:
-        logger.info(
-            "No iptoasn data found at %s (run 'make download-iptoasn' to enable ASN lookups)",
-            iptoasn_path,
-        )
+        iptoasn_path = get_iptoasn_path()
+        if iptoasn_path.exists():
+            try:
+                logger.info("Loading iptoasn data from %s...", iptoasn_path)
+                records = _parse_gzipped_iptoasn(iptoasn_path)
+                asn_lookup = ASNLookup(records)
+                logger.info("Loaded %d ASN records", len(records))
+            except Exception as e:
+                logger.warning("Error loading iptoasn data: %s", e)
+        else:
+            logger.info(
+                "No iptoasn data found at %s (run 'make download-iptoasn' to enable ASN lookups)",
+                iptoasn_path,
+            )
 
     # Load and parse TLD pages
     logger.info("Parsing TLD pages...")
@@ -259,7 +268,7 @@ def build_tlds_json(output_paths: OutputPaths | None = None) -> dict:
     logger.info("tlds-index.json: %s (changed=%s)", index_status, index_changed)
 
     # Reverse-index artifacts. Each is called sequentially and short-circuits
-    # on a write error (same idiom as the core artifacts above), so make build
+    # on a write error (same idiom as the core artifacts above), so the build
     # never reports success with a partial dataset.
     artifact_calls = [
         (
@@ -686,6 +695,32 @@ def _enrich_nameservers_with_asn(
         result.append(enriched_ns)
 
     return result
+
+
+def _asn_lookup_from_committed(tlds_path: Path) -> ASNLookup:
+    """Build an ASN lookup from the ASN already in a committed tlds.json.
+
+    Each nameserver IP becomes a single-address range, so a preserve-ASN build
+    reproduces the committed asn/as_org/as_country exactly.
+    """
+    data = read_json_file(tlds_path, default={})
+    records: list[ASNRecord] = []
+    for tld in data.get("tlds", []):
+        for ns in tld.get("nameservers", []):
+            for family in ("ipv4", "ipv6"):
+                for entry in ns.get(family, []):
+                    ip = entry.get("ip")
+                    if ip and entry.get("asn") is not None:
+                        records.append(
+                            ASNRecord(
+                                start_ip=ip,
+                                end_ip=ip,
+                                asn=entry["asn"],
+                                country=entry.get("as_country", "None"),
+                                org=entry.get("as_org", "Unknown"),
+                            )
+                        )
+    return ASNLookup(records)
 
 
 def _ip_to_asn_object(ip: str, asn_lookup: ASNLookup | None) -> dict[str, Any]:

@@ -51,6 +51,13 @@ def main() -> int:
     )
 
     parser.add_argument(
+        "--preserve-asn",
+        action="store_true",
+        help="Keep ASN values from the committed tlds.json instead of reading the "
+        "local iptoasn file (avoids ASN churn on a local refresh).",
+    )
+
+    parser.add_argument(
         "--download-tld-pages",
         nargs="*",
         metavar="PREFIX",
@@ -164,7 +171,7 @@ def main() -> int:
 
     if args.build:
         logger.info("Building enhanced TLD data file...")
-        result = build_tlds_json()
+        result = build_tlds_json(preserve_asn=args.preserve_asn)
 
         if result.get("error"):
             logger.error("Build failed: %s", result["error"])
