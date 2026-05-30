@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
-"""Fetch geo-place coordinates from Wikidata into data/manual/places.json.
-
-For each place lacking lat/lon, looks up its Wikipedia article's P625 coordinate
-and writes it back. Idempotent (--refresh forces); run on demand, not in the build.
+"""Fetch geo-place coordinates from Wikidata into data/manual/places.json and
+data/manual/country-coordinates.json, looking up each record's P625 coordinate via
+its Wikipedia article. Idempotent (--refresh forces); run on demand, not the build.
 """
 
 import argparse
@@ -29,9 +28,9 @@ USER_AGENT = "iana-data (+https://github.com/case/iana-data)"
 REQUEST_DELAY = 0.5  # politeness between Wikidata calls
 COORD_PRECISION = 5  # ~1 m; ample for a map pin
 
-# data/manual/places.json holds only non-country geo places; every one is a
-# point we pin. Countries are areas (rendered from geometry), so not here.
-GEO_SUBTYPES = {"city", "subdivision", "supranational"}
+# Point geo-places we pin; countries (areas) live elsewhere, except no-polygon
+# territories via the country-coordinates overlay. frozenset: it's a default arg.
+GEO_SUBTYPES = frozenset({"city", "subdivision", "supranational"})
 
 
 def enwiki_title_from_url(info_link: str) -> str | None:
@@ -87,13 +86,16 @@ def enrich_places(
     client: httpx.Client,
     *,
     refresh: bool,
+    subtypes: frozenset[str] | None = GEO_SUBTYPES,
     delay: float = REQUEST_DELAY,
 ) -> tuple[int, list[str]]:
-    """Add lat/lon to geo places in place. Returns (added_count, failed_slugs)."""
+    """Add lat/lon to records lacking them, in place. Returns (added, failed_slugs).
+    ``subtypes`` filters by the ``subtype`` field; None processes all (the overlay has none)."""
     pending = [
         (slug, rec)
         for slug, rec in places.items()
-        if rec.get("subtype") in GEO_SUBTYPES and (refresh or "coordinates" not in rec)
+        if (subtypes is None or rec.get("subtype") in subtypes)
+        and (refresh or "coordinates" not in rec)
     ]
     added = 0
     failed: list[str] = []
@@ -136,17 +138,34 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    path = Path(MANUAL_DIR) / MANUAL_FILES["PLACES"]
-    places = read_json_file(path, default={})
+    places_path = Path(MANUAL_DIR) / MANUAL_FILES["PLACES"]
+    places = read_json_file(places_path, default={})
     if not places:
-        logger.error("no places loaded from %s", path)
+        logger.error("no places loaded from %s", places_path)
         return 1
+    overlay_path = Path(MANUAL_DIR) / MANUAL_FILES["COUNTRY_COORDINATES"]
+    overlay = read_json_file(overlay_path, default={})
 
+    failed: list[str] = []
+    # 30s per request: Wikidata's wbgetentities is normally sub-second, so this only
+    # bounds a stalled connection on an interactive, maintenance-time run.
     with httpx.Client(timeout=30.0, follow_redirects=True) as client:
-        added, failed = enrich_places(places, client, refresh=args.refresh)
+        # Non-country geo places (cities, subdivisions, supranational regions).
+        added, place_failed = enrich_places(places, client, refresh=args.refresh)
+        _, status = write_json_if_changed(places_path, places)
+        logger.info("places.json: added=%d write=%s", added, status)
+        failed += place_failed
+        # Point overlay for no-polygon country territories (entries carry no subtype).
+        if overlay:
+            added, overlay_failed = enrich_places(
+                overlay, client, refresh=args.refresh, subtypes=None
+            )
+            _, status = write_json_if_changed(overlay_path, overlay)
+            logger.info("country-coordinates.json: added=%d write=%s", added, status)
+            failed += overlay_failed
+        else:
+            logger.warning("country-coordinates: %s missing or empty", overlay_path)
 
-    _, status = write_json_if_changed(path, places)
-    logger.info("added=%d failed=%d write=%s", added, len(failed), status)
     if failed:
         logger.warning("no coordinates for: %s", ", ".join(sorted(failed)))
     return 0
