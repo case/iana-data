@@ -229,6 +229,74 @@ def test_enrich_places_default_filter_skips_subtypeless_entries():
     assert "coordinates" not in overlay["bv"]
 
 
+# --- check_coordinates ---
+
+
+def _with_coords(lat, lon):
+    return {
+        "subtype": "city",
+        "info_link": "https://en.wikipedia.org/wiki/X",
+        "coordinates": {"lat": lat, "lon": lon},
+    }
+
+
+def test_check_coordinates_flags_drift():
+    # handler returns ~1.23,2.35; stored 0,0 is a multi-degree move -> drift.
+    places = {"x": _with_coords(0.0, 0.0)}
+    with _client(_coords_handler) as client:
+        drifted, failed = fpc.check_coordinates(places, client, delay=0)
+    assert failed == []
+    assert len(drifted) == 1 and drifted[0][0] == "x"
+
+
+def test_check_coordinates_within_tolerance_is_clean():
+    places = {
+        "x": _with_coords(
+            round(1.23456789, fpc.COORD_PRECISION),
+            round(2.3456789, fpc.COORD_PRECISION),
+        )
+    }
+    with _client(_coords_handler) as client:
+        drifted, failed = fpc.check_coordinates(places, client, delay=0)
+    assert drifted == [] and failed == []
+
+
+def test_check_coordinates_records_failure_on_missing_claim():
+    places = {"x": _with_coords(0.0, 0.0)}
+
+    def handler(request):
+        return httpx.Response(200, json={"entities": {"Q1": {"claims": {}}}})
+
+    with _client(handler) as client:
+        drifted, failed = fpc.check_coordinates(places, client, delay=0)
+    assert drifted == []
+    assert len(failed) == 1 and failed[0][0] == "x"
+
+
+def test_check_coordinates_ignores_antimeridian_wrap():
+    # 179.999 -> -179.999 is a ~0.002 deg move across +/-180, not 359.998: no drift.
+    places = {"x": _with_coords(0.0, 179.999)}
+
+    def handler(request):
+        return httpx.Response(200, json={"entities": {"Q1": _entity(0.0, -179.999)}})
+
+    with _client(handler) as client:
+        drifted, failed = fpc.check_coordinates(places, client, delay=0)
+    assert drifted == [] and failed == []
+
+
+def test_check_coordinates_subtypes_none_processes_overlay():
+    overlay: dict = {
+        "bv": {
+            "info_link": "https://en.wikipedia.org/wiki/Bouvet_Island",
+            "coordinates": {"lat": 0.0, "lon": 0.0},
+        }
+    }
+    with _client(_coords_handler) as client:
+        drifted, failed = fpc.check_coordinates(overlay, client, subtypes=None, delay=0)
+    assert len(drifted) == 1 and failed == []
+
+
 def test_main_populates_places_file(tmp_path, monkeypatch):
     places_file = tmp_path / "places.json"
     places_file.write_text(
@@ -260,3 +328,50 @@ def test_main_populates_places_file(tmp_path, monkeypatch):
     assert rc == 0
     data = json.loads(places_file.read_text(encoding="utf-8"))
     assert data["durban"]["coordinates"] == {"lat": -29.8583, "lon": 31.025}
+
+
+def _write_place_with_coords(tmp_path, lat, lon):
+    (tmp_path / "places.json").write_text(
+        json.dumps(
+            {
+                "durban": {
+                    "subtype": "city",
+                    "info_link": "https://en.wikipedia.org/wiki/Durban",
+                    "tlds": ["durban"],
+                    "coordinates": {"lat": lat, "lon": lon},
+                }
+            },
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+
+
+def test_main_check_returns_1_on_drift(tmp_path, monkeypatch):
+    # The workflow's auto-PR trigger is `steps.check.outcome == failure`, i.e. this
+    # exit code. Stored 0,0 vs live ~-29.86,31.03 is a multi-degree move.
+    _write_place_with_coords(tmp_path, 0.0, 0.0)
+    monkeypatch.setattr(fpc, "MANUAL_DIR", str(tmp_path))
+    monkeypatch.setattr("sys.argv", ["fetch_place_coordinates.py", "--check"])
+    monkeypatch.setattr(
+        fpc, "fetch_coordinates", lambda client, title: (-29.8583, 31.025)
+    )
+
+    rc = fpc.main()
+
+    assert rc == 1
+    # --check must not write.
+    data = json.loads((tmp_path / "places.json").read_text(encoding="utf-8"))
+    assert data["durban"]["coordinates"] == {"lat": 0.0, "lon": 0.0}
+
+
+def test_main_check_returns_0_within_tolerance(tmp_path, monkeypatch):
+    _write_place_with_coords(tmp_path, -29.8583, 31.025)
+    monkeypatch.setattr(fpc, "MANUAL_DIR", str(tmp_path))
+    monkeypatch.setattr("sys.argv", ["fetch_place_coordinates.py", "--check"])
+    monkeypatch.setattr(
+        fpc, "fetch_coordinates", lambda client, title: (-29.8583, 31.025)
+    )
+
+    assert fpc.main() == 0

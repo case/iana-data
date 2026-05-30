@@ -1,0 +1,79 @@
+name: Check coordinate drift
+
+on:
+  schedule:
+    # Weekly, Mondays 04:00 UTC (clear of the daily 00:00 / 02:00 data jobs).
+    - cron: "0 4 * * 1"
+  workflow_dispatch: # Allow manual triggering
+
+concurrency:
+  group: check-coordinates
+  cancel-in-progress: false
+
+# pull-requests: write so a drift run can open the refresh PR.
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  check-coordinates:
+    runs-on: ubuntu-slim
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v8.1.0
+        with:
+          enable-cache: true
+          version-file: "pyproject.toml"
+
+      - name: Verify stored coordinates against Wikidata
+        id: check
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          bin/fetch-coordinates --check 2>&1 | tee drift-report.log
+
+      - name: Open refresh PR on drift
+        id: pr
+        if: steps.check.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          bin/fetch-coordinates --refresh
+          if git diff --quiet -- data/manual; then
+            echo "No file changes after refresh (likely a transient fetch failure); skipping PR."
+            exit 0
+          fi
+          branch=coordinate-drift
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -B "$branch"
+          git add data/manual/
+          git commit -m "Refresh drifted coordinates from Wikidata"
+          git push -f origin "$branch"
+          { echo "The weekly check found Wikidata coordinates that drifted past the ~1 km tolerance."; \
+            echo; echo '```'; grep -E '^(DRIFT|FAIL)' drift-report.log || true; echo '```'; \
+            echo; echo "Review each: merge if Wikidata's value is the better one, close if ours is correct."; \
+          } > pr-body.md
+          if gh pr view "$branch" --json state --jq .state 2>/dev/null | grep -q OPEN; then
+            echo "Drift PR already open for $branch; pushed the branch and commented the new report."
+            gh pr comment "$branch" --body-file pr-body.md
+          else
+            gh pr create --base main --head "$branch" \
+              --title "Coordinate drift detected" --body-file pr-body.md
+            echo "pr_created=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Push only on a newly opened PR; an already-open PR gets a comment (above),
+      # so an unresolved drift doesn't re-notify every week.
+      - name: Notify on new drift PR
+        if: steps.check.outcome == 'failure' && steps.pr.outputs.pr_created == 'true'
+        uses: ./.github/actions/pushover
+        with:
+          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
+          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
+          title: "Coordinate drift detected"
+          message: "⚠️ Wikidata coordinates drifted past tolerance; a refresh PR is open for review."

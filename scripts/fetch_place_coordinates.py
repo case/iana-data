@@ -27,6 +27,7 @@ WIKIDATA_API_URL = "https://www.wikidata.org/w/api.php"
 USER_AGENT = "iana-data (+https://github.com/case/iana-data)"
 REQUEST_DELAY = 0.5  # politeness between Wikidata calls
 COORD_PRECISION = 5  # ~1 m; ample for a map pin
+DRIFT_TOLERANCE_DEG = 0.01  # ~1 km; --check alerts above this, ignores sub-km jitter
 
 # Point geo-places we pin; countries (areas) live elsewhere, except no-polygon
 # territories via the country-coordinates overlay. frozenset: it's a default arg.
@@ -128,6 +129,109 @@ def enrich_places(
     return added, failed
 
 
+def check_coordinates(
+    places: dict,
+    client: httpx.Client,
+    *,
+    subtypes: frozenset[str] | None = GEO_SUBTYPES,
+    delay: float = REQUEST_DELAY,
+) -> tuple[list[tuple], list[tuple]]:
+    """Re-fetch P625 for records that have coordinates and compare to stored.
+
+    Writes nothing. Returns (drifted, failed): drifted = [(slug, stored, live, deg)]
+    for moves beyond DRIFT_TOLERANCE_DEG; failed = [(slug, reason)] for gone articles.
+    """
+    pending = [
+        (slug, rec)
+        for slug, rec in places.items()
+        if (subtypes is None or rec.get("subtype") in subtypes) and "coordinates" in rec
+    ]
+    drifted: list[tuple] = []
+    failed: list[tuple] = []
+    made_request = False
+    for slug, rec in pending:
+        title = enwiki_title_from_url(rec.get("info_link", ""))
+        if title is None:
+            failed.append((slug, "no Wikipedia title in info_link"))
+            continue
+        if made_request and delay > 0:
+            time.sleep(delay)
+        made_request = True
+        try:
+            lat, lon = fetch_coordinates(client, title)
+        except (ValueError, httpx.HTTPError, ServerError) as e:
+            failed.append((slug, str(e)))
+            continue
+        stored = rec["coordinates"]
+        live = {"lat": round(lat, COORD_PRECISION), "lon": round(lon, COORD_PRECISION)}
+        # Longitude wraps at +/-180, so take the shorter arc (a 179.9 -> -179.9 sign
+        # flip is a 0.2 deg move, not 359.8). Latitude does not wrap.
+        lon_delta = abs(live["lon"] - stored["lon"])
+        lon_delta = min(lon_delta, 360.0 - lon_delta)
+        delta = max(abs(live["lat"] - stored["lat"]), lon_delta)
+        if delta > DRIFT_TOLERANCE_DEG:
+            drifted.append((slug, stored, live, delta))
+    return drifted, failed
+
+
+def _run_fetch(
+    places: dict,
+    places_path: Path,
+    overlay: dict,
+    overlay_path: Path,
+    client: httpx.Client,
+    *,
+    refresh: bool,
+) -> int:
+    failed: list[str] = []
+    added, place_failed = enrich_places(places, client, refresh=refresh)
+    _, status = write_json_if_changed(places_path, places)
+    logger.info("places.json: added=%d write=%s", added, status)
+    failed += place_failed
+    # Point overlay for no-polygon country territories (entries carry no subtype).
+    if overlay:
+        added, overlay_failed = enrich_places(
+            overlay, client, refresh=refresh, subtypes=None
+        )
+        _, status = write_json_if_changed(overlay_path, overlay)
+        logger.info("country-coordinates.json: added=%d write=%s", added, status)
+        failed += overlay_failed
+    else:
+        logger.warning("country-coordinates: %s missing or empty", overlay_path)
+    if failed:
+        logger.warning("no coordinates for: %s", ", ".join(sorted(failed)))
+    return 0
+
+
+def _run_check(places: dict, overlay: dict, client: httpx.Client) -> int:
+    drifted, failed = check_coordinates(places, client)
+    if overlay:
+        overlay_drifted, overlay_failed = check_coordinates(
+            overlay, client, subtypes=None
+        )
+        drifted += overlay_drifted
+        failed += overlay_failed
+    for slug, stored, live, delta in sorted(drifted):
+        logger.warning(
+            "DRIFT %s: %.5f,%.5f -> %.5f,%.5f (%.3f deg)",
+            slug,
+            stored["lat"],
+            stored["lon"],
+            live["lat"],
+            live["lon"],
+            delta,
+        )
+    for slug, reason in sorted(failed):
+        logger.warning("FAIL %s: %s", slug, reason)
+    if drifted or failed:
+        logger.error(
+            "coordinate check: %d drifted, %d failed", len(drifted), len(failed)
+        )
+        return 1
+    logger.info("coordinate check: all coordinates within tolerance")
+    return 0
+
+
 def main() -> int:
     logging.basicConfig(level=logging.INFO, format="%(message)s")
     parser = argparse.ArgumentParser(description=__doc__)
@@ -136,7 +240,14 @@ def main() -> int:
         action="store_true",
         help="re-fetch coordinates even for places that already have them",
     )
+    parser.add_argument(
+        "--check",
+        action="store_true",
+        help="verify stored coordinates against live Wikidata; write nothing, exit 1 on drift",
+    )
     args = parser.parse_args()
+    if args.check and args.refresh:
+        parser.error("--check and --refresh are mutually exclusive")
 
     places_path = Path(MANUAL_DIR) / MANUAL_FILES["PLACES"]
     places = read_json_file(places_path, default={})
@@ -146,29 +257,14 @@ def main() -> int:
     overlay_path = Path(MANUAL_DIR) / MANUAL_FILES["COUNTRY_COORDINATES"]
     overlay = read_json_file(overlay_path, default={})
 
-    failed: list[str] = []
     # 30s per request: Wikidata's wbgetentities is normally sub-second, so this only
     # bounds a stalled connection on an interactive, maintenance-time run.
     with httpx.Client(timeout=30.0, follow_redirects=True) as client:
-        # Non-country geo places (cities, subdivisions, supranational regions).
-        added, place_failed = enrich_places(places, client, refresh=args.refresh)
-        _, status = write_json_if_changed(places_path, places)
-        logger.info("places.json: added=%d write=%s", added, status)
-        failed += place_failed
-        # Point overlay for no-polygon country territories (entries carry no subtype).
-        if overlay:
-            added, overlay_failed = enrich_places(
-                overlay, client, refresh=args.refresh, subtypes=None
-            )
-            _, status = write_json_if_changed(overlay_path, overlay)
-            logger.info("country-coordinates.json: added=%d write=%s", added, status)
-            failed += overlay_failed
-        else:
-            logger.warning("country-coordinates: %s missing or empty", overlay_path)
-
-    if failed:
-        logger.warning("no coordinates for: %s", ", ".join(sorted(failed)))
-    return 0
+        if args.check:
+            return _run_check(places, overlay, client)
+        return _run_fetch(
+            places, places_path, overlay, overlay_path, client, refresh=args.refresh
+        )
 
 
 if __name__ == "__main__":
