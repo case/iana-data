@@ -46,6 +46,7 @@ MANUAL_FILES: Final[dict[str, str]] = {
     "ORGANIZATIONS": "organizations.json",
     "SUPPLEMENTAL_CCTLD_RDAP": "supplemental-cctld-rdap.json",
     "PLACES": "places.json",
+    "COUNTRY_COORDINATES": "country-coordinates.json",
     "CULTURES": "cultures.json",
     "DEPENDENT_TERRITORIES": "dependent-territories.json",
 }

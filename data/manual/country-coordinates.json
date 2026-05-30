@@ -1,0 +1,86 @@
+{
+  "ac": {
+    "info_link": "https://en.wikipedia.org/wiki/Ascension_Island",
+    "coordinates": {
+      "lat": -7.95,
+      "lon": -14.35
+    }
+  },
+  "bv": {
+    "info_link": "https://en.wikipedia.org/wiki/Bouvet_Island",
+    "coordinates": {
+      "lat": -54.42,
+      "lon": 3.36
+    }
+  },
+  "cc": {
+    "info_link": "https://en.wikipedia.org/wiki/Cocos_(Keeling)_Islands",
+    "coordinates": {
+      "lat": -12.1175,
+      "lon": 96.895
+    }
+  },
+  "cx": {
+    "info_link": "https://en.wikipedia.org/wiki/Christmas_Island",
+    "coordinates": {
+      "lat": -10.49,
+      "lon": 105.6275
+    }
+  },
+  "gf": {
+    "info_link": "https://en.wikipedia.org/wiki/French_Guiana",
+    "coordinates": {
+      "lat": 4.0,
+      "lon": -53.0
+    }
+  },
+  "gi": {
+    "info_link": "https://en.wikipedia.org/wiki/Gibraltar",
+    "coordinates": {
+      "lat": 36.14,
+      "lon": -5.35
+    }
+  },
+  "gp": {
+    "info_link": "https://en.wikipedia.org/wiki/Guadeloupe",
+    "coordinates": {
+      "lat": 16.2595,
+      "lon": -61.5605
+    }
+  },
+  "mq": {
+    "info_link": "https://en.wikipedia.org/wiki/Martinique",
+    "coordinates": {
+      "lat": 14.65,
+      "lon": -61.015
+    }
+  },
+  "re": {
+    "info_link": "https://en.wikipedia.org/wiki/Réunion",
+    "coordinates": {
+      "lat": -21.11444,
+      "lon": 55.5325
+    }
+  },
+  "sj": {
+    "info_link": "https://en.wikipedia.org/wiki/Svalbard",
+    "coordinates": {
+      "lat": 78.15706,
+      "lon": 15.86426
+    }
+  },
+  "tk": {
+    "info_link": "https://en.wikipedia.org/wiki/Tokelau",
+    "coordinates": {
+      "lat": -9.16667,
+      "lon": -171.83333
+    }
+  },
+  "yt": {
+    "info_link": "https://en.wikipedia.org/wiki/Mayotte",
+    "coordinates": {
+      "lat": -12.84306,
+      "lon": 45.13833
+    }
+  }
+}

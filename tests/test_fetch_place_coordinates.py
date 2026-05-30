@@ -203,6 +203,32 @@ def test_enrich_places_skips_place_without_info_link():
     assert failed == ["x"]
 
 
+def test_enrich_places_subtypes_none_processes_subtypeless_entries():
+    # The country-coordinates overlay entries carry an info_link but no subtype.
+    overlay: dict = {
+        "bv": {"info_link": "https://en.wikipedia.org/wiki/Bouvet_Island"},
+        "tk": {"info_link": "https://en.wikipedia.org/wiki/Tokelau"},
+    }
+    with _client(_coords_handler) as client:
+        added, failed = fpc.enrich_places(
+            overlay, client, refresh=False, subtypes=None, delay=0
+        )
+    assert added == 2
+    assert failed == []
+    assert overlay["bv"]["coordinates"]["lat"] == round(1.23456789, fpc.COORD_PRECISION)
+
+
+def test_enrich_places_default_filter_skips_subtypeless_entries():
+    # Guard: under the default GEO_SUBTYPES filter, a subtypeless overlay-style
+    # entry is not processed (so the two files don't cross-contaminate).
+    overlay: dict = {"bv": {"info_link": "https://en.wikipedia.org/wiki/Bouvet_Island"}}
+    with _client(_coords_handler) as client:
+        added, failed = fpc.enrich_places(overlay, client, refresh=False, delay=0)
+    assert added == 0
+    assert failed == []
+    assert "coordinates" not in overlay["bv"]
+
+
 def test_main_populates_places_file(tmp_path, monkeypatch):
     places_file = tmp_path / "places.json"
     places_file.write_text(

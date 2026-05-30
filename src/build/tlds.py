@@ -116,6 +116,9 @@ def build_tlds_json(
     dependent_territories = read_json_file(
         Path(MANUAL_DIR) / MANUAL_FILES["DEPENDENT_TERRITORIES"], default={}
     )
+    country_coordinates = read_json_file(
+        Path(MANUAL_DIR) / MANUAL_FILES["COUNTRY_COORDINATES"], default={}
+    )
     manual_cultures = read_json_file(
         Path(MANUAL_DIR) / MANUAL_FILES["CULTURES"], default={}
     )
@@ -284,7 +287,11 @@ def build_tlds_json(
         (
             "places.json",
             lambda: build_places_json(
-                tlds, manual_places, dependent_territories, output_paths.places_json
+                tlds,
+                manual_places,
+                dependent_territories,
+                country_coordinates,
+                output_paths.places_json,
             ),
         ),
         (

@@ -9,6 +9,8 @@ Agents: consult before suggesting layout, naming, dependencies, vendors, or conv
 - [Architecture](architecture.md) - current implementation: stack, layout, conventions
 
 ## Log (newest first)
+- [2026-05-30 bin/build requires explicit mode](log/2026-05-30-build-modes.md) - bare bin/build prints help; --preserve-asn (local, keep committed ASN) vs --all (full ASN refresh, CI); stops silent ASN churn from a stale iptoasn snapshot
+- [2026-05-30 Country coordinate overlay](log/2026-05-30-country-coordinates.md) - data/manual/country-coordinates.json overlays info_link + P625 coordinates onto no-polygon derived countries (bv cc cx tk gi gf gp mq re yt sj ac); augment not move, identity stays derived
 - [2026-05-27 Brand-status pinned](log/2026-05-27-brand-status-pinned.md) - specification_13 is application-era, CSV is current; 8 known mismatches pinned by test; README "Interpreting the data" added
 - [2026-05-27 IDN language](log/2026-05-27-idn-language.md) - language_code + language_name_en for all 151 IDNs via CLDR likelySubtags + per-(script, region) and per-TLD overrides; Han-CJK Simplified/Traditional/Taiwan distinctions
 - [2026-05-25 Tier 1 artifacts live](log/2026-05-25-tier1-artifacts-live.md) - all four typed-graph artifacts built and consumed; legacy alias files deleted; new annotation primitives added; supersedes 2026-05-24 SEED ONLY note

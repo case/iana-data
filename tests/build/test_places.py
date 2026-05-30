@@ -7,7 +7,11 @@ from types import SimpleNamespace
 import pytest
 from _pytest.monkeypatch import MonkeyPatch
 
-from src.build.places import _manual_records
+from src.build.places import (
+    _manual_records,
+    _ordered_place,
+    _overlay_country_coordinates,
+)
 from src.build.tlds import OutputPaths, build_tlds_json
 
 
@@ -88,3 +92,46 @@ def test_manual_records_omits_coordinates_when_absent():
         }
     )
     assert "coordinates" not in out[0]
+
+
+def test_overlay_country_coordinates_adds_fields_without_touching_identity():
+    countries = {"cc": {"slug": "cc", "subtype": "country", "iso_numeric": "166"}}
+    overlay = {
+        "cc": {
+            "info_link": "https://en.wikipedia.org/wiki/Cocos_(Keeling)_Islands",
+            "coordinates": {"lat": -12.17, "lon": 96.83},
+        }
+    }
+    _overlay_country_coordinates(countries, overlay)
+    assert countries["cc"]["coordinates"] == {"lat": -12.17, "lon": 96.83}
+    assert countries["cc"]["info_link"].endswith("Cocos_(Keeling)_Islands")
+    assert countries["cc"]["iso_numeric"] == "166"  # identity stays derived
+
+
+def test_overlay_country_coordinates_skips_unknown_slug(caplog):
+    countries: dict[str, dict] = {}
+    with caplog.at_level("WARNING"):
+        _overlay_country_coordinates(
+            countries, {"zz": {"coordinates": {"lat": 1.0, "lon": 2.0}}}
+        )
+    assert countries == {}
+    assert "zz" in caplog.text  # the skip is logged, not silent
+
+
+def test_ordered_place_sorts_fields_alphabetically():
+    out = _ordered_place({"tlds": ["cc"], "slug": "cc", "iso_numeric": "166"})
+    assert list(out) == ["iso_numeric", "slug", "tlds"]
+
+
+def test_no_polygon_territory_keeps_iso_numeric_and_gets_overlay(places):
+    # cc (Cocos) has no 50m polygon, so it carries a point overlay. Its identity
+    # (iso_numeric) must stay pycountry-derived, and the overlay info_link applies.
+    cc = places.by_slug["cc"]
+    assert cc["iso_numeric"] == "166"
+    assert cc["info_link"].endswith("Cocos_(Keeling)_Islands")
+
+
+def test_place_records_have_alphabetical_fields(places):
+    # One consistent field order across every record type, applied at build time.
+    for rec in (places.by_slug["za"], places.by_slug["cc"], places.by_slug["durban"]):
+        assert list(rec) == sorted(rec)

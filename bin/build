@@ -2,7 +2,37 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-# Build all generated data files (regenerates the IDN script mapping first).
-# Pass --preserve-asn to keep committed ASN and skip the local iptoasn file.
+usage() {
+  cat <<'EOF'
+Usage: bin/build <mode>
+
+Regenerates the data/generated artifacts. A mode is required on purpose: a bare
+`bin/build` must never silently refresh ASN from a stale local iptoasn snapshot.
+
+Modes:
+  --preserve-asn   Build, keeping the ASN already in the committed tlds.json
+                   (skips the local iptoasn file). Use for local/dev builds so an
+                   unrelated data change does not churn ASN.
+  --all            Full build, refreshing ASN from the local iptoasn file.
+                   Used by CI and the data-update workflow.
+  -h, --help       Show this help.
+EOF
+}
+
+case "${1:-}" in
+  --preserve-asn) cli_args=(--build --preserve-asn) ;;
+  --all) cli_args=(--build) ;;
+  -h | --help | "")
+    usage
+    exit 0
+    ;;
+  *)
+    printf 'bin/build: unknown option %s\n\n' "$1" >&2
+    usage
+    exit 2
+    ;;
+esac
+
+# Regenerate the IDN script mapping, then build.
 uv run python scripts/idn_unicode_scripts/generate_idn_script_mapping.py
-uv run python -m src.cli --build "$@"
+uv run python -m src.cli "${cli_args[@]}"

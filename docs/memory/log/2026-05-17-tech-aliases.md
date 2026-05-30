@@ -12,7 +12,7 @@ A second manual-alias file, `data/manual/tech-aliases.json`, canonicalizes orgs.
 
 ## Why
 
-A downstream consumer (how-domains-work) reverse-indexes TLDs by tech operator for an Ecosystem → Technical Operators page. Without dedup, "Identity Digital Limited" (309 TLDs) and "Identity Digital Inc." (83 TLDs) fragment what should be one entity at ~455 TLDs. The manager-alias plumbing solves the same problem for managers; this is the parallel mechanism for tech operators.
+A downstream consumer reverse-indexes TLDs by tech operator for an Ecosystem → Technical Operators page. Without dedup, "Identity Digital Limited" (309 TLDs) and "Identity Digital Inc." (83 TLDs) fragment what should be one entity at ~455 TLDs. The manager-alias plumbing solves the same problem for managers; this is the parallel mechanism for tech operators.
 
 ## Shape
 

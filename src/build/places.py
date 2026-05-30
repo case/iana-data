@@ -4,6 +4,9 @@ Countries are derived mechanically from ccTLDs (pycountry + CCTLD_OVERRIDES);
 subdivisions, cities, and supranational regions come from the editorial
 data/manual/places.json (keyed by slug, carrying their own tlds[]). Dependent
 territories and the ISO special-status codes enrich the country records.
+
+data/manual/country-coordinates.json overlays a lat/lon + info_link onto derived
+countries that have no boundary polygon (e.g. Bouvet), so consumers can pin them.
 """
 
 import logging
@@ -27,6 +30,7 @@ _SOURCES = [
     "pycountry (ISO 3166-1 / 3166-2)",
     "data/manual/places.json (editorial)",
     "data/manual/dependent-territories.json (editorial; ISO 3166-1)",
+    "data/manual/country-coordinates.json (editorial; point overlay)",
 ]
 
 # Delegated ccTLDs that are not ordinary sovereign countries. ISO 3166-1
@@ -38,10 +42,17 @@ _SPECIAL: dict[str, tuple[str, str | None]] = {
 }
 
 
+def _ordered_place(record: dict) -> dict:
+    """Return ``record`` with its fields alphabetized, for one consistent order
+    across all record types (the byte-equality writer makes field order matter)."""
+    return {key: record[key] for key in sorted(record)}
+
+
 def build_places_json(
     tlds: list[dict],
     manual_places: dict[str, dict],
     dependent_territories: dict[str, list[str]],
+    country_coordinates: dict[str, dict],
     output_path: Path,
 ) -> tuple[bool, str]:
     """Combine derived country records with editorial places and write the file.
@@ -51,6 +62,8 @@ def build_places_json(
         manual_places: Editorial subdivisions/cities/supranational, keyed by slug.
         dependent_territories: Map of sovereign slug to its list of dependent
             territory slugs (e.g. ``{"gb": ["ai", "bm", ...], ...}``).
+        country_coordinates: Point overlay keyed by slug (info_link + fetched
+            coordinates) for polygon-less territories.
         output_path: Destination for the generated artifact.
 
     Returns:
@@ -58,8 +71,12 @@ def build_places_json(
     """
     claimed = {tld for rec in manual_places.values() for tld in rec["tlds"]}
     countries = _build_countries(tlds, claimed, dependent_territories)
+    _overlay_country_coordinates(countries, country_coordinates)
 
-    records = [*countries.values(), *_manual_records(manual_places)]
+    records = [
+        _ordered_place(rec)
+        for rec in (*countries.values(), *_manual_records(manual_places))
+    ]
     records.sort(key=lambda r: r["slug"])
 
     output = {
@@ -128,6 +145,21 @@ def _build_countries(
     for record in by_slug.values():
         record["tlds"].sort()
     return by_slug
+
+
+def _overlay_country_coordinates(
+    countries: dict[str, dict], overlay: dict[str, dict]
+) -> None:
+    """Add `info_link` + `coordinates` from the overlay onto matching derived
+    countries (additive; identity stays derived). Unknown slugs are logged, skipped."""
+    for slug, data in overlay.items():
+        record = countries.get(slug)
+        if record is None:
+            logger.warning("country-coordinates: no country %r to overlay", slug)
+            continue
+        for field in ("info_link", "coordinates"):
+            if field in data:
+                record[field] = data[field]
 
 
 def _manual_records(manual_places: dict[str, dict]) -> list[dict]:
