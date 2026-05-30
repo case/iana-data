@@ -13,7 +13,7 @@ exit_code=0
 uv run ruff check "${paths[@]}" || exit_code=$?
 uv run ruff format --check "${paths[@]}" || exit_code=$?
 uv run pyright "${paths[@]}" || exit_code=$?
-# JSON parse check runs over the whole repo (independent of the path args) so a
-# stray syntax error or committed merge-conflict marker fails the lint pass.
-python3 bin/lint-json.py || exit_code=$?
+# JSON checks (whole repo): every file parses; data artifacts are canonical.
+# Uses `uv run` to share the canonical-format helper from src/.
+uv run python bin/lint-json.py || exit_code=$?
 exit $exit_code

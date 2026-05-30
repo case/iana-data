@@ -401,7 +401,7 @@ def main() -> None:
 
     if not tlds_path.exists():
         print(f"Error: {tlds_path} not found")
-        print("Run 'make build' first to generate the tlds.json file.")
+        print("Run './bin/build' first to generate the tlds.json file.")
         return
 
     print(f"Loading TLD data from {tlds_path}...")

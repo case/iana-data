@@ -11,8 +11,14 @@ from typing import Any
 logger = logging.getLogger(__name__)
 
 
-def _canonical_json(data: dict[str, Any], indent: int) -> str:
+def canonical_json(data: Any, indent: int = 2) -> str:
+    """The project's one canonical JSON serialization (no trailing newline)."""
     return json.dumps(data, indent=indent, ensure_ascii=False)
+
+
+def _canonical_file(data: Any, indent: int = 2) -> str:
+    """Canonical on-disk form: the JSON body plus the trailing newline."""
+    return canonical_json(data, indent) + "\n"
 
 
 def write_json_if_changed(
@@ -74,7 +80,7 @@ def write_json_if_changed(
         new_data_compare.pop(field, None)
         existing_data_compare.pop(field, None)
 
-    if _canonical_json(new_data_compare, indent) == _canonical_json(
+    if canonical_json(new_data_compare, indent) == canonical_json(
         existing_data_compare, indent
     ):
         logger.debug(
@@ -116,8 +122,7 @@ def _atomic_write_json(filepath: Path, data: dict[str, Any], indent: int) -> Non
             delete=False,
         ) as tmp:
             tmp_path = tmp.name
-            json.dump(data, tmp, indent=indent, ensure_ascii=False)
-            tmp.write("\n")
+            tmp.write(_canonical_file(data, indent))
             # flush + fsync before close: os.replace is atomic for visibility,
             # but durability under power loss requires the bytes hit disk.
             tmp.flush()
@@ -128,3 +133,25 @@ def _atomic_write_json(filepath: Path, data: dict[str, Any], indent: int) -> Non
     finally:
         if tmp_path is not None:
             Path(tmp_path).unlink(missing_ok=True)
+
+
+def is_json_canonical(text: str, indent: int = 2) -> bool:
+    """True if ``text`` already equals the canonical rendering of its own parse.
+
+    Raises ``json.JSONDecodeError`` if ``text`` is not valid JSON.
+    """
+    return text == _canonical_file(json.loads(text), indent)
+
+
+def canonicalize_json_file(path: Path, indent: int = 2) -> bool:
+    """Rewrite ``path`` in canonical form if needed; return whether it changed.
+
+    Reformatting only, never alters parsed data. Raises ``json.JSONDecodeError``
+    on invalid JSON.
+    """
+    text = path.read_text(encoding="utf-8")
+    data = json.loads(text)
+    if text == _canonical_file(data, indent):
+        return False
+    _atomic_write_json(path, data, indent)
+    return True

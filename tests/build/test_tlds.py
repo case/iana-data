@@ -8,7 +8,12 @@ from types import SimpleNamespace
 import pytest
 from _pytest.monkeypatch import MonkeyPatch
 
-from src.build.tlds import OutputPaths, build_tlds_json
+from src.build.tlds import (
+    OutputPaths,
+    _asn_lookup_from_committed,
+    _ip_to_asn_object,
+    build_tlds_json,
+)
 from src.parse.rdap_json import parse_rdap_json
 from src.parse.root_db_html import parse_root_db_html
 
@@ -668,3 +673,102 @@ def test_idempotent_second_run(temp_output):
     assert index_mtime_before == index_mtime_after, (
         "Index was rewritten on a no-op second run"
     )
+
+
+def test_asn_lookup_from_committed_preserves_values(tmp_path):
+    committed = tmp_path / "tlds.json"
+    committed.write_text(
+        json.dumps(
+            {
+                "tlds": [
+                    {
+                        "tld": "example",
+                        "nameservers": [
+                            {
+                                "hostname": "a.ns",
+                                "ipv4": [
+                                    {
+                                        "ip": "37.209.192.9",
+                                        "asn": 12008,
+                                        "as_org": "SECURITYSERVICES",
+                                        "as_country": "US",
+                                    }
+                                ],
+                                "ipv6": [
+                                    {
+                                        "ip": "2001:dcd:1::9",
+                                        "asn": 12008,
+                                        "as_org": "SECURITYSERVICES",
+                                        "as_country": "US",
+                                    }
+                                ],
+                            }
+                        ],
+                    }
+                ]
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    lookup = _asn_lookup_from_committed(committed)
+
+    rec = lookup.lookup("37.209.192.9")
+    assert rec is not None
+    assert (rec.asn, rec.org, rec.country) == (12008, "SECURITYSERVICES", "US")
+    rec6 = lookup.lookup("2001:dcd:1::9")  # ipv6 too
+    assert rec6 is not None and rec6.asn == 12008
+    assert lookup.lookup("8.8.8.8") is None  # IP not in committed output
+
+
+def test_asn_lookup_from_committed_missing_file_is_empty(tmp_path):
+    lookup = _asn_lookup_from_committed(tmp_path / "does-not-exist.json")
+    assert lookup.lookup("37.209.192.9") is None
+
+
+def test_preserve_asn_round_trips_committed_values_through_ip_transform(tmp_path):
+    # The full preserve path the build uses: a committed tlds.json -> ASN lookup ->
+    # _ip_to_asn_object (called per nameserver IP in the real build). Sentinel ASN
+    # 64500 (private-use) proves the value came from committed output, not iptoasn.
+    committed = tmp_path / "tlds.json"
+    committed.write_text(
+        json.dumps(
+            {
+                "tlds": [
+                    {
+                        "tld": "example",
+                        "nameservers": [
+                            {
+                                "hostname": "a.ns",
+                                "ipv4": [
+                                    {
+                                        "ip": "203.0.113.5",
+                                        "asn": 64500,
+                                        "as_org": "EXAMPLE-AS",
+                                        "as_country": "ZZ",
+                                    }
+                                ],
+                            }
+                        ],
+                    }
+                ]
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    lookup = _asn_lookup_from_committed(committed)
+
+    assert _ip_to_asn_object("203.0.113.5", lookup) == {
+        "ip": "203.0.113.5",
+        "asn": 64500,
+        "as_org": "EXAMPLE-AS",
+        "as_country": "ZZ",
+    }
+    # An IP absent from committed output gets the placeholder (preserve != fabricate).
+    assert _ip_to_asn_object("198.51.100.1", lookup) == {
+        "ip": "198.51.100.1",
+        "asn": 0,
+        "as_org": "Unknown",
+        "as_country": "None",
+    }

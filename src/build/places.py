@@ -97,6 +97,7 @@ def _build_countries(
                 "name_en": get_country_name(slug),
                 "subtype": "country",
                 "iso_code": iso.alpha_2 if iso else None,
+                "iso_numeric": iso.numeric if iso else None,
                 "parent": None,
                 "tlds": [],
             }
@@ -130,9 +131,13 @@ def _build_countries(
 
 
 def _manual_records(manual_places: dict[str, dict]) -> list[dict]:
-    """Normalize the editorial places into output records (sorted tlds)."""
-    return [
-        {
+    """Normalize the editorial places into output records (sorted tlds).
+
+    Carries `coordinates` through only when the entry provides it.
+    """
+    records = []
+    for slug, rec in manual_places.items():
+        record = {
             "slug": slug,
             "name_en": rec["name_en"],
             "subtype": rec["subtype"],
@@ -141,5 +146,7 @@ def _manual_records(manual_places: dict[str, dict]) -> list[dict]:
             "info_link": rec["info_link"],
             "tlds": sorted(rec["tlds"]),
         }
-        for slug, rec in manual_places.items()
-    ]
+        if "coordinates" in rec:
+            record["coordinates"] = rec["coordinates"]
+        records.append(record)
+    return records

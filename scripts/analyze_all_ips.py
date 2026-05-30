@@ -17,7 +17,7 @@ def main() -> None:
     tlds_path = Path("data/generated/tlds.json")
 
     if not tlds_path.exists():
-        print(f"Error: {tlds_path} not found. Run 'make build' first.")
+        print(f"Error: {tlds_path} not found. Run './bin/build' first.")
         return
 
     data = json.loads(tlds_path.read_text())
