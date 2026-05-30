@@ -41,7 +41,7 @@ def test_cli_module_can_run():
     This is how GitHub Actions runs the CLI:
     - make download-core → uv run python -m src.cli --download
     - make download-tld-pages → uv run python -m src.cli --download-tld-pages
-    - ./bin/build → generate-idn-mapping + uv run python -m src.cli --build
+    - ./bin/build --all → generate-idn-mapping + uv run python -m src.cli --build
     """
     result = subprocess.run(
         [sys.executable, "-m", "src.cli", "--help"],

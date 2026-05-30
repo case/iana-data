@@ -20,7 +20,8 @@ help:
 	@echo "  bin/setup                      Install dependencies (uv sync, pnpm install)"
 	@echo "  bin/lint                       Run ruff check, ruff format check, pyright"
 	@echo "  bin/test                       Run lint then pytest"
-	@echo "  bin/build                      Build output files (--preserve-asn skips the iptoasn refresh)"
+	@echo "  bin/build --preserve-asn       Build, keeping committed ASN (local/dev; no iptoasn refresh)"
+	@echo "  bin/build --all                Full build, refreshing ASN from iptoasn (CI)"
 	@echo "  bin/fetch-coordinates          Fetch geo-place lat/lon from Wikidata (--refresh to redo)"
 
 .PHONY: download-core

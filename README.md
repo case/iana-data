@@ -297,7 +297,7 @@ Alongside `tlds.json`, the build ships four derived reverse-index artifacts that
 - **Cultures**: ethno-linguistic communities like the Basques or Welsh (`cultures.json`).
 - **Agreement types**: the ICANN registry-agreement enum (`agreements.json`).
 
-Each TLD relates to one or more Organizations through *roles* (Sponsor, Administrative Contact, Technical Contact, and ICANN Registry Operator for gTLDs), to zero or more Places (most ccTLDs map to one country; geographic gTLDs map to a city, subdivision, country, or supranational region), to an optional Culture, and to its agreement types. Each derived artifact is a deterministic reverse index of `tlds.json`: delete it and `./bin/build` rebuilds it. Every cross-file relationship is enforced by referential-integrity tests, so a foreign key can never dangle and no record is ever orphaned.
+Each TLD relates to one or more Organizations through *roles* (Sponsor, Administrative Contact, Technical Contact, and ICANN Registry Operator for gTLDs), to zero or more Places (most ccTLDs map to one country; geographic gTLDs map to a city, subdivision, country, or supranational region), to an optional Culture, and to its agreement types. Each derived artifact is a deterministic reverse index of `tlds.json`: delete it and `./bin/build --preserve-asn` rebuilds it. Every cross-file relationship is enforced by referential-integrity tests, so a foreign key can never dangle and no record is ever orphaned.
 
 ## `organizations.json`
 
