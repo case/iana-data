@@ -204,7 +204,7 @@ jobs:
       - name: Build tlds.json
         if: steps.source-check.outputs.source_changed == 'true'
         id: build
-        run: make build
+        run: ./bin/build
 
       - name: Notification if build fails
         if: failure() && steps.build.outcome == 'failure'

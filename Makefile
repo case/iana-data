@@ -5,7 +5,6 @@ help:
 	@echo "  make analyze-idn-scripts       Analyze IDN scripts"
 	@echo "  make analyze-registry-agreements  Analyze registry agreements"
 	@echo "  make analyze-tlds-json         Analyze TLDs JSON"
-	@echo "  make build                     Build output files (runs generate-idn-mapping first)"
 	@echo "  make check-circular-imports    Check for circular imports with pydeps"
 	@echo "  make checkly-deploy            Deploy Checkly checks (production)"
 	@echo "  make checkly-info              Show Checkly info"
@@ -21,6 +20,8 @@ help:
 	@echo "  bin/setup                      Install dependencies (uv sync, pnpm install)"
 	@echo "  bin/lint                       Run ruff check, ruff format check, pyright"
 	@echo "  bin/test                       Run lint then pytest"
+	@echo "  bin/build                      Build output files (--preserve-asn skips the iptoasn refresh)"
+	@echo "  bin/fetch-coordinates          Fetch geo-place lat/lon from Wikidata (--refresh to redo)"
 
 .PHONY: download-core
 download-core:
@@ -37,10 +38,6 @@ download-iptoasn:
 .PHONY: analyze
 analyze:
 	uv run python -m src.cli --analyze
-
-.PHONY: build
-build: generate-idn-mapping
-	uv run python -m src.cli --build
 
 .PHONY: generate-idn-mapping
 generate-idn-mapping:

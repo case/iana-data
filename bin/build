@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+# Build all generated data files (regenerates the IDN script mapping first).
+# Pass --preserve-asn to keep committed ASN and skip the local iptoasn file.
+uv run python scripts/idn_unicode_scripts/generate_idn_script_mapping.py
+uv run python -m src.cli --build "$@"
