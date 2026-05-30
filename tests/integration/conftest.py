@@ -3,7 +3,7 @@
 build_tlds_json writes the full TLD set plus every reverse-index artifact. The
 session-scoped fixture runs it once into a temp dir so the places/cultures/
 agreements integrity modules all read the same fresh build instead of the
-committed data/generated files (which only exist after a `make build`).
+committed data/generated files (which only exist after a `./bin/build`).
 """
 
 import json

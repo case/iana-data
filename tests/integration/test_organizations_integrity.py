@@ -31,7 +31,7 @@ def built(tmp_path_factory):
     """One fresh build, yielding the parsed tlds.json and organizations.json.
 
     The committed data/generated/organizations.json does not exist until a
-    `make build`, so these tests build into a temp dir rather than reading the
+    `./bin/build`, so these tests build into a temp dir rather than reading the
     repo's generated files.
     """
     tmp = tmp_path_factory.mktemp("orgs_integrity")

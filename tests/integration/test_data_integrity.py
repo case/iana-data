@@ -128,7 +128,7 @@ def test_delegated_tlds_count_matches_source():
     tlds_json_path = Path(TLDS_OUTPUT_FILE)
     assert tlds_json_path.exists(), (
         f"Built tlds.json file not found at {tlds_json_path}. "
-        f"Run 'make build' first to generate this file."
+        f"Run './bin/build' first to generate this file."
     )
 
     with open(tlds_json_path) as f:
@@ -164,7 +164,7 @@ def test_undelegated_tlds_count_matches_not_assigned():
     tlds_json_path = Path(TLDS_OUTPUT_FILE)
     assert tlds_json_path.exists(), (
         f"Built tlds.json file not found at {tlds_json_path}. "
-        f"Run 'make build' first to generate this file."
+        f"Run './bin/build' first to generate this file."
     )
 
     with open(tlds_json_path) as f:
@@ -193,7 +193,7 @@ def test_total_tlds_math_is_correct():
     tlds_json_path = Path(TLDS_OUTPUT_FILE)
     assert tlds_json_path.exists(), (
         f"Built tlds.json file not found at {tlds_json_path}. "
-        f"Run 'make build' first to generate this file."
+        f"Run './bin/build' first to generate this file."
     )
 
     with open(tlds_json_path) as f:
@@ -429,7 +429,7 @@ def test_production_nameserver_structure_if_built():
     """
     tlds_json_path = Path(TLDS_OUTPUT_FILE)
     if not tlds_json_path.exists():
-        pytest.skip("Built tlds.json not found. Run 'make build' first.")
+        pytest.skip("Built tlds.json not found. Run './bin/build' first.")
 
     with open(tlds_json_path) as f:
         tlds_data = json.load(f)

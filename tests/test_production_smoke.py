@@ -41,7 +41,7 @@ def test_cli_module_can_run():
     This is how GitHub Actions runs the CLI:
     - make download-core → uv run python -m src.cli --download
     - make download-tld-pages → uv run python -m src.cli --download-tld-pages
-    - make build → uv run python -m src.cli --build
+    - ./bin/build → generate-idn-mapping + uv run python -m src.cli --build
     """
     result = subprocess.run(
         [sys.executable, "-m", "src.cli", "--help"],
@@ -119,9 +119,8 @@ def test_makefile_targets_exist():
     - make download-core
     - make download-tld-pages GROUPS="..."
     - make generate-idn-mapping
-    - make build
 
-    Lint/test are run via bin/lint and bin/test, not via make.
+    Build/lint/test are run via bin/build, bin/lint, bin/test, not via make.
     """
     makefile_lines = Path("Makefile").read_text().splitlines()
 
@@ -129,7 +128,6 @@ def test_makefile_targets_exist():
         "download-core",
         "download-tld-pages",
         "generate-idn-mapping",
-        "build",
     ]
 
     for target in required_targets:
@@ -148,15 +146,15 @@ def test_makefile_targets_exist():
 
 @pytest.mark.skipif(not Path("bin").is_dir(), reason="bin/ directory not found")
 def test_bin_scripts_are_executable():
-    """Verify bin/setup, bin/lint, bin/test exist and are executable.
+    """Verify bin/setup, bin/lint, bin/test, bin/build exist and are executable.
 
     GitHub Actions invokes these directly (replacing the old make
-    deps/lint/test targets); a non-executable file would fail CI at the
-    `bin/setup` step with a confusing "Permission denied".
+    deps/lint/test/build targets); a non-executable file would fail CI with a
+    confusing "Permission denied".
     """
     import os
 
-    for name in ("setup", "lint", "test"):
+    for name in ("setup", "lint", "test", "build"):
         path = Path("bin") / name
         assert path.is_file(), f"bin/{name} is missing"
         assert os.access(path, os.X_OK), f"bin/{name} is not executable"
