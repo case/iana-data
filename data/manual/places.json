@@ -5,7 +5,14 @@
     "iso_code": null,
     "parent": "ae",
     "info_link": "https://en.wikipedia.org/wiki/Abu_Dhabi",
-    "tlds": ["abudhabi", "xn--mgbca7dzdo"]
+    "tlds": [
+      "abudhabi",
+      "xn--mgbca7dzdo"
+    ],
+    "coordinates": {
+      "lat": 24.45111,
+      "lon": 54.39694
+    }
   },
   "africa": {
     "subtype": "supranational",
@@ -13,7 +20,13 @@
     "iso_code": null,
     "parent": null,
     "info_link": "https://en.wikipedia.org/wiki/Africa",
-    "tlds": ["africa"]
+    "tlds": [
+      "africa"
+    ],
+    "coordinates": {
+      "lat": 21.09375,
+      "lon": 7.1881
+    }
   },
   "alsace": {
     "subtype": "subdivision",
@@ -21,7 +34,13 @@
     "iso_code": null,
     "parent": "fr",
     "info_link": "https://en.wikipedia.org/wiki/Alsace",
-    "tlds": ["alsace"]
+    "tlds": [
+      "alsace"
+    ],
+    "coordinates": {
+      "lat": 48.5,
+      "lon": 7.5
+    }
   },
   "amsterdam": {
     "subtype": "city",
@@ -29,7 +48,13 @@
     "iso_code": null,
     "parent": "nl",
     "info_link": "https://en.wikipedia.org/wiki/Amsterdam",
-    "tlds": ["amsterdam"]
+    "tlds": [
+      "amsterdam"
+    ],
+    "coordinates": {
+      "lat": 52.36667,
+      "lon": 4.88333
+    }
   },
   "asia": {
     "subtype": "supranational",
@@ -37,7 +62,13 @@
     "iso_code": null,
     "parent": null,
     "info_link": "https://en.wikipedia.org/wiki/Asia",
-    "tlds": ["asia"]
+    "tlds": [
+      "asia"
+    ],
+    "coordinates": {
+      "lat": 43.68111,
+      "lon": 87.33111
+    }
   },
   "barcelona": {
     "subtype": "city",
@@ -45,7 +76,14 @@
     "iso_code": null,
     "parent": "es",
     "info_link": "https://en.wikipedia.org/wiki/Barcelona",
-    "tlds": ["barcelona", "bcn"]
+    "tlds": [
+      "barcelona",
+      "bcn"
+    ],
+    "coordinates": {
+      "lat": 41.3825,
+      "lon": 2.17694
+    }
   },
   "basque-country": {
     "subtype": "subdivision",
@@ -53,7 +91,13 @@
     "iso_code": "ES-PV",
     "parent": "es",
     "info_link": "https://en.wikipedia.org/wiki/Basque_Country_(autonomous_community)",
-    "tlds": ["eus"]
+    "tlds": [
+      "eus"
+    ],
+    "coordinates": {
+      "lat": 42.98333,
+      "lon": -2.61667
+    }
   },
   "bayern": {
     "subtype": "subdivision",
@@ -61,7 +105,13 @@
     "iso_code": "DE-BY",
     "parent": "de",
     "info_link": "https://en.wikipedia.org/wiki/Bavaria",
-    "tlds": ["bayern"]
+    "tlds": [
+      "bayern"
+    ],
+    "coordinates": {
+      "lat": 49.07861,
+      "lon": 11.38556
+    }
   },
   "berlin": {
     "subtype": "city",
@@ -69,7 +119,13 @@
     "iso_code": null,
     "parent": "de",
     "info_link": "https://en.wikipedia.org/wiki/Berlin",
-    "tlds": ["berlin"]
+    "tlds": [
+      "berlin"
+    ],
+    "coordinates": {
+      "lat": 52.51667,
+      "lon": 13.38333
+    }
   },
   "boston": {
     "subtype": "city",
@@ -77,7 +133,13 @@
     "iso_code": null,
     "parent": "us",
     "info_link": "https://en.wikipedia.org/wiki/Boston",
-    "tlds": ["boston"]
+    "tlds": [
+      "boston"
+    ],
+    "coordinates": {
+      "lat": 42.36028,
+      "lon": -71.05778
+    }
   },
   "brittany": {
     "subtype": "subdivision",
@@ -85,7 +147,13 @@
     "iso_code": "FR-BRE",
     "parent": "fr",
     "info_link": "https://en.wikipedia.org/wiki/Brittany",
-    "tlds": ["bzh"]
+    "tlds": [
+      "bzh"
+    ],
+    "coordinates": {
+      "lat": 48.0,
+      "lon": -3.0
+    }
   },
   "brussels": {
     "subtype": "city",
@@ -93,7 +161,13 @@
     "iso_code": null,
     "parent": "be",
     "info_link": "https://en.wikipedia.org/wiki/Brussels",
-    "tlds": ["brussels"]
+    "tlds": [
+      "brussels"
+    ],
+    "coordinates": {
+      "lat": 50.84667,
+      "lon": 4.3525
+    }
   },
   "capetown": {
     "subtype": "city",
@@ -101,7 +175,13 @@
     "iso_code": null,
     "parent": "za",
     "info_link": "https://en.wikipedia.org/wiki/Cape_Town",
-    "tlds": ["capetown"]
+    "tlds": [
+      "capetown"
+    ],
+    "coordinates": {
+      "lat": -33.92528,
+      "lon": 18.42389
+    }
   },
   "catalonia": {
     "subtype": "subdivision",
@@ -109,7 +189,13 @@
     "iso_code": "ES-CT",
     "parent": "es",
     "info_link": "https://en.wikipedia.org/wiki/Catalonia",
-    "tlds": ["cat"]
+    "tlds": [
+      "cat"
+    ],
+    "coordinates": {
+      "lat": 41.85,
+      "lon": 1.56667
+    }
   },
   "cologne": {
     "subtype": "city",
@@ -117,7 +203,14 @@
     "iso_code": null,
     "parent": "de",
     "info_link": "https://en.wikipedia.org/wiki/Cologne",
-    "tlds": ["cologne", "koeln"]
+    "tlds": [
+      "cologne",
+      "koeln"
+    ],
+    "coordinates": {
+      "lat": 50.94222,
+      "lon": 6.95778
+    }
   },
   "corsica": {
     "subtype": "subdivision",
@@ -125,7 +218,13 @@
     "iso_code": "FR-20R",
     "parent": "fr",
     "info_link": "https://en.wikipedia.org/wiki/Corsica",
-    "tlds": ["corsica"]
+    "tlds": [
+      "corsica"
+    ],
+    "coordinates": {
+      "lat": 42.15,
+      "lon": 9.08333
+    }
   },
   "dubai": {
     "subtype": "city",
@@ -133,7 +232,13 @@
     "iso_code": null,
     "parent": "ae",
     "info_link": "https://en.wikipedia.org/wiki/Dubai",
-    "tlds": ["dubai"]
+    "tlds": [
+      "dubai"
+    ],
+    "coordinates": {
+      "lat": 25.26972,
+      "lon": 55.30944
+    }
   },
   "durban": {
     "subtype": "city",
@@ -141,7 +246,13 @@
     "iso_code": null,
     "parent": "za",
     "info_link": "https://en.wikipedia.org/wiki/Durban",
-    "tlds": ["durban"]
+    "tlds": [
+      "durban"
+    ],
+    "coordinates": {
+      "lat": -29.85833,
+      "lon": 31.025
+    }
   },
   "eu": {
     "subtype": "supranational",
@@ -149,7 +260,15 @@
     "iso_code": "EU",
     "parent": null,
     "info_link": "https://en.wikipedia.org/wiki/European_Union",
-    "tlds": ["eu", "xn--e1a4c", "xn--qxa6a"]
+    "tlds": [
+      "eu",
+      "xn--e1a4c",
+      "xn--qxa6a"
+    ],
+    "coordinates": {
+      "lat": 50.11694,
+      "lon": 9.24778
+    }
   },
   "flanders": {
     "subtype": "subdivision",
@@ -157,7 +276,13 @@
     "iso_code": "BE-VLG",
     "parent": "be",
     "info_link": "https://en.wikipedia.org/wiki/Flanders",
-    "tlds": ["vlaanderen"]
+    "tlds": [
+      "vlaanderen"
+    ],
+    "coordinates": {
+      "lat": 51.0,
+      "lon": 4.5
+    }
   },
   "friesland": {
     "subtype": "subdivision",
@@ -165,7 +290,13 @@
     "iso_code": "NL-FR",
     "parent": "nl",
     "info_link": "https://en.wikipedia.org/wiki/Friesland",
-    "tlds": ["frl"]
+    "tlds": [
+      "frl"
+    ],
+    "coordinates": {
+      "lat": 53.20139,
+      "lon": 5.8
+    }
   },
   "galicia": {
     "subtype": "subdivision",
@@ -173,7 +304,13 @@
     "iso_code": "ES-GA",
     "parent": "es",
     "info_link": "https://en.wikipedia.org/wiki/Galicia_(Spain)",
-    "tlds": ["gal"]
+    "tlds": [
+      "gal"
+    ],
+    "coordinates": {
+      "lat": 42.8,
+      "lon": -7.9
+    }
   },
   "gent": {
     "subtype": "city",
@@ -181,7 +318,13 @@
     "iso_code": null,
     "parent": "be",
     "info_link": "https://en.wikipedia.org/wiki/Ghent",
-    "tlds": ["gent"]
+    "tlds": [
+      "gent"
+    ],
+    "coordinates": {
+      "lat": 51.05361,
+      "lon": 3.72528
+    }
   },
   "hamburg": {
     "subtype": "city",
@@ -189,7 +332,13 @@
     "iso_code": null,
     "parent": "de",
     "info_link": "https://en.wikipedia.org/wiki/Hamburg",
-    "tlds": ["hamburg"]
+    "tlds": [
+      "hamburg"
+    ],
+    "coordinates": {
+      "lat": 53.55,
+      "lon": 10.0
+    }
   },
   "helsinki": {
     "subtype": "city",
@@ -197,7 +346,13 @@
     "iso_code": null,
     "parent": "fi",
     "info_link": "https://en.wikipedia.org/wiki/Helsinki",
-    "tlds": ["helsinki"]
+    "tlds": [
+      "helsinki"
+    ],
+    "coordinates": {
+      "lat": 60.17083,
+      "lon": 24.9375
+    }
   },
   "istanbul": {
     "subtype": "city",
@@ -205,7 +360,14 @@
     "iso_code": null,
     "parent": "tr",
     "info_link": "https://en.wikipedia.org/wiki/Istanbul",
-    "tlds": ["ist", "istanbul"]
+    "tlds": [
+      "ist",
+      "istanbul"
+    ],
+    "coordinates": {
+      "lat": 41.01,
+      "lon": 28.96028
+    }
   },
   "joburg": {
     "subtype": "city",
@@ -213,7 +375,13 @@
     "iso_code": null,
     "parent": "za",
     "info_link": "https://en.wikipedia.org/wiki/Johannesburg",
-    "tlds": ["joburg"]
+    "tlds": [
+      "joburg"
+    ],
+    "coordinates": {
+      "lat": -26.20436,
+      "lon": 28.04164
+    }
   },
   "kyoto": {
     "subtype": "city",
@@ -221,7 +389,13 @@
     "iso_code": null,
     "parent": "jp",
     "info_link": "https://en.wikipedia.org/wiki/Kyoto",
-    "tlds": ["kyoto"]
+    "tlds": [
+      "kyoto"
+    ],
+    "coordinates": {
+      "lat": 35.01161,
+      "lon": 135.76811
+    }
   },
   "latin-america": {
     "subtype": "supranational",
@@ -229,7 +403,13 @@
     "iso_code": null,
     "parent": null,
     "info_link": "https://en.wikipedia.org/wiki/Latin_America",
-    "tlds": ["lat"]
+    "tlds": [
+      "lat"
+    ],
+    "coordinates": {
+      "lat": -1.10689,
+      "lon": -68.09739
+    }
   },
   "london": {
     "subtype": "city",
@@ -237,7 +417,13 @@
     "iso_code": null,
     "parent": "gb",
     "info_link": "https://en.wikipedia.org/wiki/London",
-    "tlds": ["london"]
+    "tlds": [
+      "london"
+    ],
+    "coordinates": {
+      "lat": 51.50722,
+      "lon": -0.1275
+    }
   },
   "madrid": {
     "subtype": "city",
@@ -245,7 +431,13 @@
     "iso_code": null,
     "parent": "es",
     "info_link": "https://en.wikipedia.org/wiki/Madrid",
-    "tlds": ["madrid"]
+    "tlds": [
+      "madrid"
+    ],
+    "coordinates": {
+      "lat": 40.41694,
+      "lon": -3.70333
+    }
   },
   "melbourne": {
     "subtype": "city",
@@ -253,7 +445,13 @@
     "iso_code": null,
     "parent": "au",
     "info_link": "https://en.wikipedia.org/wiki/Melbourne",
-    "tlds": ["melbourne"]
+    "tlds": [
+      "melbourne"
+    ],
+    "coordinates": {
+      "lat": -37.81417,
+      "lon": 144.96306
+    }
   },
   "miami": {
     "subtype": "city",
@@ -261,7 +459,13 @@
     "iso_code": null,
     "parent": "us",
     "info_link": "https://en.wikipedia.org/wiki/Miami",
-    "tlds": ["miami"]
+    "tlds": [
+      "miami"
+    ],
+    "coordinates": {
+      "lat": 25.78333,
+      "lon": -80.21667
+    }
   },
   "moscow": {
     "subtype": "city",
@@ -269,7 +473,14 @@
     "iso_code": null,
     "parent": "ru",
     "info_link": "https://en.wikipedia.org/wiki/Moscow",
-    "tlds": ["moscow", "xn--80adxhks"]
+    "tlds": [
+      "moscow",
+      "xn--80adxhks"
+    ],
+    "coordinates": {
+      "lat": 55.75056,
+      "lon": 37.6175
+    }
   },
   "nagoya": {
     "subtype": "city",
@@ -277,7 +488,13 @@
     "iso_code": null,
     "parent": "jp",
     "info_link": "https://en.wikipedia.org/wiki/Nagoya",
-    "tlds": ["nagoya"]
+    "tlds": [
+      "nagoya"
+    ],
+    "coordinates": {
+      "lat": 35.18139,
+      "lon": 136.90639
+    }
   },
   "north-rhine-westphalia": {
     "subtype": "subdivision",
@@ -285,7 +502,13 @@
     "iso_code": "DE-NW",
     "parent": "de",
     "info_link": "https://en.wikipedia.org/wiki/North_Rhine-Westphalia",
-    "tlds": ["nrw"]
+    "tlds": [
+      "nrw"
+    ],
+    "coordinates": {
+      "lat": 51.46667,
+      "lon": 7.55
+    }
   },
   "nyc": {
     "subtype": "city",
@@ -293,7 +516,13 @@
     "iso_code": null,
     "parent": "us",
     "info_link": "https://en.wikipedia.org/wiki/New_York_City",
-    "tlds": ["nyc"]
+    "tlds": [
+      "nyc"
+    ],
+    "coordinates": {
+      "lat": 40.71278,
+      "lon": -74.00611
+    }
   },
   "okinawa": {
     "subtype": "subdivision",
@@ -301,7 +530,13 @@
     "iso_code": "JP-47",
     "parent": "jp",
     "info_link": "https://en.wikipedia.org/wiki/Okinawa_Prefecture",
-    "tlds": ["okinawa"]
+    "tlds": [
+      "okinawa"
+    ],
+    "coordinates": {
+      "lat": 26.21222,
+      "lon": 127.68083
+    }
   },
   "osaka": {
     "subtype": "city",
@@ -309,7 +544,13 @@
     "iso_code": null,
     "parent": "jp",
     "info_link": "https://en.wikipedia.org/wiki/Osaka",
-    "tlds": ["osaka"]
+    "tlds": [
+      "osaka"
+    ],
+    "coordinates": {
+      "lat": 34.69375,
+      "lon": 135.50211
+    }
   },
   "paris": {
     "subtype": "city",
@@ -317,7 +558,13 @@
     "iso_code": null,
     "parent": "fr",
     "info_link": "https://en.wikipedia.org/wiki/Paris",
-    "tlds": ["paris"]
+    "tlds": [
+      "paris"
+    ],
+    "coordinates": {
+      "lat": 48.85667,
+      "lon": 2.35222
+    }
   },
   "quebec": {
     "subtype": "subdivision",
@@ -325,7 +572,13 @@
     "iso_code": "CA-QC",
     "parent": "ca",
     "info_link": "https://en.wikipedia.org/wiki/Quebec",
-    "tlds": ["quebec"]
+    "tlds": [
+      "quebec"
+    ],
+    "coordinates": {
+      "lat": 52.0,
+      "lon": -72.0
+    }
   },
   "rio": {
     "subtype": "city",
@@ -333,7 +586,13 @@
     "iso_code": null,
     "parent": "br",
     "info_link": "https://en.wikipedia.org/wiki/Rio_de_Janeiro",
-    "tlds": ["rio"]
+    "tlds": [
+      "rio"
+    ],
+    "coordinates": {
+      "lat": -22.91111,
+      "lon": -43.20556
+    }
   },
   "ruhr": {
     "subtype": "subdivision",
@@ -341,7 +600,13 @@
     "iso_code": null,
     "parent": "de",
     "info_link": "https://en.wikipedia.org/wiki/Ruhr",
-    "tlds": ["ruhr"]
+    "tlds": [
+      "ruhr"
+    ],
+    "coordinates": {
+      "lat": 51.5,
+      "lon": 7.5
+    }
   },
   "ryukyu": {
     "subtype": "subdivision",
@@ -349,7 +614,13 @@
     "iso_code": null,
     "parent": "jp",
     "info_link": "https://en.wikipedia.org/wiki/Ryukyu_Islands",
-    "tlds": ["ryukyu"]
+    "tlds": [
+      "ryukyu"
+    ],
+    "coordinates": {
+      "lat": 26.33281,
+      "lon": 127.74902
+    }
   },
   "saarland": {
     "subtype": "subdivision",
@@ -357,7 +628,13 @@
     "iso_code": "DE-SL",
     "parent": "de",
     "info_link": "https://en.wikipedia.org/wiki/Saarland",
-    "tlds": ["saarland"]
+    "tlds": [
+      "saarland"
+    ],
+    "coordinates": {
+      "lat": 49.37715,
+      "lon": 6.87838
+    }
   },
   "scotland": {
     "subtype": "subdivision",
@@ -365,7 +642,13 @@
     "iso_code": "GB-SCT",
     "parent": "gb",
     "info_link": "https://en.wikipedia.org/wiki/Scotland",
-    "tlds": ["scot"]
+    "tlds": [
+      "scot"
+    ],
+    "coordinates": {
+      "lat": 57.0,
+      "lon": -5.0
+    }
   },
   "stockholm": {
     "subtype": "city",
@@ -373,7 +656,13 @@
     "iso_code": null,
     "parent": "se",
     "info_link": "https://en.wikipedia.org/wiki/Stockholm",
-    "tlds": ["stockholm"]
+    "tlds": [
+      "stockholm"
+    ],
+    "coordinates": {
+      "lat": 59.32944,
+      "lon": 18.06861
+    }
   },
   "sydney": {
     "subtype": "city",
@@ -381,7 +670,13 @@
     "iso_code": null,
     "parent": "au",
     "info_link": "https://en.wikipedia.org/wiki/Sydney",
-    "tlds": ["sydney"]
+    "tlds": [
+      "sydney"
+    ],
+    "coordinates": {
+      "lat": -33.86778,
+      "lon": 151.21
+    }
   },
   "taipei": {
     "subtype": "city",
@@ -389,7 +684,13 @@
     "iso_code": null,
     "parent": "tw",
     "info_link": "https://en.wikipedia.org/wiki/Taipei",
-    "tlds": ["taipei"]
+    "tlds": [
+      "taipei"
+    ],
+    "coordinates": {
+      "lat": 25.0375,
+      "lon": 121.5625
+    }
   },
   "tatarstan": {
     "subtype": "subdivision",
@@ -397,7 +698,13 @@
     "iso_code": "RU-TA",
     "parent": "ru",
     "info_link": "https://en.wikipedia.org/wiki/Tatarstan",
-    "tlds": ["tatar"]
+    "tlds": [
+      "tatar"
+    ],
+    "coordinates": {
+      "lat": 55.55,
+      "lon": 50.93333
+    }
   },
   "tokyo": {
     "subtype": "city",
@@ -405,7 +712,13 @@
     "iso_code": null,
     "parent": "jp",
     "info_link": "https://en.wikipedia.org/wiki/Tokyo",
-    "tlds": ["tokyo"]
+    "tlds": [
+      "tokyo"
+    ],
+    "coordinates": {
+      "lat": 35.68944,
+      "lon": 139.69167
+    }
   },
   "tyrol": {
     "subtype": "subdivision",
@@ -413,7 +726,13 @@
     "iso_code": "AT-7",
     "parent": "at",
     "info_link": "https://en.wikipedia.org/wiki/Tyrol_(state)",
-    "tlds": ["tirol"]
+    "tlds": [
+      "tirol"
+    ],
+    "coordinates": {
+      "lat": 47.26667,
+      "lon": 11.4
+    }
   },
   "vegas": {
     "subtype": "city",
@@ -421,7 +740,13 @@
     "iso_code": null,
     "parent": "us",
     "info_link": "https://en.wikipedia.org/wiki/Las_Vegas",
-    "tlds": ["vegas"]
+    "tlds": [
+      "vegas"
+    ],
+    "coordinates": {
+      "lat": 36.16722,
+      "lon": -115.14861
+    }
   },
   "wales": {
     "subtype": "subdivision",
@@ -429,7 +754,14 @@
     "iso_code": "GB-WLS",
     "parent": "gb",
     "info_link": "https://en.wikipedia.org/wiki/Wales",
-    "tlds": ["cymru", "wales"]
+    "tlds": [
+      "cymru",
+      "wales"
+    ],
+    "coordinates": {
+      "lat": 52.35,
+      "lon": -3.63333
+    }
   },
   "wien": {
     "subtype": "city",
@@ -437,7 +769,13 @@
     "iso_code": null,
     "parent": "at",
     "info_link": "https://en.wikipedia.org/wiki/Vienna",
-    "tlds": ["wien"]
+    "tlds": [
+      "wien"
+    ],
+    "coordinates": {
+      "lat": 48.20833,
+      "lon": 16.3725
+    }
   },
   "yokohama": {
     "subtype": "city",
@@ -445,14 +783,26 @@
     "iso_code": null,
     "parent": "jp",
     "info_link": "https://en.wikipedia.org/wiki/Yokohama",
-    "tlds": ["yokohama"]
+    "tlds": [
+      "yokohama"
+    ],
+    "coordinates": {
+      "lat": 35.45033,
+      "lon": 139.63422
+    }
   },
   "zuerich": {
     "subtype": "city",
     "name_en": "Zurich",
     "iso_code": null,
     "parent": "ch",
-    "info_link": "https://en.wikipedia.org/wiki/Z%C3%BCrich",
-    "tlds": ["zuerich"]
+    "info_link": "https://en.wikipedia.org/wiki/Zurich",
+    "tlds": [
+      "zuerich"
+    ],
+    "coordinates": {
+      "lat": 47.37444,
+      "lon": 8.54111
+    }
   }
 }

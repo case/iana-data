@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+# Populate geo-place lat/lon in data/manual/places.json from Wikidata.
+# Pass --refresh to re-fetch places that already have coordinates.
+uv run python scripts/fetch_place_coordinates.py "$@"

@@ -1,6 +1,6 @@
 {
   "description": "Places associated with TLDs in the IANA root zone (countries, dependent territories, subdivisions, cities, and supranational regions), each with a reverse index of its TLDs. Country slugs are ISO 3166-1 alpha-2.",
-  "publication": "2026-05-26T05:00:52Z",
+  "publication": "2026-05-30T02:19:01Z",
   "sources": [
     "pycountry (ISO 3166-1 / 3166-2)",
     "data/manual/places.json (editorial)",
@@ -17,13 +17,18 @@
       "tlds": [
         "abudhabi",
         "xn--mgbca7dzdo"
-      ]
+      ],
+      "coordinates": {
+        "lat": 24.45111,
+        "lon": 54.39694
+      }
     },
     {
       "slug": "ac",
       "name_en": "Ascension Island",
       "subtype": "country",
       "iso_code": null,
+      "iso_numeric": null,
       "parent": "sh",
       "tlds": [
         "ac"
@@ -35,6 +40,7 @@
       "name_en": "Andorra",
       "subtype": "country",
       "iso_code": "AD",
+      "iso_numeric": "020",
       "parent": null,
       "tlds": [
         "ad"
@@ -45,6 +51,7 @@
       "name_en": "United Arab Emirates",
       "subtype": "country",
       "iso_code": "AE",
+      "iso_numeric": "784",
       "parent": null,
       "tlds": [
         "ae",
@@ -56,6 +63,7 @@
       "name_en": "Afghanistan",
       "subtype": "country",
       "iso_code": "AF",
+      "iso_numeric": "004",
       "parent": null,
       "tlds": [
         "af"
@@ -70,13 +78,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Africa",
       "tlds": [
         "africa"
-      ]
+      ],
+      "coordinates": {
+        "lat": 21.09375,
+        "lon": 7.1881
+      }
     },
     {
       "slug": "ag",
       "name_en": "Antigua and Barbuda",
       "subtype": "country",
       "iso_code": "AG",
+      "iso_numeric": "028",
       "parent": null,
       "tlds": [
         "ag"
@@ -87,6 +100,7 @@
       "name_en": "Anguilla",
       "subtype": "country",
       "iso_code": "AI",
+      "iso_numeric": "660",
       "parent": "gb",
       "tlds": [
         "ai"
@@ -98,6 +112,7 @@
       "name_en": "Albania",
       "subtype": "country",
       "iso_code": "AL",
+      "iso_numeric": "008",
       "parent": null,
       "tlds": [
         "al"
@@ -112,13 +127,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Alsace",
       "tlds": [
         "alsace"
-      ]
+      ],
+      "coordinates": {
+        "lat": 48.5,
+        "lon": 7.5
+      }
     },
     {
       "slug": "am",
       "name_en": "Armenia",
       "subtype": "country",
       "iso_code": "AM",
+      "iso_numeric": "051",
       "parent": null,
       "tlds": [
         "am",
@@ -134,13 +154,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Amsterdam",
       "tlds": [
         "amsterdam"
-      ]
+      ],
+      "coordinates": {
+        "lat": 52.36667,
+        "lon": 4.88333
+      }
     },
     {
       "slug": "ao",
       "name_en": "Angola",
       "subtype": "country",
       "iso_code": "AO",
+      "iso_numeric": "024",
       "parent": null,
       "tlds": [
         "ao"
@@ -151,6 +176,7 @@
       "name_en": "Antarctica",
       "subtype": "country",
       "iso_code": "AQ",
+      "iso_numeric": "010",
       "parent": null,
       "tlds": [
         "aq"
@@ -162,6 +188,7 @@
       "name_en": "Argentina",
       "subtype": "country",
       "iso_code": "AR",
+      "iso_numeric": "032",
       "parent": null,
       "tlds": [
         "ar"
@@ -172,6 +199,7 @@
       "name_en": "American Samoa",
       "subtype": "country",
       "iso_code": "AS",
+      "iso_numeric": "016",
       "parent": "us",
       "tlds": [
         "as"
@@ -187,13 +215,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Asia",
       "tlds": [
         "asia"
-      ]
+      ],
+      "coordinates": {
+        "lat": 43.68111,
+        "lon": 87.33111
+      }
     },
     {
       "slug": "at",
       "name_en": "Austria",
       "subtype": "country",
       "iso_code": "AT",
+      "iso_numeric": "040",
       "parent": null,
       "tlds": [
         "at"
@@ -204,6 +237,7 @@
       "name_en": "Australia",
       "subtype": "country",
       "iso_code": "AU",
+      "iso_numeric": "036",
       "parent": null,
       "tlds": [
         "au"
@@ -214,6 +248,7 @@
       "name_en": "Aruba",
       "subtype": "country",
       "iso_code": "AW",
+      "iso_numeric": "533",
       "parent": "nl",
       "tlds": [
         "aw"
@@ -225,6 +260,7 @@
       "name_en": "Åland Islands",
       "subtype": "country",
       "iso_code": "AX",
+      "iso_numeric": "248",
       "parent": "fi",
       "tlds": [
         "ax"
@@ -236,6 +272,7 @@
       "name_en": "Azerbaijan",
       "subtype": "country",
       "iso_code": "AZ",
+      "iso_numeric": "031",
       "parent": null,
       "tlds": [
         "az"
@@ -246,6 +283,7 @@
       "name_en": "Bosnia and Herzegovina",
       "subtype": "country",
       "iso_code": "BA",
+      "iso_numeric": "070",
       "parent": null,
       "tlds": [
         "ba"
@@ -261,7 +299,11 @@
       "tlds": [
         "barcelona",
         "bcn"
-      ]
+      ],
+      "coordinates": {
+        "lat": 41.3825,
+        "lon": 2.17694
+      }
     },
     {
       "slug": "basque-country",
@@ -272,7 +314,11 @@
       "info_link": "https://en.wikipedia.org/wiki/Basque_Country_(autonomous_community)",
       "tlds": [
         "eus"
-      ]
+      ],
+      "coordinates": {
+        "lat": 42.98333,
+        "lon": -2.61667
+      }
     },
     {
       "slug": "bayern",
@@ -283,13 +329,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Bavaria",
       "tlds": [
         "bayern"
-      ]
+      ],
+      "coordinates": {
+        "lat": 49.07861,
+        "lon": 11.38556
+      }
     },
     {
       "slug": "bb",
       "name_en": "Barbados",
       "subtype": "country",
       "iso_code": "BB",
+      "iso_numeric": "052",
       "parent": null,
       "tlds": [
         "bb"
@@ -300,6 +351,7 @@
       "name_en": "Bangladesh",
       "subtype": "country",
       "iso_code": "BD",
+      "iso_numeric": "050",
       "parent": null,
       "tlds": [
         "bd",
@@ -311,6 +363,7 @@
       "name_en": "Belgium",
       "subtype": "country",
       "iso_code": "BE",
+      "iso_numeric": "056",
       "parent": null,
       "tlds": [
         "be"
@@ -325,13 +378,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Berlin",
       "tlds": [
         "berlin"
-      ]
+      ],
+      "coordinates": {
+        "lat": 52.51667,
+        "lon": 13.38333
+      }
     },
     {
       "slug": "bf",
       "name_en": "Burkina Faso",
       "subtype": "country",
       "iso_code": "BF",
+      "iso_numeric": "854",
       "parent": null,
       "tlds": [
         "bf"
@@ -342,6 +400,7 @@
       "name_en": "Bulgaria",
       "subtype": "country",
       "iso_code": "BG",
+      "iso_numeric": "100",
       "parent": null,
       "tlds": [
         "bg",
@@ -353,6 +412,7 @@
       "name_en": "Bahrain",
       "subtype": "country",
       "iso_code": "BH",
+      "iso_numeric": "048",
       "parent": null,
       "tlds": [
         "bh",
@@ -364,6 +424,7 @@
       "name_en": "Burundi",
       "subtype": "country",
       "iso_code": "BI",
+      "iso_numeric": "108",
       "parent": null,
       "tlds": [
         "bi"
@@ -374,6 +435,7 @@
       "name_en": "Benin",
       "subtype": "country",
       "iso_code": "BJ",
+      "iso_numeric": "204",
       "parent": null,
       "tlds": [
         "bj"
@@ -384,6 +446,7 @@
       "name_en": "Bermuda",
       "subtype": "country",
       "iso_code": "BM",
+      "iso_numeric": "060",
       "parent": "gb",
       "tlds": [
         "bm"
@@ -395,6 +458,7 @@
       "name_en": "Brunei Darussalam",
       "subtype": "country",
       "iso_code": "BN",
+      "iso_numeric": "096",
       "parent": null,
       "tlds": [
         "bn"
@@ -405,6 +469,7 @@
       "name_en": "Bolivia, Plurinational State of",
       "subtype": "country",
       "iso_code": "BO",
+      "iso_numeric": "068",
       "parent": null,
       "tlds": [
         "bo"
@@ -419,13 +484,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Boston",
       "tlds": [
         "boston"
-      ]
+      ],
+      "coordinates": {
+        "lat": 42.36028,
+        "lon": -71.05778
+      }
     },
     {
       "slug": "br",
       "name_en": "Brazil",
       "subtype": "country",
       "iso_code": "BR",
+      "iso_numeric": "076",
       "parent": null,
       "tlds": [
         "br"
@@ -440,7 +510,11 @@
       "info_link": "https://en.wikipedia.org/wiki/Brittany",
       "tlds": [
         "bzh"
-      ]
+      ],
+      "coordinates": {
+        "lat": 48.0,
+        "lon": -3.0
+      }
     },
     {
       "slug": "brussels",
@@ -451,13 +525,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Brussels",
       "tlds": [
         "brussels"
-      ]
+      ],
+      "coordinates": {
+        "lat": 50.84667,
+        "lon": 4.3525
+      }
     },
     {
       "slug": "bs",
       "name_en": "Bahamas",
       "subtype": "country",
       "iso_code": "BS",
+      "iso_numeric": "044",
       "parent": null,
       "tlds": [
         "bs"
@@ -468,6 +547,7 @@
       "name_en": "Bhutan",
       "subtype": "country",
       "iso_code": "BT",
+      "iso_numeric": "064",
       "parent": null,
       "tlds": [
         "bt"
@@ -478,6 +558,7 @@
       "name_en": "Bouvet Island",
       "subtype": "country",
       "iso_code": "BV",
+      "iso_numeric": "074",
       "parent": "no",
       "tlds": [
         "bv"
@@ -489,6 +570,7 @@
       "name_en": "Botswana",
       "subtype": "country",
       "iso_code": "BW",
+      "iso_numeric": "072",
       "parent": null,
       "tlds": [
         "bw"
@@ -499,6 +581,7 @@
       "name_en": "Belarus",
       "subtype": "country",
       "iso_code": "BY",
+      "iso_numeric": "112",
       "parent": null,
       "tlds": [
         "by",
@@ -510,6 +593,7 @@
       "name_en": "Belize",
       "subtype": "country",
       "iso_code": "BZ",
+      "iso_numeric": "084",
       "parent": null,
       "tlds": [
         "bz"
@@ -520,6 +604,7 @@
       "name_en": "Canada",
       "subtype": "country",
       "iso_code": "CA",
+      "iso_numeric": "124",
       "parent": null,
       "tlds": [
         "ca"
@@ -534,7 +619,11 @@
       "info_link": "https://en.wikipedia.org/wiki/Cape_Town",
       "tlds": [
         "capetown"
-      ]
+      ],
+      "coordinates": {
+        "lat": -33.92528,
+        "lon": 18.42389
+      }
     },
     {
       "slug": "catalonia",
@@ -545,13 +634,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Catalonia",
       "tlds": [
         "cat"
-      ]
+      ],
+      "coordinates": {
+        "lat": 41.85,
+        "lon": 1.56667
+      }
     },
     {
       "slug": "cc",
       "name_en": "Cocos (Keeling) Islands",
       "subtype": "country",
       "iso_code": "CC",
+      "iso_numeric": "166",
       "parent": "au",
       "tlds": [
         "cc"
@@ -563,6 +657,7 @@
       "name_en": "Congo, The Democratic Republic of the",
       "subtype": "country",
       "iso_code": "CD",
+      "iso_numeric": "180",
       "parent": null,
       "tlds": [
         "cd"
@@ -573,6 +668,7 @@
       "name_en": "Central African Republic",
       "subtype": "country",
       "iso_code": "CF",
+      "iso_numeric": "140",
       "parent": null,
       "tlds": [
         "cf"
@@ -583,6 +679,7 @@
       "name_en": "Congo",
       "subtype": "country",
       "iso_code": "CG",
+      "iso_numeric": "178",
       "parent": null,
       "tlds": [
         "cg"
@@ -593,6 +690,7 @@
       "name_en": "Switzerland",
       "subtype": "country",
       "iso_code": "CH",
+      "iso_numeric": "756",
       "parent": null,
       "tlds": [
         "ch"
@@ -603,6 +701,7 @@
       "name_en": "Côte d'Ivoire",
       "subtype": "country",
       "iso_code": "CI",
+      "iso_numeric": "384",
       "parent": null,
       "tlds": [
         "ci"
@@ -613,6 +712,7 @@
       "name_en": "Cook Islands",
       "subtype": "country",
       "iso_code": "CK",
+      "iso_numeric": "184",
       "parent": "nz",
       "tlds": [
         "ck"
@@ -624,6 +724,7 @@
       "name_en": "Chile",
       "subtype": "country",
       "iso_code": "CL",
+      "iso_numeric": "152",
       "parent": null,
       "tlds": [
         "cl"
@@ -634,6 +735,7 @@
       "name_en": "Cameroon",
       "subtype": "country",
       "iso_code": "CM",
+      "iso_numeric": "120",
       "parent": null,
       "tlds": [
         "cm"
@@ -644,6 +746,7 @@
       "name_en": "China",
       "subtype": "country",
       "iso_code": "CN",
+      "iso_numeric": "156",
       "parent": null,
       "tlds": [
         "cn",
@@ -656,6 +759,7 @@
       "name_en": "Colombia",
       "subtype": "country",
       "iso_code": "CO",
+      "iso_numeric": "170",
       "parent": null,
       "tlds": [
         "co"
@@ -671,7 +775,11 @@
       "tlds": [
         "cologne",
         "koeln"
-      ]
+      ],
+      "coordinates": {
+        "lat": 50.94222,
+        "lon": 6.95778
+      }
     },
     {
       "slug": "corsica",
@@ -682,13 +790,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Corsica",
       "tlds": [
         "corsica"
-      ]
+      ],
+      "coordinates": {
+        "lat": 42.15,
+        "lon": 9.08333
+      }
     },
     {
       "slug": "cr",
       "name_en": "Costa Rica",
       "subtype": "country",
       "iso_code": "CR",
+      "iso_numeric": "188",
       "parent": null,
       "tlds": [
         "cr"
@@ -699,6 +812,7 @@
       "name_en": "Cuba",
       "subtype": "country",
       "iso_code": "CU",
+      "iso_numeric": "192",
       "parent": null,
       "tlds": [
         "cu"
@@ -709,6 +823,7 @@
       "name_en": "Cabo Verde",
       "subtype": "country",
       "iso_code": "CV",
+      "iso_numeric": "132",
       "parent": null,
       "tlds": [
         "cv"
@@ -719,6 +834,7 @@
       "name_en": "Curaçao",
       "subtype": "country",
       "iso_code": "CW",
+      "iso_numeric": "531",
       "parent": "nl",
       "tlds": [
         "cw"
@@ -730,6 +846,7 @@
       "name_en": "Christmas Island",
       "subtype": "country",
       "iso_code": "CX",
+      "iso_numeric": "162",
       "parent": "au",
       "tlds": [
         "cx"
@@ -741,6 +858,7 @@
       "name_en": "Cyprus",
       "subtype": "country",
       "iso_code": "CY",
+      "iso_numeric": "196",
       "parent": null,
       "tlds": [
         "cy"
@@ -751,6 +869,7 @@
       "name_en": "Czechia",
       "subtype": "country",
       "iso_code": "CZ",
+      "iso_numeric": "203",
       "parent": null,
       "tlds": [
         "cz"
@@ -761,6 +880,7 @@
       "name_en": "Germany",
       "subtype": "country",
       "iso_code": "DE",
+      "iso_numeric": "276",
       "parent": null,
       "tlds": [
         "de"
@@ -771,6 +891,7 @@
       "name_en": "Djibouti",
       "subtype": "country",
       "iso_code": "DJ",
+      "iso_numeric": "262",
       "parent": null,
       "tlds": [
         "dj"
@@ -781,6 +902,7 @@
       "name_en": "Denmark",
       "subtype": "country",
       "iso_code": "DK",
+      "iso_numeric": "208",
       "parent": null,
       "tlds": [
         "dk"
@@ -791,6 +913,7 @@
       "name_en": "Dominica",
       "subtype": "country",
       "iso_code": "DM",
+      "iso_numeric": "212",
       "parent": null,
       "tlds": [
         "dm"
@@ -801,6 +924,7 @@
       "name_en": "Dominican Republic",
       "subtype": "country",
       "iso_code": "DO",
+      "iso_numeric": "214",
       "parent": null,
       "tlds": [
         "do"
@@ -815,7 +939,11 @@
       "info_link": "https://en.wikipedia.org/wiki/Dubai",
       "tlds": [
         "dubai"
-      ]
+      ],
+      "coordinates": {
+        "lat": 25.26972,
+        "lon": 55.30944
+      }
     },
     {
       "slug": "durban",
@@ -826,13 +954,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Durban",
       "tlds": [
         "durban"
-      ]
+      ],
+      "coordinates": {
+        "lat": -29.85833,
+        "lon": 31.025
+      }
     },
     {
       "slug": "dz",
       "name_en": "Algeria",
       "subtype": "country",
       "iso_code": "DZ",
+      "iso_numeric": "012",
       "parent": null,
       "tlds": [
         "dz",
@@ -844,6 +977,7 @@
       "name_en": "Ecuador",
       "subtype": "country",
       "iso_code": "EC",
+      "iso_numeric": "218",
       "parent": null,
       "tlds": [
         "ec"
@@ -854,6 +988,7 @@
       "name_en": "Estonia",
       "subtype": "country",
       "iso_code": "EE",
+      "iso_numeric": "233",
       "parent": null,
       "tlds": [
         "ee"
@@ -864,6 +999,7 @@
       "name_en": "Egypt",
       "subtype": "country",
       "iso_code": "EG",
+      "iso_numeric": "818",
       "parent": null,
       "tlds": [
         "eg",
@@ -875,6 +1011,7 @@
       "name_en": "Eritrea",
       "subtype": "country",
       "iso_code": "ER",
+      "iso_numeric": "232",
       "parent": null,
       "tlds": [
         "er"
@@ -885,6 +1022,7 @@
       "name_en": "Spain",
       "subtype": "country",
       "iso_code": "ES",
+      "iso_numeric": "724",
       "parent": null,
       "tlds": [
         "es"
@@ -895,6 +1033,7 @@
       "name_en": "Ethiopia",
       "subtype": "country",
       "iso_code": "ET",
+      "iso_numeric": "231",
       "parent": null,
       "tlds": [
         "et"
@@ -911,13 +1050,18 @@
         "eu",
         "xn--e1a4c",
         "xn--qxa6a"
-      ]
+      ],
+      "coordinates": {
+        "lat": 50.11694,
+        "lon": 9.24778
+      }
     },
     {
       "slug": "fi",
       "name_en": "Finland",
       "subtype": "country",
       "iso_code": "FI",
+      "iso_numeric": "246",
       "parent": null,
       "tlds": [
         "fi"
@@ -928,6 +1072,7 @@
       "name_en": "Fiji",
       "subtype": "country",
       "iso_code": "FJ",
+      "iso_numeric": "242",
       "parent": null,
       "tlds": [
         "fj"
@@ -938,6 +1083,7 @@
       "name_en": "Falkland Islands (Malvinas)",
       "subtype": "country",
       "iso_code": "FK",
+      "iso_numeric": "238",
       "parent": "gb",
       "tlds": [
         "fk"
@@ -953,13 +1099,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Flanders",
       "tlds": [
         "vlaanderen"
-      ]
+      ],
+      "coordinates": {
+        "lat": 51.0,
+        "lon": 4.5
+      }
     },
     {
       "slug": "fm",
       "name_en": "Micronesia, Federated States of",
       "subtype": "country",
       "iso_code": "FM",
+      "iso_numeric": "583",
       "parent": null,
       "tlds": [
         "fm"
@@ -970,6 +1121,7 @@
       "name_en": "Faroe Islands",
       "subtype": "country",
       "iso_code": "FO",
+      "iso_numeric": "234",
       "parent": "dk",
       "tlds": [
         "fo"
@@ -981,6 +1133,7 @@
       "name_en": "France",
       "subtype": "country",
       "iso_code": "FR",
+      "iso_numeric": "250",
       "parent": null,
       "tlds": [
         "fr"
@@ -995,13 +1148,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Friesland",
       "tlds": [
         "frl"
-      ]
+      ],
+      "coordinates": {
+        "lat": 53.20139,
+        "lon": 5.8
+      }
     },
     {
       "slug": "ga",
       "name_en": "Gabon",
       "subtype": "country",
       "iso_code": "GA",
+      "iso_numeric": "266",
       "parent": null,
       "tlds": [
         "ga"
@@ -1016,13 +1174,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Galicia_(Spain)",
       "tlds": [
         "gal"
-      ]
+      ],
+      "coordinates": {
+        "lat": 42.8,
+        "lon": -7.9
+      }
     },
     {
       "slug": "gb",
       "name_en": "United Kingdom",
       "subtype": "country",
       "iso_code": "GB",
+      "iso_numeric": "826",
       "parent": null,
       "tlds": [
         "gb",
@@ -1034,6 +1197,7 @@
       "name_en": "Grenada",
       "subtype": "country",
       "iso_code": "GD",
+      "iso_numeric": "308",
       "parent": null,
       "tlds": [
         "gd"
@@ -1044,6 +1208,7 @@
       "name_en": "Georgia",
       "subtype": "country",
       "iso_code": "GE",
+      "iso_numeric": "268",
       "parent": null,
       "tlds": [
         "ge",
@@ -1059,13 +1224,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Ghent",
       "tlds": [
         "gent"
-      ]
+      ],
+      "coordinates": {
+        "lat": 51.05361,
+        "lon": 3.72528
+      }
     },
     {
       "slug": "gf",
       "name_en": "French Guiana",
       "subtype": "country",
       "iso_code": "GF",
+      "iso_numeric": "254",
       "parent": "fr",
       "tlds": [
         "gf"
@@ -1077,6 +1247,7 @@
       "name_en": "Guernsey",
       "subtype": "country",
       "iso_code": "GG",
+      "iso_numeric": "831",
       "parent": "gb",
       "tlds": [
         "gg"
@@ -1088,6 +1259,7 @@
       "name_en": "Ghana",
       "subtype": "country",
       "iso_code": "GH",
+      "iso_numeric": "288",
       "parent": null,
       "tlds": [
         "gh"
@@ -1098,6 +1270,7 @@
       "name_en": "Gibraltar",
       "subtype": "country",
       "iso_code": "GI",
+      "iso_numeric": "292",
       "parent": "gb",
       "tlds": [
         "gi"
@@ -1109,6 +1282,7 @@
       "name_en": "Greenland",
       "subtype": "country",
       "iso_code": "GL",
+      "iso_numeric": "304",
       "parent": "dk",
       "tlds": [
         "gl"
@@ -1120,6 +1294,7 @@
       "name_en": "Gambia",
       "subtype": "country",
       "iso_code": "GM",
+      "iso_numeric": "270",
       "parent": null,
       "tlds": [
         "gm"
@@ -1130,6 +1305,7 @@
       "name_en": "Guinea",
       "subtype": "country",
       "iso_code": "GN",
+      "iso_numeric": "324",
       "parent": null,
       "tlds": [
         "gn"
@@ -1140,6 +1316,7 @@
       "name_en": "Guadeloupe",
       "subtype": "country",
       "iso_code": "GP",
+      "iso_numeric": "312",
       "parent": "fr",
       "tlds": [
         "gp"
@@ -1151,6 +1328,7 @@
       "name_en": "Equatorial Guinea",
       "subtype": "country",
       "iso_code": "GQ",
+      "iso_numeric": "226",
       "parent": null,
       "tlds": [
         "gq"
@@ -1161,6 +1339,7 @@
       "name_en": "Greece",
       "subtype": "country",
       "iso_code": "GR",
+      "iso_numeric": "300",
       "parent": null,
       "tlds": [
         "gr",
@@ -1172,6 +1351,7 @@
       "name_en": "South Georgia and the South Sandwich Islands",
       "subtype": "country",
       "iso_code": "GS",
+      "iso_numeric": "239",
       "parent": "gb",
       "tlds": [
         "gs"
@@ -1183,6 +1363,7 @@
       "name_en": "Guatemala",
       "subtype": "country",
       "iso_code": "GT",
+      "iso_numeric": "320",
       "parent": null,
       "tlds": [
         "gt"
@@ -1193,6 +1374,7 @@
       "name_en": "Guam",
       "subtype": "country",
       "iso_code": "GU",
+      "iso_numeric": "316",
       "parent": "us",
       "tlds": [
         "gu"
@@ -1204,6 +1386,7 @@
       "name_en": "Guinea-Bissau",
       "subtype": "country",
       "iso_code": "GW",
+      "iso_numeric": "624",
       "parent": null,
       "tlds": [
         "gw"
@@ -1214,6 +1397,7 @@
       "name_en": "Guyana",
       "subtype": "country",
       "iso_code": "GY",
+      "iso_numeric": "328",
       "parent": null,
       "tlds": [
         "gy"
@@ -1228,7 +1412,11 @@
       "info_link": "https://en.wikipedia.org/wiki/Hamburg",
       "tlds": [
         "hamburg"
-      ]
+      ],
+      "coordinates": {
+        "lat": 53.55,
+        "lon": 10.0
+      }
     },
     {
       "slug": "helsinki",
@@ -1239,13 +1427,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Helsinki",
       "tlds": [
         "helsinki"
-      ]
+      ],
+      "coordinates": {
+        "lat": 60.17083,
+        "lon": 24.9375
+      }
     },
     {
       "slug": "hk",
       "name_en": "Hong Kong",
       "subtype": "country",
       "iso_code": "HK",
+      "iso_numeric": "344",
       "parent": "cn",
       "tlds": [
         "hk",
@@ -1258,6 +1451,7 @@
       "name_en": "Heard Island and McDonald Islands",
       "subtype": "country",
       "iso_code": "HM",
+      "iso_numeric": "334",
       "parent": "au",
       "tlds": [
         "hm"
@@ -1269,6 +1463,7 @@
       "name_en": "Honduras",
       "subtype": "country",
       "iso_code": "HN",
+      "iso_numeric": "340",
       "parent": null,
       "tlds": [
         "hn"
@@ -1279,6 +1474,7 @@
       "name_en": "Croatia",
       "subtype": "country",
       "iso_code": "HR",
+      "iso_numeric": "191",
       "parent": null,
       "tlds": [
         "hr"
@@ -1289,6 +1485,7 @@
       "name_en": "Haiti",
       "subtype": "country",
       "iso_code": "HT",
+      "iso_numeric": "332",
       "parent": null,
       "tlds": [
         "ht"
@@ -1299,6 +1496,7 @@
       "name_en": "Hungary",
       "subtype": "country",
       "iso_code": "HU",
+      "iso_numeric": "348",
       "parent": null,
       "tlds": [
         "hu"
@@ -1309,6 +1507,7 @@
       "name_en": "Indonesia",
       "subtype": "country",
       "iso_code": "ID",
+      "iso_numeric": "360",
       "parent": null,
       "tlds": [
         "id"
@@ -1319,6 +1518,7 @@
       "name_en": "Ireland",
       "subtype": "country",
       "iso_code": "IE",
+      "iso_numeric": "372",
       "parent": null,
       "tlds": [
         "ie"
@@ -1329,6 +1529,7 @@
       "name_en": "Israel",
       "subtype": "country",
       "iso_code": "IL",
+      "iso_numeric": "376",
       "parent": null,
       "tlds": [
         "il",
@@ -1340,6 +1541,7 @@
       "name_en": "Isle of Man",
       "subtype": "country",
       "iso_code": "IM",
+      "iso_numeric": "833",
       "parent": "gb",
       "tlds": [
         "im"
@@ -1351,6 +1553,7 @@
       "name_en": "India",
       "subtype": "country",
       "iso_code": "IN",
+      "iso_numeric": "356",
       "parent": null,
       "tlds": [
         "in",
@@ -1376,6 +1579,7 @@
       "name_en": "British Indian Ocean Territory",
       "subtype": "country",
       "iso_code": "IO",
+      "iso_numeric": "086",
       "parent": "gb",
       "tlds": [
         "io"
@@ -1387,6 +1591,7 @@
       "name_en": "Iraq",
       "subtype": "country",
       "iso_code": "IQ",
+      "iso_numeric": "368",
       "parent": null,
       "tlds": [
         "iq",
@@ -1398,6 +1603,7 @@
       "name_en": "Iran, Islamic Republic of",
       "subtype": "country",
       "iso_code": "IR",
+      "iso_numeric": "364",
       "parent": null,
       "tlds": [
         "ir",
@@ -1409,6 +1615,7 @@
       "name_en": "Iceland",
       "subtype": "country",
       "iso_code": "IS",
+      "iso_numeric": "352",
       "parent": null,
       "tlds": [
         "is"
@@ -1424,13 +1631,18 @@
       "tlds": [
         "ist",
         "istanbul"
-      ]
+      ],
+      "coordinates": {
+        "lat": 41.01,
+        "lon": 28.96028
+      }
     },
     {
       "slug": "it",
       "name_en": "Italy",
       "subtype": "country",
       "iso_code": "IT",
+      "iso_numeric": "380",
       "parent": null,
       "tlds": [
         "it"
@@ -1441,6 +1653,7 @@
       "name_en": "Jersey",
       "subtype": "country",
       "iso_code": "JE",
+      "iso_numeric": "832",
       "parent": "gb",
       "tlds": [
         "je"
@@ -1452,6 +1665,7 @@
       "name_en": "Jamaica",
       "subtype": "country",
       "iso_code": "JM",
+      "iso_numeric": "388",
       "parent": null,
       "tlds": [
         "jm"
@@ -1462,6 +1676,7 @@
       "name_en": "Jordan",
       "subtype": "country",
       "iso_code": "JO",
+      "iso_numeric": "400",
       "parent": null,
       "tlds": [
         "jo",
@@ -1477,13 +1692,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Johannesburg",
       "tlds": [
         "joburg"
-      ]
+      ],
+      "coordinates": {
+        "lat": -26.20436,
+        "lon": 28.04164
+      }
     },
     {
       "slug": "jp",
       "name_en": "Japan",
       "subtype": "country",
       "iso_code": "JP",
+      "iso_numeric": "392",
       "parent": null,
       "tlds": [
         "jp"
@@ -1494,6 +1714,7 @@
       "name_en": "Kenya",
       "subtype": "country",
       "iso_code": "KE",
+      "iso_numeric": "404",
       "parent": null,
       "tlds": [
         "ke"
@@ -1504,6 +1725,7 @@
       "name_en": "Kyrgyzstan",
       "subtype": "country",
       "iso_code": "KG",
+      "iso_numeric": "417",
       "parent": null,
       "tlds": [
         "kg"
@@ -1514,6 +1736,7 @@
       "name_en": "Cambodia",
       "subtype": "country",
       "iso_code": "KH",
+      "iso_numeric": "116",
       "parent": null,
       "tlds": [
         "kh"
@@ -1524,6 +1747,7 @@
       "name_en": "Kiribati",
       "subtype": "country",
       "iso_code": "KI",
+      "iso_numeric": "296",
       "parent": null,
       "tlds": [
         "ki"
@@ -1534,6 +1758,7 @@
       "name_en": "Comoros",
       "subtype": "country",
       "iso_code": "KM",
+      "iso_numeric": "174",
       "parent": null,
       "tlds": [
         "km"
@@ -1544,6 +1769,7 @@
       "name_en": "Saint Kitts and Nevis",
       "subtype": "country",
       "iso_code": "KN",
+      "iso_numeric": "659",
       "parent": null,
       "tlds": [
         "kn"
@@ -1554,6 +1780,7 @@
       "name_en": "Korea, Democratic People's Republic of",
       "subtype": "country",
       "iso_code": "KP",
+      "iso_numeric": "408",
       "parent": null,
       "tlds": [
         "kp"
@@ -1564,6 +1791,7 @@
       "name_en": "Korea, Republic of",
       "subtype": "country",
       "iso_code": "KR",
+      "iso_numeric": "410",
       "parent": null,
       "tlds": [
         "kr",
@@ -1575,6 +1803,7 @@
       "name_en": "Kuwait",
       "subtype": "country",
       "iso_code": "KW",
+      "iso_numeric": "414",
       "parent": null,
       "tlds": [
         "kw"
@@ -1585,6 +1814,7 @@
       "name_en": "Cayman Islands",
       "subtype": "country",
       "iso_code": "KY",
+      "iso_numeric": "136",
       "parent": "gb",
       "tlds": [
         "ky"
@@ -1600,13 +1830,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Kyoto",
       "tlds": [
         "kyoto"
-      ]
+      ],
+      "coordinates": {
+        "lat": 35.01161,
+        "lon": 135.76811
+      }
     },
     {
       "slug": "kz",
       "name_en": "Kazakhstan",
       "subtype": "country",
       "iso_code": "KZ",
+      "iso_numeric": "398",
       "parent": null,
       "tlds": [
         "kz",
@@ -1618,6 +1853,7 @@
       "name_en": "Lao People's Democratic Republic",
       "subtype": "country",
       "iso_code": "LA",
+      "iso_numeric": "418",
       "parent": null,
       "tlds": [
         "la",
@@ -1633,13 +1869,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Latin_America",
       "tlds": [
         "lat"
-      ]
+      ],
+      "coordinates": {
+        "lat": -1.10689,
+        "lon": -68.09739
+      }
     },
     {
       "slug": "lb",
       "name_en": "Lebanon",
       "subtype": "country",
       "iso_code": "LB",
+      "iso_numeric": "422",
       "parent": null,
       "tlds": [
         "lb"
@@ -1650,6 +1891,7 @@
       "name_en": "Saint Lucia",
       "subtype": "country",
       "iso_code": "LC",
+      "iso_numeric": "662",
       "parent": null,
       "tlds": [
         "lc"
@@ -1660,6 +1902,7 @@
       "name_en": "Liechtenstein",
       "subtype": "country",
       "iso_code": "LI",
+      "iso_numeric": "438",
       "parent": null,
       "tlds": [
         "li"
@@ -1670,6 +1913,7 @@
       "name_en": "Sri Lanka",
       "subtype": "country",
       "iso_code": "LK",
+      "iso_numeric": "144",
       "parent": null,
       "tlds": [
         "lk",
@@ -1686,13 +1930,18 @@
       "info_link": "https://en.wikipedia.org/wiki/London",
       "tlds": [
         "london"
-      ]
+      ],
+      "coordinates": {
+        "lat": 51.50722,
+        "lon": -0.1275
+      }
     },
     {
       "slug": "lr",
       "name_en": "Liberia",
       "subtype": "country",
       "iso_code": "LR",
+      "iso_numeric": "430",
       "parent": null,
       "tlds": [
         "lr"
@@ -1703,6 +1952,7 @@
       "name_en": "Lesotho",
       "subtype": "country",
       "iso_code": "LS",
+      "iso_numeric": "426",
       "parent": null,
       "tlds": [
         "ls"
@@ -1713,6 +1963,7 @@
       "name_en": "Lithuania",
       "subtype": "country",
       "iso_code": "LT",
+      "iso_numeric": "440",
       "parent": null,
       "tlds": [
         "lt"
@@ -1723,6 +1974,7 @@
       "name_en": "Luxembourg",
       "subtype": "country",
       "iso_code": "LU",
+      "iso_numeric": "442",
       "parent": null,
       "tlds": [
         "lu"
@@ -1733,6 +1985,7 @@
       "name_en": "Latvia",
       "subtype": "country",
       "iso_code": "LV",
+      "iso_numeric": "428",
       "parent": null,
       "tlds": [
         "lv"
@@ -1743,6 +1996,7 @@
       "name_en": "Libya",
       "subtype": "country",
       "iso_code": "LY",
+      "iso_numeric": "434",
       "parent": null,
       "tlds": [
         "ly"
@@ -1753,6 +2007,7 @@
       "name_en": "Morocco",
       "subtype": "country",
       "iso_code": "MA",
+      "iso_numeric": "504",
       "parent": null,
       "tlds": [
         "ma",
@@ -1768,13 +2023,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Madrid",
       "tlds": [
         "madrid"
-      ]
+      ],
+      "coordinates": {
+        "lat": 40.41694,
+        "lon": -3.70333
+      }
     },
     {
       "slug": "mc",
       "name_en": "Monaco",
       "subtype": "country",
       "iso_code": "MC",
+      "iso_numeric": "492",
       "parent": null,
       "tlds": [
         "mc"
@@ -1785,6 +2045,7 @@
       "name_en": "Moldova, Republic of",
       "subtype": "country",
       "iso_code": "MD",
+      "iso_numeric": "498",
       "parent": null,
       "tlds": [
         "md"
@@ -1795,6 +2056,7 @@
       "name_en": "Montenegro",
       "subtype": "country",
       "iso_code": "ME",
+      "iso_numeric": "499",
       "parent": null,
       "tlds": [
         "me"
@@ -1809,13 +2071,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Melbourne",
       "tlds": [
         "melbourne"
-      ]
+      ],
+      "coordinates": {
+        "lat": -37.81417,
+        "lon": 144.96306
+      }
     },
     {
       "slug": "mg",
       "name_en": "Madagascar",
       "subtype": "country",
       "iso_code": "MG",
+      "iso_numeric": "450",
       "parent": null,
       "tlds": [
         "mg"
@@ -1826,6 +2093,7 @@
       "name_en": "Marshall Islands",
       "subtype": "country",
       "iso_code": "MH",
+      "iso_numeric": "584",
       "parent": null,
       "tlds": [
         "mh"
@@ -1840,13 +2108,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Miami",
       "tlds": [
         "miami"
-      ]
+      ],
+      "coordinates": {
+        "lat": 25.78333,
+        "lon": -80.21667
+      }
     },
     {
       "slug": "mk",
       "name_en": "North Macedonia",
       "subtype": "country",
       "iso_code": "MK",
+      "iso_numeric": "807",
       "parent": null,
       "tlds": [
         "mk",
@@ -1858,6 +2131,7 @@
       "name_en": "Mali",
       "subtype": "country",
       "iso_code": "ML",
+      "iso_numeric": "466",
       "parent": null,
       "tlds": [
         "ml"
@@ -1868,6 +2142,7 @@
       "name_en": "Myanmar",
       "subtype": "country",
       "iso_code": "MM",
+      "iso_numeric": "104",
       "parent": null,
       "tlds": [
         "mm"
@@ -1878,6 +2153,7 @@
       "name_en": "Mongolia",
       "subtype": "country",
       "iso_code": "MN",
+      "iso_numeric": "496",
       "parent": null,
       "tlds": [
         "mn",
@@ -1889,6 +2165,7 @@
       "name_en": "Macao",
       "subtype": "country",
       "iso_code": "MO",
+      "iso_numeric": "446",
       "parent": "cn",
       "tlds": [
         "mo",
@@ -1906,13 +2183,18 @@
       "tlds": [
         "moscow",
         "xn--80adxhks"
-      ]
+      ],
+      "coordinates": {
+        "lat": 55.75056,
+        "lon": 37.6175
+      }
     },
     {
       "slug": "mp",
       "name_en": "Northern Mariana Islands",
       "subtype": "country",
       "iso_code": "MP",
+      "iso_numeric": "580",
       "parent": "us",
       "tlds": [
         "mp"
@@ -1924,6 +2206,7 @@
       "name_en": "Martinique",
       "subtype": "country",
       "iso_code": "MQ",
+      "iso_numeric": "474",
       "parent": "fr",
       "tlds": [
         "mq"
@@ -1935,6 +2218,7 @@
       "name_en": "Mauritania",
       "subtype": "country",
       "iso_code": "MR",
+      "iso_numeric": "478",
       "parent": null,
       "tlds": [
         "mr",
@@ -1946,6 +2230,7 @@
       "name_en": "Montserrat",
       "subtype": "country",
       "iso_code": "MS",
+      "iso_numeric": "500",
       "parent": "gb",
       "tlds": [
         "ms"
@@ -1957,6 +2242,7 @@
       "name_en": "Malta",
       "subtype": "country",
       "iso_code": "MT",
+      "iso_numeric": "470",
       "parent": null,
       "tlds": [
         "mt"
@@ -1967,6 +2253,7 @@
       "name_en": "Mauritius",
       "subtype": "country",
       "iso_code": "MU",
+      "iso_numeric": "480",
       "parent": null,
       "tlds": [
         "mu"
@@ -1977,6 +2264,7 @@
       "name_en": "Maldives",
       "subtype": "country",
       "iso_code": "MV",
+      "iso_numeric": "462",
       "parent": null,
       "tlds": [
         "mv"
@@ -1987,6 +2275,7 @@
       "name_en": "Malawi",
       "subtype": "country",
       "iso_code": "MW",
+      "iso_numeric": "454",
       "parent": null,
       "tlds": [
         "mw"
@@ -1997,6 +2286,7 @@
       "name_en": "Mexico",
       "subtype": "country",
       "iso_code": "MX",
+      "iso_numeric": "484",
       "parent": null,
       "tlds": [
         "mx"
@@ -2007,6 +2297,7 @@
       "name_en": "Malaysia",
       "subtype": "country",
       "iso_code": "MY",
+      "iso_numeric": "458",
       "parent": null,
       "tlds": [
         "my",
@@ -2018,6 +2309,7 @@
       "name_en": "Mozambique",
       "subtype": "country",
       "iso_code": "MZ",
+      "iso_numeric": "508",
       "parent": null,
       "tlds": [
         "mz"
@@ -2028,6 +2320,7 @@
       "name_en": "Namibia",
       "subtype": "country",
       "iso_code": "NA",
+      "iso_numeric": "516",
       "parent": null,
       "tlds": [
         "na"
@@ -2042,13 +2335,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Nagoya",
       "tlds": [
         "nagoya"
-      ]
+      ],
+      "coordinates": {
+        "lat": 35.18139,
+        "lon": 136.90639
+      }
     },
     {
       "slug": "nc",
       "name_en": "New Caledonia",
       "subtype": "country",
       "iso_code": "NC",
+      "iso_numeric": "540",
       "parent": "fr",
       "tlds": [
         "nc"
@@ -2060,6 +2358,7 @@
       "name_en": "Niger",
       "subtype": "country",
       "iso_code": "NE",
+      "iso_numeric": "562",
       "parent": null,
       "tlds": [
         "ne"
@@ -2070,6 +2369,7 @@
       "name_en": "Norfolk Island",
       "subtype": "country",
       "iso_code": "NF",
+      "iso_numeric": "574",
       "parent": "au",
       "tlds": [
         "nf"
@@ -2081,6 +2381,7 @@
       "name_en": "Nigeria",
       "subtype": "country",
       "iso_code": "NG",
+      "iso_numeric": "566",
       "parent": null,
       "tlds": [
         "ng"
@@ -2091,6 +2392,7 @@
       "name_en": "Nicaragua",
       "subtype": "country",
       "iso_code": "NI",
+      "iso_numeric": "558",
       "parent": null,
       "tlds": [
         "ni"
@@ -2101,6 +2403,7 @@
       "name_en": "Netherlands",
       "subtype": "country",
       "iso_code": "NL",
+      "iso_numeric": "528",
       "parent": null,
       "tlds": [
         "nl"
@@ -2111,6 +2414,7 @@
       "name_en": "Norway",
       "subtype": "country",
       "iso_code": "NO",
+      "iso_numeric": "578",
       "parent": null,
       "tlds": [
         "no"
@@ -2125,13 +2429,18 @@
       "info_link": "https://en.wikipedia.org/wiki/North_Rhine-Westphalia",
       "tlds": [
         "nrw"
-      ]
+      ],
+      "coordinates": {
+        "lat": 51.46667,
+        "lon": 7.55
+      }
     },
     {
       "slug": "np",
       "name_en": "Nepal",
       "subtype": "country",
       "iso_code": "NP",
+      "iso_numeric": "524",
       "parent": null,
       "tlds": [
         "np"
@@ -2142,6 +2451,7 @@
       "name_en": "Nauru",
       "subtype": "country",
       "iso_code": "NR",
+      "iso_numeric": "520",
       "parent": null,
       "tlds": [
         "nr"
@@ -2152,6 +2462,7 @@
       "name_en": "Niue",
       "subtype": "country",
       "iso_code": "NU",
+      "iso_numeric": "570",
       "parent": "nz",
       "tlds": [
         "nu"
@@ -2167,13 +2478,18 @@
       "info_link": "https://en.wikipedia.org/wiki/New_York_City",
       "tlds": [
         "nyc"
-      ]
+      ],
+      "coordinates": {
+        "lat": 40.71278,
+        "lon": -74.00611
+      }
     },
     {
       "slug": "nz",
       "name_en": "New Zealand",
       "subtype": "country",
       "iso_code": "NZ",
+      "iso_numeric": "554",
       "parent": null,
       "tlds": [
         "nz"
@@ -2188,13 +2504,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Okinawa_Prefecture",
       "tlds": [
         "okinawa"
-      ]
+      ],
+      "coordinates": {
+        "lat": 26.21222,
+        "lon": 127.68083
+      }
     },
     {
       "slug": "om",
       "name_en": "Oman",
       "subtype": "country",
       "iso_code": "OM",
+      "iso_numeric": "512",
       "parent": null,
       "tlds": [
         "om",
@@ -2210,13 +2531,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Osaka",
       "tlds": [
         "osaka"
-      ]
+      ],
+      "coordinates": {
+        "lat": 34.69375,
+        "lon": 135.50211
+      }
     },
     {
       "slug": "pa",
       "name_en": "Panama",
       "subtype": "country",
       "iso_code": "PA",
+      "iso_numeric": "591",
       "parent": null,
       "tlds": [
         "pa"
@@ -2231,13 +2557,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Paris",
       "tlds": [
         "paris"
-      ]
+      ],
+      "coordinates": {
+        "lat": 48.85667,
+        "lon": 2.35222
+      }
     },
     {
       "slug": "pe",
       "name_en": "Peru",
       "subtype": "country",
       "iso_code": "PE",
+      "iso_numeric": "604",
       "parent": null,
       "tlds": [
         "pe"
@@ -2248,6 +2579,7 @@
       "name_en": "French Polynesia",
       "subtype": "country",
       "iso_code": "PF",
+      "iso_numeric": "258",
       "parent": "fr",
       "tlds": [
         "pf"
@@ -2259,6 +2591,7 @@
       "name_en": "Papua New Guinea",
       "subtype": "country",
       "iso_code": "PG",
+      "iso_numeric": "598",
       "parent": null,
       "tlds": [
         "pg"
@@ -2269,6 +2602,7 @@
       "name_en": "Philippines",
       "subtype": "country",
       "iso_code": "PH",
+      "iso_numeric": "608",
       "parent": null,
       "tlds": [
         "ph"
@@ -2279,6 +2613,7 @@
       "name_en": "Pakistan",
       "subtype": "country",
       "iso_code": "PK",
+      "iso_numeric": "586",
       "parent": null,
       "tlds": [
         "pk",
@@ -2290,6 +2625,7 @@
       "name_en": "Poland",
       "subtype": "country",
       "iso_code": "PL",
+      "iso_numeric": "616",
       "parent": null,
       "tlds": [
         "pl"
@@ -2300,6 +2636,7 @@
       "name_en": "Saint Pierre and Miquelon",
       "subtype": "country",
       "iso_code": "PM",
+      "iso_numeric": "666",
       "parent": "fr",
       "tlds": [
         "pm"
@@ -2311,6 +2648,7 @@
       "name_en": "Pitcairn",
       "subtype": "country",
       "iso_code": "PN",
+      "iso_numeric": "612",
       "parent": "gb",
       "tlds": [
         "pn"
@@ -2322,6 +2660,7 @@
       "name_en": "Puerto Rico",
       "subtype": "country",
       "iso_code": "PR",
+      "iso_numeric": "630",
       "parent": "us",
       "tlds": [
         "pr"
@@ -2333,6 +2672,7 @@
       "name_en": "Palestine, State of",
       "subtype": "country",
       "iso_code": "PS",
+      "iso_numeric": "275",
       "parent": null,
       "tlds": [
         "ps",
@@ -2344,6 +2684,7 @@
       "name_en": "Portugal",
       "subtype": "country",
       "iso_code": "PT",
+      "iso_numeric": "620",
       "parent": null,
       "tlds": [
         "pt"
@@ -2354,6 +2695,7 @@
       "name_en": "Palau",
       "subtype": "country",
       "iso_code": "PW",
+      "iso_numeric": "585",
       "parent": null,
       "tlds": [
         "pw"
@@ -2364,6 +2706,7 @@
       "name_en": "Paraguay",
       "subtype": "country",
       "iso_code": "PY",
+      "iso_numeric": "600",
       "parent": null,
       "tlds": [
         "py"
@@ -2374,6 +2717,7 @@
       "name_en": "Qatar",
       "subtype": "country",
       "iso_code": "QA",
+      "iso_numeric": "634",
       "parent": null,
       "tlds": [
         "qa",
@@ -2389,13 +2733,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Quebec",
       "tlds": [
         "quebec"
-      ]
+      ],
+      "coordinates": {
+        "lat": 52.0,
+        "lon": -72.0
+      }
     },
     {
       "slug": "re",
       "name_en": "Réunion",
       "subtype": "country",
       "iso_code": "RE",
+      "iso_numeric": "638",
       "parent": "fr",
       "tlds": [
         "re"
@@ -2411,13 +2760,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Rio_de_Janeiro",
       "tlds": [
         "rio"
-      ]
+      ],
+      "coordinates": {
+        "lat": -22.91111,
+        "lon": -43.20556
+      }
     },
     {
       "slug": "ro",
       "name_en": "Romania",
       "subtype": "country",
       "iso_code": "RO",
+      "iso_numeric": "642",
       "parent": null,
       "tlds": [
         "ro"
@@ -2428,6 +2782,7 @@
       "name_en": "Serbia",
       "subtype": "country",
       "iso_code": "RS",
+      "iso_numeric": "688",
       "parent": null,
       "tlds": [
         "rs",
@@ -2439,6 +2794,7 @@
       "name_en": "Russian Federation",
       "subtype": "country",
       "iso_code": "RU",
+      "iso_numeric": "643",
       "parent": null,
       "tlds": [
         "ru",
@@ -2454,13 +2810,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Ruhr",
       "tlds": [
         "ruhr"
-      ]
+      ],
+      "coordinates": {
+        "lat": 51.5,
+        "lon": 7.5
+      }
     },
     {
       "slug": "rw",
       "name_en": "Rwanda",
       "subtype": "country",
       "iso_code": "RW",
+      "iso_numeric": "646",
       "parent": null,
       "tlds": [
         "rw"
@@ -2475,13 +2836,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Ryukyu_Islands",
       "tlds": [
         "ryukyu"
-      ]
+      ],
+      "coordinates": {
+        "lat": 26.33281,
+        "lon": 127.74902
+      }
     },
     {
       "slug": "sa",
       "name_en": "Saudi Arabia",
       "subtype": "country",
       "iso_code": "SA",
+      "iso_numeric": "682",
       "parent": null,
       "tlds": [
         "sa",
@@ -2497,13 +2863,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Saarland",
       "tlds": [
         "saarland"
-      ]
+      ],
+      "coordinates": {
+        "lat": 49.37715,
+        "lon": 6.87838
+      }
     },
     {
       "slug": "sb",
       "name_en": "Solomon Islands",
       "subtype": "country",
       "iso_code": "SB",
+      "iso_numeric": "090",
       "parent": null,
       "tlds": [
         "sb"
@@ -2514,6 +2885,7 @@
       "name_en": "Seychelles",
       "subtype": "country",
       "iso_code": "SC",
+      "iso_numeric": "690",
       "parent": null,
       "tlds": [
         "sc"
@@ -2528,13 +2900,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Scotland",
       "tlds": [
         "scot"
-      ]
+      ],
+      "coordinates": {
+        "lat": 57.0,
+        "lon": -5.0
+      }
     },
     {
       "slug": "sd",
       "name_en": "Sudan",
       "subtype": "country",
       "iso_code": "SD",
+      "iso_numeric": "729",
       "parent": null,
       "tlds": [
         "sd",
@@ -2546,6 +2923,7 @@
       "name_en": "Sweden",
       "subtype": "country",
       "iso_code": "SE",
+      "iso_numeric": "752",
       "parent": null,
       "tlds": [
         "se"
@@ -2556,6 +2934,7 @@
       "name_en": "Singapore",
       "subtype": "country",
       "iso_code": "SG",
+      "iso_numeric": "702",
       "parent": null,
       "tlds": [
         "sg",
@@ -2568,6 +2947,7 @@
       "name_en": "Saint Helena, Ascension and Tristan da Cunha",
       "subtype": "country",
       "iso_code": "SH",
+      "iso_numeric": "654",
       "parent": "gb",
       "tlds": [
         "sh"
@@ -2579,6 +2959,7 @@
       "name_en": "Slovenia",
       "subtype": "country",
       "iso_code": "SI",
+      "iso_numeric": "705",
       "parent": null,
       "tlds": [
         "si"
@@ -2589,6 +2970,7 @@
       "name_en": "Svalbard and Jan Mayen",
       "subtype": "country",
       "iso_code": "SJ",
+      "iso_numeric": "744",
       "parent": "no",
       "tlds": [
         "sj"
@@ -2600,6 +2982,7 @@
       "name_en": "Slovakia",
       "subtype": "country",
       "iso_code": "SK",
+      "iso_numeric": "703",
       "parent": null,
       "tlds": [
         "sk"
@@ -2610,6 +2993,7 @@
       "name_en": "Sierra Leone",
       "subtype": "country",
       "iso_code": "SL",
+      "iso_numeric": "694",
       "parent": null,
       "tlds": [
         "sl"
@@ -2620,6 +3004,7 @@
       "name_en": "San Marino",
       "subtype": "country",
       "iso_code": "SM",
+      "iso_numeric": "674",
       "parent": null,
       "tlds": [
         "sm"
@@ -2630,6 +3015,7 @@
       "name_en": "Senegal",
       "subtype": "country",
       "iso_code": "SN",
+      "iso_numeric": "686",
       "parent": null,
       "tlds": [
         "sn"
@@ -2640,6 +3026,7 @@
       "name_en": "Somalia",
       "subtype": "country",
       "iso_code": "SO",
+      "iso_numeric": "706",
       "parent": null,
       "tlds": [
         "so"
@@ -2650,6 +3037,7 @@
       "name_en": "Suriname",
       "subtype": "country",
       "iso_code": "SR",
+      "iso_numeric": "740",
       "parent": null,
       "tlds": [
         "sr"
@@ -2660,6 +3048,7 @@
       "name_en": "South Sudan",
       "subtype": "country",
       "iso_code": "SS",
+      "iso_numeric": "728",
       "parent": null,
       "tlds": [
         "ss"
@@ -2670,6 +3059,7 @@
       "name_en": "Sao Tome and Principe",
       "subtype": "country",
       "iso_code": "ST",
+      "iso_numeric": "678",
       "parent": null,
       "tlds": [
         "st"
@@ -2684,13 +3074,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Stockholm",
       "tlds": [
         "stockholm"
-      ]
+      ],
+      "coordinates": {
+        "lat": 59.32944,
+        "lon": 18.06861
+      }
     },
     {
       "slug": "su",
       "name_en": "Soviet Union",
       "subtype": "country",
       "iso_code": null,
+      "iso_numeric": null,
       "parent": null,
       "tlds": [
         "su"
@@ -2702,6 +3097,7 @@
       "name_en": "El Salvador",
       "subtype": "country",
       "iso_code": "SV",
+      "iso_numeric": "222",
       "parent": null,
       "tlds": [
         "sv"
@@ -2712,6 +3108,7 @@
       "name_en": "Sint Maarten (Dutch part)",
       "subtype": "country",
       "iso_code": "SX",
+      "iso_numeric": "534",
       "parent": "nl",
       "tlds": [
         "sx"
@@ -2723,6 +3120,7 @@
       "name_en": "Syrian Arab Republic",
       "subtype": "country",
       "iso_code": "SY",
+      "iso_numeric": "760",
       "parent": null,
       "tlds": [
         "sy",
@@ -2738,13 +3136,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Sydney",
       "tlds": [
         "sydney"
-      ]
+      ],
+      "coordinates": {
+        "lat": -33.86778,
+        "lon": 151.21
+      }
     },
     {
       "slug": "sz",
       "name_en": "Eswatini",
       "subtype": "country",
       "iso_code": "SZ",
+      "iso_numeric": "748",
       "parent": null,
       "tlds": [
         "sz"
@@ -2759,7 +3162,11 @@
       "info_link": "https://en.wikipedia.org/wiki/Taipei",
       "tlds": [
         "taipei"
-      ]
+      ],
+      "coordinates": {
+        "lat": 25.0375,
+        "lon": 121.5625
+      }
     },
     {
       "slug": "tatarstan",
@@ -2770,13 +3177,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Tatarstan",
       "tlds": [
         "tatar"
-      ]
+      ],
+      "coordinates": {
+        "lat": 55.55,
+        "lon": 50.93333
+      }
     },
     {
       "slug": "tc",
       "name_en": "Turks and Caicos Islands",
       "subtype": "country",
       "iso_code": "TC",
+      "iso_numeric": "796",
       "parent": "gb",
       "tlds": [
         "tc"
@@ -2788,6 +3200,7 @@
       "name_en": "Chad",
       "subtype": "country",
       "iso_code": "TD",
+      "iso_numeric": "148",
       "parent": null,
       "tlds": [
         "td"
@@ -2798,6 +3211,7 @@
       "name_en": "French Southern Territories",
       "subtype": "country",
       "iso_code": "TF",
+      "iso_numeric": "260",
       "parent": "fr",
       "tlds": [
         "tf"
@@ -2809,6 +3223,7 @@
       "name_en": "Togo",
       "subtype": "country",
       "iso_code": "TG",
+      "iso_numeric": "768",
       "parent": null,
       "tlds": [
         "tg"
@@ -2819,6 +3234,7 @@
       "name_en": "Thailand",
       "subtype": "country",
       "iso_code": "TH",
+      "iso_numeric": "764",
       "parent": null,
       "tlds": [
         "th",
@@ -2830,6 +3246,7 @@
       "name_en": "Tajikistan",
       "subtype": "country",
       "iso_code": "TJ",
+      "iso_numeric": "762",
       "parent": null,
       "tlds": [
         "tj"
@@ -2840,6 +3257,7 @@
       "name_en": "Tokelau",
       "subtype": "country",
       "iso_code": "TK",
+      "iso_numeric": "772",
       "parent": "nz",
       "tlds": [
         "tk"
@@ -2851,6 +3269,7 @@
       "name_en": "Timor-Leste",
       "subtype": "country",
       "iso_code": "TL",
+      "iso_numeric": "626",
       "parent": null,
       "tlds": [
         "tl"
@@ -2861,6 +3280,7 @@
       "name_en": "Turkmenistan",
       "subtype": "country",
       "iso_code": "TM",
+      "iso_numeric": "795",
       "parent": null,
       "tlds": [
         "tm"
@@ -2871,6 +3291,7 @@
       "name_en": "Tunisia",
       "subtype": "country",
       "iso_code": "TN",
+      "iso_numeric": "788",
       "parent": null,
       "tlds": [
         "tn",
@@ -2882,6 +3303,7 @@
       "name_en": "Tonga",
       "subtype": "country",
       "iso_code": "TO",
+      "iso_numeric": "776",
       "parent": null,
       "tlds": [
         "to"
@@ -2896,13 +3318,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Tokyo",
       "tlds": [
         "tokyo"
-      ]
+      ],
+      "coordinates": {
+        "lat": 35.68944,
+        "lon": 139.69167
+      }
     },
     {
       "slug": "tr",
       "name_en": "Türkiye",
       "subtype": "country",
       "iso_code": "TR",
+      "iso_numeric": "792",
       "parent": null,
       "tlds": [
         "tr"
@@ -2913,6 +3340,7 @@
       "name_en": "Trinidad and Tobago",
       "subtype": "country",
       "iso_code": "TT",
+      "iso_numeric": "780",
       "parent": null,
       "tlds": [
         "tt"
@@ -2923,6 +3351,7 @@
       "name_en": "Tuvalu",
       "subtype": "country",
       "iso_code": "TV",
+      "iso_numeric": "798",
       "parent": null,
       "tlds": [
         "tv"
@@ -2933,6 +3362,7 @@
       "name_en": "Taiwan, Province of China",
       "subtype": "country",
       "iso_code": "TW",
+      "iso_numeric": "158",
       "parent": null,
       "tlds": [
         "tw",
@@ -2949,13 +3379,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Tyrol_(state)",
       "tlds": [
         "tirol"
-      ]
+      ],
+      "coordinates": {
+        "lat": 47.26667,
+        "lon": 11.4
+      }
     },
     {
       "slug": "tz",
       "name_en": "Tanzania, United Republic of",
       "subtype": "country",
       "iso_code": "TZ",
+      "iso_numeric": "834",
       "parent": null,
       "tlds": [
         "tz"
@@ -2966,6 +3401,7 @@
       "name_en": "Ukraine",
       "subtype": "country",
       "iso_code": "UA",
+      "iso_numeric": "804",
       "parent": null,
       "tlds": [
         "ua",
@@ -2977,6 +3413,7 @@
       "name_en": "Uganda",
       "subtype": "country",
       "iso_code": "UG",
+      "iso_numeric": "800",
       "parent": null,
       "tlds": [
         "ug"
@@ -2987,6 +3424,7 @@
       "name_en": "United States",
       "subtype": "country",
       "iso_code": "US",
+      "iso_numeric": "840",
       "parent": null,
       "tlds": [
         "us"
@@ -2997,6 +3435,7 @@
       "name_en": "Uruguay",
       "subtype": "country",
       "iso_code": "UY",
+      "iso_numeric": "858",
       "parent": null,
       "tlds": [
         "uy"
@@ -3007,6 +3446,7 @@
       "name_en": "Uzbekistan",
       "subtype": "country",
       "iso_code": "UZ",
+      "iso_numeric": "860",
       "parent": null,
       "tlds": [
         "uz"
@@ -3017,6 +3457,7 @@
       "name_en": "Holy See (Vatican City State)",
       "subtype": "country",
       "iso_code": "VA",
+      "iso_numeric": "336",
       "parent": null,
       "tlds": [
         "va"
@@ -3027,6 +3468,7 @@
       "name_en": "Saint Vincent and the Grenadines",
       "subtype": "country",
       "iso_code": "VC",
+      "iso_numeric": "670",
       "parent": null,
       "tlds": [
         "vc"
@@ -3037,6 +3479,7 @@
       "name_en": "Venezuela, Bolivarian Republic of",
       "subtype": "country",
       "iso_code": "VE",
+      "iso_numeric": "862",
       "parent": null,
       "tlds": [
         "ve"
@@ -3051,13 +3494,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Las_Vegas",
       "tlds": [
         "vegas"
-      ]
+      ],
+      "coordinates": {
+        "lat": 36.16722,
+        "lon": -115.14861
+      }
     },
     {
       "slug": "vg",
       "name_en": "Virgin Islands, British",
       "subtype": "country",
       "iso_code": "VG",
+      "iso_numeric": "092",
       "parent": "gb",
       "tlds": [
         "vg"
@@ -3069,6 +3517,7 @@
       "name_en": "Virgin Islands, U.S.",
       "subtype": "country",
       "iso_code": "VI",
+      "iso_numeric": "850",
       "parent": "us",
       "tlds": [
         "vi"
@@ -3080,6 +3529,7 @@
       "name_en": "Viet Nam",
       "subtype": "country",
       "iso_code": "VN",
+      "iso_numeric": "704",
       "parent": null,
       "tlds": [
         "vn"
@@ -3090,6 +3540,7 @@
       "name_en": "Vanuatu",
       "subtype": "country",
       "iso_code": "VU",
+      "iso_numeric": "548",
       "parent": null,
       "tlds": [
         "vu"
@@ -3105,13 +3556,18 @@
       "tlds": [
         "cymru",
         "wales"
-      ]
+      ],
+      "coordinates": {
+        "lat": 52.35,
+        "lon": -3.63333
+      }
     },
     {
       "slug": "wf",
       "name_en": "Wallis and Futuna",
       "subtype": "country",
       "iso_code": "WF",
+      "iso_numeric": "876",
       "parent": "fr",
       "tlds": [
         "wf"
@@ -3127,13 +3583,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Vienna",
       "tlds": [
         "wien"
-      ]
+      ],
+      "coordinates": {
+        "lat": 48.20833,
+        "lon": 16.3725
+      }
     },
     {
       "slug": "ws",
       "name_en": "Samoa",
       "subtype": "country",
       "iso_code": "WS",
+      "iso_numeric": "882",
       "parent": null,
       "tlds": [
         "ws"
@@ -3144,6 +3605,7 @@
       "name_en": "Yemen",
       "subtype": "country",
       "iso_code": "YE",
+      "iso_numeric": "887",
       "parent": null,
       "tlds": [
         "ye"
@@ -3158,13 +3620,18 @@
       "info_link": "https://en.wikipedia.org/wiki/Yokohama",
       "tlds": [
         "yokohama"
-      ]
+      ],
+      "coordinates": {
+        "lat": 35.45033,
+        "lon": 139.63422
+      }
     },
     {
       "slug": "yt",
       "name_en": "Mayotte",
       "subtype": "country",
       "iso_code": "YT",
+      "iso_numeric": "175",
       "parent": "fr",
       "tlds": [
         "yt"
@@ -3176,6 +3643,7 @@
       "name_en": "South Africa",
       "subtype": "country",
       "iso_code": "ZA",
+      "iso_numeric": "710",
       "parent": null,
       "tlds": [
         "za"
@@ -3186,6 +3654,7 @@
       "name_en": "Zambia",
       "subtype": "country",
       "iso_code": "ZM",
+      "iso_numeric": "894",
       "parent": null,
       "tlds": [
         "zm"
@@ -3197,16 +3666,21 @@
       "subtype": "city",
       "iso_code": null,
       "parent": "ch",
-      "info_link": "https://en.wikipedia.org/wiki/Z%C3%BCrich",
+      "info_link": "https://en.wikipedia.org/wiki/Zurich",
       "tlds": [
         "zuerich"
-      ]
+      ],
+      "coordinates": {
+        "lat": 47.37444,
+        "lon": 8.54111
+      }
     },
     {
       "slug": "zw",
       "name_en": "Zimbabwe",
       "subtype": "country",
       "iso_code": "ZW",
+      "iso_numeric": "716",
       "parent": null,
       "tlds": [
         "zw"
