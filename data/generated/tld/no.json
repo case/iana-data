@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-05-31T03:44:43Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -60,7 +60,7 @@
         "ipv4": [
           {
             "ip": "156.154.101.12",
-            "asn": 12008,
+            "asn": 19905,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -72,7 +72,7 @@
         "ipv4": [
           {
             "ip": "156.154.100.12",
-            "asn": 12008,
+            "asn": 19905,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -80,7 +80,7 @@
         "ipv6": [
           {
             "ip": "2001:502:ad09::12",
-            "asn": 12008,
+            "asn": 19905,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }

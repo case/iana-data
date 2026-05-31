@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-28T03:42:36Z",
+  "publication": "2026-05-31T03:44:43Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -113,7 +113,7 @@
         "ipv4": [
           {
             "ip": "156.154.172.82",
-            "asn": 12008,
+            "asn": 19905,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -121,7 +121,7 @@
         "ipv6": [
           {
             "ip": "2610:a1:1074::1:82",
-            "asn": 12008,
+            "asn": 19905,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -132,7 +132,7 @@
         "ipv4": [
           {
             "ip": "156.154.173.82",
-            "asn": 12008,
+            "asn": 19905,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -140,7 +140,7 @@
         "ipv6": [
           {
             "ip": "2610:a1:1075::1:82",
-            "asn": 12008,
+            "asn": 19905,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -151,7 +151,7 @@
         "ipv4": [
           {
             "ip": "156.154.174.82",
-            "asn": 12008,
+            "asn": 19905,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
@@ -159,7 +159,7 @@
         "ipv6": [
           {
             "ip": "2610:a1:1076::1:82",
-            "asn": 12008,
+            "asn": 19905,
             "as_org": "SECURITYSERVICES",
             "as_country": "US"
           }
