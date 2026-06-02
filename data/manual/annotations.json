@@ -35,6 +35,9 @@
   "brussels": {
     "geographic_scope": "city"
   },
+  "budapest": {
+    "geographic_scope": "city"
+  },
   "bzh": {
     "geographic_scope": "subdivision",
     "cultural_affiliation": "breton"
@@ -58,6 +61,9 @@
   },
   "desi": {
     "cultural_affiliation": "desi"
+  },
+  "doha": {
+    "geographic_scope": "city"
   },
   "dubai": {
     "geographic_scope": "city"

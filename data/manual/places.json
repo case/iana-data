@@ -169,6 +169,16 @@
       "lon": 4.3525
     }
   },
+  "budapest": {
+    "subtype": "city",
+    "name_en": "Budapest",
+    "iso_code": null,
+    "parent": "hu",
+    "info_link": "https://en.wikipedia.org/wiki/Budapest",
+    "tlds": [
+      "budapest"
+    ]
+  },
   "capetown": {
     "subtype": "city",
     "name_en": "Cape Town",
@@ -225,6 +235,16 @@
       "lat": 42.15,
       "lon": 9.08333
     }
+  },
+  "doha": {
+    "subtype": "city",
+    "name_en": "Doha",
+    "iso_code": null,
+    "parent": "qa",
+    "info_link": "https://en.wikipedia.org/wiki/Doha",
+    "tlds": [
+      "doha"
+    ]
   },
   "dubai": {
     "subtype": "city",

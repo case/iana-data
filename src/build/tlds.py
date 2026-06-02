@@ -289,6 +289,7 @@ def build_tlds_json(
             lambda: build_places_json(
                 tlds,
                 manual_places,
+                manual_annotations,
                 dependent_territories,
                 country_coordinates,
                 output_paths.places_json,
