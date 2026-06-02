@@ -8,6 +8,7 @@ import pytest
 from _pytest.monkeypatch import MonkeyPatch
 
 from src.build.places import (
+    _build_countries,
     _manual_records,
     _ordered_place,
     _overlay_country_coordinates,
@@ -106,6 +107,27 @@ def test_overlay_country_coordinates_adds_fields_without_touching_identity():
     assert countries["cc"]["coordinates"] == {"lat": -12.17, "lon": 96.83}
     assert countries["cc"]["info_link"].endswith("Cocos_(Keeling)_Islands")
     assert countries["cc"]["iso_numeric"] == "166"  # identity stays derived
+
+
+def test_build_countries_folds_gtld_into_its_country():
+    # A delegated gTLD in gtld_country joins the country's record (swiss -> ch),
+    # alongside the ccTLD, with no standalone record of its own.
+    tlds = [{"tld": "ch", "delegated": True}, {"tld": "swiss", "delegated": True}]
+    countries = _build_countries(tlds, set(), {"swiss": "ch"}, {})
+    assert sorted(countries["ch"]["tlds"]) == ["ch", "swiss"]
+    assert "swiss" not in countries
+
+
+def test_build_countries_skips_unknown_fold_target(caplog):
+    # A fold target that is not an ISO country is logged and skipped, never
+    # fabricated into a junk country record. The same case is a hard failure via
+    # test_places_integrity.test_fold_into_country_consistent_and_resolves.
+    tlds = [{"tld": "swiss", "delegated": True}]
+    with caplog.at_level("WARNING"):
+        countries = _build_countries(tlds, set(), {"swiss": "zz"}, {})
+    assert "zz" not in countries
+    assert "swiss" not in countries
+    assert "swiss" in caplog.text
 
 
 def test_overlay_country_coordinates_skips_unknown_slug(caplog):

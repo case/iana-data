@@ -1,6 +1,11 @@
 """Referential-integrity tests for places.json: no orphan records, every
 geographic_scope TLD lands in a matching place, every parent/sovereign FK resolves."""
 
+import pycountry
+
+from src.parse.country import is_cctld
+from src.parse.manual_annotations import parse_manual_annotations
+
 ISO_DESIGNATIONS = {
     "dependent_territory",
     "exceptionally_reserved",
@@ -19,6 +24,17 @@ def _tld_to_place(typed_graph):
         for tld in place["tlds"]:
             mapping[tld] = place["slug"]
     return mapping
+
+
+def _explicitly_scoped_tlds():
+    """TLDs carrying an explicit geographic_scope in annotations.json: the
+    deliberate-curation marker. Excludes ccTLDs whose country scope the build
+    derives mechanically (an/tp/eh/...), which are not listed in the file."""
+    return {
+        tld
+        for tld, fields in parse_manual_annotations().items()
+        if fields.get("geographic_scope")
+    }
 
 
 def test_every_place_has_at_least_one_tld(typed_graph):
@@ -41,8 +57,13 @@ def test_no_tld_claimed_by_two_places(typed_graph):
     assert dupes == [], f"TLDs claimed by two places: {dupes}"
 
 
-def test_place_tlds_are_ascii_delegated_keys_in_tlds_json(typed_graph):
-    """Every TLD in a place is an A-label, a real tlds.json key, AND delegated."""
+def test_place_tlds_are_ascii_known_keys_in_tlds_json(typed_graph):
+    """Every TLD in a place is an A-label and a real tlds.json key. It must be
+    delegated, unless it is a deliberately-curated geographic TLD (one carrying an
+    explicit geographic_scope in annotations.json). That exemption lets retired
+    place TLDs (e.g. budapest, doha) keep a record while still rejecting any other
+    undelegated TLD that drifts into a place."""
+    scoped = _explicitly_scoped_tlds()
     bad = []
     for place in _places(typed_graph):
         for tld in place["tlds"]:
@@ -51,8 +72,8 @@ def test_place_tlds_are_ascii_delegated_keys_in_tlds_json(typed_graph):
                 bad.append((place["slug"], tld, "non-ascii"))
             elif entry is None:
                 bad.append((place["slug"], tld, "unknown-tld"))
-            elif not entry.get("delegated"):
-                bad.append((place["slug"], tld, "not-delegated"))
+            elif not entry.get("delegated") and tld not in scoped:
+                bad.append((place["slug"], tld, "undelegated-and-unannotated"))
 
     assert bad == [], f"invalid place TLDs: {bad}"
 
@@ -62,15 +83,18 @@ def test_every_geographic_scope_tld_lands_in_a_matching_place(typed_graph):
     subtype X. Catches orphaned geographic TLDs and subtype drift."""
     tld_to_place = _tld_to_place(typed_graph)
     by_slug = {p["slug"]: p for p in _places(typed_graph)}
+    scoped = _explicitly_scoped_tlds()
 
     problems = []
     for tld, entry in typed_graph.tlds.items():
-        # Retired/non-delegated ccTLDs (an, tp, eh, ...) still carry a derived
-        # country scope but are deliberately absent from places.json.
-        if not entry.get("delegated"):
-            continue
         scope = entry.get("annotations", {}).get("geographic_scope")
         if not scope:
+            continue
+        # Retired/non-delegated ccTLDs (an, tp, eh, ...) carry a derived country
+        # scope and are deliberately absent from places.json: skip those. A TLD
+        # whose scope is explicitly annotated must land in a place even when
+        # undelegated (e.g. the retired city gTLDs budapest, doha).
+        if not entry.get("delegated") and tld not in scoped:
             continue
         place_slug = tld_to_place.get(tld)
         if place_slug is None:
@@ -182,6 +206,56 @@ def test_idn_cctld_folds_into_its_country(typed_graph):
     ru = next(p for p in _places(typed_graph) if p["slug"] == "ru")
     assert "xn--p1ai" in ru["tlds"]
     assert not any(p["slug"] == "xn--p1ai" for p in _places(typed_graph))
+
+
+def test_gtld_folds_into_its_country(typed_graph):
+    """A culture/community gTLD with a fold_into_country annotation (swiss -> ch,
+    kiwi -> nz) joins that country's record, not a record of its own (mirrors the
+    IDN fold). Derived from annotations.json so new folds are covered without edits."""
+    by_slug = {p["slug"]: p for p in _places(typed_graph)}
+    folds = {
+        tld: fields["fold_into_country"].lower()
+        for tld, fields in parse_manual_annotations().items()
+        if fields.get("fold_into_country")
+    }
+    assert folds, "expected at least one fold_into_country entry (swiss, kiwi)"
+    for gtld, country in folds.items():
+        assert gtld in by_slug[country]["tlds"], f"{gtld} not folded into {country}"
+        assert not any(p["slug"] == gtld for p in _places(typed_graph)), (
+            f"{gtld} should not also have a standalone place"
+        )
+
+
+def test_fold_into_country_consistent_and_resolves():
+    """fold_into_country and geographic_scope stay in sync, and the target is a
+    real ISO country. Guards both desync directions between annotations.json and
+    the src/build/places.py fold: a fold without country scope, a country-scoped
+    gTLD with no fold target, and a fold naming a non-country."""
+    problems = []
+    for tld, fields in parse_manual_annotations().items():
+        fold = fields.get("fold_into_country")
+        scope = fields.get("geographic_scope")
+        if fold:
+            if scope != "country":
+                problems.append((tld, f"fold_into_country but scope={scope!r}"))
+            if pycountry.countries.get(alpha_2=fold.upper()) is None:
+                problems.append((tld, f"fold target {fold!r} is not an ISO country"))
+        if scope == "country" and not is_cctld(tld) and not fold:
+            problems.append((tld, "country-scoped gTLD without fold_into_country"))
+    assert problems == [], f"fold_into_country inconsistencies: {problems}"
+
+
+def test_retired_city_gtlds_keep_their_own_place(typed_graph):
+    """Retired (undelegated) city gTLDs still carry a full city place with a
+    sovereign parent, even though they have left the root zone."""
+    by_slug = {p["slug"]: p for p in _places(typed_graph)}
+    for slug, parent in (("budapest", "hu"), ("doha", "qa")):
+        place = by_slug.get(slug)
+        assert place is not None, f"places.json missing retired-city record {slug!r}"
+        assert place["subtype"] == "city"
+        assert place["parent"] == parent
+        assert place["tlds"] == [slug]
+        assert typed_graph.tlds[slug].get("delegated") is False
 
 
 def test_places_sorted_unique_with_envelope(typed_graph):

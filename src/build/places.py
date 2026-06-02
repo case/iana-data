@@ -51,6 +51,7 @@ def _ordered_place(record: dict) -> dict:
 def build_places_json(
     tlds: list[dict],
     manual_places: dict[str, dict],
+    manual_annotations: dict[str, dict],
     dependent_territories: dict[str, list[str]],
     country_coordinates: dict[str, dict],
     output_path: Path,
@@ -60,6 +61,8 @@ def build_places_json(
     Args:
         tlds: The built TLD entries (source of country reverse-index membership).
         manual_places: Editorial subdivisions/cities/supranational, keyed by slug.
+        manual_annotations: Per-TLD editorial annotations; ``fold_into_country``
+            entries fold a gTLD into a country place (e.g. ``swiss`` -> ``ch``).
         dependent_territories: Map of sovereign slug to its list of dependent
             territory slugs (e.g. ``{"gb": ["ai", "bm", ...], ...}``).
         country_coordinates: Point overlay keyed by slug (info_link + fetched
@@ -70,7 +73,12 @@ def build_places_json(
         The ``(changed, status)`` tuple from ``write_json_if_changed``.
     """
     claimed = {tld for rec in manual_places.values() for tld in rec["tlds"]}
-    countries = _build_countries(tlds, claimed, dependent_territories)
+    gtld_country = {
+        tld: fields["fold_into_country"].lower()
+        for tld, fields in manual_annotations.items()
+        if fields.get("fold_into_country")
+    }
+    countries = _build_countries(tlds, claimed, gtld_country, dependent_territories)
     _overlay_country_coordinates(countries, country_coordinates)
 
     records = [
@@ -96,12 +104,16 @@ def build_places_json(
 def _build_countries(
     tlds: list[dict],
     claimed: set[str],
+    gtld_country: dict[str, str],
     dependent_territories: dict[str, list[str]],
 ) -> dict[str, dict]:
     """Build country records keyed by ISO 3166-1 alpha-2 slug.
 
     Every delegated ccTLD folds into one record by its alpha-2 (uk -> gb; IDN
-    ccTLDs join via tld_iso). TLDs claimed by an editorial place are skipped so
+    ccTLDs join via tld_iso). A delegated gTLD listed in ``gtld_country`` folds
+    into the named country (e.g. swiss -> ch); it has no standalone place, so if
+    it ever retires the fold stops and the forward integrity test fails by design,
+    forcing a human decision. TLDs claimed by an editorial place are skipped so
     they never get a spurious country record (e.g. .eu is supranational).
     """
     by_slug: dict[str, dict] = {}
@@ -129,6 +141,16 @@ def _build_countries(
         elif tld.startswith("xn--") and entry.get("tld_iso"):
             iso = entry["tld_iso"].lower()
             ensure("gb" if iso == "uk" else iso)["tlds"].append(tld)
+        elif tld in gtld_country:
+            target = gtld_country[tld]
+            if pycountry.countries.get(alpha_2=target.upper()) is None:
+                logger.warning(
+                    "fold_into_country: %r names unknown country %r, skipping",
+                    tld,
+                    target,
+                )
+                continue
+            ensure(target)["tlds"].append(tld)
 
     for slug, (designation, parent) in _SPECIAL.items():
         if slug in by_slug:

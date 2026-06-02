@@ -104,6 +104,8 @@
     "geographic_scope": "city"
   },
   "kiwi": {
+    "geographic_scope": "country",
+    "fold_into_country": "nz",
     "cultural_affiliation": "kiwi"
   },
   "koeln": {
@@ -174,6 +176,8 @@
     "geographic_scope": "city"
   },
   "swiss": {
+    "geographic_scope": "country",
+    "fold_into_country": "ch",
     "cultural_affiliation": "swiss"
   },
   "sydney": {
