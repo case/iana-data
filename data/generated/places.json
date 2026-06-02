@@ -1,6 +1,6 @@
 {
   "description": "Places associated with TLDs in the IANA root zone (countries, dependent territories, subdivisions, cities, and supranational regions), each with a reverse index of its TLDs. Country slugs are ISO 3166-1 alpha-2.",
-  "publication": "2026-05-30T15:48:01Z",
+  "publication": "2026-06-02T15:23:31Z",
   "sources": [
     "pycountry (ISO 3166-1 / 3166-2)",
     "data/manual/places.json (editorial)",
@@ -561,6 +561,21 @@
     },
     {
       "coordinates": {
+        "lat": 47.49833,
+        "lon": 19.04083
+      },
+      "info_link": "https://en.wikipedia.org/wiki/Budapest",
+      "iso_code": null,
+      "name_en": "Budapest",
+      "parent": "hu",
+      "slug": "budapest",
+      "subtype": "city",
+      "tlds": [
+        "budapest"
+      ]
+    },
+    {
+      "coordinates": {
         "lat": -54.42,
         "lon": 3.36
       },
@@ -709,7 +724,8 @@
       "slug": "ch",
       "subtype": "country",
       "tlds": [
-        "ch"
+        "ch",
+        "swiss"
       ]
     },
     {
@@ -949,6 +965,21 @@
       "subtype": "country",
       "tlds": [
         "do"
+      ]
+    },
+    {
+      "coordinates": {
+        "lat": 25.28611,
+        "lon": 51.52944
+      },
+      "info_link": "https://en.wikipedia.org/wiki/Doha",
+      "iso_code": null,
+      "name_en": "Doha",
+      "parent": "qa",
+      "slug": "doha",
+      "subtype": "city",
+      "tlds": [
+        "doha"
       ]
     },
     {
@@ -2533,6 +2564,7 @@
       "slug": "nz",
       "subtype": "country",
       "tlds": [
+        "kiwi",
         "nz"
       ]
     },

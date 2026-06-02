@@ -177,7 +177,11 @@
     "info_link": "https://en.wikipedia.org/wiki/Budapest",
     "tlds": [
       "budapest"
-    ]
+    ],
+    "coordinates": {
+      "lat": 47.49833,
+      "lon": 19.04083
+    }
   },
   "capetown": {
     "subtype": "city",
@@ -244,7 +248,11 @@
     "info_link": "https://en.wikipedia.org/wiki/Doha",
     "tlds": [
       "doha"
-    ]
+    ],
+    "coordinates": {
+      "lat": 25.28611,
+      "lon": 51.52944
+    }
   },
   "dubai": {
     "subtype": "city",
