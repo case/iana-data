@@ -768,12 +768,13 @@
       ],
       "asn": [
         "VERISIGN-AS",
-        "VGRS-AC25",
         "VRSN-AC28",
         "VRSN-AC50-340"
       ]
     },
-    "aliases": [],
+    "aliases": [
+      "VGRS-AC25"
+    ],
     "homepage": "https://www.verisign.com/"
   },
   {
