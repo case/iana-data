@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-06-03T03:45:29Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -17,12 +17,12 @@
         "tech": "Nigeria Internet Registration Association"
       }
     },
-    "registry_url": "http://www.nira.org.ng/",
+    "registry_url": "https://www.nira.org.ng/",
     "whois_server": "whois.nic.net.ng",
-    "rdap_server": "http://rdap.nic.net.ng",
+    "rdap_server": "https://rdap.nic.net.ng",
     "tld_created": "1995-03-15",
     "tld_updated": [
-      "2026-02-14"
+      "2026-06-02"
     ],
     "annotations": {
       "rdap_source": "IANA",
