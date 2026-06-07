@@ -9,6 +9,7 @@ Agents: consult before suggesting layout, naming, dependencies, vendors, or conv
 - [Architecture](architecture.md) - current implementation: stack, layout, conventions
 
 ## Log (newest first)
+- [2026-06-07 Nightly rebuild picks up manual curation](log/2026-06-07-nightly-manual-regen.md) - update-data.yaml always rebuilds (--all on IANA source change, else --preserve-asn) so data/manual/ edits propagate to data/generated/ nightly without ASN churn; was gated on data/source/ only. Keep local iptoasn fresh or local passes while CI (daily artifact) fails
 - [2026-06-07 Verisign per-instance ASN block](log/2026-06-07-verisign-asn-block.md) - AS36616-36632 are all Verisign, one ASN per authoritative-server instance ([letter]GTLD for gtld-servers.net letters a-m plus X/Y/Z, AROOT for the roots it runs); each is a separate opaque as_org string, folded into the one VeriSign record as it appears (HGTLD/AS36623 added; other siblings not yet in data)
 - [2026-06-07 as_org transit-backbone operator mapping](log/2026-06-07-asn-transit-operator.md) - fold a telecom-backbone as_org string into a DNS operator's source_names.asn only when hostname evidence is unambiguous and that ASN carries only that operator (ZDNS in China Unicom AS4837 / China Mobile AS56048); mapping is global, so misattribution is the risk
 - [2026-05-30 bin/build requires explicit mode](log/2026-05-30-build-modes.md) - bare bin/build prints help; --preserve-asn (local, keep committed ASN) vs --all (full ASN refresh, CI); stops silent ASN churn from a stale iptoasn snapshot

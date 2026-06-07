@@ -94,6 +94,7 @@ jobs:
       # Download iptoasn artifact (uploaded by update-iptoasn workflow)
       - name: Get latest iptoasn workflow run
         id: get-iptoasn-run
+        continue-on-error: true
         run: |
           RUN_ID=$(gh run list --workflow=update-iptoasn.yaml --status=success --limit=1 --json databaseId -q '.[0].databaseId')
           if [ -z "$RUN_ID" ]; then
@@ -105,8 +106,11 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
 
+      # continue-on-error so a failed iptoasn artifact doesn't block a --preserve-asn
+      # rebuild (doesn't need it); a bad --all build is caught by the tests below.
       - name: Download iptoasn artifact
         id: download-iptoasn
+        continue-on-error: true
         uses: actions/download-artifact@v8
         with:
           pattern: iptoasn-*
@@ -195,16 +199,26 @@ jobs:
           # Check if data/source/ has any changes (not just metadata.json)
           if git diff --quiet data/source/; then
             echo "Source files unchanged (timestamp updates only)"
-            echo "source_changed=false" >> $GITHUB_OUTPUT
+            echo "source_changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "Source files have content changes"
-            echo "source_changed=true" >> $GITHUB_OUTPUT
+            echo "source_changed=true" >> "$GITHUB_OUTPUT"
           fi
 
+      # Always rebuild so manual curation (data/manual/) propagates, not just IANA
+      # source changes. --all on source change (ASN refresh), else --preserve-asn.
       - name: Build tlds.json
-        if: steps.source-check.outputs.source_changed == 'true'
         id: build
-        run: ./bin/build --all
+        env:
+          SOURCE_CHANGED: ${{ steps.source-check.outputs.source_changed }}
+        run: |
+          if [ "$SOURCE_CHANGED" = "true" ]; then
+            echo "IANA source changed: full build with ASN refresh"
+            ./bin/build --all
+          else
+            echo "No IANA source change: regenerate from manual curation, preserving ASN"
+            ./bin/build --preserve-asn
+          fi
 
       - name: Notification if build fails
         if: failure() && steps.build.outcome == 'failure'
@@ -215,11 +229,13 @@ jobs:
           title: "IANA data - tlds.json build failed"
           message: "❌ Failed to build tlds.json"
 
+      # Build always runs now, so always test before committing a regenerated diff.
       - name: Run tests
         id: run-tests
-        if: steps.source-check.outputs.source_changed == 'true'
         run: |
           set -o pipefail
+          # Intentional pipe to tee; SC2266 misreads it as a mistaken ||.
+          # shellcheck disable=SC2266
           bin/test 2>&1 | tee test-output.log
 
       - name: Notification if tests fail
@@ -236,38 +252,50 @@ jobs:
         if: always()
         run: |
           if ! git diff --exit-code data/; then
-            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "changed=true" >> "$GITHUB_OUTPUT"
             # Get list of changed files in data/ directory
             CHANGED_FILES=$(git diff --name-only data/ | sed 's|^data/source/||' | sed 's|^data/generated/||')
-            echo "files<<EOF" >> $GITHUB_OUTPUT
-            echo "$CHANGED_FILES" >> $GITHUB_OUTPUT
-            echo "EOF" >> $GITHUB_OUTPUT
+            {
+              echo "files<<EOF"
+              echo "$CHANGED_FILES"
+              echo "EOF"
+            } >> "$GITHUB_OUTPUT"
           fi
 
+      # run-tests.outcome must be success (not just "not failure"): a failed build
+      # skips tests, and "skipped != failure" would otherwise commit partial data.
       - name: Commit and push changes
-        if: always() && steps.git-check.outputs.changed == 'true' && steps.run-tests.outcome != 'failure'
+        id: commit-push
+        if: always() && steps.git-check.outputs.changed == 'true' && steps.run-tests.outcome == 'success'
+        env:
+          SOURCE_CHANGED: ${{ steps.source-check.outputs.source_changed }}
+          CHANGED_FILES: ${{ steps.git-check.outputs.files }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/
 
-          # Build commit message with actual changed files
-          COMMIT_MSG="Update IANA source data files"
-          if [ -n "${{ steps.git-check.outputs.files }}" ]; then
+          # Build commit message: distinguish a source refresh from a manual-data regen.
+          if [ "$SOURCE_CHANGED" = "true" ]; then
+            COMMIT_MSG="Update IANA source data files"
+          else
+            COMMIT_MSG="Regenerate data from manual curation"
+          fi
+          if [ -n "$CHANGED_FILES" ]; then
             COMMIT_MSG="${COMMIT_MSG}
 
           Changed files:"
             while IFS= read -r file; do
               COMMIT_MSG="${COMMIT_MSG}
           - ${file}"
-            done <<< "${{ steps.git-check.outputs.files }}"
+            done <<< "$CHANGED_FILES"
           fi
 
           git commit -m "${COMMIT_MSG}"
           git push
 
       - name: Notification if data committed
-        if: always() && steps.git-check.outputs.changed == 'true'
+        if: steps.commit-push.outcome == 'success'
         uses: ./.github/actions/pushover
         with:
           pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
@@ -276,7 +304,7 @@ jobs:
           message: "✅ Successfully updated and committed IANA data"
 
       - name: Email notification if data committed
-        if: always() && steps.git-check.outputs.changed == 'true'
+        if: steps.commit-push.outcome == 'success'
         uses: case/actions-email@v1
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
