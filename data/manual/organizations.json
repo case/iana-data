@@ -15,6 +15,17 @@
     "homepage": "https://www.afnic.fr/"
   },
   {
+    "display_name": "AFRINIC",
+    "slug": "afrinic",
+    "source_names": {
+      "asn": [
+        "AFRINIC-ANYCAST"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://afrinic.net/"
+  },
+  {
     "display_name": "Amazon",
     "slug": "amazon",
     "source_names": {
@@ -36,6 +47,17 @@
       "Amazon Registry"
     ],
     "homepage": "https://www.registry.amazon/"
+  },
+  {
+    "display_name": "APNIC",
+    "slug": "apnic",
+    "source_names": {
+      "asn": [
+        "APNIC-ANYCAST APNIC ANYCAST ASN"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.apnic.net/"
   },
   {
     "display_name": "Apple",
@@ -313,6 +335,17 @@
     "homepage": "https://registry.google/"
   },
   {
+    "display_name": "Gransy",
+    "slug": "gransy",
+    "source_names": {
+      "asn": [
+        "GRANSY Gransy s.r.o. gransy.com"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://gransy.com/"
+  },
+  {
     "display_name": "GRS Domains",
     "slug": "grs-domains",
     "source_names": {
@@ -539,6 +572,32 @@
     "homepage": "https://www.microsoft.com/"
   },
   {
+    "display_name": "Netnod AB",
+    "slug": "netnod",
+    "source_names": {
+      "asn": [
+        "NETNOD-IX Netnod AB",
+        "NETNOD-NDS $Id: aut-num_AS56908,v 1.1 20160307 11:15:51 mem Exp $",
+        "NETNOD-GBG Netnod Equipment located at IX in Gothenburg",
+        "NETNOD-SVL Netnod Equipment located at IX in Sundsvall",
+        "NETNOD-LUL Netnod Equipment located at IX in Lulea"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.netnod.se/"
+  },
+  {
+    "display_name": "NIC.br",
+    "slug": "nic-br",
+    "source_names": {
+      "asn": [
+        "Nucleo de Inf. e Coord. do Ponto BR - NIC."
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://nic.br/"
+  },
+  {
     "display_name": "NIXI",
     "slug": "nixi",
     "source_names": {
@@ -621,6 +680,29 @@
     "homepage": "https://www.rcodezero.at/"
   },
   {
+    "display_name": "RGnet",
+    "slug": "rgnet",
+    "source_names": {
+      "asn": [
+        "RGNET-SEA RGnet Seattle Westin"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://rg.net/"
+  },
+  {
+    "display_name": "RIPE NCC",
+    "slug": "ripe-ncc",
+    "source_names": {
+      "asn": [
+        "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+        "K-ROOT-SERVER Reseaux IP Europeens Network Coordination Centre RIPE NCC"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.ripe.net/"
+  },
+  {
     "display_name": "Second Genistry",
     "slug": "second-genistry",
     "source_names": {
@@ -691,6 +773,17 @@
     },
     "aliases": [],
     "homepage": "https://www.stellantis.com/"
+  },
+  {
+    "display_name": "Teleinfo",
+    "slug": "teleinfo",
+    "source_names": {
+      "asn": [
+        "CAICT-AS-AP China Academy of Information and Communications Technology"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.teleinfo.cn/"
   },
   {
     "display_name": "TJX",
@@ -767,6 +860,7 @@
         "VeriSign, Inc."
       ],
       "asn": [
+        "HGTLD",
         "VERISIGN-AS",
         "VRSN-AC28",
         "VRSN-AC50-340"
@@ -833,7 +927,9 @@
         "ZDNS, Ltd."
       ],
       "asn": [
-        "ZDNS Internet Domain Name System Beijing Engineering Resrarch Center Ltd."
+        "ZDNS Internet Domain Name System Beijing Engineering Resrarch Center Ltd.",
+        "CHINA169-BACKBONE CHINA UNICOM China169 Backbone",
+        "CMNET-BEIJING-AP China Mobile Communicaitons Corporation"
       ]
     },
     "aliases": [],
