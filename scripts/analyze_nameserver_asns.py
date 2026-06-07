@@ -17,7 +17,22 @@ from pathlib import Path
 # Add project root to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from src.config import MANUAL_DIR, TLDS_OUTPUT_FILE
+from src.config import TLDS_OUTPUT_FILE
+from src.parse.organizations import (
+    OrgResolver,
+    build_resolver,
+    parse_organizations_manual,
+)
+
+
+def friendly_name(resolver: OrgResolver, as_org: str) -> str | None:
+    """Return the org display_name a raw AS-org string resolves to, or None.
+
+    Mirrors the build's matching exactly: organizations.json friendly names
+    resolve by exact ``as_org`` string match (see src/build/organizations.py).
+    """
+    org = resolver.resolve("asn", as_org)
+    return org["display_name"] if org else None
 
 
 @dataclass
@@ -101,7 +116,7 @@ def print_section(title: str) -> None:
     print("=" * 70)
 
 
-def analyze_concentration(profiles: list[TLDASNProfile]) -> None:
+def analyze_concentration(profiles: list[TLDASNProfile], resolver: OrgResolver) -> None:
     """Analyze ASN concentration across TLDs."""
     print_section("ASN CONCENTRATION ANALYSIS")
 
@@ -117,15 +132,20 @@ def analyze_concentration(profiles: list[TLDASNProfile]) -> None:
     # Sort by TLD count
     sorted_asns = sorted(asn_to_tlds.items(), key=lambda x: len(x[1]), reverse=True)
 
-    print("\nTop 20 ASNs by TLD count:")
-    print("-" * 70)
-    print(f"{'Rank':<5} {'ASN':<10} {'TLDs':<6} {'Organization':<30} {'Country'}")
-    print("-" * 70)
+    print("\nTop 20 ASNs by TLD count (friendly name from organizations.json):")
+    print("-" * 90)
+    print(
+        f"{'Rank':<5} {'ASN':<8} {'TLDs':<6} {'Friendly Name':<22} {'AS Org':<30} {'Country'}"
+    )
+    print("-" * 90)
 
     for rank, (asn, tlds) in enumerate(sorted_asns[:20], 1):
         info = asn_to_info.get(asn, ASNInfo(asn, "", ""))
         org_display = info.org[:28] + ".." if len(info.org) > 30 else info.org
-        print(f"{rank:<5} {asn:<10} {len(tlds):<6} {org_display:<30} {info.country}")
+        friendly = friendly_name(resolver, info.org) or "—"
+        print(
+            f"{rank:<5} {asn:<8} {len(tlds):<6} {friendly:<22} {org_display:<30} {info.country}"
+        )
 
     # Summary stats
     total_asns = len(asn_to_tlds)
@@ -310,89 +330,84 @@ def analyze_ipv4_vs_ipv6(profiles: list[TLDASNProfile]) -> None:
     print("  - ASN differences between protocol versions")
 
 
-def load_as_org_aliases() -> dict[str, str]:
-    """Load AS org aliases and return reverse lookup (as_org -> canonical alias)."""
-    aliases_path = Path(MANUAL_DIR) / "as-org-aliases.json"
-    if not aliases_path.exists():
-        return {}
+def analyze_friendly_name_coverage(
+    profiles: list[TLDASNProfile],
+    resolver: OrgResolver,
+    manual_orgs: list[dict],
+) -> None:
+    """Report friendly-name coverage and the top unnamed ASNs by TLD usage.
 
-    with open(aliases_path) as f:
-        data = json.load(f)
+    A friendly name covers an AS org when its raw ``as_org`` string resolves via
+    organizations.json (source_names.asn). Uncovered orgs are ranked by distinct
+    TLDs served, so the highest-impact names to add surface first.
+    """
+    print_section("FRIENDLY-NAME COVERAGE (organizations.json)")
 
-    reverse_lookup: dict[str, str] = {}
-    for alias, entries in data.get("asOrgAliases", {}).items():
-        for entry in entries:
-            name = entry.get("name")
-            if name:
-                reverse_lookup[name] = alias
+    # Aggregate per raw AS-org string: which TLDs use it, which ASNs it spans.
+    org_tlds: dict[str, set[str]] = defaultdict(set)
+    org_asns: dict[str, set[int]] = defaultdict(set)
+    org_country: dict[str, str] = {}
+    for profile in profiles:
+        for asn, info in profile.asn_details.items():
+            if not info.org:
+                continue
+            org_tlds[info.org].add(profile.tld)
+            org_asns[info.org].add(asn)
+            org_country.setdefault(info.org, info.country)
 
-    return reverse_lookup
-
-
-def analyze_as_org_alias_coverage(profiles: list[TLDASNProfile]) -> None:
-    """Analyze what percentage of AS org occurrences are covered by our aliases."""
-    print_section("AS ORG ALIAS COVERAGE")
-
-    # Load aliases
-    aliases = load_as_org_aliases()
-    if not aliases:
-        print("\nNo as-org-aliases.json file found.")
+    if not org_tlds:
+        print("\nNo AS-org data found in the TLD set.")
         return
 
-    # Count all AS org occurrences
-    as_org_counts: Counter[str] = Counter()
-    for profile in profiles:
-        for info in profile.asn_details.values():
-            if info.org:
-                as_org_counts[info.org] += 1
-
-    total_occurrences = sum(as_org_counts.values())
-    unique_as_orgs = len(as_org_counts)
-
-    # Count covered occurrences
-    covered_occurrences = 0
+    # Split into covered/uncovered and tally TLD associations by friendly name.
+    total_assoc = sum(len(tlds) for tlds in org_tlds.values())
+    covered_assoc = 0
+    by_name_assoc: Counter[str] = Counter()
     covered_unique = 0
-    uncovered_orgs: Counter[str] = Counter()
+    uncovered: list[tuple[str, set[str], set[int], str]] = []
 
-    for as_org, count in as_org_counts.items():
-        if as_org in aliases:
-            covered_occurrences += count
+    for as_org, tlds in org_tlds.items():
+        name = friendly_name(resolver, as_org)
+        if name is not None:
+            covered_assoc += len(tlds)
             covered_unique += 1
+            by_name_assoc[name] += len(tlds)
         else:
-            uncovered_orgs[as_org] = count
+            uncovered.append(
+                (as_org, tlds, org_asns[as_org], org_country.get(as_org, ""))
+            )
 
-    coverage_pct = (
-        100 * covered_occurrences / total_occurrences if total_occurrences > 0 else 0
-    )
-    unique_coverage_pct = (
-        100 * covered_unique / unique_as_orgs if unique_as_orgs > 0 else 0
-    )
+    unique_orgs = len(org_tlds)
+    assoc_pct = 100 * covered_assoc / total_assoc if total_assoc else 0
+    unique_pct = 100 * covered_unique / unique_orgs if unique_orgs else 0
 
-    print(f"\nAS Org Aliases loaded: {len(aliases)}")
-    print(f"\nTotal AS org occurrences in data: {total_occurrences}")
-    print(f"Covered by aliases: {covered_occurrences} ({coverage_pct:.1f}%)")
-    print(f"\nUnique AS orgs in data: {unique_as_orgs}")
-    print(f"Covered by aliases: {covered_unique} ({unique_coverage_pct:.1f}%)")
+    defined = sum(1 for o in manual_orgs if o.get("source_names", {}).get("asn"))
+    print(f"\nOrgs in organizations.json with ASN source_names: {defined}")
+    print(f"\nUnique AS orgs in TLD data: {unique_orgs}")
+    print(f"  With a friendly name: {covered_unique} ({unique_pct:.1f}%)")
+    print(f"  Without a friendly name: {len(uncovered)}")
+    print(f"\nTLD-ASN associations: {total_assoc}")
+    print(f"  Covered by a friendly name: {covered_assoc} ({assoc_pct:.1f}%)")
 
-    # Show coverage by canonical alias
-    print("\nCoverage by canonical alias:")
+    print("\nCoverage by friendly name (by TLD associations):")
     print("-" * 60)
-    alias_coverage: Counter[str] = Counter()
-    for as_org, count in as_org_counts.items():
-        if as_org in aliases:
-            alias_coverage[aliases[as_org]] += count
+    for name, count in by_name_assoc.most_common():
+        pct = 100 * count / total_assoc
+        print(f"  {name:<28} {count:>6} assoc ({pct:>5.1f}%)")
 
-    for alias, count in alias_coverage.most_common():
-        pct = 100 * count / total_occurrences
-        print(f"  {alias:<25} {count:>6} occurrences ({pct:>5.1f}%)")
-
-    # Show top uncovered AS orgs
-    print("\nTop 15 uncovered AS orgs (candidates for aliasing):")
-    print("-" * 60)
-    for as_org, count in uncovered_orgs.most_common(15):
-        pct = 100 * count / total_occurrences
-        org_display = as_org[:45] + ".." if len(as_org) > 47 else as_org
-        print(f"  {count:>5} ({pct:>4.1f}%) {org_display}")
+    # The actionable list: unnamed orgs ranked by distinct TLDs served.
+    uncovered.sort(key=lambda item: len(item[1]), reverse=True)
+    print("\nTop 25 unnamed AS orgs (add these to organizations.json first):")
+    print("-" * 90)
+    print(f"{'TLDs':<6} {'ASN(s)':<22} {'Country':<8} {'AS Org (source_names.asn)'}")
+    print("-" * 90)
+    for as_org, tlds, asns, country in uncovered[:25]:
+        asns_sorted = sorted(asns)
+        asn_str = ", ".join(f"AS{a}" for a in asns_sorted[:3])
+        if len(asns_sorted) > 3:
+            asn_str += f" +{len(asns_sorted) - 3}"
+        org_display = as_org if len(as_org) <= 50 else as_org[:48] + ".."
+        print(f"{len(tlds):<6} {asn_str:<22} {country:<8} {org_display}")
 
 
 def main() -> None:
@@ -410,6 +425,10 @@ def main() -> None:
     print("Extracting ASN profiles...")
     profiles = extract_asn_profiles(tlds_data)
 
+    print("Building organizations.json resolver...")
+    manual_orgs = parse_organizations_manual()
+    resolver = build_resolver(manual_orgs)
+
     # Summary
     delegated_count = sum(1 for p in profiles if p.delegated)
     with_asn_count = sum(1 for p in profiles if p.unique_asns)
@@ -422,12 +441,12 @@ def main() -> None:
     print(f"Total IP addresses analyzed: {total_ips}")
 
     # Run all analyses
-    analyze_concentration(profiles)
+    analyze_concentration(profiles, resolver)
     analyze_single_asn_risk(profiles)
     analyze_geographic_distribution(profiles)
     analyze_diversity_metrics(profiles)
     analyze_ipv4_vs_ipv6(profiles)
-    analyze_as_org_alias_coverage(profiles)
+    analyze_friendly_name_coverage(profiles, resolver, manual_orgs)
 
     print()
     print("=" * 70)
