@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-06-07T22:58:14Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -27,11 +27,15 @@
       "country_name_iso": "Algeria",
       "as_org_aliases": [
         "AFNIC",
-        "Packet Clearing House"
+        "AFRINIC",
+        "Packet Clearing House",
+        "RIPE NCC"
       ],
       "as_org_slugs": [
         "afnic",
-        "packet-clearing-house"
+        "afrinic",
+        "packet-clearing-house",
+        "ripe-ncc"
       ],
       "geographic_scope": "country"
     },

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-03T03:45:29Z",
+  "publication": "2026-06-07T22:58:14Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -28,9 +28,13 @@
       "rdap_source": "IANA",
       "country_name_iso": "Nigeria",
       "as_org_aliases": [
+        "AFRINIC",
+        "Gransy",
         "Packet Clearing House"
       ],
       "as_org_slugs": [
+        "afrinic",
+        "gransy",
         "packet-clearing-house"
       ],
       "geographic_scope": "country"

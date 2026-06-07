@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-06-07T22:58:14Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -25,10 +25,14 @@
     "annotations": {
       "country_name_iso": "Panama",
       "as_org_aliases": [
-        "LACTLD"
+        "Gransy",
+        "LACTLD",
+        "NIC.br"
       ],
       "as_org_slugs": [
-        "lactld"
+        "gransy",
+        "lactld",
+        "nic-br"
       ],
       "geographic_scope": "country"
     },

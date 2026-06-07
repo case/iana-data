@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-06-07T22:58:14Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -35,11 +35,19 @@
       "2025-08-14"
     ],
     "annotations": {
+      "iana_tech_alias": "NIC.br",
+      "iana_tech_slug": "nic-br",
       "rdap_source": "IANA",
       "registry_agreement_types": [
         "base",
         "brand",
         "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "NIC.br"
+      ],
+      "as_org_slugs": [
+        "nic-br"
       ]
     },
     "nameservers": [

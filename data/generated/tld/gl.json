@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-06-07T22:58:14Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -28,9 +28,11 @@
       "rdap_source": "supplemental",
       "country_name_iso": "Greenland",
       "as_org_aliases": [
+        "Gransy",
         "Packet Clearing House"
       ],
       "as_org_slugs": [
+        "gransy",
         "packet-clearing-house"
       ],
       "geographic_scope": "country"

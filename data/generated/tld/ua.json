@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-06T03:41:42Z",
+  "publication": "2026-06-07T22:58:14Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -29,11 +29,13 @@
       "country_name_iso": "Ukraine",
       "as_org_aliases": [
         "CZNIC",
+        "Netnod AB",
         "Packet Clearing House",
         "RcodeZero"
       ],
       "as_org_slugs": [
         "cznic",
+        "netnod",
         "packet-clearing-house",
         "rcodezero"
       ],

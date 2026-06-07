@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-06-07T22:58:14Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -30,10 +30,12 @@
       "rdap_source": "IANA",
       "country_name_iso": "Faroe Islands",
       "as_org_aliases": [
-        "CentralNic"
+        "CentralNic",
+        "Netnod AB"
       ],
       "as_org_slugs": [
-        "centralnic"
+        "centralnic",
+        "netnod"
       ],
       "geographic_scope": "country"
     },

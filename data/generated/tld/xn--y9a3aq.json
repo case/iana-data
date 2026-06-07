@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-06-07T22:58:14Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -30,10 +30,12 @@
       "country_name_iso": "Armenia",
       "as_org_aliases": [
         "Community DNS",
+        "Netnod AB",
         "Packet Clearing House"
       ],
       "as_org_slugs": [
         "community-dns",
+        "netnod",
         "packet-clearing-house"
       ],
       "geographic_scope": "country",

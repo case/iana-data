@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-28T03:42:36Z",
+  "publication": "2026-06-07T22:58:14Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -26,11 +26,17 @@
       "country_name_iso": "Palestine, State of",
       "as_org_aliases": [
         "Hetzner",
-        "Packet Clearing House"
+        "Netnod AB",
+        "Packet Clearing House",
+        "RGnet",
+        "RIPE NCC"
       ],
       "as_org_slugs": [
         "hetzner",
-        "packet-clearing-house"
+        "netnod",
+        "packet-clearing-house",
+        "rgnet",
+        "ripe-ncc"
       ],
       "geographic_scope": "country"
     },

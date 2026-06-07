@@ -1,6 +1,6 @@
 {
   "description": "Organizations that play roles for TLDs in the IANA root zone, with a reverse-index of those roles. Consolidated subset: this covers the curated multi-source organizations only; the single-source long tail is not yet included, so absence here does not mean a TLD has no operator.",
-  "publication": "2026-06-02T15:23:31Z",
+  "publication": "2026-06-07T22:58:15Z",
   "sources": [
     "data/source/iana-root.html (IANA)",
     "data/source/icann-gtlds.json (ICANN)",
@@ -103,6 +103,52 @@
             "xn--mgbc0a9azcg",
             "xn--pgbs0dh",
             "yt"
+          ]
+        }
+      }
+    },
+    {
+      "display_name": "AFRINIC",
+      "slug": "afrinic",
+      "source_names": {
+        "asn": [
+          "AFRINIC-ANYCAST"
+        ]
+      },
+      "aliases": [],
+      "homepage": "https://afrinic.net/",
+      "roles": {
+        "asn": {
+          "operator": [
+            "bi",
+            "bj",
+            "bw",
+            "ci",
+            "cm",
+            "dz",
+            "gm",
+            "gn",
+            "ke",
+            "km",
+            "lr",
+            "ls",
+            "ly",
+            "mg",
+            "ml",
+            "mr",
+            "mz",
+            "ne",
+            "ng",
+            "rw",
+            "sd",
+            "so",
+            "ss",
+            "td",
+            "tn",
+            "ug",
+            "xn--mgbah1a3hjkrd",
+            "xn--pgbs0dh",
+            "zm"
           ]
         }
       }
@@ -306,6 +352,39 @@
             "sn",
             "st",
             "xn--mgbayh7gpa"
+          ]
+        }
+      }
+    },
+    {
+      "display_name": "APNIC",
+      "slug": "apnic",
+      "source_names": {
+        "asn": [
+          "APNIC-ANYCAST APNIC ANYCAST ASN"
+        ]
+      },
+      "aliases": [],
+      "homepage": "https://www.apnic.net/",
+      "roles": {
+        "asn": {
+          "operator": [
+            "ae",
+            "bn",
+            "cy",
+            "hk",
+            "id",
+            "kh",
+            "mw",
+            "np",
+            "ph",
+            "sg",
+            "tw",
+            "xn--clchc0ea0b2g2a9gcd",
+            "xn--j6w193g",
+            "xn--kprw13d",
+            "xn--kpry57d",
+            "xn--yfro4i67o"
           ]
         }
       }
@@ -1770,6 +1849,49 @@
             "xn--qcka1pmc",
             "youtube",
             "zip"
+          ]
+        }
+      }
+    },
+    {
+      "display_name": "Gransy",
+      "slug": "gransy",
+      "source_names": {
+        "asn": [
+          "GRANSY Gransy s.r.o. gransy.com"
+        ]
+      },
+      "aliases": [],
+      "homepage": "https://gransy.com/",
+      "roles": {
+        "asn": {
+          "operator": [
+            "af",
+            "cd",
+            "cx",
+            "ec",
+            "fj",
+            "gl",
+            "gs",
+            "gt",
+            "hn",
+            "ke",
+            "ki",
+            "kn",
+            "lk",
+            "ms",
+            "na",
+            "nf",
+            "ng",
+            "pa",
+            "pg",
+            "rw",
+            "sb",
+            "ss",
+            "td",
+            "tl",
+            "xn--p1acf",
+            "zm"
           ]
         }
       }
@@ -4086,6 +4208,153 @@
       }
     },
     {
+      "display_name": "Netnod AB",
+      "slug": "netnod",
+      "source_names": {
+        "asn": [
+          "NETNOD-IX Netnod AB",
+          "NETNOD-NDS $Id: aut-num_AS56908,v 1.1 20160307 11:15:51 mem Exp $",
+          "NETNOD-GBG Netnod Equipment located at IX in Gothenburg",
+          "NETNOD-SVL Netnod Equipment located at IX in Sundsvall",
+          "NETNOD-LUL Netnod Equipment located at IX in Lulea"
+        ]
+      },
+      "aliases": [],
+      "homepage": "https://www.netnod.se/",
+      "roles": {
+        "iana": {
+          "tech": [
+            "se"
+          ]
+        },
+        "asn": {
+          "operator": [
+            "africa",
+            "alsace",
+            "am",
+            "aq",
+            "at",
+            "bostik",
+            "bzh",
+            "capetown",
+            "ch",
+            "cl",
+            "corsica",
+            "cv",
+            "de",
+            "durban",
+            "ee",
+            "eu",
+            "fi",
+            "fo",
+            "fr",
+            "ga",
+            "gg",
+            "gn",
+            "gw",
+            "hk",
+            "hr",
+            "ie",
+            "il",
+            "is",
+            "je",
+            "joburg",
+            "kw",
+            "lb",
+            "leclerc",
+            "li",
+            "lr",
+            "lu",
+            "lv",
+            "merck",
+            "mma",
+            "museum",
+            "no",
+            "nu",
+            "nz",
+            "ovh",
+            "paris",
+            "pe",
+            "pm",
+            "ps",
+            "pt",
+            "re",
+            "rs",
+            "rw",
+            "sa",
+            "scb",
+            "se",
+            "si",
+            "sncf",
+            "tf",
+            "th",
+            "total",
+            "tz",
+            "ua",
+            "wf",
+            "ws",
+            "xn--4dbrk0ce",
+            "xn--90a3ac",
+            "xn--e1a4c",
+            "xn--j1amh",
+            "xn--j6w193g",
+            "xn--mgberp4a5d4ar",
+            "xn--o3cw4h",
+            "xn--qxa6a",
+            "xn--y9a3aq",
+            "xn--ygbi2ammx",
+            "yt",
+            "za"
+          ]
+        }
+      }
+    },
+    {
+      "display_name": "NIC.br",
+      "slug": "nic-br",
+      "source_names": {
+        "asn": [
+          "Nucleo de Inf. e Coord. do Ponto BR - NIC."
+        ]
+      },
+      "aliases": [],
+      "homepage": "https://nic.br/",
+      "roles": {
+        "iana": {
+          "admin": [
+            "bom",
+            "final"
+          ],
+          "tech": [
+            "bom",
+            "final",
+            "globo",
+            "rio",
+            "uol"
+          ]
+        },
+        "asn": {
+          "operator": [
+            "bo",
+            "bom",
+            "br",
+            "cu",
+            "final",
+            "gh",
+            "globo",
+            "gt",
+            "pa",
+            "pt",
+            "py",
+            "rio",
+            "sv",
+            "uol",
+            "uy"
+          ]
+        }
+      }
+    },
+    {
       "display_name": "NIXI",
       "slug": "nixi",
       "source_names": {
@@ -4781,6 +5050,83 @@
       }
     },
     {
+      "display_name": "RGnet",
+      "slug": "rgnet",
+      "source_names": {
+        "asn": [
+          "RGNET-SEA RGnet Seattle Westin"
+        ]
+      },
+      "aliases": [],
+      "homepage": "https://rg.net/",
+      "roles": {
+        "asn": {
+          "operator": [
+            "al",
+            "az",
+            "cu",
+            "eg",
+            "jo",
+            "lb",
+            "lr",
+            "mw",
+            "ps",
+            "sz",
+            "tn",
+            "tz",
+            "xn--pgbs0dh"
+          ]
+        }
+      }
+    },
+    {
+      "display_name": "RIPE NCC",
+      "slug": "ripe-ncc",
+      "source_names": {
+        "asn": [
+          "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+          "K-ROOT-SERVER Reseaux IP Europeens Network Coordination Centre RIPE NCC"
+        ]
+      },
+      "aliases": [],
+      "homepage": "https://www.ripe.net/",
+      "roles": {
+        "asn": {
+          "operator": [
+            "arpa",
+            "bi",
+            "cu",
+            "cw",
+            "dz",
+            "er",
+            "gp",
+            "gu",
+            "int",
+            "jm",
+            "jo",
+            "kg",
+            "mc",
+            "mw",
+            "nc",
+            "ne",
+            "np",
+            "ps",
+            "sd",
+            "sm",
+            "sn",
+            "sy",
+            "sz",
+            "tj",
+            "tt",
+            "ug",
+            "xn--mgbayh7gpa",
+            "xn--ogbpf8fl",
+            "xn--ygbi2ammx"
+          ]
+        }
+      }
+    },
+    {
       "display_name": "Second Genistry",
       "slug": "second-genistry",
       "source_names": {
@@ -4929,6 +5275,33 @@
           "registry_operator": [
             "ferrari",
             "jeep"
+          ]
+        }
+      }
+    },
+    {
+      "display_name": "Teleinfo",
+      "slug": "teleinfo",
+      "source_names": {
+        "asn": [
+          "CAICTNET Chinese Academy of Telecommunication Research"
+        ]
+      },
+      "aliases": [],
+      "homepage": "https://www.teleinfo.cn/",
+      "roles": {
+        "asn": {
+          "operator": [
+            "anquan",
+            "shouji",
+            "xihuan",
+            "xn--3ds443g",
+            "xn--fiq228c5hs",
+            "xn--kput3i",
+            "xn--nyqy26a",
+            "xn--rhqv96g",
+            "xn--vuq861b",
+            "yun"
           ]
         }
       }
@@ -5554,6 +5927,7 @@
           "VeriSign, Inc."
         ],
         "asn": [
+          "HGTLD",
           "VERISIGN-AS",
           "VRSN-AC28",
           "VRSN-AC50-340"
@@ -5895,7 +6269,9 @@
           "ZDNS, Ltd."
         ],
         "asn": [
-          "ZDNS Internet Domain Name System Beijing Engineering Resrarch Center Ltd."
+          "ZDNS Internet Domain Name System Beijing Engineering Resrarch Center Ltd.",
+          "CHINA169-BACKBONE CHINA UNICOM China169 Backbone",
+          "CMNET-BEIJING-AP China Mobile Communicaitons Corporation"
         ]
       },
       "aliases": [],
