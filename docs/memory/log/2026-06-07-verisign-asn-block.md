@@ -1,6 +1,6 @@
 ---
 title: Verisign runs a per-instance ASN block (AS36616-36632), each a separate as_org string
-summary: Verisign assigns one ASN per authoritative-server instance ([letter]GTLD for the a-m gtld-servers.net letters, AROOT for the roots it runs). Each surfaces as its own opaque as_org string and folds into the one VeriSign record as it appears in the data.
+summary: Verisign assigns one ASN per authoritative-server instance ([letter]GTLD for the gtld-servers.net letters a-m plus X/Y/Z clouds, AROOT for the roots it runs). Each surfaces as its own opaque as_org string and folds into the one VeriSign record as it appears in the data. The committed snapshot and current iptoasn disagree on which sibling a given IP carries (see "What we added").
 created: 2026-06-07
 author: Eric Case
 tags: [log, decision, manual-data, organizations, asn, verisign]
@@ -19,8 +19,15 @@ For AS36623: ARIN RDAP `https://rdap.arin.net/registry/autnum/36623` returns `na
 
 ## What we added
 
-Only `HGTLD` (AS36623) is present in the current `tlds.json` snapshot, so only `HGTLD` was added to the VeriSign record's `source_names.asn` (joining VERISIGN-AS, VRSN-AC28, VRSN-AC50-340; VGRS-AC25 also resolves via the `aliases` cross-bucket fallback in `src/parse/organizations.py`). This raised friendly-name coverage 83.0% -> 83.5%.
+`HGTLD` (AS36623) was added to the VeriSign record's `source_names.asn` (joining VERISIGN-AS, VRSN-AC28, VRSN-AC50-340; VGRS-AC25 also resolves via the `aliases` cross-bucket fallback in `src/parse/organizations.py`).
+
+Caveat: the committed `data/generated/tlds.json` is stale on ASN (`--preserve-asn` keeps old values) and disagrees with current iptoasn, which is what the build/test/CI actually publish. In the committed snapshot all 18 of HGTLD's TLDs sit under AS36623/`HGTLD`. In current iptoasn those IPs split:
+
+- `j/k/l/m.gtld-servers.net` + `*.edu-servers.net` -> still `HGTLD` (AS36623): serves `.com`, `.net`, `.edu` (3 TLDs).
+- `ac3.nstld.com` -> `KGTLD` (AS36625): serves the other 15 (`.cc`, `.comsec`, `.name`, `.verisign` + 11 IDN gTLDs).
+
+So in published data the HGTLD mapping covers only those 3 TLDs; the other 15 leak through the still-unmapped `KGTLD`, which is another Verisign sibling that needs folding in. The "83.0% -> 83.5%" coverage gain reported at add-time was the analysis script's stale-snapshot number, not published coverage. Re-measure and add `KGTLD` after refreshing the snapshot (`bin/build --all`); a separate staleness note covers the broader drift.
 
 ## Why not pre-load the sibling labels
 
-`test_source_names_appear_in_raw_data` requires every `source_names.asn` string to match a raw value in `tlds.json` character-for-character. The sibling labels (AGTLD, GGTLD, AROOT, ...) are not in the data, so adding them speculatively fails the test. If a future snapshot resolves a TLD nameserver IP into another ASN in this block, it will surface as the next unnamed string under its own `[letter]GTLD`/`AROOT` label - recognize it as Verisign and fold it in then. See [2026-06-07 as_org transit-backbone operator mapping](2026-06-07-asn-transit-operator.md) for the related one-org-many-strings pattern.
+`test_source_names_appear_in_raw_data` requires every `source_names.asn` string to match a raw value in the freshly built `tlds.json` (current iptoasn) character-for-character. So a string can only be added once it actually appears in a built snapshot. `KGTLD` already appears in current iptoasn (above) and should be added after the snapshot refresh, but the analysis script won't surface it until then because it reads the stale committed file. The remaining labels (AGTLD, GGTLD, AROOT, X/Y/Z...) carry no TLD nameserver in our set, so those genuinely can't be added yet - fold each in as it surfaces in a refreshed snapshot. See [2026-06-07 as_org transit-backbone operator mapping](2026-06-07-asn-transit-operator.md) for the related one-org-many-strings pattern.
