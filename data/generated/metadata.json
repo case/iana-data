@@ -1,6 +1,6 @@
 {
   "RDAP_BOOTSTRAP": {
-    "last_checked": "2026-06-07T03:10:32Z",
+    "last_checked": "2026-06-08T03:11:39Z",
     "headers": {
       "etag": "\"1182e-642f50662aab6-gzip\"",
       "last_modified": "Thu, 06 Nov 2025 23:00:01 GMT"
@@ -14,7 +14,7 @@
     }
   },
   "TLD_LIST": {
-    "last_checked": "2026-06-07T03:10:32Z",
+    "last_checked": "2026-06-08T03:11:39Z",
     "headers": {
       "etag": "\"2548-643b0e096fc2a\"",
       "last_modified": "Sun, 16 Nov 2025 07:07:01 GMT"
@@ -28,7 +28,7 @@
     }
   },
   "ROOT_ZONE_DB": {
-    "last_checked": "2026-06-07T03:10:32Z",
+    "last_checked": "2026-06-08T03:11:39Z",
     "last_downloaded": "2025-11-26T02:35:40Z",
     "last_changed": "2025-11-25T02:35:09Z",
     "headers": {
@@ -42,7 +42,7 @@
     }
   },
   "TLD_HTML": {
-    "last_checked": "2026-06-07T03:40:17Z"
+    "last_checked": "2026-06-08T03:40:42Z"
   },
   "REGISTRY_AGREEMENT_TABLE": {
     "headers": {
@@ -61,12 +61,12 @@
     "last_downloaded": "2026-05-25T18:06:26Z"
   },
   "GTLDS_JSON": {
-    "last_checked": "2026-06-07T03:11:21Z",
+    "last_checked": "2026-06-08T03:12:28Z",
     "cache_data": {
-      "last_modified": "Sun, 07 Jun 2026 00:03:43 GMT",
+      "last_modified": "Mon, 08 Jun 2026 00:03:43 GMT",
       "cache_control": "max-age=28800",
       "cache_max_age": "28800",
-      "last_downloaded": "2026-06-07T03:11:21Z"
+      "last_downloaded": "2026-06-08T03:12:28Z"
     }
   }
 }

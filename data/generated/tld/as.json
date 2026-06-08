@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-29T03:44:13Z",
+  "publication": "2026-06-08T03:44:37Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -22,7 +22,7 @@
     "rdap_server": "https://rdap.nic.as",
     "tld_created": "1997-06-12",
     "tld_updated": [
-      "2025-12-08"
+      "2026-06-06"
     ],
     "annotations": {
       "rdap_source": "IANA",
