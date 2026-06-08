@@ -78,21 +78,25 @@ jobs:
       - name: Run tests
         run: |
           set -o pipefail
+          # Intentional pipe to tee; SC2266 misreads it as a mistaken ||.
+          # shellcheck disable=SC2266
           bin/test 2>&1 | tee test-output.log
 
       - name: Capture build logs
         if: always()
         run: |
-          echo "=== UV Version ===" > build-info.log
-          uv --version >> build-info.log
-          echo "\n=== Python Version ===" >> build-info.log
-          python --version >> build-info.log
-          echo "\n=== System Info ===" >> build-info.log
-          uname -a >> build-info.log
-          echo "\n=== Dependency Tree ===" >> build-info.log
-          uv tree >> build-info.log 2>&1 || echo "Failed to generate dependency tree" >> build-info.log
-          echo "\n=== Lock File Info ===" >> build-info.log
-          ls -la uv.lock >> build-info.log 2>&1 || echo "No uv.lock found" >> build-info.log
+          {
+            echo "=== UV Version ==="
+            uv --version
+            printf '\n=== Python Version ===\n'
+            python --version
+            printf '\n=== System Info ===\n'
+            uname -a
+            printf '\n=== Dependency Tree ===\n'
+            uv tree 2>&1 || echo "Failed to generate dependency tree"
+            printf '\n=== Lock File Info ===\n'
+            ls -la uv.lock 2>&1 || echo "No uv.lock found"
+          } > build-info.log
 
       - name: Upload failure artifacts
         uses: actions/upload-artifact@v7

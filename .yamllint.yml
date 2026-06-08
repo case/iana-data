@@ -1,0 +1,18 @@
+---
+extends: default
+
+rules:
+  # Long lines (URLs, GHA expressions, inline scripts) are fine here.
+  line-length: disable
+  # GitHub Actions workflows don't start with `---`.
+  document-start: disable
+  # Allow the GitHub Actions `on:` key without quoting.
+  truthy:
+    check-keys: false
+  comments:
+    min-spaces-from-content: 1
+
+ignore: |
+  .venv/
+  node_modules/
+  .github/workflows/workflows-disabled/
