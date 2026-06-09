@@ -30,3 +30,19 @@ The resolver matches `as_org` strings **globally** (`src/parse/organizations.py`
 ## Rule of thumb for future entries
 
 Only fold a transit-backbone `as_org` string into an operator when the hostname evidence is unambiguous (operator-owned hostname like `*.zdnscloud.*`) **and** that ASN carries only that operator's nameservers in the current data. Otherwise leave it unnamed rather than risk global misattribution. Verify with: list distinct `hostname` values whose IPs fall in the candidate ASN.
+
+## Counter-case: hosting/IaaS ASNs to leave unnamed (OVH, AS16276)
+
+AS16276 `OVH` (7 TLDs) was investigated and deliberately **left unnamed**. It is multi-tenant hosting, not a DNS operator:
+
+- Its nameservers are 13 distinct third-party hostnames across 9 unrelated domains (`nic.cg`, `dns.md`, `malagasy.com`, `neoip.com`, `admin.net`, `dns.business`, `u-registry.com`, `dotukr.com`, `num.net.ua`) serving 7 different ccTLDs/gTLDs (`.cg .md .mg .sl .tg .merck .xn--j1amh`).
+- PeeringDB classifies AS16276 as `info_type: "Content"` (OVHcloud, 10-20Tbps global hosting).
+- Per-IP: all `OVH SAS`, `anycast: false`, scattered across independent datacenters (Montréal/Strasbourg/Hillsboro); `ns-mg.malagasy.com` reverse-resolves to `vps-974f988e.vps.ovh.net` (a literal customer VPS).
+
+The real operators are the individual registries renting OVH compute; mapping `OVH` would falsely assign OVHcloud the `asn.operator` role. No data edit was made.
+
+## Triage heuristic (check before researching an opaque ASN)
+
+1. **Fan-out**: list distinct hostname domains in the ASN. One operator-owned family -> likely an operator. Many unrelated third-party domains -> hosting/transit; skip.
+2. **PeeringDB `info_type`** (`https://www.peeringdb.com/api/net?asn=<n>`): `Content` / `NSP` / `Cable/DSL/ISP` ≈ hosting/transit (skip); a registry or DNS-services org won't classify as "Content".
+3. **Per-IP anycast + PTR** (ipinfo IP lookups work on the free token; the ASN API does not): real DNS operators show coordinated anycast; `vps-*.vps.ovh.net`-style PTRs and `anycast:false` across scattered DCs mean IaaS.
