@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-07T22:58:14Z",
+  "publication": "2026-06-09T06:15:40Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -26,11 +26,13 @@
     "annotations": {
       "country_name_iso": "European Union",
       "as_org_aliases": [
+        "ARNES",
         "DENIC",
         "Netnod AB",
         "RcodeZero"
       ],
       "as_org_slugs": [
+        "arnes",
         "denic",
         "netnod",
         "rcodezero"

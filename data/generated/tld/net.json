@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-03T03:45:29Z",
+  "publication": "2026-06-09T06:15:40Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -156,16 +156,16 @@
         "ipv4": [
           {
             "ip": "192.35.51.30",
-            "asn": 396600,
-            "as_org": "VRSN-AC50-340",
+            "asn": 25485,
+            "as_org": "VERISIGN-AS",
             "as_country": "US"
           }
         ],
         "ipv6": [
           {
             "ip": "2001:503:d414::30",
-            "asn": 396600,
-            "as_org": "VRSN-AC50-340",
+            "asn": 25485,
+            "as_org": "VERISIGN-AS",
             "as_country": "US"
           }
         ]
@@ -175,16 +175,16 @@
         "ipv4": [
           {
             "ip": "192.42.93.30",
-            "asn": 396600,
-            "as_org": "VRSN-AC50-340",
+            "asn": 25485,
+            "as_org": "VERISIGN-AS",
             "as_country": "US"
           }
         ],
         "ipv6": [
           {
             "ip": "2001:503:eea3::30",
-            "asn": 396600,
-            "as_org": "VRSN-AC50-340",
+            "asn": 25485,
+            "as_org": "VERISIGN-AS",
             "as_country": "US"
           }
         ]
@@ -194,16 +194,16 @@
         "ipv4": [
           {
             "ip": "192.54.112.30",
-            "asn": 396600,
-            "as_org": "VRSN-AC50-340",
+            "asn": 25485,
+            "as_org": "VERISIGN-AS",
             "as_country": "US"
           }
         ],
         "ipv6": [
           {
             "ip": "2001:502:8cc::30",
-            "asn": 396600,
-            "as_org": "VRSN-AC50-340",
+            "asn": 25485,
+            "as_org": "VERISIGN-AS",
             "as_country": "US"
           }
         ]
@@ -213,16 +213,16 @@
         "ipv4": [
           {
             "ip": "192.43.172.30",
-            "asn": 396600,
-            "as_org": "VRSN-AC50-340",
+            "asn": 25485,
+            "as_org": "VERISIGN-AS",
             "as_country": "US"
           }
         ],
         "ipv6": [
           {
             "ip": "2001:503:39c1::30",
-            "asn": 396600,
-            "as_org": "VRSN-AC50-340",
+            "asn": 25485,
+            "as_org": "VERISIGN-AS",
             "as_country": "US"
           }
         ]

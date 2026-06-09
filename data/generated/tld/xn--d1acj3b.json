@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-06-09T06:15:40Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -44,6 +44,12 @@
         "non_sponsored"
       ],
       "icann_translation_en": "kids",
+      "as_org_aliases": [
+        "MSK-IX"
+      ],
+      "as_org_slugs": [
+        "msk-ix"
+      ],
       "language_code": "ru",
       "language_name_en": "Russian"
     },

@@ -1,6 +1,6 @@
 {
   "description": "Organizations that play roles for TLDs in the IANA root zone, with a reverse-index of those roles. Consolidated subset: this covers the curated multi-source organizations only; the single-source long tail is not yet included, so absence here does not mean a TLD has no operator.",
-  "publication": "2026-06-07T22:58:15Z",
+  "publication": "2026-06-09T06:15:41Z",
   "sources": [
     "data/source/iana-root.html (IANA)",
     "data/source/icann-gtlds.json (ICANN)",
@@ -415,6 +415,29 @@
           "registry_operator": [
             "apple",
             "beats"
+          ]
+        }
+      }
+    },
+    {
+      "display_name": "ARNES",
+      "slug": "arnes",
+      "source_names": {
+        "asn": [
+          "ARNES-NET Academic and Research Network of Slovenia"
+        ]
+      },
+      "aliases": [],
+      "homepage": "https://www.arnes.si/",
+      "roles": {
+        "asn": {
+          "operator": [
+            "eu",
+            "mk",
+            "si",
+            "xn--d1alf",
+            "xn--e1a4c",
+            "xn--qxa6a"
           ]
         }
       }
@@ -2135,7 +2158,6 @@
           "Binky Moon, LLC",
           "Dog Beach, LLC",
           "Donuts Inc",
-          "Identity Digital",
           "Identity Digital Inc.",
           "Identity Digital Limited",
           "Identity Digital Limited c/o Identity Digital Inc.",
@@ -3053,7 +3075,6 @@
             "sarl",
             "saxo",
             "sbi",
-            "sc",
             "scholarships",
             "school",
             "schule",
@@ -4208,6 +4229,29 @@
       }
     },
     {
+      "display_name": "MSK-IX",
+      "slug": "msk-ix",
+      "source_names": {
+        "asn": [
+          "RIPN-",
+          "RIPN-NS5-RU-MSK"
+        ]
+      },
+      "aliases": [],
+      "homepage": "https://www.msk-ix.ru/",
+      "roles": {
+        "asn": {
+          "operator": [
+            "ru",
+            "su",
+            "tatar",
+            "xn--d1acj3b",
+            "xn--p1ai"
+          ]
+        }
+      }
+    },
+    {
       "display_name": "Netnod AB",
       "slug": "netnod",
       "source_names": {
@@ -4305,6 +4349,31 @@
             "xn--ygbi2ammx",
             "yt",
             "za"
+          ]
+        }
+      }
+    },
+    {
+      "display_name": "nic.at",
+      "slug": "nic-at",
+      "source_names": {
+        "asn": [
+          "NICAT-MINICAST-AS"
+        ]
+      },
+      "aliases": [],
+      "homepage": "https://www.nic.at/",
+      "roles": {
+        "asn": {
+          "operator": [
+            "aco",
+            "berlin",
+            "gdn",
+            "gea",
+            "hamburg",
+            "ikano",
+            "schaeffler",
+            "versicherung"
           ]
         }
       }
@@ -5906,6 +5975,33 @@
             "yokohama",
             "you",
             "zappos"
+          ]
+        }
+      }
+    },
+    {
+      "display_name": "University of Oregon",
+      "slug": "university-of-oregon",
+      "source_names": {
+        "asn": [
+          "UONET"
+        ]
+      },
+      "aliases": [],
+      "homepage": "https://www.uoregon.edu/",
+      "roles": {
+        "asn": {
+          "operator": [
+            "bt",
+            "ci",
+            "cm",
+            "do",
+            "gu",
+            "jm",
+            "ly",
+            "mz",
+            "nr",
+            "tj"
           ]
         }
       }

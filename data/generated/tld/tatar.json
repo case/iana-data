@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-06-09T06:15:40Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -41,6 +41,12 @@
         "base",
         "community",
         "non_sponsored"
+      ],
+      "as_org_aliases": [
+        "MSK-IX"
+      ],
+      "as_org_slugs": [
+        "msk-ix"
       ],
       "geographic_scope": "subdivision",
       "cultural_affiliation": "tatar"
