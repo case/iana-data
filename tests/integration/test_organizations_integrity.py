@@ -8,6 +8,7 @@ constraints SQL would give us for free. A failure means the curated data
 fix is in the data, not the test.
 """
 
+import difflib
 import json
 from types import SimpleNamespace
 from unittest.mock import patch
@@ -181,36 +182,55 @@ def test_role_tlds_are_ascii_keys_in_tlds_json(built):
     assert bad == [], f"role TLDs that are non-ASCII or not a tlds.json key: {bad[:10]}"
 
 
+def _diagnose_unmatched(unmatched, raw_tlds):
+    """Render unmatched source_names with the nearest still-existing raw values
+    and the TLDs they appear on, to show whether each is a near-dup or fully stale."""
+    lines = []
+    for slug, source, name in unmatched:
+        candidates = sorted(raw_tlds.get(source, {}))
+        near = difflib.get_close_matches(name, candidates, n=3, cutoff=0.6)
+        lines.append(f"  {slug} / {source} / {name!r} — no raw match")
+        if not near:
+            lines.append("      (no near matches — likely fully stale)")
+        for cand in near:
+            tlds = sorted(raw_tlds[source].get(cand, ()))
+            shown = ", ".join(tlds[:8]) + ("…" if len(tlds) > 8 else "")
+            lines.append(f"      nearest existing: {cand!r}  (on: {shown})")
+    return (
+        "source_names strings not found in any tlds.json raw value for that "
+        "source (fix the seed or move to aliases):\n" + "\n".join(lines)
+    )
+
+
 def test_source_names_appear_in_raw_data(built):
     """Every source_names string must occur as a raw value in tlds.json for that
     source. A string that matches nothing is a stale/typo'd curation entry that
     belongs in aliases, not source_names."""
-    raw: dict[str, set[str]] = {"iana": set(), "icann": set(), "asn": set()}
+    raw_tlds: dict[str, dict[str, set[str]]] = {"iana": {}, "icann": {}, "asn": {}}
+
+    def note(source: str, value: str | None, tld: str) -> None:
+        if value:
+            raw_tlds[source].setdefault(value, set()).add(tld)
+
     for entry in built.tlds.values():
+        tld = entry["tld"]
         orgs = entry.get("orgs", {})
         iana = orgs.get("iana", {})
         for role in ("sponsor", "admin", "tech"):
-            if iana.get(role):
-                raw["iana"].add(iana[role])
-        registry_operator = orgs.get("icann", {}).get("registry_operator")
-        if registry_operator:
-            raw["icann"].add(registry_operator)
+            note("iana", iana.get(role), tld)
+        note("icann", orgs.get("icann", {}).get("registry_operator"), tld)
         for ns in entry.get("nameservers", []):
             for ip in [*ns.get("ipv4", []), *ns.get("ipv6", [])]:
-                if ip.get("as_org"):
-                    raw["asn"].add(ip["as_org"])
+                note("asn", ip.get("as_org"), tld)
 
     unmatched = []
     for org in built.orgs:
         for source, names in org.get("source_names", {}).items():
             for name in names:
-                if name not in raw.get(source, set()):
+                if name not in raw_tlds.get(source, {}):
                     unmatched.append((org["slug"], source, name))
 
-    assert unmatched == [], (
-        "source_names strings not found in any tlds.json raw value for that "
-        f"source (fix the seed or move to aliases): {unmatched[:20]}"
-    )
+    assert unmatched == [], _diagnose_unmatched(unmatched, raw_tlds)
 
 
 def test_organizations_sorted_by_slug_with_envelope(built):

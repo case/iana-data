@@ -76,6 +76,17 @@
     "homepage": "https://www.apple.com/"
   },
   {
+    "display_name": "ARNES",
+    "slug": "arnes",
+    "source_names": {
+      "asn": [
+        "ARNES-NET Academic and Research Network of Slovenia"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.arnes.si/"
+  },
+  {
     "display_name": "Audi",
     "slug": "audi",
     "source_names": {
@@ -467,7 +478,6 @@
         "Binky Moon, LLC",
         "Dog Beach, LLC",
         "Donuts Inc",
-        "Identity Digital",
         "Identity Digital Inc.",
         "Identity Digital Limited",
         "Identity Digital Limited c/o Identity Digital Inc.",
@@ -572,6 +582,18 @@
     "homepage": "https://www.microsoft.com/"
   },
   {
+    "display_name": "MSK-IX",
+    "slug": "msk-ix",
+    "source_names": {
+      "asn": [
+        "RIPN-",
+        "RIPN-NS5-RU-MSK"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.msk-ix.ru/"
+  },
+  {
     "display_name": "Netnod AB",
     "slug": "netnod",
     "source_names": {
@@ -585,6 +607,17 @@
     },
     "aliases": [],
     "homepage": "https://www.netnod.se/"
+  },
+  {
+    "display_name": "nic.at",
+    "slug": "nic-at",
+    "source_names": {
+      "asn": [
+        "NICAT-MINICAST-AS"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.nic.at/"
   },
   {
     "display_name": "NIC.br",
@@ -842,6 +875,17 @@
     },
     "aliases": [],
     "homepage": "https://vercara.digicert.com/"
+  },
+  {
+    "display_name": "University of Oregon",
+    "slug": "university-of-oregon",
+    "source_names": {
+      "asn": [
+        "UONET"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.uoregon.edu/"
   },
   {
     "display_name": "VeriSign",
