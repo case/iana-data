@@ -41,6 +41,16 @@ AS16276 `OVH` (7 TLDs) was investigated and deliberately **left unnamed**. It is
 
 The real operators are the individual registries renting OVH compute; mapping `OVH` would falsely assign OVHcloud the `asn.operator` role. No data edit was made.
 
+## Carrier-AS folds: size matters (GlobalConnect folded, Cogent skipped)
+
+When an operator's own nameserver rides a carrier's AS (the ZDNS shape), the carrier's *size* decides whether to fold:
+
+- **Folded:** `GLOBALCONNECT-` (AS2116, regional Nordic carrier) carries only `y.nic.no` -> folded into Norid.no. A niche regional AS that is sole-tenant today is low-risk.
+- **Skipped:** `COGENT-174` (AS174, the world's largest tier-1 transit) carries only `be.dns.eu` today, but folding a global-transit string into an operator is too fragile - future snapshots will almost certainly add unrelated TLD nameservers in Cogent space. Left unnamed. Note `.eu` is anycast across many providers (ARNES.si, DENIC.de, Netnod, RcodeZero) already mapped to each provider; EURid has no ASN of its own here (registry-level only).
+- **Skipped:** `HINET` (AS3462) + `TFN-TW` (AS9924) carry only TWNIC's `.tw`/`.台灣` nodes today, but they're large Taiwanese ISPs - same fragility as Cogent. `.tw` is multi-provider anycast across ~10 networks (Microsoft, Google, PCH, APNIC already mapped to each); TWNIC has no ASN of its own here. Don't create a TWNIC org from ISP-host strings.
+
+Pattern across `.eu`/`.pl`/`.tw`: a registry runs DNS as multi-provider anycast; attribute each node to its *provider* when that provider is a real operator, skip pure ISP/transit hosts, and leave the registry itself at the IANA registry level (no asn.operator).
+
 ## Triage heuristic (check before researching an opaque ASN)
 
 1. **Fan-out**: list distinct hostname domains in the ASN. One operator-owned family -> likely an operator. Many unrelated third-party domains -> hosting/transit; skip.

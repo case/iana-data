@@ -1,6 +1,18 @@
 [
   {
-    "display_name": "AFNIC",
+    "display_name": "ACOnet",
+    "slug": "aconet",
+    "source_names": {
+      "asn": [
+        "ACONET ACOnet Backbone",
+        "ACONET_SERVICES ACOnet Services @ Vienna Internet eXchange"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.aco.net/"
+  },
+  {
+    "display_name": "AFNIC.fr",
     "slug": "afnic",
     "source_names": {
       "iana": [
@@ -76,7 +88,7 @@
     "homepage": "https://www.apple.com/"
   },
   {
-    "display_name": "ARNES",
+    "display_name": "ARNES.si",
     "slug": "arnes",
     "source_names": {
       "asn": [
@@ -136,7 +148,18 @@
     "homepage": "https://centralnicregistry.com/"
   },
   {
-    "display_name": "CIRA",
+    "display_name": "Chinese University of Hong Kong",
+    "slug": "cuhk",
+    "source_names": {
+      "asn": [
+        "ERX-CUHKNET The Chinese University of Hong Kong"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.cuhk.edu.hk/"
+  },
+  {
+    "display_name": "CIRA.ca",
     "slug": "cira",
     "source_names": {
       "iana": [
@@ -166,7 +189,7 @@
     "homepage": "https://www.cloudflare.com/"
   },
   {
-    "display_name": "CNNIC",
+    "display_name": "CNNIC.cn",
     "slug": "cnnic",
     "source_names": {
       "iana": [
@@ -194,7 +217,7 @@
     "homepage": "https://www.communitydns.net/"
   },
   {
-    "display_name": "CZNIC",
+    "display_name": "CZNIC.cz",
     "slug": "cznic",
     "source_names": {
       "asn": [
@@ -219,7 +242,7 @@
     "homepage": "https://www.datacom.mn/"
   },
   {
-    "display_name": "DENIC",
+    "display_name": "DENIC.de",
     "slug": "denic",
     "source_names": {
       "asn": [
@@ -253,10 +276,24 @@
       "iana": [
         "DNS Belgium vzw",
         "DNS Belgium vzw/asbl"
+      ],
+      "asn": [
+        "DNS-ANYCAST DNS.be Anycast - Toplevel .be domain registry"
       ]
     },
     "aliases": [],
     "homepage": "https://www.dnsbelgium.be/"
+  },
+  {
+    "display_name": "DNS.PT",
+    "slug": "dns-pt",
+    "source_names": {
+      "asn": [
+        "DNS"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.pt.pt/"
   },
   {
     "display_name": "DotCooperation",
@@ -272,6 +309,17 @@
     },
     "aliases": [],
     "homepage": "https://identity.coop/"
+  },
+  {
+    "display_name": "FORTH.gr",
+    "slug": "forth-gr",
+    "source_names": {
+      "asn": [
+        "FORTH-AS"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.forth.gr/"
   },
   {
     "display_name": "fTLD Registry",
@@ -498,6 +546,17 @@
     "homepage": "https://identity.digital/"
   },
   {
+    "display_name": "Jisc.uk",
+    "slug": "jisc",
+    "source_names": {
+      "asn": [
+        "JANET Jisc Services Limited"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.jisc.ac.uk/"
+  },
+  {
     "display_name": "Kerry Trading",
     "slug": "kerry-trading",
     "source_names": {
@@ -512,7 +571,7 @@
     "homepage": "https://www.kerryprops.com/"
   },
   {
-    "display_name": "KISA",
+    "display_name": "KISA.kr",
     "slug": "kisa",
     "source_names": {
       "iana": [
@@ -582,7 +641,7 @@
     "homepage": "https://www.microsoft.com/"
   },
   {
-    "display_name": "MSK-IX",
+    "display_name": "MSK-IX.ru",
     "slug": "msk-ix",
     "source_names": {
       "asn": [
@@ -592,6 +651,18 @@
     },
     "aliases": [],
     "homepage": "https://www.msk-ix.ru/"
+  },
+  {
+    "display_name": "Nask.pl",
+    "slug": "nask-pl",
+    "source_names": {
+      "asn": [
+        "NASK-DNS-ANYCAST",
+        "NASK-DNS-ANYCAST2"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.nask.pl/"
   },
   {
     "display_name": "Netnod AB",
@@ -607,6 +678,17 @@
     },
     "aliases": [],
     "homepage": "https://www.netnod.se/"
+  },
+  {
+    "display_name": "NIC Chile",
+    "slug": "nic-chile",
+    "source_names": {
+      "asn": [
+        "NIC Chile"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.nic.cl/"
   },
   {
     "display_name": "nic.at",
@@ -631,7 +713,18 @@
     "homepage": "https://nic.br/"
   },
   {
-    "display_name": "NIXI",
+    "display_name": "NIC.cr",
+    "slug": "nic-cr",
+    "source_names": {
+      "asn": [
+        "Academia Nacional de Ciencias"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://nic.cr/"
+  },
+  {
+    "display_name": "NIXI.in",
     "slug": "nixi",
     "source_names": {
       "iana": [
@@ -659,6 +752,18 @@
     },
     "aliases": [],
     "homepage": "https://nominet.uk/"
+  },
+  {
+    "display_name": "Norid.no",
+    "slug": "norid",
+    "source_names": {
+      "asn": [
+        "UNINETT UNINETT, The Norwegian University & Research Network",
+        "GLOBALCONNECT-"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.norid.no/"
   },
   {
     "display_name": "Packet Clearing House",
@@ -713,6 +818,17 @@
     "homepage": "https://www.rcodezero.at/"
   },
   {
+    "display_name": "Red.es",
+    "slug": "red-es",
+    "source_names": {
+      "asn": [
+        "RED-ES-AS"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.red.es/"
+  },
+  {
     "display_name": "RGnet",
     "slug": "rgnet",
     "source_names": {
@@ -734,6 +850,17 @@
     },
     "aliases": [],
     "homepage": "https://www.ripe.net/"
+  },
+  {
+    "display_name": "RYCE",
+    "slug": "ryce",
+    "source_names": {
+      "asn": [
+        "COMPASS-AS"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://ryce-rsp.com/"
   },
   {
     "display_name": "Second Genistry",
@@ -769,7 +896,7 @@
     "homepage": "https://shortdot.bond/"
   },
   {
-    "display_name": "SIDN",
+    "display_name": "SIDN.nl",
     "slug": "sidn",
     "source_names": {
       "asn": [
@@ -806,6 +933,17 @@
     },
     "aliases": [],
     "homepage": "https://www.stellantis.com/"
+  },
+  {
+    "display_name": "SWITCH.ch",
+    "slug": "switch",
+    "source_names": {
+      "asn": [
+        "SWITCH Switch, Swiss Academic and Research Network"
+      ]
+    },
+    "aliases": [],
+    "homepage": "https://www.switch.ch/"
   },
   {
     "display_name": "Teleinfo",
@@ -944,7 +1082,7 @@
     "homepage": "https://gen.xyz/"
   },
   {
-    "display_name": "ZACR",
+    "display_name": "ZACR.za",
     "slug": "zacr",
     "source_names": {
       "iana": [
