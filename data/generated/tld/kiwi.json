@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-02T15:23:31Z",
+  "publication": "2026-06-11T03:43:07Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -36,7 +36,7 @@
       "2026-05-07"
     ],
     "annotations": {
-      "iana_tech_alias": "CIRA",
+      "iana_tech_alias": "CIRA.ca",
       "iana_tech_slug": "cira",
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -44,8 +44,8 @@
         "non_sponsored"
       ],
       "as_org_aliases": [
-        "CIRA",
-        "DENIC"
+        "CIRA.ca",
+        "DENIC.de"
       ],
       "as_org_slugs": [
         "cira",

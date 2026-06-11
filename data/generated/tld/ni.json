@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-06-11T03:43:07Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -25,10 +25,12 @@
     "annotations": {
       "country_name_iso": "Nicaragua",
       "as_org_aliases": [
-        "Amazon"
+        "Amazon",
+        "NIC.cr"
       ],
       "as_org_slugs": [
-        "amazon"
+        "amazon",
+        "nic-cr"
       ],
       "geographic_scope": "country"
     },

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-06-11T03:43:07Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -27,11 +27,11 @@
       "2026-04-16"
     ],
     "annotations": {
-      "iana_sponsor_alias": "NIXI",
+      "iana_sponsor_alias": "NIXI.in",
       "iana_sponsor_slug": "nixi",
-      "iana_admin_alias": "NIXI",
+      "iana_admin_alias": "NIXI.in",
       "iana_admin_slug": "nixi",
-      "iana_tech_alias": "NIXI",
+      "iana_tech_alias": "NIXI.in",
       "iana_tech_slug": "nixi",
       "country_name_iso": "India",
       "as_org_aliases": [

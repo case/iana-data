@@ -1,6 +1,6 @@
 {
   "description": "Organizations that play roles for TLDs in the IANA root zone, with a reverse-index of those roles. Consolidated subset: this covers the curated multi-source organizations only; the single-source long tail is not yet included, so absence here does not mean a TLD has no operator.",
-  "publication": "2026-06-09T06:15:41Z",
+  "publication": "2026-06-11T03:43:08Z",
   "sources": [
     "data/source/iana-root.html (IANA)",
     "data/source/icann-gtlds.json (ICANN)",
@@ -9,7 +9,32 @@
   ],
   "orgs": [
     {
-      "display_name": "AFNIC",
+      "display_name": "ACOnet",
+      "slug": "aconet",
+      "source_names": {
+        "asn": [
+          "ACONET ACOnet Backbone",
+          "ACONET_SERVICES ACOnet Services @ Vienna Internet eXchange"
+        ]
+      },
+      "aliases": [],
+      "homepage": "https://www.aco.net/",
+      "roles": {
+        "asn": {
+          "operator": [
+            "at",
+            "eg",
+            "gr",
+            "mk",
+            "ro",
+            "xn--d1alf",
+            "xn--qxam"
+          ]
+        }
+      }
+    },
+    {
+      "display_name": "AFNIC.fr",
       "slug": "afnic",
       "source_names": {
         "iana": [
@@ -420,7 +445,7 @@
       }
     },
     {
-      "display_name": "ARNES",
+      "display_name": "ARNES.si",
       "slug": "arnes",
       "source_names": {
         "asn": [
@@ -735,7 +760,7 @@
       }
     },
     {
-      "display_name": "CIRA",
+      "display_name": "CIRA.ca",
       "slug": "cira",
       "source_names": {
         "iana": [
@@ -818,7 +843,7 @@
       }
     },
     {
-      "display_name": "CNNIC",
+      "display_name": "CNNIC.cn",
       "slug": "cnnic",
       "source_names": {
         "iana": [
@@ -914,7 +939,29 @@
       }
     },
     {
-      "display_name": "CZNIC",
+      "display_name": "Chinese University of Hong Kong",
+      "slug": "cuhk",
+      "source_names": {
+        "asn": [
+          "ERX-CUHKNET The Chinese University of Hong Kong"
+        ]
+      },
+      "aliases": [],
+      "homepage": "https://www.cuhk.edu.hk/",
+      "roles": {
+        "asn": {
+          "operator": [
+            "hk",
+            "mo",
+            "ph",
+            "xn--j6w193g",
+            "xn--mix891f"
+          ]
+        }
+      }
+    },
+    {
+      "display_name": "CZNIC.cz",
       "slug": "cznic",
       "source_names": {
         "asn": [
@@ -970,7 +1017,7 @@
       }
     },
     {
-      "display_name": "DENIC",
+      "display_name": "DENIC.de",
       "slug": "denic",
       "source_names": {
         "asn": [
@@ -1079,6 +1126,9 @@
         "iana": [
           "DNS Belgium vzw",
           "DNS Belgium vzw/asbl"
+        ],
+        "asn": [
+          "DNS-ANYCAST DNS.be Anycast - Toplevel .be domain registry"
         ]
       },
       "aliases": [],
@@ -1097,6 +1147,34 @@
             "be",
             "brussels",
             "vlaanderen"
+          ]
+        },
+        "asn": {
+          "operator": [
+            "be",
+            "brussels",
+            "vlaanderen"
+          ]
+        }
+      }
+    },
+    {
+      "display_name": "DNS.PT",
+      "slug": "dns-pt",
+      "source_names": {
+        "asn": [
+          "DNS"
+        ]
+      },
+      "aliases": [],
+      "homepage": "https://www.pt.pt/",
+      "roles": {
+        "asn": {
+          "operator": [
+            "ao",
+            "cv",
+            "gw",
+            "pt"
           ]
         }
       }
@@ -1129,6 +1207,26 @@
           "registry_operator": [
             "coop",
             "creditunion"
+          ]
+        }
+      }
+    },
+    {
+      "display_name": "FORTH.gr",
+      "slug": "forth-gr",
+      "source_names": {
+        "asn": [
+          "FORTH-AS"
+        ]
+      },
+      "aliases": [],
+      "homepage": "https://www.forth.gr/",
+      "roles": {
+        "asn": {
+          "operator": [
+            "cy",
+            "gr",
+            "xn--qxam"
           ]
         }
       }
@@ -3958,6 +4056,27 @@
       }
     },
     {
+      "display_name": "Jisc.uk",
+      "slug": "jisc",
+      "source_names": {
+        "asn": [
+          "JANET Jisc Services Limited"
+        ]
+      },
+      "aliases": [],
+      "homepage": "https://www.jisc.ac.uk/",
+      "roles": {
+        "asn": {
+          "operator": [
+            "cw",
+            "gb",
+            "im",
+            "int"
+          ]
+        }
+      }
+    },
+    {
       "display_name": "Kerry Trading",
       "slug": "kerry-trading",
       "source_names": {
@@ -3999,7 +4118,7 @@
       }
     },
     {
-      "display_name": "KISA",
+      "display_name": "KISA.kr",
       "slug": "kisa",
       "source_names": {
         "iana": [
@@ -4229,7 +4348,7 @@
       }
     },
     {
-      "display_name": "MSK-IX",
+      "display_name": "MSK-IX.ru",
       "slug": "msk-ix",
       "source_names": {
         "asn": [
@@ -4247,6 +4366,25 @@
             "tatar",
             "xn--d1acj3b",
             "xn--p1ai"
+          ]
+        }
+      }
+    },
+    {
+      "display_name": "Nask.pl",
+      "slug": "nask-pl",
+      "source_names": {
+        "asn": [
+          "NASK-DNS-ANYCAST",
+          "NASK-DNS-ANYCAST2"
+        ]
+      },
+      "aliases": [],
+      "homepage": "https://www.nask.pl/",
+      "roles": {
+        "asn": {
+          "operator": [
+            "pl"
           ]
         }
       }
@@ -4424,7 +4562,49 @@
       }
     },
     {
-      "display_name": "NIXI",
+      "display_name": "NIC Chile",
+      "slug": "nic-chile",
+      "source_names": {
+        "asn": [
+          "NIC Chile"
+        ]
+      },
+      "aliases": [],
+      "homepage": "https://www.nic.cl/",
+      "roles": {
+        "asn": {
+          "operator": [
+            "cl",
+            "gt",
+            "pa",
+            "ve"
+          ]
+        }
+      }
+    },
+    {
+      "display_name": "NIC.cr",
+      "slug": "nic-cr",
+      "source_names": {
+        "asn": [
+          "Academia Nacional de Ciencias"
+        ]
+      },
+      "aliases": [],
+      "homepage": "https://nic.cr/",
+      "roles": {
+        "asn": {
+          "operator": [
+            "cr",
+            "ni",
+            "pa",
+            "sv"
+          ]
+        }
+      }
+    },
+    {
+      "display_name": "NIXI.in",
       "slug": "nixi",
       "source_names": {
         "iana": [
@@ -4708,6 +4888,28 @@
             "yamaxun",
             "you",
             "zappos"
+          ]
+        }
+      }
+    },
+    {
+      "display_name": "Norid.no",
+      "slug": "norid",
+      "source_names": {
+        "asn": [
+          "UNINETT UNINETT, The Norwegian University & Research Network",
+          "GLOBALCONNECT-"
+        ]
+      },
+      "aliases": [],
+      "homepage": "https://www.norid.no/",
+      "roles": {
+        "asn": {
+          "operator": [
+            "bv",
+            "lb",
+            "no",
+            "sj"
           ]
         }
       }
@@ -5119,6 +5321,37 @@
       }
     },
     {
+      "display_name": "Red.es",
+      "slug": "red-es",
+      "source_names": {
+        "asn": [
+          "RED-ES-AS"
+        ]
+      },
+      "aliases": [],
+      "homepage": "https://www.red.es/",
+      "roles": {
+        "iana": {
+          "sponsor": [
+            "es"
+          ],
+          "admin": [
+            "es"
+          ],
+          "tech": [
+            "es"
+          ]
+        },
+        "asn": {
+          "operator": [
+            "ad",
+            "cat",
+            "es"
+          ]
+        }
+      }
+    },
+    {
       "display_name": "RGnet",
       "slug": "rgnet",
       "source_names": {
@@ -5191,6 +5424,27 @@
             "xn--mgbayh7gpa",
             "xn--ogbpf8fl",
             "xn--ygbi2ammx"
+          ]
+        }
+      }
+    },
+    {
+      "display_name": "RYCE",
+      "slug": "ryce",
+      "source_names": {
+        "asn": [
+          "COMPASS-AS"
+        ]
+      },
+      "aliases": [],
+      "homepage": "https://ryce-rsp.com/",
+      "roles": {
+        "asn": {
+          "operator": [
+            "cologne",
+            "koeln",
+            "tirol",
+            "wien"
           ]
         }
       }
@@ -5273,7 +5527,7 @@
       }
     },
     {
-      "display_name": "SIDN",
+      "display_name": "SIDN.nl",
       "slug": "sidn",
       "source_names": {
         "asn": [
@@ -5344,6 +5598,28 @@
           "registry_operator": [
             "ferrari",
             "jeep"
+          ]
+        }
+      }
+    },
+    {
+      "display_name": "SWITCH.ch",
+      "slug": "switch",
+      "source_names": {
+        "asn": [
+          "SWITCH Switch, Swiss Academic and Research Network"
+        ]
+      },
+      "aliases": [],
+      "homepage": "https://www.switch.ch/",
+      "roles": {
+        "asn": {
+          "operator": [
+            "ar",
+            "cat",
+            "ch",
+            "li",
+            "py"
           ]
         }
       }
@@ -6307,7 +6583,7 @@
       }
     },
     {
-      "display_name": "ZACR",
+      "display_name": "ZACR.za",
       "slug": "zacr",
       "source_names": {
         "iana": [

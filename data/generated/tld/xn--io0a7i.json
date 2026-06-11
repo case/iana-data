@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-06-11T03:43:07Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -38,13 +38,13 @@
       "2025-07-17"
     ],
     "annotations": {
-      "iana_sponsor_alias": "CNNIC",
+      "iana_sponsor_alias": "CNNIC.cn",
       "iana_sponsor_slug": "cnnic",
-      "iana_admin_alias": "CNNIC",
+      "iana_admin_alias": "CNNIC.cn",
       "iana_admin_slug": "cnnic",
-      "iana_tech_alias": "CNNIC",
+      "iana_tech_alias": "CNNIC.cn",
       "iana_tech_slug": "cnnic",
-      "icann_registry_operator_alias": "CNNIC",
+      "icann_registry_operator_alias": "CNNIC.cn",
       "icann_registry_operator_slug": "cnnic",
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -53,7 +53,7 @@
       ],
       "icann_translation_en": "network",
       "as_org_aliases": [
-        "CNNIC"
+        "CNNIC.cn"
       ],
       "as_org_slugs": [
         "cnnic"

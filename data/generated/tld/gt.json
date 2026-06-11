@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-07T22:58:14Z",
+  "publication": "2026-06-11T03:43:07Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -25,10 +25,11 @@
     "annotations": {
       "country_name_iso": "Guatemala",
       "as_org_aliases": [
-        "CZNIC",
+        "CZNIC.cz",
         "Gransy",
         "LACTLD",
         "NIC.br",
+        "NIC Chile",
         "Packet Clearing House"
       ],
       "as_org_slugs": [
@@ -36,6 +37,7 @@
         "gransy",
         "lactld",
         "nic-br",
+        "nic-chile",
         "packet-clearing-house"
       ],
       "geographic_scope": "country"

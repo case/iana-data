@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-09T06:15:40Z",
+  "publication": "2026-06-11T03:43:07Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -28,7 +28,7 @@
       "rdap_source": "IANA",
       "country_name_iso": "Cameroon",
       "as_org_aliases": [
-        "AFNIC",
+        "AFNIC.fr",
         "AFRINIC",
         "University of Oregon"
       ],

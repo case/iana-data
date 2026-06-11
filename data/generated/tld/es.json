@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-06-11T03:43:07Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -24,12 +24,20 @@
       "2025-07-11"
     ],
     "annotations": {
+      "iana_sponsor_alias": "Red.es",
+      "iana_sponsor_slug": "red-es",
+      "iana_admin_alias": "Red.es",
+      "iana_admin_slug": "red-es",
+      "iana_tech_alias": "Red.es",
+      "iana_tech_slug": "red-es",
       "country_name_iso": "Spain",
       "as_org_aliases": [
-        "Packet Clearing House"
+        "Packet Clearing House",
+        "Red.es"
       ],
       "as_org_slugs": [
-        "packet-clearing-house"
+        "packet-clearing-house",
+        "red-es"
       ],
       "geographic_scope": "country"
     },

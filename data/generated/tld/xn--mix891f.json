@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:33:22Z",
+  "publication": "2026-06-11T03:43:07Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -29,10 +29,12 @@
     "annotations": {
       "country_name_iso": "Macao",
       "as_org_aliases": [
-        "Community DNS"
+        "Community DNS",
+        "Chinese University of Hong Kong"
       ],
       "as_org_slugs": [
-        "community-dns"
+        "community-dns",
+        "cuhk"
       ],
       "geographic_scope": "country",
       "language_code": "zh-Hant",

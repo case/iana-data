@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-06-11T03:43:07Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -32,10 +32,12 @@
       "iana_tech_slug": "dns-belgium",
       "country_name_iso": "Belgium",
       "as_org_aliases": [
+        "DNS Belgium",
         "RcodeZero",
         "UltraDNS"
       ],
       "as_org_slugs": [
+        "dns-belgium",
         "rcodezero",
         "ultradns"
       ],

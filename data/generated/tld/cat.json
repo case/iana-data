@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-06-11T03:43:07Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -43,14 +43,18 @@
         "non_sponsored"
       ],
       "as_org_aliases": [
-        "DENIC",
+        "DENIC.de",
         "Knipp Medien",
-        "Packet Clearing House"
+        "Packet Clearing House",
+        "Red.es",
+        "SWITCH.ch"
       ],
       "as_org_slugs": [
         "denic",
         "knipp-medien",
-        "packet-clearing-house"
+        "packet-clearing-house",
+        "red-es",
+        "switch"
       ],
       "geographic_scope": "subdivision",
       "cultural_affiliation": "catalan"
