@@ -15242,7 +15242,7 @@
     "delegationDate" : "2016-04-17",
     "gTLD" : "xn--5tzm5g",
     "registryClassDomainNameList" : null,
-    "registryOperator" : "Global Website TLD Asia Limited",
+    "registryOperator" : "Jolly Host, LLC",
     "registryOperatorCountryCode" : null,
     "removalDate" : null,
     "specification13" : false,
@@ -16575,6 +16575,6 @@
     "thirdOrLowerLevelRegistration" : false,
     "uLabel" : null
   } ],
-  "updatedOn" : "2026-06-11T00:03:51.915+0000",
+  "updatedOn" : "2026-06-12T00:03:54.495+0000",
   "version" : 2
 }
