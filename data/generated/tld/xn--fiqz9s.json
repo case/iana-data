@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-15T03:46:11Z",
+  "publication": "2026-06-16T03:43:40Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -115,7 +115,7 @@
         "ipv6": [
           {
             "ip": "2001:dc7:fffc::1",
-            "asn": 24151,
+            "asn": 24409,
             "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
             "as_country": "CN"
           }

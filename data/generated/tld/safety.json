@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-12T03:44:14Z",
+  "publication": "2026-06-16T03:43:40Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -14,7 +14,7 @@
       "iana": {
         "sponsor": "Safety Registry Services, LLC.",
         "admin": "Safety Registry Services LLC",
-        "tech": "GoDaddy Registry"
+        "tech": "Identity Digital Limited"
       },
       "icann": {
         "registry_operator": "Jolly Host, LLC",
@@ -33,11 +33,11 @@
     "rdap_server": "https://rdap.nic.safety/",
     "tld_created": "2015-04-23",
     "tld_updated": [
-      "2026-06-11"
+      "2026-06-15"
     ],
     "annotations": {
-      "iana_tech_alias": "GoDaddy Registry",
-      "iana_tech_slug": "godaddy-registry",
+      "iana_tech_alias": "Identity Digital",
+      "iana_tech_slug": "identity-digital",
       "rdap_source": "IANA",
       "registry_agreement_types": [
         "base",

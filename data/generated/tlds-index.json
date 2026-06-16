@@ -1,6 +1,6 @@
 {
   "description": "Index of per-TLD data files at data/generated/tld/",
-  "publication": "2026-06-13T03:44:00Z",
+  "publication": "2026-06-16T03:43:40Z",
   "count": 1594,
   "tlds": [
     {
@@ -9835,7 +9835,7 @@
       "delegated": true,
       "tld_created": "2015-04-23",
       "tld_updated": [
-        "2026-06-11"
+        "2026-06-15"
       ]
     },
     {
@@ -13069,7 +13069,7 @@
       "delegated": true,
       "tld_created": "2013-12-12",
       "tld_updated": [
-        "2026-06-08"
+        "2026-06-15"
       ]
     },
     {

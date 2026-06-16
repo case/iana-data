@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-09T06:15:40Z",
+  "publication": "2026-06-16T03:43:40Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -35,7 +35,7 @@
     "rdap_server": "https://nic.samsung/rdap/",
     "tld_created": "2013-12-12",
     "tld_updated": [
-      "2026-06-08"
+      "2026-06-15"
     ],
     "annotations": {
       "rdap_source": "IANA",
