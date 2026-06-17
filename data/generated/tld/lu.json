@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-07T22:58:14Z",
+  "publication": "2026-06-17T03:49:02Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -21,7 +21,7 @@
     "whois_server": "whois.dns.lu",
     "tld_created": "1995-01-27",
     "tld_updated": [
-      "2023-07-28"
+      "2026-06-16"
     ],
     "annotations": {
       "country_name_iso": "Luxembourg",
@@ -38,6 +38,25 @@
       "geographic_scope": "country"
     },
     "nameservers": [
+      {
+        "hostname": "1.ns.lu",
+        "ipv4": [
+          {
+            "ip": "158.64.229.18",
+            "asn": 2602,
+            "as_org": "RESTENA Reseau Teleinformatique de lEducation Nationale",
+            "as_country": "LU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:a18:4:1::18",
+            "asn": 2602,
+            "as_org": "RESTENA Reseau Teleinformatique de lEducation Nationale",
+            "as_country": "LU"
+          }
+        ]
+      },
       {
         "hostname": "g.dns.lu",
         "ipv4": [
