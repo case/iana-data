@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-11T03:43:07Z",
+  "publication": "2026-06-18T03:44:52Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -21,7 +21,7 @@
     "whois_server": "whois.punktum.dk",
     "tld_created": "1987-07-14",
     "tld_updated": [
-      "2025-10-30"
+      "2026-06-17"
     ],
     "annotations": {
       "country_name_iso": "Denmark",
