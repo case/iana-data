@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-17T03:49:02Z",
+  "publication": "2026-06-19T03:42:18Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -21,19 +21,21 @@
     "whois_server": "whois.dns.lu",
     "tld_created": "1995-01-27",
     "tld_updated": [
-      "2026-06-16"
+      "2026-06-18"
     ],
     "annotations": {
       "country_name_iso": "Luxembourg",
       "as_org_aliases": [
         "Community DNS",
         "Netnod AB",
-        "Packet Clearing House"
+        "Packet Clearing House",
+        "RcodeZero"
       ],
       "as_org_slugs": [
         "community-dns",
         "netnod",
-        "packet-clearing-house"
+        "packet-clearing-house",
+        "rcodezero"
       ],
       "geographic_scope": "country"
     },
@@ -134,25 +136,6 @@
         ]
       },
       {
-        "hostname": "ns1.dns.lu",
-        "ipv4": [
-          {
-            "ip": "158.64.229.18",
-            "asn": 2602,
-            "as_org": "RESTENA Reseau Teleinformatique de lEducation Nationale",
-            "as_country": "LU"
-          }
-        ],
-        "ipv6": [
-          {
-            "ip": "2001:a18:4:1::18",
-            "asn": 2602,
-            "as_org": "RESTENA Reseau Teleinformatique de lEducation Nationale",
-            "as_country": "LU"
-          }
-        ]
-      },
-      {
         "hostname": "p.dns.lu",
         "ipv4": [
           {
@@ -168,6 +151,25 @@
             "asn": 42,
             "as_org": "WOODYNET-1",
             "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "r.ns.lu",
+        "ipv4": [
+          {
+            "ip": "194.0.25.47",
+            "asn": 1921,
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_country": "AT"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:20::47",
+            "asn": 1921,
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_country": "AT"
           }
         ]
       }
