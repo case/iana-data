@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-06-20T03:43:15Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -58,7 +58,7 @@
             "ip": "93.187.151.42",
             "asn": 8680,
             "as_org": "SURE-INTERNATIONAL-LIMITED",
-            "as_country": "GB"
+            "as_country": "GG"
           }
         ],
         "ipv6": []
