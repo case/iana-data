@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-17T03:49:02Z",
+  "publication": "2026-06-24T03:45:35Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -33,7 +33,7 @@
     "rdap_server": "https://rdap.zdnsgtld.com/ren",
     "tld_created": "2014-02-28",
     "tld_updated": [
-      "2026-06-16"
+      "2026-06-23"
     ],
     "annotations": {
       "iana_admin_alias": "ZDNS",
