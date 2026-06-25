@@ -1,6 +1,6 @@
 {
   "description": "Organizations that play roles for TLDs in the IANA root zone, with a reverse-index of those roles. Consolidated subset: this covers the curated multi-source organizations only; the single-source long tail is not yet included, so absence here does not mean a TLD has no operator.",
-  "publication": "2026-06-23T03:42:29Z",
+  "publication": "2026-06-25T03:45:31Z",
   "sources": [
     "data/source/iana-root.html (IANA)",
     "data/source/icann-gtlds.json (ICANN)",
@@ -895,13 +895,15 @@
             "sina",
             "weibo",
             "xn--1qqw23a",
+            "xn--55qw42g",
             "xn--55qx5d",
             "xn--9krt00a",
             "xn--fiqs8s",
             "xn--fiqz9s",
             "xn--io0a7i",
             "xn--j6w193g",
-            "xn--xhq521b"
+            "xn--xhq521b",
+            "xn--zfr164b"
           ]
         }
       }

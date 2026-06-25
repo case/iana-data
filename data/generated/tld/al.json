@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-24T03:45:35Z",
+  "publication": "2026-06-25T03:45:30Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -20,7 +20,7 @@
     "registry_url": "https://akep.al/e-aplikime-domain/",
     "tld_created": "1992-04-21",
     "tld_updated": [
-      "2026-06-23"
+      "2026-06-24"
     ],
     "annotations": {
       "country_name_iso": "Albania",
@@ -52,6 +52,18 @@
         "ipv4": [
           {
             "ip": "194.1.149.230",
+            "asn": 42409,
+            "as_org": "AKEP-AS Electronic and Postal Communications Authority - AKEP",
+            "as_country": "AL"
+          }
+        ],
+        "ipv6": []
+      },
+      {
+        "hostname": "ns2.nic.al",
+        "ipv4": [
+          {
+            "ip": "194.1.149.229",
             "asn": 42409,
             "as_org": "AKEP-AS Electronic and Postal Communications Authority - AKEP",
             "as_country": "AL"
