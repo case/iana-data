@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-25T03:45:30Z",
+  "publication": "2026-06-26T03:55:18Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -20,7 +20,7 @@
     "registry_url": "https://akep.al/e-aplikime-domain/",
     "tld_created": "1992-04-21",
     "tld_updated": [
-      "2026-06-24"
+      "2026-06-25"
     ],
     "annotations": {
       "country_name_iso": "Albania",
