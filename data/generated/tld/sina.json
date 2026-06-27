@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-23T03:42:28Z",
+  "publication": "2026-06-27T03:44:35Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -33,7 +33,7 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "2016-02-29",
     "tld_updated": [
-      "2026-06-22"
+      "2026-06-26"
     ],
     "annotations": {
       "iana_tech_alias": "Identity Digital",

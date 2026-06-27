@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-26T03:55:18Z",
+  "publication": "2026-06-27T03:44:35Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -33,7 +33,7 @@
     "rdap_server": "https://rdap.nic.safety/",
     "tld_created": "2015-04-23",
     "tld_updated": [
-      "2026-06-15"
+      "2026-06-26"
     ],
     "annotations": {
       "iana_tech_alias": "Identity Digital",
@@ -44,124 +44,124 @@
         "non_sponsored"
       ],
       "as_org_aliases": [
-        "UltraDNS"
+        "Identity Digital"
       ],
       "as_org_slugs": [
-        "ultradns"
+        "identity-digital"
       ]
     },
     "nameservers": [
       {
-        "hostname": "a.nic.safety",
+        "hostname": "v0n0.nic.safety",
         "ipv4": [
           {
-            "ip": "37.209.192.10",
-            "asn": 12008,
-            "as_org": "SECURITYSERVICES",
+            "ip": "65.22.36.41",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
             "as_country": "US"
           }
         ],
         "ipv6": [
           {
-            "ip": "2001:dcd:1::10",
-            "asn": 12008,
-            "as_org": "SECURITYSERVICES",
+            "ip": "2a01:8840:26::41",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
             "as_country": "US"
           }
         ]
       },
       {
-        "hostname": "b.nic.safety",
+        "hostname": "v0n1.nic.safety",
         "ipv4": [
           {
-            "ip": "37.209.194.10",
-            "asn": 12008,
-            "as_org": "SECURITYSERVICES",
+            "ip": "65.22.37.41",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
             "as_country": "US"
           }
         ],
         "ipv6": [
           {
-            "ip": "2001:dcd:2::10",
-            "asn": 12008,
-            "as_org": "SECURITYSERVICES",
+            "ip": "2a01:8840:27::41",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
             "as_country": "US"
           }
         ]
       },
       {
-        "hostname": "c.nic.safety",
+        "hostname": "v0n2.nic.safety",
         "ipv4": [
           {
-            "ip": "37.209.196.10",
-            "asn": 12008,
-            "as_org": "SECURITYSERVICES",
+            "ip": "65.22.38.41",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
             "as_country": "US"
           }
         ],
         "ipv6": [
           {
-            "ip": "2001:dcd:3::10",
-            "asn": 12008,
-            "as_org": "SECURITYSERVICES",
+            "ip": "2a01:8840:28::41",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
             "as_country": "US"
           }
         ]
       },
       {
-        "hostname": "ns1.dns.nic.safety",
+        "hostname": "v0n3.nic.safety",
         "ipv4": [
           {
-            "ip": "156.154.144.148",
-            "asn": 12008,
-            "as_org": "SECURITYSERVICES",
+            "ip": "161.232.18.41",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
             "as_country": "US"
           }
         ],
         "ipv6": [
           {
-            "ip": "2610:a1:1071::94",
-            "asn": 12008,
-            "as_org": "SECURITYSERVICES",
+            "ip": "2a01:8840:10e::41",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
             "as_country": "US"
           }
         ]
       },
       {
-        "hostname": "ns2.dns.nic.safety",
+        "hostname": "v2n0.nic.safety",
         "ipv4": [
           {
-            "ip": "156.154.145.148",
-            "asn": 12008,
-            "as_org": "SECURITYSERVICES",
-            "as_country": "US"
+            "ip": "65.22.39.41",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
           }
         ],
         "ipv6": [
           {
-            "ip": "2610:a1:1072::94",
-            "asn": 12008,
-            "as_org": "SECURITYSERVICES",
-            "as_country": "US"
+            "ip": "2a01:8840:29::41",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
           }
         ]
       },
       {
-        "hostname": "ns3.dns.nic.safety",
+        "hostname": "v2n1.nic.safety",
         "ipv4": [
           {
-            "ip": "156.154.159.148",
-            "asn": 12008,
-            "as_org": "SECURITYSERVICES",
-            "as_country": "US"
+            "ip": "161.232.19.41",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
           }
         ],
         "ipv6": [
           {
-            "ip": "2610:a1:1073::94",
-            "asn": 12008,
-            "as_org": "SECURITYSERVICES",
-            "as_country": "US"
+            "ip": "2a01:8840:10f::41",
+            "asn": 207266,
+            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_country": "IE"
           }
         ]
       }
