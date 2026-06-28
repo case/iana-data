@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-24T03:45:35Z",
+  "publication": "2026-06-28T03:44:22Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -140,7 +140,7 @@
         "ipv4": [
           {
             "ip": "42.83.130.1",
-            "asn": 24151,
+            "asn": 24406,
             "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
             "as_country": "CN"
           }
@@ -159,7 +159,7 @@
         "ipv4": [
           {
             "ip": "42.83.131.1",
-            "asn": 24151,
+            "asn": 24406,
             "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
             "as_country": "CN"
           }
@@ -178,7 +178,7 @@
         "ipv4": [
           {
             "ip": "42.83.132.1",
-            "asn": 24151,
+            "asn": 24406,
             "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
             "as_country": "CN"
           }
