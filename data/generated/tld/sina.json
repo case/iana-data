@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-28T03:44:22Z",
+  "publication": "2026-06-30T03:46:49Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -33,7 +33,7 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "2016-02-29",
     "tld_updated": [
-      "2026-06-26"
+      "2026-06-29"
     ],
     "annotations": {
       "iana_tech_alias": "Identity Digital",
@@ -45,91 +45,13 @@
         "non_sponsored"
       ],
       "as_org_aliases": [
-        "CNNIC.cn",
-        "Identity Digital"
+        "CNNIC.cn"
       ],
       "as_org_slugs": [
-        "cnnic",
-        "identity-digital"
+        "cnnic"
       ]
     },
     "nameservers": [
-      {
-        "hostname": "a0.nic.sina",
-        "ipv4": [
-          {
-            "ip": "65.22.140.33",
-            "asn": 12041,
-            "as_org": "AS-AFILIAS1",
-            "as_country": "US"
-          }
-        ],
-        "ipv6": [
-          {
-            "ip": "2a01:8840:8a::33",
-            "asn": 12041,
-            "as_org": "AS-AFILIAS1",
-            "as_country": "US"
-          }
-        ]
-      },
-      {
-        "hostname": "a2.nic.sina",
-        "ipv4": [
-          {
-            "ip": "65.22.143.33",
-            "asn": 207266,
-            "as_org": "AFILIAS-SECONDARY-DNS",
-            "as_country": "IE"
-          }
-        ],
-        "ipv6": [
-          {
-            "ip": "2a01:8840:8d::33",
-            "asn": 207266,
-            "as_org": "AFILIAS-SECONDARY-DNS",
-            "as_country": "IE"
-          }
-        ]
-      },
-      {
-        "hostname": "b0.nic.sina",
-        "ipv4": [
-          {
-            "ip": "65.22.141.33",
-            "asn": 12041,
-            "as_org": "AS-AFILIAS1",
-            "as_country": "US"
-          }
-        ],
-        "ipv6": [
-          {
-            "ip": "2a01:8840:8b::33",
-            "asn": 12041,
-            "as_org": "AS-AFILIAS1",
-            "as_country": "US"
-          }
-        ]
-      },
-      {
-        "hostname": "c0.nic.sina",
-        "ipv4": [
-          {
-            "ip": "65.22.142.33",
-            "asn": 12041,
-            "as_org": "AS-AFILIAS1",
-            "as_country": "US"
-          }
-        ],
-        "ipv6": [
-          {
-            "ip": "2a01:8840:8c::33",
-            "asn": 12041,
-            "as_org": "AS-AFILIAS1",
-            "as_country": "US"
-          }
-        ]
-      },
       {
         "hostname": "ta.ngtld.cn",
         "ipv4": [

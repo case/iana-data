@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-25T03:45:30Z",
+  "publication": "2026-06-30T03:46:49Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -80,16 +80,16 @@
         "ipv4": [
           {
             "ip": "192.42.174.30",
-            "asn": 40647,
-            "as_org": "VGRS-AC25",
+            "asn": 21313,
+            "as_org": "VERISIGN-AS",
             "as_country": "US"
           }
         ],
         "ipv6": [
           {
             "ip": "2001:500:121::30",
-            "asn": 40647,
-            "as_org": "VGRS-AC25",
+            "asn": 21313,
+            "as_org": "VERISIGN-AS",
             "as_country": "US"
           }
         ]
@@ -118,16 +118,16 @@
         "ipv4": [
           {
             "ip": "192.42.176.30",
-            "asn": 25485,
-            "as_org": "VERISIGN-AS",
+            "asn": 397193,
+            "as_org": "VRSN-AC28",
             "as_country": "US"
           }
         ],
         "ipv6": [
           {
             "ip": "2001:500:123::30",
-            "asn": 25485,
-            "as_org": "VERISIGN-AS",
+            "asn": 397193,
+            "as_org": "VRSN-AC28",
             "as_country": "US"
           }
         ]
