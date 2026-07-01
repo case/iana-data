@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-30T03:46:49Z",
+  "publication": "2026-07-01T03:41:06Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -156,16 +156,16 @@
         "ipv4": [
           {
             "ip": "192.35.51.30",
-            "asn": 397194,
-            "as_org": "VRSN-AC28",
+            "asn": 396600,
+            "as_org": "VRSN-AC50-340",
             "as_country": "US"
           }
         ],
         "ipv6": [
           {
             "ip": "2001:503:d414::30",
-            "asn": 397194,
-            "as_org": "VRSN-AC28",
+            "asn": 396600,
+            "as_org": "VRSN-AC50-340",
             "as_country": "US"
           }
         ]
@@ -175,16 +175,16 @@
         "ipv4": [
           {
             "ip": "192.42.93.30",
-            "asn": 397194,
-            "as_org": "VRSN-AC28",
+            "asn": 396600,
+            "as_org": "VRSN-AC50-340",
             "as_country": "US"
           }
         ],
         "ipv6": [
           {
             "ip": "2001:503:eea3::30",
-            "asn": 397194,
-            "as_org": "VRSN-AC28",
+            "asn": 396600,
+            "as_org": "VRSN-AC50-340",
             "as_country": "US"
           }
         ]
@@ -194,16 +194,16 @@
         "ipv4": [
           {
             "ip": "192.54.112.30",
-            "asn": 397194,
-            "as_org": "VRSN-AC28",
+            "asn": 396600,
+            "as_org": "VRSN-AC50-340",
             "as_country": "US"
           }
         ],
         "ipv6": [
           {
             "ip": "2001:502:8cc::30",
-            "asn": 397194,
-            "as_org": "VRSN-AC28",
+            "asn": 396600,
+            "as_org": "VRSN-AC50-340",
             "as_country": "US"
           }
         ]
@@ -213,16 +213,16 @@
         "ipv4": [
           {
             "ip": "192.43.172.30",
-            "asn": 397194,
-            "as_org": "VRSN-AC28",
+            "asn": 396600,
+            "as_org": "VRSN-AC50-340",
             "as_country": "US"
           }
         ],
         "ipv6": [
           {
             "ip": "2001:503:39c1::30",
-            "asn": 397194,
-            "as_org": "VRSN-AC28",
+            "asn": 396600,
+            "as_org": "VRSN-AC50-340",
             "as_country": "US"
           }
         ]
@@ -232,16 +232,16 @@
         "ipv4": [
           {
             "ip": "192.48.79.30",
-            "asn": 21313,
-            "as_org": "VERISIGN-AS",
+            "asn": 36623,
+            "as_org": "HGTLD",
             "as_country": "US"
           }
         ],
         "ipv6": [
           {
             "ip": "2001:502:7094::30",
-            "asn": 21313,
-            "as_org": "VERISIGN-AS",
+            "asn": 36623,
+            "as_org": "HGTLD",
             "as_country": "US"
           }
         ]
@@ -251,16 +251,16 @@
         "ipv4": [
           {
             "ip": "192.52.178.30",
-            "asn": 21313,
-            "as_org": "VERISIGN-AS",
+            "asn": 36623,
+            "as_org": "HGTLD",
             "as_country": "US"
           }
         ],
         "ipv6": [
           {
             "ip": "2001:503:d2d::30",
-            "asn": 21313,
-            "as_org": "VERISIGN-AS",
+            "asn": 36623,
+            "as_org": "HGTLD",
             "as_country": "US"
           }
         ]
@@ -270,16 +270,16 @@
         "ipv4": [
           {
             "ip": "192.41.162.30",
-            "asn": 21313,
-            "as_org": "VERISIGN-AS",
+            "asn": 36623,
+            "as_org": "HGTLD",
             "as_country": "US"
           }
         ],
         "ipv6": [
           {
             "ip": "2001:500:d937::30",
-            "asn": 21313,
-            "as_org": "VERISIGN-AS",
+            "asn": 36623,
+            "as_org": "HGTLD",
             "as_country": "US"
           }
         ]
@@ -289,16 +289,16 @@
         "ipv4": [
           {
             "ip": "192.55.83.30",
-            "asn": 21313,
-            "as_org": "VERISIGN-AS",
+            "asn": 36623,
+            "as_org": "HGTLD",
             "as_country": "US"
           }
         ],
         "ipv6": [
           {
             "ip": "2001:501:b1f9::30",
-            "asn": 21313,
-            "as_org": "VERISIGN-AS",
+            "asn": 36623,
+            "as_org": "HGTLD",
             "as_country": "US"
           }
         ]
