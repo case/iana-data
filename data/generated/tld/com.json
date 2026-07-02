@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-01T03:41:06Z",
+  "publication": "2026-07-02T03:37:08Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -107,7 +107,7 @@
         "ipv6": [
           {
             "ip": "2001:503:83eb::30",
-            "asn": 397204,
+            "asn": 397198,
             "as_org": "VRSN-AC28",
             "as_country": "US"
           }
@@ -126,7 +126,7 @@
         "ipv6": [
           {
             "ip": "2001:500:856e::30",
-            "asn": 397204,
+            "asn": 397198,
             "as_org": "VRSN-AC28",
             "as_country": "US"
           }
@@ -145,7 +145,7 @@
         "ipv6": [
           {
             "ip": "2001:502:1ca1::30",
-            "asn": 397204,
+            "asn": 397198,
             "as_org": "VRSN-AC28",
             "as_country": "US"
           }
