@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-02T03:37:08Z",
+  "publication": "2026-07-03T03:37:49Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -5343,7 +5343,7 @@
       "registry_url": "https://akep.al/e-aplikime-domain/",
       "tld_created": "1992-04-21",
       "tld_updated": [
-        "2026-06-25"
+        "2026-07-01"
       ],
       "annotations": {
         "country_name_iso": "Albania",
@@ -5368,7 +5368,14 @@
               "as_country": "TH"
             }
           ],
-          "ipv6": []
+          "ipv6": [
+            {
+              "ip": "2001:3c8:9009:181::2",
+              "asn": 9464,
+              "as_org": "PSU-TH-AS-AP Prince of Songkla University SritrangNET",
+              "as_country": "TH"
+            }
+          ]
         },
         {
           "hostname": "ns1.nic.al",
@@ -37539,7 +37546,7 @@
           "ipv4": [
             {
               "ip": "203.119.29.1",
-              "asn": 24409,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -190928,7 +190935,7 @@
       "rdap_server": "https://rdap.conac.cn/",
       "tld_created": "2013-12-12",
       "tld_updated": [
-        "2026-06-24"
+        "2026-07-01"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -190947,87 +190954,6 @@
         "language_name_en": "Chinese"
       },
       "nameservers": [
-        {
-          "hostname": "ns1.conac.cn",
-          "ipv4": [
-            {
-              "ip": "111.235.161.1",
-              "asn": 58448,
-              "as_org": "AP-CONAC-AS-AP CONAC China Organizational Name Administration Center",
-              "as_country": "CN"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2401:b400:1::1",
-              "asn": 58448,
-              "as_org": "AP-CONAC-AS-AP CONAC China Organizational Name Administration Center",
-              "as_country": "CN"
-            }
-          ]
-        },
-        {
-          "hostname": "ns2.conac.cn",
-          "ipv4": [
-            {
-              "ip": "111.235.162.1",
-              "asn": 58536,
-              "as_org": "AP-CONAC-AS-AP CONAC China Organizational Name Administration Center",
-              "as_country": "CN"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2401:b400:8::1",
-              "asn": 58536,
-              "as_org": "AP-CONAC-AS-AP CONAC China Organizational Name Administration Center",
-              "as_country": "CN"
-            }
-          ]
-        },
-        {
-          "hostname": "ns3.conac.cn",
-          "ipv4": [
-            {
-              "ip": "111.235.163.1",
-              "asn": 58536,
-              "as_org": "AP-CONAC-AS-AP CONAC China Organizational Name Administration Center",
-              "as_country": "CN"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2401:b400:9::1",
-              "asn": 58536,
-              "as_org": "AP-CONAC-AS-AP CONAC China Organizational Name Administration Center",
-              "as_country": "CN"
-            }
-          ]
-        },
-        {
-          "hostname": "ns4.conac.cn",
-          "ipv4": [
-            {
-              "ip": "111.235.164.1",
-              "asn": 58536,
-              "as_org": "AP-CONAC-AS-AP CONAC China Organizational Name Administration Center",
-              "as_country": "CN"
-            }
-          ],
-          "ipv6": []
-        },
-        {
-          "hostname": "ns5.conac.cn",
-          "ipv4": [
-            {
-              "ip": "111.235.165.1",
-              "asn": 58536,
-              "as_org": "AP-CONAC-AS-AP CONAC China Organizational Name Administration Center",
-              "as_country": "CN"
-            }
-          ],
-          "ipv6": []
-        },
         {
           "hostname": "ta.ngtld.cn",
           "ipv4": [
@@ -191211,7 +191137,7 @@
           "ipv4": [
             {
               "ip": "125.208.42.1",
-              "asn": 24409,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -196678,7 +196604,7 @@
           "ipv4": [
             {
               "ip": "125.208.36.1",
-              "asn": 24409,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -196815,7 +196741,7 @@
           "ipv4": [
             {
               "ip": "125.208.36.1",
-              "asn": 24409,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -199115,7 +199041,7 @@
           "ipv4": [
             {
               "ip": "125.208.42.1",
-              "asn": 24409,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -209813,7 +209739,7 @@
       "rdap_server": "https://rdap.conac.cn",
       "tld_created": "2013-12-12",
       "tld_updated": [
-        "2026-06-24"
+        "2026-07-01"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -209833,87 +209759,6 @@
         "language_name_en": "Chinese"
       },
       "nameservers": [
-        {
-          "hostname": "ns1.conac.cn",
-          "ipv4": [
-            {
-              "ip": "111.235.161.1",
-              "asn": 58448,
-              "as_org": "AP-CONAC-AS-AP CONAC China Organizational Name Administration Center",
-              "as_country": "CN"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2401:b400:1::1",
-              "asn": 58448,
-              "as_org": "AP-CONAC-AS-AP CONAC China Organizational Name Administration Center",
-              "as_country": "CN"
-            }
-          ]
-        },
-        {
-          "hostname": "ns2.conac.cn",
-          "ipv4": [
-            {
-              "ip": "111.235.162.1",
-              "asn": 58536,
-              "as_org": "AP-CONAC-AS-AP CONAC China Organizational Name Administration Center",
-              "as_country": "CN"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2401:b400:8::1",
-              "asn": 58536,
-              "as_org": "AP-CONAC-AS-AP CONAC China Organizational Name Administration Center",
-              "as_country": "CN"
-            }
-          ]
-        },
-        {
-          "hostname": "ns3.conac.cn",
-          "ipv4": [
-            {
-              "ip": "111.235.163.1",
-              "asn": 58536,
-              "as_org": "AP-CONAC-AS-AP CONAC China Organizational Name Administration Center",
-              "as_country": "CN"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2401:b400:9::1",
-              "asn": 58536,
-              "as_org": "AP-CONAC-AS-AP CONAC China Organizational Name Administration Center",
-              "as_country": "CN"
-            }
-          ]
-        },
-        {
-          "hostname": "ns4.conac.cn",
-          "ipv4": [
-            {
-              "ip": "111.235.164.1",
-              "asn": 58536,
-              "as_org": "AP-CONAC-AS-AP CONAC China Organizational Name Administration Center",
-              "as_country": "CN"
-            }
-          ],
-          "ipv6": []
-        },
-        {
-          "hostname": "ns5.conac.cn",
-          "ipv4": [
-            {
-              "ip": "111.235.165.1",
-              "asn": 58536,
-              "as_org": "AP-CONAC-AS-AP CONAC China Organizational Name Administration Center",
-              "as_country": "CN"
-            }
-          ],
-          "ipv6": []
-        },
         {
           "hostname": "ta.ngtld.cn",
           "ipv4": [
