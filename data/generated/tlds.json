@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-03T03:37:49Z",
+  "publication": "2026-07-04T03:34:18Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -5343,7 +5343,7 @@
       "registry_url": "https://akep.al/e-aplikime-domain/",
       "tld_created": "1992-04-21",
       "tld_updated": [
-        "2026-07-01"
+        "2026-07-03"
       ],
       "annotations": {
         "country_name_iso": "Albania",
@@ -19854,7 +19854,7 @@
           "ipv4": [
             {
               "ip": "204.74.105.1",
-              "asn": 399169,
+              "asn": 399164,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -19873,7 +19873,7 @@
           "ipv4": [
             {
               "ip": "204.74.107.1",
-              "asn": 399169,
+              "asn": 399163,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -121065,17 +121065,19 @@
       "registry_url": "http://www.nic.ni",
       "tld_created": "1989-10-13",
       "tld_updated": [
-        "2026-03-23"
+        "2026-07-02"
       ],
       "annotations": {
         "country_name_iso": "Nicaragua",
         "as_org_aliases": [
           "Amazon",
-          "NIC.cr"
+          "NIC.cr",
+          "Packet Clearing House"
         ],
         "as_org_slugs": [
           "amazon",
-          "nic-cr"
+          "nic-cr",
+          "packet-clearing-house"
         ],
         "geographic_scope": "country"
       },
@@ -121150,6 +121152,25 @@
               "ip": "2600:1f10:40b2:a5d6:6f85:ee80:d86c:6b90",
               "asn": 14618,
               "as_org": "AMAZON-AES",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "ns5.ni",
+          "ipv4": [
+            {
+              "ip": "204.61.216.156",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2001:500:14:6156:ad::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
               "as_country": "US"
             }
           ]
@@ -176939,7 +176960,7 @@
           "ipv4": [
             {
               "ip": "204.74.105.1",
-              "asn": 399169,
+              "asn": 399164,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -176958,7 +176979,7 @@
           "ipv4": [
             {
               "ip": "204.74.107.1",
-              "asn": 399169,
+              "asn": 399163,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
