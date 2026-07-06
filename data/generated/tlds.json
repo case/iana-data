@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-05T03:35:19Z",
+  "publication": "2026-07-06T03:39:48Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -172646,7 +172646,7 @@
       "whois_server": "whois.trabis.gov.tr",
       "tld_created": "1990-09-17",
       "tld_updated": [
-        "2026-07-01"
+        "2026-07-05"
       ],
       "annotations": {
         "country_name_iso": "Türkiye",
@@ -172671,7 +172671,14 @@
               "as_country": "TR"
             }
           ],
-          "ipv6": []
+          "ipv6": [
+            {
+              "ip": "2001:a98:13::43",
+              "asn": 8517,
+              "as_org": "ULAKNET",
+              "as_country": "TR"
+            }
+          ]
         },
         {
           "hostname": "ns44.ns.tr",
@@ -172683,7 +172690,14 @@
               "as_country": "TR"
             }
           ],
-          "ipv6": []
+          "ipv6": [
+            {
+              "ip": "2001:a98:13::44",
+              "asn": 8517,
+              "as_org": "ULAKNET",
+              "as_country": "TR"
+            }
+          ]
         },
         {
           "hostname": "ns61.ns.tr",
@@ -172754,6 +172768,18 @@
               "ip": "31.145.253.160",
               "asn": 15924,
               "as_org": "BORUSANTELEKOM-AS",
+              "as_country": "TR"
+            }
+          ],
+          "ipv6": []
+        },
+        {
+          "hostname": "ns75.ns.tr",
+          "ipv4": [
+            {
+              "ip": "88.255.61.201",
+              "asn": 9121,
+              "as_org": "TTNET",
               "as_country": "TR"
             }
           ],
