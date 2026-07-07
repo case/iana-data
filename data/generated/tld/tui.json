@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-07-07T03:38:44Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -33,7 +33,7 @@
     "rdap_server": "https://rdap.centralnic.com/tui",
     "tld_created": "2014-09-18",
     "tld_updated": [
-      "2024-05-28"
+      "2026-07-06"
     ],
     "annotations": {
       "iana_tech_alias": "CentralNic",

@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-06T03:39:48Z",
+  "publication": "2026-07-07T03:38:44Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -155334,10 +155334,10 @@
       },
       "registry_url": "http://www.sina.com",
       "whois_server": "whois.nic.sina",
-      "rdap_server": "https://rdap.identitydigital.services/rdap/",
+      "rdap_server": "https://rdap.ngtld.cn/",
       "tld_created": "2016-02-29",
       "tld_updated": [
-        "2026-06-29"
+        "2026-07-06"
       ],
       "annotations": {
         "iana_tech_alias": "Identity Digital",
@@ -164143,15 +164143,15 @@
       "orgs": {
         "iana": {
           "sponsor": "National Authority for Information Technology Services (NAITS)",
-          "admin": "National Agency for Network Services (NANS)",
-          "tech": "National Agency for Network Services (NANS)"
+          "admin": "National Authority for IT Services (NAITS)",
+          "tech": "National Authority for IT Services (NAITS)"
         }
       },
       "registry_url": "http://tld.sy",
       "whois_server": "whois.tld.sy",
       "tld_created": "1996-02-20",
       "tld_updated": [
-        "2026-05-14"
+        "2026-07-06"
       ],
       "annotations": {
         "country_name_iso": "Syrian Arab Republic",
@@ -174243,7 +174243,7 @@
       "rdap_server": "https://rdap.centralnic.com/tui",
       "tld_created": "2014-09-18",
       "tld_updated": [
-        "2024-05-28"
+        "2026-07-06"
       ],
       "annotations": {
         "iana_tech_alias": "CentralNic",
@@ -184861,10 +184861,10 @@
       },
       "registry_url": "http://www.sina.com",
       "whois_server": "whois.nic.weibo",
-      "rdap_server": "https://rdap.identitydigital.services/rdap/",
+      "rdap_server": "https://rdap.ngtld.cn/",
       "tld_created": "2016-02-29",
       "tld_updated": [
-        "2026-06-29"
+        "2026-07-06"
       ],
       "annotations": {
         "iana_tech_alias": "Identity Digital",
@@ -190978,11 +190978,11 @@
         }
       },
       "registry_url": "http://www.conac.cn",
-      "whois_server": "whois.conac.cn",
-      "rdap_server": "https://rdap.conac.cn/",
+      "whois_server": "whois.nic.xn--55qw42g",
+      "rdap_server": "https://rdap.ngtld.cn",
       "tld_created": "2013-12-12",
       "tld_updated": [
-        "2026-07-01"
+        "2026-07-06"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -193340,10 +193340,10 @@
       },
       "registry_url": "http://www.sina.com",
       "whois_server": "whois.nic.xn--9krt00a",
-      "rdap_server": "https://rdap.identitydigital.services/rdap/",
+      "rdap_server": "https://rdap.ngtld.cn/",
       "tld_created": "2016-02-29",
       "tld_updated": [
-        "2026-06-29"
+        "2026-07-06"
       ],
       "annotations": {
         "iana_tech_alias": "Identity Digital",
@@ -209782,11 +209782,11 @@
         }
       },
       "registry_url": "http://www.conac.cn",
-      "whois_server": "whois.conac.cn",
-      "rdap_server": "https://rdap.conac.cn",
+      "whois_server": "whois.nic.xn--zfr164b",
+      "rdap_server": "https://rdap.ngtld.cn",
       "tld_created": "2013-12-12",
       "tld_updated": [
-        "2026-07-01"
+        "2026-07-06"
       ],
       "annotations": {
         "rdap_source": "IANA",

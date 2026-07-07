@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-07T22:58:14Z",
+  "publication": "2026-07-07T03:38:44Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,15 +13,15 @@
     "orgs": {
       "iana": {
         "sponsor": "National Authority for Information Technology Services (NAITS)",
-        "admin": "National Agency for Network Services (NANS)",
-        "tech": "National Agency for Network Services (NANS)"
+        "admin": "National Authority for IT Services (NAITS)",
+        "tech": "National Authority for IT Services (NAITS)"
       }
     },
     "registry_url": "http://tld.sy",
     "whois_server": "whois.tld.sy",
     "tld_created": "1996-02-20",
     "tld_updated": [
-      "2026-05-14"
+      "2026-07-06"
     ],
     "annotations": {
       "country_name_iso": "Syrian Arab Republic",

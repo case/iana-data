@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-30T03:46:49Z",
+  "publication": "2026-07-07T03:38:44Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -30,10 +30,10 @@
     },
     "registry_url": "http://www.sina.com",
     "whois_server": "whois.nic.weibo",
-    "rdap_server": "https://rdap.identitydigital.services/rdap/",
+    "rdap_server": "https://rdap.ngtld.cn/",
     "tld_created": "2016-02-29",
     "tld_updated": [
-      "2026-06-29"
+      "2026-07-06"
     ],
     "annotations": {
       "iana_tech_alias": "Identity Digital",
