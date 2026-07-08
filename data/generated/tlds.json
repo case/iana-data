@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-07T03:38:44Z",
+  "publication": "2026-07-08T03:32:52Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -34702,7 +34702,7 @@
       "rdap_server": "https://rdap.nominet.uk/circle/",
       "tld_created": "2015-11-12",
       "tld_updated": [
-        "2026-06-29"
+        "2026-07-07"
       ],
       "annotations": {
         "iana_admin_alias": "Identity Digital",
@@ -34715,164 +34715,124 @@
           "non_sponsored"
         ],
         "as_org_aliases": [
-          "Nominet",
-          "UltraDNS"
+          "Identity Digital"
         ],
         "as_org_slugs": [
-          "nominet",
-          "ultradns"
+          "identity-digital"
         ]
       },
       "nameservers": [
         {
-          "hostname": "dns1.nic.circle",
+          "hostname": "v0n0.nic.circle",
           "ipv4": [
             {
-              "ip": "213.248.218.64",
-              "asn": 43519,
-              "as_org": "NOMINETANYCAST",
-              "as_country": "GB"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2a01:618:402::64",
-              "asn": 43519,
-              "as_org": "NOMINETANYCAST",
-              "as_country": "GB"
-            }
-          ]
-        },
-        {
-          "hostname": "dns2.nic.circle",
-          "ipv4": [
-            {
-              "ip": "103.49.82.64",
-              "asn": 43519,
-              "as_org": "NOMINETANYCAST",
-              "as_country": "GB"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2401:fd80:402::64",
-              "asn": 43519,
-              "as_org": "NOMINETANYCAST",
-              "as_country": "GB"
-            }
-          ]
-        },
-        {
-          "hostname": "dns3.nic.circle",
-          "ipv4": [
-            {
-              "ip": "213.248.222.64",
-              "asn": 43519,
-              "as_org": "NOMINETANYCAST",
-              "as_country": "GB"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2a01:618:406::64",
-              "asn": 43519,
-              "as_org": "NOMINETANYCAST",
-              "as_country": "GB"
-            }
-          ]
-        },
-        {
-          "hostname": "dns4.nic.circle",
-          "ipv4": [
-            {
-              "ip": "43.230.50.64",
-              "asn": 43519,
-              "as_org": "NOMINETANYCAST",
-              "as_country": "GB"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2401:fd80:406::64",
-              "asn": 43519,
-              "as_org": "NOMINETANYCAST",
-              "as_country": "GB"
-            }
-          ]
-        },
-        {
-          "hostname": "dnsa.nic.circle",
-          "ipv4": [
-            {
-              "ip": "156.154.100.3",
-              "asn": 12008,
-              "as_org": "SECURITYSERVICES",
+              "ip": "65.22.36.49",
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
-              "ip": "2001:502:ad09::3",
-              "asn": 12008,
-              "as_org": "SECURITYSERVICES",
+              "ip": "2a01:8840:26::49",
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1",
               "as_country": "US"
             }
           ]
         },
         {
-          "hostname": "dnsb.nic.circle",
+          "hostname": "v0n1.nic.circle",
           "ipv4": [
             {
-              "ip": "156.154.101.3",
-              "asn": 12008,
-              "as_org": "SECURITYSERVICES",
+              "ip": "65.22.37.49",
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
-              "ip": "2001:502:2eda::3",
-              "asn": 12008,
-              "as_org": "SECURITYSERVICES",
+              "ip": "2a01:8840:27::49",
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1",
               "as_country": "US"
             }
           ]
         },
         {
-          "hostname": "dnsc.nic.circle",
+          "hostname": "v0n2.nic.circle",
           "ipv4": [
             {
-              "ip": "156.154.102.3",
-              "asn": 12008,
-              "as_org": "SECURITYSERVICES",
+              "ip": "65.22.38.49",
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
-              "ip": "2610:a1:1009::3",
-              "asn": 12008,
-              "as_org": "SECURITYSERVICES",
+              "ip": "2a01:8840:28::49",
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1",
               "as_country": "US"
             }
           ]
         },
         {
-          "hostname": "dnsd.nic.circle",
+          "hostname": "v0n3.nic.circle",
           "ipv4": [
             {
-              "ip": "156.154.103.3",
-              "asn": 12008,
-              "as_org": "SECURITYSERVICES",
+              "ip": "161.232.18.49",
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
-              "ip": "2610:a1:1010::3",
-              "asn": 12008,
-              "as_org": "SECURITYSERVICES",
+              "ip": "2a01:8840:10e::49",
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1",
               "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "v2n0.nic.circle",
+          "ipv4": [
+            {
+              "ip": "65.22.39.49",
+              "asn": 207266,
+              "as_org": "AFILIAS-SECONDARY-DNS",
+              "as_country": "IE"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2a01:8840:29::49",
+              "asn": 207266,
+              "as_org": "AFILIAS-SECONDARY-DNS",
+              "as_country": "IE"
+            }
+          ]
+        },
+        {
+          "hostname": "v2n1.nic.circle",
+          "ipv4": [
+            {
+              "ip": "161.232.19.49",
+              "asn": 207266,
+              "as_org": "AFILIAS-SECONDARY-DNS",
+              "as_country": "IE"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2a01:8840:10f::49",
+              "asn": 207266,
+              "as_org": "AFILIAS-SECONDARY-DNS",
+              "as_country": "IE"
             }
           ]
         }
@@ -73587,7 +73547,7 @@
       "rdap_server": "https://rdap.nominet.uk/got/",
       "tld_created": "2015-11-12",
       "tld_updated": [
-        "2026-06-29"
+        "2026-07-07"
       ],
       "annotations": {
         "iana_admin_alias": "Identity Digital",
@@ -73600,164 +73560,124 @@
           "non_sponsored"
         ],
         "as_org_aliases": [
-          "Nominet",
-          "UltraDNS"
+          "Identity Digital"
         ],
         "as_org_slugs": [
-          "nominet",
-          "ultradns"
+          "identity-digital"
         ]
       },
       "nameservers": [
         {
-          "hostname": "dns1.nic.got",
+          "hostname": "v0n0.nic.got",
           "ipv4": [
             {
-              "ip": "213.248.218.68",
-              "asn": 43519,
-              "as_org": "NOMINETANYCAST",
-              "as_country": "GB"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2a01:618:402::68",
-              "asn": 43519,
-              "as_org": "NOMINETANYCAST",
-              "as_country": "GB"
-            }
-          ]
-        },
-        {
-          "hostname": "dns2.nic.got",
-          "ipv4": [
-            {
-              "ip": "103.49.82.68",
-              "asn": 43519,
-              "as_org": "NOMINETANYCAST",
-              "as_country": "GB"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2401:fd80:402::68",
-              "asn": 43519,
-              "as_org": "NOMINETANYCAST",
-              "as_country": "GB"
-            }
-          ]
-        },
-        {
-          "hostname": "dns3.nic.got",
-          "ipv4": [
-            {
-              "ip": "213.248.222.68",
-              "asn": 43519,
-              "as_org": "NOMINETANYCAST",
-              "as_country": "GB"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2a01:618:406::68",
-              "asn": 43519,
-              "as_org": "NOMINETANYCAST",
-              "as_country": "GB"
-            }
-          ]
-        },
-        {
-          "hostname": "dns4.nic.got",
-          "ipv4": [
-            {
-              "ip": "43.230.50.68",
-              "asn": 43519,
-              "as_org": "NOMINETANYCAST",
-              "as_country": "GB"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2401:fd80:406::68",
-              "asn": 43519,
-              "as_org": "NOMINETANYCAST",
-              "as_country": "GB"
-            }
-          ]
-        },
-        {
-          "hostname": "dnsa.nic.got",
-          "ipv4": [
-            {
-              "ip": "156.154.100.3",
-              "asn": 12008,
-              "as_org": "SECURITYSERVICES",
+              "ip": "65.22.36.57",
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
-              "ip": "2001:502:ad09::3",
-              "asn": 12008,
-              "as_org": "SECURITYSERVICES",
+              "ip": "2a01:8840:26::57",
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1",
               "as_country": "US"
             }
           ]
         },
         {
-          "hostname": "dnsb.nic.got",
+          "hostname": "v0n1.nic.got",
           "ipv4": [
             {
-              "ip": "156.154.101.3",
-              "asn": 12008,
-              "as_org": "SECURITYSERVICES",
+              "ip": "65.22.37.57",
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
-              "ip": "2001:502:2eda::3",
-              "asn": 12008,
-              "as_org": "SECURITYSERVICES",
+              "ip": "2a01:8840:27::57",
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1",
               "as_country": "US"
             }
           ]
         },
         {
-          "hostname": "dnsc.nic.got",
+          "hostname": "v0n2.nic.got",
           "ipv4": [
             {
-              "ip": "156.154.102.3",
-              "asn": 12008,
-              "as_org": "SECURITYSERVICES",
+              "ip": "65.22.38.57",
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
-              "ip": "2610:a1:1009::3",
-              "asn": 12008,
-              "as_org": "SECURITYSERVICES",
+              "ip": "2a01:8840:28::57",
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1",
               "as_country": "US"
             }
           ]
         },
         {
-          "hostname": "dnsd.nic.got",
+          "hostname": "v0n3.nic.got",
           "ipv4": [
             {
-              "ip": "156.154.103.3",
-              "asn": 12008,
-              "as_org": "SECURITYSERVICES",
+              "ip": "161.232.18.57",
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
-              "ip": "2610:a1:1010::3",
-              "asn": 12008,
-              "as_org": "SECURITYSERVICES",
+              "ip": "2a01:8840:10e::57",
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1",
               "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "v2n0.nic.got",
+          "ipv4": [
+            {
+              "ip": "65.22.39.57",
+              "asn": 207266,
+              "as_org": "AFILIAS-SECONDARY-DNS",
+              "as_country": "IE"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2a01:8840:29::57",
+              "asn": 207266,
+              "as_org": "AFILIAS-SECONDARY-DNS",
+              "as_country": "IE"
+            }
+          ]
+        },
+        {
+          "hostname": "v2n1.nic.got",
+          "ipv4": [
+            {
+              "ip": "161.232.19.57",
+              "asn": 207266,
+              "as_org": "AFILIAS-SECONDARY-DNS",
+              "as_country": "IE"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2a01:8840:10f::57",
+              "asn": 207266,
+              "as_org": "AFILIAS-SECONDARY-DNS",
+              "as_country": "IE"
             }
           ]
         }
@@ -74102,21 +74022,21 @@
       "registry_url": "http://www.gr",
       "tld_created": "1989-02-19",
       "tld_updated": [
-        "2022-06-16"
+        "2026-07-07"
       ],
       "annotations": {
         "country_name_iso": "Greece",
         "as_org_aliases": [
           "ACOnet",
-          "Community DNS",
           "DENIC.de",
-          "FORTH.gr"
+          "FORTH.gr",
+          "RcodeZero"
         ],
         "as_org_slugs": [
           "aconet",
-          "community-dns",
           "denic",
-          "forth-gr"
+          "forth-gr",
+          "rcodezero"
         ],
         "geographic_scope": "country"
       },
@@ -74141,6 +74061,25 @@
           ]
         },
         {
+          "hostname": "gr-a.ics.forth.gr",
+          "ipv4": [
+            {
+              "ip": "194.0.25.48",
+              "asn": 1921,
+              "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+              "as_country": "AT"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2001:678:20::48",
+              "asn": 1921,
+              "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+              "as_country": "AT"
+            }
+          ]
+        },
+        {
           "hostname": "gr-at.ics.forth.gr",
           "ipv4": [
             {
@@ -74151,25 +74090,6 @@
             }
           ],
           "ipv6": []
-        },
-        {
-          "hostname": "gr-c.ics.forth.gr",
-          "ipv4": [
-            {
-              "ip": "194.0.1.25",
-              "asn": 42909,
-              "as_org": "COMMUNITYDNS",
-              "as_country": "GB"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2001:678:4::19",
-              "asn": 42909,
-              "as_org": "COMMUNITYDNS",
-              "as_country": "GB"
-            }
-          ]
         },
         {
           "hostname": "gr-d.ics.forth.gr",
@@ -79400,7 +79320,7 @@
       "whois_server": "whois.registry.hm",
       "tld_created": "1997-07-24",
       "tld_updated": [
-        "2023-12-14"
+        "2026-07-07"
       ],
       "annotations": {
         "country_name_iso": "Heard Island and McDonald Islands",
@@ -79411,10 +79331,10 @@
           "hostname": "ns1.registry.hm",
           "ipv4": [
             {
-              "ip": "142.171.40.232",
-              "asn": 35916,
-              "as_org": "MULTA-ASN1",
-              "as_country": "US"
+              "ip": "223.252.41.82",
+              "asn": 45671,
+              "as_org": "AS45671-NET-AU Wholesale Services Provider",
+              "as_country": "AU"
             }
           ],
           "ipv6": []
@@ -79423,10 +79343,10 @@
           "hostname": "ns2.registry.hm",
           "ipv4": [
             {
-              "ip": "142.171.40.234",
-              "asn": 35916,
-              "as_org": "MULTA-ASN1",
-              "as_country": "US"
+              "ip": "223.252.41.83",
+              "asn": 45671,
+              "as_org": "AS45671-NET-AU Wholesale Services Provider",
+              "as_country": "AU"
             }
           ],
           "ipv6": []
@@ -91591,7 +91511,7 @@
       "rdap_server": "https://rdap.nominet.uk/jot/",
       "tld_created": "2015-11-12",
       "tld_updated": [
-        "2026-06-29"
+        "2026-07-07"
       ],
       "annotations": {
         "iana_admin_alias": "Identity Digital",
@@ -91604,164 +91524,124 @@
           "non_sponsored"
         ],
         "as_org_aliases": [
-          "Nominet",
-          "UltraDNS"
+          "Identity Digital"
         ],
         "as_org_slugs": [
-          "nominet",
-          "ultradns"
+          "identity-digital"
         ]
       },
       "nameservers": [
         {
-          "hostname": "dns1.nic.jot",
+          "hostname": "v0n0.nic.jot",
           "ipv4": [
             {
-              "ip": "213.248.218.70",
-              "asn": 43519,
-              "as_org": "NOMINETANYCAST",
-              "as_country": "GB"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2a01:618:402::70",
-              "asn": 43519,
-              "as_org": "NOMINETANYCAST",
-              "as_country": "GB"
-            }
-          ]
-        },
-        {
-          "hostname": "dns2.nic.jot",
-          "ipv4": [
-            {
-              "ip": "103.49.82.70",
-              "asn": 43519,
-              "as_org": "NOMINETANYCAST",
-              "as_country": "GB"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2401:fd80:402::70",
-              "asn": 43519,
-              "as_org": "NOMINETANYCAST",
-              "as_country": "GB"
-            }
-          ]
-        },
-        {
-          "hostname": "dns3.nic.jot",
-          "ipv4": [
-            {
-              "ip": "213.248.222.70",
-              "asn": 43519,
-              "as_org": "NOMINETANYCAST",
-              "as_country": "GB"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2a01:618:406::70",
-              "asn": 43519,
-              "as_org": "NOMINETANYCAST",
-              "as_country": "GB"
-            }
-          ]
-        },
-        {
-          "hostname": "dns4.nic.jot",
-          "ipv4": [
-            {
-              "ip": "43.230.50.70",
-              "asn": 43519,
-              "as_org": "NOMINETANYCAST",
-              "as_country": "GB"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2401:fd80:406::70",
-              "asn": 43519,
-              "as_org": "NOMINETANYCAST",
-              "as_country": "GB"
-            }
-          ]
-        },
-        {
-          "hostname": "dnsa.nic.jot",
-          "ipv4": [
-            {
-              "ip": "156.154.100.3",
-              "asn": 12008,
-              "as_org": "SECURITYSERVICES",
+              "ip": "65.22.36.65",
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
-              "ip": "2001:502:ad09::3",
-              "asn": 12008,
-              "as_org": "SECURITYSERVICES",
+              "ip": "2a01:8840:26::65",
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1",
               "as_country": "US"
             }
           ]
         },
         {
-          "hostname": "dnsb.nic.jot",
+          "hostname": "v0n1.nic.jot",
           "ipv4": [
             {
-              "ip": "156.154.101.3",
-              "asn": 12008,
-              "as_org": "SECURITYSERVICES",
+              "ip": "65.22.37.65",
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
-              "ip": "2001:502:2eda::3",
-              "asn": 12008,
-              "as_org": "SECURITYSERVICES",
+              "ip": "2a01:8840:27::65",
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1",
               "as_country": "US"
             }
           ]
         },
         {
-          "hostname": "dnsc.nic.jot",
+          "hostname": "v0n2.nic.jot",
           "ipv4": [
             {
-              "ip": "156.154.102.3",
-              "asn": 12008,
-              "as_org": "SECURITYSERVICES",
+              "ip": "65.22.38.65",
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
-              "ip": "2610:a1:1009::3",
-              "asn": 12008,
-              "as_org": "SECURITYSERVICES",
+              "ip": "2a01:8840:28::65",
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1",
               "as_country": "US"
             }
           ]
         },
         {
-          "hostname": "dnsd.nic.jot",
+          "hostname": "v0n3.nic.jot",
           "ipv4": [
             {
-              "ip": "156.154.103.3",
-              "asn": 12008,
-              "as_org": "SECURITYSERVICES",
+              "ip": "161.232.18.65",
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
-              "ip": "2610:a1:1010::3",
-              "asn": 12008,
-              "as_org": "SECURITYSERVICES",
+              "ip": "2a01:8840:10e::65",
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1",
               "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "v2n0.nic.jot",
+          "ipv4": [
+            {
+              "ip": "65.22.39.65",
+              "asn": 207266,
+              "as_org": "AFILIAS-SECONDARY-DNS",
+              "as_country": "IE"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2a01:8840:29::65",
+              "asn": 207266,
+              "as_org": "AFILIAS-SECONDARY-DNS",
+              "as_country": "IE"
+            }
+          ]
+        },
+        {
+          "hostname": "v2n1.nic.jot",
+          "ipv4": [
+            {
+              "ip": "161.232.19.65",
+              "asn": 207266,
+              "as_org": "AFILIAS-SECONDARY-DNS",
+              "as_country": "IE"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2a01:8840:10f::65",
+              "asn": 207266,
+              "as_org": "AFILIAS-SECONDARY-DNS",
+              "as_country": "IE"
             }
           ]
         }
@@ -117048,12 +116928,10 @@
       "annotations": {
         "country_name_iso": "Mexico",
         "as_org_aliases": [
-          "Packet Clearing House",
-          "UltraDNS"
+          "Packet Clearing House"
         ],
         "as_org_slugs": [
-          "packet-clearing-house",
-          "ultradns"
+          "packet-clearing-house"
         ],
         "geographic_scope": "country"
       },
@@ -117158,9 +117036,9 @@
           "ipv4": [
             {
               "ip": "201.131.252.1",
-              "asn": 12008,
-              "as_org": "SECURITYSERVICES",
-              "as_country": "US"
+              "asn": 27661,
+              "as_org": "Network Information Center Mexico",
+              "as_country": "MX"
             }
           ],
           "ipv6": [
@@ -145360,7 +145238,7 @@
       "rdap_server": "https://rdap.centralnic.com/ruhr/",
       "tld_created": "2013-11-25",
       "tld_updated": [
-        "2023-09-08"
+        "2026-07-07"
       ],
       "annotations": {
         "iana_tech_alias": "CentralNic",
@@ -206412,7 +206290,7 @@
       "registry_url": "http://www.gr",
       "tld_created": "2015-05-06",
       "tld_updated": [
-        "2023-03-07"
+        "2026-07-07"
       ],
       "annotations": {
         "country_name_iso": "Greece",
@@ -206499,6 +206377,25 @@
               "asn": 31529,
               "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
               "as_country": "DE"
+            }
+          ]
+        },
+        {
+          "hostname": "gr-m.ics.forth.gr",
+          "ipv4": [
+            {
+              "ip": "194.0.4.10",
+              "asn": 48053,
+              "as_org": "GR-ANYCAST-DNS-CLOUD",
+              "as_country": "GR"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2001:678:7::4:10",
+              "asn": 48053,
+              "as_org": "GR-ANYCAST-DNS-CLOUD",
+              "as_country": "GR"
             }
           ]
         },

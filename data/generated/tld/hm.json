@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-07-08T03:32:52Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -21,7 +21,7 @@
     "whois_server": "whois.registry.hm",
     "tld_created": "1997-07-24",
     "tld_updated": [
-      "2023-12-14"
+      "2026-07-07"
     ],
     "annotations": {
       "country_name_iso": "Heard Island and McDonald Islands",
@@ -32,10 +32,10 @@
         "hostname": "ns1.registry.hm",
         "ipv4": [
           {
-            "ip": "142.171.40.232",
-            "asn": 35916,
-            "as_org": "MULTA-ASN1",
-            "as_country": "US"
+            "ip": "223.252.41.82",
+            "asn": 45671,
+            "as_org": "AS45671-NET-AU Wholesale Services Provider",
+            "as_country": "AU"
           }
         ],
         "ipv6": []
@@ -44,10 +44,10 @@
         "hostname": "ns2.registry.hm",
         "ipv4": [
           {
-            "ip": "142.171.40.234",
-            "asn": 35916,
-            "as_org": "MULTA-ASN1",
-            "as_country": "US"
+            "ip": "223.252.41.83",
+            "asn": 45671,
+            "as_org": "AS45671-NET-AU Wholesale Services Provider",
+            "as_country": "AU"
           }
         ],
         "ipv6": []

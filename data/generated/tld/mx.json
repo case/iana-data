@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-07-08T03:32:52Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -26,12 +26,10 @@
     "annotations": {
       "country_name_iso": "Mexico",
       "as_org_aliases": [
-        "Packet Clearing House",
-        "UltraDNS"
+        "Packet Clearing House"
       ],
       "as_org_slugs": [
-        "packet-clearing-house",
-        "ultradns"
+        "packet-clearing-house"
       ],
       "geographic_scope": "country"
     },
@@ -136,9 +134,9 @@
         "ipv4": [
           {
             "ip": "201.131.252.1",
-            "asn": 12008,
-            "as_org": "SECURITYSERVICES",
-            "as_country": "US"
+            "asn": 27661,
+            "as_org": "Network Information Center Mexico",
+            "as_country": "MX"
           }
         ],
         "ipv6": [

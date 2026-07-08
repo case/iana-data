@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-11T03:43:07Z",
+  "publication": "2026-07-08T03:32:52Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -23,7 +23,7 @@
     "registry_url": "http://www.gr",
     "tld_created": "2015-05-06",
     "tld_updated": [
-      "2023-03-07"
+      "2026-07-07"
     ],
     "annotations": {
       "country_name_iso": "Greece",
@@ -110,6 +110,25 @@
             "asn": 31529,
             "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
             "as_country": "DE"
+          }
+        ]
+      },
+      {
+        "hostname": "gr-m.ics.forth.gr",
+        "ipv4": [
+          {
+            "ip": "194.0.4.10",
+            "asn": 48053,
+            "as_org": "GR-ANYCAST-DNS-CLOUD",
+            "as_country": "GR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:678:7::4:10",
+            "asn": 48053,
+            "as_org": "GR-ANYCAST-DNS-CLOUD",
+            "as_country": "GR"
           }
         ]
       },
