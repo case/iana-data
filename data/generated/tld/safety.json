@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-27T03:44:35Z",
+  "publication": "2026-07-09T03:37:32Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -13,7 +13,7 @@
     "orgs": {
       "iana": {
         "sponsor": "Safety Registry Services, LLC.",
-        "admin": "Safety Registry Services LLC",
+        "admin": "Identity Digital Inc.",
         "tech": "Identity Digital Limited"
       },
       "icann": {
@@ -28,14 +28,15 @@
         "date_removed": null
       }
     },
-    "registry_url": "https://nic.safety",
-    "whois_server": "whois.nic.safety",
-    "rdap_server": "https://rdap.nic.safety/",
+    "registry_url": "https://www.identity.digital",
+    "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "2015-04-23",
     "tld_updated": [
-      "2026-06-26"
+      "2026-07-08"
     ],
     "annotations": {
+      "iana_admin_alias": "Identity Digital",
+      "iana_admin_slug": "identity-digital",
       "iana_tech_alias": "Identity Digital",
       "iana_tech_slug": "identity-digital",
       "rdap_source": "IANA",

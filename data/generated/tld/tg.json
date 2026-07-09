@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-07-09T03:37:32Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -115,9 +115,9 @@
         "ipv6": [
           {
             "ip": "2406:d501::47e3:2a7c",
-            "asn": 136557,
-            "as_org": "HOST-AS-AP Host Universal Pty Ltd",
-            "as_country": "AU"
+            "asn": 0,
+            "as_org": "Not routed",
+            "as_country": "None"
           }
         ]
       },
