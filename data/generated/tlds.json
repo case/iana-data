@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-09T03:37:32Z",
+  "publication": "2026-07-10T03:34:25Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -31613,16 +31613,16 @@
           "ipv4": [
             {
               "ip": "192.42.175.30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:500:122::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ]
@@ -38463,17 +38463,17 @@
           "ipv4": [
             {
               "ip": "192.33.14.30",
-              "asn": 396654,
-              "as_org": "VRSN-AC50-340",
-              "as_country": "US"
+              "asn": 396751,
+              "as_org": "AS396751",
+              "as_country": "Unknown"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:503:231d::2:30",
-              "asn": 396654,
-              "as_org": "VRSN-AC50-340",
-              "as_country": "US"
+              "asn": 396690,
+              "as_org": "AS396690",
+              "as_country": "Unknown"
             }
           ]
         },
@@ -39642,16 +39642,16 @@
           "ipv4": [
             {
               "ip": "192.42.175.30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:500:122::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ]
@@ -53382,17 +53382,17 @@
           "ipv4": [
             {
               "ip": "192.33.14.30",
-              "asn": 396654,
-              "as_org": "VRSN-AC50-340",
-              "as_country": "US"
+              "asn": 396751,
+              "as_org": "AS396751",
+              "as_country": "Unknown"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:503:231d::2:30",
-              "asn": 396654,
-              "as_org": "VRSN-AC50-340",
-              "as_country": "US"
+              "asn": 396690,
+              "as_org": "AS396690",
+              "as_country": "Unknown"
             }
           ]
         },
@@ -117827,16 +117827,16 @@
           "ipv4": [
             {
               "ip": "192.42.175.30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:500:122::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ]
@@ -118647,17 +118647,17 @@
           "ipv4": [
             {
               "ip": "192.33.14.30",
-              "asn": 396654,
-              "as_org": "VRSN-AC50-340",
-              "as_country": "US"
+              "asn": 396751,
+              "as_org": "AS396751",
+              "as_country": "Unknown"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:503:231d::2:30",
-              "asn": 396654,
-              "as_org": "VRSN-AC50-340",
-              "as_country": "US"
+              "asn": 396690,
+              "as_org": "AS396690",
+              "as_country": "Unknown"
             }
           ]
         },
@@ -146514,7 +146514,7 @@
       "type": "gtld",
       "orgs": {
         "iana": {
-          "sponsor": "Safety Registry Services, LLC.",
+          "sponsor": "Jolly Host, LLC",
           "admin": "Identity Digital Inc.",
           "tech": "Identity Digital Limited"
         },
@@ -178473,16 +178473,16 @@
           "ipv4": [
             {
               "ip": "192.42.175.30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:500:122::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ]
@@ -188561,16 +188561,16 @@
           "ipv4": [
             {
               "ip": "192.42.175.30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:500:122::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ]
@@ -189838,16 +189838,16 @@
           "ipv4": [
             {
               "ip": "192.42.175.30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:500:122::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ]
@@ -189973,16 +189973,16 @@
           "ipv4": [
             {
               "ip": "192.42.175.30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:500:122::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ]
@@ -193010,16 +193010,16 @@
           "ipv4": [
             {
               "ip": "192.42.175.30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:500:122::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ]
@@ -193881,16 +193881,16 @@
           "ipv4": [
             {
               "ip": "192.42.175.30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:500:122::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ]
@@ -196112,16 +196112,16 @@
           "ipv4": [
             {
               "ip": "192.42.175.30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:500:122::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ]
@@ -199107,16 +199107,16 @@
           "ipv4": [
             {
               "ip": "192.42.175.30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:500:122::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ]
@@ -203760,16 +203760,16 @@
           "ipv4": [
             {
               "ip": "192.42.175.30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:500:122::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ]
@@ -205690,16 +205690,16 @@
           "ipv4": [
             {
               "ip": "192.42.175.30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:500:122::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ]
@@ -207186,16 +207186,16 @@
           "ipv4": [
             {
               "ip": "192.42.175.30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:500:122::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ]
@@ -207321,16 +207321,16 @@
           "ipv4": [
             {
               "ip": "192.42.175.30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:500:122::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397198,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ]
