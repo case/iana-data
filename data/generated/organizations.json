@@ -1,6 +1,6 @@
 {
   "description": "Organizations that play roles for TLDs in the IANA root zone, with a reverse-index of those roles. Consolidated subset: this covers the curated multi-source organizations only; the single-source long tail is not yet included, so absence here does not mean a TLD has no operator.",
-  "publication": "2026-07-09T03:37:32Z",
+  "publication": "2026-07-11T03:32:23Z",
   "sources": [
     "data/source/iana-root.html (IANA)",
     "data/source/icann-gtlds.json (ICANN)",
@@ -935,7 +935,6 @@
             "vn",
             "xn--fzc2c9e2c",
             "xn--mix891f",
-            "xn--qxam",
             "xn--xkc2al3hye2a",
             "xn--y9a3aq"
           ]
@@ -5321,7 +5320,8 @@
             "versicherung",
             "vlaanderen",
             "xn--e1a4c",
-            "xn--qxa6a"
+            "xn--qxa6a",
+            "xn--qxam"
           ]
         }
       }

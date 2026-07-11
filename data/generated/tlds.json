@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-10T03:34:25Z",
+  "publication": "2026-07-11T03:32:23Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -150654,9 +150654,9 @@
           "ipv4": [
             {
               "ip": "196.29.166.134",
-              "asn": 33788,
-              "as_org": "KANARTEL",
-              "as_country": "SD"
+              "asn": 0,
+              "as_org": "Not routed",
+              "as_country": "None"
             }
           ],
           "ipv6": []
@@ -177240,8 +177240,8 @@
           "ipv4": [
             {
               "ip": "72.167.34.137",
-              "asn": 398101,
-              "as_org": "GO-DADDY-COM-LLC",
+              "asn": 26496,
+              "as_org": "AS-26496-GO-DADDY-COM-LLC",
               "as_country": "US"
             }
           ],
@@ -203015,9 +203015,9 @@
           "ipv4": [
             {
               "ip": "196.29.166.134",
-              "asn": 33788,
-              "as_org": "KANARTEL",
-              "as_country": "SD"
+              "asn": 0,
+              "as_org": "Not routed",
+              "as_country": "None"
             }
           ],
           "ipv6": []
@@ -206291,21 +206291,21 @@
       "registry_url": "http://www.gr",
       "tld_created": "2015-05-06",
       "tld_updated": [
-        "2026-07-07"
+        "2026-07-09"
       ],
       "annotations": {
         "country_name_iso": "Greece",
         "as_org_aliases": [
           "ACOnet",
-          "Community DNS",
           "DENIC.de",
-          "FORTH.gr"
+          "FORTH.gr",
+          "RcodeZero"
         ],
         "as_org_slugs": [
           "aconet",
-          "community-dns",
           "denic",
-          "forth-gr"
+          "forth-gr",
+          "rcodezero"
         ],
         "geographic_scope": "country",
         "language_code": "el",
@@ -206332,6 +206332,25 @@
           ]
         },
         {
+          "hostname": "gr-a.ics.forth.gr",
+          "ipv4": [
+            {
+              "ip": "194.0.25.48",
+              "asn": 1921,
+              "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+              "as_country": "AT"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2001:678:20::48",
+              "asn": 1921,
+              "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+              "as_country": "AT"
+            }
+          ]
+        },
+        {
           "hostname": "gr-at.ics.forth.gr",
           "ipv4": [
             {
@@ -206342,25 +206361,6 @@
             }
           ],
           "ipv6": []
-        },
-        {
-          "hostname": "gr-c.ics.forth.gr",
-          "ipv4": [
-            {
-              "ip": "194.0.1.25",
-              "asn": 42909,
-              "as_org": "COMMUNITYDNS",
-              "as_country": "GB"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2001:678:4::19",
-              "asn": 42909,
-              "as_org": "COMMUNITYDNS",
-              "as_country": "GB"
-            }
-          ]
         },
         {
           "hostname": "gr-d.ics.forth.gr",
