@@ -950,10 +950,12 @@
     "slug": "teleinfo",
     "source_names": {
       "asn": [
-        "CAICTNET Chinese Academy of Telecommunication Research"
+        "CAICT-AS-AP China Academy of Information and Communications Technology"
       ]
     },
-    "aliases": [],
+    "aliases": [
+      "CAICTNET Chinese Academy of Telecommunication Research"
+    ],
     "homepage": "https://www.teleinfo.cn/"
   },
   {
@@ -1043,12 +1045,12 @@
       ],
       "asn": [
         "HGTLD",
-        "VERISIGN-AS",
         "VRSN-AC28",
         "VRSN-AC50-340"
       ]
     },
     "aliases": [
+      "VERISIGN-AS",
       "VGRS-AC25"
     ],
     "homepage": "https://www.verisign.com/"
