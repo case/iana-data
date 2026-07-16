@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-07T03:38:44Z",
+  "publication": "2026-07-16T08:10:23Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -60,7 +60,7 @@
         "ipv4": [
           {
             "ip": "42.83.130.1",
-            "asn": 24406,
+            "asn": 24151,
             "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
             "as_country": "CN"
           }
@@ -79,7 +79,7 @@
         "ipv4": [
           {
             "ip": "42.83.131.1",
-            "asn": 24406,
+            "asn": 24151,
             "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
             "as_country": "CN"
           }
@@ -87,7 +87,7 @@
         "ipv6": [
           {
             "ip": "2001:dc7:ffd2::1",
-            "asn": 24406,
+            "asn": 24151,
             "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
             "as_country": "CN"
           }
@@ -98,7 +98,7 @@
         "ipv4": [
           {
             "ip": "42.83.132.1",
-            "asn": 24406,
+            "asn": 24151,
             "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
             "as_country": "CN"
           }
@@ -106,7 +106,7 @@
         "ipv6": [
           {
             "ip": "2001:dc7:ffd3::1",
-            "asn": 24406,
+            "asn": 24151,
             "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
             "as_country": "CN"
           }
@@ -129,7 +129,7 @@
         "ipv4": [
           {
             "ip": "42.83.134.1",
-            "asn": 24151,
+            "asn": 24406,
             "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
             "as_country": "CN"
           }

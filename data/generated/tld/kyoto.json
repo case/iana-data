@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-27T03:44:35Z",
+  "publication": "2026-07-16T08:10:23Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -17,7 +17,7 @@
         "tech": "GMO Registry"
       },
       "icann": {
-        "registry_operator": "Academic Institution: Kyoto Jyoho Gakuen",
+        "registry_operator": "Academic Institution: The University of Informatics",
         "specification_13": false,
         "third_or_lower_level_registration": false,
         "application_id": "1-1716-31099",

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-24T03:45:35Z",
+  "publication": "2026-07-16T08:10:23Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -21,7 +21,7 @@
     "rdap_server": "https://rdap.centralnic.com/bh/",
     "tld_created": "1994-02-01",
     "tld_updated": [
-      "2026-06-23"
+      "2026-07-14"
     ],
     "annotations": {
       "iana_tech_alias": "CentralNic",
@@ -29,10 +29,14 @@
       "rdap_source": "supplemental",
       "country_name_iso": "Bahrain",
       "as_org_aliases": [
-        "CentralNic"
+        "CentralNic",
+        "Packet Clearing House",
+        "Tucows"
       ],
       "as_org_slugs": [
-        "centralnic"
+        "centralnic",
+        "packet-clearing-house",
+        "tucows"
       ],
       "geographic_scope": "country"
     },
@@ -110,6 +114,82 @@
             "asn": 201303,
             "as_org": "CENTRALNIC-ANYCAST-F",
             "as_country": "GB"
+          }
+        ]
+      },
+      {
+        "hostname": "ns01.trs-dns.com",
+        "ipv4": [
+          {
+            "ip": "64.96.1.1",
+            "asn": 393818,
+            "as_org": "TUCOWS-TRS-DNS1",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:57:4001::1",
+            "asn": 393818,
+            "as_org": "TUCOWS-TRS-DNS1",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "ns01.trs-dns.net",
+        "ipv4": [
+          {
+            "ip": "64.96.2.1",
+            "asn": 63363,
+            "as_org": "TUCOWS-TRS-DNS2",
+            "as_country": "CA"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:57:4002::1",
+            "asn": 63363,
+            "as_org": "TUCOWS-TRS-DNS2",
+            "as_country": "CA"
+          }
+        ]
+      },
+      {
+        "hostname": "ns10.trs-dns.info",
+        "ipv4": [
+          {
+            "ip": "64.78.204.1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:171:812:1534:8::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "ns10.trs-dns.org",
+        "ipv4": [
+          {
+            "ip": "64.78.205.1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2620:171:813:1534:8::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
           }
         ]
       }

@@ -7650,7 +7650,7 @@
     "delegationDate" : "2015-01-28",
     "gTLD" : "kyoto",
     "registryClassDomainNameList" : null,
-    "registryOperator" : "Academic Institution: Kyoto Jyoho Gakuen",
+    "registryOperator" : "Academic Institution: The University of Informatics",
     "registryOperatorCountryCode" : null,
     "removalDate" : null,
     "specification13" : false,
@@ -16575,6 +16575,6 @@
     "thirdOrLowerLevelRegistration" : false,
     "uLabel" : null
   } ],
-  "updatedOn" : "2026-07-14T01:12:30.457+0000",
+  "updatedOn" : "2026-07-16T01:12:33.536+0000",
   "version" : 2
 }

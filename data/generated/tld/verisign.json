@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-10T03:34:25Z",
+  "publication": "2026-07-16T08:10:23Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -63,8 +63,8 @@
         "ipv4": [
           {
             "ip": "192.42.173.30",
-            "asn": 10515,
-            "as_org": "CLT-NIC",
+            "asn": 396549,
+            "as_org": "VRSN-AC50-340",
             "as_country": "US"
           }
         ],
@@ -82,16 +82,16 @@
         "ipv4": [
           {
             "ip": "192.42.174.30",
-            "asn": 40647,
-            "as_org": "VGRS-AC25",
+            "asn": 396566,
+            "as_org": "VRSN-AC50-340",
             "as_country": "US"
           }
         ],
         "ipv6": [
           {
             "ip": "2001:500:121::30",
-            "asn": 40647,
-            "as_org": "VGRS-AC25",
+            "asn": 396566,
+            "as_org": "VRSN-AC50-340",
             "as_country": "US"
           }
         ]
@@ -120,16 +120,16 @@
         "ipv4": [
           {
             "ip": "192.42.176.30",
-            "asn": 25485,
-            "as_org": "VERISIGN-AS",
+            "asn": 396566,
+            "as_org": "VRSN-AC50-340",
             "as_country": "US"
           }
         ],
         "ipv6": [
           {
             "ip": "2001:500:123::30",
-            "asn": 25485,
-            "as_org": "VERISIGN-AS",
+            "asn": 396566,
+            "as_org": "VRSN-AC50-340",
             "as_country": "US"
           }
         ]

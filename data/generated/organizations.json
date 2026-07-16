@@ -1,6 +1,6 @@
 {
   "description": "Organizations that play roles for TLDs in the IANA root zone, with a reverse-index of those roles. Consolidated subset: this covers the curated multi-source organizations only; the single-source long tail is not yet included, so absence here does not mean a TLD has no operator.",
-  "publication": "2026-07-11T03:32:23Z",
+  "publication": "2026-07-16T08:10:25Z",
   "sources": [
     "data/source/iana-root.html (IANA)",
     "data/source/icann-gtlds.json (ICANN)",
@@ -726,6 +726,7 @@
             "protection",
             "qpon",
             "quest",
+            "radio",
             "reit",
             "rent",
             "ruhr",
@@ -2909,6 +2910,7 @@
             "cheap",
             "church",
             "cipriani",
+            "circle",
             "citadel",
             "city",
             "claims",
@@ -3010,6 +3012,7 @@
             "gold",
             "golf",
             "goodyear",
+            "got",
             "graphics",
             "gratis",
             "green",
@@ -3054,6 +3057,7 @@
             "jewelry",
             "jio",
             "jll",
+            "jot",
             "juegos",
             "juniper",
             "kaufen",
@@ -4727,7 +4731,6 @@
             "buy",
             "call",
             "career",
-            "circle",
             "cymru",
             "deal",
             "desi",
@@ -4736,14 +4739,12 @@
             "fire",
             "free",
             "gop",
-            "got",
             "gucci",
             "hot",
             "hotmail",
             "ieee",
             "imdb",
             "jobs",
-            "jot",
             "joy",
             "kindle",
             "like",
@@ -4950,6 +4951,7 @@
             "bd",
             "bf",
             "bg",
+            "bh",
             "bi",
             "bj",
             "blockbuster",
@@ -5142,6 +5144,7 @@
             "xn--mgbah1a3hjkrd",
             "xn--mgbbh1a",
             "xn--mgbbh1a71e",
+            "xn--mgbcpq6gpa1a",
             "xn--mgberp4a5d4ar",
             "xn--mgbgu82a",
             "xn--mgbpl2fh",
@@ -5635,10 +5638,12 @@
       "slug": "teleinfo",
       "source_names": {
         "asn": [
-          "CAICTNET Chinese Academy of Telecommunication Research"
+          "CAICT-AS-AP China Academy of Information and Communications Technology"
         ]
       },
-      "aliases": [],
+      "aliases": [
+        "CAICTNET Chinese Academy of Telecommunication Research"
+      ],
       "homepage": "https://www.teleinfo.cn/",
       "roles": {
         "asn": {
@@ -5811,6 +5816,7 @@
         "asn": {
           "operator": [
             "bar",
+            "bh",
             "blockbuster",
             "click",
             "cloud",
@@ -5878,6 +5884,7 @@
             "xn--h2brj9c8c",
             "xn--mgbbh1a",
             "xn--mgbbh1a71e",
+            "xn--mgbcpq6gpa1a",
             "xn--mgbgu82a",
             "xn--mgbtx2b",
             "xn--ngbe9e0a",
@@ -6301,12 +6308,12 @@
         ],
         "asn": [
           "HGTLD",
-          "VERISIGN-AS",
           "VRSN-AC28",
           "VRSN-AC50-340"
         ]
       },
       "aliases": [
+        "VERISIGN-AS",
         "VGRS-AC25"
       ],
       "homepage": "https://www.verisign.com/",

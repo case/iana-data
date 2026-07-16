@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-08T03:32:52Z",
+  "publication": "2026-07-16T08:10:23Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -14,7 +14,7 @@
       "iana": {
         "sponsor": "Jolly Host, LLC",
         "admin": "Identity Digital Inc.",
-        "tech": "Nominet"
+        "tech": "Identity Digital Limited"
       },
       "icann": {
         "registry_operator": "Jolly Host, LLC",
@@ -28,17 +28,17 @@
         "date_removed": null
       }
     },
-    "registry_url": "http://www.nic.circle",
-    "rdap_server": "https://rdap.nominet.uk/circle/",
+    "registry_url": "https://www.identity.digital/",
+    "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "2015-11-12",
     "tld_updated": [
-      "2026-07-07"
+      "2026-07-14"
     ],
     "annotations": {
       "iana_admin_alias": "Identity Digital",
       "iana_admin_slug": "identity-digital",
-      "iana_tech_alias": "Nominet",
-      "iana_tech_slug": "nominet",
+      "iana_tech_alias": "Identity Digital",
+      "iana_tech_slug": "identity-digital",
       "rdap_source": "IANA",
       "registry_agreement_types": [
         "base",

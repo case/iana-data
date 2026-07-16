@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-11T03:43:07Z",
+  "publication": "2026-07-16T08:10:23Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -21,7 +21,7 @@
     "whois_server": "whois.tcinet.ru",
     "tld_created": "1994-04-07",
     "tld_updated": [
-      "2025-10-22"
+      "2026-07-14"
     ],
     "annotations": {
       "country_name_iso": "Russian Federation",
@@ -66,6 +66,25 @@
         "ipv6": [
           {
             "ip": "2001:678:16:0:194:85:252:62",
+            "asn": 42385,
+            "as_org": "RIPN-",
+            "as_country": "RU"
+          }
+        ]
+      },
+      {
+        "hostname": "c.tld-servers.ru",
+        "ipv4": [
+          {
+            "ip": "194.190.122.17",
+            "asn": 42385,
+            "as_org": "RIPN-",
+            "as_country": "RU"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a09:bd00:1:0:194:190:122:17",
             "asn": 42385,
             "as_org": "RIPN-",
             "as_country": "RU"
