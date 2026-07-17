@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-16T08:10:23Z",
+  "publication": "2026-07-17T03:32:38Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -146265,8 +146265,8 @@
           "ipv6": [
             {
               "ip": "2001:16a0:1:3002::2",
-              "asn": 39386,
-              "as_org": "STC-IGW-AS",
+              "asn": 25019,
+              "as_org": "SAUDINETSTC-AS",
               "as_country": "SA"
             }
           ]
@@ -146284,8 +146284,8 @@
           "ipv6": [
             {
               "ip": "2001:16a0:2:3002::2",
-              "asn": 39386,
-              "as_org": "STC-IGW-AS",
+              "asn": 25019,
+              "as_org": "SAUDINETSTC-AS",
               "as_country": "SA"
             }
           ]
@@ -162264,7 +162264,7 @@
       "whois_server": "whois.tcinet.ru",
       "tld_created": "1990-09-19",
       "tld_updated": [
-        "2026-04-22"
+        "2026-07-16"
       ],
       "annotations": {
         "country_name_iso": "Soviet Union",
@@ -202883,8 +202883,8 @@
           "ipv6": [
             {
               "ip": "2001:16a0:1:3002::2",
-              "asn": 39386,
-              "as_org": "STC-IGW-AS",
+              "asn": 25019,
+              "as_org": "SAUDINETSTC-AS",
               "as_country": "SA"
             }
           ]
@@ -202902,8 +202902,8 @@
           "ipv6": [
             {
               "ip": "2001:16a0:2:3002::2",
-              "asn": 39386,
-              "as_org": "STC-IGW-AS",
+              "asn": 25019,
+              "as_org": "SAUDINETSTC-AS",
               "as_country": "SA"
             }
           ]
