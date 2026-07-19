@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-18T03:31:27Z",
+  "publication": "2026-07-19T03:34:15Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -93052,9 +93052,9 @@
           "ipv4": [
             {
               "ip": "196.13.202.53",
-              "asn": 0,
-              "as_org": "Not routed",
-              "as_country": "None"
+              "asn": 36948,
+              "as_org": "KENIC",
+              "as_country": "KE"
             },
             {
               "ip": "196.1.4.130",
@@ -201782,9 +201782,9 @@
           "ipv4": [
             {
               "ip": "36.50.76.15",
-              "asn": 152155,
-              "as_org": "SNSKIES-AS-AP SN SKIESPVT. LIMITED",
-              "as_country": "PK"
+              "asn": 0,
+              "as_org": "Not routed",
+              "as_country": "None"
             }
           ],
           "ipv6": []
