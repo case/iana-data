@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-21T03:36:51Z",
+  "publication": "2026-07-22T03:36:44Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -191000,7 +191000,7 @@
         "iana": {
           "sponsor": "China Organizational Name Administration Center",
           "admin": "China Organizational Name Administration Center",
-          "tech": "China Organizational Name Administration Center"
+          "tech": "China Internet Network Information Center"
         },
         "icann": {
           "registry_operator": "China Organizational Name Administration Center",
@@ -191019,7 +191019,7 @@
       "rdap_server": "https://rdap.ngtld.cn",
       "tld_created": "2013-12-12",
       "tld_updated": [
-        "2026-07-06"
+        "2026-07-21"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -209922,7 +209922,7 @@
         "iana": {
           "sponsor": "China Organizational Name Administration Center",
           "admin": "China Organizational Name Administration Center",
-          "tech": "China Organizational Name Administration Center"
+          "tech": "China Internet Network Information Center"
         },
         "icann": {
           "registry_operator": "China Organizational Name Administration Center",
@@ -209941,7 +209941,7 @@
       "rdap_server": "https://rdap.ngtld.cn",
       "tld_created": "2013-12-12",
       "tld_updated": [
-        "2026-07-06"
+        "2026-07-21"
       ],
       "annotations": {
         "rdap_source": "IANA",
