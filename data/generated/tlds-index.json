@@ -1,7 +1,7 @@
 {
   "description": "Index of per-TLD data files at data/generated/tld/",
-  "publication": "2026-07-22T03:36:44Z",
-  "count": 1594,
+  "publication": "2026-07-23T08:39:05Z",
+  "count": 1595,
   "tlds": [
     {
       "tld": "aaa",
@@ -1224,7 +1224,7 @@
       "delegated": true,
       "tld_created": "1994-02-01",
       "tld_updated": [
-        "2026-07-14"
+        "2026-07-22"
       ]
     },
     {
@@ -4994,7 +4994,7 @@
       "delegated": true,
       "tld_created": "1994-04-15",
       "tld_updated": [
-        "2025-09-08"
+        "2026-07-22"
       ]
     },
     {
@@ -9763,7 +9763,7 @@
       "delegated": true,
       "tld_created": "2013-11-25",
       "tld_updated": [
-        "2026-07-07"
+        "2026-07-22"
       ]
     },
     {
@@ -12314,6 +12314,11 @@
       ]
     },
     {
+      "tld": "web",
+      "type": "gtld",
+      "delegated": true
+    },
+    {
       "tld": "webcam",
       "type": "gtld",
       "delegated": true,
@@ -13739,7 +13744,7 @@
       "delegated": true,
       "tld_created": "2019-06-13",
       "tld_updated": [
-        "2026-07-15"
+        "2026-07-22"
       ]
     },
     {

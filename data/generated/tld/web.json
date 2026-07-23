@@ -1,0 +1,25 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-07-23T08:39:05Z",
+  "sources": {
+    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "web",
+    "delegated": true,
+    "iana_tag": "generic",
+    "type": "gtld",
+    "orgs": {
+      "iana": {
+        "sponsor": "VeriSign, Inc."
+      }
+    },
+    "rdap_server": "https://tld-rdap.verisign.com/web/v1/",
+    "annotations": {
+      "iana_sponsor_alias": "VeriSign",
+      "iana_sponsor_slug": "verisign",
+      "rdap_source": "IANA"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-22T03:36:44Z",
+  "publication": "2026-07-23T08:39:05Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -18379,7 +18379,7 @@
       "rdap_server": "https://rdap.centralnic.com/bh/",
       "tld_created": "1994-02-01",
       "tld_updated": [
-        "2026-07-14"
+        "2026-07-22"
       ],
       "annotations": {
         "iana_tech_alias": "CentralNic",
@@ -18387,94 +18387,16 @@
         "rdap_source": "supplemental",
         "country_name_iso": "Bahrain",
         "as_org_aliases": [
-          "CentralNic",
           "Packet Clearing House",
           "Tucows"
         ],
         "as_org_slugs": [
-          "centralnic",
           "packet-clearing-house",
           "tucows"
         ],
         "geographic_scope": "country"
       },
       "nameservers": [
-        {
-          "hostname": "a.nic.bh",
-          "ipv4": [
-            {
-              "ip": "194.169.218.115",
-              "asn": 199330,
-              "as_org": "CENTRALNIC-ANYCAST-A CentralNic Anycast-A AS Number",
-              "as_country": "GB"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2001:67c:13cc::1:115",
-              "asn": 199330,
-              "as_org": "CENTRALNIC-ANYCAST-A CentralNic Anycast-A AS Number",
-              "as_country": "GB"
-            }
-          ]
-        },
-        {
-          "hostname": "b.nic.bh",
-          "ipv4": [
-            {
-              "ip": "185.24.64.115",
-              "asn": 60890,
-              "as_org": "CENTRALNIC-ANYCAST-B CentralNic Anycast-B AS Number",
-              "as_country": "GB"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2a04:2b00:13cc::1:115",
-              "asn": 60890,
-              "as_org": "CENTRALNIC-ANYCAST-B CentralNic Anycast-B AS Number",
-              "as_country": "GB"
-            }
-          ]
-        },
-        {
-          "hostname": "c.nic.bh",
-          "ipv4": [
-            {
-              "ip": "212.18.248.115",
-              "asn": 201304,
-              "as_org": "CENTRALNIC-ANYCAST-E",
-              "as_country": "GB"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2a04:2b00:13ee::115",
-              "asn": 201304,
-              "as_org": "CENTRALNIC-ANYCAST-E",
-              "as_country": "GB"
-            }
-          ]
-        },
-        {
-          "hostname": "d.nic.bh",
-          "ipv4": [
-            {
-              "ip": "212.18.249.115",
-              "asn": 201303,
-              "as_org": "CENTRALNIC-ANYCAST-F",
-              "as_country": "GB"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2a04:2b00:13ff::115",
-              "asn": 201303,
-              "as_org": "CENTRALNIC-ANYCAST-F",
-              "as_country": "GB"
-            }
-          ]
-        },
         {
           "hostname": "ns01.trs-dns.com",
           "ipv4": [
@@ -75613,7 +75535,7 @@
       "registry_url": "https://give.uog.edu/shop/",
       "tld_created": "1994-04-15",
       "tld_updated": [
-        "2025-09-08"
+        "2026-07-22"
       ],
       "annotations": {
         "country_name_iso": "Guam",
@@ -75628,6 +75550,18 @@
         "geographic_scope": "country"
       },
       "nameservers": [
+        {
+          "hostname": "gold-test.uog.edu",
+          "ipv4": [
+            {
+              "ip": "168.123.250.70",
+              "asn": 395400,
+              "as_org": "UNIVERSITY-GUAM",
+              "as_country": "GU"
+            }
+          ],
+          "ipv6": []
+        },
         {
           "hostname": "gold.uog.edu",
           "ipv4": [
@@ -145377,7 +145311,7 @@
       "rdap_server": "https://rdap.centralnic.com/ruhr/",
       "tld_created": "2013-11-25",
       "tld_updated": [
-        "2026-07-07"
+        "2026-07-22"
       ],
       "annotations": {
         "iana_tech_alias": "CentralNic",
@@ -184045,6 +183979,23 @@
       ]
     },
     {
+      "tld": "web",
+      "delegated": true,
+      "iana_tag": "generic",
+      "type": "gtld",
+      "orgs": {
+        "iana": {
+          "sponsor": "VeriSign, Inc."
+        }
+      },
+      "rdap_server": "https://tld-rdap.verisign.com/web/v1/",
+      "annotations": {
+        "iana_sponsor_alias": "VeriSign",
+        "iana_sponsor_slug": "verisign",
+        "rdap_source": "IANA"
+      }
+    },
+    {
       "tld": "webcam",
       "delegated": true,
       "iana_tag": "generic",
@@ -202526,19 +202477,17 @@
       },
       "tld_created": "2019-06-13",
       "tld_updated": [
-        "2026-07-15"
+        "2026-07-22"
       ],
       "annotations": {
         "iana_tech_alias": "CentralNic",
         "iana_tech_slug": "centralnic",
         "country_name_iso": "Bahrain",
         "as_org_aliases": [
-          "CentralNic",
           "Packet Clearing House",
           "Tucows"
         ],
         "as_org_slugs": [
-          "centralnic",
           "packet-clearing-house",
           "tucows"
         ],
@@ -202547,82 +202496,6 @@
         "language_name_en": "Arabic"
       },
       "nameservers": [
-        {
-          "hostname": "a.nic.xn--mgbcpq6gpa1a",
-          "ipv4": [
-            {
-              "ip": "194.169.218.115",
-              "asn": 199330,
-              "as_org": "CENTRALNIC-ANYCAST-A CentralNic Anycast-A AS Number",
-              "as_country": "GB"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2001:67c:13cc::1:115",
-              "asn": 199330,
-              "as_org": "CENTRALNIC-ANYCAST-A CentralNic Anycast-A AS Number",
-              "as_country": "GB"
-            }
-          ]
-        },
-        {
-          "hostname": "b.nic.xn--mgbcpq6gpa1a",
-          "ipv4": [
-            {
-              "ip": "185.24.64.115",
-              "asn": 60890,
-              "as_org": "CENTRALNIC-ANYCAST-B CentralNic Anycast-B AS Number",
-              "as_country": "GB"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2a04:2b00:13cc::1:115",
-              "asn": 60890,
-              "as_org": "CENTRALNIC-ANYCAST-B CentralNic Anycast-B AS Number",
-              "as_country": "GB"
-            }
-          ]
-        },
-        {
-          "hostname": "c.nic.xn--mgbcpq6gpa1a",
-          "ipv4": [
-            {
-              "ip": "212.18.248.115",
-              "asn": 201304,
-              "as_org": "CENTRALNIC-ANYCAST-E",
-              "as_country": "GB"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2a04:2b00:13ee::115",
-              "asn": 201304,
-              "as_org": "CENTRALNIC-ANYCAST-E",
-              "as_country": "GB"
-            }
-          ]
-        },
-        {
-          "hostname": "d.nic.xn--mgbcpq6gpa1a",
-          "ipv4": [
-            {
-              "ip": "212.18.249.115",
-              "asn": 201303,
-              "as_org": "CENTRALNIC-ANYCAST-F",
-              "as_country": "GB"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2a04:2b00:13ff::115",
-              "asn": 201303,
-              "as_org": "CENTRALNIC-ANYCAST-F",
-              "as_country": "GB"
-            }
-          ]
-        },
         {
           "hostname": "ns01.trs-dns.com",
           "ipv4": [
