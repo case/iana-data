@@ -14664,6 +14664,19 @@
     "thirdOrLowerLevelRegistration" : false,
     "uLabel" : null
   }, {
+    "applicationId" : null,
+    "contractTerminated" : false,
+    "dateOfContractSignature" : "2026-07-22",
+    "delegationDate" : "2026-07-23",
+    "gTLD" : "web",
+    "registryClassDomainNameList" : null,
+    "registryOperator" : "VeriSign, Inc.",
+    "registryOperatorCountryCode" : null,
+    "removalDate" : null,
+    "specification13" : false,
+    "thirdOrLowerLevelRegistration" : false,
+    "uLabel" : null
+  }, {
     "applicationId" : "1-1236-11213",
     "contractTerminated" : false,
     "dateOfContractSignature" : "2014-01-23",
@@ -16575,6 +16588,6 @@
     "thirdOrLowerLevelRegistration" : false,
     "uLabel" : null
   } ],
-  "updatedOn" : "2026-07-23T07:32:48.948+0000",
+  "updatedOn" : "2026-07-23T23:32:50.005+0000",
   "version" : 2
 }
