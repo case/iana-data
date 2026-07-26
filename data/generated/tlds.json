@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-25T03:33:50Z",
+  "publication": "2026-07-26T03:32:09Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -4485,17 +4485,17 @@
           "ipv4": [
             {
               "ip": "199.115.156.1",
-              "asn": 207266,
-              "as_org": "AFILIAS-SECONDARY-DNS",
-              "as_country": "IE"
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1",
+              "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:500:a4::1",
-              "asn": 207266,
-              "as_org": "AFILIAS-SECONDARY-DNS",
-              "as_country": "IE"
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1",
+              "as_country": "US"
             }
           ]
         },
@@ -4504,17 +4504,17 @@
           "ipv4": [
             {
               "ip": "199.115.157.1",
-              "asn": 207266,
-              "as_org": "AFILIAS-SECONDARY-DNS",
-              "as_country": "IE"
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1",
+              "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:500:a5::1",
-              "asn": 207266,
-              "as_org": "AFILIAS-SECONDARY-DNS",
-              "as_country": "IE"
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1",
+              "as_country": "US"
             }
           ]
         }
