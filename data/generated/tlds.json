@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-26T03:32:09Z",
+  "publication": "2026-07-28T03:32:24Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -31577,7 +31577,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
+              "asn": 396611,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -39606,7 +39606,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
+              "asn": 396611,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -117803,7 +117803,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
+              "asn": 396611,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -178506,7 +178506,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
+              "asn": 396611,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -184008,7 +184008,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
+              "asn": 396611,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -188718,7 +188718,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
+              "asn": 396611,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -189995,7 +189995,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
+              "asn": 396611,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -190130,7 +190130,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
+              "asn": 396611,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -193167,7 +193167,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
+              "asn": 396611,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -194038,7 +194038,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
+              "asn": 396611,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -196269,7 +196269,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
+              "asn": 396611,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -199264,7 +199264,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
+              "asn": 396611,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -203919,7 +203919,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
+              "asn": 396611,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -205847,7 +205847,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
+              "asn": 396611,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -207343,7 +207343,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
+              "asn": 396611,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -207478,7 +207478,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
+              "asn": 396611,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
