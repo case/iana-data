@@ -1,6 +1,6 @@
 {
   "description": "Organizations that play roles for TLDs in the IANA root zone, with a reverse-index of those roles. Consolidated subset: this covers the curated multi-source organizations only; the single-source long tail is not yet included, so absence here does not mean a TLD has no operator.",
-  "publication": "2026-07-24T03:36:49Z",
+  "publication": "2026-07-29T03:33:23Z",
   "sources": [
     "data/source/iana-root.html (IANA)",
     "data/source/icann-gtlds.json (ICANN)",
@@ -4201,7 +4201,6 @@
             "na",
             "nrw",
             "quebec",
-            "radio",
             "sap",
             "scot",
             "seat",

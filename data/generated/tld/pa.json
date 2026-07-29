@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-11T03:43:07Z",
+  "publication": "2026-07-29T03:33:22Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -20,7 +20,7 @@
     "registry_url": "http://www.nic.pa/",
     "tld_created": "1994-05-25",
     "tld_updated": [
-      "2024-11-25"
+      "2026-07-28"
     ],
     "annotations": {
       "country_name_iso": "Panama",
@@ -57,25 +57,6 @@
             "asn": 61455,
             "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
             "as_country": "UY"
-          }
-        ]
-      },
-      {
-        "hostname": "dns-ext.nic.cr",
-        "ipv4": [
-          {
-            "ip": "200.107.82.219",
-            "asn": 263779,
-            "as_org": "Academia Nacional de Ciencias",
-            "as_country": "CR"
-          }
-        ],
-        "ipv6": [
-          {
-            "ip": "2001:13c7:7004:110::219",
-            "asn": 263779,
-            "as_org": "Academia Nacional de Ciencias",
-            "as_country": "CR"
           }
         ]
       },
@@ -164,6 +145,25 @@
           }
         ],
         "ipv6": []
+      },
+      {
+        "hostname": "nsca.nic.cr",
+        "ipv4": [
+          {
+            "ip": "200.107.82.38",
+            "asn": 263779,
+            "as_org": "Academia Nacional de Ciencias",
+            "as_country": "CR"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:13c7:7004:1::38",
+            "asn": 263779,
+            "as_org": "Academia Nacional de Ciencias",
+            "as_country": "CR"
+          }
+        ]
       },
       {
         "hostname": "ssdns-tld.nic.cl",

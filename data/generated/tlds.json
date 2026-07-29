@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-28T03:32:24Z",
+  "publication": "2026-07-29T03:33:22Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -31577,7 +31577,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396611,
+              "asn": 396612,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -39606,7 +39606,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396611,
+              "asn": 396612,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -117803,7 +117803,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396611,
+              "asn": 396612,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -127771,7 +127771,7 @@
       "registry_url": "http://www.nic.pa/",
       "tld_created": "1994-05-25",
       "tld_updated": [
-        "2024-11-25"
+        "2026-07-28"
       ],
       "annotations": {
         "country_name_iso": "Panama",
@@ -127808,25 +127808,6 @@
               "asn": 61455,
               "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
               "as_country": "UY"
-            }
-          ]
-        },
-        {
-          "hostname": "dns-ext.nic.cr",
-          "ipv4": [
-            {
-              "ip": "200.107.82.219",
-              "asn": 263779,
-              "as_org": "Academia Nacional de Ciencias",
-              "as_country": "CR"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2001:13c7:7004:110::219",
-              "asn": 263779,
-              "as_org": "Academia Nacional de Ciencias",
-              "as_country": "CR"
             }
           ]
         },
@@ -127915,6 +127896,25 @@
             }
           ],
           "ipv6": []
+        },
+        {
+          "hostname": "nsca.nic.cr",
+          "ipv4": [
+            {
+              "ip": "200.107.82.38",
+              "asn": 263779,
+              "as_org": "Academia Nacional de Ciencias",
+              "as_country": "CR"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2001:13c7:7004:1::38",
+              "asn": 263779,
+              "as_org": "Academia Nacional de Ciencias",
+              "as_country": "CR"
+            }
+          ]
         },
         {
           "hostname": "ssdns-tld.nic.cl",
@@ -139043,7 +139043,7 @@
       "rdap_server": "https://rdap.nic.radio/",
       "tld_created": "2016-09-22",
       "tld_updated": [
-        "2026-07-14"
+        "2026-07-27"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -139053,12 +139053,10 @@
           "non_sponsored"
         ],
         "as_org_aliases": [
-          "CentralNic",
-          "Knipp Medien"
+          "CentralNic"
         ],
         "as_org_slugs": [
-          "centralnic",
-          "knipp-medien"
+          "centralnic"
         ]
       },
       "nameservers": [
@@ -139082,82 +139080,6 @@
           ]
         },
         {
-          "hostname": "anycast10.irondns.net",
-          "ipv4": [
-            {
-              "ip": "195.253.64.12",
-              "asn": 8561,
-              "as_org": "KNIPPWORLDWI",
-              "as_country": "DE"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2a01:5b0:4::c",
-              "asn": 8561,
-              "as_org": "KNIPPWORLDWI",
-              "as_country": "DE"
-            }
-          ]
-        },
-        {
-          "hostname": "anycast23.irondns.net",
-          "ipv4": [
-            {
-              "ip": "195.253.65.11",
-              "asn": 50611,
-              "as_org": "KNIPP-IRONDNS1-AS Technologiepark",
-              "as_country": "DE"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2a01:5b0:5::b",
-              "asn": 50611,
-              "as_org": "KNIPP-IRONDNS1-AS Technologiepark",
-              "as_country": "DE"
-            }
-          ]
-        },
-        {
-          "hostname": "anycast24.irondns.net",
-          "ipv4": [
-            {
-              "ip": "195.253.65.12",
-              "asn": 50611,
-              "as_org": "KNIPP-IRONDNS1-AS Technologiepark",
-              "as_country": "DE"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2a01:5b0:5::c",
-              "asn": 50611,
-              "as_org": "KNIPP-IRONDNS1-AS Technologiepark",
-              "as_country": "DE"
-            }
-          ]
-        },
-        {
-          "hostname": "anycast9.irondns.net",
-          "ipv4": [
-            {
-              "ip": "195.253.64.11",
-              "asn": 8561,
-              "as_org": "KNIPPWORLDWI",
-              "as_country": "DE"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2a01:5b0:4::b",
-              "asn": 8561,
-              "as_org": "KNIPPWORLDWI",
-              "as_country": "DE"
-            }
-          ]
-        },
-        {
           "hostname": "b.nic.radio",
           "ipv4": [
             {
@@ -139172,6 +139094,44 @@
               "ip": "2a04:2b00:13cc::1:21",
               "asn": 60890,
               "as_org": "CENTRALNIC-ANYCAST-B CentralNic Anycast-B AS Number",
+              "as_country": "GB"
+            }
+          ]
+        },
+        {
+          "hostname": "c.nic.radio",
+          "ipv4": [
+            {
+              "ip": "212.18.248.21",
+              "asn": 201304,
+              "as_org": "CENTRALNIC-ANYCAST-E",
+              "as_country": "GB"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2a04:2b00:13ee::21",
+              "asn": 201304,
+              "as_org": "CENTRALNIC-ANYCAST-E",
+              "as_country": "GB"
+            }
+          ]
+        },
+        {
+          "hostname": "d.nic.radio",
+          "ipv4": [
+            {
+              "ip": "212.18.249.21",
+              "asn": 201303,
+              "as_org": "CENTRALNIC-ANYCAST-F",
+              "as_country": "GB"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2a04:2b00:13ff::21",
+              "asn": 201303,
+              "as_org": "CENTRALNIC-ANYCAST-F",
               "as_country": "GB"
             }
           ]
@@ -162198,7 +162158,7 @@
       "whois_server": "whois.tcinet.ru",
       "tld_created": "1990-09-19",
       "tld_updated": [
-        "2026-07-16"
+        "2026-07-27"
       ],
       "annotations": {
         "country_name_iso": "Soviet Union",
@@ -162243,6 +162203,25 @@
           "ipv6": [
             {
               "ip": "2001:678:16:0:194:85:252:62",
+              "asn": 42385,
+              "as_org": "RIPN-",
+              "as_country": "RU"
+            }
+          ]
+        },
+        {
+          "hostname": "c.tld-servers.ru",
+          "ipv4": [
+            {
+              "ip": "194.190.122.17",
+              "asn": 42385,
+              "as_org": "RIPN-",
+              "as_country": "RU"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2a09:bd00:1:0:194:190:122:17",
               "asn": 42385,
               "as_org": "RIPN-",
               "as_country": "RU"
@@ -165585,7 +165564,7 @@
       "rdap_server": "https://whois.nic.tatar/rdap/",
       "tld_created": "2014-07-03",
       "tld_updated": [
-        "2025-10-21"
+        "2026-07-27"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -165636,6 +165615,25 @@
           "ipv6": [
             {
               "ip": "2001:678:16:0:194:85:252:62",
+              "asn": 42385,
+              "as_org": "RIPN-",
+              "as_country": "RU"
+            }
+          ]
+        },
+        {
+          "hostname": "c.tld-servers.ru",
+          "ipv4": [
+            {
+              "ip": "194.190.122.17",
+              "asn": 42385,
+              "as_org": "RIPN-",
+              "as_country": "RU"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2a09:bd00:1:0:194:190:122:17",
               "asn": 42385,
               "as_org": "RIPN-",
               "as_country": "RU"
@@ -178506,7 +178504,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396611,
+              "asn": 396612,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -184008,7 +184006,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396611,
+              "asn": 396612,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -188718,7 +188716,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396611,
+              "asn": 396612,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -189995,7 +189993,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396611,
+              "asn": 396612,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -190130,7 +190128,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396611,
+              "asn": 396612,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -193167,7 +193165,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396611,
+              "asn": 396612,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -194038,7 +194036,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396611,
+              "asn": 396612,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -195308,7 +195306,7 @@
       "rdap_server": "https://whois.nic.xn--d1acj3b/rdap/",
       "tld_created": "2014-02-13",
       "tld_updated": [
-        "2026-04-22"
+        "2026-07-27"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -195359,6 +195357,25 @@
           "ipv6": [
             {
               "ip": "2001:678:16:0:194:85:252:62",
+              "asn": 42385,
+              "as_org": "RIPN-",
+              "as_country": "RU"
+            }
+          ]
+        },
+        {
+          "hostname": "c.tld-servers.ru",
+          "ipv4": [
+            {
+              "ip": "194.190.122.17",
+              "asn": 42385,
+              "as_org": "RIPN-",
+              "as_country": "RU"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2a09:bd00:1:0:194:190:122:17",
               "asn": 42385,
               "as_org": "RIPN-",
               "as_country": "RU"
@@ -196269,7 +196286,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396611,
+              "asn": 396612,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -199264,7 +199281,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396611,
+              "asn": 396612,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -203919,7 +203936,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396611,
+              "asn": 396612,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -205847,7 +205864,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396611,
+              "asn": 396612,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -207343,7 +207360,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396611,
+              "asn": 396612,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
@@ -207478,7 +207495,7 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396611,
+              "asn": 396612,
               "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
