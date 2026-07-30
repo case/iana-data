@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-29T03:33:22Z",
+  "publication": "2026-07-30T03:31:23Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -110447,8 +110447,8 @@
           "ipv4": [
             {
               "ip": "196.43.214.3",
-              "asn": 37327,
-              "as_org": "NIC",
+              "asn": 328411,
+              "as_org": "Gulfsat-Madagascar-AS",
               "as_country": "MG"
             }
           ],
