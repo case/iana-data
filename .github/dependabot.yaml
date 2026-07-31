@@ -1,9 +1,12 @@
+# Groups partition every update by dependency-type x update-type so nothing falls
+# through to an individual PR. Majors are separate so a breaking bump can be held.
 version: 2
 
 updates:
   # Python
   - package-ecosystem: "uv"
     directory: "/"
+    open-pull-requests-limit: 10
     cooldown:
       default-days: 14
     schedule:
@@ -12,13 +15,20 @@ updates:
       time: "14:00"
       timezone: "America/Los_Angeles"
     groups:
+      python-prod:
+        dependency-type: "production"
+        update-types: ["minor", "patch"]
       python-dev-tools:
         dependency-type: "development"
         update-types: ["minor", "patch"]
+      python-major:
+        patterns: ["*"]
+        update-types: ["major"]
 
   # GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
+    open-pull-requests-limit: 10
     cooldown:
       default-days: 14
     schedule:
@@ -30,10 +40,14 @@ updates:
       github-actions:
         patterns: ["*"]
         update-types: ["minor", "patch"]
+      github-actions-major:
+        patterns: ["*"]
+        update-types: ["major"]
 
   # NodeJS
   - package-ecosystem: "npm"
     directory: "/"
+    open-pull-requests-limit: 10
     cooldown:
       default-days: 14
     schedule:
@@ -42,6 +56,13 @@ updates:
       time: "14:00"
       timezone: "America/Los_Angeles"
     groups:
+      # No production deps today; group defined so a future one is covered.
+      npm-prod:
+        dependency-type: "production"
+        update-types: ["minor", "patch"]
       npm-dev:
         dependency-type: "development"
         update-types: ["minor", "patch"]
+      npm-major:
+        patterns: ["*"]
+        update-types: ["major"]
