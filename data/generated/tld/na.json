@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-07T22:58:14Z",
+  "publication": "2026-08-01T03:36:28Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -21,17 +21,19 @@
     "rdap_server": "https://keetmans.omadhina.co.na",
     "tld_created": "1991-05-08",
     "tld_updated": [
-      "2024-10-16"
+      "2026-07-31"
     ],
     "annotations": {
       "rdap_source": "IANA",
       "country_name_iso": "Namibia",
       "as_org_aliases": [
+        "CZNIC.cz",
         "Gransy",
         "Knipp Medien",
         "Packet Clearing House"
       ],
       "as_org_slugs": [
+        "cznic",
         "gransy",
         "knipp-medien",
         "packet-clearing-house"
@@ -74,6 +76,25 @@
             "asn": 63911,
             "as_org": "NETACTUATE-AS-AP NetActuate, Inc",
             "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "na-e.ns.nic.cz",
+        "ipv4": [
+          {
+            "ip": "185.43.134.17",
+            "asn": 25192,
+            "as_org": "CZNIC-AS",
+            "as_country": "CZ"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:148f:fffd::17",
+            "asn": 25192,
+            "as_org": "CZNIC-AS",
+            "as_country": "CZ"
           }
         ]
       },
