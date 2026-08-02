@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-01T03:36:28Z",
+  "publication": "2026-08-02T03:38:16Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -155294,7 +155294,7 @@
           "ipv4": [
             {
               "ip": "42.83.130.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -155313,7 +155313,7 @@
           "ipv4": [
             {
               "ip": "42.83.131.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -155332,7 +155332,7 @@
           "ipv4": [
             {
               "ip": "42.83.132.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -184961,7 +184961,7 @@
           "ipv4": [
             {
               "ip": "42.83.130.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -184980,7 +184980,7 @@
           "ipv4": [
             {
               "ip": "42.83.131.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -184999,7 +184999,7 @@
           "ipv4": [
             {
               "ip": "42.83.132.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -189034,7 +189034,7 @@
           "ipv4": [
             {
               "ip": "42.83.130.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -189053,7 +189053,7 @@
           "ipv4": [
             {
               "ip": "42.83.131.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -189072,7 +189072,7 @@
           "ipv4": [
             {
               "ip": "42.83.132.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -191080,7 +191080,7 @@
           "ipv4": [
             {
               "ip": "42.83.130.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -191099,7 +191099,7 @@
           "ipv4": [
             {
               "ip": "42.83.131.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -191118,7 +191118,7 @@
           "ipv4": [
             {
               "ip": "42.83.132.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -193444,7 +193444,7 @@
           "ipv4": [
             {
               "ip": "42.83.130.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -193463,7 +193463,7 @@
           "ipv4": [
             {
               "ip": "42.83.131.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -193482,7 +193482,7 @@
           "ipv4": [
             {
               "ip": "42.83.132.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -209110,7 +209110,7 @@
           "ipv4": [
             {
               "ip": "42.83.130.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -209129,7 +209129,7 @@
           "ipv4": [
             {
               "ip": "42.83.131.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -209148,7 +209148,7 @@
           "ipv4": [
             {
               "ip": "42.83.132.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -209923,7 +209923,7 @@
           "ipv4": [
             {
               "ip": "42.83.130.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -209942,7 +209942,7 @@
           "ipv4": [
             {
               "ip": "42.83.131.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -209961,7 +209961,7 @@
           "ipv4": [
             {
               "ip": "42.83.132.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
