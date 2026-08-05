@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-04T03:34:59Z",
+  "publication": "2026-08-05T03:36:57Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -3271,7 +3271,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2001-12-21",
       "tld_updated": [
-        "2026-05-21"
+        "2026-08-04"
       ],
       "annotations": {
         "iana_admin_alias": "Identity Digital",
@@ -5343,7 +5343,7 @@
       "registry_url": "https://akep.al/e-aplikime-domain/",
       "tld_created": "1992-04-21",
       "tld_updated": [
-        "2026-07-03"
+        "2026-08-03"
       ],
       "annotations": {
         "country_name_iso": "Albania",
@@ -6153,7 +6153,7 @@
       "rdap_server": "https://rdap.nic.alsace",
       "tld_created": "2014-09-18",
       "tld_updated": [
-        "2026-08-03"
+        "2026-08-04"
       ],
       "annotations": {
         "iana_tech_alias": "AFNIC.fr",
@@ -11417,7 +11417,7 @@
       "rdap_server": "https://rdap.cctld.au/rdap/",
       "tld_created": "1986-03-05",
       "tld_updated": [
-        "2026-07-11"
+        "2026-08-04"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -18231,7 +18231,7 @@
       "whois_server": "whois.register.bg",
       "tld_created": "1995-01-03",
       "tld_updated": [
-        "2021-02-24"
+        "2026-08-04"
       ],
       "annotations": {
         "country_name_iso": "Bulgaria",
@@ -26729,7 +26729,7 @@
       "rdap_server": "https://rdap.ca.fury.ca/rdap/",
       "tld_created": "1987-05-14",
       "tld_updated": [
-        "2026-03-16"
+        "2026-08-04"
       ],
       "annotations": {
         "iana_admin_alias": "CIRA.ca",
@@ -31052,7 +31052,7 @@
       "rdap_server": "https://rdap.nic.cba/",
       "tld_created": "2015-03-26",
       "tld_updated": [
-        "2023-12-05"
+        "2026-08-04"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -31665,7 +31665,7 @@
       "registry_url": "http://www.nic.cd/",
       "tld_created": "1997-08-20",
       "tld_updated": [
-        "2025-12-12"
+        "2026-08-04"
       ],
       "annotations": {
         "country_name_iso": "Congo, The Democratic Republic of the",
@@ -32186,7 +32186,7 @@
       "whois_server": "whois.dot.cf",
       "tld_created": "1996-04-24",
       "tld_updated": [
-        "2015-12-29"
+        "2026-08-04"
       ],
       "annotations": {
         "country_name_iso": "Central African Republic",
@@ -35714,7 +35714,7 @@
       "whois_server": "whois.nic.cl",
       "tld_created": "1987-12-15",
       "tld_updated": [
-        "2021-05-28"
+        "2026-08-04"
       ],
       "annotations": {
         "country_name_iso": "Chile",
@@ -38446,8 +38446,8 @@
           "ipv4": [
             {
               "ip": "192.5.6.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -38473,9 +38473,9 @@
           "ipv6": [
             {
               "ip": "2001:503:231d::2:30",
-              "asn": 396690,
-              "as_org": "AS396690",
-              "as_country": "Unknown"
+              "asn": 396654,
+              "as_org": "VRSN-AC50-340",
+              "as_country": "US"
             }
           ]
         },
@@ -38484,8 +38484,8 @@
           "ipv4": [
             {
               "ip": "192.26.92.30",
-              "asn": 397204,
-              "as_org": "VRSN-AC28",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -38503,8 +38503,8 @@
           "ipv4": [
             {
               "ip": "192.31.80.30",
-              "asn": 397204,
-              "as_org": "VRSN-AC28",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -38522,8 +38522,8 @@
           "ipv4": [
             {
               "ip": "192.12.94.30",
-              "asn": 397204,
-              "as_org": "VRSN-AC28",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -45897,7 +45897,7 @@
       "rdap_server": "https://rdap.denic.de/",
       "tld_created": "1986-11-05",
       "tld_updated": [
-        "2023-04-04"
+        "2026-08-04"
       ],
       "annotations": {
         "rdap_source": "supplemental",
@@ -53347,7 +53347,7 @@
       "whois_server": "whois.educause.edu",
       "tld_created": "1985-01-01",
       "tld_updated": [
-        "2026-03-10"
+        "2026-08-04"
       ],
       "annotations": {
         "iana_tech_alias": "VeriSign",
@@ -53365,8 +53365,8 @@
           "ipv4": [
             {
               "ip": "192.5.6.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -53392,9 +53392,9 @@
           "ipv6": [
             {
               "ip": "2001:503:231d::2:30",
-              "asn": 396690,
-              "as_org": "AS396690",
-              "as_country": "Unknown"
+              "asn": 396654,
+              "as_org": "VRSN-AC50-340",
+              "as_country": "US"
             }
           ]
         },
@@ -53403,8 +53403,8 @@
           "ipv4": [
             {
               "ip": "192.26.92.30",
-              "asn": 397204,
-              "as_org": "VRSN-AC28",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -53422,8 +53422,8 @@
           "ipv4": [
             {
               "ip": "192.31.80.30",
-              "asn": 397204,
-              "as_org": "VRSN-AC28",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -53441,8 +53441,8 @@
           "ipv4": [
             {
               "ip": "192.12.94.30",
-              "asn": 397204,
-              "as_org": "VRSN-AC28",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -53912,7 +53912,7 @@
       "registry_url": "http://www.egregistry.eg/",
       "tld_created": "1990-11-30",
       "tld_updated": [
-        "2025-08-22"
+        "2026-08-04"
       ],
       "annotations": {
         "country_name_iso": "Egypt",
@@ -70742,7 +70742,7 @@
       "rdap_server": "https://rdap.centralnic.com/gl/",
       "tld_created": "1994-04-08",
       "tld_updated": [
-        "2024-12-19"
+        "2026-08-04"
       ],
       "annotations": {
         "rdap_source": "supplemental",
@@ -73702,7 +73702,7 @@
       "rdap_server": "https://rdap.nic.gov/rdap/",
       "tld_created": "1985-01-01",
       "tld_updated": [
-        "2026-03-10"
+        "2026-08-04"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -73924,7 +73924,7 @@
       "whois_server": "whois.dominio.gq",
       "tld_created": "1997-07-10",
       "tld_updated": [
-        "2023-08-14"
+        "2026-08-04"
       ],
       "annotations": {
         "country_name_iso": "Equatorial Guinea",
@@ -79334,7 +79334,7 @@
       "whois_server": "whois.registry.hm",
       "tld_created": "1997-07-24",
       "tld_updated": [
-        "2026-07-07"
+        "2026-08-04"
       ],
       "annotations": {
         "country_name_iso": "Heard Island and McDonald Islands",
@@ -82629,7 +82629,7 @@
       "whois_server": "whois.nic.hu",
       "tld_created": "1990-11-07",
       "tld_updated": [
-        "2025-09-12"
+        "2026-08-04"
       ],
       "annotations": {
         "country_name_iso": "Hungary",
@@ -89730,7 +89730,7 @@
       "whois_server": "whois.je",
       "tld_created": "1996-08-08",
       "tld_updated": [
-        "2024-02-12"
+        "2026-08-04"
       ],
       "annotations": {
         "country_name_iso": "Jersey",
@@ -90660,7 +90660,7 @@
       },
       "tld_created": "1991-09-24",
       "tld_updated": [
-        "2025-07-10"
+        "2026-08-04"
       ],
       "annotations": {
         "country_name_iso": "Jamaica",
@@ -99069,7 +99069,7 @@
       "rdap_server": "https://rdap.nic.leclerc",
       "tld_created": "2015-01-29",
       "tld_updated": [
-        "2024-09-11"
+        "2026-08-04"
       ],
       "annotations": {
         "iana_tech_alias": "AFNIC.fr",
@@ -111017,8 +111017,8 @@
           "ipv4": [
             {
               "ip": "199.252.155.234",
-              "asn": 5927,
-              "as_org": "DNIC-ASBLK-05800-06055",
+              "asn": 721,
+              "as_org": "DNIC-ASBLK-00721-00726",
               "as_country": "US"
             }
           ],
@@ -112174,7 +112174,7 @@
       "rdap_server": "https://rdap.nic.mma",
       "tld_created": "2015-02-27",
       "tld_updated": [
-        "2026-08-03"
+        "2026-08-04"
       ],
       "annotations": {
         "iana_admin_alias": "AFNIC.fr",
@@ -116342,7 +116342,7 @@
       "rdap_server": "https://rdap.nic.museum",
       "tld_created": "2001-10-20",
       "tld_updated": [
-        "2026-03-10"
+        "2026-08-04"
       ],
       "annotations": {
         "iana_admin_alias": "AFNIC.fr",
@@ -118663,8 +118663,8 @@
           "ipv4": [
             {
               "ip": "192.5.6.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -118690,9 +118690,9 @@
           "ipv6": [
             {
               "ip": "2001:503:231d::2:30",
-              "asn": 396690,
-              "as_org": "AS396690",
-              "as_country": "Unknown"
+              "asn": 396654,
+              "as_org": "VRSN-AC50-340",
+              "as_country": "US"
             }
           ]
         },
@@ -118701,8 +118701,8 @@
           "ipv4": [
             {
               "ip": "192.26.92.30",
-              "asn": 397204,
-              "as_org": "VRSN-AC28",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -118720,8 +118720,8 @@
           "ipv4": [
             {
               "ip": "192.31.80.30",
-              "asn": 397204,
-              "as_org": "VRSN-AC28",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -118739,8 +118739,8 @@
           "ipv4": [
             {
               "ip": "192.12.94.30",
-              "asn": 397204,
-              "as_org": "VRSN-AC28",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -128312,7 +128312,7 @@
       "rdap_server": "https://rdap.nic.paris",
       "tld_created": "2014-03-27",
       "tld_updated": [
-        "2026-07-30"
+        "2026-08-04"
       ],
       "annotations": {
         "iana_admin_alias": "AFNIC.fr",
@@ -155294,7 +155294,7 @@
           "ipv4": [
             {
               "ip": "42.83.130.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -155321,7 +155321,7 @@
           "ipv6": [
             {
               "ip": "2001:dc7:ffd2::1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -155332,7 +155332,7 @@
           "ipv4": [
             {
               "ip": "42.83.132.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -155340,7 +155340,7 @@
           "ipv6": [
             {
               "ip": "2001:dc7:ffd3::1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -157212,7 +157212,7 @@
       "rdap_server": "https://rdap.nic.sn/whois43/",
       "tld_created": "1993-03-19",
       "tld_updated": [
-        "2026-07-31"
+        "2026-08-04"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -171866,7 +171866,7 @@
       "rdap_server": "https://rdap.nic.total",
       "tld_created": "2016-02-05",
       "tld_updated": [
-        "2026-07-31"
+        "2026-08-03"
       ],
       "annotations": {
         "iana_tech_alias": "AFNIC.fr",
@@ -175908,11 +175908,10 @@
         }
       },
       "registry_url": "http://www.nic.uk/",
-      "whois_server": "whois.nic.uk",
       "rdap_server": "https://rdap.nominet.uk/uk/",
       "tld_created": "1985-07-24",
       "tld_updated": [
-        "2023-03-07"
+        "2026-08-04"
       ],
       "annotations": {
         "iana_sponsor_alias": "Nominet",
@@ -184961,7 +184960,7 @@
           "ipv4": [
             {
               "ip": "42.83.130.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -184988,7 +184987,7 @@
           "ipv6": [
             {
               "ip": "2001:dc7:ffd2::1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -184999,7 +184998,7 @@
           "ipv4": [
             {
               "ip": "42.83.132.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -185007,7 +185006,7 @@
           "ipv6": [
             {
               "ip": "2001:dc7:ffd3::1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -189034,7 +189033,7 @@
           "ipv4": [
             {
               "ip": "42.83.130.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -189061,7 +189060,7 @@
           "ipv6": [
             {
               "ip": "2001:dc7:ffd2::1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -189072,7 +189071,7 @@
           "ipv4": [
             {
               "ip": "42.83.132.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -189080,7 +189079,7 @@
           "ipv6": [
             {
               "ip": "2001:dc7:ffd3::1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -191080,7 +191079,7 @@
           "ipv4": [
             {
               "ip": "42.83.130.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -191107,7 +191106,7 @@
           "ipv6": [
             {
               "ip": "2001:dc7:ffd2::1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -191118,7 +191117,7 @@
           "ipv4": [
             {
               "ip": "42.83.132.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -191126,7 +191125,7 @@
           "ipv6": [
             {
               "ip": "2001:dc7:ffd3::1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -191266,7 +191265,7 @@
           "ipv6": [
             {
               "ip": "2001:dc7:ffc3::1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -193444,7 +193443,7 @@
           "ipv4": [
             {
               "ip": "42.83.130.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -193471,7 +193470,7 @@
           "ipv6": [
             {
               "ip": "2001:dc7:ffd2::1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -193482,7 +193481,7 @@
           "ipv4": [
             {
               "ip": "42.83.132.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -193490,7 +193489,7 @@
           "ipv6": [
             {
               "ip": "2001:dc7:ffd3::1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -199189,7 +199188,7 @@
           "ipv6": [
             {
               "ip": "2001:dc7:ffc3::1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -209110,7 +209109,7 @@
           "ipv4": [
             {
               "ip": "42.83.130.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -209137,7 +209136,7 @@
           "ipv6": [
             {
               "ip": "2001:dc7:ffd2::1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -209148,7 +209147,7 @@
           "ipv4": [
             {
               "ip": "42.83.132.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -209156,7 +209155,7 @@
           "ipv6": [
             {
               "ip": "2001:dc7:ffd3::1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -209923,7 +209922,7 @@
           "ipv4": [
             {
               "ip": "42.83.130.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -209950,7 +209949,7 @@
           "ipv6": [
             {
               "ip": "2001:dc7:ffd2::1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -209961,7 +209960,7 @@
           "ipv4": [
             {
               "ip": "42.83.132.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -209969,7 +209968,7 @@
           "ipv6": [
             {
               "ip": "2001:dc7:ffd3::1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-16T08:10:23Z",
+  "publication": "2026-08-05T03:36:57Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -61,8 +61,8 @@
         "ipv4": [
           {
             "ip": "192.5.6.30",
-            "asn": 396549,
-            "as_org": "VRSN-AC50-340",
+            "asn": 10515,
+            "as_org": "CLT-NIC",
             "as_country": "US"
           }
         ],
@@ -88,9 +88,9 @@
         "ipv6": [
           {
             "ip": "2001:503:231d::2:30",
-            "asn": 396690,
-            "as_org": "AS396690",
-            "as_country": "Unknown"
+            "asn": 396654,
+            "as_org": "VRSN-AC50-340",
+            "as_country": "US"
           }
         ]
       },
@@ -99,8 +99,8 @@
         "ipv4": [
           {
             "ip": "192.26.92.30",
-            "asn": 397204,
-            "as_org": "VRSN-AC28",
+            "asn": 10515,
+            "as_org": "CLT-NIC",
             "as_country": "US"
           }
         ],
@@ -118,8 +118,8 @@
         "ipv4": [
           {
             "ip": "192.31.80.30",
-            "asn": 397204,
-            "as_org": "VRSN-AC28",
+            "asn": 10515,
+            "as_org": "CLT-NIC",
             "as_country": "US"
           }
         ],
@@ -137,8 +137,8 @@
         "ipv4": [
           {
             "ip": "192.12.94.30",
-            "asn": 397204,
-            "as_org": "VRSN-AC28",
+            "asn": 10515,
+            "as_org": "CLT-NIC",
             "as_country": "US"
           }
         ],

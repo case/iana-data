@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-11T03:43:07Z",
+  "publication": "2026-08-05T03:36:57Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -20,7 +20,7 @@
     "registry_url": "http://www.egregistry.eg/",
     "tld_created": "1990-11-30",
     "tld_updated": [
-      "2025-08-22"
+      "2026-08-04"
     ],
     "annotations": {
       "country_name_iso": "Egypt",
