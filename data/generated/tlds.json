@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-05T03:36:57Z",
+  "publication": "2026-08-06T05:43:13Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -10336,7 +10336,7 @@
       "rdap_server": "https://rdap.nic.as",
       "tld_created": "1997-06-12",
       "tld_updated": [
-        "2026-06-06"
+        "2026-08-04"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -10600,7 +10600,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2007-05-02",
       "tld_updated": [
-        "2025-09-01"
+        "2026-08-04"
       ],
       "annotations": {
         "iana_tech_alias": "Identity Digital",
@@ -37459,7 +37459,7 @@
           "ipv6": [
             {
               "ip": "2001:dc7:1::1",
-              "asn": 24151,
+              "asn": 24409,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -37489,7 +37489,7 @@
           "ipv4": [
             {
               "ip": "203.119.28.1",
-              "asn": 24151,
+              "asn": 24409,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -38446,8 +38446,8 @@
           "ipv4": [
             {
               "ip": "192.5.6.30",
-              "asn": 10515,
-              "as_org": "CLT-NIC",
+              "asn": 396549,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ],
@@ -38473,9 +38473,9 @@
           "ipv6": [
             {
               "ip": "2001:503:231d::2:30",
-              "asn": 396654,
-              "as_org": "VRSN-AC50-340",
-              "as_country": "US"
+              "asn": 396690,
+              "as_org": "AS396690",
+              "as_country": "Unknown"
             }
           ]
         },
@@ -38484,8 +38484,8 @@
           "ipv4": [
             {
               "ip": "192.26.92.30",
-              "asn": 10515,
-              "as_org": "CLT-NIC",
+              "asn": 397204,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
@@ -38503,8 +38503,8 @@
           "ipv4": [
             {
               "ip": "192.31.80.30",
-              "asn": 10515,
-              "as_org": "CLT-NIC",
+              "asn": 397204,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
@@ -38522,8 +38522,8 @@
           "ipv4": [
             {
               "ip": "192.12.94.30",
-              "asn": 10515,
-              "as_org": "CLT-NIC",
+              "asn": 397204,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
@@ -38748,7 +38748,7 @@
       "rdap_server": "https://rdap.nic.commbank/",
       "tld_created": "2015-03-26",
       "tld_updated": [
-        "2026-05-11"
+        "2026-08-04"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -53365,8 +53365,8 @@
           "ipv4": [
             {
               "ip": "192.5.6.30",
-              "asn": 10515,
-              "as_org": "CLT-NIC",
+              "asn": 396549,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ],
@@ -53392,9 +53392,9 @@
           "ipv6": [
             {
               "ip": "2001:503:231d::2:30",
-              "asn": 396654,
-              "as_org": "VRSN-AC50-340",
-              "as_country": "US"
+              "asn": 396690,
+              "as_org": "AS396690",
+              "as_country": "Unknown"
             }
           ]
         },
@@ -53403,8 +53403,8 @@
           "ipv4": [
             {
               "ip": "192.26.92.30",
-              "asn": 10515,
-              "as_org": "CLT-NIC",
+              "asn": 397204,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
@@ -53422,8 +53422,8 @@
           "ipv4": [
             {
               "ip": "192.31.80.30",
-              "asn": 10515,
-              "as_org": "CLT-NIC",
+              "asn": 397204,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
@@ -53441,8 +53441,8 @@
           "ipv4": [
             {
               "ip": "192.12.94.30",
-              "asn": 10515,
-              "as_org": "CLT-NIC",
+              "asn": 397204,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
@@ -83769,16 +83769,18 @@
       "rdap_server": "https://rdap.pandi.id/rdap/",
       "tld_created": "1993-02-27",
       "tld_updated": [
-        "2023-11-22"
+        "2026-08-05"
       ],
       "annotations": {
         "rdap_source": "IANA",
         "country_name_iso": "Indonesia",
         "as_org_aliases": [
-          "APNIC"
+          "APNIC",
+          "Packet Clearing House"
         ],
         "as_org_slugs": [
-          "apnic"
+          "apnic",
+          "packet-clearing-house"
         ],
         "geographic_scope": "country"
       },
@@ -83856,6 +83858,25 @@
               "asn": 132647,
               "as_org": "IDNIC-PANDI-AS-ID Pengelola Nama Domain Internet Indonesia",
               "as_country": "ID"
+            }
+          ]
+        },
+        {
+          "hostname": "f.dns.id",
+          "ipv4": [
+            {
+              "ip": "203.119.112.112",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2001:dd8:1f::f",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
             }
           ]
         },
@@ -95146,7 +95167,7 @@
       "registry_url": "http://www.star.co.kp",
       "tld_created": "2007-09-24",
       "tld_updated": [
-        "2026-05-14"
+        "2026-08-05"
       ],
       "annotations": {
         "country_name_iso": "Korea, Democratic People's Republic of",
@@ -96374,7 +96395,7 @@
       "whois_server": "whois.nic.kz",
       "tld_created": "1994-09-19",
       "tld_updated": [
-        "2023-01-24"
+        "2026-08-05"
       ],
       "annotations": {
         "country_name_iso": "Kazakhstan",
@@ -98614,7 +98635,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "1991-09-03",
       "tld_updated": [
-        "2023-01-18"
+        "2026-08-05"
       ],
       "annotations": {
         "rdap_source": "supplemental",
@@ -110914,7 +110935,7 @@
       },
       "tld_created": "1985-01-01",
       "tld_updated": [
-        "2026-03-10"
+        "2026-08-05"
       ],
       "nameservers": [
         {
@@ -111006,9 +111027,9 @@
           "ipv6": [
             {
               "ip": "2608:c184:1:180::234",
-              "asn": 0,
-              "as_org": "Not routed",
-              "as_country": "None"
+              "asn": 5927,
+              "as_org": "DNIC-ASBLK-05800-06055",
+              "as_country": "US"
             }
           ]
         },
@@ -111017,8 +111038,8 @@
           "ipv4": [
             {
               "ip": "199.252.155.234",
-              "asn": 721,
-              "as_org": "DNIC-ASBLK-00721-00726",
+              "asn": 5927,
+              "as_org": "DNIC-ASBLK-05800-06055",
               "as_country": "US"
             }
           ],
@@ -115472,7 +115493,7 @@
       "rdap_server": "https://rdap.nic.ms",
       "tld_created": "1997-03-06",
       "tld_updated": [
-        "2024-04-17"
+        "2026-08-05"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -116184,7 +116205,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "1995-10-06",
       "tld_updated": [
-        "2025-02-26"
+        "2026-08-05"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -116767,7 +116788,7 @@
       "whois_server": "whois.nic.mw",
       "tld_created": "1997-01-03",
       "tld_updated": [
-        "2025-08-21"
+        "2026-08-05"
       ],
       "annotations": {
         "country_name_iso": "Malawi",
@@ -117373,7 +117394,7 @@
       "rdap_server": "https://keetmans.omadhina.co.na",
       "tld_created": "1991-05-08",
       "tld_updated": [
-        "2026-07-31"
+        "2026-08-05"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -118410,7 +118431,7 @@
       "registry_url": "http://www.intnet.ne",
       "tld_created": "1996-04-24",
       "tld_updated": [
-        "2023-11-09"
+        "2026-08-05"
       ],
       "annotations": {
         "country_name_iso": "Niger",
@@ -118663,8 +118684,8 @@
           "ipv4": [
             {
               "ip": "192.5.6.30",
-              "asn": 10515,
-              "as_org": "CLT-NIC",
+              "asn": 396549,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ],
@@ -118690,9 +118711,9 @@
           "ipv6": [
             {
               "ip": "2001:503:231d::2:30",
-              "asn": 396654,
-              "as_org": "VRSN-AC50-340",
-              "as_country": "US"
+              "asn": 396690,
+              "as_org": "AS396690",
+              "as_country": "Unknown"
             }
           ]
         },
@@ -118701,8 +118722,8 @@
           "ipv4": [
             {
               "ip": "192.26.92.30",
-              "asn": 10515,
-              "as_org": "CLT-NIC",
+              "asn": 397204,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
@@ -118720,8 +118741,8 @@
           "ipv4": [
             {
               "ip": "192.31.80.30",
-              "asn": 10515,
-              "as_org": "CLT-NIC",
+              "asn": 397204,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
@@ -118739,8 +118760,8 @@
           "ipv4": [
             {
               "ip": "192.12.94.30",
-              "asn": 10515,
-              "as_org": "CLT-NIC",
+              "asn": 397204,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
@@ -118935,7 +118956,7 @@
       "rdap_server": "https://rdap.nic.netbank/",
       "tld_created": "2015-03-26",
       "tld_updated": [
-        "2023-12-05"
+        "2026-08-05"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -120566,7 +120587,7 @@
       "rdap_server": "https://rdap.nic.net.ng",
       "tld_created": "1995-03-15",
       "tld_updated": [
-        "2026-06-02"
+        "2026-08-05"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -120978,7 +120999,7 @@
       "registry_url": "http://www.nic.ni",
       "tld_created": "1989-10-13",
       "tld_updated": [
-        "2026-07-02"
+        "2026-08-05"
       ],
       "annotations": {
         "country_name_iso": "Nicaragua",
@@ -124028,7 +124049,7 @@
       "whois_server": "whois.irs.net.nz",
       "tld_created": "1987-01-19",
       "tld_updated": [
-        "2026-07-23"
+        "2026-08-05"
       ],
       "annotations": {
         "country_name_iso": "New Zealand",
@@ -127695,7 +127716,7 @@
       "rdap_server": "https://rdap.nic.ovh",
       "tld_created": "2014-05-01",
       "tld_updated": [
-        "2026-07-31"
+        "2026-08-05"
       ],
       "annotations": {
         "iana_tech_alias": "AFNIC.fr",
@@ -130035,7 +130056,7 @@
       "registry_url": "http://dot.ph",
       "tld_created": "1990-09-14",
       "tld_updated": [
-        "2024-01-30"
+        "2026-08-05"
       ],
       "annotations": {
         "country_name_iso": "Philippines",
@@ -137425,7 +137446,7 @@
       "registry_url": "http://www.nic.ps",
       "tld_created": "2000-03-22",
       "tld_updated": [
-        "2025-08-22"
+        "2026-08-05"
       ],
       "annotations": {
         "country_name_iso": "Palestine, State of",
@@ -137947,7 +137968,7 @@
       "rdap_server": "https://rdap.radix.host/rdap/",
       "tld_created": "1997-06-12",
       "tld_updated": [
-        "2026-03-31"
+        "2026-08-05"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -144970,7 +144991,7 @@
       "whois_server": "whois.tcinet.ru",
       "tld_created": "1994-04-07",
       "tld_updated": [
-        "2026-07-14"
+        "2026-08-05"
       ],
       "annotations": {
         "country_name_iso": "Russian Federation",
@@ -150673,7 +150694,7 @@
       "rdap_server": "https://rdap.nic.sd",
       "tld_created": "1997-03-06",
       "tld_updated": [
-        "2024-01-29"
+        "2026-08-05"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -153184,7 +153205,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "1997-09-23",
       "tld_updated": [
-        "2023-01-18"
+        "2026-08-05"
       ],
       "annotations": {
         "iana_tech_alias": "Identity Digital",
@@ -162179,7 +162200,7 @@
       "whois_server": "whois.tcinet.ru",
       "tld_created": "1990-09-19",
       "tld_updated": [
-        "2026-07-27"
+        "2026-08-05"
       ],
       "annotations": {
         "country_name_iso": "Soviet Union",
@@ -170117,7 +170138,7 @@
       "whois_server": "whois.dot.tk",
       "tld_created": "1997-11-07",
       "tld_updated": [
-        "2019-02-12"
+        "2026-08-05"
       ],
       "annotations": {
         "country_name_iso": "Tokelau",
@@ -170467,7 +170488,7 @@
       "whois_server": "whois.nic.tm",
       "tld_created": "1997-05-30",
       "tld_updated": [
-        "2025-06-18"
+        "2026-08-05"
       ],
       "annotations": {
         "country_name_iso": "Turkmenistan",
@@ -174721,7 +174742,7 @@
       "rdap_server": "https://rdap.nic.tv/",
       "tld_created": "1996-03-18",
       "tld_updated": [
-        "2025-09-04"
+        "2026-08-05"
       ],
       "annotations": {
         "iana_tech_alias": "GoDaddy Registry",
@@ -175330,7 +175351,7 @@
       "rdap_server": "https://rdap.hostmaster.ua",
       "tld_created": "1992-12-01",
       "tld_updated": [
-        "2024-11-30"
+        "2026-08-05"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -176853,7 +176874,7 @@
       "rdap_server": "https://rdap.nic.us/",
       "tld_created": "1985-02-15",
       "tld_updated": [
-        "2024-08-29"
+        "2026-08-05"
       ],
       "annotations": {
         "iana_sponsor_alias": "GoDaddy Registry",
@@ -196705,7 +196726,7 @@
           "ipv4": [
             {
               "ip": "125.208.34.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -196842,7 +196863,7 @@
           "ipv4": [
             {
               "ip": "125.208.34.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -200823,7 +200844,7 @@
       "whois_server": "whois.nic.dz",
       "tld_created": "2011-02-05",
       "tld_updated": [
-        "2025-10-01"
+        "2026-08-05"
       ],
       "annotations": {
         "country_name_iso": "Algeria",
@@ -201460,7 +201481,7 @@
       "whois_server": "whois.aeda.net.ae",
       "tld_created": "2010-05-05",
       "tld_updated": [
-        "2023-03-07"
+        "2026-08-05"
       ],
       "annotations": {
         "country_name_iso": "United Arab Emirates",
@@ -205482,7 +205503,7 @@
       "whois_server": "whois.tcinet.ru",
       "tld_created": "2010-05-12",
       "tld_updated": [
-        "2026-07-14"
+        "2026-08-05"
       ],
       "annotations": {
         "country_name_iso": "Russian Federation",
@@ -209725,7 +209746,7 @@
       "whois_server": "whois.pnina.ps",
       "tld_created": "2010-08-20",
       "tld_updated": [
-        "2024-02-05"
+        "2026-08-05"
       ],
       "annotations": {
         "country_name_iso": "Palestine, State of",

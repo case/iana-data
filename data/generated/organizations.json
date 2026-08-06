@@ -1,6 +1,6 @@
 {
   "description": "Organizations that play roles for TLDs in the IANA root zone, with a reverse-index of those roles. Consolidated subset: this covers the curated multi-source organizations only; the single-source long tail is not yet included, so absence here does not mean a TLD has no operator.",
-  "publication": "2026-08-01T03:36:29Z",
+  "publication": "2026-08-06T05:43:14Z",
   "sources": [
     "data/source/iana-root.html (IANA)",
     "data/source/icann-gtlds.json (ICANN)",
@@ -5014,6 +5014,7 @@
             "hr",
             "ht",
             "hu",
+            "id",
             "il",
             "in",
             "iq",

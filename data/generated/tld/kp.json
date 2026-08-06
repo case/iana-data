@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-08-06T05:43:13Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -20,7 +20,7 @@
     "registry_url": "http://www.star.co.kp",
     "tld_created": "2007-09-24",
     "tld_updated": [
-      "2026-05-14"
+      "2026-08-05"
     ],
     "annotations": {
       "country_name_iso": "Korea, Democratic People's Republic of",

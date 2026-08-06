@@ -1,6 +1,6 @@
 {
   "description": "Index of per-TLD data files at data/generated/tld/",
-  "publication": "2026-08-05T03:36:57Z",
+  "publication": "2026-08-06T05:43:13Z",
   "count": 1595,
   "tlds": [
     {
@@ -702,7 +702,7 @@
       "delegated": true,
       "tld_created": "1997-06-12",
       "tld_updated": [
-        "2026-06-06"
+        "2026-08-04"
       ]
     },
     {
@@ -720,7 +720,7 @@
       "delegated": true,
       "tld_created": "2007-05-02",
       "tld_updated": [
-        "2025-09-01"
+        "2026-08-04"
       ]
     },
     {
@@ -2574,7 +2574,7 @@
       "delegated": true,
       "tld_created": "2015-03-26",
       "tld_updated": [
-        "2026-05-11"
+        "2026-08-04"
       ]
     },
     {
@@ -5552,7 +5552,7 @@
       "delegated": true,
       "tld_created": "1993-02-27",
       "tld_updated": [
-        "2023-11-22"
+        "2026-08-05"
       ]
     },
     {
@@ -6344,7 +6344,7 @@
       "delegated": true,
       "tld_created": "2007-09-24",
       "tld_updated": [
-        "2026-05-14"
+        "2026-08-05"
       ]
     },
     {
@@ -6434,7 +6434,7 @@
       "delegated": true,
       "tld_created": "1994-09-19",
       "tld_updated": [
-        "2023-01-24"
+        "2026-08-05"
       ]
     },
     {
@@ -6605,7 +6605,7 @@
       "delegated": true,
       "tld_created": "1991-09-03",
       "tld_updated": [
-        "2023-01-18"
+        "2026-08-05"
       ]
     },
     {
@@ -7459,7 +7459,7 @@
       "delegated": true,
       "tld_created": "1985-01-01",
       "tld_updated": [
-        "2026-03-10"
+        "2026-08-05"
       ]
     },
     {
@@ -7783,7 +7783,7 @@
       "delegated": true,
       "tld_created": "1997-03-06",
       "tld_updated": [
-        "2024-04-17"
+        "2026-08-05"
       ]
     },
     {
@@ -7837,7 +7837,7 @@
       "delegated": true,
       "tld_created": "1995-10-06",
       "tld_updated": [
-        "2025-02-26"
+        "2026-08-05"
       ]
     },
     {
@@ -7891,7 +7891,7 @@
       "delegated": true,
       "tld_created": "1997-01-03",
       "tld_updated": [
-        "2025-08-21"
+        "2026-08-05"
       ]
     },
     {
@@ -7927,7 +7927,7 @@
       "delegated": true,
       "tld_created": "1991-05-08",
       "tld_updated": [
-        "2026-07-31"
+        "2026-08-05"
       ]
     },
     {
@@ -8017,7 +8017,7 @@
       "delegated": true,
       "tld_created": "1996-04-24",
       "tld_updated": [
-        "2023-11-09"
+        "2026-08-05"
       ]
     },
     {
@@ -8044,7 +8044,7 @@
       "delegated": true,
       "tld_created": "2015-03-26",
       "tld_updated": [
-        "2023-12-05"
+        "2026-08-05"
       ]
     },
     {
@@ -8152,7 +8152,7 @@
       "delegated": true,
       "tld_created": "1995-03-15",
       "tld_updated": [
-        "2026-06-02"
+        "2026-08-05"
       ]
     },
     {
@@ -8179,7 +8179,7 @@
       "delegated": true,
       "tld_created": "1989-10-13",
       "tld_updated": [
-        "2026-07-02"
+        "2026-08-05"
       ]
     },
     {
@@ -8377,7 +8377,7 @@
       "delegated": true,
       "tld_created": "1987-01-19",
       "tld_updated": [
-        "2026-07-23"
+        "2026-08-05"
       ]
     },
     {
@@ -8629,7 +8629,7 @@
       "delegated": true,
       "tld_created": "2014-05-01",
       "tld_updated": [
-        "2026-07-31"
+        "2026-08-05"
       ]
     },
     {
@@ -8800,7 +8800,7 @@
       "delegated": true,
       "tld_created": "1990-09-14",
       "tld_updated": [
-        "2024-01-30"
+        "2026-08-05"
       ]
     },
     {
@@ -9250,7 +9250,7 @@
       "delegated": true,
       "tld_created": "2000-03-22",
       "tld_updated": [
-        "2025-08-22"
+        "2026-08-05"
       ]
     },
     {
@@ -9277,7 +9277,7 @@
       "delegated": true,
       "tld_created": "1997-06-12",
       "tld_updated": [
-        "2026-03-31"
+        "2026-08-05"
       ]
     },
     {
@@ -9745,7 +9745,7 @@
       "delegated": true,
       "tld_created": "1994-04-07",
       "tld_updated": [
-        "2026-07-14"
+        "2026-08-05"
       ]
     },
     {
@@ -10114,7 +10114,7 @@
       "delegated": true,
       "tld_created": "1997-03-06",
       "tld_updated": [
-        "2024-01-29"
+        "2026-08-05"
       ]
     },
     {
@@ -10267,7 +10267,7 @@
       "delegated": true,
       "tld_created": "1997-09-23",
       "tld_updated": [
-        "2023-01-18"
+        "2026-08-05"
       ]
     },
     {
@@ -10897,7 +10897,7 @@
       "delegated": true,
       "tld_created": "1990-09-19",
       "tld_updated": [
-        "2026-07-27"
+        "2026-08-05"
       ]
     },
     {
@@ -11410,7 +11410,7 @@
       "delegated": true,
       "tld_created": "1997-11-07",
       "tld_updated": [
-        "2019-02-12"
+        "2026-08-05"
       ]
     },
     {
@@ -11437,7 +11437,7 @@
       "delegated": true,
       "tld_created": "1997-05-30",
       "tld_updated": [
-        "2025-06-18"
+        "2026-08-05"
       ]
     },
     {
@@ -11716,7 +11716,7 @@
       "delegated": true,
       "tld_created": "1996-03-18",
       "tld_updated": [
-        "2025-09-04"
+        "2026-08-05"
       ]
     },
     {
@@ -11752,7 +11752,7 @@
       "delegated": true,
       "tld_created": "1992-12-01",
       "tld_updated": [
-        "2024-11-30"
+        "2026-08-05"
       ]
     },
     {
@@ -11860,7 +11860,7 @@
       "delegated": true,
       "tld_created": "1985-02-15",
       "tld_updated": [
-        "2024-08-29"
+        "2026-08-05"
       ]
     },
     {
@@ -13587,7 +13587,7 @@
       "delegated": true,
       "tld_created": "2011-02-05",
       "tld_updated": [
-        "2025-10-01"
+        "2026-08-05"
       ]
     },
     {
@@ -13647,7 +13647,7 @@
       "delegated": true,
       "tld_created": "2010-05-05",
       "tld_updated": [
-        "2023-03-07"
+        "2026-08-05"
       ]
     },
     {
@@ -13967,7 +13967,7 @@
       "delegated": true,
       "tld_created": "2010-05-12",
       "tld_updated": [
-        "2026-07-14"
+        "2026-08-05"
       ]
     },
     {
@@ -14277,7 +14277,7 @@
       "delegated": true,
       "tld_created": "2010-08-20",
       "tld_updated": [
-        "2024-02-05"
+        "2026-08-05"
       ]
     },
     {
