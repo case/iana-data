@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-06T05:43:13Z",
+  "publication": "2026-08-07T04:51:02Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -26628,7 +26628,7 @@
       "rdap_server": "https://rdap.nic.bzh",
       "tld_created": "2014-05-29",
       "tld_updated": [
-        "2026-07-31"
+        "2026-08-06"
       ],
       "annotations": {
         "iana_tech_alias": "AFNIC.fr",
