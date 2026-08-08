@@ -36,6 +36,7 @@ def test_no_circular_imports_with_pydeps():
         capture_output=True,
         text=True,
         timeout=30,
+        check=False,
     )
 
     # pydeps outputs cycle information to stdout/stderr
@@ -72,6 +73,7 @@ def test_pydeps_is_installed():
         [sys.executable, "-m", "pydeps", "--version"],
         capture_output=True,
         text=True,
+        check=False,
     )
 
     assert result.returncode == 0, "pydeps not installed. Run: uv add --dev pydeps"

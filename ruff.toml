@@ -1,0 +1,6 @@
+[lint]
+ignore = [
+    # I/O and parse boundaries deliberately catch Exception, log it, and degrade
+    # to a defined fallback so one bad source file cannot abort a pipeline run.
+    "BLE001",
+]

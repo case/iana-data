@@ -1,15 +1,16 @@
 """Tests for download utilities."""
 
 import shutil
+from datetime import UTC
 from pathlib import Path
 from unittest.mock import Mock, patch
 
 import httpx
 
 from src.utilities.download import (
+    _download_file_impl,
     download_file,
     download_iana_files,
-    _download_file_impl,
 )
 
 FIXTURES_DIR = Path(__file__).parent.parent / "fixtures"
@@ -111,17 +112,18 @@ def test_download_with_304_not_modified(tmp_path):
 
     def mock_get(url, headers=None):
         # Return 304 for RDAP (has etag/last-modified in request)
-        if url == "https://data.iana.org/rdap/dns.json":
-            if headers and (
-                "If-None-Match" in headers or "If-Modified-Since" in headers
-            ):
-                response = Mock(spec=httpx.Response)
-                response.status_code = 304
-                response.headers = {}
-                return response
+        if (
+            url == "https://data.iana.org/rdap/dns.json"
+            and headers
+            and ("If-None-Match" in headers or "If-Modified-Since" in headers)
+        ):
+            response = Mock(spec=httpx.Response)
+            response.status_code = 304
+            response.headers = {}
+            return response
 
         # Shouldn't get here in this test
-        raise Exception(f"Unexpected request to {url}")
+        raise AssertionError(f"Unexpected request to {url}")
 
     with (
         patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
@@ -153,12 +155,10 @@ def test_download_with_fresh_cache(tmp_path):
 
     def mock_get(url, headers=None):
         # RDAP and TLD_LIST should still make requests (but get 304 responses)
-        if url == "https://data.iana.org/rdap/dns.json":
-            response = Mock(spec=httpx.Response)
-            response.status_code = 304
-            response.headers = {}
-            return response
-        elif url == "https://data.iana.org/TLD/tlds-alpha-by-domain.txt":
+        if (
+            url == "https://data.iana.org/rdap/dns.json"
+            or url == "https://data.iana.org/TLD/tlds-alpha-by-domain.txt"
+        ):
             response = Mock(spec=httpx.Response)
             response.status_code = 304
             response.headers = {}
@@ -167,16 +167,16 @@ def test_download_with_fresh_cache(tmp_path):
             # ROOT_ZONE_DB should NOT make a request (cache is fresh)
             nonlocal root_zone_request_made
             root_zone_request_made = True
-            raise Exception(
+            raise AssertionError(
                 "Should not make HTTP request for ROOT_ZONE_DB when cache is fresh"
             )
-        raise Exception(f"Unexpected URL: {url}")
+        raise AssertionError(f"Unexpected URL: {url}")
 
     # Mock "now" to be 1 hour after the fixture timestamp (within 24h cache window)
     # Fixture has last_downloaded: 2025-11-18T16:00:00Z with max_age: 86400
-    from datetime import datetime, timezone
+    from datetime import datetime
 
-    mock_now = datetime(2025, 11, 18, 17, 0, 0, tzinfo=timezone.utc)
+    mock_now = datetime(2025, 11, 18, 17, 0, 0, tzinfo=UTC)
 
     with (
         patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
@@ -225,7 +225,7 @@ def test_download_tld_list_content_unchanged(tmp_path):
             response.content = timestamp_only_content.encode("utf-8")
             response.text = timestamp_only_content
             return response
-        raise Exception(f"Unexpected request to {url}")
+        raise AssertionError(f"Unexpected request to {url}")
 
     with (
         patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
@@ -568,9 +568,9 @@ def test_download_file_impl_cache_fresh_initializes_metadata(tmp_path):
     filepath.write_text("existing cached content")
 
     # Mock datetime for cache freshness check
-    from datetime import datetime, timezone
+    from datetime import datetime
 
-    mock_now = datetime(2025, 11, 18, 17, 0, 0, tzinfo=timezone.utc)
+    mock_now = datetime(2025, 11, 18, 17, 0, 0, tzinfo=UTC)
 
     # Metadata with fresh cache but key not yet in metadata dict
     metadata: dict = {}
@@ -770,7 +770,7 @@ def test_download_tld_pages_handles_exception(tmp_path):
 
     # Mock to raise exception
     def mock_request(client, url, headers=None):
-        raise Exception("Network error")
+        raise RuntimeError("Network error")
 
     from src.utilities.download import download_tld_pages
 
@@ -928,7 +928,7 @@ def test_download_iptoasn_exception(tmp_path):
 
     # Mock exception
     def mock_request(client, url, headers=None):
-        raise Exception("Connection failed")
+        raise RuntimeError("Connection failed")
 
     with (
         patch("src.utilities.download.IPTOASN_DIR", str(iptoasn_dir)),

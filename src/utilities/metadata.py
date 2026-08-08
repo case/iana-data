@@ -2,7 +2,7 @@
 
 import json
 import logging
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any, Final
 
@@ -15,7 +15,7 @@ def utc_timestamp() -> str:
     Returns:
         Timestamp string in format: 2025-11-18T20:23:07Z
     """
-    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    return datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 GENERATED_DIR: Final[str] = "data/generated"

@@ -14,7 +14,7 @@ The decision is to **adopt the new defaults** rather than pin back to the old se
 
 Deviations recorded in `ruff.toml`:
 
-- **`BLE001` ignored repo-wide.** Thirteen sites in `download.py`, `content_changed.py`, `tlds.py`, and `parse/root_db_html.py` catch `Exception` at an I/O or parse boundary, log it, and degrade to a defined fallback (`"error"`, treat-as-changed, omit optional field). That is the pipeline's deliberate resilience convention: one malformed source file must not abort a run. Narrowing all thirteen would mean enumerating exception types for `json.load`, `.decode("idna")`, and httpx, where guessing wrong turns a logged degradation into a crash.
+- **`BLE001` ignored repo-wide.** Twelve sites in `download.py`, `content_changed.py`, `tlds.py`, and `parse/root_db_html.py` catch `Exception` at an I/O or parse boundary, log it, and degrade to a defined fallback (`"error"`, treat-as-changed, omit optional field). That is the pipeline's deliberate resilience convention: one malformed source file must not abort a run. Narrowing all twelve would mean enumerating exception types for `json.load`, `.decode("idna")`, and httpx, where guessing wrong turns a logged degradation into a crash. A thirteenth site was flagged by both `BLE001` and `S110` and is fixed below rather than ignored.
 
 Nothing else is ignored. The remaining 59 violations were fixed, notably:
 

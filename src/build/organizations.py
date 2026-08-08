@@ -5,7 +5,7 @@ OrgResolver the tlds.json annotations use) and writes the seed + roles by slug.
 """
 
 import logging
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 from ..parse.organizations import OrgRecord, OrgResolver
@@ -64,7 +64,7 @@ def build_organizations_json(
 
     output = {
         "description": _DESCRIPTION,
-        "publication": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "publication": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "sources": _SOURCES,
         "orgs": out_orgs,
     }

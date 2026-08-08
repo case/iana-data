@@ -2,8 +2,8 @@
 
 import logging
 import time
+from collections.abc import Callable
 from pathlib import Path
-from typing import Callable
 
 import httpx
 
@@ -17,8 +17,8 @@ from ..config import (
 )
 from .cache import is_cache_fresh, parse_cache_control_max_age
 from .metadata import load_metadata, save_metadata, utc_timestamp
-from .urls import get_tld_file_path, get_tld_page_url
 from .retry import make_request_with_retry
+from .urls import get_tld_file_path, get_tld_page_url
 
 logger = logging.getLogger(__name__)
 

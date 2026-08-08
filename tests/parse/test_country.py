@@ -105,7 +105,7 @@ class TestGetAllCountryMappings:
         tlds = parse_tlds_txt(fixture_path)
         mappings = get_all_country_mappings(tlds)
 
-        for code, name in mappings.items():
+        for name in mappings.values():
             assert isinstance(name, str)
             assert len(name) > 0
 

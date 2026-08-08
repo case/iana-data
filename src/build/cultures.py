@@ -5,7 +5,7 @@ index of TLDs transposed from each TLD's annotations.cultural_affiliation.
 """
 
 import logging
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 from ..utilities.content_changed import write_json_if_changed
@@ -53,7 +53,7 @@ def build_cultures_json(
 
     output = {
         "description": _DESCRIPTION,
-        "publication": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "publication": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "sources": _SOURCES,
         "cultures": cultures,
     }

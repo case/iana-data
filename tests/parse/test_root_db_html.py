@@ -125,16 +125,16 @@ def test_parse_root_db_html_unique_managers():
     delegated = [e for e in entries if e.get("delegated", True)]
 
     # Count unique managers (excluding "Not assigned")
-    unique_managers = set(e["manager"] for e in delegated)
+    unique_managers = {e["manager"] for e in delegated}
     assert len(unique_managers) == 28
 
     # Count unique gTLD managers
     generic_types = ["generic", "sponsored", "infrastructure", "generic-restricted"]
-    gtld_managers = set(e["manager"] for e in delegated if e["type"] in generic_types)
+    gtld_managers = {e["manager"] for e in delegated if e["type"] in generic_types}
     assert len(gtld_managers) == 18
 
     # Count unique ccTLD managers
-    cctld_managers = set(e["manager"] for e in delegated if e["type"] == "country-code")
+    cctld_managers = {e["manager"] for e in delegated if e["type"] == "country-code"}
     assert len(cctld_managers) == 10
 
     # Verify it's counting unique managers, not total TLDs

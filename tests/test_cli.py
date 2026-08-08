@@ -21,9 +21,11 @@ class TestDownloadCommand:
             "ROOT_ZONE_DB": "downloaded",
         }
 
-        with patch("src.cli.download_iana_files", return_value=mock_results):
-            with patch.object(sys, "argv", ["cli", "--download"]):
-                result = main()
+        with (
+            patch("src.cli.download_iana_files", return_value=mock_results),
+            patch.object(sys, "argv", ["cli", "--download"]),
+        ):
+            result = main()
 
         assert result == 0
 
@@ -31,9 +33,11 @@ class TestDownloadCommand:
         """Test downloading a specific source."""
         mock_results = {"TLD_LIST": "downloaded"}
 
-        with patch("src.cli.download_iana_files", return_value=mock_results):
-            with patch.object(sys, "argv", ["cli", "--download", "TLD_LIST"]):
-                result = main()
+        with (
+            patch("src.cli.download_iana_files", return_value=mock_results),
+            patch.object(sys, "argv", ["cli", "--download", "TLD_LIST"]),
+        ):
+            result = main()
 
         assert result == 0
 
@@ -45,9 +49,11 @@ class TestDownloadCommand:
             "ROOT_ZONE_DB": "downloaded",
         }
 
-        with patch("src.cli.download_iana_files", return_value=mock_results):
-            with patch.object(sys, "argv", ["cli", "--download"]):
-                result = main()
+        with (
+            patch("src.cli.download_iana_files", return_value=mock_results),
+            patch.object(sys, "argv", ["cli", "--download"]),
+        ):
+            result = main()
 
         assert result == 1
 

@@ -104,18 +104,16 @@ def test_fetch_coordinates_raises_on_http_error():
     def handler(request):
         return httpx.Response(404, json={})
 
-    with _client(handler) as client:
-        with pytest.raises(ValueError):
-            fpc.fetch_coordinates(client, "Nowhere")
+    with _client(handler) as client, pytest.raises(ValueError):
+        fpc.fetch_coordinates(client, "Nowhere")
 
 
 def test_fetch_coordinates_raises_on_missing_entity():
     def handler(request):
         return httpx.Response(200, json={"entities": {}})
 
-    with _client(handler) as client:
-        with pytest.raises(ValueError):
-            fpc.fetch_coordinates(client, "Nowhere")
+    with _client(handler) as client, pytest.raises(ValueError):
+        fpc.fetch_coordinates(client, "Nowhere")
 
 
 # --- enrich_places ---

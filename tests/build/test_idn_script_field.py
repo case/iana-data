@@ -60,7 +60,7 @@ def test_idn_script_mapping_file_format():
     assert len(mappings) > 0
 
     # Check that all keys are IDN TLDs
-    for tld in mappings.keys():
+    for tld in mappings:
         assert tld.startswith("xn--"), f"Non-IDN TLD in mapping: {tld}"
 
     # Check that all values are strings
