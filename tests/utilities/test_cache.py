@@ -1,6 +1,6 @@
 """Tests for cache utilities."""
 
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 
 from src.utilities.cache import is_cache_fresh, parse_cache_control_max_age
 
@@ -43,7 +43,7 @@ def test_parse_cache_control_max_age_empty_string():
 def test_is_cache_fresh_with_fresh_cache():
     """Test that recently downloaded file with max-age is considered fresh."""
     # Downloaded 1 hour ago, max-age is 6 hours
-    download_time = datetime.now(timezone.utc) - timedelta(hours=1)
+    download_time = datetime.now(UTC) - timedelta(hours=1)
 
     metadata_entry = {
         "cache_data": {
@@ -58,7 +58,7 @@ def test_is_cache_fresh_with_fresh_cache():
 def test_is_cache_fresh_with_stale_cache():
     """Test that old downloaded file is considered stale."""
     # Downloaded 7 hours ago, max-age is 6 hours
-    download_time = datetime.now(timezone.utc) - timedelta(hours=7)
+    download_time = datetime.now(UTC) - timedelta(hours=7)
 
     metadata_entry = {
         "cache_data": {
@@ -84,7 +84,7 @@ def test_is_cache_fresh_missing_last_downloaded():
 def test_is_cache_fresh_missing_cache_data():
     """Test that missing cache_data returns False."""
     metadata_entry = {
-        "last_checked": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "last_checked": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
     }
 
     assert is_cache_fresh(metadata_entry) is False
@@ -94,9 +94,7 @@ def test_is_cache_fresh_missing_cache_max_age():
     """Test that missing cache_max_age returns False."""
     metadata_entry = {
         "cache_data": {
-            "last_downloaded": datetime.now(timezone.utc).strftime(
-                "%Y-%m-%dT%H:%M:%SZ"
-            ),
+            "last_downloaded": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
             "etag": "abc123",
         },
     }
@@ -108,7 +106,7 @@ def test_is_cache_fresh_boundary_condition():
     """Test cache freshness at exact max-age boundary."""
     # Downloaded exactly max-age seconds ago
     max_age = 3600
-    download_time = datetime.now(timezone.utc) - timedelta(seconds=max_age)
+    download_time = datetime.now(UTC) - timedelta(seconds=max_age)
 
     metadata_entry = {
         "cache_data": {
@@ -124,7 +122,7 @@ def test_is_cache_fresh_boundary_condition():
 def test_is_cache_fresh_short_max_age():
     """Test with very short max-age like tlds.txt (205 seconds)."""
     # Downloaded yesterday, max-age is 205 seconds (definitely stale)
-    download_time = datetime.now(timezone.utc) - timedelta(days=1)
+    download_time = datetime.now(UTC) - timedelta(days=1)
 
     metadata_entry = {
         "cache_data": {

@@ -77,6 +77,6 @@ def test_parse_supplemental_cctld_rdap_default_path():
     # If file exists, should have actual data
     if rdap_lookup:
         # Check structure of first entry
-        first_tld = list(rdap_lookup.keys())[0]
+        first_tld = next(iter(rdap_lookup.keys()))
         assert "rdap_server" in rdap_lookup[first_tld]
         assert "source" in rdap_lookup[first_tld]

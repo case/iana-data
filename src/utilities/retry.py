@@ -18,8 +18,6 @@ logger = logging.getLogger(__name__)
 class ServerError(Exception):
     """Raised when server returns 5xx error, triggering retry."""
 
-    pass
-
 
 def make_request_with_retry(
     client: httpx.Client,

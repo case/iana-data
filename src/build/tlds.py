@@ -4,7 +4,7 @@ import gzip
 import json
 import logging
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
@@ -199,7 +199,7 @@ def build_tlds_json(
 
     # Build-time stamp passed to every write; write_json_if_changed skips
     # unchanged artifacts, so per-file publication reads as "last changed".
-    publication = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    publication = datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
     sources = {
         "iana_root_db": IANA_URLS["ROOT_ZONE_DB"],
         "iana_rdap": IANA_URLS["RDAP_BOOTSTRAP"],
@@ -458,9 +458,8 @@ def _build_tld_entry(
         try:
             tld_unicode = tld.encode("ascii").decode("idna")
             entry["tld_unicode"] = tld_unicode
-        except Exception:
-            # If decoding fails, skip unicode field
-            pass
+        except UnicodeError as e:
+            logger.warning("Could not decode IDN %s, omitting tld_unicode: %s", tld, e)
 
     # Add tld_script for IDNs
     if tld in idn_script_mapping:

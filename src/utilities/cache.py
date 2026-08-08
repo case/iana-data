@@ -1,7 +1,7 @@
 """Cache utilities for HTTP responses."""
 
 import re
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import Any
 
 
@@ -43,6 +43,6 @@ def is_cache_fresh(metadata_entry: dict[str, Any]) -> bool:
     max_age = int(cache_data["cache_max_age"])
 
     # Calculate age in seconds
-    age = (datetime.now(timezone.utc) - download_time).total_seconds()
+    age = (datetime.now(UTC) - download_time).total_seconds()
 
     return age < max_age

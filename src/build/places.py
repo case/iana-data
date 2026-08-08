@@ -10,7 +10,7 @@ countries that have no boundary polygon (e.g. Bouvet), so consumers can pin them
 """
 
 import logging
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 import pycountry
@@ -89,7 +89,7 @@ def build_places_json(
 
     output = {
         "description": _DESCRIPTION,
-        "publication": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "publication": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "sources": _SOURCES,
         "places": records,
     }

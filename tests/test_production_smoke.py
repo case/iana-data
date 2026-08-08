@@ -27,12 +27,13 @@ def test_module_can_be_imported():
 
     Circular imports only manifest during package-level imports.
     """
-    # This will fail if there's a circular import in __init__.py files
-    import src  # noqa: F401
-    import src.parse  # noqa: F401
+    # The imports are the assertion: a circular import in __init__.py raises here.
+    # Each statement rebinds `src`, so only the final one is what F401 sees.
+    import src
+    import src.analyze
+    import src.build
+    import src.parse
     import src.utilities  # noqa: F401
-    import src.analyze  # noqa: F401
-    import src.build  # noqa: F401
 
 
 def test_cli_module_can_run():
@@ -48,6 +49,7 @@ def test_cli_module_can_run():
         capture_output=True,
         text=True,
         timeout=10,
+        check=False,
     )
 
     assert result.returncode == 0, f"CLI failed to run: {result.stderr}"
@@ -66,6 +68,7 @@ def test_cli_download_flag_works():
         capture_output=True,
         text=True,
         timeout=10,
+        check=False,
     )
 
     # Should fail gracefully with error about unknown source, not crash
@@ -89,6 +92,7 @@ def test_cli_download_tld_pages_flag_works():
         capture_output=True,
         text=True,
         timeout=10,
+        check=False,
     )
 
     # Should not crash with import errors
@@ -104,6 +108,7 @@ def test_cli_analyze_flag_works():
         capture_output=True,
         text=True,
         timeout=10,
+        check=False,
     )
 
     # Should not crash with import errors
@@ -167,6 +172,7 @@ def test_all_cli_subcommands_have_help():
         capture_output=True,
         text=True,
         timeout=10,
+        check=False,
     )
 
     assert result.returncode == 0

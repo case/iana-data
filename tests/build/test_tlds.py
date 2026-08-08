@@ -450,7 +450,7 @@ def test_build_tlds_json_gtld_no_country_name(shared_build):
 
     for gtld in test_gtlds:
         if gtld in gtld_tlds:
-            entry = [e for e in gtlds if e["tld"] == gtld][0]
+            entry = next(e for e in gtlds if e["tld"] == gtld)
             if "annotations" in entry:
                 assert "country_name_iso" not in entry["annotations"]
 

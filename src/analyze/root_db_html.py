@@ -51,23 +51,23 @@ def analyze_root_db_html(filepath: Path) -> int:
         delegated_idn_by_type[entry["type"]] += 1
 
     # Count unique managers for delegated TLDs
-    unique_managers = set(entry["manager"] for entry in delegated_entries)
+    unique_managers = {entry["manager"] for entry in delegated_entries}
     total_unique_managers = len(unique_managers)
 
     # Count unique gTLD managers (generic types)
-    gtld_managers = set(
+    gtld_managers = {
         entry["manager"]
         for entry in delegated_entries
         if entry["type"] in generic_types
-    )
+    }
     total_unique_gtld_managers = len(gtld_managers)
 
     # Count unique ccTLD managers (country-code)
-    cctld_managers = set(
+    cctld_managers = {
         entry["manager"]
         for entry in delegated_entries
         if entry["type"] == "country-code"
-    )
+    }
     total_unique_cctld_managers = len(cctld_managers)
 
     # Report results

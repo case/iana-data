@@ -6,7 +6,7 @@ display_name is an editorial layer authored here.
 """
 
 import logging
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 from ..config import REGISTRY_AGREEMENT_TYPE_MAPPING
@@ -64,7 +64,7 @@ def build_agreements_json(tlds: list[dict], output_path: Path) -> tuple[bool, st
 
     output = {
         "description": _DESCRIPTION,
-        "publication": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "publication": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "sources": _SOURCES,
         "agreements": agreements,
     }
