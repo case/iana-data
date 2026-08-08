@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-07T04:51:02Z",
+  "publication": "2026-08-08T03:55:11Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -157355,7 +157355,7 @@
       "rdap_server": "https://rdap.nic.sncf",
       "tld_created": "2015-05-08",
       "tld_updated": [
-        "2024-09-11"
+        "2026-08-07"
       ],
       "annotations": {
         "iana_tech_alias": "AFNIC.fr",
@@ -177064,7 +177064,7 @@
       "whois_server": "whois.nic.org.uy",
       "tld_created": "1990-09-10",
       "tld_updated": [
-        "2022-12-08"
+        "2026-08-07"
       ],
       "annotations": {
         "country_name_iso": "Uruguay",
@@ -212382,7 +212382,7 @@
         "iana": {
           "sponsor": "Industria de Diseño Textil, S.A. (INDITEX, S.A.)",
           "admin": "Industria de Diseño Textil, S.A.",
-          "tech": "Afilias"
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "Industria de Diseño Textil, S.A. (INDITEX, S.A.)",
@@ -212397,11 +212397,10 @@
         }
       },
       "registry_url": "http://www.zara.com",
-      "whois_server": "whois.nic.zara",
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-09-10",
       "tld_updated": [
-        "2023-08-04"
+        "2026-08-07"
       ],
       "annotations": {
         "iana_tech_alias": "Identity Digital",
