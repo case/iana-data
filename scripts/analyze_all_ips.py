@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Analyze all nameserver IP addresses from tlds.json.
 
 This script aggregates all IPs to understand:
@@ -7,6 +6,7 @@ This script aggregates all IPs to understand:
 - Preparation for ASN lookup analysis
 """
 
+import ipaddress
 import json
 from collections import Counter
 from pathlib import Path
@@ -110,21 +110,20 @@ def main() -> None:
 
     # Group IPv6 by /48 prefix (common allocation size)
     ipv6_prefixes = Counter()
+    malformed_ipv6 = 0
     for ip in unique_ipv6:
-        # Expand IPv6 to full form for prefix extraction
         try:
-            import ipaddress
-
             addr = ipaddress.IPv6Address(ip)
-            # Get first 48 bits (3 groups of 16 bits)
-            exploded = addr.exploded
-            parts = exploded.split(":")
-            prefix = f"{parts[0]}:{parts[1]}:{parts[2]}::/48"
-            ipv6_prefixes[prefix] += 1
-        except Exception:
-            pass
+        except ValueError:
+            malformed_ipv6 += 1
+            continue
+        # First 48 bits: the leading 3 groups of the exploded form.
+        parts = addr.exploded.split(":")
+        ipv6_prefixes[f"{parts[0]}:{parts[1]}:{parts[2]}::/48"] += 1
 
     print(f"\nUnique /48 prefixes (IPv6): {len(ipv6_prefixes):,}")
+    if malformed_ipv6:
+        print(f"Skipped {malformed_ipv6:,} unparseable IPv6 address(es)")
     print("Most common /48 prefixes:")
     for prefix, count in ipv6_prefixes.most_common(10):
         print(f"  {count:4d} IPs in {prefix}")

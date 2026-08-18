@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Generate IDN script mappings.
 
 Creates data/generated/idn-script-mapping.json with mappings of IDN TLDs to their scripts.
@@ -19,10 +18,8 @@ from src.parse.root_db_html import parse_root_db_html
 
 try:
     import pycountry
-
-    HAS_PYCOUNTRY = True
 except ImportError:
-    HAS_PYCOUNTRY = False
+    pycountry = None
     print("Warning: pycountry not available, using ISO codes instead of names")
 
 
@@ -62,7 +59,7 @@ UNICODE_PREFIX_TO_ISO15924 = {
 
 def get_canonical_script_name(iso_code: str) -> str:
     """Get canonical script name from ISO 15924 code."""
-    if not HAS_PYCOUNTRY:
+    if pycountry is None:
         return iso_code
 
     try:
@@ -185,4 +182,4 @@ def main():
 
 
 if __name__ == "__main__":
-    exit(main())
+    sys.exit(main())

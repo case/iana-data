@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Analyze ICANN Registry Agreement Table CSV.
 
 Provides insights into the registry agreement data including:
@@ -34,7 +33,9 @@ def parse_date(date_str: str) -> datetime | None:
     if not date_str:
         return None
     try:
-        return datetime.strptime(date_str, "%d %b %Y")
+        # Source CSV carries date-only values with no zone. The result feeds year
+        # counts and display only, never zone-sensitive arithmetic.
+        return datetime.strptime(date_str, "%d %b %Y")  # noqa: DTZ007
     except ValueError:
         return None
 
@@ -49,11 +50,8 @@ def main() -> int:
         return 1
 
     # Read and parse CSV
-    rows = []
     with open(csv_path, "r", encoding="utf-8-sig") as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            rows.append(row)
+        rows = list(csv.DictReader(f))
 
     print("ICANN Registry Agreement Table Analysis")
     print("=" * 50)

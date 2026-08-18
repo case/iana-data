@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Analyze tlds.json file size breakdown by field."""
 
 import json

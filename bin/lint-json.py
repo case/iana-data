@@ -12,7 +12,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from src.utilities.content_changed import (  # noqa: E402
+from src.utilities.content_changed import (
     canonicalize_json_file,
     is_json_canonical,
 )

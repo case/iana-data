@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Download ICANN Registry Agreement Table CSV.
 
 Downloads the registry agreement table from ICANN and saves it to the source directory.

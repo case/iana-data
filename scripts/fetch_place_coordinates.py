@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Fetch geo-place coordinates from Wikidata into data/manual/places.json and
 data/manual/country-coordinates.json, looking up each record's P625 coordinate via
 its Wikipedia article. Idempotent (--refresh forces); run on demand, not the build.
@@ -15,10 +14,10 @@ import httpx
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from src.config import MANUAL_DIR, MANUAL_FILES  # noqa: E402
-from src.utilities.content_changed import write_json_if_changed  # noqa: E402
-from src.utilities.file_io import read_json_file  # noqa: E402
-from src.utilities.retry import ServerError, make_request_with_retry  # noqa: E402
+from src.config import MANUAL_DIR, MANUAL_FILES
+from src.utilities.content_changed import write_json_if_changed
+from src.utilities.file_io import read_json_file
+from src.utilities.retry import ServerError, make_request_with_retry
 
 logger = logging.getLogger(__name__)
 

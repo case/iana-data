@@ -2,9 +2,11 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
+# Default to the whole repo so bin/lint, CI, and the pre-commit hook agree on
+# scope. Why: docs/memory/log/2026-08-18-lint-scope.md
 paths=("$@")
 if [ ${#paths[@]} -eq 0 ]; then
-  paths=(src/ tests/)
+  paths=(.)
 fi
 
 # Run all linters even if an earlier one fails, so the developer

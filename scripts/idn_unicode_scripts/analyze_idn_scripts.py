@@ -1,20 +1,18 @@
-#!/usr/bin/env python3
 """Analyze Unicode scripts used in IDN TLDs.
 
 Uses unicodedata (stdlib) to decode IDN TLDs and identify scripts,
 with pycountry to provide canonical ISO 15924 script names.
 """
 
+import sys
 import unicodedata
 from collections import Counter, defaultdict
 from pathlib import Path
 
 try:
     import pycountry
-
-    HAS_PYCOUNTRY = True
 except ImportError:
-    HAS_PYCOUNTRY = False
+    pycountry = None
 
 
 # Mapping from Unicode character name prefixes to ISO 15924 script codes
@@ -60,7 +58,7 @@ def get_canonical_script_name(iso_code: str) -> str:
     Returns:
         Canonical script name (e.g., "Greek", "Arabic")
     """
-    if not HAS_PYCOUNTRY:
+    if pycountry is None:
         return iso_code
 
     try:
@@ -267,4 +265,4 @@ def main():
 
 
 if __name__ == "__main__":
-    exit(main())
+    sys.exit(main())

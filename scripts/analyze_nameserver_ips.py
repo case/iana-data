@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Analyze nameserver IP address data from TLD HTML pages.
 
 This script scans all TLD pages to understand the IP address landscape:

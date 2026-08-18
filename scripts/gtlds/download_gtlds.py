@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Download the ICANN gTLDs JSON Report.
 
 Downloads the gTLDs report from ICANN and saves it to the source directory.

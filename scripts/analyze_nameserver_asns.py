@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Analyze nameserver ASN data from tlds.json.
 
 This script analyzes ASN (Autonomous System Number) data across all TLDs to understand:
@@ -219,7 +218,7 @@ def analyze_geographic_distribution(profiles: list[TLDASNProfile]) -> None:
     for profile in profiles:
         if not profile.delegated:
             continue
-        for asn, info in profile.asn_details.items():
+        for info in profile.asn_details.values():
             country = info.country or "Unknown"
             country_ip_count[country] += 1  # Count ASN presence
             country_tld_count[country].add(profile.tld)
