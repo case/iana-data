@@ -21,6 +21,8 @@ For AS36623: ARIN RDAP `https://rdap.arin.net/registry/autnum/36623` returns `na
 
 Only `HGTLD` (AS36623) is present in the data, so only `HGTLD` was added to the VeriSign record's `source_names.asn` (joining VERISIGN-AS, VRSN-AC28, VRSN-AC50-340; VGRS-AC25 also resolves via the `aliases` cross-bucket fallback in `src/parse/organizations.py`). This raised friendly-name coverage 83.0% -> 83.5%. In the current iptoasn snapshot all 18 of HGTLD's TLDs (`.com`, `.net`, `.edu`, `.name`, `.cc`, the `.verisign` brand TLD, and 11 IDN gTLDs) sit under AS36623/`HGTLD`.
 
+**Update 2026-08-18**: `HGTLD` has since left the iptoasn table entirely and is retired to `aliases`. See [2026-08-18 hgtld-retired](2026-08-18-hgtld-retired.md).
+
 ## Why not pre-load the sibling labels
 
 `test_source_names_appear_in_raw_data` requires every `source_names.asn` string to match a raw value in the built `tlds.json` character-for-character. The sibling labels (AGTLD, GGTLD, KGTLD, AROOT, ...) carry no TLD nameserver in our data, so adding them speculatively fails the test. If a future snapshot routes a TLD nameserver IP into another ASN in this block, it will surface as the next unnamed string under its own `[letter]GTLD`/`AROOT` label - recognize it as Verisign and fold it in then. (iptoasn IP->ASN assignments are not perfectly stable over time, so which sibling a given Verisign IP carries can shift between snapshots; always map against a current iptoasn.) See [2026-06-07 as_org transit-backbone operator mapping](2026-06-07-asn-transit-operator.md) for the related one-org-many-strings pattern.

@@ -1044,12 +1044,12 @@
         "VeriSign, Inc."
       ],
       "asn": [
-        "HGTLD",
         "VRSN-AC28",
         "VRSN-AC50-340"
       ]
     },
     "aliases": [
+      "HGTLD",
       "VERISIGN-AS",
       "VGRS-AC25"
     ],
