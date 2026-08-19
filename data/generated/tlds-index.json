@@ -1,6 +1,6 @@
 {
   "description": "Index of per-TLD data files at data/generated/tld/",
-  "publication": "2026-08-08T03:55:11Z",
+  "publication": "2026-08-19T03:21:21Z",
   "count": 1595,
   "tlds": [
     {
@@ -1449,7 +1449,7 @@
       "delegated": true,
       "tld_created": "1991-02-26",
       "tld_updated": [
-        "2024-05-23"
+        "2026-08-17"
       ]
     },
     {
@@ -4094,7 +4094,7 @@
       "delegated": true,
       "tld_created": "1992-06-03",
       "tld_updated": [
-        "2025-08-25"
+        "2026-08-17"
       ]
     },
     {
@@ -6056,7 +6056,7 @@
       "delegated": true,
       "tld_created": "1994-11-23",
       "tld_updated": [
-        "2026-02-24"
+        "2026-08-17"
       ]
     },
     {
@@ -8377,7 +8377,7 @@
       "delegated": true,
       "tld_created": "1987-01-19",
       "tld_updated": [
-        "2026-08-05"
+        "2026-08-14"
       ]
     },
     {
@@ -10411,7 +10411,7 @@
       "delegated": true,
       "tld_created": "2016-02-29",
       "tld_updated": [
-        "2026-07-06"
+        "2026-08-13"
       ]
     },
     {
@@ -10537,7 +10537,7 @@
       "delegated": true,
       "tld_created": "1993-03-19",
       "tld_updated": [
-        "2026-08-04"
+        "2026-08-14"
       ]
     },
     {
@@ -10546,7 +10546,7 @@
       "delegated": true,
       "tld_created": "2015-05-08",
       "tld_updated": [
-        "2026-08-07"
+        "2026-08-18"
       ]
     },
     {
@@ -12372,7 +12372,7 @@
       "delegated": true,
       "tld_created": "2016-02-29",
       "tld_updated": [
-        "2026-07-06"
+        "2026-08-13"
       ]
     },
     {
@@ -12997,7 +12997,7 @@
       "delegated": true,
       "tld_created": "2016-02-29",
       "tld_updated": [
-        "2026-07-06"
+        "2026-08-13"
       ]
     },
     {

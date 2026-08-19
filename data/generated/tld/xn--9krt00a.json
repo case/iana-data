@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-05T03:36:57Z",
+  "publication": "2026-08-19T03:21:21Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,7 +16,7 @@
       "iana": {
         "sponsor": "Sina Corporation",
         "admin": "Sina Corporation",
-        "tech": "Afilias"
+        "tech": "China Internet Network Information Center (CNNIC)"
       },
       "icann": {
         "registry_operator": "Sina Corporation",
@@ -35,11 +35,11 @@
     "rdap_server": "https://rdap.ngtld.cn/",
     "tld_created": "2016-02-29",
     "tld_updated": [
-      "2026-07-06"
+      "2026-08-13"
     ],
     "annotations": {
-      "iana_tech_alias": "Identity Digital",
-      "iana_tech_slug": "identity-digital",
+      "iana_tech_alias": "CNNIC.cn",
+      "iana_tech_slug": "cnnic",
       "rdap_source": "IANA",
       "registry_agreement_types": [
         "base",

@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-08T03:55:11Z",
+  "publication": "2026-08-19T03:21:21Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -21640,16 +21640,16 @@
       "type": "cctld",
       "orgs": {
         "iana": {
-          "sponsor": "Agencia para el Desarrollo de la Información de la Sociedad en Bolivia",
-          "admin": "Agencia para el Desarrollo de la Información de la Sociedad en Bolivia",
-          "tech": "Agencia para el Desarrollo de la Información de la Sociedad en Bolivia"
+          "sponsor": "Agencia de Gobierno Electrónico y Tecnologías de Información y Comunicación",
+          "admin": "Agencia de Gobierno Electrónico y Tecnologías de Información y Comunicación",
+          "tech": "Agencia de Gobierno Electrónico y Tecnologías de Información y Comunicación"
         }
       },
       "registry_url": "http://www.nic.bo",
       "whois_server": "whois.nic.bo",
       "tld_created": "1991-02-26",
       "tld_updated": [
-        "2024-05-23"
+        "2026-08-17"
       ],
       "annotations": {
         "country_name_iso": "Bolivia, Plurinational State of",
@@ -38617,16 +38617,16 @@
           "ipv4": [
             {
               "ip": "192.48.79.30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397200,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:502:7094::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397200,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ]
@@ -38636,16 +38636,16 @@
           "ipv4": [
             {
               "ip": "192.52.178.30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397200,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:503:d2d::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397200,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ]
@@ -38655,16 +38655,16 @@
           "ipv4": [
             {
               "ip": "192.41.162.30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397200,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:500:d937::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397200,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ]
@@ -38674,16 +38674,16 @@
           "ipv4": [
             {
               "ip": "192.55.83.30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397200,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:501:b1f9::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397200,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ]
@@ -53536,16 +53536,16 @@
           "ipv4": [
             {
               "ip": "192.48.79.30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397200,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:502:7094::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397200,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ]
@@ -53555,16 +53555,16 @@
           "ipv4": [
             {
               "ip": "192.52.178.30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397200,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:503:d2d::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397200,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ]
@@ -53574,16 +53574,16 @@
           "ipv4": [
             {
               "ip": "192.41.162.30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397200,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:500:d937::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397200,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ]
@@ -53593,16 +53593,16 @@
           "ipv4": [
             {
               "ip": "192.55.83.30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397200,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:501:b1f9::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397200,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ]
@@ -62184,7 +62184,7 @@
       "rdap_server": "https://www.rdap.fj",
       "tld_created": "1992-06-03",
       "tld_updated": [
-        "2025-08-25"
+        "2026-08-17"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -91061,9 +91061,10 @@
         }
       },
       "registry_url": "https://www.dns.jo",
+      "whois_server": "whois.nic.net.jo",
       "tld_created": "1994-11-23",
       "tld_updated": [
-        "2026-02-24"
+        "2026-08-17"
       ],
       "annotations": {
         "country_name_iso": "Jordan",
@@ -118855,16 +118856,16 @@
           "ipv4": [
             {
               "ip": "192.48.79.30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397200,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:502:7094::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397200,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ]
@@ -118874,16 +118875,16 @@
           "ipv4": [
             {
               "ip": "192.52.178.30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397200,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:503:d2d::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397200,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ]
@@ -118893,16 +118894,16 @@
           "ipv4": [
             {
               "ip": "192.41.162.30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397200,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:500:d937::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397200,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ]
@@ -118912,16 +118913,16 @@
           "ipv4": [
             {
               "ip": "192.55.83.30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397200,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:501:b1f9::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 397200,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ]
@@ -124049,7 +124050,7 @@
       "whois_server": "whois.irs.net.nz",
       "tld_created": "1987-01-19",
       "tld_updated": [
-        "2026-08-05"
+        "2026-08-14"
       ],
       "annotations": {
         "country_name_iso": "New Zealand",
@@ -124134,8 +124135,8 @@
           "ipv6": [
             {
               "ip": "2001:dce:d454::53",
-              "asn": 45285,
-              "as_org": "NZ-AS-NS2-AP ASN for anycast peering",
+              "asn": 38064,
+              "as_org": "NZ-AS-NS1-AP ASN for anycast peering of",
               "as_country": "NZ"
             }
           ]
@@ -155272,7 +155273,7 @@
         "iana": {
           "sponsor": "Sina Corporation",
           "admin": "Sina Corporation",
-          "tech": "Afilias"
+          "tech": "China Internet Network Information Center (CNNIC)"
         },
         "icann": {
           "registry_operator": "Sina Corporation",
@@ -155291,11 +155292,11 @@
       "rdap_server": "https://rdap.ngtld.cn/",
       "tld_created": "2016-02-29",
       "tld_updated": [
-        "2026-07-06"
+        "2026-08-13"
       ],
       "annotations": {
-        "iana_tech_alias": "Identity Digital",
-        "iana_tech_slug": "identity-digital",
+        "iana_tech_alias": "CNNIC.cn",
+        "iana_tech_slug": "cnnic",
         "rdap_source": "IANA",
         "registry_agreement_types": [
           "base",
@@ -157233,7 +157234,7 @@
       "rdap_server": "https://rdap.nic.sn/whois43/",
       "tld_created": "1993-03-19",
       "tld_updated": [
-        "2026-08-04"
+        "2026-08-14"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -157241,11 +157242,13 @@
         "as_org_aliases": [
           "AFNIC.fr",
           "Amazon",
+          "Packet Clearing House",
           "RIPE NCC"
         ],
         "as_org_slugs": [
           "afnic",
           "amazon",
+          "packet-clearing-house",
           "ripe-ncc"
         ],
         "geographic_scope": "country"
@@ -157262,6 +157265,25 @@
             }
           ],
           "ipv6": []
+        },
+        {
+          "hostname": "ns-pch.nic.sn",
+          "ipv4": [
+            {
+              "ip": "204.61.216.159",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2001:500:14:6159:ad::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
         },
         {
           "hostname": "ns-sn.nic.fr",
@@ -157355,7 +157377,7 @@
       "rdap_server": "https://rdap.nic.sncf",
       "tld_created": "2015-05-08",
       "tld_updated": [
-        "2026-08-07"
+        "2026-08-18"
       ],
       "annotations": {
         "iana_tech_alias": "AFNIC.fr",
@@ -159713,8 +159735,8 @@
           "ipv4": [
             {
               "ip": "168.195.219.210",
-              "asn": 27775,
-              "as_org": "Telecommunicationcompany Suriname - TeleSur",
+              "asn": 263799,
+              "as_org": "CARIBBEAN COMMUNICATION SERVICES",
               "as_country": "SR"
             }
           ],
@@ -159732,8 +159754,8 @@
           "ipv4": [
             {
               "ip": "168.195.216.214",
-              "asn": 27775,
-              "as_org": "Telecommunicationcompany Suriname - TeleSur",
+              "asn": 263799,
+              "as_org": "CARIBBEAN COMMUNICATION SERVICES",
               "as_country": "SR"
             }
           ],
@@ -184939,7 +184961,7 @@
         "iana": {
           "sponsor": "Sina Corporation",
           "admin": "Sina Corporation",
-          "tech": "Afilias"
+          "tech": "China Internet Network Information Center (CNNIC)"
         },
         "icann": {
           "registry_operator": "Sina Corporation",
@@ -184958,11 +184980,11 @@
       "rdap_server": "https://rdap.ngtld.cn/",
       "tld_created": "2016-02-29",
       "tld_updated": [
-        "2026-07-06"
+        "2026-08-13"
       ],
       "annotations": {
-        "iana_tech_alias": "Identity Digital",
-        "iana_tech_slug": "identity-digital",
+        "iana_tech_alias": "CNNIC.cn",
+        "iana_tech_slug": "cnnic",
         "rdap_source": "IANA",
         "registry_agreement_types": [
           "base",
@@ -193418,7 +193440,7 @@
         "iana": {
           "sponsor": "Sina Corporation",
           "admin": "Sina Corporation",
-          "tech": "Afilias"
+          "tech": "China Internet Network Information Center (CNNIC)"
         },
         "icann": {
           "registry_operator": "Sina Corporation",
@@ -193437,11 +193459,11 @@
       "rdap_server": "https://rdap.ngtld.cn/",
       "tld_created": "2016-02-29",
       "tld_updated": [
-        "2026-07-06"
+        "2026-08-13"
       ],
       "annotations": {
-        "iana_tech_alias": "Identity Digital",
-        "iana_tech_slug": "identity-digital",
+        "iana_tech_alias": "CNNIC.cn",
+        "iana_tech_slug": "cnnic",
         "rdap_source": "IANA",
         "registry_agreement_types": [
           "base",

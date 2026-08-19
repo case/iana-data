@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-06T05:43:13Z",
+  "publication": "2026-08-19T03:21:21Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -210,16 +210,16 @@
         "ipv4": [
           {
             "ip": "192.48.79.30",
-            "asn": 36623,
-            "as_org": "HGTLD",
+            "asn": 397200,
+            "as_org": "VRSN-AC28",
             "as_country": "US"
           }
         ],
         "ipv6": [
           {
             "ip": "2001:502:7094::30",
-            "asn": 36623,
-            "as_org": "HGTLD",
+            "asn": 397200,
+            "as_org": "VRSN-AC28",
             "as_country": "US"
           }
         ]
@@ -229,16 +229,16 @@
         "ipv4": [
           {
             "ip": "192.52.178.30",
-            "asn": 36623,
-            "as_org": "HGTLD",
+            "asn": 397200,
+            "as_org": "VRSN-AC28",
             "as_country": "US"
           }
         ],
         "ipv6": [
           {
             "ip": "2001:503:d2d::30",
-            "asn": 36623,
-            "as_org": "HGTLD",
+            "asn": 397200,
+            "as_org": "VRSN-AC28",
             "as_country": "US"
           }
         ]
@@ -248,16 +248,16 @@
         "ipv4": [
           {
             "ip": "192.41.162.30",
-            "asn": 36623,
-            "as_org": "HGTLD",
+            "asn": 397200,
+            "as_org": "VRSN-AC28",
             "as_country": "US"
           }
         ],
         "ipv6": [
           {
             "ip": "2001:500:d937::30",
-            "asn": 36623,
-            "as_org": "HGTLD",
+            "asn": 397200,
+            "as_org": "VRSN-AC28",
             "as_country": "US"
           }
         ]
@@ -267,16 +267,16 @@
         "ipv4": [
           {
             "ip": "192.55.83.30",
-            "asn": 36623,
-            "as_org": "HGTLD",
+            "asn": 397200,
+            "as_org": "VRSN-AC28",
             "as_country": "US"
           }
         ],
         "ipv6": [
           {
             "ip": "2001:501:b1f9::30",
-            "asn": 36623,
-            "as_org": "HGTLD",
+            "asn": 397200,
+            "as_org": "VRSN-AC28",
             "as_country": "US"
           }
         ]

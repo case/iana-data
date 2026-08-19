@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-06T05:43:13Z",
+  "publication": "2026-08-19T03:21:21Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -21,7 +21,7 @@
     "whois_server": "whois.irs.net.nz",
     "tld_created": "1987-01-19",
     "tld_updated": [
-      "2026-08-05"
+      "2026-08-14"
     ],
     "annotations": {
       "country_name_iso": "New Zealand",
@@ -106,8 +106,8 @@
         "ipv6": [
           {
             "ip": "2001:dce:d454::53",
-            "asn": 45285,
-            "as_org": "NZ-AS-NS2-AP ASN for anycast peering",
+            "asn": 38064,
+            "as_org": "NZ-AS-NS1-AP ASN for anycast peering of",
             "as_country": "NZ"
           }
         ]

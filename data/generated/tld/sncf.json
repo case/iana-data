@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-08T03:55:11Z",
+  "publication": "2026-08-19T03:21:21Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -33,7 +33,7 @@
     "rdap_server": "https://rdap.nic.sncf",
     "tld_created": "2015-05-08",
     "tld_updated": [
-      "2026-08-07"
+      "2026-08-18"
     ],
     "annotations": {
       "iana_tech_alias": "AFNIC.fr",

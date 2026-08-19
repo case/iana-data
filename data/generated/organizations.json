@@ -1,6 +1,6 @@
 {
   "description": "Organizations that play roles for TLDs in the IANA root zone, with a reverse-index of those roles. Consolidated subset: this covers the curated multi-source organizations only; the single-source long tail is not yet included, so absence here does not mean a TLD has no operator.",
-  "publication": "2026-08-06T05:43:14Z",
+  "publication": "2026-08-19T03:21:21Z",
   "sources": [
     "data/source/iana-root.html (IANA)",
     "data/source/icann-gtlds.json (ICANN)",
@@ -875,7 +875,10 @@
           ],
           "tech": [
             "cn",
+            "sina",
+            "weibo",
             "xn--55qx5d",
+            "xn--9krt00a",
             "xn--fiqs8s",
             "xn--fiqz9s",
             "xn--io0a7i"
@@ -3192,7 +3195,6 @@
             "shoes",
             "shopping",
             "show",
-            "sina",
             "singles",
             "ski",
             "soccer",
@@ -3266,7 +3268,6 @@
             "watch",
             "watches",
             "weber",
-            "weibo",
             "weir",
             "wine",
             "works",
@@ -3277,7 +3278,6 @@
             "xn--5su34j936bgsg",
             "xn--5tzm5g",
             "xn--6frz82g",
-            "xn--9krt00a",
             "xn--b4w605ferd",
             "xn--bck1b9a5dre4c",
             "xn--c1avg",
@@ -5092,6 +5092,7 @@
             "site",
             "sling",
             "sm",
+            "sn",
             "sncf",
             "so",
             "space",
@@ -6304,12 +6305,12 @@
           "VeriSign, Inc."
         ],
         "asn": [
-          "HGTLD",
           "VRSN-AC28",
           "VRSN-AC50-340"
         ]
       },
       "aliases": [
+        "HGTLD",
         "VERISIGN-AS",
         "VGRS-AC25"
       ],
