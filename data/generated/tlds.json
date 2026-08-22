@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-20T03:20:58Z",
+  "publication": "2026-08-22T03:18:19Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -23143,7 +23143,7 @@
       "rdap_server": "https://rdap.nic.bostik",
       "tld_created": "2015-11-06",
       "tld_updated": [
-        "2025-05-09"
+        "2026-08-21"
       ],
       "annotations": {
         "iana_tech_alias": "AFNIC.fr",
@@ -38484,8 +38484,8 @@
           "ipv4": [
             {
               "ip": "192.26.92.30",
-              "asn": 397204,
-              "as_org": "VRSN-AC28",
+              "asn": 396549,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ],
@@ -38503,8 +38503,8 @@
           "ipv4": [
             {
               "ip": "192.31.80.30",
-              "asn": 397204,
-              "as_org": "VRSN-AC28",
+              "asn": 396549,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ],
@@ -38522,8 +38522,8 @@
           "ipv4": [
             {
               "ip": "192.12.94.30",
-              "asn": 397204,
-              "as_org": "VRSN-AC28",
+              "asn": 396549,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ],
@@ -38617,16 +38617,16 @@
           "ipv4": [
             {
               "ip": "192.48.79.30",
-              "asn": 397200,
-              "as_org": "VRSN-AC28",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:502:7094::30",
-              "asn": 397200,
-              "as_org": "VRSN-AC28",
+              "asn": 396566,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ]
@@ -38636,16 +38636,16 @@
           "ipv4": [
             {
               "ip": "192.52.178.30",
-              "asn": 397200,
-              "as_org": "VRSN-AC28",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:503:d2d::30",
-              "asn": 397200,
-              "as_org": "VRSN-AC28",
+              "asn": 396566,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ]
@@ -38655,16 +38655,16 @@
           "ipv4": [
             {
               "ip": "192.41.162.30",
-              "asn": 397200,
-              "as_org": "VRSN-AC28",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:500:d937::30",
-              "asn": 397200,
-              "as_org": "VRSN-AC28",
+              "asn": 396566,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ]
@@ -38674,16 +38674,16 @@
           "ipv4": [
             {
               "ip": "192.55.83.30",
-              "asn": 397200,
-              "as_org": "VRSN-AC28",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:501:b1f9::30",
-              "asn": 397200,
-              "as_org": "VRSN-AC28",
+              "asn": 396566,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ]
@@ -53403,8 +53403,8 @@
           "ipv4": [
             {
               "ip": "192.26.92.30",
-              "asn": 397204,
-              "as_org": "VRSN-AC28",
+              "asn": 396549,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ],
@@ -53422,8 +53422,8 @@
           "ipv4": [
             {
               "ip": "192.31.80.30",
-              "asn": 397204,
-              "as_org": "VRSN-AC28",
+              "asn": 396549,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ],
@@ -53441,8 +53441,8 @@
           "ipv4": [
             {
               "ip": "192.12.94.30",
-              "asn": 397204,
-              "as_org": "VRSN-AC28",
+              "asn": 396549,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ],
@@ -53536,16 +53536,16 @@
           "ipv4": [
             {
               "ip": "192.48.79.30",
-              "asn": 397200,
-              "as_org": "VRSN-AC28",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:502:7094::30",
-              "asn": 397200,
-              "as_org": "VRSN-AC28",
+              "asn": 396566,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ]
@@ -53555,16 +53555,16 @@
           "ipv4": [
             {
               "ip": "192.52.178.30",
-              "asn": 397200,
-              "as_org": "VRSN-AC28",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:503:d2d::30",
-              "asn": 397200,
-              "as_org": "VRSN-AC28",
+              "asn": 396566,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ]
@@ -53574,16 +53574,16 @@
           "ipv4": [
             {
               "ip": "192.41.162.30",
-              "asn": 397200,
-              "as_org": "VRSN-AC28",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:500:d937::30",
-              "asn": 397200,
-              "as_org": "VRSN-AC28",
+              "asn": 396566,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ]
@@ -53593,16 +53593,16 @@
           "ipv4": [
             {
               "ip": "192.55.83.30",
-              "asn": 397200,
-              "as_org": "VRSN-AC28",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:501:b1f9::30",
-              "asn": 397200,
-              "as_org": "VRSN-AC28",
+              "asn": 396566,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ]
@@ -75375,7 +75375,7 @@
       "registry_url": "http://www.gt",
       "tld_created": "1992-08-14",
       "tld_updated": [
-        "2024-01-16"
+        "2026-08-21"
       ],
       "annotations": {
         "country_name_iso": "Guatemala",
@@ -87968,9 +87968,9 @@
           "ipv4": [
             {
               "ip": "194.117.57.105",
-              "asn": 35160,
-              "as_org": "IQ-CCLTD",
-              "as_country": "IQ"
+              "asn": 0,
+              "as_org": "Not routed",
+              "as_country": "None"
             }
           ],
           "ipv6": []
@@ -99091,7 +99091,7 @@
       "rdap_server": "https://rdap.nic.leclerc",
       "tld_created": "2015-01-29",
       "tld_updated": [
-        "2026-08-04"
+        "2026-08-21"
       ],
       "annotations": {
         "iana_tech_alias": "AFNIC.fr",
@@ -117105,16 +117105,18 @@
       "rdap_server": "https://rdap.mynic.my/rdap/",
       "tld_created": "1987-06-08",
       "tld_updated": [
-        "2026-04-18"
+        "2026-08-21"
       ],
       "annotations": {
         "rdap_source": "supplemental",
         "country_name_iso": "Malaysia",
         "as_org_aliases": [
+          "Amazon",
           "CentralNic",
           "Tucows"
         ],
         "as_org_slugs": [
+          "amazon",
           "centralnic",
           "tucows"
         ],
@@ -117212,6 +117214,25 @@
               "ip": "2603:c024:4518:ad60:242::2",
               "asn": 31898,
               "as_org": "ORACLE-BMC-31898",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "g.nic.my",
+          "ipv4": [
+            {
+              "ip": "15.197.189.233",
+              "asn": 16509,
+              "as_org": "AMAZON-02",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2600:9000:a61a:e65b:b532:3115:4619:6578",
+              "asn": 16509,
+              "as_org": "AMAZON-02",
               "as_country": "US"
             }
           ]
@@ -118723,8 +118744,8 @@
           "ipv4": [
             {
               "ip": "192.26.92.30",
-              "asn": 397204,
-              "as_org": "VRSN-AC28",
+              "asn": 396549,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ],
@@ -118742,8 +118763,8 @@
           "ipv4": [
             {
               "ip": "192.31.80.30",
-              "asn": 397204,
-              "as_org": "VRSN-AC28",
+              "asn": 396549,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ],
@@ -118761,8 +118782,8 @@
           "ipv4": [
             {
               "ip": "192.12.94.30",
-              "asn": 397204,
-              "as_org": "VRSN-AC28",
+              "asn": 396549,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ],
@@ -118856,16 +118877,16 @@
           "ipv4": [
             {
               "ip": "192.48.79.30",
-              "asn": 397200,
-              "as_org": "VRSN-AC28",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:502:7094::30",
-              "asn": 397200,
-              "as_org": "VRSN-AC28",
+              "asn": 396566,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ]
@@ -118875,16 +118896,16 @@
           "ipv4": [
             {
               "ip": "192.52.178.30",
-              "asn": 397200,
-              "as_org": "VRSN-AC28",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:503:d2d::30",
-              "asn": 397200,
-              "as_org": "VRSN-AC28",
+              "asn": 396566,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ]
@@ -118894,16 +118915,16 @@
           "ipv4": [
             {
               "ip": "192.41.162.30",
-              "asn": 397200,
-              "as_org": "VRSN-AC28",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:500:d937::30",
-              "asn": 397200,
-              "as_org": "VRSN-AC28",
+              "asn": 396566,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ]
@@ -118913,16 +118934,16 @@
           "ipv4": [
             {
               "ip": "192.55.83.30",
-              "asn": 397200,
-              "as_org": "VRSN-AC28",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:501:b1f9::30",
-              "asn": 397200,
-              "as_org": "VRSN-AC28",
+              "asn": 396566,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ]
@@ -203550,9 +203571,9 @@
           "ipv4": [
             {
               "ip": "194.117.57.105",
-              "asn": 35160,
-              "as_org": "IQ-CCLTD",
-              "as_country": "IQ"
+              "asn": 0,
+              "as_org": "Not routed",
+              "as_country": "None"
             }
           ],
           "ipv6": []
@@ -203635,14 +203656,16 @@
       "whois_server": "whois.mynic.my",
       "tld_created": "2011-10-22",
       "tld_updated": [
-        "2026-04-17"
+        "2026-08-21"
       ],
       "annotations": {
         "country_name_iso": "Malaysia",
         "as_org_aliases": [
+          "Amazon",
           "CentralNic"
         ],
         "as_org_slugs": [
+          "amazon",
           "centralnic"
         ],
         "geographic_scope": "country",
@@ -203741,6 +203764,25 @@
               "ip": "2603:c024:4518:ad60:242::2",
               "asn": 31898,
               "as_org": "ORACLE-BMC-31898",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "g.nic.my",
+          "ipv4": [
+            {
+              "ip": "15.197.189.233",
+              "asn": 16509,
+              "as_org": "AMAZON-02",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2600:9000:a61a:e65b:b532:3115:4619:6578",
+              "asn": 16509,
+              "as_org": "AMAZON-02",
               "as_country": "US"
             }
           ]
@@ -205525,7 +205567,7 @@
       "whois_server": "whois.tcinet.ru",
       "tld_created": "2010-05-12",
       "tld_updated": [
-        "2026-08-05"
+        "2026-08-21"
       ],
       "annotations": {
         "country_name_iso": "Russian Federation",

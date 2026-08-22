@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-08-22T03:18:19Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -22,16 +22,18 @@
     "rdap_server": "https://rdap.mynic.my/rdap/",
     "tld_created": "1987-06-08",
     "tld_updated": [
-      "2026-04-18"
+      "2026-08-21"
     ],
     "annotations": {
       "rdap_source": "supplemental",
       "country_name_iso": "Malaysia",
       "as_org_aliases": [
+        "Amazon",
         "CentralNic",
         "Tucows"
       ],
       "as_org_slugs": [
+        "amazon",
         "centralnic",
         "tucows"
       ],
@@ -129,6 +131,25 @@
             "ip": "2603:c024:4518:ad60:242::2",
             "asn": 31898,
             "as_org": "ORACLE-BMC-31898",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "g.nic.my",
+        "ipv4": [
+          {
+            "ip": "15.197.189.233",
+            "asn": 16509,
+            "as_org": "AMAZON-02",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2600:9000:a61a:e65b:b532:3115:4619:6578",
+            "asn": 16509,
+            "as_org": "AMAZON-02",
             "as_country": "US"
           }
         ]
