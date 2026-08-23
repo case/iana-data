@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-22T03:18:19Z",
+  "publication": "2026-08-23T03:26:56Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -145013,7 +145013,7 @@
       "whois_server": "whois.tcinet.ru",
       "tld_created": "1994-04-07",
       "tld_updated": [
-        "2026-08-05"
+        "2026-08-21"
       ],
       "annotations": {
         "country_name_iso": "Russian Federation",
@@ -165630,7 +165630,7 @@
       "rdap_server": "https://whois.nic.tatar/rdap/",
       "tld_created": "2014-07-03",
       "tld_updated": [
-        "2026-07-27"
+        "2026-08-21"
       ],
       "annotations": {
         "rdap_source": "IANA",
