@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-24T03:28:48Z",
+  "publication": "2026-08-25T03:26:39Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -77,7 +77,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -239,7 +239,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -1045,7 +1045,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -1213,7 +1213,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -1373,7 +1373,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -1946,7 +1946,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -2877,7 +2877,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -3457,7 +3457,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -3731,7 +3731,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -4590,7 +4590,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -5112,7 +5112,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -6033,7 +6033,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -6748,7 +6748,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -6910,7 +6910,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -7072,7 +7072,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -7234,7 +7234,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -7396,7 +7396,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -7678,7 +7678,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -8098,7 +8098,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -9262,7 +9262,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -9385,7 +9385,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -11141,7 +11141,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -12232,7 +12232,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -13300,7 +13300,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -14133,7 +14133,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -14556,7 +14556,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -15453,7 +15453,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -15615,7 +15615,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -15983,7 +15983,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.2",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -17511,7 +17511,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -18549,7 +18549,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -18827,7 +18827,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -18993,7 +18993,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -19913,7 +19913,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.13",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -20289,7 +20289,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -22869,7 +22869,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -23302,7 +23302,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -24249,7 +24249,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -24737,7 +24737,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -25988,7 +25988,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -27588,7 +27588,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -28240,7 +28240,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -28637,7 +28637,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -28929,7 +28929,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -29964,7 +29964,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -30932,7 +30932,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -31093,7 +31093,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -31255,7 +31255,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -31417,7 +31417,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -33332,7 +33332,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -33829,7 +33829,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -34910,7 +34910,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -35197,7 +35197,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -36989,7 +36989,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -37451,7 +37451,7 @@
           "ipv4": [
             {
               "ip": "203.119.26.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -37508,7 +37508,7 @@
           "ipv4": [
             {
               "ip": "203.119.29.1",
-              "asn": 24151,
+              "asn": 24409,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -38465,9 +38465,9 @@
           "ipv4": [
             {
               "ip": "192.33.14.30",
-              "asn": 396751,
-              "as_org": "AS396751",
-              "as_country": "Unknown"
+              "asn": 40647,
+              "as_org": "VGRS-AC25",
+              "as_country": "US"
             }
           ],
           "ipv6": [
@@ -38789,7 +38789,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -39291,7 +39291,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -40590,7 +40590,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -41659,7 +41659,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -41819,7 +41819,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -42604,7 +42604,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -43472,7 +43472,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -45037,7 +45037,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -45369,7 +45369,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -45788,7 +45788,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -46929,7 +46929,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -48050,7 +48050,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -50226,7 +50226,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -51385,7 +51385,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -51823,7 +51823,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -52037,7 +52037,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -52713,7 +52713,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -53384,9 +53384,9 @@
           "ipv4": [
             {
               "ip": "192.33.14.30",
-              "asn": 396751,
-              "as_org": "AS396751",
-              "as_country": "Unknown"
+              "asn": 40647,
+              "as_org": "VGRS-AC25",
+              "as_country": "US"
             }
           ],
           "ipv6": [
@@ -55092,7 +55092,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -58121,7 +58121,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -58910,7 +58910,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -59078,7 +59078,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -59827,7 +59827,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -60500,7 +60500,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -61367,7 +61367,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -61740,7 +61740,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -61908,7 +61908,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -62413,7 +62413,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -62742,7 +62742,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -64150,7 +64150,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -64941,7 +64941,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -65815,7 +65815,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -65976,7 +65976,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -66139,7 +66139,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -68013,7 +68013,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -68181,7 +68181,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -68349,7 +68349,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -69450,7 +69450,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -69828,7 +69828,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -71941,7 +71941,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -72292,7 +72292,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -72624,7 +72624,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -74218,7 +74218,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -75016,7 +75016,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -77255,7 +77255,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -77679,7 +77679,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -78687,7 +78687,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -78807,7 +78807,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -80185,7 +80185,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -80481,7 +80481,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -80644,7 +80644,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -80797,7 +80797,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -81622,7 +81622,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -82397,7 +82397,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -82976,7 +82976,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -83139,7 +83139,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -83263,7 +83263,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -85942,7 +85942,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -86380,7 +86380,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -86773,7 +86773,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -87396,7 +87396,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -87840,7 +87840,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -89060,7 +89060,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -89658,7 +89658,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -90830,7 +90830,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -92138,7 +92138,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -92903,7 +92903,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -93816,7 +93816,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -94982,7 +94982,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -95271,7 +95271,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -95687,7 +95687,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -96333,7 +96333,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -97439,7 +97439,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -97985,7 +97985,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -98153,7 +98153,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -99699,7 +99699,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -100401,7 +100401,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -101063,7 +101063,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -101559,7 +101559,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -102669,7 +102669,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -103614,7 +103614,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -105193,7 +105193,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -107758,7 +107758,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -107950,7 +107950,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -109308,7 +109308,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -109789,7 +109789,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -109949,7 +109949,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -110244,7 +110244,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -110622,7 +110622,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -111256,7 +111256,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -111544,7 +111544,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -111872,7 +111872,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -112135,7 +112135,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -113216,7 +113216,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -113714,7 +113714,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -114653,7 +114653,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -115653,7 +115653,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -117764,7 +117764,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -118237,7 +118237,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -118603,7 +118603,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -118725,9 +118725,9 @@
           "ipv4": [
             {
               "ip": "192.33.14.30",
-              "asn": 396751,
-              "as_org": "AS396751",
-              "as_country": "Unknown"
+              "asn": 40647,
+              "as_org": "VGRS-AC25",
+              "as_country": "US"
             }
           ],
           "ipv6": [
@@ -119019,7 +119019,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -119181,7 +119181,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -119512,7 +119512,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -120500,7 +120500,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -120959,7 +120959,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -121206,7 +121206,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -121323,7 +121323,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -121780,7 +121780,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -122454,7 +122454,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -123564,7 +123564,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.2",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -123963,7 +123963,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -124148,8 +124148,8 @@
           "ipv4": [
             {
               "ip": "202.46.189.130",
-              "asn": 38064,
-              "as_org": "NZ-AS-NS1-AP ASN for anycast peering of",
+              "asn": 45285,
+              "as_org": "NZ-AS-NS2-AP ASN for anycast peering",
               "as_country": "NZ"
             }
           ],
@@ -124781,7 +124781,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -124896,7 +124896,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -125056,7 +125056,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -125361,7 +125361,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.6",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -125726,7 +125726,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -126467,7 +126467,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -127368,7 +127368,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -127533,7 +127533,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -128250,7 +128250,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -129052,7 +129052,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -129875,7 +129875,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -130596,7 +130596,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -130894,7 +130894,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -131388,7 +131388,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -132373,7 +132373,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -133619,7 +133619,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -134850,7 +134850,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -135392,7 +135392,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -137199,7 +137199,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -137361,7 +137361,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -138448,7 +138448,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.6",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -138987,7 +138987,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -142597,7 +142597,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -143299,7 +143299,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -144273,7 +144273,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -145215,7 +145215,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -145999,7 +145999,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -147300,7 +147300,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -147634,7 +147634,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -147795,7 +147795,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -148403,7 +148403,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -149673,7 +149673,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -150422,7 +150422,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -151748,7 +151748,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -151916,7 +151916,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -152437,7 +152437,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -152730,7 +152730,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -153517,7 +153517,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -154372,7 +154372,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -155356,7 +155356,7 @@
           "ipv4": [
             {
               "ip": "42.83.131.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -157956,7 +157956,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -158885,7 +158885,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -160360,7 +160360,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -160801,7 +160801,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -161634,7 +161634,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -161969,7 +161969,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -162440,7 +162440,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -163109,7 +163109,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -163441,7 +163441,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -164289,7 +164289,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -164729,7 +164729,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -164892,7 +164892,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -165386,7 +165386,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -165841,7 +165841,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -166794,7 +166794,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -167897,7 +167897,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -169907,7 +169907,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -170073,7 +170073,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -170340,7 +170340,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -171301,7 +171301,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -171735,7 +171735,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -171855,7 +171855,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -172417,7 +172417,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -172875,7 +172875,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -174825,7 +174825,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.6",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -177056,7 +177056,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.15",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -180084,7 +180084,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -180966,7 +180966,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -181486,7 +181486,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -181927,7 +181927,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -182366,7 +182366,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.6",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -182773,7 +182773,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -182934,7 +182934,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -183768,7 +183768,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -183928,7 +183928,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -184218,7 +184218,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -184881,7 +184881,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -185043,7 +185043,7 @@
           "ipv4": [
             {
               "ip": "42.83.131.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -185636,7 +185636,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -185798,7 +185798,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -185964,7 +185964,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -186505,7 +186505,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -186823,7 +186823,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -186991,7 +186991,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -187810,7 +187810,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -188347,7 +188347,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -189116,7 +189116,7 @@
           "ipv4": [
             {
               "ip": "42.83.131.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -191162,7 +191162,7 @@
           "ipv4": [
             {
               "ip": "42.83.131.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -191310,7 +191310,7 @@
           "ipv6": [
             {
               "ip": "2001:dc7:ffc2::1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -191340,7 +191340,7 @@
           "ipv4": [
             {
               "ip": "125.208.43.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -192250,7 +192250,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -193526,7 +193526,7 @@
           "ipv4": [
             {
               "ip": "42.83.131.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -196807,7 +196807,7 @@
           "ipv4": [
             {
               "ip": "125.208.36.1",
-              "asn": 24151,
+              "asn": 24409,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -196944,7 +196944,7 @@
           "ipv4": [
             {
               "ip": "125.208.36.1",
-              "asn": 24151,
+              "asn": 24409,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -197751,7 +197751,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -199233,7 +199233,7 @@
           "ipv6": [
             {
               "ip": "2001:dc7:ffc2::1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -199263,7 +199263,7 @@
           "ipv4": [
             {
               "ip": "125.208.43.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -200265,7 +200265,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -200980,7 +200980,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.6",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -201146,7 +201146,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -201379,7 +201379,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -202574,7 +202574,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -203164,7 +203164,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -204293,7 +204293,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.3",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -204587,7 +204587,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -207728,7 +207728,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.9",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -209086,7 +209086,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.6",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -209213,7 +209213,7 @@
           "ipv4": [
             {
               "ip": "42.83.131.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -210026,7 +210026,7 @@
           "ipv4": [
             {
               "ip": "42.83.131.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -210191,7 +210191,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -211242,7 +211242,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -211365,7 +211365,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.10",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }
@@ -211534,7 +211534,7 @@
           "ipv4": [
             {
               "ip": "37.209.194.4",
-              "asn": 397213,
+              "asn": 12008,
               "as_org": "SECURITYSERVICES",
               "as_country": "US"
             }

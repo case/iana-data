@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-20T03:20:58Z",
+  "publication": "2026-08-25T03:26:39Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -98,8 +98,8 @@
         "ipv4": [
           {
             "ip": "202.46.189.130",
-            "asn": 38064,
-            "as_org": "NZ-AS-NS1-AP ASN for anycast peering of",
+            "asn": 45285,
+            "as_org": "NZ-AS-NS2-AP ASN for anycast peering",
             "as_country": "NZ"
           }
         ],
