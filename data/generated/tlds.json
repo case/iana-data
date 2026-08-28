@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-27T12:53:27Z",
+  "publication": "2026-08-28T14:17:09Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -23143,7 +23143,7 @@
       "rdap_server": "https://rdap.nic.bostik",
       "tld_created": "2015-11-06",
       "tld_updated": [
-        "2026-08-21"
+        "2026-08-27"
       ],
       "annotations": {
         "iana_tech_alias": "AFNIC.fr",
@@ -37432,7 +37432,7 @@
           "ipv4": [
             {
               "ip": "203.119.25.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -37451,7 +37451,7 @@
           "ipv4": [
             {
               "ip": "203.119.26.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -37508,7 +37508,7 @@
           "ipv4": [
             {
               "ip": "203.119.29.1",
-              "asn": 24151,
+              "asn": 24409,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -38484,7 +38484,7 @@
           "ipv4": [
             {
               "ip": "192.26.92.30",
-              "asn": 397204,
+              "asn": 397210,
               "as_org": "VRSN-AC28",
               "as_country": "US"
             }
@@ -38503,7 +38503,7 @@
           "ipv4": [
             {
               "ip": "192.31.80.30",
-              "asn": 397204,
+              "asn": 397210,
               "as_org": "VRSN-AC28",
               "as_country": "US"
             }
@@ -38522,7 +38522,7 @@
           "ipv4": [
             {
               "ip": "192.12.94.30",
-              "asn": 397204,
+              "asn": 397210,
               "as_org": "VRSN-AC28",
               "as_country": "US"
             }
@@ -38625,8 +38625,8 @@
           "ipv6": [
             {
               "ip": "2001:502:7094::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 396566,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ]
@@ -38644,8 +38644,8 @@
           "ipv6": [
             {
               "ip": "2001:503:d2d::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 396566,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ]
@@ -38663,8 +38663,8 @@
           "ipv6": [
             {
               "ip": "2001:500:d937::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 396566,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ]
@@ -38682,8 +38682,8 @@
           "ipv6": [
             {
               "ip": "2001:501:b1f9::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 396566,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ]
@@ -53403,7 +53403,7 @@
           "ipv4": [
             {
               "ip": "192.26.92.30",
-              "asn": 397204,
+              "asn": 397210,
               "as_org": "VRSN-AC28",
               "as_country": "US"
             }
@@ -53422,7 +53422,7 @@
           "ipv4": [
             {
               "ip": "192.31.80.30",
-              "asn": 397204,
+              "asn": 397210,
               "as_org": "VRSN-AC28",
               "as_country": "US"
             }
@@ -53441,7 +53441,7 @@
           "ipv4": [
             {
               "ip": "192.12.94.30",
-              "asn": 397204,
+              "asn": 397210,
               "as_org": "VRSN-AC28",
               "as_country": "US"
             }
@@ -53544,8 +53544,8 @@
           "ipv6": [
             {
               "ip": "2001:502:7094::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 396566,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ]
@@ -53563,8 +53563,8 @@
           "ipv6": [
             {
               "ip": "2001:503:d2d::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 396566,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ]
@@ -53582,8 +53582,8 @@
           "ipv6": [
             {
               "ip": "2001:500:d937::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 396566,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ]
@@ -53601,8 +53601,8 @@
           "ipv6": [
             {
               "ip": "2001:501:b1f9::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 396566,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ]
@@ -88122,8 +88122,8 @@
           "ipv4": [
             {
               "ip": "194.225.70.83",
-              "asn": 35285,
-              "as_org": "IRNIC-AS",
+              "asn": 6736,
+              "as_org": "IRANET-IPM Institute for Research in Fundamental Sciences IPM",
               "as_country": "IR"
             }
           ],
@@ -118744,7 +118744,7 @@
           "ipv4": [
             {
               "ip": "192.26.92.30",
-              "asn": 397204,
+              "asn": 397210,
               "as_org": "VRSN-AC28",
               "as_country": "US"
             }
@@ -118763,7 +118763,7 @@
           "ipv4": [
             {
               "ip": "192.31.80.30",
-              "asn": 397204,
+              "asn": 397210,
               "as_org": "VRSN-AC28",
               "as_country": "US"
             }
@@ -118782,7 +118782,7 @@
           "ipv4": [
             {
               "ip": "192.12.94.30",
-              "asn": 397204,
+              "asn": 397210,
               "as_org": "VRSN-AC28",
               "as_country": "US"
             }
@@ -118885,8 +118885,8 @@
           "ipv6": [
             {
               "ip": "2001:502:7094::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 396566,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ]
@@ -118904,8 +118904,8 @@
           "ipv6": [
             {
               "ip": "2001:503:d2d::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 396566,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ]
@@ -118923,8 +118923,8 @@
           "ipv6": [
             {
               "ip": "2001:500:d937::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 396566,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ]
@@ -118942,8 +118942,8 @@
           "ipv6": [
             {
               "ip": "2001:501:b1f9::30",
-              "asn": 36623,
-              "as_org": "HGTLD",
+              "asn": 396566,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ]
@@ -124156,8 +124156,8 @@
           "ipv6": [
             {
               "ip": "2001:dce:d454::53",
-              "asn": 45285,
-              "as_org": "NZ-AS-NS2-AP ASN for anycast peering",
+              "asn": 38064,
+              "as_org": "NZ-AS-NS1-AP ASN for anycast peering of",
               "as_country": "NZ"
             }
           ]
@@ -155356,7 +155356,7 @@
           "ipv4": [
             {
               "ip": "42.83.131.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -159756,8 +159756,8 @@
           "ipv4": [
             {
               "ip": "168.195.219.210",
-              "asn": 27775,
-              "as_org": "Telecommunicationcompany Suriname - TeleSur",
+              "asn": 263799,
+              "as_org": "CARIBBEAN COMMUNICATION SERVICES",
               "as_country": "SR"
             }
           ],
@@ -159775,8 +159775,8 @@
           "ipv4": [
             {
               "ip": "168.195.216.214",
-              "asn": 27775,
-              "as_org": "Telecommunicationcompany Suriname - TeleSur",
+              "asn": 263799,
+              "as_org": "CARIBBEAN COMMUNICATION SERVICES",
               "as_country": "SR"
             }
           ],
@@ -185043,7 +185043,7 @@
           "ipv4": [
             {
               "ip": "42.83.131.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -189116,7 +189116,7 @@
           "ipv4": [
             {
               "ip": "42.83.131.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -189194,7 +189194,7 @@
       "whois_server": "whois.nixiregistry.in",
       "tld_created": "2016-04-18",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ],
       "annotations": {
         "iana_sponsor_alias": "NIXI.in",
@@ -189256,6 +189256,25 @@
           ]
         },
         {
+          "hostname": "ns1.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.1.1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4001::1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
           "hostname": "ns10.trs-dns.info",
           "ipv4": [
             {
@@ -189276,6 +189295,63 @@
         },
         {
           "hostname": "ns10.trs-dns.org",
+          "ipv4": [
+            {
+              "ip": "64.78.205.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:813:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "ns2.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.2.1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4002::1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
+          "hostname": "ns3.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.78.204.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:812:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "ns4.registry.in",
           "ipv4": [
             {
               "ip": "64.78.205.1",
@@ -189859,7 +189935,7 @@
       "whois_server": "whois.nixiregistry.in",
       "tld_created": "2016-04-18",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ],
       "annotations": {
         "iana_sponsor_alias": "NIXI.in",
@@ -189921,6 +189997,25 @@
           ]
         },
         {
+          "hostname": "ns1.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.1.1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4001::1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
           "hostname": "ns10.trs-dns.info",
           "ipv4": [
             {
@@ -189941,6 +190036,63 @@
         },
         {
           "hostname": "ns10.trs-dns.org",
+          "ipv4": [
+            {
+              "ip": "64.78.205.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:813:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "ns2.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.2.1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4002::1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
+          "hostname": "ns3.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.78.204.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:812:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "ns4.registry.in",
           "ipv4": [
             {
               "ip": "64.78.205.1",
@@ -190285,7 +190437,7 @@
       "whois_server": "whois.nixiregistry.in",
       "tld_created": "2016-04-18",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ],
       "annotations": {
         "iana_sponsor_alias": "NIXI.in",
@@ -190342,6 +190494,25 @@
               "ip": "2620:57:4002::1",
               "asn": 63363,
               "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
+          "hostname": "ns1.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.1.1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4001::1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
               "as_country": "CA"
             }
           ]
@@ -190383,6 +190554,63 @@
               "as_country": "US"
             }
           ]
+        },
+        {
+          "hostname": "ns2.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.2.1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4002::1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
+          "hostname": "ns3.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.78.204.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:812:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "ns4.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.78.205.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:813:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
         }
       ]
     },
@@ -190405,7 +190633,7 @@
       "whois_server": "whois.nixiregistry.in",
       "tld_created": "2011-02-05",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ],
       "annotations": {
         "iana_sponsor_alias": "NIXI.in",
@@ -190467,6 +190695,25 @@
           ]
         },
         {
+          "hostname": "ns1.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.1.1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4001::1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
           "hostname": "ns10.trs-dns.info",
           "ipv4": [
             {
@@ -190487,6 +190734,63 @@
         },
         {
           "hostname": "ns10.trs-dns.org",
+          "ipv4": [
+            {
+              "ip": "64.78.205.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:813:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "ns2.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.2.1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4002::1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
+          "hostname": "ns3.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.78.204.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:812:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "ns4.registry.in",
           "ipv4": [
             {
               "ip": "64.78.205.1",
@@ -191162,7 +191466,7 @@
           "ipv4": [
             {
               "ip": "42.83.131.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -191310,7 +191614,7 @@
           "ipv6": [
             {
               "ip": "2001:dc7:ffc2::1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -191340,7 +191644,7 @@
           "ipv4": [
             {
               "ip": "125.208.43.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -193526,7 +193830,7 @@
           "ipv4": [
             {
               "ip": "42.83.131.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -196807,7 +197111,7 @@
           "ipv4": [
             {
               "ip": "125.208.36.1",
-              "asn": 24151,
+              "asn": 24409,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -196944,7 +197248,7 @@
           "ipv4": [
             {
               "ip": "125.208.36.1",
-              "asn": 24151,
+              "asn": 24409,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -197305,7 +197609,7 @@
       "whois_server": "whois.nixiregistry.in",
       "tld_created": "2011-02-05",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ],
       "annotations": {
         "iana_sponsor_alias": "NIXI.in",
@@ -197367,6 +197671,25 @@
           ]
         },
         {
+          "hostname": "ns1.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.1.1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4001::1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
           "hostname": "ns10.trs-dns.info",
           "ipv4": [
             {
@@ -197387,6 +197710,63 @@
         },
         {
           "hostname": "ns10.trs-dns.org",
+          "ipv4": [
+            {
+              "ip": "64.78.205.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:813:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "ns2.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.2.1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4002::1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
+          "hostname": "ns3.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.78.204.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:812:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "ns4.registry.in",
           "ipv4": [
             {
               "ip": "64.78.205.1",
@@ -198051,7 +198431,7 @@
       "whois_server": "whois.nixiregistry.in",
       "tld_created": "2011-02-05",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ],
       "annotations": {
         "iana_sponsor_alias": "NIXI.in",
@@ -198113,6 +198493,25 @@
           ]
         },
         {
+          "hostname": "ns1.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.1.1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4001::1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
           "hostname": "ns10.trs-dns.info",
           "ipv4": [
             {
@@ -198133,6 +198532,63 @@
         },
         {
           "hostname": "ns10.trs-dns.org",
+          "ipv4": [
+            {
+              "ip": "64.78.205.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:813:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "ns2.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.2.1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4002::1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
+          "hostname": "ns3.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.78.204.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:812:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "ns4.registry.in",
           "ipv4": [
             {
               "ip": "64.78.205.1",
@@ -198344,7 +198800,7 @@
       "whois_server": "whois.nixiregistry.in",
       "tld_created": "2016-08-15",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ],
       "annotations": {
         "iana_sponsor_alias": "NIXI.in",
@@ -198406,6 +198862,25 @@
           ]
         },
         {
+          "hostname": "ns1.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.1.1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4001::1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
           "hostname": "ns10.trs-dns.info",
           "ipv4": [
             {
@@ -198426,6 +198901,63 @@
         },
         {
           "hostname": "ns10.trs-dns.org",
+          "ipv4": [
+            {
+              "ip": "64.78.205.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:813:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "ns2.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.2.1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4002::1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
+          "hostname": "ns3.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.78.204.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:812:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "ns4.registry.in",
           "ipv4": [
             {
               "ip": "64.78.205.1",
@@ -198464,7 +198996,7 @@
       "whois_server": "whois.nixiregistry.in",
       "tld_created": "2011-02-05",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ],
       "annotations": {
         "iana_sponsor_alias": "NIXI.in",
@@ -198521,6 +199053,25 @@
               "ip": "2620:57:4002::1",
               "asn": 63363,
               "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
+          "hostname": "ns1.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.1.1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4001::1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
               "as_country": "CA"
             }
           ]
@@ -198562,6 +199113,63 @@
               "as_country": "US"
             }
           ]
+        },
+        {
+          "hostname": "ns2.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.2.1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4002::1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
+          "hostname": "ns3.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.78.204.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:812:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "ns4.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.78.205.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:813:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
         }
       ]
     },
@@ -198584,7 +199192,7 @@
       "whois_server": "whois.nixiregistry.in",
       "tld_created": "2016-08-15",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ],
       "annotations": {
         "iana_sponsor_alias": "NIXI.in",
@@ -198646,6 +199254,25 @@
           ]
         },
         {
+          "hostname": "ns1.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.1.1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4001::1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
           "hostname": "ns10.trs-dns.info",
           "ipv4": [
             {
@@ -198666,6 +199293,63 @@
         },
         {
           "hostname": "ns10.trs-dns.org",
+          "ipv4": [
+            {
+              "ip": "64.78.205.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:813:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "ns2.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.2.1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4002::1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
+          "hostname": "ns3.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.78.204.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:812:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "ns4.registry.in",
           "ipv4": [
             {
               "ip": "64.78.205.1",
@@ -199233,7 +199917,7 @@
           "ipv6": [
             {
               "ip": "2001:dc7:ffc2::1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -199263,7 +199947,7 @@
           "ipv4": [
             {
               "ip": "125.208.43.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -202095,7 +202779,7 @@
       "whois_server": "whois.nixiregistry.in",
       "tld_created": "2016-08-15",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ],
       "annotations": {
         "iana_sponsor_alias": "NIXI.in",
@@ -202152,6 +202836,25 @@
               "ip": "2620:57:4002::1",
               "asn": 63363,
               "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
+          "hostname": "ns1.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.1.1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4001::1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
               "as_country": "CA"
             }
           ]
@@ -202193,6 +202896,63 @@
               "as_country": "US"
             }
           ]
+        },
+        {
+          "hostname": "ns2.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.2.1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4002::1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
+          "hostname": "ns3.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.78.204.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:812:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "ns4.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.78.205.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:813:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
         }
       ]
     },
@@ -202215,7 +202975,7 @@
       "whois_server": "whois.nixiregistry.in",
       "tld_created": "2011-02-05",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ],
       "annotations": {
         "iana_sponsor_alias": "NIXI.in",
@@ -202277,6 +203037,25 @@
           ]
         },
         {
+          "hostname": "ns1.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.1.1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4001::1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
           "hostname": "ns10.trs-dns.info",
           "ipv4": [
             {
@@ -202297,6 +203076,63 @@
         },
         {
           "hostname": "ns10.trs-dns.org",
+          "ipv4": [
+            {
+              "ip": "64.78.205.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:813:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "ns2.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.2.1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4002::1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
+          "hostname": "ns3.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.78.204.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:812:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "ns4.registry.in",
           "ipv4": [
             {
               "ip": "64.78.205.1",
@@ -202989,7 +203825,7 @@
       "whois_server": "whois.nixiregistry.in",
       "tld_created": "2016-08-15",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ],
       "annotations": {
         "iana_sponsor_alias": "NIXI.in",
@@ -203051,6 +203887,25 @@
           ]
         },
         {
+          "hostname": "ns1.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.1.1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4001::1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
           "hostname": "ns10.trs-dns.info",
           "ipv4": [
             {
@@ -203071,6 +203926,63 @@
         },
         {
           "hostname": "ns10.trs-dns.org",
+          "ipv4": [
+            {
+              "ip": "64.78.205.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:813:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "ns2.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.2.1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4002::1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
+          "hostname": "ns3.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.78.204.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:812:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "ns4.registry.in",
           "ipv4": [
             {
               "ip": "64.78.205.1",
@@ -207016,7 +207928,7 @@
       "whois_server": "whois.nixiregistry.in",
       "tld_created": "2016-04-18",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ],
       "annotations": {
         "iana_sponsor_alias": "NIXI.in",
@@ -207078,6 +207990,25 @@
           ]
         },
         {
+          "hostname": "ns1.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.1.1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4001::1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
           "hostname": "ns10.trs-dns.info",
           "ipv4": [
             {
@@ -207098,6 +208029,63 @@
         },
         {
           "hostname": "ns10.trs-dns.org",
+          "ipv4": [
+            {
+              "ip": "64.78.205.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:813:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "ns2.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.2.1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4002::1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
+          "hostname": "ns3.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.78.204.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:812:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "ns4.registry.in",
           "ipv4": [
             {
               "ip": "64.78.205.1",
@@ -207136,7 +208124,7 @@
       "whois_server": "whois.nixiregistry.in",
       "tld_created": "2011-02-05",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ],
       "annotations": {
         "iana_sponsor_alias": "NIXI.in",
@@ -207198,6 +208186,25 @@
           ]
         },
         {
+          "hostname": "ns1.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.1.1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4001::1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
           "hostname": "ns10.trs-dns.info",
           "ipv4": [
             {
@@ -207218,6 +208225,63 @@
         },
         {
           "hostname": "ns10.trs-dns.org",
+          "ipv4": [
+            {
+              "ip": "64.78.205.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:813:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "ns2.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.2.1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4002::1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
+          "hostname": "ns3.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.78.204.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:812:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "ns4.registry.in",
           "ipv4": [
             {
               "ip": "64.78.205.1",
@@ -209213,7 +210277,7 @@
           "ipv4": [
             {
               "ip": "42.83.131.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -209435,7 +210499,7 @@
       "whois_server": "whois.nixiregistry.in",
       "tld_created": "2011-02-05",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ],
       "annotations": {
         "iana_sponsor_alias": "NIXI.in",
@@ -209497,6 +210561,25 @@
           ]
         },
         {
+          "hostname": "ns1.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.1.1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4001::1",
+              "asn": 393818,
+              "as_org": "TUCOWS-TRS-DNS1",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
           "hostname": "ns10.trs-dns.info",
           "ipv4": [
             {
@@ -209517,6 +210600,63 @@
         },
         {
           "hostname": "ns10.trs-dns.org",
+          "ipv4": [
+            {
+              "ip": "64.78.205.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:813:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "ns2.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.96.2.1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:57:4002::1",
+              "asn": 63363,
+              "as_org": "TUCOWS-TRS-DNS2",
+              "as_country": "CA"
+            }
+          ]
+        },
+        {
+          "hostname": "ns3.registry.in",
+          "ipv4": [
+            {
+              "ip": "64.78.204.1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2620:171:812:1534:8::1",
+              "asn": 42,
+              "as_org": "WOODYNET-1",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "ns4.registry.in",
           "ipv4": [
             {
               "ip": "64.78.205.1",
@@ -210026,7 +211166,7 @@
           "ipv4": [
             {
               "ip": "42.83.131.1",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }

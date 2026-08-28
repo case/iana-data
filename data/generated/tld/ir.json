@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-28T03:42:36Z",
+  "publication": "2026-08-28T14:17:09Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -90,8 +90,8 @@
         "ipv4": [
           {
             "ip": "194.225.70.83",
-            "asn": 35285,
-            "as_org": "IRNIC-AS",
+            "asn": 6736,
+            "as_org": "IRANET-IPM Institute for Research in Fundamental Sciences IPM",
             "as_country": "IR"
           }
         ],

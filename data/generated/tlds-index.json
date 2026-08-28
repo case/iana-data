@@ -1,6 +1,6 @@
 {
   "description": "Index of per-TLD data files at data/generated/tld/",
-  "publication": "2026-08-23T03:26:56Z",
+  "publication": "2026-08-28T14:17:09Z",
   "count": 1595,
   "tlds": [
     {
@@ -1548,7 +1548,7 @@
       "delegated": true,
       "tld_created": "2015-11-06",
       "tld_updated": [
-        "2026-08-21"
+        "2026-08-27"
       ]
     },
     {
@@ -12657,7 +12657,7 @@
       "delegated": true,
       "tld_created": "2016-04-18",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ]
     },
     {
@@ -12707,7 +12707,7 @@
       "delegated": true,
       "tld_created": "2016-04-18",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ]
     },
     {
@@ -12747,7 +12747,7 @@
       "delegated": true,
       "tld_created": "2016-04-18",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ]
     },
     {
@@ -12757,7 +12757,7 @@
       "delegated": true,
       "tld_created": "2011-02-05",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ]
     },
     {
@@ -13277,7 +13277,7 @@
       "delegated": true,
       "tld_created": "2011-02-05",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ]
     },
     {
@@ -13337,7 +13337,7 @@
       "delegated": true,
       "tld_created": "2011-02-05",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ]
     },
     {
@@ -13357,7 +13357,7 @@
       "delegated": true,
       "tld_created": "2016-08-15",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ]
     },
     {
@@ -13367,7 +13367,7 @@
       "delegated": true,
       "tld_created": "2011-02-05",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ]
     },
     {
@@ -13377,7 +13377,7 @@
       "delegated": true,
       "tld_created": "2016-08-15",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ]
     },
     {
@@ -13707,7 +13707,7 @@
       "delegated": true,
       "tld_created": "2016-08-15",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ]
     },
     {
@@ -13717,7 +13717,7 @@
       "delegated": true,
       "tld_created": "2011-02-05",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ]
     },
     {
@@ -13767,7 +13767,7 @@
       "delegated": true,
       "tld_created": "2016-08-15",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ]
     },
     {
@@ -14077,7 +14077,7 @@
       "delegated": true,
       "tld_created": "2016-04-18",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ]
     },
     {
@@ -14087,7 +14087,7 @@
       "delegated": true,
       "tld_created": "2011-02-05",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ]
     },
     {
@@ -14247,7 +14247,7 @@
       "delegated": true,
       "tld_created": "2011-02-05",
       "tld_updated": [
-        "2026-04-16"
+        "2026-08-27"
       ]
     },
     {
