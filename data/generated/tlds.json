@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-28T14:17:09Z",
+  "publication": "2026-08-31T08:39:46Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -38446,8 +38446,8 @@
           "ipv4": [
             {
               "ip": "192.5.6.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 397210,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
@@ -38473,9 +38473,9 @@
           "ipv6": [
             {
               "ip": "2001:503:231d::2:30",
-              "asn": 396690,
-              "as_org": "AS396690",
-              "as_country": "Unknown"
+              "asn": 396654,
+              "as_org": "VRSN-AC50-340",
+              "as_country": "US"
             }
           ]
         },
@@ -53365,8 +53365,8 @@
           "ipv4": [
             {
               "ip": "192.5.6.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 397210,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
@@ -53392,9 +53392,9 @@
           "ipv6": [
             {
               "ip": "2001:503:231d::2:30",
-              "asn": 396690,
-              "as_org": "AS396690",
-              "as_country": "Unknown"
+              "asn": 396654,
+              "as_org": "VRSN-AC50-340",
+              "as_country": "US"
             }
           ]
         },
@@ -87968,9 +87968,9 @@
           "ipv4": [
             {
               "ip": "194.117.57.105",
-              "asn": 35160,
-              "as_org": "IQ-CCLTD",
-              "as_country": "IQ"
+              "asn": 0,
+              "as_org": "Not routed",
+              "as_country": "None"
             }
           ],
           "ipv6": []
@@ -118706,8 +118706,8 @@
           "ipv4": [
             {
               "ip": "192.5.6.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 397210,
+              "as_org": "VRSN-AC28",
               "as_country": "US"
             }
           ],
@@ -118733,9 +118733,9 @@
           "ipv6": [
             {
               "ip": "2001:503:231d::2:30",
-              "asn": 396690,
-              "as_org": "AS396690",
-              "as_country": "Unknown"
+              "asn": 396654,
+              "as_org": "VRSN-AC50-340",
+              "as_country": "US"
             }
           ]
         },
@@ -204483,9 +204483,9 @@
           "ipv4": [
             {
               "ip": "194.117.57.105",
-              "asn": 35160,
-              "as_org": "IQ-CCLTD",
-              "as_country": "IQ"
+              "asn": 0,
+              "as_org": "Not routed",
+              "as_country": "None"
             }
           ],
           "ipv6": []
