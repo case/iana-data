@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-09-01T07:47:07Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -19,7 +19,7 @@
     },
     "tld_created": "1996-09-25",
     "tld_updated": [
-      "2026-02-05"
+      "2026-08-31"
     ],
     "annotations": {
       "country_name_iso": "Maldives",
@@ -88,42 +88,6 @@
             "as_country": "US"
           }
         ]
-      },
-      {
-        "hostname": "ns.dhivehinet.net.mv",
-        "ipv4": [
-          {
-            "ip": "202.1.192.196",
-            "asn": 7642,
-            "as_org": "DHIRAAGU-MV-AP DHIVEHI RAAJJEYGE GULHUN PLC",
-            "as_country": "MV"
-          }
-        ],
-        "ipv6": []
-      },
-      {
-        "hostname": "ns.mv",
-        "ipv4": [
-          {
-            "ip": "202.1.192.196",
-            "asn": 7642,
-            "as_org": "DHIRAAGU-MV-AP DHIVEHI RAAJJEYGE GULHUN PLC",
-            "as_country": "MV"
-          }
-        ],
-        "ipv6": []
-      },
-      {
-        "hostname": "ns2.dhivehinet.net.mv",
-        "ipv4": [
-          {
-            "ip": "202.1.201.201",
-            "asn": 7642,
-            "as_org": "DHIRAAGU-MV-AP DHIVEHI RAAJJEYGE GULHUN PLC",
-            "as_country": "MV"
-          }
-        ],
-        "ipv6": []
       },
       {
         "hostname": "sangu.ns.mv",

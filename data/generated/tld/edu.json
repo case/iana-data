@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-31T08:39:46Z",
+  "publication": "2026-09-01T07:47:07Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -39,8 +39,8 @@
         "ipv4": [
           {
             "ip": "192.5.6.30",
-            "asn": 397210,
-            "as_org": "VRSN-AC28",
+            "asn": 396549,
+            "as_org": "VRSN-AC50-340",
             "as_country": "US"
           }
         ],

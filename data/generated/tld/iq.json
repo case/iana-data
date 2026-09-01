@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-31T08:39:46Z",
+  "publication": "2026-09-01T07:47:07Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -41,9 +41,9 @@
         "ipv4": [
           {
             "ip": "194.117.57.105",
-            "asn": 0,
-            "as_org": "Not routed",
-            "as_country": "None"
+            "asn": 35160,
+            "as_org": "IQ-CCLTD",
+            "as_country": "IQ"
           }
         ],
         "ipv6": []

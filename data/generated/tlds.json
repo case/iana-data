@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-31T08:39:46Z",
+  "publication": "2026-09-01T07:47:07Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -38446,8 +38446,8 @@
           "ipv4": [
             {
               "ip": "192.5.6.30",
-              "asn": 397210,
-              "as_org": "VRSN-AC28",
+              "asn": 396549,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ],
@@ -53365,8 +53365,8 @@
           "ipv4": [
             {
               "ip": "192.5.6.30",
-              "asn": 397210,
-              "as_org": "VRSN-AC28",
+              "asn": 396549,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ],
@@ -87968,9 +87968,9 @@
           "ipv4": [
             {
               "ip": "194.117.57.105",
-              "asn": 0,
-              "as_org": "Not routed",
-              "as_country": "None"
+              "asn": 35160,
+              "as_org": "IQ-CCLTD",
+              "as_country": "IQ"
             }
           ],
           "ipv6": []
@@ -116646,7 +116646,7 @@
       },
       "tld_created": "1996-09-25",
       "tld_updated": [
-        "2026-02-05"
+        "2026-08-31"
       ],
       "annotations": {
         "country_name_iso": "Maldives",
@@ -116715,42 +116715,6 @@
               "as_country": "US"
             }
           ]
-        },
-        {
-          "hostname": "ns.dhivehinet.net.mv",
-          "ipv4": [
-            {
-              "ip": "202.1.192.196",
-              "asn": 7642,
-              "as_org": "DHIRAAGU-MV-AP DHIVEHI RAAJJEYGE GULHUN PLC",
-              "as_country": "MV"
-            }
-          ],
-          "ipv6": []
-        },
-        {
-          "hostname": "ns.mv",
-          "ipv4": [
-            {
-              "ip": "202.1.192.196",
-              "asn": 7642,
-              "as_org": "DHIRAAGU-MV-AP DHIVEHI RAAJJEYGE GULHUN PLC",
-              "as_country": "MV"
-            }
-          ],
-          "ipv6": []
-        },
-        {
-          "hostname": "ns2.dhivehinet.net.mv",
-          "ipv4": [
-            {
-              "ip": "202.1.201.201",
-              "asn": 7642,
-              "as_org": "DHIRAAGU-MV-AP DHIVEHI RAAJJEYGE GULHUN PLC",
-              "as_country": "MV"
-            }
-          ],
-          "ipv6": []
         },
         {
           "hostname": "sangu.ns.mv",
@@ -118706,8 +118670,8 @@
           "ipv4": [
             {
               "ip": "192.5.6.30",
-              "asn": 397210,
-              "as_org": "VRSN-AC28",
+              "asn": 396549,
+              "as_org": "VRSN-AC50-340",
               "as_country": "US"
             }
           ],
@@ -149418,7 +149382,7 @@
       "rdap_server": "https://rdap.nic.scb/",
       "tld_created": "2014-06-26",
       "tld_updated": [
-        "2024-05-31"
+        "2026-08-31"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -204483,9 +204447,9 @@
           "ipv4": [
             {
               "ip": "194.117.57.105",
-              "asn": 0,
-              "as_org": "Not routed",
-              "as_country": "None"
+              "asn": 35160,
+              "as_org": "IQ-CCLTD",
+              "as_country": "IQ"
             }
           ],
           "ipv6": []
@@ -207501,7 +207465,7 @@
       "registry_url": "http://www.gr",
       "tld_created": "2015-05-06",
       "tld_updated": [
-        "2026-07-09"
+        "2026-08-31"
       ],
       "annotations": {
         "country_name_iso": "Greece",
