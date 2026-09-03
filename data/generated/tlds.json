@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-02T07:14:48Z",
+  "publication": "2026-09-03T07:25:52Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -18372,18 +18372,18 @@
         "iana": {
           "sponsor": "Telecommunications Regulatory Authority (TRA)",
           "admin": "Telecommunications Regulatory Authority (TRA)",
-          "tech": "CentralNic"
+          "tech": "Tucows.com, Co."
         }
       },
       "whois_server": "whois.nic.bh",
       "rdap_server": "https://rdap.centralnic.com/bh/",
       "tld_created": "1994-02-01",
       "tld_updated": [
-        "2026-07-22"
+        "2026-09-02"
       ],
       "annotations": {
-        "iana_tech_alias": "CentralNic",
-        "iana_tech_slug": "centralnic",
+        "iana_tech_alias": "Tucows",
+        "iana_tech_slug": "tucows",
         "rdap_source": "supplemental",
         "country_name_iso": "Bahrain",
         "as_org_aliases": [
@@ -37432,7 +37432,7 @@
           "ipv4": [
             {
               "ip": "203.119.25.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -38465,17 +38465,17 @@
           "ipv4": [
             {
               "ip": "192.33.14.30",
-              "asn": 396751,
-              "as_org": "AS396751",
+              "asn": 396686,
+              "as_org": "AS396686",
               "as_country": "Unknown"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:503:231d::2:30",
-              "asn": 396654,
-              "as_org": "VRSN-AC50-340",
-              "as_country": "US"
+              "asn": 396690,
+              "as_org": "AS396690",
+              "as_country": "Unknown"
             }
           ]
         },
@@ -43685,7 +43685,7 @@
       "registry_url": "http://www.uoc.cw/cw-registry",
       "tld_created": "2010-12-20",
       "tld_updated": [
-        "2025-07-07"
+        "2026-09-02"
       ],
       "annotations": {
         "country_name_iso": "Curaçao",
@@ -53384,17 +53384,17 @@
           "ipv4": [
             {
               "ip": "192.33.14.30",
-              "asn": 396751,
-              "as_org": "AS396751",
+              "asn": 396686,
+              "as_org": "AS396686",
               "as_country": "Unknown"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:503:231d::2:30",
-              "asn": 396654,
-              "as_org": "VRSN-AC50-340",
-              "as_country": "US"
+              "asn": 396690,
+              "as_org": "AS396690",
+              "as_country": "Unknown"
             }
           ]
         },
@@ -74024,7 +74024,7 @@
       "registry_url": "http://www.gr",
       "tld_created": "1989-02-19",
       "tld_updated": [
-        "2026-07-07"
+        "2026-09-02"
       ],
       "annotations": {
         "country_name_iso": "Greece",
@@ -118689,17 +118689,17 @@
           "ipv4": [
             {
               "ip": "192.33.14.30",
-              "asn": 396751,
-              "as_org": "AS396751",
+              "asn": 396686,
+              "as_org": "AS396686",
               "as_country": "Unknown"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:503:231d::2:30",
-              "asn": 396654,
-              "as_org": "VRSN-AC50-340",
-              "as_country": "US"
+              "asn": 396690,
+              "as_org": "AS396690",
+              "as_country": "Unknown"
             }
           ]
         },
@@ -202059,7 +202059,7 @@
       "whois_server": "whois.nixiregistry.in",
       "tld_created": "2016-08-15",
       "tld_updated": [
-        "2026-08-27"
+        "2026-09-01"
       ],
       "annotations": {
         "iana_sponsor_alias": "NIXI.in",
@@ -202083,44 +202083,6 @@
       },
       "nameservers": [
         {
-          "hostname": "ns01.trs-dns.com",
-          "ipv4": [
-            {
-              "ip": "64.96.1.1",
-              "asn": 393818,
-              "as_org": "TUCOWS-TRS-DNS1",
-              "as_country": "CA"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2620:57:4001::1",
-              "asn": 393818,
-              "as_org": "TUCOWS-TRS-DNS1",
-              "as_country": "CA"
-            }
-          ]
-        },
-        {
-          "hostname": "ns01.trs-dns.net",
-          "ipv4": [
-            {
-              "ip": "64.96.2.1",
-              "asn": 63363,
-              "as_org": "TUCOWS-TRS-DNS2",
-              "as_country": "CA"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2620:57:4002::1",
-              "asn": 63363,
-              "as_org": "TUCOWS-TRS-DNS2",
-              "as_country": "CA"
-            }
-          ]
-        },
-        {
           "hostname": "ns1.registry.in",
           "ipv4": [
             {
@@ -202136,44 +202098,6 @@
               "asn": 393818,
               "as_org": "TUCOWS-TRS-DNS1",
               "as_country": "CA"
-            }
-          ]
-        },
-        {
-          "hostname": "ns10.trs-dns.info",
-          "ipv4": [
-            {
-              "ip": "64.78.204.1",
-              "asn": 42,
-              "as_org": "WOODYNET-1",
-              "as_country": "US"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2620:171:812:1534:8::1",
-              "asn": 42,
-              "as_org": "WOODYNET-1",
-              "as_country": "US"
-            }
-          ]
-        },
-        {
-          "hostname": "ns10.trs-dns.org",
-          "ipv4": [
-            {
-              "ip": "64.78.205.1",
-              "asn": 42,
-              "as_org": "WOODYNET-1",
-              "as_country": "US"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2620:171:813:1534:8::1",
-              "asn": 42,
-              "as_org": "WOODYNET-1",
-              "as_country": "US"
             }
           ]
         },
@@ -202680,16 +202604,16 @@
         "iana": {
           "sponsor": "Telecommunications Regulatory Authority (TRA)",
           "admin": "Telecommunications Regulatory Authority (TRA)",
-          "tech": "CentralNic"
+          "tech": "Tucows.com, Co."
         }
       },
       "tld_created": "2019-06-13",
       "tld_updated": [
-        "2026-07-22"
+        "2026-09-02"
       ],
       "annotations": {
-        "iana_tech_alias": "CentralNic",
-        "iana_tech_slug": "centralnic",
+        "iana_tech_alias": "Tucows",
+        "iana_tech_slug": "tucows",
         "country_name_iso": "Bahrain",
         "as_org_aliases": [
           "Packet Clearing House",
