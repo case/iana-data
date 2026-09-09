@@ -1,0 +1,6 @@
+# Bootstrap tools
+[tools]
+# pyproject.toml's [tool.uv] required-version stays the authority on what uv the
+# project accepts; tests/test_tool_pins.py fails if this drifts outside it.
+uv = "0.11.29"
+shellcheck = "0.11.0"

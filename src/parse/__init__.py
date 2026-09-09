@@ -11,6 +11,11 @@ from .registry_agreement_csv import (
     parse_agreement_types,
     parse_registry_agreement_csv,
 )
+from .registry_agreement_page import (
+    RegistryAgreementPageError,
+    extract_registry_agreements,
+    render_registry_agreement_csv,
+)
 from .root_db_html import (
     derive_type_from_iana_tag,
     parse_root_db_html,
@@ -26,9 +31,11 @@ __all__ = [
     "ASNRecord",
     "GtldRecord",
     "OrgResolver",
+    "RegistryAgreementPageError",
     "build_resolver",
     "derive_type_from_iana_tag",
     "extract_main_content",
+    "extract_registry_agreements",
     "get_all_country_mappings",
     "get_country_name",
     "get_normalized_agreement_types",
@@ -45,6 +52,7 @@ __all__ = [
     "parse_supplemental_cctld_rdap",
     "parse_tlds_txt",
     "rdap_json_content_changed",
+    "render_registry_agreement_csv",
     "root_db_html_content_changed",
     "tlds_txt_content_changed",
 ]

@@ -373,3 +373,43 @@ def test_main_check_returns_0_within_tolerance(tmp_path, monkeypatch):
     )
 
     assert fpc.main() == 0
+
+
+def test_main_refresh_returns_1_when_a_place_cannot_be_fetched(tmp_path, monkeypatch):
+    # ci-open-drift-pr branches on this exit code to flag a partial refresh in
+    # the PR body; returning 0 made "a diff exists" read as "the drift is fixed".
+    _write_place_with_coords(tmp_path, 0.0, 0.0)
+    monkeypatch.setattr(fpc, "MANUAL_DIR", str(tmp_path))
+    monkeypatch.setattr("sys.argv", ["fetch_place_coordinates.py", "--refresh"])
+
+    def boom(client, title):
+        raise ValueError("no entity for title")
+
+    monkeypatch.setattr(fpc, "fetch_coordinates", boom)
+
+    assert fpc.main() == 1
+
+
+def test_main_refresh_returns_0_when_every_place_resolves(tmp_path, monkeypatch):
+    _write_place_with_coords(tmp_path, 0.0, 0.0)
+    monkeypatch.setattr(fpc, "MANUAL_DIR", str(tmp_path))
+    monkeypatch.setattr("sys.argv", ["fetch_place_coordinates.py", "--refresh"])
+    monkeypatch.setattr(
+        fpc, "fetch_coordinates", lambda client, title: (-29.8583, 31.025)
+    )
+
+    assert fpc.main() == 0
+
+
+def test_main_refresh_returns_1_when_the_write_fails(tmp_path, monkeypatch):
+    # write_json_if_changed swallows write errors into a ("error") status, so a
+    # fetched-but-unpersisted refresh used to exit 0 and read as no drift.
+    _write_place_with_coords(tmp_path, 0.0, 0.0)
+    monkeypatch.setattr(fpc, "MANUAL_DIR", str(tmp_path))
+    monkeypatch.setattr("sys.argv", ["fetch_place_coordinates.py", "--refresh"])
+    monkeypatch.setattr(
+        fpc, "fetch_coordinates", lambda client, title: (-29.8583, 31.025)
+    )
+    monkeypatch.setattr(fpc, "write_json_if_changed", lambda *a, **k: (False, "error"))
+
+    assert fpc.main() == 1

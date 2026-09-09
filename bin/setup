@@ -2,6 +2,101 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-# No "$@" forwarding: two sub-tools, no unambiguous destination for args.
-uv sync
-pnpm install
+# mise owns the pinned toolchain in mise.toml. Installing mise itself stays
+# yours. Why: docs/memory/log/2026-09-09-shellcheck-pin.md
+if ! command -v mise > /dev/null; then
+  cat >&2 <<'EOF'
+bin/setup: mise not found, and it provides this repo's pinned tools.
+
+Install it, then re-run bin/setup:
+
+  curl https://mise.run | sh
+
+EOF
+  exit 1
+fi
+
+# Without it there is no pinned toolchain, and every check below would pass by
+# verifying nothing.
+if [ ! -f mise.toml ]; then
+  echo "bin/setup: mise.toml is missing; the pinned toolchain is undefined" >&2
+  exit 1
+fi
+
+printf '==> mise install\n'
+mise install
+
+# `mise exec`, not `mise activate`
+printf '\n==> uv sync\n'
+mise exec -- uv sync
+
+printf '\n==> pnpm install\n'
+mise exec -- pnpm install
+
+# bin/lint and bin/test invoke these tools bare
+printf '\n==> verifying your PATH resolves the pinned toolchain\n'
+
+verify() { # verify <tool> <exact-pinned-version>
+  local tool="$1" want="$2" out
+  if ! command -v "$tool" > /dev/null; then
+    printf '  %-12s MISSING from PATH\n' "$tool"
+    return 1
+  fi
+  # No `|| true`: a tool that cannot report its version has not been verified,
+  # and its error text may itself contain the number being looked for.
+  if ! out="$("$tool" --version 2>&1)"; then
+    printf '  %-12s --version FAILED\n' "$tool"
+    return 1
+  fi
+  # Whole tokens: a substring accepts 0.11.29 for a 0.11.2 pin, a [^0-9.]
+  # boundary accepts 0.11.0-rc1. Why: docs/memory/log/2026-09-09-shellcheck-pin.md
+  if printf '%s\n' "$out" |
+    grep -oE '[0-9]+(\.[0-9]+)+([-.][A-Za-z0-9]+)*' |
+    grep -qxF "$want"; then
+    printf '  %-12s %s\n' "$tool" "$want"
+    return 0
+  fi
+  printf '  %-12s WANT %s, PATH HAS %s\n' \
+    "$tool" "$want" "$(printf '%s' "$out" | tr '\n' ' ')"
+  return 1
+}
+
+# mise parses its own format; hand-rolled awk silently returned nothing for an
+# indented header. Why: docs/memory/log/2026-09-09-shellcheck-pin.md
+mapfile -t pinned < <(
+  mise ls --local --no-header --offline 2>/dev/null |
+    awk '$3 ~ /mise\.toml$/ { print $1 "=" $2 }'
+)
+
+# A parser that yields nothing must not read as "all clear".
+if [ "${#pinned[@]}" -eq 0 ] && grep -q '^[[:space:]]*\[tools\]' mise.toml; then
+  echo "bin/setup: mise.toml declares [tools] but mise listed none; refusing" >&2
+  exit 1
+fi
+
+skew=0
+for entry in "${pinned[@]}"; do
+  verify "${entry%%=*}" "${entry#*=}" || skew=1
+done
+
+# Not in mise.toml: package.json's packageManager field pins it, and bin/setup
+# needed it above.
+verify pnpm "$(node -p 'require("./package.json").packageManager.split("@")[1]')" || skew=1
+
+if [ "$skew" -ne 0 ]; then
+  cat >&2 <<'EOF'
+
+bin/setup: your PATH does not resolve the pinned tools above.
+
+Dependencies installed fine, but bin/lint and bin/test call these tools
+directly, so they would run different versions from CI. Activate mise in your
+shell rc, then open a new shell:
+
+  echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
+
+Or prefix each command with `mise exec --`.
+EOF
+  exit 1
+fi
+
+printf '\nbin/setup: toolchain ready\n'

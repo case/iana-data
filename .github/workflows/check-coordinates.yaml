@@ -2,7 +2,7 @@ name: Check coordinate drift
 
 on:
   schedule:
-    # Weekly, Mondays 04:00 UTC (clear of the daily 00:00 / 02:00 data jobs).
+    # Weekly, Mondays 04:00 UTC
     - cron: "0 4 * * 1"
   workflow_dispatch: # Allow manual triggering
 
@@ -17,63 +17,128 @@ permissions:
 
 jobs:
   check-coordinates:
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-24.04
+    # Must exceed the sum of the step caps below (2+3+5 setup, 10 check, 12 PR,
+    # 5 notifications at 2, 1 guard = 43), or a step guard can never fire and the
+    # job cap cancels instead, which sends no alert.
+    timeout-minutes: 50
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v7.0.1
+        timeout-minutes: 2
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - name: Install uv
-        uses: astral-sh/setup-uv@v10.0.1
+      - name: Cache uv downloads
+        timeout-minutes: 3
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
-          enable-cache: true
-          version-file: "pyproject.toml"
+          path: ~/.cache/uv
+          key: uv-${{ runner.os }}-${{ hashFiles('uv.lock') }}
+          restore-keys: uv-${{ runner.os }}-
 
+      - name: Install mise and the pinned toolchain
+        timeout-minutes: 5
+        uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0
+
+      # Exit 1 means drift or an unreachable article, but a crash and a missing
+      # places.json exit 1 too, so the check's own summary line is what proves it
+      # ran to the end. The counts separate drift from outage for the steps below.
       - name: Verify stored coordinates against Wikidata
         id: check
-        continue-on-error: true
+        timeout-minutes: 10
         run: |
           set -o pipefail
-          bin/fetch-coordinates --check 2>&1 | tee drift-report.log
+          report="$RUNNER_TEMP/drift-report.log"
+          status=0
+          bin/fetch-coordinates --check 2>&1 | tee "$report" || status=$?
+          if [ "$status" -gt 1 ] || ! grep -q '^coordinate check: ' "$report"; then
+            echo "::error::Coordinate check exited $status without completing"
+            exit 1
+          fi
+          {
+            echo "drifted=$(grep -c '^DRIFT ' "$report" || true)"
+            echo "failed=$(grep -c '^FAIL ' "$report" || true)"
+          } >> "$GITHUB_OUTPUT"
 
       - name: Open refresh PR on drift
         id: pr
-        if: steps.check.outcome == 'failure'
+        if: steps.check.outputs.drifted != '0'
+        timeout-minutes: 12
         env:
           GH_TOKEN: ${{ github.token }}
-        run: |
-          bin/fetch-coordinates --refresh
-          if git diff --quiet -- data/manual; then
-            echo "No file changes after refresh (likely a transient fetch failure); skipping PR."
-            exit 0
-          fi
-          branch=coordinate-drift
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git checkout -B "$branch"
-          git add data/manual/
-          git commit -m "Refresh drifted coordinates from Wikidata"
-          git push -f origin "$branch"
-          { echo "The weekly check found Wikidata coordinates that drifted past the ~1 km tolerance."; \
-            echo; echo '```'; grep -E '^(DRIFT|FAIL)' drift-report.log || true; echo '```'; \
-            echo; echo "Review each: merge if Wikidata's value is the better one, close if ours is correct."; \
-          } > pr-body.md
-          if gh pr view "$branch" --json state --jq .state 2>/dev/null | grep -q OPEN; then
-            echo "Drift PR already open for $branch; pushed the branch and commented the new report."
-            gh pr comment "$branch" --body-file pr-body.md
-          else
-            gh pr create --base main --head "$branch" \
-              --title "Coordinate drift detected" --body-file pr-body.md
-            echo "pr_created=true" >> "$GITHUB_OUTPUT"
-          fi
+        run: bin/ci-open-drift-pr "$RUNNER_TEMP/drift-report.log"
 
-      # Push only on a newly opened PR; an already-open PR gets a comment (above),
-      # so an unresolved drift doesn't re-notify every week.
+      # Notify on new drift content only; an unchanged branch is not re-announced.
       - name: Notify on new drift PR
-        if: steps.check.outcome == 'failure' && steps.pr.outputs.pr_created == 'true'
+        id: notify-drift
+        if: steps.pr.outputs.outcome == 'pr_opened' || steps.pr.outputs.outcome == 'pr_updated'
+        continue-on-error: true
+        timeout-minutes: 2
         uses: ./.github/actions/pushover
         with:
           pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
           pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
           title: "Coordinate drift detected"
           message: "⚠️ Wikidata coordinates drifted past tolerance; a refresh PR is open for review."
+
+      - name: Notify when the PR could not be opened
+        id: notify-blocked
+        if: steps.pr.outputs.outcome == 'pr_blocked'
+        continue-on-error: true
+        timeout-minutes: 2
+        uses: ./.github/actions/pushover
+        with:
+          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
+          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
+          title: "Coordinate drift needs a PR opened by hand"
+          message: "⚠️ Drift refreshed and pushed, but GitHub refused to create the PR: ${{ steps.pr.outputs.compare_url }}"
+
+      - name: Notify when the refresh could not fix the drift
+        id: notify-refresh-failed
+        if: steps.pr.outputs.outcome == 'refresh_failed'
+        continue-on-error: true
+        timeout-minutes: 2
+        uses: ./.github/actions/pushover
+        with:
+          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
+          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
+          title: "Coordinate drift could not be refreshed"
+          message: "⚠️ Drift was found but the refresh fetched nothing; the stored coordinates are still stale."
+
+      # Drift and fetch failure share exit 1, so a pure outage looks identical to
+      # a clean run without this. It skips the refresh; there is nothing to fix.
+      - name: Notify when Wikidata could not be reached
+        id: notify-outage
+        if: steps.check.outputs.drifted == '0' && steps.check.outputs.failed != '0'
+        continue-on-error: true
+        timeout-minutes: 2
+        uses: ./.github/actions/pushover
+        with:
+          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
+          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
+          title: "Coordinate check could not reach Wikidata"
+          message: "⚠️ No drift found, but ${{ steps.check.outputs.failed }} place(s) failed to fetch; the check is not proving anything."
+
+      # continue-on-error sets a failed step's conclusion to success, so without
+      # this the job stays green with nothing delivered.
+      - name: Fail the job when an alert could not be delivered
+        if: |
+          steps.notify-drift.outcome == 'failure'
+          || steps.notify-blocked.outcome == 'failure'
+          || steps.notify-refresh-failed.outcome == 'failure'
+          || steps.notify-outage.outcome == 'failure'
+        timeout-minutes: 1
+        run: |
+          echo "::error::An alert was raised but could not be delivered"
+          exit 1
+
+      - name: Notify if the coordinate job failed
+        if: failure()
+        continue-on-error: true
+        timeout-minutes: 2
+        uses: ./.github/actions/pushover
+        with:
+          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
+          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
+          title: "Coordinate drift job failed"
+          message: "❌ The weekly coordinate drift job failed"

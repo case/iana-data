@@ -10,6 +10,7 @@ fix is in the data, not the test.
 
 import difflib
 import json
+import os
 from types import SimpleNamespace
 from unittest.mock import patch
 
@@ -17,6 +18,7 @@ import pytest
 
 from src.build.tlds import OutputPaths, build_tlds_json
 from src.parse.organizations import build_resolver, parse_organizations_manual
+from src.utilities.download import get_iptoasn_path
 
 # Annotation prefix -> (source bucket, role) for the scalar registry positions.
 SCALAR_ROLES = [
@@ -27,6 +29,22 @@ SCALAR_ROLES = [
 ]
 
 
+def _require_iptoasn_source() -> None:
+    """Skip without ASN source data locally; fail in CI, which downloads it."""
+    path = get_iptoasn_path()
+    if path.exists():
+        return
+
+    reason = (
+        f"{path} is missing, so a fresh build carries no ASN data and every "
+        "assertion here degrades into a KeyError. Fetch it with:\n"
+        "    make download-iptoasn"
+    )
+    if os.environ.get("CI"):
+        pytest.fail(f"{reason}\n\nCI downloads this artifact; check that step.")
+    pytest.skip(reason)
+
+
 @pytest.fixture(scope="module")
 def built(tmp_path_factory):
     """One fresh build, yielding the parsed tlds.json and organizations.json.
@@ -35,6 +53,7 @@ def built(tmp_path_factory):
     `./bin/build`, so these tests build into a temp dir rather than reading the
     repo's generated files.
     """
+    _require_iptoasn_source()
     tmp = tmp_path_factory.mktemp("orgs_integrity")
     with patch("src.utilities.metadata.METADATA_FILE", str(tmp / "metadata.json")):
         paths = OutputPaths(

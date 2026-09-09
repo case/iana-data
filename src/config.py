@@ -10,7 +10,7 @@ IANA_URLS: Final[dict[str, str]] = {
 }
 
 ICANN_URLS: Final[dict[str, str]] = {
-    "REGISTRY_AGREEMENT_TABLE": "https://www.icann.org/en/registry-agreements/csvdownload",
+    "REGISTRY_AGREEMENT_TABLE": "https://www.icann.org/en/registry-agreements",
     "GTLDS_JSON": "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json",
 }
 

@@ -1,0 +1,106 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+usage() {
+  cat <<'EOF'
+Usage: bin/ci-commit-signed-data
+
+Commits the already-staged data update with an SSH signature and pushes it to
+main. Run only after bin/ci-apply-data-patch has validated and staged the patch.
+
+Environment:
+  PUSH_REMOTE           Remote to fetch and push. Credential-free: git copies
+                        every argument into /proc/<pid>/cmdline, so a token in
+                        the URL is readable by any process on the runner.
+  GH_TOKEN              Optional. When set, authenticates via an extraheader
+                        passed through GIT_CONFIG_* rather than the URL or argv.
+  EXPECTED_HEAD         Commit the update was built against. Refuses to run if
+                        main has moved past it.
+  SOURCE_CHANGED        "true" selects the source-refresh commit subject.
+  CI_SSH_SIGNING_KEY    Private key, written 0600 and removed on exit.
+  CI_COMMITTER_NAME     Commit identity. The email must own the signing key.
+  CI_COMMITTER_EMAIL
+
+Why the signature is checked with process substitution, and why the message is
+passed with -F: docs/memory/log/2026-09-07-ci-signing.md
+EOF
+}
+
+case "${1:-}" in
+  -h | --help) usage; exit 0 ;;
+  "") ;;
+  *)
+    printf 'bin/ci-commit-signed-data: unexpected argument %s\n\n' "$1" >&2
+    usage >&2
+    exit 2
+    ;;
+esac
+
+: "${RUNNER_TEMP:?RUNNER_TEMP is not set}"
+
+for var in PUSH_REMOTE EXPECTED_HEAD CI_SSH_SIGNING_KEY CI_COMMITTER_NAME CI_COMMITTER_EMAIL; do
+  if [ -z "${!var:-}" ]; then
+    echo "::error::$var is not configured"
+    exit 1
+  fi
+done
+
+# Env config, never `git -c` and never the URL: both land in argv.
+if [ -n "${GH_TOKEN:-}" ]; then
+  export GIT_CONFIG_COUNT=1
+  export GIT_CONFIG_KEY_0="http.${PUSH_REMOTE}.extraheader"
+  # printf, not <<<, which appends a newline and 401s the push. Both keep the
+  # token out of argv. Why: docs/memory/log/2026-09-07-ci-signing.md
+  GIT_CONFIG_VALUE_0="Authorization: Basic $(
+    printf '%s' "x-access-token:${GH_TOKEN}" | base64 -w0
+  )"
+  export GIT_CONFIG_VALUE_0
+fi
+
+# FETCH_HEAD is written by the fetch itself; origin/main depends on a refspec
+# actions/checkout happens to leave behind.
+git fetch --no-tags "$PUSH_REMOTE" main
+if [ "$(git rev-parse FETCH_HEAD)" != "$EXPECTED_HEAD" ]; then
+  echo "::error::main advanced during the update; a re-run reuses the stale head, so dispatch a fresh run"
+  exit 1
+fi
+
+signing_key="$RUNNER_TEMP/iana-data-ci-signing"
+umask 077
+printf '%s\n' "$CI_SSH_SIGNING_KEY" > "$signing_key"
+trap 'rm -f "$signing_key"' EXIT
+
+git config --local user.name "$CI_COMMITTER_NAME"
+git config --local user.email "$CI_COMMITTER_EMAIL"
+git config --local gpg.format ssh
+git config --local gpg.ssh.program /usr/bin/ssh-keygen
+git config --local user.signingkey "$signing_key"
+
+if [ "${SOURCE_CHANGED:-}" = "true" ]; then
+  commit_message="Update IANA source data files"
+else
+  commit_message="Regenerate data from manual curation"
+fi
+commit_message="${commit_message}
+
+Changed files:"
+while IFS= read -r -d '' path; do
+  display_path="${path#data/source/}"
+  display_path="${display_path#data/generated/}"
+  commit_message="${commit_message}
+- ${display_path}"
+done < <(git diff --cached --no-renames --name-only -z HEAD -- data/)
+
+# -F, not -m: one argv entry caps at 128 KiB, and all 3,210 data files render to
+# ~70 KB of message.
+printf '%s\n' "$commit_message" > "$RUNNER_TEMP/commit-message"
+git -c core.hooksPath=/dev/null commit -S -F "$RUNNER_TEMP/commit-message"
+
+# Process substitution, not a pipe: grep -q exits early and would SIGPIPE git on
+# a large commit message, which pipefail reads as an unsigned commit.
+if ! grep -q '^gpgsig ' <(git cat-file commit HEAD); then
+  echo "::error::Generated commit does not contain a signature"
+  exit 1
+fi
+
+git -c core.hooksPath=/dev/null push "$PUSH_REMOTE" HEAD:main

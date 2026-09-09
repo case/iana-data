@@ -19,7 +19,7 @@ runs:
     - name: Send Pushover notification
       shell: bash
       run: |
-        curl -Ss -X POST -H 'Content-type: application/json' \
+        curl -Ss --fail-with-body --max-time 15 -X POST -H 'Content-type: application/json' \
           --data '{
             "token": "${{ inputs.pushover_api_token }}",
             "user": "${{ inputs.pushover_user_key }}",

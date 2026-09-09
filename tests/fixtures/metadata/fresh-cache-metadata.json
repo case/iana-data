@@ -3,7 +3,8 @@
     "last_checked": "2025-11-18T16:00:00Z",
     "cache_data": {
       "cache_max_age": "86400",
-      "last_downloaded": "2025-11-18T16:00:00Z"
+      "last_downloaded": "2025-11-18T16:00:00Z",
+      "url": "https://www.iana.org/domains/root/db"
     }
   }
 }

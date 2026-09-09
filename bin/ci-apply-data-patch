@@ -1,0 +1,88 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+usage() {
+  cat <<'EOF'
+Usage: bin/ci-apply-data-patch <patch-file>
+
+Validates a data-update patch produced by the update-data job and applies it to
+the index. The patch is untrusted: it crosses a job boundary from a runner that
+built it out of content fetched from the open internet.
+
+Every path the patch names is checked before it reaches the filesystem, and the
+staged set is checked again afterwards. Applies with --cached, so the working
+tree is never written and a later `uses: ./...` still resolves the checked-out
+action. Holds no credentials by design; the caller adds them afterwards.
+
+Why each check exists: docs/memory/log/2026-09-07-ci-signing.md
+EOF
+}
+
+case "${1:-}" in
+  -h | --help | "")
+    usage
+    exit 0
+    ;;
+esac
+
+patch="$1"
+
+if [ ! -s "$patch" ]; then
+  echo "::error::Data update patch is missing or empty"
+  exit 1
+fi
+
+validate_path() {
+  if [[ ! "$1" =~ ^data/[A-Za-z0-9._/-]+$ ]] ||
+    [[ "$1" == *".."* ]] ||
+    [[ "$1" == *"/."* ]]; then
+    echo "::error file=$1::Patch contains a disallowed path"
+    exit 1
+  fi
+}
+
+# A rename records only its destination in every check below, so the source path
+# escapes the allowlist. The producer emits none.
+if grep -q '^rename from ' "$patch"; then
+  echo "::error::Data update patch contains a rename"
+  exit 1
+fi
+
+# Cheap early reject. Redundant with the post-apply loop for every input we can
+# construct, deliberately: the two read different sources of truth.
+patch_paths=0
+while IFS= read -r -d '' record; do
+  path="${record#*$'\t'}"
+  validate_path "${path#*$'\t'}"
+  patch_paths=$((patch_paths + 1))
+done < <(git apply --numstat -z "$patch")
+if [ "$patch_paths" -eq 0 ]; then
+  echo "::error::Data update patch names no files"
+  exit 1
+fi
+
+git apply --check --cached "$patch"
+git apply --cached "$patch"
+
+# --no-renames keeps a rename's source path visible as its own deletion rather
+# than folding it into the destination.
+mapfile -d '' staged < <(git diff --cached --no-renames --name-only -z HEAD)
+if [ "${#staged[@]}" -eq 0 ]; then
+  echo "::error::Data update patch made no changes"
+  exit 1
+fi
+for path in "${staged[@]}"; do
+  validate_path "$path"
+done
+
+# Unscoped, so a path the loop above rejected cannot slip through here.
+# Field 2 is the destination mode; 000000 is a deletion.
+bad_modes=$(git diff --cached --no-renames --raw HEAD |
+  awk '$2 != "100644" && $2 != "000000" { print }')
+if [ -n "$bad_modes" ]; then
+  printf '%s\n' "$bad_modes"
+  echo "::error::Data update contains a non-regular file mode"
+  exit 1
+fi
+
+printf 'Validated and staged %d path(s).\n' "${#staged[@]}"

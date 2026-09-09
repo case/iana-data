@@ -12,6 +12,7 @@ from src.utilities.download import (
     download_file,
     download_iana_files,
 )
+from src.utilities.metadata import utc_timestamp
 
 FIXTURES_DIR = Path(__file__).parent.parent / "fixtures"
 SOURCE_FIXTURES_DIR = FIXTURES_DIR / "source" / "core"
@@ -953,3 +954,441 @@ def test_get_iptoasn_path():
 
     assert path.name == "ip2asn-combined.tsv.gz"
     assert "iptoasn" in str(path)
+
+
+def test_download_file_applies_transform_before_saving(tmp_path):
+    """A transform converts the fetched document into the bytes written to disk."""
+    source_dir = tmp_path / "data" / "source"
+    source_dir.mkdir(parents=True)
+
+    def mock_get(url, headers=None):
+        response = Mock(spec=httpx.Response)
+        response.status_code = 200
+        response.headers = {}
+        response.content = b"<html>raw</html>"
+        response.text = "<html>raw</html>"
+        return response
+
+    with (
+        patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
+        patch("src.utilities.download.load_metadata", return_value={}),
+        patch("src.utilities.download.save_metadata"),
+        patch("httpx.Client") as mock_client,
+    ):
+        mock_client.return_value.__enter__.return_value.get = mock_get
+        result = download_file(
+            key="TEST",
+            url="https://example.com/page",
+            filename="out.csv",
+            transform=lambda text: f"derived:{len(text)}".encode(),
+        )
+
+    assert result == "downloaded"
+    assert (source_dir / "out.csv").read_bytes() == b"derived:16"
+
+
+def test_download_file_skips_write_when_transform_output_unchanged(tmp_path):
+    """An unchanged derived file is not rewritten, so the source document can churn."""
+    source_dir = tmp_path / "data" / "source"
+    source_dir.mkdir(parents=True)
+    existing = source_dir / "out.csv"
+    existing.write_bytes(b"derived:16")
+    original_mtime = existing.stat().st_mtime_ns
+
+    def mock_get(url, headers=None):
+        response = Mock(spec=httpx.Response)
+        response.status_code = 200
+        response.headers = {}
+        response.content = b"<html>new</html>"
+        response.text = "<html>new</html>"
+        return response
+
+    with (
+        patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
+        patch("src.utilities.download.load_metadata", return_value={}),
+        patch("src.utilities.download.save_metadata"),
+        patch("httpx.Client") as mock_client,
+    ):
+        mock_client.return_value.__enter__.return_value.get = mock_get
+        result = download_file(
+            key="TEST",
+            url="https://example.com/page",
+            filename="out.csv",
+            transform=lambda text: f"derived:{len(text)}".encode(),
+        )
+
+    assert result == "not_modified"
+    assert existing.stat().st_mtime_ns == original_mtime
+
+
+def test_download_file_reports_error_when_transform_raises(tmp_path):
+    """A transform that rejects the document fails the download instead of saving it."""
+    source_dir = tmp_path / "data" / "source"
+    source_dir.mkdir(parents=True)
+
+    def mock_get(url, headers=None):
+        response = Mock(spec=httpx.Response)
+        response.status_code = 200
+        response.headers = {}
+        response.content = b"<html>unexpected</html>"
+        response.text = "<html>unexpected</html>"
+        return response
+
+    def exploding_transform(text):
+        raise ValueError("page structure changed")
+
+    with (
+        patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
+        patch("src.utilities.download.load_metadata", return_value={}),
+        patch("src.utilities.download.save_metadata"),
+        patch("httpx.Client") as mock_client,
+    ):
+        mock_client.return_value.__enter__.return_value.get = mock_get
+        result = download_file(
+            key="TEST",
+            url="https://example.com/page",
+            filename="out.csv",
+            transform=exploding_transform,
+        )
+
+    assert result == "error"
+    assert not (source_dir / "out.csv").exists()
+
+
+def test_download_file_drops_cache_recorded_against_another_url(tmp_path):
+    """Repointing a key at a new URL discards the old endpoint's validators."""
+    source_dir = tmp_path / "data" / "source"
+    source_dir.mkdir(parents=True)
+    metadata = {
+        "TEST": {
+            "cache_data": {
+                "url": "https://example.com/old-endpoint",
+                "etag": 'W/"stale"',
+                "last_modified": "Tue, 26 May 2026 03:09:30 GMT",
+            }
+        }
+    }
+    sent_headers = {}
+
+    def mock_get(url, headers=None):
+        sent_headers.update(headers or {})
+        response = Mock(spec=httpx.Response)
+        response.status_code = 200
+        response.headers = {"etag": 'W/"fresh"'}
+        response.content = b"<html>page</html>"
+        return response
+
+    with (
+        patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
+        patch("src.utilities.download.load_metadata", return_value=metadata),
+        patch("src.utilities.download.save_metadata"),
+        patch("httpx.Client") as mock_client,
+    ):
+        mock_client.return_value.__enter__.return_value.get = mock_get
+        result = download_file(
+            key="TEST",
+            url="https://example.com/page",
+            filename="out.csv",
+            transform=lambda text: f"derived:{len(text)}".encode(),
+        )
+
+    assert result == "downloaded"
+    assert "If-None-Match" not in sent_headers
+    assert "If-Modified-Since" not in sent_headers
+    assert metadata["TEST"]["cache_data"] == {
+        "url": "https://example.com/page",
+        "etag": 'W/"fresh"',
+    }
+
+
+def test_download_file_reuses_cache_recorded_against_the_same_url(tmp_path):
+    """Validators captured from the same URL are still sent as conditional headers."""
+    source_dir = tmp_path / "data" / "source"
+    source_dir.mkdir(parents=True)
+    metadata = {
+        "TEST": {
+            "cache_data": {
+                "url": "https://example.com/page",
+                "etag": 'W/"same"',
+            }
+        }
+    }
+    sent_headers = {}
+
+    def mock_get(url, headers=None):
+        sent_headers.update(headers or {})
+        response = Mock(spec=httpx.Response)
+        response.status_code = 304
+        response.headers = {}
+        return response
+
+    with (
+        patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
+        patch("src.utilities.download.load_metadata", return_value=metadata),
+        patch("src.utilities.download.save_metadata"),
+        patch("httpx.Client") as mock_client,
+    ):
+        mock_client.return_value.__enter__.return_value.get = mock_get
+        result = download_file(
+            key="TEST", url="https://example.com/page", filename="out.csv"
+        )
+
+    assert result == "not_modified"
+    assert sent_headers["If-None-Match"] == 'W/"same"'
+
+
+def test_download_file_records_new_etag_when_transform_output_is_unchanged(tmp_path):
+    """An unchanged derived file still refreshes the validators, so 304s keep working."""
+    source_dir = tmp_path / "data" / "source"
+    source_dir.mkdir(parents=True)
+    (source_dir / "out.csv").write_bytes(b"derived:20")
+    metadata = {
+        "TEST": {"cache_data": {"url": "https://example.com/page", "etag": 'W/"old"'}}
+    }
+
+    def mock_get(url, headers=None):
+        response = Mock(spec=httpx.Response)
+        response.status_code = 200
+        response.headers = {"etag": 'W/"new"'}
+        response.content = b"<html>churned</html>"
+        return response
+
+    with (
+        patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
+        patch("src.utilities.download.load_metadata", return_value=metadata),
+        patch("src.utilities.download.save_metadata"),
+        patch("httpx.Client") as mock_client,
+    ):
+        mock_client.return_value.__enter__.return_value.get = mock_get
+        result = download_file(
+            key="TEST",
+            url="https://example.com/page",
+            filename="out.csv",
+            transform=lambda text: f"derived:{len(text)}".encode(),
+        )
+
+    assert result == "not_modified"
+    assert metadata["TEST"]["cache_data"]["etag"] == 'W/"new"'
+
+
+def test_download_file_transform_never_runs_on_a_304(tmp_path):
+    """A 304 short-circuits before the transform, so the file on disk is untouched."""
+    source_dir = tmp_path / "data" / "source"
+    source_dir.mkdir(parents=True)
+    (source_dir / "out.csv").write_bytes(b"existing")
+    metadata = {
+        "TEST": {"cache_data": {"url": "https://example.com/page", "etag": 'W/"same"'}}
+    }
+    calls = []
+
+    def mock_get(url, headers=None):
+        response = Mock(spec=httpx.Response)
+        response.status_code = 304
+        response.headers = {}
+        return response
+
+    with (
+        patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
+        patch("src.utilities.download.load_metadata", return_value=metadata),
+        patch("src.utilities.download.save_metadata"),
+        patch("httpx.Client") as mock_client,
+    ):
+        mock_client.return_value.__enter__.return_value.get = mock_get
+        result = download_file(
+            key="TEST",
+            url="https://example.com/page",
+            filename="out.csv",
+            transform=lambda text: calls.append(text) or b"derived",
+        )
+
+    assert result == "not_modified"
+    assert calls == []
+    assert (source_dir / "out.csv").read_bytes() == b"existing"
+
+
+def test_download_file_transform_decodes_utf8_regardless_of_declared_charset(tmp_path):
+    """The transform sees UTF-8, not httpx's header-inferred charset."""
+    source_dir = tmp_path / "data" / "source"
+    source_dir.mkdir(parents=True)
+
+    def mock_get(url, headers=None):
+        response = Mock(spec=httpx.Response)
+        response.status_code = 200
+        response.headers = {"content-type": "text/html; charset=iso-8859-1"}
+        response.content = "Kanton Zürich".encode()
+        response.text = "Kanton ZÃ¼rich"
+        return response
+
+    with (
+        patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
+        patch("src.utilities.download.load_metadata", return_value={}),
+        patch("src.utilities.download.save_metadata"),
+        patch("httpx.Client") as mock_client,
+    ):
+        mock_client.return_value.__enter__.return_value.get = mock_get
+        result = download_file(
+            key="TEST",
+            url="https://example.com/page",
+            filename="out.csv",
+            transform=lambda text: text.encode("utf-8"),
+        )
+
+    assert result == "downloaded"
+    assert (source_dir / "out.csv").read_text(encoding="utf-8") == "Kanton Zürich"
+
+
+def test_download_file_records_validators_when_content_validator_reports_unchanged(
+    tmp_path,
+):
+    """A source whose content never changes keeps sending conditional requests."""
+    source_dir = tmp_path / "data" / "source"
+    source_dir.mkdir(parents=True)
+    metadata = {"TEST": {}}
+
+    def mock_get(url, headers=None):
+        response = Mock(spec=httpx.Response)
+        response.status_code = 200
+        response.headers = {"etag": 'W/"new"'}
+        response.content = b"same"
+        response.text = "same"
+        return response
+
+    with (
+        patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
+        patch("src.utilities.download.load_metadata", return_value=metadata),
+        patch("src.utilities.download.save_metadata"),
+        patch("httpx.Client") as mock_client,
+    ):
+        mock_client.return_value.__enter__.return_value.get = mock_get
+        result = download_file(
+            key="TEST",
+            url="https://example.com/page",
+            filename="out.txt",
+            content_validator=lambda path, text: False,
+        )
+
+    assert result == "not_modified"
+    assert metadata["TEST"]["cache_data"] == {
+        "url": "https://example.com/page",
+        "etag": 'W/"new"',
+    }
+
+
+def test_download_file_ignores_cache_freshness_when_a_transform_is_set(tmp_path):
+    """A long origin max-age must not skip the transform and freeze the derived file."""
+    source_dir = tmp_path / "data" / "source"
+    source_dir.mkdir(parents=True)
+    metadata = {
+        "TEST": {
+            "cache_data": {
+                "url": "https://example.com/page",
+                "cache_control": "max-age=604800",
+                "cache_max_age": "604800",
+                "last_downloaded": utc_timestamp(),
+            }
+        }
+    }
+    requested = []
+
+    def mock_get(url, headers=None):
+        requested.append(url)
+        response = Mock(spec=httpx.Response)
+        response.status_code = 200
+        response.headers = {}
+        response.content = b"<html>fresh</html>"
+        return response
+
+    with (
+        patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
+        patch("src.utilities.download.load_metadata", return_value=metadata),
+        patch("src.utilities.download.save_metadata"),
+        patch("httpx.Client") as mock_client,
+    ):
+        mock_client.return_value.__enter__.return_value.get = mock_get
+        result = download_file(
+            key="TEST",
+            url="https://example.com/page",
+            filename="out.csv",
+            transform=lambda text: b"derived",
+        )
+
+    assert requested == ["https://example.com/page"]
+    assert result == "downloaded"
+    assert (source_dir / "out.csv").read_bytes() == b"derived"
+
+
+def test_download_file_does_not_record_validators_when_transform_raises(tmp_path):
+    """A failed transform must be retried, not answered with a 304 next run."""
+    source_dir = tmp_path / "data" / "source"
+    source_dir.mkdir(parents=True)
+    metadata = {"TEST": {}}
+
+    def mock_get(url, headers=None):
+        response = Mock(spec=httpx.Response)
+        response.status_code = 200
+        response.headers = {"etag": 'W/"changed-markup"'}
+        response.content = b"<html>redesigned</html>"
+        return response
+
+    def exploding_transform(text):
+        raise ValueError("page structure changed")
+
+    with (
+        patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
+        patch("src.utilities.download.load_metadata", return_value=metadata),
+        patch("src.utilities.download.save_metadata"),
+        patch("httpx.Client") as mock_client,
+    ):
+        mock_client.return_value.__enter__.return_value.get = mock_get
+        result = download_file(
+            key="TEST",
+            url="https://example.com/page",
+            filename="out.csv",
+            transform=exploding_transform,
+        )
+
+    assert result == "error"
+    assert "cache_data" not in metadata["TEST"]
+
+
+def test_download_file_keeps_freshness_window_anchored_to_the_last_real_save(tmp_path):
+    """An unchanged source must not slide its own Cache-Control window forward."""
+    source_dir = tmp_path / "data" / "source"
+    source_dir.mkdir(parents=True)
+    anchored = "2026-01-01T00:00:00Z"
+    metadata = {
+        "TEST": {
+            "cache_data": {
+                "url": "https://example.com/page",
+                "cache_control": "max-age=3600",
+                "cache_max_age": "3600",
+                "last_downloaded": anchored,
+            }
+        }
+    }
+
+    def mock_get(url, headers=None):
+        response = Mock(spec=httpx.Response)
+        response.status_code = 200
+        response.headers = {"cache-control": "max-age=3600", "etag": 'W/"new"'}
+        response.content = b"same"
+        response.text = "same"
+        return response
+
+    with (
+        patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
+        patch("src.utilities.download.load_metadata", return_value=metadata),
+        patch("src.utilities.download.save_metadata"),
+        patch("httpx.Client") as mock_client,
+    ):
+        mock_client.return_value.__enter__.return_value.get = mock_get
+        result = download_file(
+            key="TEST",
+            url="https://example.com/page",
+            filename="out.txt",
+            content_validator=lambda path, text: False,
+        )
+
+    assert result == "not_modified"
+    assert metadata["TEST"]["cache_data"]["last_downloaded"] == anchored
+    assert metadata["TEST"]["cache_data"]["etag"] == 'W/"new"'

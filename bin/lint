@@ -9,13 +9,56 @@ if [ ${#paths[@]} -eq 0 ]; then
   paths=(.)
 fi
 
-# Run all linters even if an earlier one fails, so the developer
-# sees the full set of findings in one pass instead of round-tripping.
-exit_code=0
-uv run ruff check "${paths[@]}" || exit_code=$?
-uv run ruff format --check "${paths[@]}" || exit_code=$?
-uv run pyright "${paths[@]}" || exit_code=$?
-# JSON checks (whole repo): every file parses; data artifacts are canonical.
-# Uses `uv run` to share the canonical-format helper from src/.
-uv run python bin/lint-json.py || exit_code=$?
-exit $exit_code
+# Required, not skipped-if-absent: a check that cannot fail is worse than no
+# check. Why: docs/memory/log/2026-08-18-lint-scope.md
+if ! command -v shellcheck > /dev/null; then
+  echo "bin/lint: shellcheck not found; install it (mise use -g shellcheck)" >&2
+  exit 1
+fi
+
+# Found by shebang, so a rename or a not-yet-added file cannot drop out of
+# scope. Why: docs/memory/log/2026-09-09-shellcheck-pin.md
+mapfile -t shell_scripts < <(grep -rlIE '^#!.*\b(ba)?sh\b' bin/ | sort)
+if [ ${#shell_scripts[@]} -eq 0 ]; then
+  echo "bin/lint: no shell scripts found under bin/, refusing" >&2
+  exit 1
+fi
+
+groups=0
+failed=()
+
+# Each group ends in ok or FAILED: shellcheck says nothing on a clean run, and
+# a check you cannot see run is one you cannot trust.
+group() { # group <label> <command>...
+  local label="$1"
+  shift
+  groups=$((groups + 1))
+  printf '\n==> %s\n' "$label"
+  if "$@"; then
+    printf '    ok\n'
+    return 0
+  fi
+  printf '    FAILED\n'
+  failed+=("$label")
+}
+
+group "Python: ruff check (${paths[*]})" \
+  uv run ruff check "${paths[@]}"
+group "Python: ruff format --check (${paths[*]})" \
+  uv run ruff format --check "${paths[@]}"
+group "Python: pyright (${paths[*]})" \
+  uv run pyright "${paths[@]}"
+group "Shell: shellcheck (${#shell_scripts[@]} scripts under bin/)" \
+  shellcheck "${shell_scripts[@]}"
+group "JSON: parse + canonical format (whole repo)" \
+  uv run python bin/lint-json.py
+
+printf '\n'
+if [ ${#failed[@]} -eq 0 ]; then
+  printf 'bin/lint: all %d groups passed\n' "$groups"
+  exit 0
+fi
+
+printf 'bin/lint: %d of %d groups FAILED\n' "${#failed[@]}" "$groups"
+printf '  - %s\n' "${failed[@]}"
+exit 1

@@ -8,6 +8,8 @@ tags: [log, decision, ci, build, organizations]
 
 # 2026-06-07 - Nightly rebuild picks up manual curation
 
+> **Superseded in part, 2026-09-07.** The source-change gate now runs `git add --intent-to-add` and diffs against `HEAD`, so a new or deleted source file triggers a full `--all` rebuild rather than `--preserve-asn`. See [2026-09-07 registry agreement CSV](2026-09-07-registry-agreement-csv.md).
+
 ## Problem
 
 `update-data.yaml` gated the build on `git diff --quiet data/source/` and only ran `bin/build --all` when downloaded IANA source files changed. `data/manual/` (editorial curation: organizations, aliases, coordinates) is not checked and does not change during a nightly run, so manual edits sat in source but never regenerated into `data/generated/` until an unrelated IANA-source change happened to trigger a build. The org-mapping work accumulated ~2 weeks of un-regenerated curation this way.

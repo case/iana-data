@@ -25,4 +25,6 @@ This closes the "fold them in as they appear, retire them as they leave" cycle o
 
 ## Detection lag
 
-The nightly `Update IANA Data` run failed every day from 2026-08-11 to 2026-08-18 on this one assertion, and the test step gates the commit step - so no source-data refresh landed for a week. The pushover notification step fired each time but ran with an invalid token (`application token must be supplied`), so nothing was delivered. Worth fixing the token or adding a second channel; a data repo whose only signal is a silent nightly failure goes stale invisibly.
+The nightly `Update IANA Data` run failed every day from 2026-08-11 to 2026-08-18 on this one assertion, and the test step gates the commit step - so no source-data refresh landed for a week. The pushover notification step fired each time but ran with an invalid token (`application token must be supplied`), so nothing was delivered.
+
+**Update 2026-09-09**: `PUSHOVER_API_TOKEN` is valid and delivering. The registry-agreement download failure has notified nightly since 2026-07-30. Whatever was wrong in August is fixed; treat the token as working.

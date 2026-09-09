@@ -1,0 +1,91 @@
+#!/usr/bin/env bash
+# Refresh drifted coordinates, push the branch whenever the refresh produced a
+# diff, and ensure a PR exists. Content equality decides only whether the drift
+# is announced. Extracted from check-coordinates.yaml so shellcheck and
+# tests/ci/test_ci_open_drift_pr.py can reach it.
+set -euo pipefail
+
+report="${1:?usage: ci-open-drift-pr <drift-report.log>}"
+branch="${DRIFT_BRANCH:-coordinate-drift}"
+remote="${PUSH_REMOTE:-origin}"
+server="${GITHUB_SERVER_URL:-https://github.com}"
+repo="${GITHUB_REPOSITORY:-}"
+outfile="${GITHUB_OUTPUT:-/dev/null}"
+workdir="${RUNNER_TEMP:-}"
+[ -n "$workdir" ] || workdir="$(mktemp -d)"
+
+emit() { printf '%s=%s\n' "$1" "$2" >>"$outfile"; }
+
+refresh_failed=false
+if ! bin/fetch-coordinates --refresh; then
+  refresh_failed=true
+  echo "::warning::Coordinate refresh reported failures; landing what it did fetch."
+fi
+emit refresh_failed "$refresh_failed"
+
+if git diff --quiet -- data/manual; then
+  if [ "$refresh_failed" = true ]; then
+    echo "::warning::Drift was reported but the refresh fetched nothing."
+    emit outcome refresh_failed
+  else
+    echo "No file changes after refresh; nothing to propose."
+    emit outcome no_changes
+  fi
+  exit 0
+fi
+
+git config user.name "github-actions[bot]"
+git config user.email "github-actions[bot]@users.noreply.github.com"
+git checkout -B "$branch"
+git add data/manual/
+git commit -m "Refresh drifted coordinates from Wikidata"
+subtree="$(git rev-parse "HEAD:data/manual")"
+
+# Always push, so the branch stays rebased on current main and mergeable even
+# when the coordinates themselves did not move.
+content_is_new=true
+if git fetch --quiet "$remote" "$branch" 2>/dev/null; then
+  if [ "$(git rev-parse "FETCH_HEAD:data/manual")" = "$subtree" ]; then
+    content_is_new=false
+  fi
+fi
+git push -f "$remote" "$branch"
+
+{
+  echo "The weekly check found Wikidata coordinates that drifted past the ~1 km tolerance."
+  echo
+  echo '```'
+  grep -E '^(DRIFT|FAIL)' "$report" || true
+  echo '```'
+  echo
+  if [ "$refresh_failed" = true ]; then
+    echo "**The refresh could not fetch every place.** Confirm the drifted values above are the ones committed."
+    echo
+  fi
+  echo "Checks on this PR need manual approval: it was opened by GITHUB_TOKEN."
+  echo
+  echo "Review each: merge if Wikidata's value is the better one, close if ours is correct."
+} >"$workdir/pr-body.md"
+
+pr_state="$(gh pr view "$branch" --json state --jq .state 2>/dev/null || true)"
+if [ "$pr_state" = "OPEN" ]; then
+  gh pr comment "$branch" --body-file "$workdir/pr-body.md"
+  if [ "$content_is_new" = true ]; then
+    emit outcome pr_updated
+  else
+    emit outcome unchanged
+  fi
+  exit 0
+fi
+
+# A blocked create still leaves a pushed branch, so hand back a compare URL
+# rather than failing the step and losing the alert with it.
+if gh pr create --base main --head "$branch" \
+  --title "Coordinate drift detected" --body-file "$workdir/pr-body.md" >"$workdir/pr-url.txt"; then
+  emit outcome pr_opened
+  emit pr_url "$(cat "$workdir/pr-url.txt")"
+else
+  echo "::warning::gh pr create failed; the branch is pushed and needs a PR opened by hand."
+  emit outcome pr_blocked
+  emit compare_url "$server/$repo/compare/$branch?expand=1"
+fi

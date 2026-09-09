@@ -183,9 +183,11 @@ def _run_fetch(
     refresh: bool,
 ) -> int:
     failed: list[str] = []
+    write_failed = False
     added, place_failed = enrich_places(places, client, refresh=refresh)
     _, status = write_json_if_changed(places_path, places)
     logger.info("places.json: added=%d write=%s", added, status)
+    write_failed = write_failed or status == "error"
     failed += place_failed
     # Point overlay for no-polygon country territories (entries carry no subtype).
     if overlay:
@@ -194,12 +196,15 @@ def _run_fetch(
         )
         _, status = write_json_if_changed(overlay_path, overlay)
         logger.info("country-coordinates.json: added=%d write=%s", added, status)
+        write_failed = write_failed or status == "error"
         failed += overlay_failed
     else:
         logger.warning("country-coordinates: %s missing or empty", overlay_path)
     if failed:
         logger.warning("no coordinates for: %s", ", ".join(sorted(failed)))
-    return 0
+    if write_failed:
+        logger.error("refresh could not be written to disk")
+    return 1 if failed or write_failed else 0
 
 
 def _run_check(places: dict, overlay: dict, client: httpx.Client) -> int:
@@ -237,7 +242,8 @@ def main() -> int:
     parser.add_argument(
         "--refresh",
         action="store_true",
-        help="re-fetch coordinates even for places that already have them",
+        help="re-fetch coordinates even for places that already have them; "
+        "exit 1 if any place could not be fetched",
     )
     parser.add_argument(
         "--check",

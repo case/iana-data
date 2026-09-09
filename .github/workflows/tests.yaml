@@ -6,6 +6,8 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/**"
+      - "bin/**"
+      - "scripts/**"
       - "pyproject.toml"
       - "uv.lock"
       - "data/generated/**"
@@ -16,6 +18,8 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/**"
+      - "bin/**"
+      - "scripts/**"
       - "pyproject.toml"
       - "uv.lock"
       - "data/generated/**"
@@ -40,13 +44,17 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v7.0.1
 
-      - name: Install uv
-        uses: astral-sh/setup-uv@v10.0.1
+      - name: Cache uv downloads
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
-          enable-cache: true
-          version-file: "pyproject.toml"
+          path: ~/.cache/uv
+          key: uv-${{ runner.os }}-${{ hashFiles('uv.lock') }}
+          restore-keys: uv-${{ runner.os }}-
 
       - uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86  # v6.0.10
+
+      - name: Install mise and the pinned toolchain
+        uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0
 
       - name: Install dependencies
         run: bin/setup

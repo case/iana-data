@@ -33,6 +33,7 @@ def download_file(
     url: str,
     filename: str,
     content_validator: Callable[[Path, str], bool] | None = None,
+    transform: Callable[[str], bytes] | None = None,
 ) -> str:
     """
     Download a single file using conditional requests.
@@ -52,6 +53,11 @@ def download_file(
         content_validator: Optional callback to check if content actually changed.
             Takes (filepath, new_content_text) and returns True if content changed.
             If returns False, file is not saved and "not_modified" is returned.
+        transform: Optional callback converting the response body, decoded as
+            UTF-8, into the bytes to save. For sources whose published file is
+            derived from the fetched document. Raising from it makes the
+            download fail rather than saving a partial file. When the result
+            matches the file on disk, "not_modified" is returned.
 
     Returns:
         Status: "downloaded", "not_modified", or "error"
@@ -71,6 +77,7 @@ def download_file(
             filepath=filepath,
             metadata=metadata,
             content_validator=content_validator,
+            transform=transform,
         )
 
     # Save updated metadata
@@ -282,6 +289,39 @@ def get_iptoasn_path() -> Path:
 # =============================================================================
 
 
+def _drop_cache_from_other_url(key: str, url: str, metadata: dict) -> None:
+    """Discard cache validators recorded against a different URL, or against none."""
+    entry = metadata.get(key)
+    if not entry or "cache_data" not in entry:
+        return
+    if entry["cache_data"].get("url") == url:
+        return
+    logger.info("Dropping cache data for %s: recorded against a different URL", key)
+    del entry["cache_data"]
+
+
+def _record_cache_data(
+    key: str, url: str, response: httpx.Response, metadata: dict, *, saved: bool
+) -> None:
+    """Store the response's validators; `saved` restarts the freshness window."""
+    cache_data = metadata[key].setdefault("cache_data", {})
+    cache_data["url"] = url
+
+    if "etag" in response.headers:
+        cache_data["etag"] = response.headers["etag"]
+    if "last-modified" in response.headers:
+        cache_data["last_modified"] = response.headers["last-modified"]
+
+    if "cache-control" in response.headers:
+        max_age = parse_cache_control_max_age(response.headers["cache-control"])
+        if max_age:
+            cache_data["cache_control"] = response.headers["cache-control"]
+            cache_data["cache_max_age"] = str(max_age)
+            if saved:
+                # is_cache_fresh measures staleness from this timestamp.
+                cache_data["last_downloaded"] = utc_timestamp()
+
+
 def _download_file_impl(
     client: httpx.Client,
     key: str,
@@ -289,6 +329,7 @@ def _download_file_impl(
     filepath: Path,
     metadata: dict,
     content_validator: Callable[[Path, str], bool] | None = None,
+    transform: Callable[[str], bytes] | None = None,
 ) -> str:
     """
     Internal implementation for downloading a single file.
@@ -303,12 +344,18 @@ def _download_file_impl(
         filepath: Local path to save file to
         metadata: Metadata dict (modified in place)
         content_validator: Optional callback to check if content actually changed.
+        transform: Optional callback converting the response body into the bytes
+            to save. See download_file.
 
     Returns:
         Status: "downloaded", "not_modified", or "error"
     """
-    # Check if cache is still fresh (for Cache-Control based files)
-    if key in metadata and is_cache_fresh(metadata[key]):
+    # Validators describe one URL. Repointing a key must not carry them across.
+    _drop_cache_from_other_url(key, url, metadata)
+
+    # Skipped for a transform: it never runs on this path, so an origin max-age
+    # would freeze the derived file. Why: docs/memory/log/2026-09-07-registry-agreement-csv.md
+    if transform is None and key in metadata and is_cache_fresh(metadata[key]):
         logger.info("Cache still fresh for %s", key)
         # Update last_checked even for cache-fresh files
         if key not in metadata:
@@ -340,37 +387,38 @@ def _download_file_impl(
         elif response.status_code == 200:
             # Check with content validator if provided
             if content_validator and not content_validator(filepath, response.text):
+                # Recorded here too: a source that reports "unchanged" every
+                # night would otherwise never send a validator again.
+                _record_cache_data(key, url, response, metadata, saved=False)
                 return "not_modified"
 
-            # Download successful, save file
-            filepath.parent.mkdir(parents=True, exist_ok=True)
-            with open(filepath, "wb") as f:
-                f.write(response.content)
+            if transform is None:
+                content = response.content
+            else:
+                # Decoded explicitly: httpx infers a charset from the header and
+                # would silently mangle a transform that must be byte-exact.
+                content = transform(response.content.decode("utf-8"))
 
-            # Initialize cache_data if needed
-            if "cache_data" not in metadata[key]:
-                metadata[key]["cache_data"] = {}
+            # A derived file often outlives changes elsewhere in its source document.
+            derived_unchanged = (
+                transform is not None
+                and filepath.exists()
+                and filepath.read_bytes() == content
+            )
 
-            # Update cache data with response headers
-            if "etag" in response.headers:
-                metadata[key]["cache_data"]["etag"] = response.headers["etag"]
-            if "last-modified" in response.headers:
-                metadata[key]["cache_data"]["last_modified"] = response.headers[
-                    "last-modified"
-                ]
+            if not derived_unchanged:
+                # Download successful, save file
+                filepath.parent.mkdir(parents=True, exist_ok=True)
+                with open(filepath, "wb") as f:
+                    f.write(content)
 
-            # Handle Cache-Control header
-            if "cache-control" in response.headers:
-                max_age = parse_cache_control_max_age(response.headers["cache-control"])
-                if max_age:
-                    metadata[key]["cache_data"]["cache_control"] = response.headers[
-                        "cache-control"
-                    ]
-                    metadata[key]["cache_data"]["cache_max_age"] = str(max_age)
-                    # For Cache-Control, also store download time for freshness calculation
-                    metadata[key]["cache_data"]["last_downloaded"] = utc_timestamp()
+            # Only a response we processed to the end earns its validators. A
+            # transform that raised must be retried, not answered with a 304.
+            _record_cache_data(
+                key, url, response, metadata, saved=not derived_unchanged
+            )
 
-            return "downloaded"
+            return "not_modified" if derived_unchanged else "downloaded"
         else:
             return "error"
     except Exception as e:

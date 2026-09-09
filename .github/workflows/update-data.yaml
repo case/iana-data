@@ -11,37 +11,52 @@ concurrency:
   group: update-iana-data
   cancel-in-progress: false
 
-permissions:
-  contents: write
-  actions: read # pull the iptoasn artifact from the update-iptoasn workflow
+permissions: {}
 
 jobs:
   update-data:
+    permissions:
+      contents: read
+      actions: read # pull the iptoasn artifact from the update-iptoasn workflow
     runs-on: ubuntu-24.04
+    timeout-minutes: 190
+    outputs:
+      changed: ${{ steps.git-check.outputs.changed }}
+      source_changed: ${{ steps.source-check.outputs.source_changed }}
+      patch_artifact: ${{ steps.patch.outputs.artifact }}
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v7.0.1
-
-      - name: Install uv
-        uses: astral-sh/setup-uv@v10.0.1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          enable-cache: true
-          version-file: "pyproject.toml"
+          persist-credentials: false
+
+      - name: Cache uv downloads
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.cache/uv
+          key: uv-${{ runner.os }}-${{ hashFiles('uv.lock') }}
+          restore-keys: uv-${{ runner.os }}-
 
       - uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86  # v6.0.10
 
+      - name: Install mise and the pinned toolchain
+        uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0
+
       - name: Install dependencies
+        timeout-minutes: 15
         run: bin/setup
 
-      # Download core IANA files
       - name: Download core data (RDAP, TLD list, root zone DB)
         id: download-core
+        timeout-minutes: 10
         continue-on-error: true
         run: make download-core
 
       - name: Notification if core download fails
         if: steps.download-core.outcome == 'failure'
+        continue-on-error: true
+        timeout-minutes: 2
         uses: ./.github/actions/pushover
         with:
           pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
@@ -56,6 +71,8 @@ jobs:
 
       - name: Notification if registry agreement download fails
         if: steps.download-registry-agreement.outcome == 'failure'
+        continue-on-error: true
+        timeout-minutes: 2
         uses: ./.github/actions/pushover
         with:
           pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
@@ -70,6 +87,8 @@ jobs:
 
       - name: Notification if gTLDs report download fails
         if: steps.download-gtlds.outcome == 'failure'
+        continue-on-error: true
+        timeout-minutes: 2
         uses: ./.github/actions/pushover
         with:
           pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
@@ -84,6 +103,8 @@ jobs:
 
       - name: Notification if IDN mapping fails
         if: steps.generate-idn-mapping.outcome == 'failure'
+        continue-on-error: true
+        timeout-minutes: 2
         uses: ./.github/actions/pushover
         with:
           pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
@@ -107,11 +128,11 @@ jobs:
           GH_TOKEN: ${{ github.token }}
 
       # continue-on-error so a failed iptoasn artifact doesn't block a --preserve-asn
-      # rebuild (doesn't need it); a bad --all build is caught by the tests below.
+      # rebuild; a bad --all build is caught by the tests below.
       - name: Download iptoasn artifact
         id: download-iptoasn
         continue-on-error: true
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
         with:
           pattern: iptoasn-*
           path: data/source/iptoasn
@@ -132,47 +153,53 @@ jobs:
             ls -la data/source/iptoasn/ || true
           fi
 
-      # Download TLD pages in 8 batches for better error isolation
-      # Total: 1,592 TLDs, ~200 per batch, ~3-4 min each
-      # Continue on error to allow other batches to complete
-
+      # 8 batches of ~200 of the ~1,600 TLDs, ~3-4 min each, isolating failures.
+      # Each continues on error so one bad batch does not lose the others.
       - name: "Download TLDs: a-b (198 TLDs)"
         id: download-tlds-ab
+        timeout-minutes: 12
         continue-on-error: true
         run: make download-tld-pages GROUPS="a b"
 
       - name: "Download TLDs: c-d (187 TLDs)"
         id: download-tlds-cd
+        timeout-minutes: 12
         continue-on-error: true
         run: make download-tld-pages GROUPS="c d"
 
       - name: "Download TLDs: e-h (227 TLDs)"
         id: download-tlds-eh
+        timeout-minutes: 12
         continue-on-error: true
         run: make download-tld-pages GROUPS="e f g h"
 
       - name: "Download TLDs: i + IDN (215 TLDs)"
         id: download-tlds-i-idn
+        timeout-minutes: 12
         continue-on-error: true
         run: make download-tld-pages GROUPS="i xn--"
 
       - name: "Download TLDs: j-m (221 TLDs)"
         id: download-tlds-jm
+        timeout-minutes: 12
         continue-on-error: true
         run: make download-tld-pages GROUPS="j k l m"
 
       - name: "Download TLDs: n-q (158 TLDs)"
         id: download-tlds-nq
+        timeout-minutes: 12
         continue-on-error: true
         run: make download-tld-pages GROUPS="n o p q"
 
       - name: "Download TLDs: r-s (190 TLDs)"
         id: download-tlds-rs
+        timeout-minutes: 12
         continue-on-error: true
         run: make download-tld-pages GROUPS="r s"
 
       - name: "Download TLDs: t-z (188 TLDs)"
         id: download-tlds-tz
+        timeout-minutes: 12
         continue-on-error: true
         run: make download-tld-pages GROUPS="t u v w y z"
 
@@ -186,6 +213,8 @@ jobs:
           steps.download-tlds-nq.outcome == 'failure' ||
           steps.download-tlds-rs.outcome == 'failure' ||
           steps.download-tlds-tz.outcome == 'failure'
+        continue-on-error: true
+        timeout-minutes: 2
         uses: ./.github/actions/pushover
         with:
           pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
@@ -196,8 +225,9 @@ jobs:
       - name: Check if source data changed
         id: source-check
         run: |
-          # Check if data/source/ has any changes (not just metadata.json)
-          if git diff --quiet data/source/; then
+          # -N picks up new files; HEAD picks up deletions.
+          git add --intent-to-add -- data/source/
+          if git diff --quiet HEAD -- data/source/; then
             echo "Source files unchanged (timestamp updates only)"
             echo "source_changed=false" >> "$GITHUB_OUTPUT"
           else
@@ -209,6 +239,7 @@ jobs:
       # source changes. --all on source change (ASN refresh), else --preserve-asn.
       - name: Build tlds.json
         id: build
+        timeout-minutes: 20
         env:
           SOURCE_CHANGED: ${{ steps.source-check.outputs.source_changed }}
         run: |
@@ -222,6 +253,8 @@ jobs:
 
       - name: Notification if build fails
         if: failure() && steps.build.outcome == 'failure'
+        continue-on-error: true
+        timeout-minutes: 2
         uses: ./.github/actions/pushover
         with:
           pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
@@ -232,6 +265,7 @@ jobs:
       # Build always runs now, so always test before committing a regenerated diff.
       - name: Run tests
         id: run-tests
+        timeout-minutes: 15
         run: |
           set -o pipefail
           # Intentional pipe to tee; SC2266 misreads it as a mistaken ||.
@@ -240,6 +274,8 @@ jobs:
 
       - name: Notification if tests fail
         if: failure() && steps.run-tests.outcome == 'failure'
+        continue-on-error: true
+        timeout-minutes: 2
         uses: ./.github/actions/pushover
         with:
           pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
@@ -251,51 +287,138 @@ jobs:
         id: git-check
         if: always()
         run: |
-          if ! git diff --exit-code data/; then
+          # -N picks up new files; HEAD picks up deletions.
+          git add --intent-to-add -- data/
+          if ! git diff --exit-code HEAD -- data/; then
             echo "changed=true" >> "$GITHUB_OUTPUT"
-            # Get list of changed files in data/ directory
-            CHANGED_FILES=$(git diff --name-only data/ | sed 's|^data/source/||' | sed 's|^data/generated/||')
-            {
-              echo "files<<EOF"
-              echo "$CHANGED_FILES"
-              echo "EOF"
-            } >> "$GITHUB_OUTPUT"
           fi
 
       # run-tests.outcome must be success (not just "not failure"): a failed build
-      # skips tests, and "skipped != failure" would otherwise commit partial data.
-      - name: Commit and push changes
-        id: commit-push
+      # skips tests, and "skipped != failure" would otherwise ship partial data.
+      - name: Create data update patch
+        id: patch
         if: always() && steps.git-check.outputs.changed == 'true' && steps.run-tests.outcome == 'success'
-        env:
-          SOURCE_CHANGED: ${{ steps.source-check.outputs.source_changed }}
-          CHANGED_FILES: ${{ steps.git-check.outputs.files }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/
-
-          # Build commit message: distinguish a source refresh from a manual-data regen.
-          if [ "$SOURCE_CHANGED" = "true" ]; then
-            COMMIT_MSG="Update IANA source data files"
-          else
-            COMMIT_MSG="Regenerate data from manual curation"
+          set -euo pipefail
+          patch="$RUNNER_TEMP/data-update.patch"
+          # --no-renames: a rename crossing into data/ hides the source path from
+          # every consumer-side check. Why: docs/memory/log/2026-09-07-ci-signing.md
+          git diff --no-renames --binary --full-index HEAD -- data/ > "$patch"
+          if [ ! -s "$patch" ]; then
+            echo "::error::Expected a non-empty data update patch"
+            exit 1
           fi
-          if [ -n "$CHANGED_FILES" ]; then
-            COMMIT_MSG="${COMMIT_MSG}
+          echo "artifact=data-update-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" >> "$GITHUB_OUTPUT"
 
-          Changed files:"
-            while IFS= read -r file; do
-              COMMIT_MSG="${COMMIT_MSG}
-          - ${file}"
-            done <<< "$CHANGED_FILES"
-          fi
+      - name: Upload data update patch
+        if: always() && steps.patch.outcome == 'success'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        with:
+          name: ${{ steps.patch.outputs.artifact }}
+          path: ${{ runner.temp }}/data-update.patch
+          retention-days: 1
+          if-no-files-found: error
 
-          git commit -m "${COMMIT_MSG}"
-          git push
+      - name: Notification if the update job fails
+        if: failure() && steps.build.outcome != 'failure' && steps.run-tests.outcome != 'failure'
+        continue-on-error: true
+        timeout-minutes: 2
+        uses: ./.github/actions/pushover
+        with:
+          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
+          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
+          title: "IANA data - update job failed"
+          message: "❌ The nightly update job failed before producing a data patch"
+
+  sign-data:
+    needs: update-data
+    if: needs.update-data.result == 'success' && needs.update-data.outputs.changed == 'true'
+    permissions:
+      contents: write
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Download data update patch
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
+        with:
+          name: ${{ needs.update-data.outputs.patch_artifact }}
+          path: ${{ runner.temp }}/data-update
+
+      # Untrusted artifact, checked before and after it reaches the filesystem.
+      # The script holds no credentials. Why: docs/memory/log/2026-09-07-ci-signing.md
+      - name: Validate and apply data update
+        timeout-minutes: 5
+        run: bin/ci-apply-data-patch "$RUNNER_TEMP/data-update/data-update.patch"
+
+      - name: Commit and push signed data update
+        id: commit-push
+        timeout-minutes: 5
+        env:
+          SOURCE_CHANGED: ${{ needs.update-data.outputs.source_changed }}
+          EXPECTED_HEAD: ${{ github.sha }}
+          GH_TOKEN: ${{ github.token }}
+          CI_SSH_SIGNING_KEY: ${{ secrets.CI_SSH_SIGNING_KEY }}
+          CI_COMMITTER_NAME: ${{ vars.CI_COMMITTER_NAME }}
+          CI_COMMITTER_EMAIL: ${{ vars.CI_COMMITTER_EMAIL }}
+        run: |
+          set -euo pipefail
+          # Credential-free URL. The token reaches git as an env-borne
+          # extraheader, so it lands in neither argv nor .git/config.
+          PUSH_REMOTE="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}.git" \
+            bin/ci-commit-signed-data
+
+      - name: Remove signing key
+        if: always()
+        run: rm -f "$RUNNER_TEMP/iana-data-ci-signing"
+
+      - name: Notification if signing fails
+        if: failure()
+        continue-on-error: true
+        timeout-minutes: 2
+        uses: ./.github/actions/pushover
+        with:
+          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
+          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
+          title: "IANA data - signed commit failed"
+          message: "❌ Failed to validate, sign, or push the nightly data update"
+
+      - name: Email notification if signing fails
+        if: failure()
+        continue-on-error: true
+        timeout-minutes: 2
+        uses: case/actions-email@96f6c77293226d2d4e2bee851e616543992cf3ea # v1
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+        with:
+          provider: resend
+          subject: "IANA data - signed commit failed"
+          body_text: "Failed to validate, sign, or push the nightly data update."
+
+  notify-data-committed:
+    needs: sign-data
+    if: needs.sign-data.result == 'success'
+    permissions:
+      contents: read
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
       - name: Notification if data committed
-        if: steps.commit-push.outcome == 'success'
+        continue-on-error: true
+        timeout-minutes: 2
         uses: ./.github/actions/pushover
         with:
           pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
@@ -304,8 +427,9 @@ jobs:
           message: "✅ Successfully updated and committed IANA data"
 
       - name: Email notification if data committed
-        if: steps.commit-push.outcome == 'success'
-        uses: case/actions-email@v1
+        continue-on-error: true
+        timeout-minutes: 2
+        uses: case/actions-email@96f6c77293226d2d4e2bee851e616543992cf3ea # v1
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
