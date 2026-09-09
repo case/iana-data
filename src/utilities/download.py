@@ -5,7 +5,7 @@ import time
 from collections.abc import Callable
 from pathlib import Path
 
-import httpx
+import httpx2
 
 from ..config import (
     IANA_URLS,
@@ -69,7 +69,7 @@ def download_file(
 
     metadata = load_metadata()
 
-    with httpx.Client(timeout=30.0, follow_redirects=True) as client:
+    with httpx2.Client(timeout=30.0, follow_redirects=True) as client:
         result = _download_file_impl(
             client=client,
             key=key,
@@ -112,7 +112,7 @@ def download_iana_files() -> dict[str, str]:
     # Ensure source directory exists
     Path(SOURCE_DIR).mkdir(parents=True, exist_ok=True)
 
-    with httpx.Client(timeout=30.0, follow_redirects=True) as client:
+    with httpx2.Client(timeout=30.0, follow_redirects=True) as client:
         for key, url in IANA_URLS.items():
             filename = SOURCE_FILES[key]
             filepath = Path(SOURCE_DIR) / filename
@@ -181,7 +181,7 @@ def download_tld_pages(
     # Update last_checked timestamp
     checked_time = utc_timestamp()
 
-    with httpx.Client(timeout=30.0, follow_redirects=True) as client:
+    with httpx2.Client(timeout=30.0, follow_redirects=True) as client:
         for i, tld in enumerate(tlds):
             url = get_tld_page_url(tld)
             file_path = get_tld_file_path(tld, base_dir)
@@ -254,7 +254,7 @@ def download_iptoasn() -> str:
 
     try:
         logger.info("Downloading iptoasn data from %s...", IPTOASN_URL)
-        with httpx.Client(timeout=60.0, follow_redirects=True) as client:
+        with httpx2.Client(timeout=60.0, follow_redirects=True) as client:
             response = make_request_with_retry(client, IPTOASN_URL)
 
             if response.status_code == 200:
@@ -301,7 +301,7 @@ def _drop_cache_from_other_url(key: str, url: str, metadata: dict) -> None:
 
 
 def _record_cache_data(
-    key: str, url: str, response: httpx.Response, metadata: dict, *, saved: bool
+    key: str, url: str, response: httpx2.Response, metadata: dict, *, saved: bool
 ) -> None:
     """Store the response's validators; `saved` restarts the freshness window."""
     cache_data = metadata[key].setdefault("cache_data", {})
@@ -323,7 +323,7 @@ def _record_cache_data(
 
 
 def _download_file_impl(
-    client: httpx.Client,
+    client: httpx2.Client,
     key: str,
     url: str,
     filepath: Path,
@@ -338,7 +338,7 @@ def _download_file_impl(
     while allowing efficient batching with a single client/metadata.
 
     Args:
-        client: httpx Client instance
+        client: httpx2 Client instance
         key: Metadata key for tracking this download
         url: URL to download from
         filepath: Local path to save file to
@@ -395,7 +395,7 @@ def _download_file_impl(
             if transform is None:
                 content = response.content
             else:
-                # Decoded explicitly: httpx infers a charset from the header and
+                # Decoded explicitly: httpx2 infers a charset from the header and
                 # would silently mangle a transform that must be byte-exact.
                 content = transform(response.content.decode("utf-8"))
 

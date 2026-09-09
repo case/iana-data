@@ -10,7 +10,7 @@ import time
 import urllib.parse
 from pathlib import Path
 
-import httpx
+import httpx2
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
@@ -59,7 +59,7 @@ def parse_coordinate_claim(entity: dict) -> tuple[float, float]:
     return lat, lon
 
 
-def fetch_coordinates(client: httpx.Client, title: str) -> tuple[float, float]:
+def fetch_coordinates(client: httpx2.Client, title: str) -> tuple[float, float]:
     """Fetch (lat, lon) for an enwiki article title via the Wikidata API."""
     params = urllib.parse.urlencode(
         {
@@ -83,7 +83,7 @@ def fetch_coordinates(client: httpx.Client, title: str) -> tuple[float, float]:
 
 def enrich_places(
     places: dict,
-    client: httpx.Client,
+    client: httpx2.Client,
     *,
     refresh: bool,
     subtypes: frozenset[str] | None = GEO_SUBTYPES,
@@ -113,7 +113,7 @@ def enrich_places(
         made_request = True
         try:
             lat, lon = fetch_coordinates(client, title)
-        except (ValueError, httpx.HTTPError, ServerError) as e:
+        except (ValueError, httpx2.HTTPError, ServerError) as e:
             logger.warning("%s (%s): %s", slug, title, e)
             failed.append(slug)
             continue
@@ -130,7 +130,7 @@ def enrich_places(
 
 def check_coordinates(
     places: dict,
-    client: httpx.Client,
+    client: httpx2.Client,
     *,
     subtypes: frozenset[str] | None = GEO_SUBTYPES,
     delay: float = REQUEST_DELAY,
@@ -158,7 +158,7 @@ def check_coordinates(
         made_request = True
         try:
             lat, lon = fetch_coordinates(client, title)
-        except (ValueError, httpx.HTTPError, ServerError) as e:
+        except (ValueError, httpx2.HTTPError, ServerError) as e:
             failed.append((slug, str(e)))
             continue
         stored = rec["coordinates"]
@@ -178,7 +178,7 @@ def _run_fetch(
     places_path: Path,
     overlay: dict,
     overlay_path: Path,
-    client: httpx.Client,
+    client: httpx2.Client,
     *,
     refresh: bool,
 ) -> int:
@@ -207,7 +207,7 @@ def _run_fetch(
     return 1 if failed or write_failed else 0
 
 
-def _run_check(places: dict, overlay: dict, client: httpx.Client) -> int:
+def _run_check(places: dict, overlay: dict, client: httpx2.Client) -> int:
     drifted, failed = check_coordinates(places, client)
     if overlay:
         overlay_drifted, overlay_failed = check_coordinates(
@@ -264,7 +264,7 @@ def main() -> int:
 
     # 30s per request: Wikidata's wbgetentities is normally sub-second, so this only
     # bounds a stalled connection on an interactive, maintenance-time run.
-    with httpx.Client(timeout=30.0, follow_redirects=True) as client:
+    with httpx2.Client(timeout=30.0, follow_redirects=True) as client:
         if args.check:
             return _run_check(places, overlay, client)
         return _run_fetch(

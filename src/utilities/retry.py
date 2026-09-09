@@ -2,7 +2,7 @@
 
 import logging
 
-import httpx
+import httpx2
 from tenacity import (
     before_sleep_log,
     retry,
@@ -20,13 +20,13 @@ class ServerError(Exception):
 
 
 def make_request_with_retry(
-    client: httpx.Client,
+    client: httpx2.Client,
     url: str,
     headers: dict[str, str] | None = None,
     max_attempts: int = 3,
     min_wait: int = 1,
     max_wait: int = 10,
-) -> httpx.Response:
+) -> httpx2.Response:
     """
     Make HTTP request with retry logic for transient errors.
 
@@ -38,7 +38,7 @@ def make_request_with_retry(
     - Client errors (4xx status codes)
 
     Args:
-        client: httpx Client instance
+        client: httpx2 Client instance
         url: URL to request
         headers: Optional request headers
         max_attempts: Maximum number of attempts (default: 3)
@@ -46,10 +46,10 @@ def make_request_with_retry(
         max_wait: Maximum wait between retries in seconds (default: 10)
 
     Returns:
-        httpx Response object
+        httpx2 Response object
 
     Raises:
-        httpx.TransportError: After retries exhausted for network errors
+        httpx2.TransportError: After retries exhausted for network errors
         ServerError: After retries exhausted for 5xx errors
     """
 
@@ -66,7 +66,7 @@ def make_request_with_retry(
     @retry(
         stop=stop_after_attempt(max_attempts),
         wait=wait_strategy,
-        retry=retry_if_exception_type((httpx.TransportError, ServerError)),
+        retry=retry_if_exception_type((httpx2.TransportError, ServerError)),
         before_sleep=before_sleep_callback,
         reraise=True,
     )

@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 from unittest.mock import Mock, patch
 
-import httpx
+import httpx2
 import pytest
 
 from src.parse import extract_main_content
@@ -146,12 +146,12 @@ def test_download_tld_pages_single_tld(tmp_path):
 
     # Mock HTTP response
     def mock_get(url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.text = full_html
         return response
 
-    with patch("httpx.Client") as mock_client:
+    with patch("httpx2.Client") as mock_client:
         mock_client.return_value.__enter__.return_value.get = mock_get
 
         results = download_tld_pages(["com"], base_dir=tmp_path)
@@ -175,12 +175,12 @@ def test_download_tld_pages_idn_tld(tmp_path):
     full_html = fixture_file.read_text()
 
     def mock_get(url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.text = full_html
         return response
 
-    with patch("httpx.Client") as mock_client:
+    with patch("httpx2.Client") as mock_client:
         mock_client.return_value.__enter__.return_value.get = mock_get
 
         results = download_tld_pages(["xn--2scrj9c"], base_dir=tmp_path)
@@ -206,12 +206,12 @@ def test_download_tld_pages_multiple_tlds(tmp_path):
         fixture_file = fixtures[tld]
         full_html = fixture_file.read_text()
 
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.text = full_html
         return response
 
-    with patch("httpx.Client") as mock_client:
+    with patch("httpx2.Client") as mock_client:
         mock_client.return_value.__enter__.return_value.get = mock_get
 
         results = download_tld_pages(["com", "io", "aero"], base_dir=tmp_path)
@@ -231,12 +231,12 @@ def test_download_tld_pages_handles_404(tmp_path):
     """Test handling of 404 Not Found."""
 
     def mock_get(url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 404
         response.text = "Not Found"
         return response
 
-    with patch("httpx.Client") as mock_client:
+    with patch("httpx2.Client") as mock_client:
         mock_client.return_value.__enter__.return_value.get = mock_get
 
         results = download_tld_pages(["nonexistent"], base_dir=tmp_path)
@@ -255,9 +255,9 @@ def test_download_tld_pages_handles_network_error(tmp_path):
     def mock_get(url, headers=None):
         nonlocal call_count
         call_count += 1
-        raise httpx.ConnectError("Connection failed")
+        raise httpx2.ConnectError("Connection failed")
 
-    with patch("httpx.Client") as mock_client:
+    with patch("httpx2.Client") as mock_client:
         mock_client.return_value.__enter__.return_value.get = mock_get
 
         results = download_tld_pages(["com"], base_dir=tmp_path)
@@ -282,14 +282,14 @@ def test_download_tld_pages_retries_on_timeout(tmp_path):
         nonlocal call_count
         call_count += 1
         if call_count < 3:
-            raise httpx.TimeoutException("Request timed out")
+            raise httpx2.TimeoutException("Request timed out")
         # Succeed on third attempt
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.text = full_html
         return response
 
-    with patch("httpx.Client") as mock_client:
+    with patch("httpx2.Client") as mock_client:
         mock_client.return_value.__enter__.return_value.get = mock_get
 
         results = download_tld_pages(["com"], base_dir=tmp_path)
@@ -313,17 +313,17 @@ def test_download_tld_pages_retries_on_server_error(tmp_path):
         call_count += 1
         if call_count < 2:
             # Return 503 Service Unavailable
-            response = Mock(spec=httpx.Response)
+            response = Mock(spec=httpx2.Response)
             response.status_code = 503
             response.text = "Service Unavailable"
             return response
         # Succeed on second attempt
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.text = full_html
         return response
 
-    with patch("httpx.Client") as mock_client:
+    with patch("httpx2.Client") as mock_client:
         mock_client.return_value.__enter__.return_value.get = mock_get
 
         results = download_tld_pages(["com"], base_dir=tmp_path)
@@ -340,12 +340,12 @@ def test_download_tld_pages_no_retry_on_client_error(tmp_path):
     def mock_get(url, headers=None):
         nonlocal call_count
         call_count += 1
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 404
         response.text = "Not Found"
         return response
 
-    with patch("httpx.Client") as mock_client:
+    with patch("httpx2.Client") as mock_client:
         mock_client.return_value.__enter__.return_value.get = mock_get
 
         results = download_tld_pages(["com"], base_dir=tmp_path)
@@ -361,12 +361,12 @@ def test_download_tld_pages_creates_directories(tmp_path):
     full_html = fixture_file.read_text()
 
     def mock_get(url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.text = full_html
         return response
 
-    with patch("httpx.Client") as mock_client:
+    with patch("httpx2.Client") as mock_client:
         mock_client.return_value.__enter__.return_value.get = mock_get
 
         # tmp_path exists but c/ subdirectory doesn't
@@ -394,12 +394,12 @@ def test_download_tld_pages_falls_back_to_full_html_on_parse_failure(tmp_path):
     """
 
     def mock_get(url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.text = html_without_main
         return response
 
-    with patch("httpx.Client") as mock_client:
+    with patch("httpx2.Client") as mock_client:
         mock_client.return_value.__enter__.return_value.get = mock_get
 
         results = download_tld_pages(["com"], base_dir=tmp_path)
@@ -427,13 +427,13 @@ def test_download_tld_pages_fallback_logs_warning(tmp_path, caplog):
     html_without_main = "<html><body>No main tag</body></html>"
 
     def mock_get(url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.text = html_without_main
         return response
 
     with (
-        patch("httpx.Client") as mock_client,
+        patch("httpx2.Client") as mock_client,
         caplog.at_level(logging.WARNING),
     ):
         mock_client.return_value.__enter__.return_value.get = mock_get
@@ -450,12 +450,12 @@ def test_download_tld_pages_prefers_main_content_over_fallback(tmp_path):
     full_html = fixture_file.read_text()
 
     def mock_get(url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.text = full_html
         return response
 
-    with patch("httpx.Client") as mock_client:
+    with patch("httpx2.Client") as mock_client:
         mock_client.return_value.__enter__.return_value.get = mock_get
 
         results = download_tld_pages(["com"], base_dir=tmp_path)
@@ -482,7 +482,7 @@ def test_download_tld_pages_handles_file_write_error(tmp_path):
     full_html = fixture_file.read_text()
 
     def mock_get(url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.text = full_html
         return response
@@ -492,7 +492,7 @@ def test_download_tld_pages_handles_file_write_error(tmp_path):
     test_dir.mkdir(parents=True)
     test_dir.chmod(0o444)
 
-    with patch("httpx.Client") as mock_client:
+    with patch("httpx2.Client") as mock_client:
         mock_client.return_value.__enter__.return_value.get = mock_get
 
         results = download_tld_pages(["com"], base_dir=tmp_path)
@@ -518,14 +518,14 @@ def test_download_tld_pages_defaults_to_root_db_tlds(tmp_path):
     full_html = (FIXTURES_DIR / "c" / "com.html").read_text()
 
     def mock_get(url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.text = full_html
         return response
 
     with (
         patch("src.parse.parse_root_db_tlds", return_value=["com"]) as mock_source,
-        patch("httpx.Client") as mock_client,
+        patch("httpx2.Client") as mock_client,
     ):
         mock_client.return_value.__enter__.return_value.get = mock_get
         results = download_tld_pages(base_dir=tmp_path)
@@ -541,12 +541,12 @@ def test_download_tld_pages_uses_default_from_source(tmp_path):
     full_html = fixture_file.read_text()
 
     def mock_get(url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.text = full_html
         return response
 
-    with patch("httpx.Client") as mock_client:
+    with patch("httpx2.Client") as mock_client:
         mock_client.return_value.__enter__.return_value.get = mock_get
 
         # Pass explicit TLD list instead of mocking parse_tlds_txt
@@ -563,12 +563,12 @@ def test_download_tld_pages_creates_metadata_entry(tmp_path, isolate_metadata):
     full_html = fixture_file.read_text()
 
     def mock_get(url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.text = full_html
         return response
 
-    with patch("httpx.Client") as mock_client:
+    with patch("httpx2.Client") as mock_client:
         mock_client.return_value.__enter__.return_value.get = mock_get
 
         # First download
@@ -591,7 +591,7 @@ def test_download_tld_pages_updates_metadata_entry(tmp_path, isolate_metadata):
     full_html = fixture_file.read_text()
 
     def mock_get(url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.text = full_html
         return response
@@ -605,7 +605,7 @@ def test_download_tld_pages_updates_metadata_entry(tmp_path, isolate_metadata):
     with open(isolate_metadata, "w") as f:
         json.dump(initial_metadata, f)
 
-    with patch("httpx.Client") as mock_client:
+    with patch("httpx2.Client") as mock_client:
         mock_client.return_value.__enter__.return_value.get = mock_get
 
         # Second download

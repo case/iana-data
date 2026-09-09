@@ -2,7 +2,7 @@
 
 from unittest.mock import MagicMock, patch
 
-import httpx
+import httpx2
 import pytest
 
 from src.utilities.retry import ServerError, make_request_with_retry
@@ -10,8 +10,8 @@ from src.utilities.retry import ServerError, make_request_with_retry
 
 def test_make_request_with_retry_success():
     """Test successful request without retry."""
-    mock_client = MagicMock(spec=httpx.Client)
-    mock_response = MagicMock(spec=httpx.Response)
+    mock_client = MagicMock(spec=httpx2.Client)
+    mock_response = MagicMock(spec=httpx2.Response)
     mock_response.status_code = 200
     mock_client.get.return_value = mock_response
 
@@ -25,13 +25,13 @@ def test_make_request_with_retry_success():
 
 def test_make_request_with_retry_server_error_then_success():
     """Test retry on server error (5xx) then success."""
-    mock_client = MagicMock(spec=httpx.Client)
+    mock_client = MagicMock(spec=httpx2.Client)
 
     # First call: 500 error, second call: success
-    mock_error_response = MagicMock(spec=httpx.Response)
+    mock_error_response = MagicMock(spec=httpx2.Response)
     mock_error_response.status_code = 500
 
-    mock_success_response = MagicMock(spec=httpx.Response)
+    mock_success_response = MagicMock(spec=httpx2.Response)
     mock_success_response.status_code = 200
 
     mock_client.get.side_effect = [mock_error_response, mock_success_response]
@@ -46,9 +46,9 @@ def test_make_request_with_retry_server_error_then_success():
 
 def test_make_request_with_retry_server_error_exhausted():
     """Test retry exhaustion on persistent server error."""
-    mock_client = MagicMock(spec=httpx.Client)
+    mock_client = MagicMock(spec=httpx2.Client)
 
-    mock_error_response = MagicMock(spec=httpx.Response)
+    mock_error_response = MagicMock(spec=httpx2.Response)
     mock_error_response.status_code = 503
     mock_client.get.return_value = mock_error_response
 
@@ -62,14 +62,14 @@ def test_make_request_with_retry_server_error_exhausted():
 
 def test_make_request_with_retry_transport_error_then_success():
     """Test retry on transport error then success."""
-    mock_client = MagicMock(spec=httpx.Client)
+    mock_client = MagicMock(spec=httpx2.Client)
 
-    mock_success_response = MagicMock(spec=httpx.Response)
+    mock_success_response = MagicMock(spec=httpx2.Response)
     mock_success_response.status_code = 200
 
     # First call: transport error, second call: success
     mock_client.get.side_effect = [
-        httpx.ConnectError("Connection failed"),
+        httpx2.ConnectError("Connection failed"),
         mock_success_response,
     ]
 
@@ -83,10 +83,10 @@ def test_make_request_with_retry_transport_error_then_success():
 
 def test_make_request_with_retry_transport_error_exhausted():
     """Test retry exhaustion on persistent transport error."""
-    mock_client = MagicMock(spec=httpx.Client)
-    mock_client.get.side_effect = httpx.ReadTimeout("Timeout")
+    mock_client = MagicMock(spec=httpx2.Client)
+    mock_client.get.side_effect = httpx2.ReadTimeout("Timeout")
 
-    with pytest.raises(httpx.ReadTimeout):
+    with pytest.raises(httpx2.ReadTimeout):
         make_request_with_retry(
             client=mock_client, url="http://example.com", min_wait=0, max_attempts=2
         )
@@ -96,9 +96,9 @@ def test_make_request_with_retry_transport_error_exhausted():
 
 def test_make_request_with_retry_no_retry_on_client_error():
     """Test that 4xx errors do not trigger retry."""
-    mock_client = MagicMock(spec=httpx.Client)
+    mock_client = MagicMock(spec=httpx2.Client)
 
-    mock_error_response = MagicMock(spec=httpx.Response)
+    mock_error_response = MagicMock(spec=httpx2.Response)
     mock_error_response.status_code = 404
     mock_client.get.return_value = mock_error_response
 
@@ -113,13 +113,13 @@ def test_make_request_with_retry_no_retry_on_client_error():
 
 def test_make_request_with_retry_production_path_with_logging():
     """Test production retry path with exponential backoff and logging."""
-    mock_client = MagicMock(spec=httpx.Client)
+    mock_client = MagicMock(spec=httpx2.Client)
 
     # First call: 500 error, second call: success
-    mock_error_response = MagicMock(spec=httpx.Response)
+    mock_error_response = MagicMock(spec=httpx2.Response)
     mock_error_response.status_code = 502
 
-    mock_success_response = MagicMock(spec=httpx.Response)
+    mock_success_response = MagicMock(spec=httpx2.Response)
     mock_success_response.status_code = 200
 
     mock_client.get.side_effect = [mock_error_response, mock_success_response]

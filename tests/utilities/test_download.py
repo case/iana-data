@@ -5,7 +5,7 @@ from datetime import UTC
 from pathlib import Path
 from unittest.mock import Mock, patch
 
-import httpx
+import httpx2
 
 from src.utilities.download import (
     _download_file_impl,
@@ -50,7 +50,7 @@ def test_download_first_time(tmp_path):
     """Test downloading files for the first time (no metadata)."""
     source_dir, generated_dir = setup_test_env(tmp_path)
 
-    # Mock httpx responses with fixture data
+    # Mock httpx2 responses with fixture data
     mock_responses = {
         "https://data.iana.org/rdap/dns.json": (
             200,
@@ -71,7 +71,7 @@ def test_download_first_time(tmp_path):
 
     def mock_get(url, headers=None):
         status, resp_headers, content = mock_responses[url]
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = status
         response.headers = resp_headers
         response.content = content
@@ -83,7 +83,7 @@ def test_download_first_time(tmp_path):
         patch(
             "src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")
         ),
-        patch("httpx.Client") as mock_client,
+        patch("httpx2.Client") as mock_client,
     ):
         mock_client.return_value.__enter__.return_value.get = mock_get
 
@@ -118,7 +118,7 @@ def test_download_with_304_not_modified(tmp_path):
             and headers
             and ("If-None-Match" in headers or "If-Modified-Since" in headers)
         ):
-            response = Mock(spec=httpx.Response)
+            response = Mock(spec=httpx2.Response)
             response.status_code = 304
             response.headers = {}
             return response
@@ -129,7 +129,7 @@ def test_download_with_304_not_modified(tmp_path):
     with (
         patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
         patch("src.utilities.metadata.METADATA_FILE", str(metadata_file)),
-        patch("httpx.Client") as mock_client,
+        patch("httpx2.Client") as mock_client,
     ):
         mock_client.return_value.__enter__.return_value.get = mock_get
 
@@ -160,7 +160,7 @@ def test_download_with_fresh_cache(tmp_path):
             url == "https://data.iana.org/rdap/dns.json"
             or url == "https://data.iana.org/TLD/tlds-alpha-by-domain.txt"
         ):
-            response = Mock(spec=httpx.Response)
+            response = Mock(spec=httpx2.Response)
             response.status_code = 304
             response.headers = {}
             return response
@@ -183,7 +183,7 @@ def test_download_with_fresh_cache(tmp_path):
         patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
         patch("src.utilities.metadata.METADATA_FILE", str(metadata_file)),
         patch("src.utilities.cache.datetime") as mock_datetime,
-        patch("httpx.Client") as mock_client,
+        patch("httpx2.Client") as mock_client,
     ):
         mock_datetime.now.return_value = mock_now
         mock_datetime.fromisoformat = datetime.fromisoformat
@@ -220,7 +220,7 @@ def test_download_tld_list_content_unchanged(tmp_path):
 
     def mock_get(url, headers=None):
         if url == "https://data.iana.org/TLD/tlds-alpha-by-domain.txt":
-            response = Mock(spec=httpx.Response)
+            response = Mock(spec=httpx2.Response)
             response.status_code = 200
             response.headers = load_fixture_headers("tlds-txt")
             response.content = timestamp_only_content.encode("utf-8")
@@ -231,7 +231,7 @@ def test_download_tld_list_content_unchanged(tmp_path):
     with (
         patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
         patch("src.utilities.metadata.METADATA_FILE", str(metadata_file)),
-        patch("httpx.Client") as mock_client,
+        patch("httpx2.Client") as mock_client,
     ):
         mock_client.return_value.__enter__.return_value.get = mock_get
 
@@ -256,7 +256,7 @@ def test_download_creates_source_directory(tmp_path):
     assert not source_dir.exists()
 
     def mock_get(url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.headers = {"Content-Type": "application/json"}
         response.content = b"{}"
@@ -268,7 +268,7 @@ def test_download_creates_source_directory(tmp_path):
         patch(
             "src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")
         ),
-        patch("httpx.Client") as mock_client,
+        patch("httpx2.Client") as mock_client,
     ):
         mock_client.return_value.__enter__.return_value.get = mock_get
 
@@ -284,14 +284,14 @@ def test_download_handles_http_error(tmp_path):
 
     def mock_get(url, headers=None):
         # Simulate connection error
-        raise httpx.ConnectError("Connection failed")
+        raise httpx2.ConnectError("Connection failed")
 
     with (
         patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
         patch(
             "src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")
         ),
-        patch("httpx.Client") as mock_client,
+        patch("httpx2.Client") as mock_client,
     ):
         mock_client.return_value.__enter__.return_value.get = mock_get
 
@@ -311,7 +311,7 @@ def test_download_file_impl_single_file(tmp_path):
 
     # Mock response
     def mock_request(client, url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.headers = {
             "etag": '"abc123"',
@@ -326,7 +326,7 @@ def test_download_file_impl_single_file(tmp_path):
     with patch(
         "src.utilities.download.make_request_with_retry", side_effect=mock_request
     ):
-        mock_client = Mock(spec=httpx.Client)
+        mock_client = Mock(spec=httpx2.Client)
         result = _download_file_impl(
             client=mock_client,
             key="TEST_FILE",
@@ -357,7 +357,7 @@ def test_download_file_impl_304_not_modified(tmp_path):
 
     # Mock 304 response
     def mock_request(client, url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 304
         response.headers = {}
         return response
@@ -374,7 +374,7 @@ def test_download_file_impl_304_not_modified(tmp_path):
     with patch(
         "src.utilities.download.make_request_with_retry", side_effect=mock_request
     ):
-        mock_client = Mock(spec=httpx.Client)
+        mock_client = Mock(spec=httpx2.Client)
         result = _download_file_impl(
             client=mock_client,
             key="TEST_FILE",
@@ -401,7 +401,7 @@ def test_download_file_impl_with_content_validator(tmp_path):
 
     # Mock response with new content
     def mock_request(client, url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.headers = {}
         response.content = b"new content"
@@ -417,7 +417,7 @@ def test_download_file_impl_with_content_validator(tmp_path):
     with patch(
         "src.utilities.download.make_request_with_retry", side_effect=mock_request
     ):
-        mock_client = Mock(spec=httpx.Client)
+        mock_client = Mock(spec=httpx2.Client)
         result = _download_file_impl(
             client=mock_client,
             key="TEST_FILE",
@@ -441,7 +441,7 @@ def test_download_file_public_api(tmp_path):
 
     # Mock response
     def mock_request(client, url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.headers = {
             "etag": '"test-etag"',
@@ -461,7 +461,7 @@ def test_download_file_public_api(tmp_path):
         patch(
             "src.utilities.download.make_request_with_retry", side_effect=mock_request
         ),
-        patch("src.utilities.download.httpx.Client") as mock_client_class,
+        patch("src.utilities.download.httpx2.Client") as mock_client_class,
     ):
         # Setup mock client context manager
         mock_client_class.return_value.__enter__.return_value = Mock()
@@ -489,7 +489,7 @@ def test_download_file_impl_with_cache_control_header(tmp_path):
 
     # Mock response with Cache-Control header
     def mock_request(client, url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.headers = {
             "cache-control": "public, max-age=86400",
@@ -504,7 +504,7 @@ def test_download_file_impl_with_cache_control_header(tmp_path):
     with patch(
         "src.utilities.download.make_request_with_retry", side_effect=mock_request
     ):
-        mock_client = Mock(spec=httpx.Client)
+        mock_client = Mock(spec=httpx2.Client)
         result = _download_file_impl(
             client=mock_client,
             key="CACHED_FILE",
@@ -536,7 +536,7 @@ def test_download_file_impl_with_http_error_status(tmp_path):
 
     # Mock response with 500 error
     def mock_request(client, url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 500  # Server error
         response.headers = {}
         return response
@@ -546,7 +546,7 @@ def test_download_file_impl_with_http_error_status(tmp_path):
     with patch(
         "src.utilities.download.make_request_with_retry", side_effect=mock_request
     ):
-        mock_client = Mock(spec=httpx.Client)
+        mock_client = Mock(spec=httpx2.Client)
         result = _download_file_impl(
             client=mock_client,
             key="ERROR_FILE",
@@ -593,7 +593,7 @@ def test_download_file_impl_cache_fresh_initializes_metadata(tmp_path):
         mock_datetime.now.return_value = mock_now
         mock_datetime.fromisoformat = datetime.fromisoformat
 
-        mock_client = Mock(spec=httpx.Client)
+        mock_client = Mock(spec=httpx2.Client)
         result = _download_file_impl(
             client=mock_client,
             key="TEST_KEY",
@@ -620,7 +620,7 @@ def test_download_tld_pages_default_base_dir(tmp_path):
     # So we use an explicit tmp_path but verify the code structure
 
     def mock_request(client, url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.headers = {}
         response.content = b"<html><main>TLD page content</main></html>"
@@ -634,7 +634,7 @@ def test_download_tld_pages_default_base_dir(tmp_path):
         patch(
             "src.utilities.download.make_request_with_retry", side_effect=mock_request
         ),
-        patch("httpx.Client") as mock_client_class,
+        patch("httpx2.Client") as mock_client_class,
     ):
         mock_client_class.return_value.__enter__.return_value.get = mock_request
 
@@ -664,7 +664,7 @@ def test_download_tld_pages_parses_tlds_from_file(tmp_path):
 
     # Mock response
     def mock_request(client, url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.headers = {}
         response.content = b"<html><main>TLD page</main></html>"
@@ -681,7 +681,7 @@ def test_download_tld_pages_parses_tlds_from_file(tmp_path):
         patch(
             "src.utilities.download.make_request_with_retry", side_effect=mock_request
         ),
-        patch("httpx.Client") as mock_client_class,
+        patch("httpx2.Client") as mock_client_class,
     ):
         mock_client_class.return_value.__enter__.return_value.get = mock_request
 
@@ -701,7 +701,7 @@ def test_download_tld_pages_fallback_on_extraction_failure(tmp_path):
 
     # Mock response with NO <main> tag (extraction will fail)
     def mock_request(client, url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.headers = {}
         response.content = b"<html><body><p>No main tag here</p></body></html>"
@@ -717,7 +717,7 @@ def test_download_tld_pages_fallback_on_extraction_failure(tmp_path):
         patch(
             "src.utilities.download.make_request_with_retry", side_effect=mock_request
         ),
-        patch("httpx.Client") as mock_client_class,
+        patch("httpx2.Client") as mock_client_class,
     ):
         mock_client_class.return_value.__enter__.return_value.get = mock_request
 
@@ -738,7 +738,7 @@ def test_download_tld_pages_handles_non_200_response(tmp_path):
 
     # Mock 404 response
     def mock_request(client, url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 404
         response.headers = {}
         return response
@@ -752,7 +752,7 @@ def test_download_tld_pages_handles_non_200_response(tmp_path):
         patch(
             "src.utilities.download.make_request_with_retry", side_effect=mock_request
         ),
-        patch("httpx.Client") as mock_client_class,
+        patch("httpx2.Client") as mock_client_class,
     ):
         mock_client_class.return_value.__enter__.return_value.get = mock_request
 
@@ -782,7 +782,7 @@ def test_download_tld_pages_handles_exception(tmp_path):
         patch(
             "src.utilities.download.make_request_with_retry", side_effect=mock_request
         ),
-        patch("httpx.Client") as mock_client_class,
+        patch("httpx2.Client") as mock_client_class,
     ):
         mock_client_class.return_value.__enter__.return_value.get = mock_request
 
@@ -804,7 +804,7 @@ def test_download_tld_pages_delay_between_requests(tmp_path):
     # Mock response
     def mock_request(client, url, headers=None):
         call_count[0] += 1
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.headers = {}
         response.content = b"<html><main>content</main></html>"
@@ -821,7 +821,7 @@ def test_download_tld_pages_delay_between_requests(tmp_path):
             "src.utilities.download.make_request_with_retry", side_effect=mock_request
         ),
         patch("src.utilities.download.time.sleep") as mock_sleep,
-        patch("httpx.Client") as mock_client_class,
+        patch("httpx2.Client") as mock_client_class,
     ):
         mock_client_class.return_value.__enter__.return_value.get = mock_request
 
@@ -869,7 +869,7 @@ def test_download_iptoasn_success(tmp_path):
 
     # Mock response
     def mock_request(client, url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.content = b"fake gzip content"
         return response
@@ -880,7 +880,7 @@ def test_download_iptoasn_success(tmp_path):
         patch(
             "src.utilities.download.make_request_with_retry", side_effect=mock_request
         ),
-        patch("httpx.Client") as mock_client_class,
+        patch("httpx2.Client") as mock_client_class,
     ):
         mock_client_class.return_value.__enter__.return_value = Mock()
         mock_client_class.return_value.__exit__.return_value = False
@@ -902,7 +902,7 @@ def test_download_iptoasn_http_error(tmp_path):
 
     # Mock 404 response
     def mock_request(client, url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 404
         return response
 
@@ -911,7 +911,7 @@ def test_download_iptoasn_http_error(tmp_path):
         patch(
             "src.utilities.download.make_request_with_retry", side_effect=mock_request
         ),
-        patch("httpx.Client") as mock_client_class,
+        patch("httpx2.Client") as mock_client_class,
     ):
         mock_client_class.return_value.__enter__.return_value = Mock()
         mock_client_class.return_value.__exit__.return_value = False
@@ -936,7 +936,7 @@ def test_download_iptoasn_exception(tmp_path):
         patch(
             "src.utilities.download.make_request_with_retry", side_effect=mock_request
         ),
-        patch("httpx.Client") as mock_client_class,
+        patch("httpx2.Client") as mock_client_class,
     ):
         mock_client_class.return_value.__enter__.return_value = Mock()
         mock_client_class.return_value.__exit__.return_value = False
@@ -962,7 +962,7 @@ def test_download_file_applies_transform_before_saving(tmp_path):
     source_dir.mkdir(parents=True)
 
     def mock_get(url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.headers = {}
         response.content = b"<html>raw</html>"
@@ -973,7 +973,7 @@ def test_download_file_applies_transform_before_saving(tmp_path):
         patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
         patch("src.utilities.download.load_metadata", return_value={}),
         patch("src.utilities.download.save_metadata"),
-        patch("httpx.Client") as mock_client,
+        patch("httpx2.Client") as mock_client,
     ):
         mock_client.return_value.__enter__.return_value.get = mock_get
         result = download_file(
@@ -996,7 +996,7 @@ def test_download_file_skips_write_when_transform_output_unchanged(tmp_path):
     original_mtime = existing.stat().st_mtime_ns
 
     def mock_get(url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.headers = {}
         response.content = b"<html>new</html>"
@@ -1007,7 +1007,7 @@ def test_download_file_skips_write_when_transform_output_unchanged(tmp_path):
         patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
         patch("src.utilities.download.load_metadata", return_value={}),
         patch("src.utilities.download.save_metadata"),
-        patch("httpx.Client") as mock_client,
+        patch("httpx2.Client") as mock_client,
     ):
         mock_client.return_value.__enter__.return_value.get = mock_get
         result = download_file(
@@ -1027,7 +1027,7 @@ def test_download_file_reports_error_when_transform_raises(tmp_path):
     source_dir.mkdir(parents=True)
 
     def mock_get(url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.headers = {}
         response.content = b"<html>unexpected</html>"
@@ -1041,7 +1041,7 @@ def test_download_file_reports_error_when_transform_raises(tmp_path):
         patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
         patch("src.utilities.download.load_metadata", return_value={}),
         patch("src.utilities.download.save_metadata"),
-        patch("httpx.Client") as mock_client,
+        patch("httpx2.Client") as mock_client,
     ):
         mock_client.return_value.__enter__.return_value.get = mock_get
         result = download_file(
@@ -1072,7 +1072,7 @@ def test_download_file_drops_cache_recorded_against_another_url(tmp_path):
 
     def mock_get(url, headers=None):
         sent_headers.update(headers or {})
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.headers = {"etag": 'W/"fresh"'}
         response.content = b"<html>page</html>"
@@ -1082,7 +1082,7 @@ def test_download_file_drops_cache_recorded_against_another_url(tmp_path):
         patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
         patch("src.utilities.download.load_metadata", return_value=metadata),
         patch("src.utilities.download.save_metadata"),
-        patch("httpx.Client") as mock_client,
+        patch("httpx2.Client") as mock_client,
     ):
         mock_client.return_value.__enter__.return_value.get = mock_get
         result = download_file(
@@ -1117,7 +1117,7 @@ def test_download_file_reuses_cache_recorded_against_the_same_url(tmp_path):
 
     def mock_get(url, headers=None):
         sent_headers.update(headers or {})
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 304
         response.headers = {}
         return response
@@ -1126,7 +1126,7 @@ def test_download_file_reuses_cache_recorded_against_the_same_url(tmp_path):
         patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
         patch("src.utilities.download.load_metadata", return_value=metadata),
         patch("src.utilities.download.save_metadata"),
-        patch("httpx.Client") as mock_client,
+        patch("httpx2.Client") as mock_client,
     ):
         mock_client.return_value.__enter__.return_value.get = mock_get
         result = download_file(
@@ -1147,7 +1147,7 @@ def test_download_file_records_new_etag_when_transform_output_is_unchanged(tmp_p
     }
 
     def mock_get(url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.headers = {"etag": 'W/"new"'}
         response.content = b"<html>churned</html>"
@@ -1157,7 +1157,7 @@ def test_download_file_records_new_etag_when_transform_output_is_unchanged(tmp_p
         patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
         patch("src.utilities.download.load_metadata", return_value=metadata),
         patch("src.utilities.download.save_metadata"),
-        patch("httpx.Client") as mock_client,
+        patch("httpx2.Client") as mock_client,
     ):
         mock_client.return_value.__enter__.return_value.get = mock_get
         result = download_file(
@@ -1182,7 +1182,7 @@ def test_download_file_transform_never_runs_on_a_304(tmp_path):
     calls = []
 
     def mock_get(url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 304
         response.headers = {}
         return response
@@ -1191,7 +1191,7 @@ def test_download_file_transform_never_runs_on_a_304(tmp_path):
         patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
         patch("src.utilities.download.load_metadata", return_value=metadata),
         patch("src.utilities.download.save_metadata"),
-        patch("httpx.Client") as mock_client,
+        patch("httpx2.Client") as mock_client,
     ):
         mock_client.return_value.__enter__.return_value.get = mock_get
         result = download_file(
@@ -1207,12 +1207,12 @@ def test_download_file_transform_never_runs_on_a_304(tmp_path):
 
 
 def test_download_file_transform_decodes_utf8_regardless_of_declared_charset(tmp_path):
-    """The transform sees UTF-8, not httpx's header-inferred charset."""
+    """The transform sees UTF-8, not httpx2's header-inferred charset."""
     source_dir = tmp_path / "data" / "source"
     source_dir.mkdir(parents=True)
 
     def mock_get(url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.headers = {"content-type": "text/html; charset=iso-8859-1"}
         response.content = "Kanton Zürich".encode()
@@ -1223,7 +1223,7 @@ def test_download_file_transform_decodes_utf8_regardless_of_declared_charset(tmp
         patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
         patch("src.utilities.download.load_metadata", return_value={}),
         patch("src.utilities.download.save_metadata"),
-        patch("httpx.Client") as mock_client,
+        patch("httpx2.Client") as mock_client,
     ):
         mock_client.return_value.__enter__.return_value.get = mock_get
         result = download_file(
@@ -1246,7 +1246,7 @@ def test_download_file_records_validators_when_content_validator_reports_unchang
     metadata = {"TEST": {}}
 
     def mock_get(url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.headers = {"etag": 'W/"new"'}
         response.content = b"same"
@@ -1257,7 +1257,7 @@ def test_download_file_records_validators_when_content_validator_reports_unchang
         patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
         patch("src.utilities.download.load_metadata", return_value=metadata),
         patch("src.utilities.download.save_metadata"),
-        patch("httpx.Client") as mock_client,
+        patch("httpx2.Client") as mock_client,
     ):
         mock_client.return_value.__enter__.return_value.get = mock_get
         result = download_file(
@@ -1292,7 +1292,7 @@ def test_download_file_ignores_cache_freshness_when_a_transform_is_set(tmp_path)
 
     def mock_get(url, headers=None):
         requested.append(url)
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.headers = {}
         response.content = b"<html>fresh</html>"
@@ -1302,7 +1302,7 @@ def test_download_file_ignores_cache_freshness_when_a_transform_is_set(tmp_path)
         patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
         patch("src.utilities.download.load_metadata", return_value=metadata),
         patch("src.utilities.download.save_metadata"),
-        patch("httpx.Client") as mock_client,
+        patch("httpx2.Client") as mock_client,
     ):
         mock_client.return_value.__enter__.return_value.get = mock_get
         result = download_file(
@@ -1324,7 +1324,7 @@ def test_download_file_does_not_record_validators_when_transform_raises(tmp_path
     metadata = {"TEST": {}}
 
     def mock_get(url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.headers = {"etag": 'W/"changed-markup"'}
         response.content = b"<html>redesigned</html>"
@@ -1337,7 +1337,7 @@ def test_download_file_does_not_record_validators_when_transform_raises(tmp_path
         patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
         patch("src.utilities.download.load_metadata", return_value=metadata),
         patch("src.utilities.download.save_metadata"),
-        patch("httpx.Client") as mock_client,
+        patch("httpx2.Client") as mock_client,
     ):
         mock_client.return_value.__enter__.return_value.get = mock_get
         result = download_file(
@@ -1368,7 +1368,7 @@ def test_download_file_keeps_freshness_window_anchored_to_the_last_real_save(tmp
     }
 
     def mock_get(url, headers=None):
-        response = Mock(spec=httpx.Response)
+        response = Mock(spec=httpx2.Response)
         response.status_code = 200
         response.headers = {"cache-control": "max-age=3600", "etag": 'W/"new"'}
         response.content = b"same"
@@ -1379,7 +1379,7 @@ def test_download_file_keeps_freshness_window_anchored_to_the_last_real_save(tmp
         patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
         patch("src.utilities.download.load_metadata", return_value=metadata),
         patch("src.utilities.download.save_metadata"),
-        patch("httpx.Client") as mock_client,
+        patch("httpx2.Client") as mock_client,
     ):
         mock_client.return_value.__enter__.return_value.get = mock_get
         result = download_file(

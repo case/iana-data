@@ -346,7 +346,7 @@ The `data/generated/agreements.json` file is the ICANN registry-agreement-type e
 Dependencies:
 
 - [uv](https://docs.astral.sh/uv/) & [ruff]([ruff](https://docs.astral.sh/ruff/)) - Friendly local tooling
-- [httpx](https://github.com/encode/httpx/) - Friendly HTTP usage
+- [httpx2](https://github.com/pydantic/httpx2/) - Friendly HTTP usage
 - [tenacity](https://github.com/jd/tenacity) - Friendly HTTP retries
 - [selectolax](https://github.com/rushter/selectolax) - HTML parsing
 - [pyright](https://github.com/microsoft/pyright) - Type checking

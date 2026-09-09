@@ -8,7 +8,7 @@ import importlib.util
 import json
 from pathlib import Path
 
-import httpx
+import httpx2
 import pytest
 
 _SCRIPT = Path(__file__).parent.parent / "scripts" / "fetch_place_coordinates.py"
@@ -87,12 +87,12 @@ def test_parse_coordinate_claim_non_numeric_raises():
 
 
 def _client(handler):
-    return httpx.Client(transport=httpx.MockTransport(handler))
+    return httpx2.Client(transport=httpx2.MockTransport(handler))
 
 
 def test_fetch_coordinates_returns_parsed_pair():
     def handler(request):
-        return httpx.Response(
+        return httpx2.Response(
             200, json={"entities": {"Q5468": _entity(-29.8583, 31.025)}}
         )
 
@@ -102,7 +102,7 @@ def test_fetch_coordinates_returns_parsed_pair():
 
 def test_fetch_coordinates_raises_on_http_error():
     def handler(request):
-        return httpx.Response(404, json={})
+        return httpx2.Response(404, json={})
 
     with _client(handler) as client, pytest.raises(ValueError):
         fpc.fetch_coordinates(client, "Nowhere")
@@ -110,7 +110,7 @@ def test_fetch_coordinates_raises_on_http_error():
 
 def test_fetch_coordinates_raises_on_missing_entity():
     def handler(request):
-        return httpx.Response(200, json={"entities": {}})
+        return httpx2.Response(200, json={"entities": {}})
 
     with _client(handler) as client, pytest.raises(ValueError):
         fpc.fetch_coordinates(client, "Nowhere")
@@ -146,7 +146,7 @@ def _places():
 
 
 def _coords_handler(request):
-    return httpx.Response(
+    return httpx2.Response(
         200, json={"entities": {"Q1": _entity(1.23456789, 2.3456789)}}
     )
 
@@ -184,7 +184,7 @@ def test_enrich_places_records_failures_without_writing_coords():
     }
 
     def handler(request):
-        return httpx.Response(200, json={"entities": {"Q1": {"claims": {}}}})
+        return httpx2.Response(200, json={"entities": {"Q1": {"claims": {}}}})
 
     with _client(handler) as client:
         added, failed = fpc.enrich_places(places, client, refresh=False, delay=0)
@@ -263,7 +263,7 @@ def test_check_coordinates_records_failure_on_missing_claim():
     places = {"x": _with_coords(0.0, 0.0)}
 
     def handler(request):
-        return httpx.Response(200, json={"entities": {"Q1": {"claims": {}}}})
+        return httpx2.Response(200, json={"entities": {"Q1": {"claims": {}}}})
 
     with _client(handler) as client:
         drifted, failed = fpc.check_coordinates(places, client, delay=0)
@@ -276,7 +276,7 @@ def test_check_coordinates_ignores_antimeridian_wrap():
     places = {"x": _with_coords(0.0, 179.999)}
 
     def handler(request):
-        return httpx.Response(200, json={"entities": {"Q1": _entity(0.0, -179.999)}})
+        return httpx2.Response(200, json={"entities": {"Q1": _entity(0.0, -179.999)}})
 
     with _client(handler) as client:
         drifted, failed = fpc.check_coordinates(places, client, delay=0)
