@@ -1,0 +1,212 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+usage() {
+  cat <<'EOF'
+Usage: bin/ci-land-data-patch rebase --guard <path>...
+       bin/ci-land-data-patch commit --subject <text> [--own --guard <path>...] <branch>
+
+The consumer half of every CI flow that commits to this repository, split at the
+credential boundary: rebase runs before the signing key exists, commit after,
+and bin/ci-apply-data-patch goes between them in a step holding nothing at all.
+One process cannot substitute: the validator would read the key out of the
+parent's /proc/<pid>/environ, which `env -u` does not prevent.
+
+rebase   Moves HEAD onto the base branch tip, or refuses when a guarded path,
+         bin/ or .github/ moved under the run.
+commit   Signs the staged patch and pushes. --own requires the branch tip to be
+         ours, compares the guarded paths against it for new_content, and
+         force-pushes under a lease; without --own the push must fast-forward
+         and no --guard is read. Emits outcome=branch_diverged when it refuses.
+
+Environment:
+  PUSH_REMOTE     Credential-free remote URL. Both phases.
+  GH_TOKEN        Optional push credential. Both phases.
+  EXPECTED_HEAD   Commit the patch was built against. rebase only.
+  BASE_BRANCH     Defaults to main. rebase only.
+  RUNNER_TEMP     Holds the key and the message. commit only.
+  CI_SSH_SIGNING_KEY CI_COMMITTER_NAME CI_COMMITTER_EMAIL   commit only.
+
+Why each guard exists: docs/memory/log/2026-09-09-ci-signing-shared.md
+EOF
+}
+
+phase="${1:-}"
+case "$phase" in
+  -h | --help)
+    usage
+    exit 0
+    ;;
+  "")
+    echo "bin/ci-land-data-patch: a phase is required: rebase or commit" >&2
+    usage >&2
+    exit 2
+    ;;
+  rebase | commit) shift ;;
+  *)
+    printf 'bin/ci-land-data-patch: unknown phase %s\n' "$phase" >&2
+    exit 2
+    ;;
+esac
+
+subject=""
+own=false
+guarded=()
+
+while [ $# -gt 0 ]; do
+  case "$1" in
+    --guard | --subject)
+      if [ $# -lt 2 ]; then
+        echo "bin/ci-land-data-patch: $1 requires a value" >&2
+        exit 2
+      fi
+      case "$1" in
+        --guard) guarded+=("$2") ;;
+        --subject) subject="$2" ;;
+      esac
+      shift 2
+      ;;
+    --own)
+      own=true
+      shift
+      ;;
+    -*)
+      printf 'bin/ci-land-data-patch: unknown option %s\n' "$1" >&2
+      exit 2
+      ;;
+    *) break ;;
+  esac
+done
+
+require_guards() {
+  if [ "${#guarded[@]}" -eq 0 ]; then
+    echo "bin/ci-land-data-patch: at least one --guard is required" >&2
+    exit 2
+  fi
+}
+
+require() {
+  for var in "$@"; do
+    if [ -z "${!var:-}" ]; then
+      echo "::error::$var is not configured"
+      exit 1
+    fi
+  done
+}
+
+configure_auth() {
+  [ -n "${GH_TOKEN:-}" ] || return 0
+  export GIT_CONFIG_COUNT=1
+  export GIT_CONFIG_KEY_0="http.${PUSH_REMOTE}.extraheader"
+  # printf, not <<<, which appends a newline and 401s the push.
+  GIT_CONFIG_VALUE_0="Authorization: Basic $(
+    printf '%s' "x-access-token:${GH_TOKEN}" | base64 -w0
+  )"
+  export GIT_CONFIG_VALUE_0
+}
+
+base_branch="${BASE_BRANCH:-main}"
+
+if [ "$phase" = rebase ]; then
+  if [ $# -ne 0 ]; then
+    echo "bin/ci-land-data-patch: rebase takes no branch argument" >&2
+    exit 2
+  fi
+  require_guards
+  require PUSH_REMOTE EXPECTED_HEAD
+  configure_auth
+
+  git fetch --no-tags "$PUSH_REMOTE" "$base_branch"
+  target="$(git rev-parse FETCH_HEAD)"
+  if [ "$target" = "$EXPECTED_HEAD" ]; then
+    printf '%s is unmoved at %s\n' "$base_branch" "${target:0:8}"
+    exit 0
+  fi
+
+  if ! git diff --quiet "$EXPECTED_HEAD" "$target" -- "${guarded[@]}"; then
+    echo "::error::$base_branch changed ${guarded[*]} during the run; this patch was built against stale inputs"
+    exit 1
+  fi
+  # Bash reads a script incrementally, so a checkout over bin/ can corrupt this
+  # one mid-run.
+  if ! git diff --quiet "$EXPECTED_HEAD" "$target" -- bin/ .github/; then
+    echo "::error::$base_branch changed CI code during the run; dispatch a fresh run against the new code"
+    exit 1
+  fi
+  git checkout --detach "$target"
+  printf 'Rebased onto %s at %s\n' "$base_branch" "${target:0:8}"
+  exit 0
+fi
+
+if [ $# -ne 1 ] || [ -z "$1" ] || [ -z "$subject" ]; then
+  echo "bin/ci-land-data-patch: commit needs --subject and a branch" >&2
+  exit 2
+fi
+branch="$1"
+[ "$own" = true ] && require_guards
+require PUSH_REMOTE RUNNER_TEMP CI_SSH_SIGNING_KEY CI_COMMITTER_NAME CI_COMMITTER_EMAIL
+configure_auth
+
+outfile="${GITHUB_OUTPUT:-/dev/null}"
+emit() { printf '%s=%s\n' "$1" "$2" >> "$outfile"; }
+
+if git diff --cached --quiet; then
+  echo "::error::Nothing is staged; refusing to create an empty commit"
+  exit 1
+fi
+
+message="$RUNNER_TEMP/commit-message"
+{
+  printf '%s\n\nChanged files:\n' "$subject"
+  git diff --cached --no-renames --name-only -z HEAD -- data/ |
+    while IFS= read -r -d '' path; do
+      path="${path#data/source/}"
+      printf -- '- %s\n' "${path#data/generated/}"
+    done
+} > "$message"
+
+signing_key="$RUNNER_TEMP/iana-data-ci-signing"
+umask 077
+printf '%s\n' "$CI_SSH_SIGNING_KEY" > "$signing_key"
+trap 'rm -f "$signing_key"' EXIT
+
+git config --local user.name "$CI_COMMITTER_NAME"
+git config --local user.email "$CI_COMMITTER_EMAIL"
+git config --local gpg.format ssh
+git config --local gpg.ssh.program /usr/bin/ssh-keygen
+git config --local user.signingkey "$signing_key"
+
+# -F, not -m: a full regeneration renders ~70 KB of paths against the 128 KiB
+# cap on one argv entry.
+git -c core.hooksPath=/dev/null commit -S -F "$message"
+
+# Process substitution, not a pipe: grep -q exits early and would SIGPIPE git,
+# which pipefail reads as an unsigned commit.
+if ! grep -q '^gpgsig ' <(git cat-file commit HEAD); then
+  echo "::error::Generated commit does not contain a signature"
+  exit 1
+fi
+
+push_args=()
+if [ "$own" = true ]; then
+  lease=""
+  new_content=true
+  if git fetch --quiet --no-tags "$PUSH_REMOTE" "$branch" 2> /dev/null; then
+    lease="$(git rev-parse FETCH_HEAD)"
+    committer="$(git log -1 --pretty=%ce FETCH_HEAD)"
+    # The lease cannot make this call: it is read from this same fetch, so it
+    # would approve overwriting the commit the fetch just saw.
+    if [ "$committer" != "$CI_COMMITTER_EMAIL" ]; then
+      echo "::error::$branch was last committed by $committer, not this workflow; refusing to force-push over it"
+      emit outcome branch_diverged
+      exit 1
+    fi
+    if git diff --quiet FETCH_HEAD HEAD -- "${guarded[@]}"; then
+      new_content=false
+    fi
+  fi
+  emit new_content "$new_content"
+  push_args+=(--force-with-lease="refs/heads/${branch}:${lease}")
+fi
+
+git -c core.hooksPath=/dev/null push "${push_args[@]}" "$PUSH_REMOTE" "HEAD:refs/heads/${branch}"

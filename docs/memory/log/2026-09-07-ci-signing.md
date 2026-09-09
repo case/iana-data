@@ -41,8 +41,10 @@ Every long step carries its own cap. A job-level timeout is a cancellation, and 
 
 `sign-data` alerts on failure by pushover **and** email, since it is the job that can fail after the data is already built; `update-data` gained a catch-all failure alert covering the patch and upload steps, which had none. Notification steps are `continue-on-error: true` with `timeout-minutes: 2`, and the pushover action's `curl` carries `--max-time 15` so a hung request cannot consume the job before the email fallback runs. The patch and upload steps keep `always()` as a backstop: Actions prefixes `success()` onto any `if` with no status function, so removing `continue-on-error` from a notification step would otherwise skip them and discard a built-and-tested update.
 
-## Out of scope
+## Superseded
 
-`check-coordinates.yaml` still commits unsigned, but pushes to `coordinate-drift` rather than `main`, so the ruleset does not block it and a squash or merge produces a GitHub-signed commit. A rebase merge would be rejected; bring it onto this path if the merge strategy changes.
+`check-coordinates.yaml` was scoped out here, on the reasoning that it pushes to `coordinate-drift` rather than `main`, "so the ruleset does not block it and a squash or merge produces a GitHub-signed commit". **That was wrong.** GitHub checks the commits a test merge introduces, head-branch commits included, so an unsigned drift commit blocks the squash merge too - which is what happened to PR #114. Both flows now share one signing layer: [2026-09-09 shared CI signing](2026-09-09-ci-signing-shared.md).
+
+The stale-head guard described below was also replaced there, by a path comparison that lets `main` advance.
 
 A GitHub App installation token would remove the long-lived secret and produce commits GitHub signs itself. Rejected on setup cost.

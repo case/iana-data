@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+usage() {
+  cat <<'EOF'
+Usage: bin/ci-refresh-coordinates
+
+Refreshes drifted coordinates and captures the result as a patch. Holds no
+credentials: it parses fetched content, so the signing key lives in another job.
+
+Emits refresh_failed and changed to $GITHUB_OUTPUT, plus outcome for the two
+terminal cases this job owns: refresh_failed and no_changes.
+EOF
+}
+
+case "${1:-}" in
+  -h | --help)
+    usage
+    exit 0
+    ;;
+  "") ;;
+  *)
+    printf 'bin/ci-refresh-coordinates: unexpected argument %s\n' "$1" >&2
+    exit 2
+    ;;
+esac
+
+outfile="${GITHUB_OUTPUT:-/dev/null}"
+emit() { printf '%s=%s\n' "$1" "$2" >> "$outfile"; }
+
+refresh_failed=false
+if ! bin/fetch-coordinates --refresh; then
+  refresh_failed=true
+  echo "::warning::Coordinate refresh reported failures; landing what it did fetch."
+fi
+emit refresh_failed "$refresh_failed"
+
+if git diff --quiet -- data/manual; then
+  if [ "$refresh_failed" = true ]; then
+    echo "::warning::Drift was reported but the refresh fetched nothing."
+    emit outcome refresh_failed
+  else
+    echo "No file changes after refresh; nothing to propose."
+    emit outcome no_changes
+  fi
+  emit changed false
+  exit 0
+fi
+
+"$(dirname "$0")/ci-make-data-patch" data/manual

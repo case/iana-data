@@ -33,7 +33,7 @@ The step logic moved to `bin/ci-open-drift-pr`. `tests/ci/test_ci_open_drift_pr.
 ## Known and accepted
 
 - PRs opened with `GITHUB_TOKEN` create check runs in an [approval-required state](https://docs.github.com/en/actions/concepts/security/github_token), so the drift PR's tests wait for a manual approval. The PR body says so.
-- `git push -f` still overwrites human commits pushed onto `coordinate-drift` between weekly runs.
+- ~~`git push -f` still overwrites human commits pushed onto `coordinate-drift` between weekly runs.~~ Closed by the committer check and the lease in [2026-09-09 shared CI signing](2026-09-09-ci-signing-shared.md), which also signs the drift commit so the PR can be merged at all.
 - A drift alert that fails to send on unchanged content is not retried the following week; the job goes red instead, which is the signal.
 - A permanently blocked `gh pr create` re-alerts weekly even on unchanged content, because a pushed branch with no PR is an unresolved state needing manual action. That is a deliberate exception to "announce new content only".
 - `bin/lint` runs no YAML or workflow linter; `actionlint` was run by hand for this change.

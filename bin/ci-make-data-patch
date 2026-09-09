@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+usage() {
+  cat <<'EOF'
+Usage: bin/ci-make-data-patch <path>...
+
+Captures the working tree's changes under <path> as a patch for the signing job.
+No change is a normal outcome and exits 0; callers gate on changed.
+
+Writes $RUNNER_TEMP/data-update.patch and emits changed, patch and artifact to
+$GITHUB_OUTPUT. The artifact name is run- and attempt-scoped, so a failed-jobs
+re-run cannot collect the wrong producer's upload.
+EOF
+}
+
+case "${1:-}" in
+  -h | --help)
+    usage
+    exit 0
+    ;;
+  "")
+    echo "bin/ci-make-data-patch: at least one path is required" >&2
+    exit 2
+    ;;
+esac
+
+paths=("$@")
+: "${RUNNER_TEMP:?RUNNER_TEMP is not set}"
+outfile="${GITHUB_OUTPUT:-/dev/null}"
+emit() { printf '%s=%s\n' "$1" "$2" >> "$outfile"; }
+
+# -N picks up new files; HEAD picks up deletions.
+git add --intent-to-add -- "${paths[@]}"
+if git diff --quiet HEAD -- "${paths[@]}"; then
+  printf 'No changes under %s\n' "${paths[*]}"
+  emit changed false
+  exit 0
+fi
+
+patch="$RUNNER_TEMP/data-update.patch"
+# --no-renames: a rename hides its source path from every consumer-side check.
+git diff --no-renames --binary --full-index HEAD -- "${paths[@]}" > "$patch"
+if [ ! -s "$patch" ]; then
+  echo "::error::Changes were detected but the patch came out empty"
+  exit 1
+fi
+
+emit changed true
+emit patch "$patch"
+emit artifact "data-update-${GITHUB_RUN_ID:-local}-${GITHUB_RUN_ATTEMPT:-1}"
+printf 'Wrote %s (%s bytes)\n' "$patch" "$(stat -c%s "$patch")"

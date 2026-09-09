@@ -1,55 +1,60 @@
 #!/usr/bin/env bash
-# Refresh drifted coordinates, push the branch whenever the refresh produced a
-# diff, and ensure a PR exists. Content equality decides only whether the drift
-# is announced. Extracted from check-coordinates.yaml so shellcheck and
-# tests/ci/test_ci_open_drift_pr.py can reach it.
 set -euo pipefail
 
-report="${1:?usage: ci-open-drift-pr <drift-report.log>}"
+usage() {
+  cat <<'EOF'
+Usage: bin/ci-open-drift-pr <drift-report.log>
+
+Signs the already-staged coordinate refresh onto the drift branch, then ensures
+a PR exists. Run after ci-land-data-patch rebase and ci-apply-data-patch. Content equality decides only whether the drift is announced, so an
+unresolved drift does not re-notify every week.
+
+Emits outcome to $GITHUB_OUTPUT: pr_opened, pr_updated, unchanged or pr_blocked.
+EOF
+}
+
+case "${1:-}" in
+  -h | --help)
+    usage
+    exit 0
+    ;;
+  "" | -*)
+    echo "bin/ci-open-drift-pr: a drift report path is required" >&2
+    usage >&2
+    exit 2
+    ;;
+esac
+
+if [ $# -ne 1 ]; then
+  echo "bin/ci-open-drift-pr: expected exactly one argument" >&2
+  exit 2
+fi
+report="$1"
+# Checked before the commit: a missing report would otherwise force-push the
+# branch and then die before the PR is opened.
+if [ ! -f "$report" ]; then
+  printf 'bin/ci-open-drift-pr: no drift report at %s\n' "$report" >&2
+  exit 2
+fi
 branch="${DRIFT_BRANCH:-coordinate-drift}"
-remote="${PUSH_REMOTE:-origin}"
 server="${GITHUB_SERVER_URL:-https://github.com}"
 repo="${GITHUB_REPOSITORY:-}"
 outfile="${GITHUB_OUTPUT:-/dev/null}"
-workdir="${RUNNER_TEMP:-}"
-[ -n "$workdir" ] || workdir="$(mktemp -d)"
+workdir="${RUNNER_TEMP:-$(mktemp -d)}"
+refresh_failed="${REFRESH_FAILED:-false}"
 
-emit() { printf '%s=%s\n' "$1" "$2" >>"$outfile"; }
+emit() { printf '%s=%s\n' "$1" "$2" >> "$outfile"; }
 
-refresh_failed=false
-if ! bin/fetch-coordinates --refresh; then
-  refresh_failed=true
-  echo "::warning::Coordinate refresh reported failures; landing what it did fetch."
+here="$(dirname "$0")"
+"$here/ci-land-data-patch" commit \
+  --guard data/manual \
+  --subject "Refresh drifted coordinates from Wikidata" \
+  --own "$branch"
+
+new_content=true
+if grep -q '^new_content=false' "$outfile"; then
+  new_content=false
 fi
-emit refresh_failed "$refresh_failed"
-
-if git diff --quiet -- data/manual; then
-  if [ "$refresh_failed" = true ]; then
-    echo "::warning::Drift was reported but the refresh fetched nothing."
-    emit outcome refresh_failed
-  else
-    echo "No file changes after refresh; nothing to propose."
-    emit outcome no_changes
-  fi
-  exit 0
-fi
-
-git config user.name "github-actions[bot]"
-git config user.email "github-actions[bot]@users.noreply.github.com"
-git checkout -B "$branch"
-git add data/manual/
-git commit -m "Refresh drifted coordinates from Wikidata"
-subtree="$(git rev-parse "HEAD:data/manual")"
-
-# Always push, so the branch stays rebased on current main and mergeable even
-# when the coordinates themselves did not move.
-content_is_new=true
-if git fetch --quiet "$remote" "$branch" 2>/dev/null; then
-  if [ "$(git rev-parse "FETCH_HEAD:data/manual")" = "$subtree" ]; then
-    content_is_new=false
-  fi
-fi
-git push -f "$remote" "$branch"
 
 {
   echo "The weekly check found Wikidata coordinates that drifted past the ~1 km tolerance."
@@ -65,12 +70,11 @@ git push -f "$remote" "$branch"
   echo "Checks on this PR need manual approval: it was opened by GITHUB_TOKEN."
   echo
   echo "Review each: merge if Wikidata's value is the better one, close if ours is correct."
-} >"$workdir/pr-body.md"
+} > "$workdir/pr-body.md"
 
-pr_state="$(gh pr view "$branch" --json state --jq .state 2>/dev/null || true)"
-if [ "$pr_state" = "OPEN" ]; then
+if [ "$(gh pr view "$branch" --json state --jq .state 2> /dev/null || true)" = "OPEN" ]; then
   gh pr comment "$branch" --body-file "$workdir/pr-body.md"
-  if [ "$content_is_new" = true ]; then
+  if [ "$new_content" = true ]; then
     emit outcome pr_updated
   else
     emit outcome unchanged
@@ -81,7 +85,7 @@ fi
 # A blocked create still leaves a pushed branch, so hand back a compare URL
 # rather than failing the step and losing the alert with it.
 if gh pr create --base main --head "$branch" \
-  --title "Coordinate drift detected" --body-file "$workdir/pr-body.md" >"$workdir/pr-url.txt"; then
+  --title "Coordinate drift detected" --body-file "$workdir/pr-body.md" > "$workdir/pr-url.txt"; then
   emit outcome pr_opened
   emit pr_url "$(cat "$workdir/pr-url.txt")"
 else

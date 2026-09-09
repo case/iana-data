@@ -10,23 +10,28 @@ concurrency:
   group: check-coordinates
   cancel-in-progress: false
 
-# pull-requests: write so a drift run can open the refresh PR.
-permissions:
-  contents: write
-  pull-requests: write
+permissions: {}
 
 jobs:
   check-coordinates:
+    permissions:
+      contents: read
     runs-on: ubuntu-24.04
-    # Must exceed the sum of the step caps below (2+3+5 setup, 10 check, 12 PR,
-    # 5 notifications at 2, 1 guard = 43), or a step guard can never fire and the
-    # job cap cancels instead, which sends no alert.
     timeout-minutes: 50
+    outputs:
+      drifted: ${{ steps.check.outputs.drifted }}
+      failed: ${{ steps.check.outputs.failed }}
+      refresh_failed: ${{ steps.refresh.outputs.refresh_failed }}
+      changed: ${{ steps.refresh.outputs.changed }}
+      patch_artifact: ${{ steps.refresh.outputs.artifact }}
+      outcome: ${{ steps.refresh.outputs.outcome }}
 
     steps:
       - name: Check out repository
         timeout-minutes: 2
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
       - name: Cache uv downloads
         timeout-minutes: 3
@@ -60,42 +65,29 @@ jobs:
             echo "failed=$(grep -c '^FAIL ' "$report" || true)"
           } >> "$GITHUB_OUTPUT"
 
-      - name: Open refresh PR on drift
-        id: pr
+      # Holds no credentials: this job parses content fetched from Wikidata, so
+      # the signing key belongs to the job below, not this one.
+      - name: Refresh drifted coordinates
+        id: refresh
         if: steps.check.outputs.drifted != '0'
         timeout-minutes: 12
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: bin/ci-open-drift-pr "$RUNNER_TEMP/drift-report.log"
+        run: bin/ci-refresh-coordinates
 
-      # Notify on new drift content only; an unchanged branch is not re-announced.
-      - name: Notify on new drift PR
-        id: notify-drift
-        if: steps.pr.outputs.outcome == 'pr_opened' || steps.pr.outputs.outcome == 'pr_updated'
-        continue-on-error: true
-        timeout-minutes: 2
-        uses: ./.github/actions/pushover
+      - name: Upload coordinate refresh patch
+        if: steps.refresh.outputs.changed == 'true'
+        timeout-minutes: 3
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
         with:
-          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
-          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
-          title: "Coordinate drift detected"
-          message: "⚠️ Wikidata coordinates drifted past tolerance; a refresh PR is open for review."
-
-      - name: Notify when the PR could not be opened
-        id: notify-blocked
-        if: steps.pr.outputs.outcome == 'pr_blocked'
-        continue-on-error: true
-        timeout-minutes: 2
-        uses: ./.github/actions/pushover
-        with:
-          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
-          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
-          title: "Coordinate drift needs a PR opened by hand"
-          message: "⚠️ Drift refreshed and pushed, but GitHub refused to create the PR: ${{ steps.pr.outputs.compare_url }}"
+          name: ${{ steps.refresh.outputs.artifact }}
+          path: |
+            ${{ runner.temp }}/data-update.patch
+            ${{ runner.temp }}/drift-report.log
+          retention-days: 1
+          if-no-files-found: error
 
       - name: Notify when the refresh could not fix the drift
         id: notify-refresh-failed
-        if: steps.pr.outputs.outcome == 'refresh_failed'
+        if: steps.refresh.outputs.outcome == 'refresh_failed'
         continue-on-error: true
         timeout-minutes: 2
         uses: ./.github/actions/pushover
@@ -123,16 +115,14 @@ jobs:
       # this the job stays green with nothing delivered.
       - name: Fail the job when an alert could not be delivered
         if: |
-          steps.notify-drift.outcome == 'failure'
-          || steps.notify-blocked.outcome == 'failure'
-          || steps.notify-refresh-failed.outcome == 'failure'
+          steps.notify-refresh-failed.outcome == 'failure'
           || steps.notify-outage.outcome == 'failure'
         timeout-minutes: 1
         run: |
           echo "::error::An alert was raised but could not be delivered"
           exit 1
 
-      - name: Notify if the coordinate job failed
+      - name: Notify if the coordinate check failed
         if: failure()
         continue-on-error: true
         timeout-minutes: 2
@@ -141,4 +131,125 @@ jobs:
           pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
           pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
           title: "Coordinate drift job failed"
-          message: "❌ The weekly coordinate drift job failed"
+          message: "❌ The weekly coordinate drift check failed"
+
+  # pull-requests: write so the drift run can open the refresh PR.
+  sign-coordinates:
+    needs: check-coordinates
+    if: needs.check-coordinates.result == 'success' && needs.check-coordinates.outputs.changed == 'true'
+    permissions:
+      contents: write
+      pull-requests: write
+    runs-on: ubuntu-24.04
+    # Step caps below sum to 37, under the job cap for the reason given above.
+    timeout-minutes: 45
+    outputs:
+      outcome: ${{ steps.pr.outputs.outcome }}
+
+    steps:
+      - name: Check out repository
+        timeout-minutes: 2
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Download coordinate refresh patch
+        timeout-minutes: 3
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
+        with:
+          name: ${{ needs.check-coordinates.outputs.patch_artifact }}
+          path: ${{ runner.temp }}/coordinate-refresh
+
+      - name: Rebase onto current main
+        timeout-minutes: 5
+        env:
+          EXPECTED_HEAD: ${{ github.sha }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          PUSH_REMOTE="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}.git" \
+            bin/ci-land-data-patch rebase --guard data/manual
+
+      # Untrusted artifact, checked before and after it reaches the filesystem.
+      # The step holds no credentials. Why: docs/memory/log/2026-09-07-ci-signing.md
+      - name: Validate and apply coordinate refresh
+        timeout-minutes: 5
+        run: bin/ci-apply-data-patch "$RUNNER_TEMP/coordinate-refresh/data-update.patch"
+
+      - name: Sign, push and open the refresh PR
+        id: pr
+        timeout-minutes: 12
+        env:
+          REFRESH_FAILED: ${{ needs.check-coordinates.outputs.refresh_failed }}
+          GH_TOKEN: ${{ github.token }}
+          CI_SSH_SIGNING_KEY: ${{ secrets.CI_SSH_SIGNING_KEY }}
+          CI_COMMITTER_NAME: ${{ vars.CI_COMMITTER_NAME }}
+          CI_COMMITTER_EMAIL: ${{ vars.CI_COMMITTER_EMAIL }}
+        run: |
+          PUSH_REMOTE="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}.git" \
+            bin/ci-open-drift-pr "$RUNNER_TEMP/coordinate-refresh/drift-report.log"
+
+      - name: Remove signing key
+        if: always()
+        timeout-minutes: 1
+        run: rm -f "$RUNNER_TEMP/iana-data-ci-signing"
+
+      # Notify on new drift content only; an unchanged branch is not re-announced.
+      - name: Notify on new drift PR
+        id: notify-drift
+        if: steps.pr.outputs.outcome == 'pr_opened' || steps.pr.outputs.outcome == 'pr_updated'
+        continue-on-error: true
+        timeout-minutes: 2
+        uses: ./.github/actions/pushover
+        with:
+          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
+          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
+          title: "Coordinate drift detected"
+          message: "⚠️ Wikidata coordinates drifted past tolerance; a refresh PR is open for review."
+
+      - name: Notify when the PR could not be opened
+        id: notify-blocked
+        if: steps.pr.outputs.outcome == 'pr_blocked'
+        continue-on-error: true
+        timeout-minutes: 2
+        uses: ./.github/actions/pushover
+        with:
+          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
+          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
+          title: "Coordinate drift needs a PR opened by hand"
+          message: "⚠️ Drift refreshed and pushed, but GitHub refused to create the PR: ${{ steps.pr.outputs.compare_url }}"
+
+      # continue-on-error sets a failed step's conclusion to success, so without
+      # this the job stays green with nothing delivered.
+      - name: Fail the job when an alert could not be delivered
+        if: |
+          steps.notify-drift.outcome == 'failure'
+          || steps.notify-blocked.outcome == 'failure'
+        timeout-minutes: 1
+        run: |
+          echo "::error::An alert was raised but could not be delivered"
+          exit 1
+
+      - name: Notify if the signing job failed
+        if: failure()
+        continue-on-error: true
+        timeout-minutes: 2
+        uses: ./.github/actions/pushover
+        with:
+          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
+          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
+          title: "Coordinate drift signing failed"
+          message: "❌ The coordinate refresh could not be signed, pushed, or proposed"
+
+      - name: Email notification if signing fails
+        if: failure()
+        continue-on-error: true
+        timeout-minutes: 2
+        uses: case/actions-email@96f6c77293226d2d4e2bee851e616543992cf3ea # v1
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+        with:
+          provider: resend
+          subject: "Coordinate drift signing failed"
+          body_text: "The coordinate refresh could not be signed, pushed, or proposed."

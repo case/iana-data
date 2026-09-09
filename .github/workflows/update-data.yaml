@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 190
     outputs:
-      changed: ${{ steps.git-check.outputs.changed }}
+      changed: ${{ steps.patch.outputs.changed }}
       source_changed: ${{ steps.source-check.outputs.source_changed }}
       patch_artifact: ${{ steps.patch.outputs.artifact }}
 
@@ -283,35 +283,17 @@ jobs:
           title: "IANA data - tests failed"
           message: "❌ Tests failed for iana-data"
 
-      - name: Check for changes
-        id: git-check
-        if: always()
-        run: |
-          # -N picks up new files; HEAD picks up deletions.
-          git add --intent-to-add -- data/
-          if ! git diff --exit-code HEAD -- data/; then
-            echo "changed=true" >> "$GITHUB_OUTPUT"
-          fi
-
       # run-tests.outcome must be success (not just "not failure"): a failed build
       # skips tests, and "skipped != failure" would otherwise ship partial data.
       - name: Create data update patch
         id: patch
-        if: always() && steps.git-check.outputs.changed == 'true' && steps.run-tests.outcome == 'success'
-        run: |
-          set -euo pipefail
-          patch="$RUNNER_TEMP/data-update.patch"
-          # --no-renames: a rename crossing into data/ hides the source path from
-          # every consumer-side check. Why: docs/memory/log/2026-09-07-ci-signing.md
-          git diff --no-renames --binary --full-index HEAD -- data/ > "$patch"
-          if [ ! -s "$patch" ]; then
-            echo "::error::Expected a non-empty data update patch"
-            exit 1
-          fi
-          echo "artifact=data-update-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" >> "$GITHUB_OUTPUT"
+        if: always() && steps.run-tests.outcome == 'success'
+        timeout-minutes: 5
+        run: bin/ci-make-data-patch data/
 
       - name: Upload data update patch
-        if: always() && steps.patch.outcome == 'success'
+        if: always() && steps.patch.outputs.changed == 'true'
+        timeout-minutes: 3
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
         with:
           name: ${{ steps.patch.outputs.artifact }}
@@ -336,45 +318,58 @@ jobs:
     permissions:
       contents: write
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 30
 
     steps:
       - name: Check out repository
+        timeout-minutes: 2
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
 
       - name: Download data update patch
+        timeout-minutes: 3
         uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
         with:
           name: ${{ needs.update-data.outputs.patch_artifact }}
           path: ${{ runner.temp }}/data-update
 
+      - name: Rebase onto current main
+        timeout-minutes: 5
+        env:
+          EXPECTED_HEAD: ${{ github.sha }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          PUSH_REMOTE="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}.git" \
+            bin/ci-land-data-patch rebase --guard data/
+
       # Untrusted artifact, checked before and after it reaches the filesystem.
-      # The script holds no credentials. Why: docs/memory/log/2026-09-07-ci-signing.md
+      # The step holds no credentials. Why: docs/memory/log/2026-09-07-ci-signing.md
       - name: Validate and apply data update
         timeout-minutes: 5
         run: bin/ci-apply-data-patch "$RUNNER_TEMP/data-update/data-update.patch"
 
-      - name: Commit and push signed data update
+      - name: Commit and push the signed data update
         id: commit-push
         timeout-minutes: 5
         env:
-          SOURCE_CHANGED: ${{ needs.update-data.outputs.source_changed }}
-          EXPECTED_HEAD: ${{ github.sha }}
           GH_TOKEN: ${{ github.token }}
           CI_SSH_SIGNING_KEY: ${{ secrets.CI_SSH_SIGNING_KEY }}
           CI_COMMITTER_NAME: ${{ vars.CI_COMMITTER_NAME }}
           CI_COMMITTER_EMAIL: ${{ vars.CI_COMMITTER_EMAIL }}
+          SOURCE_CHANGED: ${{ needs.update-data.outputs.source_changed }}
         run: |
-          set -euo pipefail
-          # Credential-free URL. The token reaches git as an env-borne
-          # extraheader, so it lands in neither argv nor .git/config.
+          if [ "$SOURCE_CHANGED" = "true" ]; then
+            subject="Update IANA source data files"
+          else
+            subject="Regenerate data from manual curation"
+          fi
           PUSH_REMOTE="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}.git" \
-            bin/ci-commit-signed-data
+            bin/ci-land-data-patch commit --subject "$subject" main
 
       - name: Remove signing key
         if: always()
+        timeout-minutes: 1
         run: rm -f "$RUNNER_TEMP/iana-data-ci-signing"
 
       - name: Notification if signing fails
