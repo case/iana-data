@@ -3,27 +3,34 @@ set -euo pipefail
 
 usage() {
   cat <<'EOF'
-Usage: bin/ci-land-data-patch rebase --guard <path>...
+Usage: bin/ci-land-data-patch sync --adopt <path>... --guard <path>...
+       bin/ci-land-data-patch rebase --guard <path>...
        bin/ci-land-data-patch commit --subject <text> [--own --guard <path>...] <branch>
 
-The consumer half of every CI flow that commits to this repository, split at the
+The git-landing layer every CI flow that commits to this repository shares. sync
+runs in the producer job; rebase and commit run in the consumer, split at the
 credential boundary: rebase runs before the signing key exists, commit after,
 and bin/ci-apply-data-patch goes between them in a step holding nothing at all.
 One process cannot substitute: the validator would read the key out of the
 parent's /proc/<pid>/environ, which `env -u` does not prevent.
 
-rebase   Moves HEAD onto the base branch tip, or refuses when a guarded path,
-         bin/ or .github/ moved under the run.
+sync     Re-points HEAD at the base branch tip and adopts the branch's copy of
+         the adopted paths, keeping everything else in the working tree. Skips
+         the move when a guarded path moved. Emits base_head either way, which
+         the consumer takes as EXPECTED_HEAD.
+rebase   Moves HEAD onto the base branch tip, or refuses when a guarded path
+         moved since the patch was built, or bin/ or .github/ moved since this
+         job's own checkout.
 commit   Signs the staged patch and pushes. --own requires the branch tip to be
          ours, compares the guarded paths against it for new_content, and
          force-pushes under a lease; without --own the push must fast-forward
          and no --guard is read. Emits outcome=branch_diverged when it refuses.
 
 Environment:
-  PUSH_REMOTE     Credential-free remote URL. Both phases.
-  GH_TOKEN        Optional push credential. Both phases.
+  PUSH_REMOTE     Credential-free remote URL. Every phase.
+  GH_TOKEN        Optional push credential. Every phase.
+  BASE_BRANCH     Defaults to main. sync and rebase.
   EXPECTED_HEAD   Commit the patch was built against. rebase only.
-  BASE_BRANCH     Defaults to main. rebase only.
   RUNNER_TEMP     Holds the key and the message. commit only.
   CI_SSH_SIGNING_KEY CI_COMMITTER_NAME CI_COMMITTER_EMAIL   commit only.
 
@@ -38,11 +45,11 @@ case "$phase" in
     exit 0
     ;;
   "")
-    echo "bin/ci-land-data-patch: a phase is required: rebase or commit" >&2
+    echo "bin/ci-land-data-patch: a phase is required: sync, rebase or commit" >&2
     usage >&2
     exit 2
     ;;
-  rebase | commit) shift ;;
+  sync | rebase | commit) shift ;;
   *)
     printf 'bin/ci-land-data-patch: unknown phase %s\n' "$phase" >&2
     exit 2
@@ -52,16 +59,18 @@ esac
 subject=""
 own=false
 guarded=()
+adopted=()
 
 while [ $# -gt 0 ]; do
   case "$1" in
-    --guard | --subject)
+    --guard | --subject | --adopt)
       if [ $# -lt 2 ]; then
         echo "bin/ci-land-data-patch: $1 requires a value" >&2
         exit 2
       fi
       case "$1" in
         --guard) guarded+=("$2") ;;
+        --adopt) adopted+=("$2") ;;
         --subject) subject="$2" ;;
       esac
       shift 2
@@ -106,6 +115,49 @@ configure_auth() {
 }
 
 base_branch="${BASE_BRANCH:-main}"
+outfile="${GITHUB_OUTPUT:-/dev/null}"
+emit() { printf '%s=%s\n' "$1" "$2" >> "$outfile"; }
+
+if [ "$phase" = sync ]; then
+  if [ $# -ne 0 ]; then
+    echo "bin/ci-land-data-patch: sync takes no branch argument" >&2
+    exit 2
+  fi
+  require_guards
+  if [ "${#adopted[@]}" -eq 0 ]; then
+    echo "bin/ci-land-data-patch: at least one --adopt is required" >&2
+    exit 2
+  fi
+  require PUSH_REMOTE
+  configure_auth
+
+  git fetch --no-tags "$PUSH_REMOTE" "$base_branch"
+  target="$(git rev-parse FETCH_HEAD)"
+  head="$(git rev-parse HEAD)"
+  if [ "$target" = "$head" ]; then
+    emit base_head "$head"
+    printf '%s is unmoved at %s\n' "$base_branch" "${head:0:8}"
+    exit 0
+  fi
+
+  # Adopting a guarded path would let the patch revert it: ci-make-data-patch
+  # diffs this working tree, which never held the new content.
+  if ! git diff --quiet "$head" "$target" -- "${guarded[@]}"; then
+    emit base_head "$head"
+    echo "::warning::$base_branch changed ${guarded[*]} during the run; keeping the original base"
+    exit 0
+  fi
+
+  # --soft moves HEAD alone. A checkout would swap src/, bin/ and the lockfiles
+  # this job is running out of.
+  git reset --soft "$target"
+  # restore, not checkout: checkout defaults to overlay mode and would leave a
+  # file the base branch deleted in place, where the build still reads it.
+  git restore --source="$target" --staged --worktree -- "${adopted[@]}"
+  emit base_head "$target"
+  printf 'Adopted %s from %s at %s\n' "${adopted[*]}" "$base_branch" "${target:0:8}"
+  exit 0
+fi
 
 if [ "$phase" = rebase ]; then
   if [ $# -ne 0 ]; then
@@ -118,20 +170,26 @@ if [ "$phase" = rebase ]; then
 
   git fetch --no-tags "$PUSH_REMOTE" "$base_branch"
   target="$(git rev-parse FETCH_HEAD)"
-  if [ "$target" = "$EXPECTED_HEAD" ]; then
-    printf '%s is unmoved at %s\n' "$base_branch" "${target:0:8}"
-    exit 0
-  fi
+  head="$(git rev-parse HEAD)"
 
-  if ! git diff --quiet "$EXPECTED_HEAD" "$target" -- "${guarded[@]}"; then
+  # Staleness is measured from the commit the patch was built against, which the
+  # producer's sync may have advanced past this job's checkout.
+  if [ "$target" != "$EXPECTED_HEAD" ] &&
+    ! git diff --quiet "$EXPECTED_HEAD" "$target" -- "${guarded[@]}"; then
     echo "::error::$base_branch changed ${guarded[*]} during the run; this patch was built against stale inputs"
     exit 1
   fi
-  # Bash reads a script incrementally, so a checkout over bin/ can corrupt this
-  # one mid-run.
-  if ! git diff --quiet "$EXPECTED_HEAD" "$target" -- bin/ .github/; then
+  # Script safety is measured from the checkout below instead: bash reads a
+  # script incrementally, so a checkout over bin/ can corrupt this one mid-run.
+  if [ "$target" != "$head" ] &&
+    ! git diff --quiet "$head" "$target" -- bin/ .github/; then
     echo "::error::$base_branch changed CI code during the run; dispatch a fresh run against the new code"
     exit 1
+  fi
+
+  if [ "$target" = "$head" ]; then
+    printf '%s is unmoved at %s\n' "$base_branch" "${target:0:8}"
+    exit 0
   fi
   git checkout --detach "$target"
   printf 'Rebased onto %s at %s\n' "$base_branch" "${target:0:8}"
@@ -146,9 +204,6 @@ branch="$1"
 [ "$own" = true ] && require_guards
 require PUSH_REMOTE RUNNER_TEMP CI_SSH_SIGNING_KEY CI_COMMITTER_NAME CI_COMMITTER_EMAIL
 configure_auth
-
-outfile="${GITHUB_OUTPUT:-/dev/null}"
-emit() { printf '%s=%s\n' "$1" "$2" >> "$outfile"; }
 
 if git diff --cached --quiet; then
   echo "::error::Nothing is staged; refusing to create an empty commit"

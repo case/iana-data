@@ -370,6 +370,47 @@ def stubbed_land(repo, bare, patch, key, stub_dir, log, **env_overrides) -> dict
     )
 
 
+def clone_of(bare: Path, into: Path) -> Path:
+    git(into.parent, "clone", "-q", str(bare), str(into))
+    git(into, "config", "user.name", "Other")
+    git(into, "config", "user.email", "other@example.invalid")
+    return into
+
+
+def advance_main(bare: Path, tmp_path: Path, path: str, text: str) -> str:
+    """Land a commit on the origin the way a merged PR does mid-run."""
+    clone = clone_of(bare, tmp_path / f"advance-{abs(hash(path)) % 10000}")
+    target = clone / path
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_text(text)
+    commit_all(clone, "concurrent change")
+    git(clone, "push", "-q", "origin", "main")
+    return git(clone, "rev-parse", "HEAD").stdout.strip()
+
+
+@pytest.fixture
+def nightly(tmp_path: Path) -> tuple[Path, Path, Path]:
+    """The nightly's three repos: producer, origin, and the consumer's checkout."""
+    origin = init_repo(tmp_path / "nightly-origin")
+    for relative, text in (
+        ("data/manual/places.json", '{"lat": 1}\n'),
+        ("data/manual/cultures.json", "{}\n"),
+        ("data/source/iana-root.html", "<html>old\n"),
+        ("data/generated/keep.json", "{}\n"),
+        ("bin/ci-land-data-patch", "#!/usr/bin/env bash\n"),
+    ):
+        path = origin / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(text)
+    commit_all(origin, "seed")
+
+    bare = tmp_path / "nightly-origin.git"
+    git(tmp_path, "clone", "-q", "--bare", str(origin), str(bare))
+    producer = clone_of(bare, tmp_path / "producer-job")
+    consumer = clone_of(bare, tmp_path / "consumer-job")
+    return producer, bare, consumer
+
+
 class TestLandDataPatch:
     def test_applies_signs_and_pushes(self, pushable, tmp_path, signing_key):
         repo, bare = pushable
@@ -978,6 +1019,308 @@ class TestRebaseGuard:
 
         assert result.returncode == 1
         assert "changed CI code during the run" in result.stdout
+
+
+class TestSyncInputs:
+    """Why the nightly syncs rather than refusing:
+    docs/memory/log/2026-09-10-nightly-input-sync.md"""
+
+    GUARDS = ("--guard", "data/source/", "--guard", "data/generated/")
+
+    def sync(self, repo: Path, bare, *extra: str, **env_overrides):
+        env = {"PUSH_REMOTE": str(bare), **env_overrides}
+        return run_script(
+            LAND, repo, "sync", "--adopt", "data/manual/", *self.GUARDS, *extra, env=env
+        )
+
+    def scrape(self, producer: Path) -> None:
+        """What the download steps leave in the working tree, uncommitted."""
+        (producer / "data" / "source" / "iana-root.html").write_text("<html>fresh\n")
+        (producer / "data" / "generated" / "keep.json").write_text('{"v": 2}\n')
+
+    def test_adopts_the_branch_inputs_and_keeps_the_scrape(self, nightly, tmp_path):
+        producer, bare, _ = nightly
+        self.scrape(producer)
+        tip = advance_main(bare, tmp_path, "data/manual/places.json", '{"lat": 2}\n')
+        out = tmp_path / "sync-out"
+
+        result = self.sync(producer, bare, GITHUB_OUTPUT=str(out))
+
+        assert result.returncode == 0, result.stdout + result.stderr
+        assert f"base_head={tip}" in out.read_text()
+        assert git(producer, "rev-parse", "HEAD").stdout.strip() == tip
+        assert (
+            producer / "data" / "manual" / "places.json"
+        ).read_text() == '{"lat": 2}\n'
+        assert (
+            producer / "data" / "source" / "iana-root.html"
+        ).read_text() == "<html>fresh\n"
+        assert (
+            producer / "data" / "generated" / "keep.json"
+        ).read_text() == '{"v": 2}\n'
+
+    def test_a_manual_file_deleted_on_main_stays_deleted(self, nightly, tmp_path):
+        """checkout defaults to overlay mode, which would resurrect it; 3c6b9ec1
+        deleted three files from data/manual/."""
+        producer, bare, _ = nightly
+        self.scrape(producer)
+        clone = clone_of(bare, tmp_path / "deleter")
+        (clone / "data" / "manual" / "cultures.json").unlink()
+        commit_all(clone, "retire an editorial input")
+        git(clone, "push", "-q", "origin", "main")
+
+        result = self.sync(producer, bare)
+
+        assert result.returncode == 0, result.stdout + result.stderr
+        assert not (producer / "data" / "manual" / "cultures.json").exists()
+        staged = git(
+            producer, "diff", "--name-only", "HEAD", "--", "data/manual"
+        ).stdout
+        assert staged == "", staged
+
+    def test_keeps_the_original_base_when_a_guarded_path_moved(self, nightly, tmp_path):
+        """Adopting here would let the patch revert main: this working tree never
+        held the new content."""
+        producer, bare, _ = nightly
+        head = git(producer, "rev-parse", "HEAD").stdout.strip()
+        self.scrape(producer)
+        advance_main(bare, tmp_path, "data/generated/curated.json", '{"by": "hand"}\n')
+        out = tmp_path / "sync-out"
+
+        result = self.sync(producer, bare, GITHUB_OUTPUT=str(out))
+
+        assert result.returncode == 0, result.stdout + result.stderr
+        assert f"base_head={head}" in out.read_text()
+        assert git(producer, "rev-parse", "HEAD").stdout.strip() == head
+        assert "::warning::" in result.stdout
+        assert "keeping the original base" in result.stdout
+
+    def test_emits_the_current_head_when_main_is_unmoved(self, nightly, tmp_path):
+        producer, bare, _ = nightly
+        head = git(producer, "rev-parse", "HEAD").stdout.strip()
+        out = tmp_path / "sync-out"
+
+        result = self.sync(producer, bare, GITHUB_OUTPUT=str(out))
+
+        assert result.returncode == 0, result.stdout + result.stderr
+        assert f"base_head={head}" in out.read_text()
+        assert "is unmoved" in result.stdout
+
+    @pytest.mark.parametrize(
+        "args",
+        [
+            ("sync", "--guard", "data/source/"),
+            ("sync", "--adopt", "data/manual/"),
+            ("sync", "--adopt", "data/manual/", "--guard", "data/source/", "main"),
+        ],
+        ids=["no-adopt", "no-guard", "branch-argument"],
+    )
+    def test_rejects_an_incomplete_invocation(self, nightly, args):
+        producer, bare, _ = nightly
+
+        result = run_script(LAND, producer, *args, env={"PUSH_REMOTE": str(bare)})
+
+        assert result.returncode == 2, result.stdout + result.stderr
+
+    def test_the_patch_carries_no_adopted_paths(self, nightly, tmp_path, signing_key):
+        """End to end: the nightly lands over a manual edit made under the run,
+        and the edit survives."""
+        producer, bare, consumer = nightly
+        self.scrape(producer)
+        tip = advance_main(bare, tmp_path, "data/manual/places.json", '{"lat": 2}\n')
+
+        assert self.sync(producer, bare).returncode == 0
+        env = {
+            "RUNNER_TEMP": str(tmp_path / "rt"),
+            "GITHUB_OUTPUT": str(tmp_path / "o"),
+        }
+        Path(env["RUNNER_TEMP"]).mkdir(parents=True, exist_ok=True)
+        assert (
+            run_script(
+                MAKE, producer, "data/source/", "data/generated/", env=env
+            ).returncode
+            == 0
+        )
+        patch = Path(env["RUNNER_TEMP"]) / "data-update.patch"
+        assert "data/manual" not in patch.read_text()
+
+        result = land(
+            consumer,
+            bare,
+            patch,
+            signing_key,
+            guards=("data/source/", "data/generated/"),
+            EXPECTED_HEAD=tip,
+        )
+
+        assert result.returncode == 0, result.stdout + result.stderr
+        assert (
+            git(bare, "show", "main:data/manual/places.json").stdout == '{"lat": 2}\n'
+        )
+        assert (
+            git(bare, "show", "main:data/source/iana-root.html").stdout
+            == "<html>fresh\n"
+        )
+
+    def test_a_path_main_adds_elsewhere_under_data_survives(
+        self, nightly, tmp_path, signing_key
+    ):
+        """This working tree never held it, so a whole-data/ diff would have
+        expressed its absence as a deletion."""
+        producer, bare, consumer = nightly
+        self.scrape(producer)
+        tip = advance_main(bare, tmp_path, "data/README.md", "# the data tree\n")
+
+        assert self.sync(producer, bare).returncode == 0
+        env = {
+            "RUNNER_TEMP": str(tmp_path / "rt"),
+            "GITHUB_OUTPUT": str(tmp_path / "o"),
+        }
+        Path(env["RUNNER_TEMP"]).mkdir(parents=True, exist_ok=True)
+        assert (
+            run_script(
+                MAKE, producer, "data/source/", "data/generated/", env=env
+            ).returncode
+            == 0
+        )
+        patch = Path(env["RUNNER_TEMP"]) / "data-update.patch"
+        assert "data/README.md" not in patch.read_text()
+
+        result = land(
+            consumer,
+            bare,
+            patch,
+            signing_key,
+            guards=("data/source/", "data/generated/"),
+            EXPECTED_HEAD=tip,
+        )
+
+        assert result.returncode == 0, result.stdout + result.stderr
+        assert git(bare, "show", "main:data/README.md").stdout == "# the data tree\n"
+
+    def test_adopts_into_a_shallow_clone(self, nightly, tmp_path):
+        """actions/checkout defaults to fetch-depth: 1, and restore --source
+        reads a tree the shallow fetch has to have brought."""
+        _, bare, _ = nightly
+        shallow = tmp_path / "shallow-producer"
+        git(tmp_path, "clone", "-q", "--depth=1", f"file://{bare}", str(shallow))
+        assert (shallow / ".git" / "shallow").exists()
+        assert git(shallow, "rev-list", "--count", "HEAD").stdout.strip() == "1"
+        self.scrape(shallow)
+        clone = clone_of(bare, tmp_path / "merger")
+        (clone / "data" / "manual" / "places.json").write_text('{"lat": 42}\n')
+        git(clone, "rm", "-q", "data/manual/cultures.json")
+        commit_all(clone, "coordinate drift")
+        git(clone, "push", "-q", "origin", "main")
+        tip = git(clone, "rev-parse", "HEAD").stdout.strip()
+        out = tmp_path / "shallow-out"
+
+        result = self.sync(shallow, f"file://{bare}", GITHUB_OUTPUT=str(out))
+
+        assert result.returncode == 0, result.stdout + result.stderr
+        assert f"base_head={tip}" in out.read_text()
+        assert (
+            shallow / "data" / "manual" / "places.json"
+        ).read_text() == '{"lat": 42}\n'
+        assert not (shallow / "data" / "manual" / "cultures.json").exists()
+        assert (
+            shallow / "data" / "source" / "iana-root.html"
+        ).read_text() == "<html>fresh\n"
+        assert (
+            git(shallow, "diff", "--name-only", "HEAD", "--", "data/manual").stdout
+            == ""
+        )
+
+    def test_an_editorial_merge_after_the_sync_still_lands(
+        self, nightly, tmp_path, signing_key
+    ):
+        """The narrowed guard's own case: this comparison runs, and the wide
+        guard would refuse it."""
+        producer, bare, consumer = nightly
+        self.scrape(producer)
+        out = tmp_path / "sync-out"
+        assert self.sync(producer, bare, GITHUB_OUTPUT=str(out)).returncode == 0
+        base = git(producer, "rev-parse", "HEAD").stdout.strip()
+        env = {
+            "RUNNER_TEMP": str(tmp_path / "rt"),
+            "GITHUB_OUTPUT": str(tmp_path / "o"),
+        }
+        Path(env["RUNNER_TEMP"]).mkdir(parents=True, exist_ok=True)
+        assert (
+            run_script(
+                MAKE, producer, "data/source/", "data/generated/", env=env
+            ).returncode
+            == 0
+        )
+        patch = Path(env["RUNNER_TEMP"]) / "data-update.patch"
+        late = advance_main(bare, tmp_path, "data/manual/places.json", '{"lat": 9}\n')
+        assert late != base
+
+        result = land(
+            consumer,
+            bare,
+            patch,
+            signing_key,
+            guards=("data/source/", "data/generated/"),
+            EXPECTED_HEAD=base,
+        )
+
+        assert result.returncode == 0, result.stdout + result.stderr
+        assert (
+            git(bare, "show", "main:data/manual/places.json").stdout == '{"lat": 9}\n'
+        )
+        assert (
+            git(bare, "show", "main:data/source/iana-root.html").stdout
+            == "<html>fresh\n"
+        )
+
+
+class TestRebaseAcrossASyncedBase:
+    """sync decouples EXPECTED_HEAD from the commit the consumer checked out."""
+
+    def test_detaches_onto_the_tip_the_patch_was_built_against(
+        self, nightly, tmp_path, signing_key
+    ):
+        """The early exit used to return without checking out, which was safe
+        only while EXPECTED_HEAD was the checked-out commit."""
+        _, bare, consumer = nightly
+        head = git(consumer, "rev-parse", "HEAD").stdout.strip()
+        tip = advance_main(bare, tmp_path, "README.md", "docs\n")
+
+        result = run_script(
+            LAND,
+            consumer,
+            "rebase",
+            "--guard",
+            "data/source/",
+            env=land_env(bare, tip, signing_key),
+        )
+
+        assert result.returncode == 0, result.stdout + result.stderr
+        assert git(consumer, "rev-parse", "HEAD").stdout.strip() == tip
+        assert tip != head
+        assert (consumer / "README.md").read_text() == "docs\n"
+
+    def test_refuses_ci_code_that_moved_since_this_job_checked_out(
+        self, nightly, tmp_path, signing_key
+    ):
+        """Measured against EXPECTED_HEAD this comparison is tip-against-tip and
+        passes vacuously, and the checkout then swaps the running script."""
+        _, bare, consumer = nightly
+        tip = advance_main(bare, tmp_path, "bin/ci-land-data-patch", "#!/bin/sh\n")
+
+        result = run_script(
+            LAND,
+            consumer,
+            "rebase",
+            "--guard",
+            "data/source/",
+            env=land_env(bare, tip, signing_key),
+        )
+
+        assert result.returncode == 1, result.stdout + result.stderr
+        assert "changed CI code during the run" in result.stdout
+        assert git(consumer, "rev-parse", "HEAD").stdout.strip() != tip
 
 
 class TestCredentialHandling:

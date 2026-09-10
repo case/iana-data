@@ -22,6 +22,7 @@ jobs:
     timeout-minutes: 190
     outputs:
       changed: ${{ steps.patch.outputs.changed }}
+      base_head: ${{ steps.sync-inputs.outputs.base_head }}
       source_changed: ${{ steps.source-check.outputs.source_changed }}
       patch_artifact: ${{ steps.patch.outputs.artifact }}
 
@@ -222,6 +223,18 @@ jobs:
           title: "IANA TLD data download failed"
           message: "❌ Failed to download IANA TLD data files"
 
+      # The scrape holds its inputs for ~32 minutes before the build reads them.
+      # Why here: docs/memory/log/2026-09-10-nightly-input-sync.md
+      - name: Sync build inputs with current main
+        id: sync-inputs
+        timeout-minutes: 5
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          PUSH_REMOTE="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}.git" \
+            bin/ci-land-data-patch sync --adopt data/manual/ \
+              --guard data/source/ --guard data/generated/
+
       - name: Check if source data changed
         id: source-check
         run: |
@@ -289,7 +302,7 @@ jobs:
         id: patch
         if: always() && steps.run-tests.outcome == 'success'
         timeout-minutes: 5
-        run: bin/ci-make-data-patch data/
+        run: bin/ci-make-data-patch data/source/ data/generated/
 
       - name: Upload data update patch
         if: always() && steps.patch.outputs.changed == 'true'
@@ -337,11 +350,12 @@ jobs:
       - name: Rebase onto current main
         timeout-minutes: 5
         env:
-          EXPECTED_HEAD: ${{ github.sha }}
+          EXPECTED_HEAD: ${{ needs.update-data.outputs.base_head }}
           GH_TOKEN: ${{ github.token }}
         run: |
           PUSH_REMOTE="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}.git" \
-            bin/ci-land-data-patch rebase --guard data/
+            bin/ci-land-data-patch rebase \
+              --guard data/source/ --guard data/generated/
 
       # Untrusted artifact, checked before and after it reaches the filesystem.
       # The step holds no credentials. Why: docs/memory/log/2026-09-07-ci-signing.md
