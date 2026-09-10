@@ -1,6 +1,6 @@
 {
   "description": "Index of per-TLD data files at data/generated/tld/",
-  "publication": "2026-09-03T07:25:52Z",
+  "publication": "2026-09-10T07:29:59Z",
   "count": 1595,
   "tlds": [
     {
@@ -765,7 +765,7 @@
       "delegated": true,
       "tld_created": "1986-03-05",
       "tld_updated": [
-        "2026-08-04"
+        "2026-09-08"
       ]
     },
     {
@@ -2880,7 +2880,7 @@
       "delegated": true,
       "tld_created": "2010-12-20",
       "tld_updated": [
-        "2026-09-02"
+        "2026-09-04"
       ]
     },
     {
@@ -6371,7 +6371,7 @@
       "delegated": true,
       "tld_created": "1986-09-29",
       "tld_updated": [
-        "2026-01-07"
+        "2026-09-08"
       ]
     },
     {
@@ -8017,7 +8017,7 @@
       "delegated": true,
       "tld_created": "1996-04-24",
       "tld_updated": [
-        "2026-08-05"
+        "2026-09-07"
       ]
     },
     {
@@ -9250,7 +9250,7 @@
       "delegated": true,
       "tld_created": "2000-03-22",
       "tld_updated": [
-        "2026-09-01"
+        "2026-09-08"
       ]
     },
     {
@@ -9358,7 +9358,7 @@
       "delegated": true,
       "tld_created": "2016-09-22",
       "tld_updated": [
-        "2026-07-27"
+        "2026-09-09"
       ]
     },
     {
@@ -12697,7 +12697,7 @@
       "delegated": true,
       "tld_created": "2011-02-05",
       "tld_updated": [
-        "2023-03-07"
+        "2026-09-04"
       ]
     },
     {

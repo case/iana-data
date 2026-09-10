@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-04T03:34:59Z",
+  "publication": "2026-09-10T07:29:59Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -43,6 +43,10 @@
       "icann_registry_operator_alias": "VeriSign",
       "icann_registry_operator_slug": "verisign",
       "rdap_source": "IANA",
+      "registry_agreement_types": [
+        "base",
+        "non_sponsored"
+      ],
       "as_org_aliases": [
         "VeriSign"
       ],

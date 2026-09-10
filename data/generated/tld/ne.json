@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-06T05:43:13Z",
+  "publication": "2026-09-10T07:29:59Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -12,15 +12,15 @@
     "type": "cctld",
     "orgs": {
       "iana": {
-        "sponsor": "SONITEL",
-        "admin": "SONITEL",
-        "tech": "SONITEL"
+        "sponsor": "Niger Télécoms SA (NIGERTELECOMS)",
+        "admin": "Niger Télécoms SA (NIGERTELECOMS)",
+        "tech": "Niger Télécoms SA (NIGERTELECOMS)"
       }
     },
     "registry_url": "http://www.intnet.ne",
     "tld_created": "1996-04-24",
     "tld_updated": [
-      "2026-08-05"
+      "2026-09-07"
     ],
     "annotations": {
       "country_name_iso": "Niger",

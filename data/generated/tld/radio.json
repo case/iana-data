@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-29T03:33:22Z",
+  "publication": "2026-09-10T07:29:59Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -14,7 +14,7 @@
       "iana": {
         "sponsor": "Digity, LLC",
         "admin": "Digity, LLC",
-        "tech": "CORE Association"
+        "tech": "CentralNic"
       },
       "icann": {
         "registry_operator": "Digity, LLC",
@@ -30,12 +30,14 @@
     },
     "registry_url": "https://www.nic.radio/",
     "whois_server": "whois.nic.radio",
-    "rdap_server": "https://rdap.nic.radio/",
+    "rdap_server": "https://rdap.centralnic.com/radio/",
     "tld_created": "2016-09-22",
     "tld_updated": [
-      "2026-07-27"
+      "2026-09-09"
     ],
     "annotations": {
+      "iana_tech_alias": "CentralNic",
+      "iana_tech_slug": "centralnic",
       "rdap_source": "IANA",
       "registry_agreement_types": [
         "base",

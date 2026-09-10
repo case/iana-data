@@ -1,6 +1,6 @@
 {
   "description": "Places associated with TLDs in the IANA root zone (countries, dependent territories, subdivisions, cities, and supranational regions), each with a reverse index of its TLDs. Country slugs are ISO 3166-1 alpha-2.",
-  "publication": "2026-06-02T15:23:31Z",
+  "publication": "2026-09-10T07:30:00Z",
   "sources": [
     "pycountry (ISO 3166-1 / 3166-2)",
     "data/manual/places.json (editorial)",
@@ -2168,8 +2168,8 @@
     },
     {
       "coordinates": {
-        "lat": 25.78333,
-        "lon": -80.21667
+        "lat": 25.77417,
+        "lon": -80.19361
       },
       "info_link": "https://en.wikipedia.org/wiki/Miami",
       "iso_code": null,

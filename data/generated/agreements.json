@@ -1,6 +1,6 @@
 {
   "description": "ICANN registry-agreement types with a reverse index of the gTLDs operating under each. Slugs and source_names are canonical ICANN values; display_name is a friendly editorial label.",
-  "publication": "2026-05-26T05:00:52Z",
+  "publication": "2026-09-10T07:30:00Z",
   "sources": [
     "data/source/icann-registry-agreement-table.csv (ICANN)"
   ],
@@ -1120,6 +1120,7 @@
         "watches",
         "weather",
         "weatherchannel",
+        "web",
         "webcam",
         "weber",
         "website",
@@ -2942,6 +2943,7 @@
         "watches",
         "weather",
         "weatherchannel",
+        "web",
         "webcam",
         "weber",
         "website",

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-03T07:25:52Z",
+  "publication": "2026-09-10T07:29:59Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -20,7 +20,7 @@
     "registry_url": "http://www.uoc.cw/cw-registry",
     "tld_created": "2010-12-20",
     "tld_updated": [
-      "2026-09-02"
+      "2026-09-04"
     ],
     "annotations": {
       "country_name_iso": "Curaçao",
@@ -57,18 +57,6 @@
         ]
       },
       {
-        "hostname": "kadushi.curinfo.cw",
-        "ipv4": [
-          {
-            "ip": "65.208.122.63",
-            "asn": 11081,
-            "as_org": "United Telecommunication Services UTS",
-            "as_country": "CW"
-          }
-        ],
-        "ipv6": []
-      },
-      {
         "hostname": "ns0.ja.net",
         "ipv4": [
           {
@@ -98,18 +86,6 @@
             "as_country": "GB"
           }
         ]
-      },
-      {
-        "hostname": "ns01-server.curinfo.cw",
-        "ipv4": [
-          {
-            "ip": "65.208.122.36",
-            "asn": 11081,
-            "as_org": "United Telecommunication Services UTS",
-            "as_country": "CW"
-          }
-        ],
-        "ipv6": []
       },
       {
         "hostname": "ns1.bna.cw",
