@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-09-11T07:27:57Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -21,7 +21,7 @@
     "whois_server": "whois.nic.md",
     "tld_created": "1994-03-24",
     "tld_updated": [
-      "2026-03-09"
+      "2026-09-10"
     ],
     "annotations": {
       "country_name_iso": "Moldova, Republic of",
@@ -87,25 +87,6 @@
             "asn": 16276,
             "as_org": "OVH",
             "as_country": "FR"
-          }
-        ]
-      },
-      {
-        "hostname": "nsr.dns.md",
-        "ipv4": [
-          {
-            "ip": "89.32.236.165",
-            "asn": 39279,
-            "as_org": "CTS-",
-            "as_country": "MD"
-          }
-        ],
-        "ipv6": [
-          {
-            "ip": "2a00:c5a0:0:aaaa:89:32:236:165",
-            "asn": 0,
-            "as_org": "Not routed",
-            "as_country": "None"
           }
         ]
       }

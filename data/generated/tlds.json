@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-10T07:29:59Z",
+  "publication": "2026-09-11T07:27:57Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -49789,7 +49789,7 @@
       "registry_url": "http://www.nic.dj",
       "tld_created": "1996-05-22",
       "tld_updated": [
-        "2024-12-25"
+        "2026-09-10"
       ],
       "annotations": {
         "country_name_iso": "Djibouti",
@@ -108474,7 +108474,7 @@
       "whois_server": "whois.nic.md",
       "tld_created": "1994-03-24",
       "tld_updated": [
-        "2026-03-09"
+        "2026-09-10"
       ],
       "annotations": {
         "country_name_iso": "Moldova, Republic of",
@@ -108540,25 +108540,6 @@
               "asn": 16276,
               "as_org": "OVH",
               "as_country": "FR"
-            }
-          ]
-        },
-        {
-          "hostname": "nsr.dns.md",
-          "ipv4": [
-            {
-              "ip": "89.32.236.165",
-              "asn": 39279,
-              "as_org": "CTS-",
-              "as_country": "MD"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2a00:c5a0:0:aaaa:89:32:236:165",
-              "asn": 0,
-              "as_org": "Not routed",
-              "as_country": "None"
             }
           ]
         }
@@ -146004,7 +145985,7 @@
       "whois_server": "whois.nic.net.sa",
       "tld_created": "1994-05-17",
       "tld_updated": [
-        "2026-02-24"
+        "2026-09-10"
       ],
       "annotations": {
         "country_name_iso": "Saudi Arabia",
@@ -146029,14 +146010,7 @@
               "as_country": "SA"
             }
           ],
-          "ipv6": [
-            {
-              "ip": "2001:67c:18c8:c0::c1",
-              "asn": 30857,
-              "as_org": "CITC-AS",
-              "as_country": "SA"
-            }
-          ]
+          "ipv6": []
         },
         {
           "hostname": "c2.dns.sa",
@@ -202734,14 +202708,7 @@
               "as_country": "SA"
             }
           ],
-          "ipv6": [
-            {
-              "ip": "2001:67c:18c8:c0::c1",
-              "asn": 30857,
-              "as_org": "CITC-AS",
-              "as_country": "SA"
-            }
-          ]
+          "ipv6": []
         },
         {
           "hostname": "c2.dns.sa",
@@ -206535,7 +206502,7 @@
       "registry_url": "http://www.gr",
       "tld_created": "2015-05-06",
       "tld_updated": [
-        "2026-08-31"
+        "2026-09-10"
       ],
       "annotations": {
         "country_name_iso": "Greece",
