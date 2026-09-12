@@ -1,6 +1,6 @@
 {
   "description": "Organizations that play roles for TLDs in the IANA root zone, with a reverse-index of those roles. Consolidated subset: this covers the curated multi-source organizations only; the single-source long tail is not yet included, so absence here does not mean a TLD has no operator.",
-  "publication": "2026-09-13T07:38:17Z",
+  "publication": "2026-09-12T19:48:09Z",
   "sources": [
     "data/source/iana-root.html (IANA)",
     "data/source/icann-gtlds.json (ICANN)",
@@ -830,9 +830,15 @@
           "CLOUDFLARESPECTRUM Cloudflare, Inc."
         ]
       },
-      "aliases": [
-        "CLOUDFLARENET"
-      ],
+      "archived": {
+        "asn": [
+          {
+            "name": "CLOUDFLARENET",
+            "archived_on": "2026-09-12"
+          }
+        ]
+      },
+      "aliases": [],
       "homepage": "https://www.cloudflare.com/",
       "roles": {
         "asn": {
@@ -5640,9 +5646,15 @@
           "CAICT-AS-AP China Academy of Information and Communications Technology"
         ]
       },
-      "aliases": [
-        "CAICTNET Chinese Academy of Telecommunication Research"
-      ],
+      "archived": {
+        "asn": [
+          {
+            "name": "CAICTNET Chinese Academy of Telecommunication Research",
+            "archived_on": "2026-09-12"
+          }
+        ]
+      },
+      "aliases": [],
       "homepage": "https://www.teleinfo.cn/",
       "roles": {
         "asn": {
@@ -6308,15 +6320,27 @@
           "VeriSign, Inc."
         ],
         "asn": [
+          "HGTLD",
           "VRSN-AC50-340"
         ]
       },
-      "aliases": [
-        "HGTLD",
-        "VERISIGN-AS",
-        "VGRS-AC25",
-        "VRSN-AC28"
-      ],
+      "archived": {
+        "asn": [
+          {
+            "name": "VERISIGN-AS",
+            "archived_on": "2026-09-12"
+          },
+          {
+            "name": "VGRS-AC25",
+            "archived_on": "2026-09-12"
+          },
+          {
+            "name": "VRSN-AC28",
+            "archived_on": "2026-09-12"
+          }
+        ]
+      },
+      "aliases": [],
       "homepage": "https://www.verisign.com/",
       "roles": {
         "iana": {

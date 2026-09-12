@@ -31,14 +31,23 @@ def org(
     display_name: str = "Acme",
     source_names: dict[str, list[str]] | None = None,
     aliases: list[str] | None = None,
+    archived: dict | None = None,
 ) -> OrgRecord:
     """An organizations.json seed record with the fields the resolver reads."""
-    return {
+    record = {
         "slug": slug,
         "display_name": display_name,
         "source_names": {} if source_names is None else source_names,
         "aliases": [] if aliases is None else aliases,
     }
+    if archived is not None:
+        record["archived"] = archived
+    return record
+
+
+def archive(*names: str, on: str = "2026-09-12") -> list[dict]:
+    """Well-formed archived entries for the given names."""
+    return [{"name": name, "archived_on": on} for name in names]
 
 
 def raw(iana=(), icann=(), asn=()) -> RawStrings:
@@ -190,6 +199,93 @@ class TestClassifyMissingAsnRole:
     def test_unknown_bucket_is_hard(self):
         record = org(source_names={"asn": ["GONE"], "ans": ["TYPO"]})
 
+        assert classify_missing_asn_role(record, raw()) == HARD
+
+
+class TestArchivedNamesAreAsnEvidence:
+    """M2: an archived label is bucket-scoped evidence the other classifiers read."""
+
+    def test_archived_only_org_with_nothing_live_warns(self):
+        record = org(source_names={}, archived={"asn": archive("GONE")})
+
+        assert classify_absence(record, raw()) == ASN_DRIFT
+
+    def test_archived_only_org_missing_its_asn_role_warns(self):
+        record = org(source_names={}, archived={"asn": archive("GONE")})
+
+        assert classify_missing_asn_role(record, raw()) == ASN_DRIFT
+
+    def test_a_live_archived_name_is_hard_in_its_own_bucket(self):
+        """An archived label that came back resolves, so a missing role is a defect."""
+        record = org(source_names={}, archived={"asn": archive("BACK")})
+
+        assert classify_absence(record, raw(asn=["BACK"])) == HARD
+        assert classify_missing_asn_role(record, raw(asn=["BACK"])) == HARD
+
+    def test_an_archived_name_live_in_another_bucket_does_not_rescue_the_org(self):
+        """archived.asn is indexed into asn only, unlike an alias."""
+        record = org(source_names={}, archived={"asn": archive("GONE")})
+
+        assert classify_absence(record, raw(iana=["GONE"])) == ASN_DRIFT
+
+    def test_archived_iana_name_beside_archived_asn_is_hard(self):
+        record = org(
+            source_names={},
+            archived={"asn": archive("GONE"), "iana": archive("ALSO")},
+        )
+
+        assert classify_absence(record, raw()) == HARD
+
+    def test_empty_archived_asn_bucket_is_not_evidence(self):
+        assert classify_absence(org(archived={"asn": []}), raw()) == HARD
+        assert classify_missing_asn_role(org(archived={"asn": []}), raw()) == HARD
+
+    def test_unknown_archived_bucket_is_hard(self):
+        record = org(source_names={"asn": ["GONE"]}, archived={"ans": []})
+
+        assert classify_absence(record, raw()) == HARD
+        assert classify_missing_asn_role(record, raw()) == HARD
+
+
+class TestMalformedArchiveIsNeverEvidence:
+    """A bad seed must not manufacture the evidence that relaxes an assertion."""
+
+    @pytest.mark.parametrize(
+        "archived",
+        [
+            {"asn": [{"name": [], "archived_on": "2026-09-12"}]},
+            {"asn": [{"name": "", "archived_on": "2026-09-12"}]},
+            {"asn": [{"name": 123, "archived_on": "2026-09-12"}]},
+            {"asn": ["VRSN-AC28"]},
+            {"asn": {"name": "VRSN-AC28"}},
+            {"asn": [{"name": "GONE"}]},
+            {"asn": [{"name": "GONE", "archived_on": "2026-13-45"}]},
+            {"asn": [{"name": "GONE", "archived_on": "20260912"}]},
+            {"asn": [{"name": "GONE", "archived_on": "2026-09-12", "why": "x"}]},
+        ],
+        ids=[
+            "unhashable",
+            "empty",
+            "non-string",
+            "bare-string",
+            "not-a-list",
+            "missing-date",
+            "impossible-date",
+            "unpadded-date",
+            "unknown-key",
+        ],
+    )
+    def test_malformed_entries_do_not_warn(self, archived):
+        record = org(source_names={}, archived=archived)
+
+        assert classify_absence(record, raw()) == HARD
+        assert classify_missing_asn_role(record, raw()) == HARD
+
+    def test_archived_that_is_not_a_mapping_is_hard(self):
+        record = org(source_names={"asn": ["GONE"]}, archived=None)
+        record["archived"] = None
+
+        assert classify_absence(record, raw()) == HARD
         assert classify_missing_asn_role(record, raw()) == HARD
 
 

@@ -9,11 +9,10 @@ docs/plans/current/2026-09-11-asn-drift-automation.md
 import warnings
 from typing import Any
 
+from src.parse.organizations import SOURCES, archived_names, resolution_keys
+
 OrgRecord = dict[str, Any]
 RawStrings = dict[str, dict[str, set[str]]]
-
-# The buckets build_resolver indexes. Anything else in a seed is a curation error.
-SOURCES: tuple[str, ...] = ("iana", "icann", "asn")
 
 ASN_DRIFT = "asn_drift"
 HARD = "hard"
@@ -57,18 +56,25 @@ def raw_org_strings(entries) -> RawStrings:
 
 
 def _has_unknown_bucket(org: OrgRecord) -> bool:
-    """True if source_names names a bucket the resolver does not index."""
-    return bool(set(org.get("source_names", {})) - set(SOURCES))
+    """True if source_names or archived names a bucket the resolver cannot index.
+
+    A malformed ``archived`` counts too: there is no evidence to weigh.
+    """
+    archived = org.get("archived", {})
+    if not isinstance(archived, dict):
+        return True
+    buckets = set(org.get("source_names", {})) | set(archived)
+    return bool(buckets - set(SOURCES))
 
 
-def _resolution_keys(org: OrgRecord) -> dict[str, list[str]]:
-    """Every string that resolves to ``org``, per bucket.
+def _asserted_buckets(org: OrgRecord) -> set[str]:
+    """Buckets where ``org`` claims an identity, seeded or archived.
 
-    Mirrors build_resolver: display_name and aliases fall back into all buckets.
+    Why archived counts: docs/memory/log/2026-09-12-archived-bucket.md
     """
     source_names = org.get("source_names", {})
-    fallbacks = [org["display_name"], *org.get("aliases", [])]
-    return {source: [*source_names.get(source, []), *fallbacks] for source in SOURCES}
+    seeded = {source for source, names in source_names.items() if names}
+    return seeded | {source for source in SOURCES if archived_names(org, source)}
 
 
 def classify_absence(org: OrgRecord, raw: RawStrings) -> str:
@@ -79,17 +85,16 @@ def classify_absence(org: OrgRecord, raw: RawStrings) -> str:
 
     Returns:
         ``ASN_DRIFT`` when every asserted name is an unmatched asn name and
-        nothing else resolves; ``HARD`` otherwise, including an org asserting no
-        source names at all.
+        nothing else resolves; ``HARD`` otherwise, including an org asserting
+        neither source names nor archived names.
     """
     if _has_unknown_bucket(org):
         return HARD
-    for source, keys in _resolution_keys(org).items():
+    for source, keys in resolution_keys(org).items():
         if any(key in raw.get(source, {}) for key in keys):
             return HARD
 
-    buckets = {source for source, names in org.get("source_names", {}).items() if names}
-    if buckets == {"asn"}:
+    if _asserted_buckets(org) == {"asn"}:
         return ASN_DRIFT
     return HARD
 
@@ -99,13 +104,14 @@ def classify_missing_asn_role(org: OrgRecord, raw: RawStrings) -> str:
 
     Scoped deliberately: an org holding a live iana key can still lose its asn
     role, and the all-bucket test in classify_absence would never reach ASN_DRIFT
-    for it. Carries no precondition about other roles.
+    for it. Carries no precondition about other roles. An archived asn name
+    counts as evidence, so an org whose labels are all archived still warns.
     """
     if _has_unknown_bucket(org):
         return HARD
-    if any(key in raw.get("asn", {}) for key in _resolution_keys(org)["asn"]):
+    if any(key in raw.get("asn", {}) for key in resolution_keys(org)["asn"]):
         return HARD
-    if not org.get("source_names", {}).get("asn"):
+    if not org.get("source_names", {}).get("asn") and not archived_names(org, "asn"):
         return HARD
     return ASN_DRIFT
 

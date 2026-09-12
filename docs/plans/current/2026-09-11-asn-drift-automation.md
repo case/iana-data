@@ -84,7 +84,7 @@ The condition is **observable, not causal**. The graph cannot tell upstream drif
 - [x] Do **not** verify against today's seed with `VRSN-AC28` removed. It already sits in `aliases` with only `VRSN-AC50-340` under `source_names.asn`, so that exercises nothing. Use a fixture carrying the earlier active seed
 - [x] `README.md:300` ("no record is ever orphaned") and `:306` (every org carries `roles`) are corrected **here**, not deferred. M1 makes both false, and deferring leaves the repo inconsistent if M2 never lands
 
-**Manual archival does not generalise, and M1 says so** in `_DRIFT_ADVICE`. `ultradns` carries `source_names.asn = ["SECURITYSERVICES"]` and nothing else (`data/manual/organizations.json:1010`). If that label drifts, M1 warns - but moving it to `aliases` the way `VRSN-AC28` was moved leaves empty `source_names`, which M1 deliberately fails. For an `asn`-only org the maintainer must keep the absent seed in place, reseed the org, or remove the record deliberately.
+**Manual archival does not generalise, and M1 says so** in `_DRIFT_ADVICE`. `ultradns` carries `source_names.asn = ["SECURITYSERVICES"]` and nothing else (`data/manual/organizations.json:1010`). If that label drifts, M1 warns - but moving it to `aliases` the way `VRSN-AC28` was moved leaves empty `source_names`, which M1 deliberately fails. For an `asn`-only org the maintainer must keep the absent seed in place, reseed the org, or remove the record deliberately. **Superseded by M2**: the label moves to `archived.asn`, which keeps resolving it in the `asn` bucket and counts as `asn` evidence, so an archived-only org warns rather than failing.
 
 **Known limitation, accepted:** typo detection for `asn` is given up. A mistyped label never matches and now only warns.
 
@@ -98,22 +98,22 @@ This trades a blocking data-quality safeguard and its alert for CI-log diagnosti
 
 ---
 
-## M2: the `archived` bucket
+## M2: the `archived` bucket - **DONE**
 
-- [ ] Schema: source-scoped `archived`, entries `{name, archived_on}`
-- [ ] `build_resolver` (`src/parse/organizations.py:74`) indexes `archived[source]` into that source **only**
-- [ ] Validation in `parse_organizations_manual`: recognized buckets, non-empty names, `YYYY-MM-DD` dates, no duplicates, no name in both `source_names` and `archived` for one bucket. It currently validates only that the document is a list (`:36`)
-- [ ] Decide and test whether `archived_on` is required or optional - M2 and the migration must agree
-- [ ] Tests: an archived label resolves in its own bucket and **not** in the other two
+- [x] Schema: source-scoped `archived`, entries `{name, archived_on}`
+- [x] `build_resolver` (`src/parse/organizations.py:74`) indexes `archived[source]` into that source **only**
+- [x] Validation in `parse_organizations_manual`: recognized buckets, non-empty names, `YYYY-MM-DD` dates, no duplicates, no name in both `source_names` and `archived` for one bucket. It currently validates only that the document is a list (`:36`)
+- [x] Decide and test whether `archived_on` is required or optional - M2 and the migration must agree. **Required**: the writer always knows the date, M4 always sets it, and an optional field invites dateless entries with nothing to backfill from
+- [x] Tests: an archived label resolves in its own bucket and **not** in the other two
 
 ### Migrating the existing graveyard
 
 `aliases` already holds retired ASN labels by design - `2026-07-16-teleinfo-asn-rename.md:22` names `verisign -> VGRS-AC25` and `cloudflare -> CLOUDFLARENET`. Moving them **narrows** resolution, because aliases resolve in all three buckets today.
 
-- [ ] Evidenced inventory from the memory log, not inferred from present liveness
-- [ ] Acceptance test compares the **complete** before/after `(source, name) -> slug` mapping, with an explicit allowlist of justified removals. Iterating current raw values is insufficient: it cannot see a key that no live string exercises
-- [ ] Separately, assert no currently-resolving raw value changes slug
-- [ ] `archived_on` for migrated entries is the migration date, since that is what the field means. Historical retirement dates belong in the memory log, not here
+- [x] Evidenced inventory from the memory log, not inferred from present liveness
+- [x] Acceptance test compares the **complete** before/after `(source, name) -> slug` mapping, with an explicit allowlist of justified removals. Iterating current raw values is insufficient: it cannot see a key that no live string exercises
+- [x] Separately, assert no currently-resolving raw value changes slug
+- [x] `archived_on` for migrated entries is the migration date, since that is what the field means. Historical retirement dates belong in the memory log, not here
 
 ---
 
@@ -154,14 +154,14 @@ The only milestone needing credentials.
 
 ---
 
-## M-docs: consumer contract
+## M-docs: consumer contract - **DONE**
 
 Lands with M2, since that is when the shape changes.
 
-- [ ] `README.md:300` promises "no record is ever orphaned"; archived-only orgs and orgs without `roles` break it
-- [ ] `README.md:306` calls `aliases` "hand-added historical"; document the split
-- [ ] Memory entry for the schema decision, per `AGENTS.md`
-- [ ] `src/build/organizations.py:58` copies every seed key into the published artifact, so `archived` is consumer-visible. Cover an archived-only org
+- [x] `README.md:300` promises "no record is ever orphaned"; archived-only orgs and orgs without `roles` break it
+- [x] `README.md:306` calls `aliases` "hand-added historical"; document the split
+- [x] Memory entry for the schema decision, per `AGENTS.md`
+- [x] `src/build/organizations.py:58` copies every seed key into the published artifact, so `archived` is consumer-visible. Cover an archived-only org
 
 ## Verified
 

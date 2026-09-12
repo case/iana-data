@@ -28,6 +28,7 @@ from tests.integration.asn_drift import (
     split_unmatched_source_names,
     warn_drift,
 )
+from tests.parse.test_organizations_archive_migration import unmigrate
 
 # Annotation prefix -> (source bucket, role) for the scalar registry positions.
 SCALAR_ROLES = [
@@ -107,17 +108,17 @@ def test_resolver_has_no_collisions():
 def test_every_org_has_at_least_one_role(built):
     """Every curated org resolves to a real role (no orphan identity records).
 
-    An org warns instead when only its asn names are asserted and none of its
-    resolution keys matches current data.
+    An org warns instead when only its asn names are asserted, seeded or
+    archived, and none of its resolution keys matches current data.
     """
     raw = raw_org_strings(built.tlds.values())
     hard, drift = split_orphans(built.orgs, raw)
 
     if drift:
-        warn_drift(f"orgs resolving to nothing, asn source_names only: {drift}")
+        warn_drift(f"orgs resolving to nothing, asn names only: {drift}")
     assert hard == [], (
         f"orgs in organizations.json that map to zero TLDs: {hard}. "
-        "Either the org's source_names don't match live data, or it should be removed."
+        "Either the org's asn names don't match live data, or it should be removed."
     )
 
 
@@ -234,17 +235,17 @@ def _diagnose_unmatched(unmatched, raw_tlds, headline):
     return f"{headline}:\n" + "\n".join(lines)
 
 
-# Moving an org's last asn seed to aliases empties source_names, which the orphan
-# and uk checks reject. Why: docs/plans/current/2026-09-11-asn-drift-automation.md
+# archived.asn, not aliases: an alias resolves in every bucket, so retiring an
+# asn label there widens it. Why: docs/memory/log/2026-09-12-archived-bucket.md
 _HARD_ADVICE = (
     "source_names strings not found in any tlds.json raw value for that "
-    "source (fix the seed or move to aliases)"
+    "source (fix the seed, or retire it to archived for that source)"
 )
 _DRIFT_ADVICE = (
     "asn source_names matching no current tlds.json raw value (tolerated). "
-    "Leaving an absent asn seed in place is valid. Retiring one to aliases is "
-    "fine while the org keeps other asserted names or roles, but not when it "
-    "would leave the org roleless with empty source_names"
+    "Leaving an absent asn seed in place is valid, and so is retiring it to "
+    "archived.asn, which keeps resolving it in the asn bucket. An org left "
+    "with neither an asn source_name nor an archived.asn entry fails instead"
 )
 
 
@@ -288,7 +289,7 @@ def test_uk_nameservers_span_distinct_operators(built):
     hard, drift = split_missing_slugs(missing, built.by_slug, raw_org_strings([entry]))
 
     if drift:
-        warn_drift(f"uk operators whose asn source_names match nothing: {drift}")
+        warn_drift(f"uk operators whose asn names match nothing: {drift}")
     assert hard == [], f"uk should span distinct operators, missing: {hard}"
 
 
@@ -304,7 +305,7 @@ def test_knipp_spans_iana_tech_and_asn_operator(built):
         assert classify_missing_asn_role(org, raw) == ASN_DRIFT, (
             "knipp lost its asn operator role for a reason other than asn drift"
         )
-        warn_drift("knipp asn operator role absent: no asn source_name matches")
+        warn_drift("knipp asn operator role absent: no asn name matches")
 
 
 def test_governance_body_is_ordinary_record(built):
@@ -314,3 +315,34 @@ def test_governance_body_is_ordinary_record(built):
     assert ebero.get("roles"), "expected the governance body to carry real roles"
     assert "kind" not in ebero
     assert "tld_count" not in ebero
+
+
+def test_the_archive_migration_preserves_every_live_resolution(built):
+    """No raw value that resolves today changes the slug it resolves to.
+
+    Live-data half of the migration check; lifetime note in the sibling in tests/parse.
+    """
+    seed = parse_organizations_manual()
+    after = build_resolver(seed)
+    before = build_resolver([unmigrate(org) for org in seed])
+
+    raw = raw_org_strings(built.tlds.values())
+    rebound = []
+    for source, values in raw.items():
+        for value in values:
+            was, now = before.resolve(source, value), after.resolve(source, value)
+            was_slug = was["slug"] if was else None
+            now_slug = now["slug"] if now else None
+            if was_slug != now_slug:
+                rebound.append((source, value, was_slug, now_slug))
+
+    assert rebound == [], f"live raw values whose slug changed: {rebound[:10]}"
+
+
+def test_archived_entries_reach_the_published_artifact(built):
+    """archived is consumer-visible: build_organizations_json copies every seed key."""
+    verisign = built.by_slug["verisign"]
+
+    archived = {e["name"] for e in verisign["archived"]["asn"]}
+    assert "VRSN-AC28" in archived
+    assert "VRSN-AC28" not in verisign.get("aliases", [])
