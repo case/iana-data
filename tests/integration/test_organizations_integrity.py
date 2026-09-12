@@ -19,6 +19,15 @@ import pytest
 from src.build.tlds import OutputPaths, build_tlds_json
 from src.parse.organizations import build_resolver, parse_organizations_manual
 from src.utilities.download import get_iptoasn_path
+from tests.integration.asn_drift import (
+    ASN_DRIFT,
+    classify_missing_asn_role,
+    raw_org_strings,
+    split_missing_slugs,
+    split_orphans,
+    split_unmatched_source_names,
+    warn_drift,
+)
 
 # Annotation prefix -> (source bucket, role) for the scalar registry positions.
 SCALAR_ROLES = [
@@ -96,11 +105,18 @@ def test_resolver_has_no_collisions():
 
 
 def test_every_org_has_at_least_one_role(built):
-    """Every curated org resolves to a real role (no orphan identity records)."""
-    orphans = [o["slug"] for o in built.orgs if not o.get("roles")]
+    """Every curated org resolves to a real role (no orphan identity records).
 
-    assert orphans == [], (
-        f"orgs in organizations.json that map to zero TLDs: {orphans}. "
+    An org warns instead when only its asn names are asserted and none of its
+    resolution keys matches current data.
+    """
+    raw = raw_org_strings(built.tlds.values())
+    hard, drift = split_orphans(built.orgs, raw)
+
+    if drift:
+        warn_drift(f"orgs resolving to nothing, asn source_names only: {drift}")
+    assert hard == [], (
+        f"orgs in organizations.json that map to zero TLDs: {hard}. "
         "Either the org's source_names don't match live data, or it should be removed."
     )
 
@@ -201,7 +217,7 @@ def test_role_tlds_are_ascii_keys_in_tlds_json(built):
     assert bad == [], f"role TLDs that are non-ASCII or not a tlds.json key: {bad[:10]}"
 
 
-def _diagnose_unmatched(unmatched, raw_tlds):
+def _diagnose_unmatched(unmatched, raw_tlds, headline):
     """Render unmatched source_names with the nearest still-existing raw values
     and the TLDs they appear on, to show whether each is a near-dup or fully stale."""
     lines = []
@@ -215,41 +231,34 @@ def _diagnose_unmatched(unmatched, raw_tlds):
             tlds = sorted(raw_tlds[source].get(cand, ()))
             shown = ", ".join(tlds[:8]) + ("…" if len(tlds) > 8 else "")
             lines.append(f"      nearest existing: {cand!r}  (on: {shown})")
-    return (
-        "source_names strings not found in any tlds.json raw value for that "
-        "source (fix the seed or move to aliases):\n" + "\n".join(lines)
-    )
+    return f"{headline}:\n" + "\n".join(lines)
+
+
+# Moving an org's last asn seed to aliases empties source_names, which the orphan
+# and uk checks reject. Why: docs/plans/current/2026-09-11-asn-drift-automation.md
+_HARD_ADVICE = (
+    "source_names strings not found in any tlds.json raw value for that "
+    "source (fix the seed or move to aliases)"
+)
+_DRIFT_ADVICE = (
+    "asn source_names matching no current tlds.json raw value (tolerated). "
+    "Leaving an absent asn seed in place is valid. Retiring one to aliases is "
+    "fine while the org keeps other asserted names or roles, but not when it "
+    "would leave the org roleless with empty source_names"
+)
 
 
 def test_source_names_appear_in_raw_data(built):
-    """Every source_names string must occur as a raw value in tlds.json for that
-    source. A string that matches nothing is a stale/typo'd curation entry that
-    belongs in aliases, not source_names."""
-    raw_tlds: dict[str, dict[str, set[str]]] = {"iana": {}, "icann": {}, "asn": {}}
+    """Every iana/icann source_names string must occur as a raw value in tlds.json
+    for that source. A string matching nothing is a stale or typo'd curation entry.
+    An unmatched asn string warns instead: those labels come and go upstream."""
+    raw_tlds = raw_org_strings(built.tlds.values())
 
-    def note(source: str, value: str | None, tld: str) -> None:
-        if value:
-            raw_tlds[source].setdefault(value, set()).add(tld)
+    hard, drift = split_unmatched_source_names(built.orgs, raw_tlds)
 
-    for entry in built.tlds.values():
-        tld = entry["tld"]
-        orgs = entry.get("orgs", {})
-        iana = orgs.get("iana", {})
-        for role in ("sponsor", "admin", "tech"):
-            note("iana", iana.get(role), tld)
-        note("icann", orgs.get("icann", {}).get("registry_operator"), tld)
-        for ns in entry.get("nameservers", []):
-            for ip in [*ns.get("ipv4", []), *ns.get("ipv6", [])]:
-                note("asn", ip.get("as_org"), tld)
-
-    unmatched = []
-    for org in built.orgs:
-        for source, names in org.get("source_names", {}).items():
-            for name in names:
-                if name not in raw_tlds.get(source, {}):
-                    unmatched.append((org["slug"], source, name))
-
-    assert unmatched == [], _diagnose_unmatched(unmatched, raw_tlds)
+    if drift:
+        warn_drift(_diagnose_unmatched(drift, raw_tlds, _DRIFT_ADVICE))
+    assert hard == [], _diagnose_unmatched(hard, raw_tlds, _HARD_ADVICE)
 
 
 def test_organizations_sorted_by_slug_with_envelope(built):
@@ -273,17 +282,29 @@ def test_uk_nominet_plays_all_three_iana_roles(built):
 
 def test_uk_nameservers_span_distinct_operators(built):
     """Distinct infra operators are kept distinct, not collapsed."""
-    slugs = set(built.tlds["uk"]["annotations"]["as_org_slugs"])
+    entry = built.tlds["uk"]
+    slugs = set(entry.get("annotations", {}).get("as_org_slugs", []))
+    missing = sorted({"nominet", "ultradns"} - slugs)
+    hard, drift = split_missing_slugs(missing, built.by_slug, raw_org_strings([entry]))
 
-    assert {"nominet", "ultradns"} <= slugs
+    if drift:
+        warn_drift(f"uk operators whose asn source_names match nothing: {drift}")
+    assert hard == [], f"uk should span distinct operators, missing: {hard}"
 
 
 def test_knipp_spans_iana_tech_and_asn_operator(built):
     """A single org spanning an IANA role and the ASN role is one record."""
-    roles = built.by_slug["knipp-medien"]["roles"]
+    org = built.by_slug["knipp-medien"]
+    roles = org.get("roles", {})
 
-    assert roles["iana"]["tech"]
-    assert roles["asn"]["operator"]
+    assert roles.get("iana", {}).get("tech"), "knipp should hold an iana tech role"
+
+    if not roles.get("asn", {}).get("operator"):
+        raw = raw_org_strings(built.tlds.values())
+        assert classify_missing_asn_role(org, raw) == ASN_DRIFT, (
+            "knipp lost its asn operator role for a reason other than asn drift"
+        )
+        warn_drift("knipp asn operator role absent: no asn source_name matches")
 
 
 def test_governance_body_is_ordinary_record(built):

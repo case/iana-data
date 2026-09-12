@@ -71,7 +71,7 @@ The existing `coordinate-drift` tip `298897f5` was committed by `github-actions[
 
 ## Guards are proved by breaking them
 
-Seven review rounds ran over this change, and the recurring failure was not a missing guard but an **inert** one: a check written, passing, and unable to fail. The ignore guard used `glob` where the defect was nested, and `git check-ignore` without `--no-index`, which goes quiet the moment a file is tracked. The credential test asserted three of five scrubbed variables. The multi-guard test proved only that the CLI accepted a second `--guard`, not that it enforced one. Each passed on first write.
+The recurring failure in this change was not a missing guard but an **inert** one: a check written, passing, and unable to fail. The ignore guard used `glob` where the defect was nested, and `git check-ignore` without `--no-index`, which goes quiet the moment a file is tracked. The credential test asserted three of five scrubbed variables. The multi-guard test proved only that the CLI accepted a second `--guard`, not that it enforced one. Each passed on first write.
 
 Every guard here was therefore checked by breaking its subject and confirming it goes red: job-scoping the signing key, re-enabling repository hooks, dropping the ownership check, guarding only `guarded[0]`, swapping `--force-with-lease` for `--force`, restoring the 35-minute cap, restoring `?*)`. Do that for anything added here later; a guard that has never been seen to fail is decoration.
 
