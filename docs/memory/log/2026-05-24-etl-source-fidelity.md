@@ -23,7 +23,7 @@ tags: [etl, parsing, tld-html, policy]
 
 **Guard:** `tests/build/test_tlds.py::test_build_tlds_json_no_html_entities_in_any_field` asserts `html.unescape(v) == v` for every string in every generated TLD entry (a bare `&` like `AT&T` passes; `&amp;` fails).
 
-**Reviewed:** `/consensus` with `gemini -p` (assessment + implementation). Gemini caught the `registry_url` latent leak (folded in) and the `.text()`-concatenation pitfall in an earlier DOM-traversal draft (rejected in favor of the hardened regex).
+**Rejected alternative:** an earlier DOM-traversal draft built the slice by concatenating `.text()`, which reintroduces the entity problem one layer down; rejected in favor of the hardened regex. Weighing the two also surfaced a latent `registry_url` leak, folded into this change.
 
 **Download coverage:** `download_tld_pages` and the CLI now source the TLD list from `parse_root_db_tlds()` (the full root DB, ~1594) instead of `parse_tlds-alpha-by-domain.txt` (~1437 delegated). The build iterates the root DB, so the old delegated-only list left ~157 retired-but-listed TLDs (e.g. `abarth`, `an`) never refreshed. Most are revoked records with empty contact sections, so their faithful slice equals the old output; the change just keeps coverage aligned so nothing drifts.
 

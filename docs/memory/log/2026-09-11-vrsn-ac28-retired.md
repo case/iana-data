@@ -40,4 +40,4 @@ The assertion treats three buckets alike, but they are not alike. `iana` and `ic
 
 ## Known and accepted
 
-- Reproduced against `iptoasn.com` live-latest, not CI's pinned artifact, which [2026-07-16](2026-07-16-teleinfo-asn-rename.md) warns against: `gh run download` on the artifact returns HTTP 401 under the current token. The absence of `VRSN-AC28` is corroborated by CI's own failure output, but the HGTLD return is a live-latest observation and may sit ahead of the artifact.
+- The absence of `VRSN-AC28` is corroborated by CI's own failure output. The `HGTLD` return was read from the live `iptoasn.com` table rather than the pinned CI artifact that [2026-07-16](2026-07-16-teleinfo-asn-rename.md) prefers, so it may sit ahead of what CI currently sees.
