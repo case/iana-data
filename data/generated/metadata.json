@@ -1,6 +1,6 @@
 {
   "RDAP_BOOTSTRAP": {
-    "last_checked": "2026-09-11T06:58:22Z",
+    "last_checked": "2026-09-13T07:08:18Z",
     "headers": {
       "etag": "\"1182e-642f50662aab6-gzip\"",
       "last_modified": "Thu, 06 Nov 2025 23:00:01 GMT"
@@ -15,21 +15,21 @@
     }
   },
   "TLD_LIST": {
-    "last_checked": "2026-09-11T06:58:22Z",
+    "last_checked": "2026-09-13T07:08:18Z",
     "headers": {
       "etag": "\"2548-643b0e096fc2a\"",
       "last_modified": "Sun, 16 Nov 2025 07:07:01 GMT"
     },
     "cache_data": {
       "url": "https://data.iana.org/TLD/tlds-alpha-by-domain.txt",
-      "etag": "W/\"2540-65b1b9d5303f7-br\"",
-      "last_modified": "Thu, 10 Sep 2026 07:07:01 GMT",
+      "etag": "W/\"2540-65b57f6cf8717-br\"",
+      "last_modified": "Sun, 13 Sep 2026 07:07:01 GMT",
       "cache_control": "public, max-age=600, s-maxage=600",
       "cache_max_age": "600"
     }
   },
   "ROOT_ZONE_DB": {
-    "last_checked": "2026-09-11T06:58:22Z",
+    "last_checked": "2026-09-13T07:08:18Z",
     "last_downloaded": "2025-11-26T02:35:40Z",
     "last_changed": "2025-11-25T02:35:09Z",
     "headers": {
@@ -38,21 +38,21 @@
     },
     "cache_data": {
       "url": "https://www.iana.org/domains/root/db",
-      "last_modified": "Fri, 11 Sep 2026 05:08:01 GMT",
+      "last_modified": "Sun, 13 Sep 2026 03:28:02 GMT",
       "cache_control": "public, max-age=21603",
       "cache_max_age": "21603",
       "last_downloaded": "2026-09-10T06:58:47Z"
     }
   },
   "TLD_HTML": {
-    "last_checked": "2026-09-11T07:24:25Z"
+    "last_checked": "2026-09-13T07:34:17Z"
   },
   "REGISTRY_AGREEMENT_TABLE": {
     "headers": {
       "etag": "W/\"329e3-19aa7ccdea5-br\"",
       "last_modified": "Fri, 21 Nov 2025 19:03:32 GMT"
     },
-    "last_checked": "2026-09-11T06:58:26Z",
+    "last_checked": "2026-09-13T07:08:21Z",
     "last_downloaded": "2025-11-21T19:03:32Z",
     "last_changed": "2025-11-21T19:03:10Z",
     "cache_data": {
@@ -63,13 +63,13 @@
     "last_downloaded": "2026-09-09T03:06:28Z"
   },
   "GTLDS_JSON": {
-    "last_checked": "2026-09-11T06:58:26Z",
+    "last_checked": "2026-09-13T07:08:22Z",
     "cache_data": {
       "url": "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json",
-      "last_modified": "Fri, 11 Sep 2026 02:10:13 GMT",
+      "last_modified": "Sun, 13 Sep 2026 02:10:19 GMT",
       "cache_control": "max-age=28800",
       "cache_max_age": "28800",
-      "last_downloaded": "2026-09-11T06:58:26Z"
+      "last_downloaded": "2026-09-13T07:08:22Z"
     }
   }
 }
