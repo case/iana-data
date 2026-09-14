@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-16T08:10:23Z",
+  "publication": "2026-09-14T07:58:51Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -100,9 +100,9 @@
         "ipv4": [
           {
             "ip": "193.218.114.2",
-            "asn": 22150,
-            "as_org": "CARRIERHOUSE",
-            "as_country": "US"
+            "asn": 0,
+            "as_org": "Not routed",
+            "as_country": "None"
           }
         ],
         "ipv6": []
@@ -112,9 +112,9 @@
         "ipv4": [
           {
             "ip": "193.218.114.34",
-            "asn": 22150,
-            "as_org": "CARRIERHOUSE",
-            "as_country": "US"
+            "asn": 0,
+            "as_org": "Not routed",
+            "as_country": "None"
           }
         ],
         "ipv6": []
