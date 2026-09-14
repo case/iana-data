@@ -12,13 +12,13 @@ import difflib
 import json
 import os
 from types import SimpleNamespace
-from unittest.mock import patch
 
 import pytest
+from _pytest.outcomes import Failed, Skipped, XFailed
 
-from src.build.tlds import OutputPaths, build_tlds_json
 from src.parse.organizations import build_resolver, parse_organizations_manual
 from src.utilities.download import get_iptoasn_path
+from tests.conftest import asn_artifact_is_usable, build_into
 from tests.integration.asn_drift import (
     ASN_DRIFT,
     classify_missing_asn_role,
@@ -39,16 +39,21 @@ SCALAR_ROLES = [
 ]
 
 
-def _require_iptoasn_source() -> None:
-    """Skip without ASN source data locally; fail in CI, which downloads it."""
-    path = get_iptoasn_path()
-    if path.exists():
-        return
+def _require_iptoasn_source() -> bool:
+    """Whether a fresh ASN build is possible; fail in CI unless the nightly opted out.
+
+    ASN_ARTIFACT_OPTIONAL is how the nightly says its health gate already chose a
+    preserve build. The structural assertions still run, against the preserved
+    graph. Why: docs/plans/current/2026-09-11-asn-drift-automation.md
+    """
+    if asn_artifact_is_usable():
+        return True
+    if os.environ.get("ASN_ARTIFACT_OPTIONAL"):
+        return False
 
     reason = (
-        f"{path} is missing, so a fresh build carries no ASN data and every "
-        "assertion here degrades into a KeyError. Fetch it with:\n"
-        "    make download-iptoasn"
+        f"{get_iptoasn_path()} is missing, so a fresh build carries no ASN data. "
+        "Fetch it with:\n    make download-iptoasn"
     )
     if os.environ.get("CI"):
         pytest.fail(f"{reason}\n\nCI downloads this artifact; check that step.")
@@ -59,23 +64,12 @@ def _require_iptoasn_source() -> None:
 def built(tmp_path_factory):
     """One fresh build, yielding the parsed tlds.json and organizations.json.
 
-    The committed data/generated/organizations.json does not exist until a
-    `./bin/build`, so these tests build into a temp dir rather than reading the
-    repo's generated files.
+    Falls back to a preserve build when the artifact is absent and the nightly
+    opted out, so the structural assertions below still run.
     """
-    _require_iptoasn_source()
+    fresh = _require_iptoasn_source()
     tmp = tmp_path_factory.mktemp("orgs_integrity")
-    with patch("src.utilities.metadata.METADATA_FILE", str(tmp / "metadata.json")):
-        paths = OutputPaths(
-            tlds_json=tmp / "tlds.json",
-            tlds_index=tmp / "tlds-index.json",
-            tld_dir=tmp / "tld",
-            organizations_json=tmp / "organizations.json",
-            places_json=tmp / "places.json",
-            cultures_json=tmp / "cultures.json",
-            agreements_json=tmp / "agreements.json",
-        )
-        build_tlds_json(paths)
+    paths = build_into(tmp, preserve_asn=not fresh)
 
     tlds = {e["tld"]: e for e in json.loads(paths.tlds_json.read_text())["tlds"]}
     orgs_doc = json.loads(paths.organizations_json.read_text())
@@ -346,3 +340,73 @@ def test_archived_entries_reach_the_published_artifact(built):
     archived = {e["name"] for e in verisign["archived"]["asn"]}
     assert "VRSN-AC28" in archived
     assert "VRSN-AC28" not in verisign.get("aliases", [])
+
+
+def _returns_without_a_pytest_outcome(call):
+    """Call ``call`` and reject a skip or xfail, which both exit green.
+
+    The guard's fallback branch returning False is the whole contract; a skip
+    there takes the structural assertions with it, silently.
+    """
+    try:
+        return call()
+    except (Skipped, XFailed) as exc:
+        pytest.fail(f"{type(exc).__name__} instead of a return: {exc}")
+
+
+class TestArtifactGuardHonoursTheNightlyBuildMode:
+    """M3: a missing artifact must not block the nightly once it fell back."""
+
+    def test_a_rejected_artifact_selects_preserve_even_when_present(
+        self, monkeypatch, tmp_path
+    ):
+        """The gate's verdict outranks mere existence; rereading it is worse."""
+        artifact = tmp_path / "ip2asn-combined.tsv.gz"
+        artifact.write_bytes(b"present but rejected")
+        monkeypatch.setattr("tests.conftest.get_iptoasn_path", lambda: artifact)
+        monkeypatch.delenv("ASN_ARTIFACT_OPTIONAL", raising=False)
+        assert artifact.exists()
+        assert asn_artifact_is_usable() is True, "guards the rest of this test"
+
+        monkeypatch.setenv("ASN_ARTIFACT_OPTIONAL", "1")
+
+        assert asn_artifact_is_usable() is False
+
+    def test_it_fails_in_ci_by_default(self, monkeypatch, tmp_path):
+        monkeypatch.setenv("CI", "true")
+        monkeypatch.delenv("ASN_ARTIFACT_OPTIONAL", raising=False)
+        # Both names: the guard resolves presence through tests.conftest and
+        # renders its message from its own import.
+        for target in (
+            "tests.conftest.get_iptoasn_path",
+            "tests.integration.test_organizations_integrity.get_iptoasn_path",
+        ):
+            monkeypatch.setattr(target, lambda: tmp_path / "absent.gz")
+
+        # A skip here exits green exactly like a pass, so the skip is asserted
+        # against explicitly rather than left to pytest.raises.
+        try:
+            _require_iptoasn_source()
+        except Skipped as exc:
+            pytest.fail(f"guard skipped instead of failing in CI: {exc}")
+        except Failed as exc:
+            # type, not isinstance: XFailed subclasses Failed and would pass.
+            assert type(exc) is Failed, f"guard raised {type(exc).__name__}"
+            assert "missing" in str(exc)
+        else:
+            pytest.fail("guard neither failed nor skipped with no artifact in CI")
+
+    def test_it_reports_a_preserve_build_when_the_nightly_opted_out(
+        self, monkeypatch, tmp_path
+    ):
+        monkeypatch.setenv("CI", "true")
+        monkeypatch.setenv("ASN_ARTIFACT_OPTIONAL", "1")
+        # Both names: the guard resolves presence through tests.conftest and
+        # renders its message from its own import.
+        for target in (
+            "tests.conftest.get_iptoasn_path",
+            "tests.integration.test_organizations_integrity.get_iptoasn_path",
+        ):
+            monkeypatch.setattr(target, lambda: tmp_path / "absent.gz")
+
+        assert _returns_without_a_pytest_outcome(_require_iptoasn_source) is False

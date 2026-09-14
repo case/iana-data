@@ -25,6 +25,12 @@ from tests.integration.asn_drift import (
     warn_drift,
 )
 
+# Every graph here is synthetic, so an unconsumed drift warning is a test leaking
+# into the channel real drift reports through. Why: docs/memory/log/2026-09-12-archived-bucket.md
+pytestmark = pytest.mark.filterwarnings(
+    "error::tests.integration.asn_drift.AsnDriftWarning"
+)
+
 
 def org(
     slug: str = "acme",
@@ -552,7 +558,10 @@ class TestCallerPaths:
             ],
         )
 
-        with pytest.raises(AssertionError, match="ultradns"):
+        with (
+            pytest.warns(AsnDriftWarning, match="nominet"),
+            pytest.raises(AssertionError, match="ultradns"),
+        ):
             integrity.test_uk_nameservers_span_distinct_operators(built)
 
     def test_knipp_warns_when_its_asn_label_left(self):

@@ -47,6 +47,11 @@ in raw data fails hard on the next flip and `update-data.yaml:303` stops the nig
 is what M1 removed. Seed-shape guards pin which field a label occupies; liveness belongs to
 `test_source_names_appear_in_raw_data`, which warns.
 
+The warn channel needs protecting from the other side too. `test_asn_drift.py` is entirely synthetic,
+so an `AsnDriftWarning` it does not consume reaches pytest's summary looking exactly like live drift -
+one leaked there since M1, reporting `nominet`. The module now carries
+`pytestmark = filterwarnings("error::...AsnDriftWarning")`, so a leak fails the test instead.
+
 ## Validation
 
 `validate_organizations` reports and never raises, matching `build_resolver`'s collisions; a test

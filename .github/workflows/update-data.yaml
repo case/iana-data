@@ -19,7 +19,7 @@ jobs:
       contents: read
       actions: read # pull the iptoasn artifact from the update-iptoasn workflow
     runs-on: ubuntu-24.04
-    timeout-minutes: 190
+    timeout-minutes: 200
     outputs:
       changed: ${{ steps.patch.outputs.changed }}
       base_head: ${{ steps.sync-inputs.outputs.base_head }}
@@ -248,19 +248,51 @@ jobs:
             echo "source_changed=true" >> "$GITHUB_OUTPUT"
           fi
 
-      # Always rebuild so manual curation (data/manual/) propagates, not just IANA
-      # source changes. --all on source change (ASN refresh), else --preserve-asn.
+      # Only an explicit healthy result permits --all; a failure, a missing
+      # output or a timeout all preserve. Why: docs/plans/current/2026-09-11-asn-drift-automation.md
+      - name: Check ASN artifact health
+        id: asn-health
+        continue-on-error: true
+        timeout-minutes: 3
+        run: |
+          healthy=false
+          damaged=false
+          if output=$(./bin/check-asn-drift --health-only 2>&1); then
+            line=$(printf '%s\n' "$output" | grep '^asn-health:' || true)
+            case "$line" in *healthy=true*) healthy=true ;; esac
+            case "$line" in *damaged=true*) damaged=true ;; esac
+          fi
+          printf '%s\n' "$output"
+          echo "healthy=$healthy" >> "$GITHUB_OUTPUT"
+          echo "damaged=$damaged" >> "$GITHUB_OUTPUT"
+
+      - name: Notification if the ASN artifact is unhealthy
+        if: steps.asn-health.outputs.healthy != 'true'
+        continue-on-error: true
+        timeout-minutes: 2
+        uses: ./.github/actions/pushover
+        with:
+          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
+          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
+          title: "IANA data - ASN artifact unhealthy"
+          message: "⚠️ Preserving committed ASN; the iptoasn artifact failed its health check"
+
+      # --all needs a healthy artifact plus a source change or repairable damage;
+      # everything else preserves, so manual curation still propagates nightly.
       - name: Build tlds.json
         id: build
         timeout-minutes: 20
         env:
           SOURCE_CHANGED: ${{ steps.source-check.outputs.source_changed }}
+          ASN_HEALTHY: ${{ steps.asn-health.outputs.healthy }}
+          ASN_DAMAGED: ${{ steps.asn-health.outputs.damaged }}
         run: |
-          if [ "$SOURCE_CHANGED" = "true" ]; then
-            echo "IANA source changed: full build with ASN refresh"
+          if [ "$ASN_HEALTHY" = "true" ] &&
+             { [ "$SOURCE_CHANGED" = "true" ] || [ "$ASN_DAMAGED" = "true" ]; }; then
+            echo "Artifact healthy: full build with ASN refresh"
             ./bin/build --all
           else
-            echo "No IANA source change: regenerate from manual curation, preserving ASN"
+            echo "Preserving committed ASN (healthy=$ASN_HEALTHY, source_changed=$SOURCE_CHANGED, damaged=$ASN_DAMAGED)"
             ./bin/build --preserve-asn
           fi
 
@@ -276,9 +308,12 @@ jobs:
           message: "❌ Failed to build tlds.json"
 
       # Build always runs now, so always test before committing a regenerated diff.
+      # The gate already chose preserve, so a missing artifact must not block.
       - name: Run tests
         id: run-tests
         timeout-minutes: 15
+        env:
+          ASN_ARTIFACT_OPTIONAL: ${{ steps.asn-health.outputs.healthy != 'true' && '1' || '' }}
         run: |
           set -o pipefail
           # Intentional pipe to tee; SC2266 misreads it as a mistaken ||.

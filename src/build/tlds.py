@@ -1,6 +1,5 @@
 """Build enhanced TLD data file."""
 
-import gzip
 import json
 import logging
 from dataclasses import dataclass
@@ -24,7 +23,7 @@ from ..config import (
 )
 from ..parse.country import get_country_name, is_cctld
 from ..parse.gtlds_json import GtldRecord, parse_gtlds_json
-from ..parse.iptoasn import ASNLookup, ASNRecord
+from ..parse.iptoasn import ASNLookup, ASNRecord, parse_gzipped_iptoasn
 from ..parse.manual_annotations import parse_manual_annotations
 from ..parse.organizations import (
     OrgResolver,
@@ -144,7 +143,7 @@ def build_tlds_json(
         if iptoasn_path.exists():
             try:
                 logger.info("Loading iptoasn data from %s...", iptoasn_path)
-                records = _parse_gzipped_iptoasn(iptoasn_path)
+                records = parse_gzipped_iptoasn(iptoasn_path)
                 asn_lookup = ASNLookup(records)
                 logger.info("Loaded %d ASN records", len(records))
             except Exception as e:
@@ -766,49 +765,3 @@ def _ip_to_asn_object(ip: str, asn_lookup: ASNLookup | None) -> dict[str, Any]:
         "as_org": record.org,
         "as_country": record.country,
     }
-
-
-def _parse_gzipped_iptoasn(filepath: Path) -> list:
-    """
-    Parse a gzipped iptoasn TSV file.
-
-    Args:
-        filepath: Path to .tsv.gz file
-
-    Returns:
-        List of ASNRecord objects
-    """
-    from ..parse.iptoasn import ASNRecord
-
-    records = []
-
-    with gzip.open(filepath, "rt", encoding="utf-8") as f:
-        for line_num, line in enumerate(f, start=1):
-            line = line.strip()
-            if not line:
-                continue
-
-            parts = line.split("\t")
-            if len(parts) < 5:
-                continue
-
-            try:
-                start_ip = parts[0]
-                end_ip = parts[1]
-                asn = int(parts[2])
-                country = parts[3]
-                org = "\t".join(parts[4:])
-
-                records.append(
-                    ASNRecord(
-                        start_ip=start_ip,
-                        end_ip=end_ip,
-                        asn=asn,
-                        country=country,
-                        org=org,
-                    )
-                )
-            except ValueError:
-                continue
-
-    return records

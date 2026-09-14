@@ -1,11 +1,21 @@
 """Integration tests for TLD build process."""
 
+import gzip
 import html
 import json
 from pathlib import Path
 from types import SimpleNamespace
 
 import pytest
+
+from tests.conftest import asn_artifact_is_usable
+
+
+def _preserve() -> bool:
+    """Preserve committed ASN when the artifact is absent or the gate rejected it."""
+    return not asn_artifact_is_usable()
+
+
 from _pytest.monkeypatch import MonkeyPatch
 
 from src.build.tlds import (
@@ -61,7 +71,7 @@ def shared_build(tmp_path_factory):
         cultures_json=tmp / "cultures.json",
         agreements_json=tmp / "agreements.json",
     )
-    result = build_tlds_json(paths)
+    result = build_tlds_json(paths, preserve_asn=_preserve())
     yield SimpleNamespace(
         tlds_json=paths.tlds_json,
         tlds_index=paths.tlds_index,
@@ -476,14 +486,21 @@ def test_build_tlds_json_org_annotations_use_alias_and_slug(shared_build):
         assert "tld_manager_alias" not in annotations
 
 
-def test_build_does_not_rewrite_iptoasn_metadata(temp_output, tmp_path):
+def test_build_does_not_rewrite_iptoasn_metadata(temp_output, tmp_path, monkeypatch):
     """Build loads iptoasn data but must not touch metadata.json; the download
     step owns IPTOASN.last_downloaded."""
     metadata_path = tmp_path / "metadata.json"
     sentinel = {"IPTOASN": {"last_downloaded": "2020-01-01T00:00:00Z"}}
     metadata_path.write_text(json.dumps(sentinel))
 
-    build_tlds_json(temp_output)
+    # A synthetic artifact, not _preserve(): this test is about the loading path,
+    # which a preserve build never takes.
+    artifact = tmp_path / "ip2asn-combined.tsv.gz"
+    with gzip.open(artifact, "wt", encoding="utf-8") as handle:
+        handle.write("1.0.0.0\t1.0.0.255\t64500\tUS\tTEST-AS\n")
+    monkeypatch.setattr("src.build.tlds.get_iptoasn_path", lambda: artifact)
+
+    build_tlds_json(temp_output, preserve_asn=False)
 
     assert json.loads(metadata_path.read_text()) == sentinel
 
@@ -614,7 +631,7 @@ def test_empty_tld_dir_recovery(temp_output):
     """Build populates tld_dir from scratch when it doesn't exist (cold start)."""
     assert not temp_output.tld_dir.exists()
 
-    build_tlds_json(temp_output)
+    build_tlds_json(temp_output, preserve_asn=_preserve())
 
     assert temp_output.tld_dir.is_dir()
     files = list(temp_output.tld_dir.glob("*.json"))
@@ -640,7 +657,7 @@ def test_build_aborts_index_when_per_tld_write_fails(temp_output, monkeypatch):
 
     monkeypatch.setattr(tlds_module, "write_json_if_changed", flaky_write)
 
-    result = build_tlds_json(temp_output)
+    result = build_tlds_json(temp_output, preserve_asn=_preserve())
 
     assert "error" in result, f"Expected error in result, got {result}"
     assert failing_slug in result["error"] or "per-TLD" in result["error"]
@@ -655,13 +672,13 @@ def test_idempotent_second_run(temp_output):
     Verifies that write_json_if_changed's exclude_fields=["publication"]
     actually suppresses writes when only the timestamp would change.
     """
-    build_tlds_json(temp_output)
+    build_tlds_json(temp_output, preserve_asn=_preserve())
     mtimes_before = {
         p: p.stat().st_mtime_ns for p in temp_output.tld_dir.glob("*.json")
     }
     index_mtime_before = temp_output.tlds_index.stat().st_mtime_ns
 
-    build_tlds_json(temp_output)
+    build_tlds_json(temp_output, preserve_asn=_preserve())
     mtimes_after = {p: p.stat().st_mtime_ns for p in temp_output.tld_dir.glob("*.json")}
     index_mtime_after = temp_output.tlds_index.stat().st_mtime_ns
 

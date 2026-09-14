@@ -8,6 +8,7 @@ from _pytest.monkeypatch import MonkeyPatch
 
 from src.build.tlds import OutputPaths, build_tlds_json
 from src.config import FIXTURES_DIR, FIXTURES_FILES
+from tests.conftest import asn_artifact_is_usable
 
 
 @pytest.fixture(scope="module")
@@ -33,7 +34,7 @@ def built_tlds_json(tmp_path_factory):
         cultures_json=tmp / "cultures.json",
         agreements_json=tmp / "agreements.json",
     )
-    build_tlds_json(output_paths)
+    build_tlds_json(output_paths, preserve_asn=not asn_artifact_is_usable())
 
     with open(output_paths.tlds_json, "r", encoding="utf-8") as f:
         yield json.load(f)

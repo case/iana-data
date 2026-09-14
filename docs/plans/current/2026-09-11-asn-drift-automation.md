@@ -47,10 +47,10 @@ Four independently deployable steps, in dependency order. Each is a separate rev
 | ----------------------------- | ------------------------------------------- | ---------- |
 | **M1** Stop the nightly blocking | Data refresh survives an `asn` flap       | -          |
 | **M2** The `archived` bucket  | Honest schema for labels upstream dropped   | M1         |
-| **M3** Detector, report-only  | Drift is visible without anyone editing JSON | M2        |
+| **M3** Health gate + detector | Nightly survives a bad artifact; drift detectable | M2       |
 | **M4** Archival automation    | Drift proposes its own fix as a PR           | M3         |
 
-M1 is the whole of the urgent problem. M2 is data modelling. M3 and M4 are convenience, and M4 is the only one that needs credentials.
+M1 is the whole of the urgent problem. M2 is data modelling. M3 keeps the nightly moving when the ASN artifact is bad and builds the detector; M4 turns drift into a PR. M4 is the only one needing **write** credentials - M3 uses the existing Pushover secrets.
 
 ---
 
@@ -90,7 +90,7 @@ The condition is **observable, not causal**. The graph cannot tell upstream drif
 
 **What M1 costs while M3 does not exist.** A corrupt gzip makes the build emit `as_org: "Unknown"` throughout; after M1 the resulting missing relationships warn instead of failing, and round-trip checks still pass because they compare data generated from the same snapshot. Three qualifications:
 
-- A **missing** file still fails CI via `_require_iptoasn_source`. Keep that guard.
+- A **missing** file still fails CI via `_require_iptoasn_source`. Keep that guard. **Superseded by M3**: that guard is what makes a failed artifact download block the nightly, which is the outcome M3 exists to prevent. M3 splits it - see "The guard M1 kept" there.
 - Degraded published ASN data persists through later `--preserve-asn` builds even after the artifact recovers (`update-data.yaml:252-264`).
 - A warning does not fire `update-data.yaml`'s test-failure notification, so the alert is lost too, not just the gate.
 
@@ -117,24 +117,170 @@ This trades a blocking data-quality safeguard and its alert for CI-log diagnosti
 
 ---
 
-## M3: detector, report-only
+## M3: health gate and detector - **DONE**
 
-Writes nothing. Can run in CI as a reporting step before M4 exists.
+**Revised 2026-09-12.** The original M3 was a report-only CI step. Two things changed it: the
+maintenance goal is that the nightly never breaks and drift arrives as a mergeable PR, not as CI
+logs someone has to read; and an unhealthy artifact has a better response than either blocking or
+reporting.
 
-- [ ] `bin/check-asn-drift` builds the typed graph to a temp dir, collects raw `as_org` values, reports `source_names.asn` strings matching none
-- [ ] `DRIFT <slug> <label>` lines plus an `asn check: ` summary line. Exit 1 on drift, 0 clean, >1 error
-- [ ] Reports archived labels seen live again, as output only
-- [ ] **Input-health gate.** `src/build/tlds.py:150` catches an iptoasn load error and warns, `:155` warns on a missing file, and either way the build completes with every `as_org` set to `"Unknown"` (`:749`, `:759`) - so bad input reads as total drift. File health is not enough: `_parse_gzipped_iptoasn` (`:791-812`) skips malformed rows silently, so a valid gzip can yield almost no usable records
-- [ ] Specify the gate concretely: usable-record criteria, per-address-family coverage, deduplicated nameserver addresses, zero-denominator handling, disappearance threshold, and where each number came from
-- [ ] **Artifact freshness.** `tests.yaml:71` selects the latest successful producer run with no age check and artifacts live 45 days (`update-iptoasn.yaml:42`), so a prolonged producer outage leaves a stale but healthy-looking artifact eligible. Define a maximum age and a stale-input error
-- [ ] **Share the gate with the nightly.** `update-data.yaml:253` builds and runs `bin/test` independently, so a detector-only gate leaves M1's weakened assertions unprotected
-- [ ] Fixtures: absent, corrupt gzip, valid gzip with malformed TSV, partial coverage missing one address family, stale-but-healthy, and **healthy controls at the threshold boundary**
+### The gate picks the build mode; it never blocks
 
----
+`update-data.yaml:253-265` already runs `--all` on an IANA source change and `--preserve-asn`
+otherwise, and `_asn_lookup_from_committed` (`src/build/tlds.py:707`) reproduces committed ASN
+exactly. So an unhealthy artifact downgrades `--all` to `--preserve-asn` and fires a Pushover
+alert. The nightly completes, IANA changes publish, ASN keeps its last known good values, and
+degraded data never lands.
+
+This also pays off M1's admitted debt: M1 gave up the blocking safeguard **and its alert**, since a
+warning fires no notification. The alert comes back here without re-arming the flap.
+
+**The cheap consequence is what makes the thresholds easy.** A false positive costs one night of
+preserved ASN, which is what every non-source-change night already does. So thresholds sit tight
+against observed values rather than loose. They are tripwires for catastrophic loss, documented as
+that, not as statistically calibrated limits.
+
+**Accepted cost:** on a source-change night that falls back, a brand-new TLD's nameservers are
+absent from the committed lookup, so that TLD alone carries `as_org: "Unknown"` until the artifact
+recovers. Bounded and self-healing.
+
+### Measured baseline
+
+Nine committed `data/generated/tlds.json` snapshots, 2026-07-01 to 2026-09-11, deduplicated
+addresses, predicate `asn != 0`:
+
+| signal | observed range |
+| --- | --- |
+| IPv4 non-zero-ASN coverage | 99.9566 - 99.9783% (1-2 unrouted of ~4,610) |
+| IPv6 non-zero-ASN coverage | 99.7696 - 99.8158% (8-10 unrouted of ~4,340) |
+| distinct `as_org` labels | 386 - 393 |
+| distinct addresses | IPv4 4,600-4,612, IPv6 4,333-4,345 |
+| artifact rows (one sample) | 718,331, all parseable |
+
+`asn == 0` records carry `as_org: "Not routed"`, **not** `"Unknown"`; only a lookup miss yields
+`"Unknown"`. Counting the wrong one reports 100% coverage and hides the real figure.
+
+### The guard M1 kept
+
+`_require_iptoasn_source` (`tests/integration/test_organizations_integrity.py:42`) calls
+`pytest.fail` when the artifact is absent in CI. `bin/test` runs that suite and
+`update-data.yaml:303` gates the commit on it, so **a failed artifact download blocks the nightly
+even after the health gate has already chosen the safe build**. M1 kept that guard deliberately;
+M3 reverses it, because it conflates two different things.
+
+- [x] Tests asserting the **health module classifies correctly** keep blocking. They catch
+      implementation regressions, which is what a test is for
+- [x] A test asserting **tonight's artifact is healthy** must not block. That is an input problem
+      the fallback already handles
+- [x] Structural, resolver, and `iana`/`icann` assertions stay hard, unchanged from M1
+- [x] The integration fixtures must honour the selected build mode. Passing `preserve_asn=True` to
+      the current temp builds is **not** sufficient: their temp `tlds.json` holds no committed
+      baseline to preserve from
+
+### Thresholds
+
+Inclusive boundaries, measured over the nine snapshots above.
+
+| signal | population | observed | fails when |
+| --- | --- | --- | --- |
+| IPv4 unrouted (`asn == 0`) | distinct v4 addresses | 1-2 of ~4,610 | above 25 |
+| IPv6 unrouted (`asn == 0`) | distinct v6 addresses | 8-10 of ~4,340 | above 60 |
+| IPv4 useful-label coverage | distinct v4 addresses | 99.9783% | below 95% |
+| IPv6 useful-label coverage | distinct v6 addresses | 99.8158% | below 95% |
+| IPv4 distinct addresses | built graph | 4,600-4,612 | below 4,000 |
+| IPv6 distinct addresses | built graph | 4,333-4,345 | below 3,800 |
+| artifact parseable rows | the gzip | 718,331 (one sample) | below 500,000 |
+
+**Useful-label coverage is a separate signal from unrouted count, and label cardinality is not a
+substitute for either.** A cardinality floor of 300 would permit dropping the 86 most-used labels,
+which strips the label from 8,332 of 8,941 addresses - 93.2% - while every other threshold passes.
+Measured, not hypothetical. Cardinality may stay as a secondary signal; it must not be relied on.
+The two coverage signals coincide on today's data because every sentinel label sits on an
+`asn == 0` record, but an `asn != 0` record labelled `Unknown` separates them, and that is the
+attack.
+
+Record counts and label coverage are anchored to a single measured artifact until more are sampled.
+
+### Checklist
+
+- [x] `src/analyze/asn_health.py`: pure functions over an address set plus an `ASNLookup`. No full
+      build - the gate looks up an address set against the new artifact, so it runs before the build
+- [x] **Probe both address sets.** The committed `tlds.json` population is a stable baseline but is
+      *last night's*; an artifact can cover it perfectly and omit ranges holding tonight's new
+      addresses. Parse the already-downloaded TLD pages for tonight's addresses too - no extra
+      download, no output build
+- [x] **Validate range endpoints when parsing, not on lookup.** `_parse_gzipped_iptoasn`
+      (`src/build/tlds.py:771`) accepts endpoint strings unvalidated and `ASNLookup.lookup`
+      (`src/parse/iptoasn.py:161`) parses the end address only when that range is selected, so a
+      malformed end address stays invisible to old probes and raises `AddressValueError` on a new
+      one
+- [x] **Zero or missing denominator is an error, never healthy.** `0/0` must not read as 100%
+- [x] Coverage does **not** subsume a record-count floor. Two ranges spanning all of v4 and v6 give
+      100% coverage from two records
+- [x] `bin/check-asn-drift`, a bash wrapper over `bin/check-asn-drift.py` so it runs under uv
+      the way `bin/lint` invokes `bin/lint-json.py`: health first, then
+      `DRIFT <slug> <label>` and `RETURNED <slug> <label>` lines plus an `asn check: ` summary.
+      Exit 0 clean, 1 drift, 2 error. Health failure short-circuits drift reporting, because bad
+      input manufactures a full set of false DRIFT lines
+- [x] **Failure contract, so "never blocks" is real.** Only an explicit healthy result permits
+      `--all`. A failed evaluation, a missing output, or a timeout selects `--preserve-asn`. None of
+      those may fail the producer job - `update-data.yaml:330` requires it to succeed
+- [x] **Alert on unhealthy or indeterminate health regardless of the mode chosen.** Tying the alert
+      to a *downgrade* leaves a corrupt artifact silent on every preserve night, since those nights
+      have no downgrade. Repetition policy can differ
+- [x] **A recovery trigger, because fallback is not self-healing.** `--all` runs only on an IANA
+      source change, so an `Unknown` committed during fallback is re-copied every preserve night
+      until the next source change. Force `--all` when the artifact is healthy and the committed
+      graph still carries fallback damage
+- [x] Fixtures: absent, corrupt gzip, valid gzip with malformed TSV, malformed range endpoint,
+      partial coverage missing one address family, label collapse to a sentinel, two-giant-ranges,
+      zero denominator, and **healthy controls at each threshold boundary**
+
+### Accepted cost of a fallback night
+
+`_asn_lookup_from_committed` (`src/build/tlds.py:707`) indexes **addresses**, not TLDs. So the
+degradation is not limited to brand-new TLDs:
+
+- Any address absent from the committed population gets `asn: 0`, `as_org: "Unknown"`,
+  `as_country: "None"` - including a *replaced* address on an existing TLD.
+- A new TLD reusing already-known addresses keeps full enrichment.
+- A missing label removes that address's `as_org_slugs` and `as_org_aliases`
+  (`src/build/tlds.py:698`) and the matching `organizations.json` operator relationship.
+- Existing addresses keep whatever routing metadata was committed, which may itself be stale.
+  Committed does not mean last known *good*.
+
+The mode still rebuilds everything else and applies current `data/manual/` curation.
+
+### Deferred, deliberately
+
+- [x] **Freshness has no threshold.** `tests.yaml:71` takes the latest successful producer run with
+      no age check and artifacts live 45 days, so a prolonged producer outage leaves a stale but
+      healthy-looking artifact eligible. The gzip header mtime is one observation, not an
+      established upstream convention, and `now - mtime <= limit` accepts a future timestamp. M3
+      ships without an age gate and does not claim freshness. Start recording retrieval time and
+      content hash so a later policy can be derived from measurement
+- [x] **Label correctness is out of scope.** A permutation of operator labels across existing ASN
+      records preserves coverage, cardinality, address counts and record counts alike. Detecting it
+      needs an independent reference, not a self-consistency check
+- [x] **Address-count drift needs an anchor, not only a ratchet.** Comparing each night to the last
+      lets 1% nightly shrinkage reach 36.6% of the original population in 100 nights with every step
+      passing. M3 uses a fixed floor from the table above; a rebaseable anchor is M4's concern
 
 ## M4: archival automation
 
-The only milestone needing credentials.
+The only milestone needing **write** credentials.
+
+**Scope decided 2026-09-12: curated labels only.** M4 proposes changes to `data/manual/`, the way
+`check-coordinates.yaml` does; generated ASN values keep riding the nightly patch. Three reasons.
+The coordinate workflow this is modelled on PRs the curated seed, not `data/generated/`. A generated
+`as_org` change carries no decision - it restates what iptoasn says, so a PR adds a merge step with
+no judgment attached. And ASN fields live inside `tlds.json`, so splitting them out means two PRs
+racing on one file or holding the nightly patch back.
+
+Measured, night-to-night `as_org` churn is 0-16 addresses of ~8,950, so volume was **not** the
+reason: a generated-ASN PR would have been perfectly reviewable. Accepted loss: a *wrong* `as_org`
+never surfaces, but that is the label-correctness problem M3 defers, which a PR would not catch
+either.
 
 - [ ] `bin/ci-archive-asn-labels` moves drifted labels into `archived.asn`, sets `archived_on`, preserves sort order, drops an emptied `source_names.asn`, then calls `ci-make-data-patch data/manual`
 - [ ] Persists through the atomic writer behind `write_json_if_changed`. `canonicalize_json_file` only re-reads and reformats a path, so it cannot save a modified object

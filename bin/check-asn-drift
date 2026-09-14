@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+# Python entry point runs under uv, like bin/lint-json.py: the script imports
+# src/, whose dependencies live in the project environment.
+exec uv run python bin/check-asn-drift.py "$@"

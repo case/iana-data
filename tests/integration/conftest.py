@@ -8,28 +8,16 @@ committed data/generated files (which only exist after a `./bin/build`).
 
 import json
 from types import SimpleNamespace
-from unittest.mock import patch
 
 import pytest
 
-from src.build.tlds import OutputPaths, build_tlds_json
+from tests.conftest import asn_artifact_is_usable, build_into
 
 
 @pytest.fixture(scope="session")
 def typed_graph(tmp_path_factory):
     tmp = tmp_path_factory.mktemp("typed_graph")
-    with patch("src.utilities.metadata.METADATA_FILE", str(tmp / "metadata.json")):
-        paths = OutputPaths(
-            tlds_json=tmp / "tlds.json",
-            tlds_index=tmp / "tlds-index.json",
-            tld_dir=tmp / "tld",
-            organizations_json=tmp / "organizations.json",
-            places_json=tmp / "places.json",
-            cultures_json=tmp / "cultures.json",
-            agreements_json=tmp / "agreements.json",
-        )
-        result = build_tlds_json(paths)
-    assert not result.get("error"), result.get("error")
+    paths = build_into(tmp, preserve_asn=not asn_artifact_is_usable())
 
     tlds = {e["tld"]: e for e in json.loads(paths.tlds_json.read_text())["tlds"]}
     return SimpleNamespace(

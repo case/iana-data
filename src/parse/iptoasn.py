@@ -1,12 +1,31 @@
 """Parser for iptoasn TSV data files."""
 
 import bisect
+import gzip
 import ipaddress
 import logging
 from dataclasses import dataclass
 from pathlib import Path
 
 logger = logging.getLogger(__name__)
+
+
+def is_usable(record: "ASNRecord") -> bool:
+    """True when both endpoints parse in the same family and start <= end.
+
+    Checked at construction because ASNLookup parses end_ip only on the lookup
+    that selects a range, so a malformed endpoint would raise there instead.
+    """
+    try:
+        if ":" in record.start_ip:
+            start = ipaddress.IPv6Address(record.start_ip)
+            end = ipaddress.IPv6Address(record.end_ip)
+        else:
+            start = ipaddress.IPv4Address(record.start_ip)
+            end = ipaddress.IPv4Address(record.end_ip)
+    except ValueError:
+        return False
+    return int(start) <= int(end)
 
 
 @dataclass
@@ -92,7 +111,11 @@ class ASNLookup:
         ipv4_records: list[ASNRecord] = []
         ipv6_records: list[ASNRecord] = []
 
+        unusable = 0
         for record in records:
+            if not is_usable(record):
+                unusable += 1
+                continue
             if ":" in record.start_ip:
                 ipv6_records.append(record)
             else:
@@ -105,6 +128,9 @@ class ASNLookup:
         self._ipv6_records = sorted(
             ipv6_records, key=lambda r: int(ipaddress.IPv6Address(r.start_ip))
         )
+
+        if unusable:
+            logger.warning("Dropped %d record(s) with unusable endpoints", unusable)
 
         # Pre-compute start IPs as integers for binary search
         self._ipv4_starts = [
@@ -186,3 +212,34 @@ class ASNLookup:
             return record
 
         return None
+
+
+def parse_gzipped_iptoasn(filepath: Path) -> list[ASNRecord]:
+    """Parse a gzipped iptoasn TSV into usable records.
+
+    The single definition of a usable record: the build and the health gate must
+    agree, or the gate can pass an artifact the build then discards.
+    """
+    records: list[ASNRecord] = []
+    with gzip.open(filepath, "rt", encoding="utf-8") as handle:
+        for line in handle:
+            line = line.strip()
+            if not line:
+                continue
+            parts = line.split("\t")
+            if len(parts) < 5:
+                continue
+            try:
+                asn = int(parts[2])
+            except ValueError:
+                continue
+            record = ASNRecord(
+                start_ip=parts[0],
+                end_ip=parts[1],
+                asn=asn,
+                country=parts[3],
+                org="\t".join(parts[4:]),
+            )
+            if is_usable(record):
+                records.append(record)
+    return records

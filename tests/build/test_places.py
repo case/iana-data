@@ -14,6 +14,7 @@ from src.build.places import (
     _overlay_country_coordinates,
 )
 from src.build.tlds import OutputPaths, build_tlds_json
+from tests.conftest import asn_artifact_is_usable
 
 
 @pytest.fixture(scope="module")
@@ -31,7 +32,7 @@ def places(tmp_path_factory):
         cultures_json=tmp / "cultures.json",
         agreements_json=tmp / "agreements.json",
     )
-    build_tlds_json(paths)
+    build_tlds_json(paths, preserve_asn=not asn_artifact_is_usable())
     data = json.loads(Path(paths.places_json).read_text(encoding="utf-8"))
     by_slug = {rec["slug"]: rec for rec in data["places"]}
     yield SimpleNamespace(by_slug=by_slug)
