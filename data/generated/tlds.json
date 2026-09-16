@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-15T07:40:26Z",
+  "publication": "2026-09-16T07:41:14Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -26423,9 +26423,9 @@
           "ipv4": [
             {
               "ip": "31.44.1.137",
-              "asn": 208951,
-              "as_org": "AS-ITGLOBALCOM ITGLOBAL.COM",
-              "as_country": "NL"
+              "asn": 0,
+              "as_org": "Not routed",
+              "as_country": "None"
             }
           ],
           "ipv6": [
@@ -73863,9 +73863,9 @@
           "ipv4": [
             {
               "ip": "193.218.114.2",
-              "asn": 0,
-              "as_org": "Not routed",
-              "as_country": "None"
+              "asn": 22150,
+              "as_org": "CARRIERHOUSE",
+              "as_country": "US"
             }
           ],
           "ipv6": []
@@ -73875,9 +73875,9 @@
           "ipv4": [
             {
               "ip": "193.218.114.34",
-              "asn": 0,
-              "as_org": "Not routed",
-              "as_country": "None"
+              "asn": 22150,
+              "as_org": "CARRIERHOUSE",
+              "as_country": "US"
             }
           ],
           "ipv6": []
@@ -110966,9 +110966,9 @@
           "ipv6": [
             {
               "ip": "2608:4163:1:143::234",
-              "asn": 5927,
-              "as_org": "DNIC-ASBLK-05800-06055",
-              "as_country": "US"
+              "asn": 0,
+              "as_org": "Not routed",
+              "as_country": "None"
             }
           ]
         },
@@ -146139,8 +146139,8 @@
           "ipv6": [
             {
               "ip": "2001:16a0:1:3002::2",
-              "asn": 39386,
-              "as_org": "STC-IGW-AS",
+              "asn": 25019,
+              "as_org": "SAUDINETSTC-AS",
               "as_country": "SA"
             }
           ]
@@ -146158,8 +146158,8 @@
           "ipv6": [
             {
               "ip": "2001:16a0:2:3002::2",
-              "asn": 39386,
-              "as_org": "STC-IGW-AS",
+              "asn": 25019,
+              "as_org": "SAUDINETSTC-AS",
               "as_country": "SA"
             }
           ]
@@ -159672,8 +159672,8 @@
           "ipv4": [
             {
               "ip": "168.195.219.210",
-              "asn": 263799,
-              "as_org": "CARIBBEAN COMMUNICATION SERVICES",
+              "asn": 27775,
+              "as_org": "Telecommunicationcompany Suriname - TeleSur",
               "as_country": "SR"
             }
           ],
@@ -159691,8 +159691,8 @@
           "ipv4": [
             {
               "ip": "168.195.216.214",
-              "asn": 263799,
-              "as_org": "CARIBBEAN COMMUNICATION SERVICES",
+              "asn": 27775,
+              "as_org": "Telecommunicationcompany Suriname - TeleSur",
               "as_country": "SR"
             }
           ],
@@ -193060,9 +193060,9 @@
           "ipv4": [
             {
               "ip": "31.44.1.137",
-              "asn": 208951,
-              "as_org": "AS-ITGLOBALCOM ITGLOBAL.COM",
-              "as_country": "NL"
+              "asn": 0,
+              "as_org": "Not routed",
+              "as_country": "None"
             }
           ],
           "ipv6": [
@@ -202837,8 +202837,8 @@
           "ipv6": [
             {
               "ip": "2001:16a0:1:3002::2",
-              "asn": 39386,
-              "as_org": "STC-IGW-AS",
+              "asn": 25019,
+              "as_org": "SAUDINETSTC-AS",
               "as_country": "SA"
             }
           ]
@@ -202856,8 +202856,8 @@
           "ipv6": [
             {
               "ip": "2001:16a0:2:3002::2",
-              "asn": 39386,
-              "as_org": "STC-IGW-AS",
+              "asn": 25019,
+              "as_org": "SAUDINETSTC-AS",
               "as_country": "SA"
             }
           ]
