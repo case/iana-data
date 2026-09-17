@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-10T07:29:59Z",
+  "publication": "2026-09-17T07:39:21Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -19,15 +19,17 @@
     },
     "registry_url": "http://www.nic.or.kr/",
     "whois_server": "whois.kr",
+    "rdap_server": "https://rdap.nic.or.kr",
     "tld_created": "1986-09-29",
     "tld_updated": [
-      "2026-09-08"
+      "2026-09-16"
     ],
     "annotations": {
       "iana_sponsor_alias": "KISA.kr",
       "iana_sponsor_slug": "kisa",
       "iana_tech_alias": "KISA.kr",
       "iana_tech_slug": "kisa",
+      "rdap_source": "IANA",
       "country_name_iso": "Korea, Republic of",
       "geographic_scope": "country"
     },
