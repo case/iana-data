@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-18T07:30:15Z",
+  "publication": "2026-09-19T07:27:48Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -32198,9 +32198,9 @@
           "ipv4": [
             {
               "ip": "185.21.168.17",
-              "asn": 61005,
-              "as_org": "AS-OPENTLD1",
-              "as_country": "NL"
+              "asn": 57382,
+              "as_org": "TK1",
+              "as_country": "TK"
             }
           ],
           "ipv6": [
@@ -32217,9 +32217,9 @@
           "ipv4": [
             {
               "ip": "185.21.169.17",
-              "asn": 61005,
-              "as_org": "AS-OPENTLD1",
-              "as_country": "NL"
+              "asn": 57382,
+              "as_org": "TK1",
+              "as_country": "TK"
             }
           ],
           "ipv6": [
@@ -32236,9 +32236,9 @@
           "ipv4": [
             {
               "ip": "185.21.170.17",
-              "asn": 61007,
-              "as_org": "AS-OPENTLD2",
-              "as_country": "NL"
+              "asn": 198147,
+              "as_org": "TK2",
+              "as_country": "TK"
             }
           ],
           "ipv6": [
@@ -32255,9 +32255,9 @@
           "ipv4": [
             {
               "ip": "185.21.171.17",
-              "asn": 61007,
-              "as_org": "AS-OPENTLD2",
-              "as_country": "NL"
+              "asn": 198147,
+              "as_org": "TK2",
+              "as_country": "TK"
             }
           ],
           "ipv6": [
@@ -73912,9 +73912,9 @@
           "ipv4": [
             {
               "ip": "185.21.168.65",
-              "asn": 61005,
-              "as_org": "AS-OPENTLD1",
-              "as_country": "NL"
+              "asn": 57382,
+              "as_org": "TK1",
+              "as_country": "TK"
             }
           ],
           "ipv6": [
@@ -73931,9 +73931,9 @@
           "ipv4": [
             {
               "ip": "185.21.169.65",
-              "asn": 61005,
-              "as_org": "AS-OPENTLD1",
-              "as_country": "NL"
+              "asn": 57382,
+              "as_org": "TK1",
+              "as_country": "TK"
             }
           ],
           "ipv6": [
@@ -73950,9 +73950,9 @@
           "ipv4": [
             {
               "ip": "185.21.170.65",
-              "asn": 61007,
-              "as_org": "AS-OPENTLD2",
-              "as_country": "NL"
+              "asn": 198147,
+              "as_org": "TK2",
+              "as_country": "TK"
             }
           ],
           "ipv6": [
@@ -73969,9 +73969,9 @@
           "ipv4": [
             {
               "ip": "185.21.171.65",
-              "asn": 61007,
-              "as_org": "AS-OPENTLD2",
-              "as_country": "NL"
+              "asn": 198147,
+              "as_org": "TK2",
+              "as_country": "TK"
             }
           ],
           "ipv6": [
