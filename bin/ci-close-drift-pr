@@ -1,0 +1,100 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+usage() {
+  cat <<'EOF'
+Usage: bin/ci-close-drift-pr <branch>
+
+Closes the pending drift PR when the drift has cleared. Run only on a completed
+check that found nothing; a crashed check reports zero drift too, and closing on
+that would discard a live proposal.
+
+Holds no signing key: closing is a PR operation, so GH_TOKEN is the only
+credential. Ownership is checked first, because the branch may carry a curator's
+own commits by the time the drift clears.
+
+The branch is deliberately left in place. Closing already makes repeat runs
+silent, because the next clean run finds no open PR and stops, so deleting buys
+nothing and costs retryability: `gh pr close --delete-branch` closes first and
+deletes second, so a half-done run leaves the PR closed and never retries the
+cleanup. If the drift returns, the next proposal force-pushes over the branch.
+
+`gh pr close` itself comments before closing, so a close that fails can repeat
+its comment on the next run. The PR stays OPEN and eligible, which is the
+tradeoff taken: a duplicated comment over a proposal that never closes.
+
+Environment:
+  GH_TOKEN             Required.
+  CI_COMMITTER_EMAIL   Required. The identity the branch must belong to.
+  DRIFT_CLOSE_COMMENT  Optional closing comment.
+
+Emits outcome to $GITHUB_OUTPUT: pr_closed, no_pr, branch_diverged,
+ownership_unknown or lookup_failed.
+EOF
+}
+
+case "${1:-}" in
+  -h | --help)
+    usage
+    exit 0
+    ;;
+  "" | -*)
+    echo "bin/ci-close-drift-pr: a branch is required" >&2
+    usage >&2
+    exit 2
+    ;;
+esac
+
+if [ $# -ne 1 ]; then
+  echo "bin/ci-close-drift-pr: expected exactly one argument" >&2
+  exit 2
+fi
+branch="$1"
+outfile="${GITHUB_OUTPUT:-/dev/null}"
+comment="${DRIFT_CLOSE_COMMENT:-The drift this proposed has cleared; closing. A new PR opens if it returns.}"
+
+emit() { printf '%s=%s\n' "$1" "$2" >> "$outfile"; }
+
+if [ -z "${CI_COMMITTER_EMAIL:-}" ]; then
+  echo "bin/ci-close-drift-pr: CI_COMMITTER_EMAIL is required" >&2
+  exit 2
+fi
+
+# A swallowed lookup failure reads as "no PR" and leaves an obsolete proposal
+# open with no alert, so the query has to succeed before its answer is used.
+if ! state="$(gh pr view "$branch" --json state --jq .state 2>&1)"; then
+  case "$state" in
+    *"no pull requests found"* | *"no open pull requests"* | *"not found"*)
+      printf 'No PR on %s; nothing to close.\n' "$branch"
+      emit outcome no_pr
+      exit 0
+      ;;
+  esac
+  printf '::error::cannot read the PR state for %s: %s\n' "$branch" "$state"
+  emit outcome lookup_failed
+  exit 1
+fi
+if [ "$state" != "OPEN" ]; then
+  printf 'No open PR on %s; nothing to close.\n' "$branch"
+  emit outcome no_pr
+  exit 0
+fi
+
+# The branch must still be ours. A curator who pushed onto it owns it now, and
+# closing over that would discard their work with no way to see it went.
+committer="$(git log -1 --pretty=%ce "refs/heads/$branch" 2> /dev/null || true)"
+if [ -z "$committer" ]; then
+  printf '::error::cannot read %s locally to verify ownership\n' "$branch"
+  emit outcome ownership_unknown
+  exit 1
+fi
+if [ "$committer" != "$CI_COMMITTER_EMAIL" ]; then
+  printf '::warning::%s was last committed by %s, not this workflow; leaving the PR open\n' \
+    "$branch" "$committer"
+  emit outcome branch_diverged
+  exit 0
+fi
+
+gh pr close "$branch" --comment "$comment"
+emit outcome pr_closed
+printf 'Closed the drift PR on %s; the branch is left for the next proposal.\n' "$branch"

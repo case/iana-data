@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+usage() {
+  cat <<'EOF'
+Usage: bin/ci-archive-asn-labels <drift-report.log> [--branch <name>]
+
+Moves drifted asn labels into archived.asn, then captures the result as a patch
+for the signing job. No change is a normal outcome and exits 0; callers gate on
+changed.
+
+Dates are carried forward from the pending branch, so an unchanged proposal does
+not differ day to day. Why: docs/plans/current/2026-09-11-asn-drift-automation.md
+EOF
+}
+
+case "${1:-}" in
+  -h | --help)
+    usage
+    exit 0
+    ;;
+  "" | -*)
+    echo "bin/ci-archive-asn-labels: a drift report path is required" >&2
+    usage >&2
+    exit 2
+    ;;
+esac
+
+outfile="${GITHUB_OUTPUT:-/dev/null}"
+emit() { printf '%s=%s\n' "$1" "$2" >> "$outfile"; }
+
+# Python entry point runs under uv, like bin/check-asn-drift: the script imports
+# src/, whose dependencies live in the project environment.
+uv run python bin/ci-archive-asn-labels.py "$@"
+
+if git diff --quiet -- data/manual; then
+  echo "No file changes after archiving; nothing to propose."
+  emit outcome no_changes
+  emit changed false
+  exit 0
+fi
+
+"$(dirname "$0")/ci-make-data-patch" data/manual

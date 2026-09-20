@@ -15,6 +15,7 @@ import pytest
 REPO_ROOT = Path(__file__).parent.parent.parent
 REFRESH = REPO_ROOT / "bin" / "ci-refresh-coordinates"
 OPEN_PR = REPO_ROOT / "bin" / "ci-open-drift-pr"
+CLOSE_PR = REPO_ROOT / "bin" / "ci-close-drift-pr"
 
 ISOLATED_GIT_ENV = {
     "GIT_CONFIG_GLOBAL": "/dev/null",
@@ -28,7 +29,10 @@ GH_STUB = """#!/usr/bin/env bash
 # Records argv, then answers from GH_STUB_* so a case can pick the branch taken.
 printf '%s\\n' "$*" >> "$GH_STUB_LOG"
 case "$1 $2" in
-  "pr view") [ -n "${GH_STUB_PR_STATE:-}" ] || exit 1; echo "$GH_STUB_PR_STATE" ;;
+  "pr view")
+    [ "${GH_STUB_VIEW_ERRORS:-}" = 1 ] && { echo "HTTP 503: upstream unavailable" >&2; exit 1; }
+    [ -n "${GH_STUB_PR_STATE:-}" ] || { echo "no pull requests found for branch" >&2; exit 1; }
+    echo "$GH_STUB_PR_STATE" ;;
   "pr create")
     [ "${GH_STUB_CREATE_FAILS:-}" = 1 ] && {
       echo "pull request create failed: GraphQL: GitHub Actions is not permitted" >&2
@@ -36,6 +40,7 @@ case "$1 $2" in
     }
     echo "https://github.com/o/r/pull/1" ;;
   "pr comment") ;;
+  "pr close") [ "${GH_STUB_CLOSE_FAILS:-}" = 1 ] && exit 1; exit 0 ;;
   *) exit 1 ;;
 esac
 """
@@ -509,3 +514,256 @@ def test_pr_body_flags_a_partial_refresh(workspace, signing_key):
 
     body = (workspace["workdir"] / "pr-body.md").read_text()
     assert "could not fetch every place" in body
+
+
+class TestPerCallerWording:
+    """One script serves every drift check, so the coordinate strings are defaults."""
+
+    def test_the_caller_supplies_title_branch_and_prose(self, workspace, signing_key):
+        produce(workspace)
+
+        seen = run_open_pr(
+            workspace,
+            signing_key,
+            DRIFT_BRANCH="asn-drift",
+            DRIFT_PR_TITLE="ASN label drift detected",
+            DRIFT_COMMIT_SUBJECT="Archive drifted ASN labels",
+            DRIFT_PREAMBLE="The nightly check found asn labels no longer present upstream.",
+            DRIFT_REVIEW_INSTRUCTIONS="Merge to archive them.",
+        )
+
+        assert seen["outputs"]["outcome"] == "pr_opened"
+        gh_calls = workspace["gh_log"].read_text()
+        assert "ASN label drift detected" in gh_calls
+        assert "Coordinate drift detected" not in gh_calls
+        assert "asn-drift" in remote_branches(workspace)
+
+        body = (workspace["workdir"] / "pr-body.md").read_text()
+        assert "The nightly check found asn labels no longer present upstream." in body
+        assert "Merge to archive them." in body
+        assert "Wikidata" not in body
+
+    def test_the_coordinate_caller_keeps_its_own_wording(self, workspace, signing_key):
+        produce(workspace)
+
+        run_open_pr(workspace, signing_key)
+
+        body = (workspace["workdir"] / "pr-body.md").read_text()
+        assert "drifted past the ~1 km tolerance" in body
+        assert "merge if Wikidata's value is the better one" in body
+        assert "Coordinate drift detected" in workspace["gh_log"].read_text()
+
+
+class TestUnchangedRunsAreSilent:
+    def test_an_unchanged_run_posts_no_comment_at_all(self, workspace, signing_key):
+        """The comment ran before new_content was consulted, so it notified nightly.
+
+        Asserts the absence of the call, not just the outcome string: emitting
+        'unchanged' while still commenting is the bug this guards.
+        """
+        produce(workspace)
+        run_open_pr(workspace, signing_key)
+        workspace["outputs"].unlink()
+        workspace["gh_log"].unlink()
+
+        produce(workspace)
+        second = run_open_pr(workspace, signing_key, GH_STUB_PR_STATE="OPEN")
+
+        assert second["outputs"]["outcome"] == "unchanged"
+        assert "pr comment" not in workspace["gh_log"].read_text()
+
+    def test_changed_content_on_an_open_pr_still_comments(self, workspace, signing_key):
+        """The silence must be keyed on content, not on the PR being open."""
+        produce(workspace)
+
+        seen = run_open_pr(workspace, signing_key, GH_STUB_PR_STATE="OPEN")
+
+        assert seen["outputs"]["outcome"] == "pr_updated"
+        assert "pr comment" in workspace["gh_log"].read_text()
+
+    def test_a_newly_failed_refresh_is_announced_despite_unchanged_files(
+        self, workspace, signing_key
+    ):
+        """Silence is keyed on content, but a partial refresh is news on its own.
+
+        The drift is still there and the branch does not hold the fetched values,
+        so suppressing this would hide the loudest case there is.
+        """
+        produce(workspace)
+        run_open_pr(workspace, signing_key)
+        workspace["outputs"].unlink()
+        workspace["gh_log"].unlink()
+
+        produce(workspace)
+        second = run_open_pr(
+            workspace, signing_key, GH_STUB_PR_STATE="OPEN", REFRESH_FAILED="true"
+        )
+
+        assert second["outputs"]["outcome"] == "pr_updated"
+        assert "pr comment" in workspace["gh_log"].read_text()
+
+
+class TestCloseDriftPr:
+    """Drift clearing must close the proposal, or a stale PR stays mergeable.
+
+    Merging a cleared proposal archives labels that came back, so leaving it open
+    is not a harmless no-op.
+    """
+
+    BOT = "bot@example.invalid"
+
+    def _run_close(self, workspace, branch="asn-drift", **env) -> dict:
+        result = subprocess.run(
+            [str(CLOSE_PR), branch],
+            cwd=workspace["repo"],
+            capture_output=True,
+            text=True,
+            check=False,
+            env=base_env(workspace, CI_COMMITTER_EMAIL=self.BOT, **env),
+        )
+        return {"result": result, "outputs": read_outputs(workspace)}
+
+    def _branch_owned_by(self, workspace, email, branch="asn-drift"):
+        repo = workspace["repo"]
+        git(repo, "checkout", "-q", "-B", branch)
+        (repo / "data" / "manual" / "proposal.txt").write_text("pending\n")
+        git(repo, "add", "-A")
+        git(
+            repo,
+            "-c",
+            f"user.email={email}",
+            "-c",
+            "user.name=whoever",
+            "commit",
+            "-q",
+            "-m",
+            "proposal",
+        )
+        git(repo, "checkout", "-q", "main")
+
+    def test_no_open_pr_is_a_silent_no_op(self, workspace):
+        self._branch_owned_by(workspace, self.BOT)
+
+        seen = self._run_close(workspace)
+
+        assert seen["result"].returncode == 0
+        assert seen["outputs"]["outcome"] == "no_pr"
+        assert "pr close" not in workspace["gh_log"].read_text()
+
+    def test_an_owned_proposal_is_closed_and_the_branch_is_left_alone(self, workspace):
+        """Closing alone makes the next run silent; deleting has no lease to protect it."""
+        self._branch_owned_by(workspace, self.BOT)
+
+        seen = self._run_close(workspace, GH_STUB_PR_STATE="OPEN")
+
+        assert seen["result"].returncode == 0, seen["result"].stderr
+        assert seen["outputs"]["outcome"] == "pr_closed"
+        gh_calls = workspace["gh_log"].read_text()
+        assert "pr close" in gh_calls
+        assert "--delete-branch" not in gh_calls
+
+    def test_closing_is_retried_while_the_pr_is_still_open(self, workspace):
+        """A failed close must not be a one-shot: the next run still sees OPEN."""
+        self._branch_owned_by(workspace, self.BOT)
+
+        first = self._run_close(
+            workspace, GH_STUB_PR_STATE="OPEN", GH_STUB_CLOSE_FAILS="1"
+        )
+        assert first["result"].returncode != 0
+
+        # A failed close emits no outcome at all; the job's if: failure() alert
+        # is what covers it, so there may be nothing to clear here.
+        workspace["outputs"].unlink(missing_ok=True)
+        second = self._run_close(workspace, GH_STUB_PR_STATE="OPEN")
+
+        assert second["outputs"]["outcome"] == "pr_closed"
+
+    def test_a_branch_a_human_took_over_is_left_alone(self, workspace):
+        """Closing over a curator's commit would discard it invisibly."""
+        self._branch_owned_by(workspace, "curator@example.com")
+
+        seen = self._run_close(workspace, GH_STUB_PR_STATE="OPEN")
+
+        assert seen["result"].returncode == 0
+        assert seen["outputs"]["outcome"] == "branch_diverged"
+        assert "pr close" not in workspace["gh_log"].read_text()
+
+    def test_an_unreadable_branch_refuses_rather_than_closing(self, workspace):
+        """No local ref means ownership is unknown, which is not the same as ours."""
+        seen = self._run_close(workspace, GH_STUB_PR_STATE="OPEN")
+
+        assert seen["result"].returncode == 1
+        assert seen["outputs"]["outcome"] == "ownership_unknown"
+        assert "pr close" not in workspace["gh_log"].read_text()
+
+    def test_it_requires_a_committer_identity(self, workspace):
+        self._branch_owned_by(workspace, self.BOT)
+
+        result = subprocess.run(
+            [str(CLOSE_PR), "asn-drift"],
+            cwd=workspace["repo"],
+            capture_output=True,
+            text=True,
+            check=False,
+            env=base_env(workspace, GH_STUB_PR_STATE="OPEN"),
+        )
+
+        assert result.returncode == 2
+
+
+class TestClosedProposals:
+    """A closed PR is recreated on purpose; see the note in bin/ci-open-drift-pr.
+
+    Branch content cannot distinguish a rejected proposal from an identical
+    unrejected one. Suppressing on it also abandoned a blocked create for good,
+    because a failed create leaves the branch matching the next run's proposal.
+    Over-announcing is visible and recoverable; the alternative is not.
+    """
+
+    def test_a_closed_pr_is_recreated_rather_than_left_closed(
+        self, workspace, signing_key
+    ):
+        produce(workspace)
+        run_open_pr(workspace, signing_key)
+        workspace["outputs"].unlink()
+        workspace["gh_log"].unlink()
+
+        produce(workspace)
+        second = run_open_pr(workspace, signing_key, GH_STUB_PR_STATE="CLOSED")
+
+        assert second["outputs"]["outcome"] == "pr_opened"
+        assert "pr create" in workspace["gh_log"].read_text()
+
+    def test_a_blocked_create_is_retried_on_the_next_run(self, workspace, signing_key):
+        """The regression that reverted the suppression: a blocked create must retry."""
+        produce(workspace)
+        first = run_open_pr(workspace, signing_key, GH_STUB_CREATE_FAILS="1")
+        assert first["outputs"]["outcome"] == "pr_blocked"
+        workspace["outputs"].unlink()
+        workspace["gh_log"].unlink()
+
+        produce(workspace)
+        second = run_open_pr(workspace, signing_key)
+
+        assert second["outputs"]["outcome"] == "pr_opened"
+        assert "pr create" in workspace["gh_log"].read_text()
+
+
+class TestCloseLookupFailures:
+    BOT = "bot@example.invalid"
+
+    def test_a_failed_lookup_is_not_read_as_an_absent_pr(self, workspace):
+        """Swallowing the failure leaves an obsolete proposal open and silent."""
+        result = subprocess.run(
+            [str(CLOSE_PR), "asn-drift"],
+            cwd=workspace["repo"],
+            capture_output=True,
+            text=True,
+            check=False,
+            env=base_env(
+                workspace, CI_COMMITTER_EMAIL=self.BOT, GH_STUB_VIEW_ERRORS="1"
+            ),
+        )
+
+        assert result.returncode == 1
+        assert read_outputs(workspace)["outcome"] == "lookup_failed"

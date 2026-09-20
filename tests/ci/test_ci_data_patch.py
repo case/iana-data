@@ -876,7 +876,10 @@ class TestCredentialBoundary:
         assert marker in text, workflow
         return text[: text.index(marker)]
 
-    @pytest.mark.parametrize("workflow", ["update-data.yaml", "check-coordinates.yaml"])
+    @pytest.mark.parametrize(
+        "workflow",
+        ["update-data.yaml", "check-coordinates.yaml", "check-asn-drift.yaml"],
+    )
     def test_the_validator_step_runs_before_any_signing_key(self, workflow):
         before = self._steps_before_signing(workflow)
 
@@ -885,7 +888,10 @@ class TestCredentialBoundary:
         )
         assert "ci-land-data-patch rebase" in before, workflow
 
-    @pytest.mark.parametrize("workflow", ["update-data.yaml", "check-coordinates.yaml"])
+    @pytest.mark.parametrize(
+        "workflow",
+        ["update-data.yaml", "check-coordinates.yaml", "check-asn-drift.yaml"],
+    )
     def test_no_job_level_signing_key(self, workflow):
         """A job-level env would put the key in every step's process."""
         text = (REPO_ROOT / ".github" / "workflows" / workflow).read_text()
@@ -1395,7 +1401,12 @@ def test_no_ci_script_is_excluded_from_a_fresh_clone():
 
     Why bin/lib/ci-git-auth.sh escaped: docs/memory/log/2026-09-09-ci-signing-shared.md
     """
-    scripts = sorted(p for p in (REPO_ROOT / "bin").rglob("ci-*") if p.is_file())
+    # __pycache__ holds bytecode named after the script; this guard is about sources.
+    scripts = sorted(
+        p
+        for p in (REPO_ROOT / "bin").rglob("ci-*")
+        if p.is_file() and "__pycache__" not in p.parts
+    )
     assert len(scripts) >= 5, f"expected the bin/ci-* family, found {scripts}"
 
     # --no-index, or a rule stops being reported the moment the file is tracked,
@@ -1441,3 +1452,51 @@ def test_the_ignore_guard_catches_the_packaging_defect_it_was_written_for(tmp_pa
     assert list((repo / "bin").rglob("ci-*")) == [helper], (
         "rglob must reach a nested helper; plain glob was the original blind spot"
     )
+
+
+class TestFetchBranch:
+    """actions/checkout is depth 1, so a producer job cannot see the pending branch.
+
+    Without this phase every carried archived_on is restamped nightly, which is
+    the whole failure the carry-forward exists to prevent.
+    """
+
+    def test_an_absent_branch_is_a_silent_success(self, pushable, signing_key):
+        repo, bare = pushable
+        env = land_env(bare, git(repo, "rev-parse", "HEAD").stdout.strip(), signing_key)
+
+        result = run_script(LAND, repo, "fetch-branch", "asn-drift", env=env)
+
+        assert result.returncode == 0, result.stdout + result.stderr
+        assert "No asn-drift branch" in result.stdout
+
+    def test_an_existing_branch_lands_as_a_local_ref(self, pushable, signing_key):
+        repo, bare = pushable
+        git(bare, "branch", "asn-drift", "main")
+        env = land_env(bare, git(repo, "rev-parse", "HEAD").stdout.strip(), signing_key)
+
+        result = run_script(LAND, repo, "fetch-branch", "asn-drift", env=env)
+
+        assert result.returncode == 0, result.stdout + result.stderr
+        assert git(repo, "rev-parse", "--verify", "asn-drift").returncode == 0
+
+    def test_an_unreachable_remote_fails_instead_of_reading_as_absent(
+        self, pushable, signing_key
+    ):
+        """Treating an outage as absence is what silently restamps every date."""
+        repo, bare = pushable
+        env = land_env(bare, git(repo, "rev-parse", "HEAD").stdout.strip(), signing_key)
+        env["PUSH_REMOTE"] = str(bare.parent / "does-not-exist.git")
+
+        result = run_script(LAND, repo, "fetch-branch", "asn-drift", env=env)
+
+        assert result.returncode == 1
+        assert "cannot reach" in result.stdout + result.stderr
+
+    def test_it_needs_a_branch_argument(self, pushable, signing_key):
+        repo, bare = pushable
+        env = land_env(bare, git(repo, "rev-parse", "HEAD").stdout.strip(), signing_key)
+
+        result = run_script(LAND, repo, "fetch-branch", env=env)
+
+        assert result.returncode == 2

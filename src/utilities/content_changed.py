@@ -135,6 +135,21 @@ def _atomic_write_json(filepath: Path, data: dict[str, Any], indent: int) -> Non
             Path(tmp_path).unlink(missing_ok=True)
 
 
+def write_json_document_if_changed(path: Path, data: Any, indent: int = 2) -> bool:
+    """Write ``data`` to ``path`` when its canonical form differs; return whether it changed.
+
+    Unlike ``write_json_if_changed`` this takes any JSON document, so a top-level
+    list (``data/manual/organizations.json``) round-trips through the same
+    atomic writer.
+    """
+    if path.exists() and path.read_text(encoding="utf-8") == _canonical_file(
+        data, indent
+    ):
+        return False
+    _atomic_write_json(path, data, indent)
+    return True
+
+
 def is_json_canonical(text: str, indent: int = 2) -> bool:
     """True if ``text`` already equals the canonical rendering of its own parse.
 

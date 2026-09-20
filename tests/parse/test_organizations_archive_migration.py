@@ -113,8 +113,8 @@ def test_each_migrated_label_sits_in_exactly_one_asn_field(seed):
             assert (name in seeded) != (name in archived), f"{slug}/{name}"
 
 
-def test_each_label_is_in_the_field_the_migration_chose(seed):
-    """Pins the 2026-09-12 destinations; M4 archiving a seeded label retires this.
+def test_archived_labels_stay_archived(seed):
+    """Nothing leaves the archive; re-seeding one re-arms the drift report.
 
     Why the split: docs/memory/log/2026-09-12-archived-bucket.md
     """
@@ -122,8 +122,21 @@ def test_each_label_is_in_the_field_the_migration_chose(seed):
 
     for slug, names in ARCHIVED.items():
         assert set(names) <= _asn_fields(by_slug[slug])[1], f"{slug} not archived"
+
+
+def test_reseeded_labels_are_never_lost(seed):
+    """A reseeded label may later be archived by automation, but never dropped.
+
+    The 2026-09-12 migration put HGTLD back under ``source_names.asn`` because a
+    raw value matched it. HGTLD is also the label that flaps, so
+    ``bin/ci-archive-asn-labels`` archives it the first time it drifts. Asserting
+    it stays seeded would fail inside the nightly's own gate from that night on.
+    """
+    by_slug = {org["slug"]: org for org in seed}
+
     for slug, names in RESEEDED.items():
-        assert set(names) <= _asn_fields(by_slug[slug])[0], f"{slug} not seeded"
+        seeded, archived = _asn_fields(by_slug[slug])
+        assert set(names) <= seeded | archived, f"{slug} lost a reseeded label"
 
 
 def test_the_migration_removes_exactly_the_allowlisted_keys(maps):

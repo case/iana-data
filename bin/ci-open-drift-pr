@@ -5,11 +5,20 @@ usage() {
   cat <<'EOF'
 Usage: bin/ci-open-drift-pr <drift-report.log>
 
-Signs the already-staged coordinate refresh onto the drift branch, then ensures
-a PR exists. Run after ci-land-data-patch rebase and ci-apply-data-patch. Content equality decides only whether the drift is announced, so an
-unresolved drift does not re-notify every week.
+Signs the already-staged refresh onto the drift branch, then ensures a PR
+exists. Run after ci-land-data-patch rebase and ci-apply-data-patch. Content
+equality decides whether the drift is announced, so an unresolved drift does not
+re-notify every run.
+
+Wording is per-caller, so one script serves every drift check. Defaults are the
+coordinate strings: DRIFT_BRANCH, DRIFT_PR_TITLE, DRIFT_COMMIT_SUBJECT,
+DRIFT_PREAMBLE, DRIFT_REVIEW_INSTRUCTIONS.
 
 Emits outcome to $GITHUB_OUTPUT: pr_opened, pr_updated, unchanged or pr_blocked.
+
+A closed PR is deliberately recreated: branch content cannot tell a rejected
+proposal from an identical unrejected one, and suppressing on it abandons a
+blocked create for good. Why: docs/plans/current/2026-09-11-asn-drift-automation.md
 EOF
 }
 
@@ -37,6 +46,12 @@ if [ ! -f "$report" ]; then
   exit 2
 fi
 branch="${DRIFT_BRANCH:-coordinate-drift}"
+title="${DRIFT_PR_TITLE:-Coordinate drift detected}"
+subject="${DRIFT_COMMIT_SUBJECT:-Refresh drifted coordinates from Wikidata}"
+preamble="${DRIFT_PREAMBLE:-The weekly check found Wikidata coordinates that drifted past the ~1 km tolerance.}"
+# Assigned separately: shellcheck cannot parse an apostrophe inside a :- default.
+coordinate_instructions="Review each: merge if Wikidata's value is the better one, close if ours is correct."
+instructions="${DRIFT_REVIEW_INSTRUCTIONS:-$coordinate_instructions}"
 server="${GITHUB_SERVER_URL:-https://github.com}"
 repo="${GITHUB_REPOSITORY:-}"
 outfile="${GITHUB_OUTPUT:-/dev/null}"
@@ -48,7 +63,7 @@ emit() { printf '%s=%s\n' "$1" "$2" >> "$outfile"; }
 here="$(dirname "$0")"
 "$here/ci-land-data-patch" commit \
   --guard data/manual \
-  --subject "Refresh drifted coordinates from Wikidata" \
+  --subject "$subject" \
   --own "$branch"
 
 new_content=true
@@ -57,7 +72,7 @@ if grep -q '^new_content=false' "$outfile"; then
 fi
 
 {
-  echo "The weekly check found Wikidata coordinates that drifted past the ~1 km tolerance."
+  echo "$preamble"
   echo
   echo '```'
   grep -E '^(DRIFT|FAIL)' "$report" || true
@@ -69,12 +84,22 @@ fi
   fi
   echo "Checks on this PR need manual approval: it was opened by GITHUB_TOKEN."
   echo
-  echo "Review each: merge if Wikidata's value is the better one, close if ours is correct."
+  echo "$instructions"
 } > "$workdir/pr-body.md"
 
-if [ "$(gh pr view "$branch" --json state --jq .state 2> /dev/null || true)" = "OPEN" ]; then
-  gh pr comment "$branch" --body-file "$workdir/pr-body.md"
-  if [ "$new_content" = true ]; then
+# A partial refresh is news even when the files match: the drift is still there
+# and the values on the branch are not the fetched ones.
+announce="$new_content"
+if [ "$refresh_failed" = true ]; then
+  announce=true
+fi
+
+state="$(gh pr view "$branch" --json state --jq .state 2> /dev/null || true)"
+
+if [ "$state" = "OPEN" ]; then
+  # Commenting before consulting new_content re-notified on every unchanged run.
+  if [ "$announce" = true ]; then
+    gh pr comment "$branch" --body-file "$workdir/pr-body.md"
     emit outcome pr_updated
   else
     emit outcome unchanged
@@ -85,7 +110,7 @@ fi
 # A blocked create still leaves a pushed branch, so hand back a compare URL
 # rather than failing the step and losing the alert with it.
 if gh pr create --base main --head "$branch" \
-  --title "Coordinate drift detected" --body-file "$workdir/pr-body.md" > "$workdir/pr-url.txt"; then
+  --title "$title" --body-file "$workdir/pr-body.md" > "$workdir/pr-url.txt"; then
   emit outcome pr_opened
   emit pr_url "$(cat "$workdir/pr-url.txt")"
 else

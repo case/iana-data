@@ -1,0 +1,328 @@
+name: Check ASN label drift
+
+on:
+  schedule:
+    # Daily 01:00 UTC, between the 00:00 iptoasn producer and the 02:00 consumer.
+    - cron: "0 1 * * *"
+  workflow_dispatch: # Allow manual triggering
+
+concurrency:
+  group: check-asn-drift
+  cancel-in-progress: false
+
+permissions: {}
+
+jobs:
+  check-asn-drift:
+    # actions: read to download the iptoasn artifact the producer publishes.
+    permissions:
+      contents: read
+      actions: read
+    runs-on: ubuntu-24.04
+    # Step caps below sum to 46, under this job cap.
+    timeout-minutes: 55
+    outputs:
+      drifted: ${{ steps.check.outputs.drifted }}
+      changed: ${{ steps.archive.outputs.changed }}
+      patch_artifact: ${{ steps.archive.outputs.artifact }}
+      outcome: ${{ steps.archive.outputs.outcome }}
+
+    steps:
+      - name: Check out repository
+        timeout-minutes: 2
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Cache uv downloads
+        timeout-minutes: 3
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.cache/uv
+          key: uv-${{ runner.os }}-${{ hashFiles('uv.lock') }}
+          restore-keys: uv-${{ runner.os }}-
+
+      - name: Install mise and the pinned toolchain
+        timeout-minutes: 5
+        uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0
+
+      - name: Find latest iptoasn artifact run
+        id: iptoasn-run
+        timeout-minutes: 3
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          run_id=$(gh run list --workflow=update-iptoasn.yaml --status=success \
+            --limit=1 --json databaseId -q '.[0].databaseId')
+          if [ -z "$run_id" ]; then
+            echo "::error::No successful update-iptoasn run found"
+            exit 1
+          fi
+          echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+
+      - name: Download iptoasn artifact
+        timeout-minutes: 5
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
+        with:
+          pattern: iptoasn-*
+          path: data/source/iptoasn
+          github-token: ${{ github.token }}
+          run-id: ${{ steps.iptoasn-run.outputs.run_id }}
+          merge-multiple: true
+
+      # Exit 1 means drift, but a crash exits 1 too, so the check's own summary
+      # line is what proves it ran to the end. An unhealthy artifact resolves
+      # nothing and would manufacture a DRIFT line for every curated label.
+      - name: Detect drifted ASN labels
+        id: check
+        timeout-minutes: 15
+        run: |
+          set -o pipefail
+          report="$RUNNER_TEMP/drift-report.log"
+          status=0
+          bin/check-asn-drift 2>&1 | tee "$report" || status=$?
+          if [ "$status" -gt 1 ] || ! grep -q '^asn check: .*artifact healthy' "$report"; then
+            echo "::error::ASN drift check exited $status without completing healthily"
+            exit 1
+          fi
+          echo "drifted=$(grep -c '^DRIFT ' "$report" || true)" >> "$GITHUB_OUTPUT"
+
+      # actions/checkout fetches one ref at depth 1, so the pending proposal is
+      # invisible and every carried archived_on would be restamped nightly.
+      - name: Fetch the pending proposal branch
+        if: steps.check.outputs.drifted != '0'
+        timeout-minutes: 3
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          PUSH_REMOTE="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}.git" \
+            bin/ci-land-data-patch fetch-branch asn-drift
+
+      # Holds no credentials: the signing key belongs to the job below.
+      - name: Archive drifted labels
+        id: archive
+        if: steps.check.outputs.drifted != '0'
+        timeout-minutes: 5
+        run: bin/ci-archive-asn-labels "$RUNNER_TEMP/drift-report.log" --branch asn-drift
+
+      - name: Upload ASN archive patch
+        if: steps.archive.outputs.changed == 'true'
+        timeout-minutes: 3
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        with:
+          name: ${{ steps.archive.outputs.artifact }}
+          path: |
+            ${{ runner.temp }}/data-update.patch
+            ${{ runner.temp }}/drift-report.log
+          retention-days: 1
+          if-no-files-found: error
+
+      - name: Notify if the ASN drift check failed
+        if: failure()
+        continue-on-error: true
+        timeout-minutes: 2
+        uses: ./.github/actions/pushover
+        with:
+          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
+          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
+          title: "ASN drift job failed"
+          message: "❌ The nightly ASN label drift check failed"
+
+  # pull-requests: write so the drift run can open the archive PR.
+  sign-asn-drift:
+    needs: check-asn-drift
+    if: needs.check-asn-drift.result == 'success' && needs.check-asn-drift.outputs.changed == 'true'
+    permissions:
+      contents: write
+      pull-requests: write
+    runs-on: ubuntu-24.04
+    # Step caps below sum to 35, under this job cap.
+    timeout-minutes: 45
+    outputs:
+      outcome: ${{ steps.pr.outputs.outcome }}
+
+    steps:
+      - name: Check out repository
+        timeout-minutes: 2
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Download ASN archive patch
+        timeout-minutes: 3
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
+        with:
+          name: ${{ needs.check-asn-drift.outputs.patch_artifact }}
+          path: ${{ runner.temp }}/asn-archive
+
+      # data/source is guarded too: ASN detection reads the root database and
+      # the TLD pages, so a source change during the run invalidates the report.
+      - name: Rebase onto current main
+        timeout-minutes: 5
+        env:
+          EXPECTED_HEAD: ${{ github.sha }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          PUSH_REMOTE="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}.git" \
+            bin/ci-land-data-patch rebase --guard data/manual --guard data/source
+
+      # Untrusted artifact, checked before and after it reaches the filesystem.
+      # The step holds no credentials. Why: docs/memory/log/2026-09-07-ci-signing.md
+      - name: Validate and apply the ASN archive
+        timeout-minutes: 5
+        run: bin/ci-apply-data-patch "$RUNNER_TEMP/asn-archive/data-update.patch"
+
+      - name: Sign, push and open the archive PR
+        id: pr
+        timeout-minutes: 12
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CI_SSH_SIGNING_KEY: ${{ secrets.CI_SSH_SIGNING_KEY }}
+          CI_COMMITTER_NAME: ${{ vars.CI_COMMITTER_NAME }}
+          CI_COMMITTER_EMAIL: ${{ vars.CI_COMMITTER_EMAIL }}
+          DRIFT_BRANCH: asn-drift
+          DRIFT_PR_TITLE: "ASN label drift detected"
+          DRIFT_COMMIT_SUBJECT: "Archive drifted ASN labels"
+          DRIFT_PREAMBLE: "The nightly check found curated asn labels that no longer appear in the iptoasn artifact."
+          DRIFT_REVIEW_INSTRUCTIONS: "Merge to archive them. They keep resolving in the asn bucket; nothing is deleted."
+        run: |
+          PUSH_REMOTE="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}.git" \
+            bin/ci-open-drift-pr "$RUNNER_TEMP/asn-archive/drift-report.log"
+
+      - name: Remove signing key
+        if: always()
+        timeout-minutes: 1
+        run: rm -f "$RUNNER_TEMP/iana-data-ci-signing"
+
+      # Notify on new drift content only; an unchanged branch is not re-announced.
+      - name: Notify on new drift PR
+        id: notify-drift
+        if: steps.pr.outputs.outcome == 'pr_opened' || steps.pr.outputs.outcome == 'pr_updated'
+        continue-on-error: true
+        timeout-minutes: 2
+        uses: ./.github/actions/pushover
+        with:
+          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
+          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
+          title: "ASN label drift detected"
+          message: "⚠️ Curated asn labels left the iptoasn artifact; an archive PR is open for review."
+
+      - name: Notify when the PR could not be opened
+        id: notify-blocked
+        if: steps.pr.outputs.outcome == 'pr_blocked'
+        continue-on-error: true
+        timeout-minutes: 2
+        uses: ./.github/actions/pushover
+        with:
+          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
+          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
+          title: "ASN drift needs a PR opened by hand"
+          message: "⚠️ Labels archived and pushed, but GitHub refused to create the PR: ${{ steps.pr.outputs.compare_url }}"
+
+      # The producer's own failure alert cannot see this job, so a rejected
+      # rebase, a bad patch or a refused push would otherwise be silent.
+      - name: Notify if signing or the PR failed
+        if: failure()
+        continue-on-error: true
+        timeout-minutes: 2
+        uses: ./.github/actions/pushover
+        with:
+          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
+          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
+          title: "ASN drift PR could not be signed"
+          message: "❌ Labels were archived but the signing job failed; no PR was opened."
+
+      # continue-on-error sets a failed step's conclusion to success, so without
+      # this the job stays green with nothing delivered.
+      - name: Fail the job when an alert could not be delivered
+        if: |
+          steps.notify-drift.outcome == 'failure'
+          || steps.notify-blocked.outcome == 'failure'
+        timeout-minutes: 1
+        run: |
+          echo "::error::An alert was raised but could not be delivered"
+          exit 1
+
+  # Zero drift on a completed, healthy check means the proposal is obsolete.
+  # Only a completed check reaches here: a crash fails the producer job, and a
+  # crashed check reports zero drift too.
+  close-asn-drift:
+    needs: check-asn-drift
+    if: needs.check-asn-drift.result == 'success' && needs.check-asn-drift.outputs.drifted == '0'
+    permissions:
+      contents: write
+      pull-requests: write
+    runs-on: ubuntu-24.04
+    # Step caps below sum to 18, under this job cap.
+    timeout-minutes: 25
+
+    steps:
+      - name: Check out repository
+        timeout-minutes: 2
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      # A re-run keeps its original SHA, so an old zero-drift result could close
+      # a proposal for a label curated since. The same guard the signing job uses.
+      - name: Refuse a stale result
+        timeout-minutes: 5
+        env:
+          EXPECTED_HEAD: ${{ github.sha }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          PUSH_REMOTE="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}.git" \
+            bin/ci-land-data-patch rebase --guard data/manual --guard data/source
+
+      # The ownership check reads the branch tip, so it has to be local first.
+      - name: Fetch the pending proposal branch
+        timeout-minutes: 3
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          PUSH_REMOTE="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}.git" \
+            bin/ci-land-data-patch fetch-branch asn-drift
+
+      # Holds no signing key: closing a PR is not a commit.
+      - name: Close the cleared proposal
+        id: close
+        timeout-minutes: 3
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CI_COMMITTER_EMAIL: ${{ vars.CI_COMMITTER_EMAIL }}
+          DRIFT_CLOSE_COMMENT: "Every label this proposed is back in the iptoasn artifact, so the archive is no longer needed. Closing; a new PR opens if the drift returns."
+        run: bin/ci-close-drift-pr asn-drift
+
+      - name: Notify when a curator has taken over the branch
+        id: notify-diverged
+        if: steps.close.outputs.outcome == 'branch_diverged'
+        continue-on-error: true
+        timeout-minutes: 2
+        uses: ./.github/actions/pushover
+        with:
+          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
+          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
+          title: "ASN drift cleared but the PR was left open"
+          message: "⚠️ The drift cleared, but asn-drift carries commits that are not this workflow's; the PR needs closing by hand."
+
+      # A stale-result refusal, an unreadable branch, a failed lookup or a failed
+      # close would otherwise leave an obsolete PR open and say nothing.
+      - name: Notify if the closure failed
+        if: failure()
+        continue-on-error: true
+        timeout-minutes: 2
+        uses: ./.github/actions/pushover
+        with:
+          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
+          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
+          title: "ASN drift PR could not be closed"
+          message: "❌ The drift cleared but the proposal could not be closed; it is still open."
+
+      # continue-on-error sets a failed step's conclusion to success, so without
+      # this the job stays green with nothing delivered.
+      - name: Fail the job when an alert could not be delivered
+        if: steps.notify-diverged.outcome == 'failure'
+        timeout-minutes: 1
+        run: |
+          echo "::error::An alert was raised but could not be delivered"
+          exit 1

@@ -6,6 +6,7 @@ usage() {
 Usage: bin/ci-land-data-patch sync --adopt <path>... --guard <path>...
        bin/ci-land-data-patch rebase --guard <path>...
        bin/ci-land-data-patch commit --subject <text> [--own --guard <path>...] <branch>
+       bin/ci-land-data-patch fetch-branch <branch>
 
 The git-landing layer every CI flow that commits to this repository shares. sync
 runs in the producer job; rebase and commit run in the consumer, split at the
@@ -21,6 +22,11 @@ sync     Re-points HEAD at the base branch tip and adopts the branch's copy of
 rebase   Moves HEAD onto the base branch tip, or refuses when a guarded path
          moved since the patch was built, or bin/ or .github/ moved since this
          job's own checkout.
+fetch-branch  Fetches <branch> into a local ref so a producer job can read the
+         pending proposal. actions/checkout is depth 1 and fetches one ref, so
+         without this the branch is absent and every date is restamped. An
+         absent branch exits 0 silently; a fetch that fails exits 1, because
+         treating an unreachable branch as absent is what restamps.
 commit   Signs the staged patch and pushes. --own requires the branch tip to be
          ours, compares the guarded paths against it for new_content, and
          force-pushes under a lease; without --own the push must fast-forward
@@ -45,11 +51,11 @@ case "$phase" in
     exit 0
     ;;
   "")
-    echo "bin/ci-land-data-patch: a phase is required: sync, rebase or commit" >&2
+    echo "bin/ci-land-data-patch: a phase is required: sync, rebase, commit or fetch-branch" >&2
     usage >&2
     exit 2
     ;;
-  sync | rebase | commit) shift ;;
+  sync | rebase | commit | fetch-branch) shift ;;
   *)
     printf 'bin/ci-land-data-patch: unknown phase %s\n' "$phase" >&2
     exit 2
@@ -117,6 +123,33 @@ configure_auth() {
 base_branch="${BASE_BRANCH:-main}"
 outfile="${GITHUB_OUTPUT:-/dev/null}"
 emit() { printf '%s=%s\n' "$1" "$2" >> "$outfile"; }
+
+if [ "$phase" = fetch-branch ]; then
+  if [ $# -ne 1 ] || [ -z "$1" ]; then
+    echo "bin/ci-land-data-patch: fetch-branch needs a branch" >&2
+    exit 2
+  fi
+  require PUSH_REMOTE
+  configure_auth
+
+  # Captured outside the if: `! cmd` sets $? to the negated status, so reading
+  # it inside the branch always yields 0.
+  status=0
+  git ls-remote --exit-code --heads "$PUSH_REMOTE" "$1" > /dev/null 2>&1 || status=$?
+  if [ "$status" -ne 0 ]; then
+    # 2 is "no matching ref", the normal first-run case. Anything else is an
+    # outage, and calling that absence would restamp every carried date.
+    if [ "$status" -ne 2 ]; then
+      printf '::error::cannot reach %s to look for %s\n' "$PUSH_REMOTE" "$1"
+      exit 1
+    fi
+    printf 'No %s branch on the remote\n' "$1"
+    exit 0
+  fi
+  git fetch --quiet --no-tags --depth=1 "$PUSH_REMOTE" "$1:refs/heads/$1"
+  printf 'Fetched %s\n' "$1"
+  exit 0
+fi
 
 if [ "$phase" = sync ]; then
   if [ $# -ne 0 ]; then
