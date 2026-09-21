@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-20T07:52:38Z",
+  "publication": "2026-09-21T08:07:41Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -33,9 +33,9 @@
         "ipv4": [
           {
             "ip": "185.21.168.65",
-            "asn": 61005,
-            "as_org": "AS-OPENTLD1",
-            "as_country": "NL"
+            "asn": 57382,
+            "as_org": "TK1",
+            "as_country": "TK"
           }
         ],
         "ipv6": [
@@ -52,9 +52,9 @@
         "ipv4": [
           {
             "ip": "185.21.169.65",
-            "asn": 61005,
-            "as_org": "AS-OPENTLD1",
-            "as_country": "NL"
+            "asn": 57382,
+            "as_org": "TK1",
+            "as_country": "TK"
           }
         ],
         "ipv6": [
@@ -71,9 +71,9 @@
         "ipv4": [
           {
             "ip": "185.21.170.65",
-            "asn": 61007,
-            "as_org": "AS-OPENTLD2",
-            "as_country": "NL"
+            "asn": 198147,
+            "as_org": "TK2",
+            "as_country": "TK"
           }
         ],
         "ipv6": [
@@ -90,9 +90,9 @@
         "ipv4": [
           {
             "ip": "185.21.171.65",
-            "asn": 61007,
-            "as_org": "AS-OPENTLD2",
-            "as_country": "NL"
+            "asn": 198147,
+            "as_org": "TK2",
+            "as_country": "TK"
           }
         ],
         "ipv6": [
