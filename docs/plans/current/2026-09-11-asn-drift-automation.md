@@ -6,7 +6,7 @@
 
 `test_source_names_appear_in_raw_data` asserts every `source_names` string occurs as a raw value in a freshly built `tlds.json`. It has fired three times in three months ([2026-07-16](../../memory/log/2026-07-16-teleinfo-asn-rename.md), [2026-08-18](../../memory/log/2026-08-18-hgtld-retired.md), [2026-09-11](../../memory/log/2026-09-11-vrsn-ac28-retired.md)). The last two are the same four /24s oscillating between `HGTLD` and `VRSN-AC28`: a flap, not a migration.
 
-`update-data.yaml:303` gates the nightly commit on tests passing, so each flap stops the data refresh until a human edits the seed. In August that was seven consecutive nights with no data landing.
+`update-data.yaml:321` gates the nightly commit on tests passing, so each flap stops the data refresh until a human edits the seed. In August that was seven consecutive nights with no data landing.
 
 ## Approach
 
@@ -56,7 +56,7 @@ M1 is the whole of the urgent problem. M2 is data modelling. M3 keeps the nightl
 
 ## M1: stop the nightly blocking — **DONE**
 
-Test-only. No schema change, no new files, no CI change. Manual archival stays the fallback, as used for `VRSN-AC28`.
+Test-only: no schema change and no CI change. It added the shared helper and its fixtures (`tests/integration/asn_drift.py`, `tests/integration/test_asn_drift.py`). Manual archival stays the fallback, as used for `VRSN-AC28`.
 
 **Four** live-data assertions block the nightly, not one:
 
@@ -73,7 +73,7 @@ The last two encode real invariants using live orgs as the example, so an ASN la
 
 The condition is **observable, not causal**. The graph cannot tell upstream drift from damaged input or broken enrichment, and no milestone here proves which it was. What the helper checks is narrower and decidable: whether any of the org's resolution keys still matches raw data.
 
-- [x] Shared helper, so the four callers cannot drift apart. It needs the org's **complete** resolution keys - `source_names` in all three buckets plus `display_name` and `aliases`, all of which `build_resolver` (`src/parse/organizations.py:74`) indexes - and the raw values in the assertion's own scope (`.uk` for the uk test, all TLDs for an ASN operator role)
+- [x] Shared helper, so the four callers cannot drift apart. It needs the org's **complete** resolution keys - `source_names` in all three buckets plus `display_name` and `aliases`, all of which `build_resolver` (`src/parse/organizations.py:232`) indexes - and the raw values in the assertion's own scope (`.uk` for the uk test, all TLDs for an ASN operator role)
 - [x] **A live matching key with a missing relationship fails**, even when another key of the same org is absent. That is a build defect, not drift
 - [x] `test_source_names_appear_in_raw_data`: `iana`/`icann` fail, `asn` warns, keeping `_diagnose_unmatched`'s nearest-match output
 - [x] `test_every_org_has_at_least_one_role`: warns only when the org has at least one `asn` entry, no key matches in any bucket, and no unmatched key is `iana`/`icann`
@@ -84,7 +84,7 @@ The condition is **observable, not causal**. The graph cannot tell upstream drif
 - [x] Do **not** verify against today's seed with `VRSN-AC28` removed. It already sits in `aliases` with only `VRSN-AC50-340` under `source_names.asn`, so that exercises nothing. Use a fixture carrying the earlier active seed
 - [x] `README.md:300` ("no record is ever orphaned") and `:306` (every org carries `roles`) are corrected **here**, not deferred. M1 makes both false, and deferring leaves the repo inconsistent if M2 never lands
 
-**Manual archival does not generalise, and M1 says so** in `_DRIFT_ADVICE`. `ultradns` carries `source_names.asn = ["SECURITYSERVICES"]` and nothing else (`data/manual/organizations.json:1010`). If that label drifts, M1 warns - but moving it to `aliases` the way `VRSN-AC28` was moved leaves empty `source_names`, which M1 deliberately fails. For an `asn`-only org the maintainer must keep the absent seed in place, reseed the org, or remove the record deliberately. **Superseded by M2**: the label moves to `archived.asn`, which keeps resolving it in the `asn` bucket and counts as `asn` evidence, so an archived-only org warns rather than failing.
+**Manual archival does not generalise, and M1 says so** in `_DRIFT_ADVICE`. `ultradns` carries `source_names.asn = ["SECURITYSERVICES"]` and nothing else (`data/manual/organizations.json:1022`). If that label drifts, M1 warns - but moving it to `aliases` the way `VRSN-AC28` was moved leaves empty `source_names`, which M1 deliberately fails. For an `asn`-only org the maintainer must keep the absent seed in place, reseed the org, or remove the record deliberately. **Superseded by M2**: the label moves to `archived.asn`, which keeps resolving it in the `asn` bucket and counts as `asn` evidence, so an archived-only org warns rather than failing.
 
 **Known limitation, accepted:** typo detection for `asn` is given up. A mistyped label never matches and now only warns.
 
@@ -101,8 +101,8 @@ This trades a blocking data-quality safeguard and its alert for CI-log diagnosti
 ## M2: the `archived` bucket - **DONE**
 
 - [x] Schema: source-scoped `archived`, entries `{name, archived_on}`
-- [x] `build_resolver` (`src/parse/organizations.py:74`) indexes `archived[source]` into that source **only**
-- [x] Validation in `parse_organizations_manual`: recognized buckets, non-empty names, `YYYY-MM-DD` dates, no duplicates, no name in both `source_names` and `archived` for one bucket. It currently validates only that the document is a list (`:36`)
+- [x] `build_resolver` (`src/parse/organizations.py:232`) indexes `archived[source]` into that source **only**
+- [x] Validation in `parse_organizations_manual`: recognized buckets, non-empty names, `YYYY-MM-DD` dates, no duplicates, no name in both `source_names` and `archived` for one bucket. Before M2 it validated only that the document is a list; `parse_organizations_manual` now calls `validate_organizations` and logs its findings (`src/parse/organizations.py:52-53`), with the integrity tests enforcing them
 - [x] Decide and test whether `archived_on` is required or optional - M2 and the migration must agree. **Required**: the writer always knows the date, M4 always sets it, and an optional field invites dateless entries with nothing to backfill from
 - [x] Tests: an archived label resolves in its own bucket and **not** in the other two
 
@@ -136,8 +136,11 @@ reporting.
 `update-data.yaml:253-265` already runs `--all` on an IANA source change and `--preserve-asn`
 otherwise, and `_asn_lookup_from_committed` (`src/build/tlds.py:707`) reproduces committed ASN
 exactly. So an unhealthy artifact downgrades `--all` to `--preserve-asn` and fires a Pushover
-alert. The nightly completes, IANA changes publish, ASN keeps its last known good values, and
-degraded data never lands.
+alert. The nightly completes and IANA changes publish, while ASN keeps its **committed** values.
+Committed is not the same as last known good, and preserving is not free: the lookup is keyed by
+address, so any address absent from the committed population still lands as `as_org: "Unknown"`
+(`src/build/tlds.py:706-728,752-761`). See "Accepted cost of a fallback night" for the full shape.
+What the mode prevents is a *degraded artifact* overwriting good committed values.
 
 This also pays off M1's admitted debt: M1 gave up the blocking safeguard **and its alert**, since a
 warning fires no notification. The alert comes back here without re-arming the flap.
@@ -147,9 +150,10 @@ preserved ASN, which is what every non-source-change night already does. So thre
 against observed values rather than loose. They are tripwires for catastrophic loss, documented as
 that, not as statistically calibrated limits.
 
-**Accepted cost:** on a source-change night that falls back, a brand-new TLD's nameservers are
-absent from the committed lookup, so that TLD alone carries `as_org: "Unknown"` until the artifact
-recovers. Bounded and self-healing.
+**Accepted cost:** a fallback night leaves any address missing from the committed population
+carrying `as_org: "Unknown"` until the artifact recovers - not only brand-new TLDs, since a replaced
+address on an existing TLD hits the same path. Self-healing once a healthy artifact returns and
+`repairable_damage` forces `--all`.
 
 ### Measured baseline
 
@@ -171,7 +175,7 @@ addresses, predicate `asn != 0`:
 
 `_require_iptoasn_source` (`tests/integration/test_organizations_integrity.py:42`) calls
 `pytest.fail` when the artifact is absent in CI. `bin/test` runs that suite and
-`update-data.yaml:303` gates the commit on it, so **a failed artifact download blocks the nightly
+`update-data.yaml:321` gates the commit on it, so **a failed artifact download blocks the nightly
 even after the health gate has already chosen the safe build**. M1 kept that guard deliberately;
 M3 reverses it, because it conflates two different things.
 
@@ -233,7 +237,7 @@ Record counts and label coverage are anchored to a single measured artifact unti
       input manufactures a full set of false DRIFT lines
 - [x] **Failure contract, so "never blocks" is real.** Only an explicit healthy result permits
       `--all`. A failed evaluation, a missing output, or a timeout selects `--preserve-asn`. None of
-      those may fail the producer job - `update-data.yaml:330` requires it to succeed
+      those may fail the producer job - `update-data.yaml:365` requires it to succeed
 - [x] **Alert on unhealthy or indeterminate health regardless of the mode chosen.** Tying the alert
       to a *downgrade* leaves a corrupt artifact silent on every preserve night, since those nights
       have no downgrade. Repetition policy can differ
@@ -273,18 +277,23 @@ These are decisions to defer, not work completed. They stay unticked on purpose.
 - [ ] **Label correctness is out of scope.** A permutation of operator labels across existing ASN
       records preserves coverage, cardinality, address counts and record counts alike. Detecting it
       needs an independent reference, not a self-consistency check
-- [ ] **Address-count drift needs an anchor, not only a ratchet.** Comparing each night to the last
+- [ ] **Address-count drift needs an anchor, not only a ratchet.** Not delivered by M4; thresholds remain fixed constants (`src/analyze/asn_health.py:44-45`). Comparing each night to the last
       lets 1% nightly shrinkage reach 36.6% of the original population in 100 nights with every step
       passing. M3 uses a fixed floor from the table above; a rebaseable anchor is M4's concern
 
-## M4: archival automation - **MOSTLY LANDED 2026-09-17**
+## M4: archival automation - **LANDED 2026-09-20** in `3c8917d6`
 
 The only milestone needing **write** credentials. M1, M2, M3 and M-docs have landed; this is the
 one that turns drift into a PR rather than a log line.
 
-**Check before starting:** the repo must allow Actions to create PRs, or `gh pr create` is refused
-and the branch strands silently - [2026-09-09](../../memory/log/2026-09-09-coordinate-drift-pr.md)
-records that failure on the first real coordinate drift.
+**Confirmed 2026-09-17:** the repo allows Actions to create PRs. PR #119 was opened by
+`app/github-actions` on 2026-09-14, which is stronger evidence than the API read, since that 403s
+without admin scope. [2026-09-09](../../memory/log/2026-09-09-coordinate-drift-pr.md) records the
+earlier refusal.
+
+**Nothing here has executed against live data.** The workflow first fires at 01:00 UTC after
+landing. It is built to degrade: a detector that crashes or reports an unhealthy artifact refuses
+rather than proposing, and a failed close leaves the PR open and alerts.
 
 **Scope decided 2026-09-12: curated labels only.** M4 proposes changes to `data/manual/`, the way
 `check-coordinates.yaml` does; generated ASN values keep riding the nightly patch. Three reasons.
@@ -299,34 +308,39 @@ never surfaces, but that is the label-correctness problem M3 defers, which a PR 
 either.
 
 - [x] **Retire `test_each_label_is_in_the_field_the_migration_chose` (`tests/parse/test_organizations_archive_migration.py:117`) in this milestone.** `RESEEDED` (`:33`) pins `verisign/HGTLD` to `source_names`, and its own docstring says M4 archiving a seeded label retires it. HGTLD is the flapping label this plan exists for, so the first real archival fails that assertion - inside the nightly's own test gate (`update-data.yaml:312-340`), which withholds the patch every night until a human edits the seed. That is the exact failure M1 was written to end. Retire it, or re-point it at a frozen migration fixture; keep `test_each_migrated_label_sits_in_exactly_one_asn_field` and the resolution tests, which are durable. Archiving HGTLD is an acceptance case, not a hypothetical
-- [x] **A distinct branch, set explicitly.** `bin/ci-open-drift-pr:39` reads `${DRIFT_BRANCH:-coordinate-drift}`, so the mechanism exists but the ASN caller must set it (`asn-drift`). The ownership check (`ci-land-data-patch:249-257`) compares committer email only and cannot tell two workflows sharing one bot identity apart, so a default-branch ASN run would force-push over the coordinate proposal. Give each workflow its own concurrency group, and test that neither touches the other's branch or PR
+- [x] **A distinct branch, set explicitly.** `bin/ci-open-drift-pr:48` reads `${DRIFT_BRANCH:-coordinate-drift}`, so the mechanism exists but the ASN caller must set it (`asn-drift`). The ownership check (`ci-land-data-patch:284-290`) compares committer email only and cannot tell two workflows sharing one bot identity apart, so a default-branch ASN run would force-push over the coordinate proposal. Each workflow has its own concurrency group. **Isolation is configured but not tested** - no test
+      establishes that an ASN run leaves the coordinate branch and PR untouched; see Still open
 - [x] `bin/ci-archive-asn-labels` moves drifted labels into `archived.asn`, sets `archived_on`, preserves sort order, drops an emptied `source_names.asn`, then calls `ci-make-data-patch data/manual`
 - [x] Persists through the atomic writer behind `write_json_if_changed`. `canonicalize_json_file` only re-reads and reformats a path, so it cannot save a modified object
 - [x] Never moves an entry out of `archived`, never rewrites an existing `archived_on`
 - [x] Rebuilds the resolver from the transformed seed and refuses the patch on any new collision or changed resolution
-- [x] **Pending-date semantics.** Each run rebuilds from `main`, which holds no pending entry, so a regenerated `archived_on` makes unchanged drift differ day to day. `ci-land-data-patch:259` sets `new_content` by diffing the guarded files, so the date alone would trigger a daily comment. Carry dates forward from the pending branch for labels still in the proposal, or compare membership separately for notification purposes. Test across two UTC dates; a same-day rerun misses this. **Tree equality is not proposal identity.** `ci-land-data-patch:259` diffs the whole of `data/manual` between branch tips, so an unrelated curation edit landing on `main` - `places.json`, or another org in `organizations.json` - is inherited by the rebased proposal and reads as new content with the ASN membership unchanged. Key the notification on the proposed `(slug, source, label)` set, and keep rebasing the branch regardless. Cover it with an unchanged-drift test carrying an unrelated `data/manual` edit
+- [x] **Pending-date semantics.** Each run rebuilds from `main`, which holds no pending entry, so a regenerated `archived_on` makes unchanged drift differ day to day. `ci-land-data-patch:292` sets `new_content` by diffing the guarded files, so the date alone would trigger a daily comment. Carry dates forward from the pending branch for labels still in the proposal, or compare membership separately for notification purposes. Test across two UTC dates; a same-day rerun misses this. Carry-forward also needs the branch to be *present*: `actions/checkout` fetches one ref at depth 1, so the producer runs `ci-land-data-patch fetch-branch` first. See "Tree equality" under Still open for the part of this that did not ship
 - [x] **Input guard covers `data/source/` too**, not just `data/manual`. ASN detection depends on the root database and TLD pages, so the coordinate rebase guard (`check-coordinates.yaml:170`) is insufficient
-- [ ] State transitions, each with an expected outcome and a test: unchanged drift; partial return; complete return; pending `{A}` becomes `{B}`; pending `{A}` grows to `{A,B}` - the only case that exercises a carried-forward date and a fresh one in one proposal, so assert A keeps its original date, B gets today's, and exactly one notification fires; auto-closed then recurs; human-closed then recurs; detector error while a PR is open (must not read as clearance); human-modified branch then zero drift
-- [ ] **When drift clears the open PR is closed with a comment**, and repeated clean runs do not repeat it. `check-coordinates.yaml:139` skips signing with no patch, which would strand the proposal. This closure path bypasses the ownership checks in the commit path unless handled
-- [x] `bin/ci-open-drift-pr` takes title, subject, preamble **and reviewer instructions** as parameters. Line 72's Wikidata instruction would otherwise ship in every ASN PR
-- [ ] **Notification policy, decided 2026-09-17: dedupe on state change, heartbeat only where the state is invisible.** `ci-open-drift-pr:75-94` consults `new_content` only inside the open-PR branch; every other path attempts `gh pr create` and emits `pr_opened` or `pr_blocked`, both of which alert (`check-coordinates.yaml:199-219`), so today's silence on unchanged drift holds only while a PR is open. At a nightly cadence that repeats seven times a week. Key the notification on `(outcome, drift-set membership)` and alert only when that key changes. The two repeating cases are not symmetric, and visibility is what separates them:
-  - **Human-closed PR, drift still present.** Visible in the PR list, and closing it was a decision. Silent until the drift set itself changes - no heartbeat
-  - **Blocked `gh pr create`.** Leaves a pushed branch and no PR, so nothing shows unless someone reads the branch list. This is the stranding that [2026-09-09](../../memory/log/2026-09-09-coordinate-drift-pr.md) documents, and deduping it to silence recreates it. Cap the silence at 7 days, then re-alert while still blocked. Keep retrying the create every run
-  - Creation is enabled today (PR #119 was opened by `app/github-actions` on 2026-09-14), so blocked-create is a regression path, not a normal one. It fires if the repo setting flips or the token loses permission - rare, and worth hearing about
-  - The coordinate caller keeps its current weekly behaviour; this policy is the ASN caller's
-- [x] **Unchanged runs are silent.** Lines 75-81 comment before consulting `new_content`. Tests assert the absence of the call, not just the outcome string
+- [~] State transitions: the archiver's own transformations are covered - unchanged drift, partial
+      return, complete return, additive `{A}` to `{A,B}`, duplicates, and a crashed detector. Three
+      are **not**: a pending `{A}` genuinely being replaced by `{B}` (the existing test starts with
+      A already archived), the "exactly one notification" assertion, and proof that an ASN run
+      leaves the coordinate branch and PR untouched. The first two depend on the notification key
+      that was not built; see Still open
+- [x] **When drift clears the open PR is closed with a comment**, and repeated clean runs do not repeat it. `check-coordinates.yaml:139` skips signing with no patch, which would strand the proposal. This closure path bypasses the ownership checks in the commit path unless handled
+- [x] `bin/ci-open-drift-pr` takes title, subject, preamble **and reviewer instructions** from the environment (`DRIFT_PR_TITLE`, `DRIFT_COMMIT_SUBJECT`, `DRIFT_PREAMBLE`, `DRIFT_REVIEW_INSTRUCTIONS`), defaulting to the coordinate strings. Its only positional argument stays the report path. The Wikidata instruction would otherwise ship in every ASN PR
+- [~] **Notification policy, decided 2026-09-17: dedupe on state change, heartbeat only where the
+      state is invisible.** Only the content-keyed half shipped: an open PR is not re-commented when
+      the proposal is unchanged. The `(outcome, drift-set membership)` key, the human-closed
+      suppression and the 7-day blocked-create heartbeat are **not built** - see Still open. Recorded
+      here because the decision stands; the implementation is partial
+- [x] **Unchanged runs are silent.** The comment was posted before `new_content` was consulted; the conditional now sits at `bin/ci-open-drift-pr:99-107`. Tests assert the absence of the call, not just the outcome string
 - [x] The coordinate caller keeps its current strings; `tests/ci/test_ci_open_drift_pr.py` passes unchanged
-- [x] `.github/workflows/check-asn-drift.yaml`, two jobs, daily 01:00 UTC between the 00:00 producer and 02:00 consumer
+- [x] `.github/workflows/check-asn-drift.yaml`, daily 01:00 UTC between the 00:00 producer and 02:00 consumer. Three jobs as built: `check-asn-drift`, `sign-asn-drift`, `close-asn-drift`
 - [x] Copy artifact acquisition from `tests.yaml:66-85` with `actions: read`; `check-coordinates.yaml` has neither
 - [x] Add the workflow to `TestCredentialBoundary` (`tests/ci/test_ci_data_patch.py:879`), which enumerates by name
 - [x] Alert-delivery guard, signing-key `rm -f`, per-step timeouts; `actionlint` by hand
 
-### Landed 2026-09-17
+### Landed 2026-09-20 in `3c8917d6`
 
-Two consensus rounds with codex at `high`; 12 findings, all applied. `bin/lint` clean,
-`bin/test` 890 passed, `actionlint` clean on the new workflow.
+`bin/lint` clean, `bin/test` 890 passed, `actionlint` clean on the new workflow.
 
-Three findings were the ones that mattered, and none were visible from the plan alone:
+Three problems shaped the result, and none were visible from the plan alone:
 
 - **The HGTLD assertion.** `RESEEDED` pinned `verisign/HGTLD` to `source_names`, so the first real
   archival would have failed inside the nightly's own gate, every night. HGTLD is the label this
@@ -350,17 +364,31 @@ deletion buys nothing, and `gh pr close --delete-branch` closes first and delete
 run leaves the PR closed and never retries the cleanup. Leaving the branch costs only date staleness
 if the same label drifts again, since the stale proposal supplies its earlier `archived_on`.
 
-Two rounds were spent on a lease-protected deletion before the simpler answer surfaced. Noted
-because the reasoning that sent it there - "git has no lease for a deletion" - is **false**:
+A lease-protected deletion was designed first. Noted because the reasoning that sent it there -
+"git has no lease for a deletion" - is **false**:
 `--force-with-lease=<ref>:<sha>` does cover deletions. Deleting is simply not worth doing.
+
+### Test coverage, audited 2026-09-20
+
+A mutation audit over the 17 behaviours this milestone added caught 15 and missed 2, both of
+them the guards that keep an invalid seed out of the nightly's blocking test gate:
+`validate_organizations` and the resolution-equality check. Neither had a test; deleting either left
+the suite green, and no amount of reading the diff had surfaced it.
+
+Two tests were added and the audit now catches 16 of 17. The survivor is the resolution-equality
+guard, which is **strictly dominated**: every resolution loss needs a malformed archive entry, and
+the validator rejects those, so no input reaches it that the validator would miss. Kept for the
+earlier and more specific diagnostic, and commented as such, rather than covered by a contrived
+test.
+
+The lesson generalises: asking whether tests are real is answered by mutating the code, not by
+counting the tests or by another review round.
 
 ### Still open
 
-- [x] **When drift clears the open PR is closed with a comment.** `bin/ci-close-drift-pr` plus a
-      third job, `close-asn-drift`, gated on a completed healthy check reporting zero drift. It
-      holds no signing key, refuses a stale re-run through the same `EXPECTED_HEAD` guard the
-      signing job uses, and verifies the branch tip is this workflow's before closing. Repeat runs
-      are silent because the next clean run finds no open PR
+What is not built, plus the acceptance coverage M4 does not have. Everything ticked `[x]` in M4's
+checklist is implemented; items marked `[~]` shipped in part and say which part.
+
 - [ ] **A human-closed proposal is still recreated.** Suppressing it was implemented and then
       **reverted**: branch content cannot distinguish a proposal the curator rejected from an
       identical one they never saw, and the suppression also abandoned a blocked create for good,
@@ -369,6 +397,8 @@ because the reasoning that sent it there - "git has no lease for a deletion" - i
       recorded in the closed PR, not branch equality. A test now pins the blocked-create retry
 - [ ] **The 7-day blocked-create heartbeat.** Deliberately not implemented: it needs somewhere to
       persist the last-alert time, and the content-keyed half shipped without it
+- [ ] **Acceptance gaps left by the reverted notification key:** a true pending `{A}` to `{B}`
+      replacement, the single-notification assertion, and cross-workflow branch isolation
 - [ ] **Tree equality is still the notification key.** An unrelated `data/manual` edit landing on
       `main` is inherited by the rebased proposal and reads as new ASN content. Minor: it over-
       announces, never under-announces
@@ -386,7 +416,7 @@ Lands with M2, since that is when the shape changes.
 
 ## Verified
 
-- **`source_names` has exactly one consumer**, `build_resolver` (`src/parse/organizations.py:74`).
+- **`source_names` is read in three places.** `resolution_keys` (`src/parse/organizations.py:76-90`) defines the resolver's keys and `build_resolver` (`:232`) indexes them; the detector reads the bucket directly (`bin/check-asn-drift.py:178`) and the archiver reads and rewrites it (`bin/ci-archive-asn-labels.py:142,165`). The first draft's "exactly one consumer" was true before M3 and M4.
 - **Archiving keeps an org's role only while the label still appears in raw data.** Verified in-process that an org resolves on `asn` with its label relocated within the seed. That covers relocation, **not** disappearance from upstream, which is the drift case - hence the orphan rule above.
 - **`aliases` are not source-scoped.** `fallbacks = [display_name, *aliases]` is indexed into every bucket, which is why Phase 1 narrows rather than preserves.
 
