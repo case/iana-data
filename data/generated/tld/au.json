@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-10T07:29:59Z",
+  "publication": "2026-09-22T07:48:06Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -41,8 +41,8 @@
         "ipv4": [
           {
             "ip": "58.65.254.1",
-            "asn": 38332,
-            "as_org": "AUDA-AU-AS .au Domain Administration Ltd",
+            "asn": 17987,
+            "as_org": "AUDA-AU-AS .au Domain Administration",
             "as_country": "AU"
           }
         ],

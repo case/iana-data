@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-21T08:07:41Z",
+  "publication": "2026-09-22T07:48:06Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -33,9 +33,9 @@
         "ipv4": [
           {
             "ip": "185.21.168.17",
-            "asn": 57382,
-            "as_org": "TK1",
-            "as_country": "TK"
+            "asn": 61005,
+            "as_org": "AS-OPENTLD1",
+            "as_country": "NL"
           }
         ],
         "ipv6": [
@@ -52,9 +52,9 @@
         "ipv4": [
           {
             "ip": "185.21.169.17",
-            "asn": 57382,
-            "as_org": "TK1",
-            "as_country": "TK"
+            "asn": 61005,
+            "as_org": "AS-OPENTLD1",
+            "as_country": "NL"
           }
         ],
         "ipv6": [
@@ -71,9 +71,9 @@
         "ipv4": [
           {
             "ip": "185.21.170.17",
-            "asn": 198147,
-            "as_org": "TK2",
-            "as_country": "TK"
+            "asn": 61007,
+            "as_org": "AS-OPENTLD2",
+            "as_country": "NL"
           }
         ],
         "ipv6": [

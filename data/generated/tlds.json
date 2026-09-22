@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-21T08:07:41Z",
+  "publication": "2026-09-22T07:48:06Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -9808,8 +9808,8 @@
           "ipv4": [
             {
               "ip": "198.41.0.4",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -11436,8 +11436,8 @@
           "ipv4": [
             {
               "ip": "58.65.254.1",
-              "asn": 38332,
-              "as_org": "AUDA-AU-AS .au Domain Administration Ltd",
+              "asn": 17987,
+              "as_org": "AUDA-AU-AS .au Domain Administration",
               "as_country": "AU"
             }
           ],
@@ -20241,7 +20241,7 @@
       "rdap_server": "https://rdap.nic.blackfriday/",
       "tld_created": "2014-04-17",
       "tld_updated": [
-        "2024-04-16"
+        "2026-09-21"
       ],
       "annotations": {
         "iana_sponsor_alias": "GoDaddy Registry",
@@ -31577,8 +31577,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -31596,8 +31596,8 @@
           "ipv4": [
             {
               "ip": "192.42.174.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36629,
+              "as_org": "MGTLD",
               "as_country": "US"
             }
           ],
@@ -31634,8 +31634,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -32198,9 +32198,9 @@
           "ipv4": [
             {
               "ip": "185.21.168.17",
-              "asn": 57382,
-              "as_org": "TK1",
-              "as_country": "TK"
+              "asn": 61005,
+              "as_org": "AS-OPENTLD1",
+              "as_country": "NL"
             }
           ],
           "ipv6": [
@@ -32217,9 +32217,9 @@
           "ipv4": [
             {
               "ip": "185.21.169.17",
-              "asn": 57382,
-              "as_org": "TK1",
-              "as_country": "TK"
+              "asn": 61005,
+              "as_org": "AS-OPENTLD1",
+              "as_country": "NL"
             }
           ],
           "ipv6": [
@@ -32236,9 +32236,9 @@
           "ipv4": [
             {
               "ip": "185.21.170.17",
-              "asn": 198147,
-              "as_org": "TK2",
-              "as_country": "TK"
+              "asn": 61007,
+              "as_org": "AS-OPENTLD2",
+              "as_country": "NL"
             }
           ],
           "ipv6": [
@@ -37489,7 +37489,7 @@
           "ipv4": [
             {
               "ip": "203.119.28.1",
-              "asn": 24409,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -38446,9 +38446,9 @@
           "ipv4": [
             {
               "ip": "192.5.6.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
-              "as_country": "US"
+              "asn": 396739,
+              "as_org": "AS396739",
+              "as_country": "Unknown"
             }
           ],
           "ipv6": [
@@ -38484,8 +38484,8 @@
           "ipv4": [
             {
               "ip": "192.26.92.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -38503,8 +38503,8 @@
           "ipv4": [
             {
               "ip": "192.31.80.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -38522,8 +38522,8 @@
           "ipv4": [
             {
               "ip": "192.12.94.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -39606,8 +39606,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -39625,8 +39625,8 @@
           "ipv4": [
             {
               "ip": "192.42.174.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36629,
+              "as_org": "MGTLD",
               "as_country": "US"
             }
           ],
@@ -39663,8 +39663,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -53341,9 +53341,9 @@
           "ipv4": [
             {
               "ip": "192.5.6.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
-              "as_country": "US"
+              "asn": 396739,
+              "as_org": "AS396739",
+              "as_country": "Unknown"
             }
           ],
           "ipv6": [
@@ -53379,8 +53379,8 @@
           "ipv4": [
             {
               "ip": "192.26.92.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -53398,8 +53398,8 @@
           "ipv4": [
             {
               "ip": "192.31.80.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -53417,8 +53417,8 @@
           "ipv4": [
             {
               "ip": "192.12.94.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -73912,9 +73912,9 @@
           "ipv4": [
             {
               "ip": "185.21.168.65",
-              "asn": 57382,
-              "as_org": "TK1",
-              "as_country": "TK"
+              "asn": 61005,
+              "as_org": "AS-OPENTLD1",
+              "as_country": "NL"
             }
           ],
           "ipv6": [
@@ -73931,9 +73931,9 @@
           "ipv4": [
             {
               "ip": "185.21.169.65",
-              "asn": 57382,
-              "as_org": "TK1",
-              "as_country": "TK"
+              "asn": 61005,
+              "as_org": "AS-OPENTLD1",
+              "as_country": "NL"
             }
           ],
           "ipv6": [
@@ -73950,9 +73950,9 @@
           "ipv4": [
             {
               "ip": "185.21.170.65",
-              "asn": 198147,
-              "as_org": "TK2",
-              "as_country": "TK"
+              "asn": 61007,
+              "as_org": "AS-OPENTLD2",
+              "as_country": "NL"
             }
           ],
           "ipv6": [
@@ -79036,7 +79036,7 @@
           "ipv4": [
             {
               "ip": "125.208.49.10",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -116744,8 +116744,8 @@
             },
             {
               "ip": "196.45.188.5",
-              "asn": 328919,
-              "as_org": "OCL-AS",
+              "asn": 36969,
+              "as_org": "MTL-AS",
               "as_country": "MW"
             }
           ],
@@ -117790,8 +117790,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -117809,8 +117809,8 @@
           "ipv4": [
             {
               "ip": "192.42.174.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36629,
+              "as_org": "MGTLD",
               "as_country": "US"
             }
           ],
@@ -117847,8 +117847,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -118629,9 +118629,9 @@
           "ipv4": [
             {
               "ip": "192.5.6.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
-              "as_country": "US"
+              "asn": 396739,
+              "as_org": "AS396739",
+              "as_country": "Unknown"
             }
           ],
           "ipv6": [
@@ -118667,8 +118667,8 @@
           "ipv4": [
             {
               "ip": "192.26.92.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -118686,8 +118686,8 @@
           "ipv4": [
             {
               "ip": "192.31.80.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -118705,8 +118705,8 @@
           "ipv4": [
             {
               "ip": "192.12.94.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -130845,7 +130845,7 @@
       "rdap_server": "https://rdap.nic.photo/",
       "tld_created": "2014-01-16",
       "tld_updated": [
-        "2024-04-17"
+        "2026-09-21"
       ],
       "annotations": {
         "iana_sponsor_alias": "GoDaddy Registry",
@@ -155331,7 +155331,7 @@
           "ipv4": [
             {
               "ip": "42.83.130.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -155369,7 +155369,7 @@
           "ipv4": [
             {
               "ip": "42.83.132.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -155400,7 +155400,7 @@
           "ipv4": [
             {
               "ip": "42.83.134.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -178563,8 +178563,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -178582,8 +178582,8 @@
           "ipv4": [
             {
               "ip": "192.42.174.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36629,
+              "as_org": "MGTLD",
               "as_country": "US"
             }
           ],
@@ -178620,8 +178620,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -184069,8 +184069,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -184088,8 +184088,8 @@
           "ipv4": [
             {
               "ip": "192.42.174.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36629,
+              "as_org": "MGTLD",
               "as_country": "US"
             }
           ],
@@ -184126,8 +184126,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -185022,7 +185022,7 @@
           "ipv4": [
             {
               "ip": "42.83.130.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -185060,7 +185060,7 @@
           "ipv4": [
             {
               "ip": "42.83.132.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -185091,7 +185091,7 @@
           "ipv4": [
             {
               "ip": "42.83.134.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -188779,8 +188779,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -188798,8 +188798,8 @@
           "ipv4": [
             {
               "ip": "192.42.174.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36629,
+              "as_org": "MGTLD",
               "as_country": "US"
             }
           ],
@@ -188836,8 +188836,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -189095,7 +189095,7 @@
           "ipv4": [
             {
               "ip": "42.83.130.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -189133,7 +189133,7 @@
           "ipv4": [
             {
               "ip": "42.83.132.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -189164,7 +189164,7 @@
           "ipv4": [
             {
               "ip": "42.83.134.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -190058,8 +190058,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -190077,8 +190077,8 @@
           "ipv4": [
             {
               "ip": "192.42.174.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36629,
+              "as_org": "MGTLD",
               "as_country": "US"
             }
           ],
@@ -190115,8 +190115,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -190193,8 +190193,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -190212,8 +190212,8 @@
           "ipv4": [
             {
               "ip": "192.42.174.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36629,
+              "as_org": "MGTLD",
               "as_country": "US"
             }
           ],
@@ -190250,8 +190250,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -191143,7 +191143,7 @@
           "ipv4": [
             {
               "ip": "42.83.130.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -191181,7 +191181,7 @@
           "ipv4": [
             {
               "ip": "42.83.132.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -191212,7 +191212,7 @@
           "ipv4": [
             {
               "ip": "42.83.134.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -191283,7 +191283,7 @@
           "ipv4": [
             {
               "ip": "125.208.40.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -193230,8 +193230,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -193249,8 +193249,8 @@
           "ipv4": [
             {
               "ip": "192.42.174.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36629,
+              "as_org": "MGTLD",
               "as_country": "US"
             }
           ],
@@ -193287,8 +193287,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -193507,7 +193507,7 @@
           "ipv4": [
             {
               "ip": "42.83.130.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -193545,7 +193545,7 @@
           "ipv4": [
             {
               "ip": "42.83.132.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -193576,7 +193576,7 @@
           "ipv4": [
             {
               "ip": "42.83.134.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -194101,8 +194101,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -194120,8 +194120,8 @@
           "ipv4": [
             {
               "ip": "192.42.174.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36629,
+              "as_org": "MGTLD",
               "as_country": "US"
             }
           ],
@@ -194158,8 +194158,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -196351,8 +196351,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -196370,8 +196370,8 @@
           "ipv4": [
             {
               "ip": "192.42.174.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36629,
+              "as_org": "MGTLD",
               "as_country": "US"
             }
           ],
@@ -196408,8 +196408,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -196750,7 +196750,7 @@
           "ipv4": [
             {
               "ip": "125.208.33.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -196887,7 +196887,7 @@
           "ipv4": [
             {
               "ip": "125.208.33.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -199206,7 +199206,7 @@
           "ipv4": [
             {
               "ip": "125.208.40.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -199346,8 +199346,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -199365,8 +199365,8 @@
           "ipv4": [
             {
               "ip": "192.42.174.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36629,
+              "as_org": "MGTLD",
               "as_country": "US"
             }
           ],
@@ -199403,8 +199403,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -199626,7 +199626,7 @@
           "ipv4": [
             {
               "ip": "125.208.49.10",
-              "asn": 24151,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -204015,8 +204015,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -204034,8 +204034,8 @@
           "ipv4": [
             {
               "ip": "192.42.174.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36629,
+              "as_org": "MGTLD",
               "as_country": "US"
             }
           ],
@@ -204072,8 +204072,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -205943,8 +205943,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -205962,8 +205962,8 @@
           "ipv4": [
             {
               "ip": "192.42.174.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36629,
+              "as_org": "MGTLD",
               "as_country": "US"
             }
           ],
@@ -206000,8 +206000,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -207439,8 +207439,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -207458,8 +207458,8 @@
           "ipv4": [
             {
               "ip": "192.42.174.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36629,
+              "as_org": "MGTLD",
               "as_country": "US"
             }
           ],
@@ -207496,8 +207496,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -207574,8 +207574,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -207593,8 +207593,8 @@
           "ipv4": [
             {
               "ip": "192.42.174.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36629,
+              "as_org": "MGTLD",
               "as_country": "US"
             }
           ],
@@ -207631,8 +207631,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -209187,7 +209187,7 @@
           "ipv4": [
             {
               "ip": "42.83.130.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -209225,7 +209225,7 @@
           "ipv4": [
             {
               "ip": "42.83.132.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -209256,7 +209256,7 @@
           "ipv4": [
             {
               "ip": "42.83.134.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -210000,7 +210000,7 @@
           "ipv4": [
             {
               "ip": "42.83.130.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -210038,7 +210038,7 @@
           "ipv4": [
             {
               "ip": "42.83.132.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -210069,7 +210069,7 @@
           "ipv4": [
             {
               "ip": "42.83.134.1",
-              "asn": 24406,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }

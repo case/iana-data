@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-09-22T07:48:06Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -33,7 +33,7 @@
     "rdap_server": "https://rdap.nic.photo/",
     "tld_created": "2014-01-16",
     "tld_updated": [
-      "2024-04-17"
+      "2026-09-21"
     ],
     "annotations": {
       "iana_sponsor_alias": "GoDaddy Registry",
