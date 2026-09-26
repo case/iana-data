@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-24T07:37:38Z",
+  "publication": "2026-09-26T07:35:36Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -26423,9 +26423,9 @@
           "ipv4": [
             {
               "ip": "31.44.1.137",
-              "asn": 208951,
-              "as_org": "AS-ITGLOBALCOM ITGLOBAL.COM",
-              "as_country": "NL"
+              "asn": 0,
+              "as_org": "Not routed",
+              "as_country": "None"
             }
           ],
           "ipv6": [
@@ -31577,8 +31577,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -31634,8 +31634,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -32198,9 +32198,9 @@
           "ipv4": [
             {
               "ip": "185.21.168.17",
-              "asn": 61005,
-              "as_org": "AS-OPENTLD1",
-              "as_country": "NL"
+              "asn": 57382,
+              "as_org": "TK1",
+              "as_country": "TK"
             }
           ],
           "ipv6": [
@@ -32217,9 +32217,9 @@
           "ipv4": [
             {
               "ip": "185.21.169.17",
-              "asn": 61005,
-              "as_org": "AS-OPENTLD1",
-              "as_country": "NL"
+              "asn": 57382,
+              "as_org": "TK1",
+              "as_country": "TK"
             }
           ],
           "ipv6": [
@@ -32236,9 +32236,9 @@
           "ipv4": [
             {
               "ip": "185.21.170.17",
-              "asn": 61007,
-              "as_org": "AS-OPENTLD2",
-              "as_country": "NL"
+              "asn": 198147,
+              "as_org": "TK2",
+              "as_country": "TK"
             }
           ],
           "ipv6": [
@@ -37508,7 +37508,7 @@
           "ipv4": [
             {
               "ip": "203.119.29.1",
-              "asn": 24406,
+              "asn": 24409,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -38446,8 +38446,8 @@
           "ipv4": [
             {
               "ip": "192.5.6.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -38465,17 +38465,17 @@
           "ipv4": [
             {
               "ip": "192.33.14.30",
-              "asn": 396751,
-              "as_org": "AS396751",
-              "as_country": "Unknown"
+              "asn": 396654,
+              "as_org": "VRSN-AC50-340",
+              "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:503:231d::2:30",
-              "asn": 396690,
-              "as_org": "AS396690",
-              "as_country": "Unknown"
+              "asn": 396654,
+              "as_org": "VRSN-AC50-340",
+              "as_country": "US"
             }
           ]
         },
@@ -38484,8 +38484,8 @@
           "ipv4": [
             {
               "ip": "192.26.92.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -38503,8 +38503,8 @@
           "ipv4": [
             {
               "ip": "192.31.80.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -38522,8 +38522,8 @@
           "ipv4": [
             {
               "ip": "192.12.94.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -39606,8 +39606,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -39663,8 +39663,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -53341,8 +53341,8 @@
           "ipv4": [
             {
               "ip": "192.5.6.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -53360,17 +53360,17 @@
           "ipv4": [
             {
               "ip": "192.33.14.30",
-              "asn": 396751,
-              "as_org": "AS396751",
-              "as_country": "Unknown"
+              "asn": 396654,
+              "as_org": "VRSN-AC50-340",
+              "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:503:231d::2:30",
-              "asn": 396690,
-              "as_org": "AS396690",
-              "as_country": "Unknown"
+              "asn": 396654,
+              "as_org": "VRSN-AC50-340",
+              "as_country": "US"
             }
           ]
         },
@@ -53379,8 +53379,8 @@
           "ipv4": [
             {
               "ip": "192.26.92.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -53398,8 +53398,8 @@
           "ipv4": [
             {
               "ip": "192.31.80.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -53417,8 +53417,8 @@
           "ipv4": [
             {
               "ip": "192.12.94.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -73912,9 +73912,9 @@
           "ipv4": [
             {
               "ip": "185.21.168.65",
-              "asn": 61005,
-              "as_org": "AS-OPENTLD1",
-              "as_country": "NL"
+              "asn": 57382,
+              "as_org": "TK1",
+              "as_country": "TK"
             }
           ],
           "ipv6": [
@@ -73931,9 +73931,9 @@
           "ipv4": [
             {
               "ip": "185.21.169.65",
-              "asn": 61005,
-              "as_org": "AS-OPENTLD1",
-              "as_country": "NL"
+              "asn": 57382,
+              "as_org": "TK1",
+              "as_country": "TK"
             }
           ],
           "ipv6": [
@@ -73950,9 +73950,9 @@
           "ipv4": [
             {
               "ip": "185.21.170.65",
-              "asn": 61007,
-              "as_org": "AS-OPENTLD2",
-              "as_country": "NL"
+              "asn": 198147,
+              "as_org": "TK2",
+              "as_country": "TK"
             }
           ],
           "ipv6": [
@@ -110895,7 +110895,7 @@
       },
       "tld_created": "1985-01-01",
       "tld_updated": [
-        "2026-09-11"
+        "2026-09-25"
       ],
       "nameservers": [
         {
@@ -115741,7 +115741,7 @@
               "ip": "193.188.47.252",
               "asn": 12046,
               "as_org": "ASN-CSC-UOM RicerkaNet",
-              "as_country": "EU"
+              "as_country": "MT"
             }
           ],
           "ipv6": []
@@ -115753,7 +115753,7 @@
               "ip": "193.188.34.241",
               "asn": 12046,
               "as_org": "ASN-CSC-UOM RicerkaNet",
-              "as_country": "EU"
+              "as_country": "MT"
             }
           ],
           "ipv6": []
@@ -117790,8 +117790,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -117847,8 +117847,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -118629,8 +118629,8 @@
           "ipv4": [
             {
               "ip": "192.5.6.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -118648,17 +118648,17 @@
           "ipv4": [
             {
               "ip": "192.33.14.30",
-              "asn": 396751,
-              "as_org": "AS396751",
-              "as_country": "Unknown"
+              "asn": 396654,
+              "as_org": "VRSN-AC50-340",
+              "as_country": "US"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:503:231d::2:30",
-              "asn": 396690,
-              "as_org": "AS396690",
-              "as_country": "Unknown"
+              "asn": 396654,
+              "as_org": "VRSN-AC50-340",
+              "as_country": "US"
             }
           ]
         },
@@ -118667,8 +118667,8 @@
           "ipv4": [
             {
               "ip": "192.26.92.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -118686,8 +118686,8 @@
           "ipv4": [
             {
               "ip": "192.31.80.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -118705,8 +118705,8 @@
           "ipv4": [
             {
               "ip": "192.12.94.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -178563,8 +178563,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -178620,8 +178620,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -184069,8 +184069,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -184126,8 +184126,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -188779,8 +188779,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -188836,8 +188836,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -190058,8 +190058,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -190115,8 +190115,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -190193,8 +190193,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -190250,8 +190250,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -193140,9 +193140,9 @@
           "ipv4": [
             {
               "ip": "31.44.1.137",
-              "asn": 208951,
-              "as_org": "AS-ITGLOBALCOM ITGLOBAL.COM",
-              "as_country": "NL"
+              "asn": 0,
+              "as_org": "Not routed",
+              "as_country": "None"
             }
           ],
           "ipv6": [
@@ -193230,8 +193230,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -193287,8 +193287,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -194101,8 +194101,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -194158,8 +194158,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -196351,8 +196351,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -196408,8 +196408,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -196807,7 +196807,7 @@
           "ipv4": [
             {
               "ip": "125.208.36.1",
-              "asn": 24151,
+              "asn": 24409,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -196944,7 +196944,7 @@
           "ipv4": [
             {
               "ip": "125.208.36.1",
-              "asn": 24151,
+              "asn": 24409,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -199346,8 +199346,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -199403,8 +199403,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -204015,8 +204015,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -204072,8 +204072,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -205943,8 +205943,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -206000,8 +206000,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -207439,8 +207439,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -207496,8 +207496,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],
@@ -207574,8 +207574,8 @@
           "ipv4": [
             {
               "ip": "192.42.173.30",
-              "asn": 396549,
-              "as_org": "VRSN-AC50-340",
+              "asn": 10515,
+              "as_org": "CLT-NIC",
               "as_country": "US"
             }
           ],
@@ -207631,8 +207631,8 @@
           "ipv4": [
             {
               "ip": "192.42.176.30",
-              "asn": 396566,
-              "as_org": "VRSN-AC50-340",
+              "asn": 36623,
+              "as_org": "HGTLD",
               "as_country": "US"
             }
           ],

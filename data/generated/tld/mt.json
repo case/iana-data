@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-24T07:37:38Z",
+  "publication": "2026-09-26T07:35:36Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -42,7 +42,7 @@
             "ip": "193.188.47.252",
             "asn": 12046,
             "as_org": "ASN-CSC-UOM RicerkaNet",
-            "as_country": "EU"
+            "as_country": "MT"
           }
         ],
         "ipv6": []
@@ -54,7 +54,7 @@
             "ip": "193.188.34.241",
             "asn": 12046,
             "as_org": "ASN-CSC-UOM RicerkaNet",
-            "as_country": "EU"
+            "as_country": "MT"
           }
         ],
         "ipv6": []
