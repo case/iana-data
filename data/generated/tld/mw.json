@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-27T08:07:21Z",
+  "publication": "2026-09-28T08:41:21Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -53,8 +53,8 @@
           },
           {
             "ip": "196.45.188.5",
-            "asn": 328919,
-            "as_org": "OCL-AS",
+            "asn": 36969,
+            "as_org": "MTL-AS",
             "as_country": "MW"
           }
         ],
