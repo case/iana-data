@@ -1056,12 +1056,15 @@
         "VeriSign, Inc."
       ],
       "asn": [
-        "HGTLD",
         "VRSN-AC50-340"
       ]
     },
     "archived": {
       "asn": [
+        {
+          "name": "HGTLD",
+          "archived_on": "2026-09-28"
+        },
         {
           "name": "VERISIGN-AS",
           "archived_on": "2026-09-12"
