@@ -15,7 +15,7 @@ Verisign operates a contiguous ASN block where each ASN names a single authorita
 
 ## Confirmation method
 
-For AS36623: ARIN RDAP `https://rdap.arin.net/registry/autnum/36623` returns `name: HGTLD`, registrant entity handle `VGRS` / "VeriSign Global Registry Services". Corroborated by the nameserver hostnames whose IPs route through it in our data (`j/k/l/m.gtld-servers.net`, `*.edu-servers.net`, `ac3.nstld.com` - all Verisign infra). The ASN *label* does not map 1:1 to the hostname *letter*: AS36623 is labeled HGTLD but answers for j/k/l/m, because these are anycast clouds announcing prefixes spanning multiple letters. Treat the label as Verisign's internal name, not a hostname map.
+For AS36623: ARIN RDAP `https://rdap.arin.net/registry/autnum/36623` returns `name: HGTLD`, registrant entity handle `VGRS` / "VeriSign Global Registry Services". Corroborated by the nameserver hostnames whose IPs route through it in our data (`j/k/l/m.gtld-servers.net`, `*.edu-servers.net`, `ac3.nstld.com` - all Verisign infra). The ASN _label_ does not map 1:1 to the hostname _letter_: AS36623 is labeled HGTLD but answers for j/k/l/m, because these are anycast clouds announcing prefixes spanning multiple letters. Treat the label as Verisign's internal name, not a hostname map.
 
 ## What we added
 

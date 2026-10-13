@@ -13,7 +13,7 @@ tags: [bin-scripts, build, iptoasn, asn, ci]
 The change makes the mode mandatory:
 
 - **`bin/build`** (no args) and `-h`/`--help` print usage and exit 0; they build nothing. A bare invocation can no longer silently refresh ASN.
-- **`bin/build --preserve-asn`** — build, keeping the ASN already in the committed `tlds.json` (`_asn_lookup_from_committed`, reads the on-disk file, so restore a flapped `tlds.json` *before* relying on it). Local/dev default.
+- **`bin/build --preserve-asn`** — build, keeping the ASN already in the committed `tlds.json` (`_asn_lookup_from_committed`, reads the on-disk file, so restore a flapped `tlds.json` _before_ relying on it). Local/dev default.
 - **`bin/build --all`** — full build, refreshing ASN from the local iptoasn file. The data-update workflow (`.github/workflows/update-data.yaml`) uses this; it is the only place ASN is meant to move.
 - Unknown option → usage on stderr + exit 2.
 

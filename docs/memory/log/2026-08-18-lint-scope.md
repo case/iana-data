@@ -12,12 +12,12 @@ A routine commit failed the global lefthook `ruff-check` job with 21 errors in `
 
 The cause was scope, not drift. Two runners disagreed about which files to read:
 
-| Runner | Command | Files |
-|---|---|---|
+| Runner                            | Command                  | Files         |
+| --------------------------------- | ------------------------ | ------------- |
 | `bin/lint`, and CI via `bin/test` | `ruff check src/ tests/` | 2 directories |
-| global lefthook hook | `ruff check .` | whole repo |
+| global lefthook hook              | `ruff check .`           | whole repo    |
 
-`ruff.toml` declares which *rules* apply but says nothing about which *files*, so the real scope decision lived in a bash array inside `bin/lint` where no other tool could see it. The 2026-08-07 ruff 0.16 pass looked complete because it was verified with `bin/lint`, which is structurally incapable of failing on `scripts/`. Its "72 violations" census was scope-limited for the same reason.
+`ruff.toml` declares which _rules_ apply but says nothing about which _files_, so the real scope decision lived in a bash array inside `bin/lint` where no other tool could see it. The 2026-08-07 ruff 0.16 pass looked complete because it was verified with `bin/lint`, which is structurally incapable of failing on `scripts/`. Its "72 violations" census was scope-limited for the same reason.
 
 ## Decision
 

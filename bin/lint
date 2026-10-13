@@ -15,6 +15,10 @@ if ! command -v shellcheck > /dev/null; then
   echo "bin/lint: shellcheck not found; install it (mise use -g shellcheck)" >&2
   exit 1
 fi
+if ! command -v dprint > /dev/null; then
+  echo "bin/lint: dprint not found; install it (mise install)" >&2
+  exit 1
+fi
 
 # Found by shebang, so a rename or a not-yet-added file cannot drop out of
 # scope. Why: docs/memory/log/2026-09-09-shellcheck-pin.md
@@ -52,6 +56,8 @@ group "Shell: shellcheck (${#shell_scripts[@]} scripts under bin/)" \
   shellcheck "${shell_scripts[@]}"
 group "JSON: parse + canonical format (whole repo)" \
   uv run python bin/lint-json.py
+group "Formatting: dprint check (whole repo, per dprint.json)" \
+  dprint check
 
 printf '\n'
 if [ ${#failed[@]} -eq 0 ]; then

@@ -16,11 +16,11 @@ tags: [log, decision, ci, github-actions, signing, coordinates]
 
 ## The shared scripts
 
-| Script | Role |
+| Script                    | Role                                                                         |
 | ------------------------- | ---------------------------------------------------------------------------- |
 | `bin/ci-make-data-patch`  | Producer. Emits `changed`, plus a patch and artifact name when there is one. |
-| `bin/ci-apply-data-patch` | Validates an untrusted patch and stages it. Unchanged from 2026-09-07.      |
-| `bin/ci-land-data-patch`  | Consumer, in two phases: `rebase` before the key exists, `commit` after.    |
+| `bin/ci-apply-data-patch` | Validates an untrusted patch and stages it. Unchanged from 2026-09-07.       |
+| `bin/ci-land-data-patch`  | Consumer, in two phases: `rebase` before the key exists, `commit` after.     |
 
 `bin/ci-refresh-coordinates` is the drift producer, split out so the job parsing Wikidata content holds no signing key. `bin/ci-open-drift-pr` lands the patch and then talks to `gh`.
 
@@ -32,7 +32,7 @@ An `.github/actions/apply-signed-commit` composite was planned to hold the repea
 
 ## The credential boundary is a workflow step, not a process
 
-`bin/ci-apply-data-patch` promises to hold no credentials, and while the pipeline was separate Actions steps that was structurally true. Consolidating it into one process broke it, and the obvious repair - calling the validator through `env -u` - is cosmetic: the child reads the key straight out of the parent's `/proc/<pid>/environ`, which records the environment the parent was *exec'd* with. Verified against a sentinel value.
+`bin/ci-apply-data-patch` promises to hold no credentials, and while the pipeline was separate Actions steps that was structurally true. Consolidating it into one process broke it, and the obvious repair - calling the validator through `env -u` - is cosmetic: the child reads the key straight out of the parent's `/proc/<pid>/environ`, which records the environment the parent was _exec'd_ with. Verified against a sentinel value.
 
 So `bin/ci-land-data-patch` is one file with two phases, and the workflows run three steps:
 

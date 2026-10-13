@@ -1,0 +1,7 @@
+# `eol=lf` overrides Git for Windows' core.autocrlf, so every platform sees LF.
+* text=auto eol=lf
+
+# The only CRLF family. `-text` rather than `text eol=crlf` so jj agrees on the
+# stored bytes; `-eol` is required or these inherit eol=lf from the rule above.
+*.cmd -text -eol
+*.bat -text -eol

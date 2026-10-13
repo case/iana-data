@@ -13,7 +13,7 @@ M3 of [the ASN drift plan](../../plans/current/2026-09-11-asn-drift-automation.m
 ## Downgrade, never block
 
 `update-data.yaml` already picked `--all` on an IANA source change and `--preserve-asn` otherwise.
-The gate now adds a condition: `--all` needs a *healthy* artifact. Anything else preserves committed
+The gate now adds a condition: `--all` needs a _healthy_ artifact. Anything else preserves committed
 ASN and fires a Pushover alert. Only an explicit healthy result permits a refresh, so a failed check,
 a missing output or a timeout all preserve.
 
@@ -68,7 +68,7 @@ gate had already rejected.
 
 A preserve build copies committed values forward, so an `Unknown` landed during fallback persists
 until the next `--all`. The gate forces one when the artifact can repair it. Two corrections that
-mattered: count only damage *this artifact* repairs, or a permanently unroutable address latches the
+mattered: count only damage _this artifact_ repairs, or a permanently unroutable address latches the
 trigger on forever; and net repairs against newly-broken addresses, deduplicated by address, or
 alternating artifacts oscillate and one address serving 125 nameservers outvotes 100 others.
 

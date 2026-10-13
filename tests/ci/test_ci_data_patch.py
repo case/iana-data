@@ -6,6 +6,7 @@ and drives bin/ci-apply-data-patch and bin/ci-land-data-patch as CI does.
 """
 
 import base64
+import os
 import re
 import shutil
 import subprocess
@@ -25,7 +26,8 @@ ISOLATED_GIT_ENV = {
     "GIT_CONFIG_SYSTEM": "/dev/null",
     "GIT_TERMINAL_PROMPT": "0",
     "HOME": "/nonexistent",
-    "PATH": "/usr/local/bin:/usr/bin:/bin",
+    # Inherited: the scripts need bash 4+, which macOS keeps outside the system dirs.
+    "PATH": os.environ.get("PATH", os.defpath),
 }
 
 

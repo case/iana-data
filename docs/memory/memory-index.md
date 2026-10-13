@@ -5,10 +5,12 @@ Project decisions, architecture, and conventions. Two core files plus a dated `l
 Agents: consult before suggesting layout, naming, dependencies, vendors, or conventions. Verify against the codebase before relying on a specific path or name - memory can lag reality.
 
 ## Core
+
 - [Product](product.md) - what iana-data is and why; implementation-independent
 - [Architecture](architecture.md) - current implementation: stack, layout, conventions
 
 ## Log (newest first)
+
 - [2026-09-13 The ASN health gate](log/2026-09-13-asn-health-gate.md) - a bad iptoasn artifact now downgrades the nightly to `--preserve-asn` and alerts, instead of reaching the build and emitting `Unknown` everywhere; blocking was the failure mode being removed. Six tripwires measured over nine snapshots. `asn == 0` carries `Not routed`, not `Unknown`, and label cardinality is not label coverage - both mistakes were made and measured. One shared gzip parser, because `strip()` vs `rstrip()` made the gate pass artifacts the build discarded
 - [2026-09-12 The archived bucket](log/2026-09-12-archived-bucket.md) - retired curated names move from `aliases`, which resolve in all three buckets, to `archived.<source>`, which resolves in that source only and is never asserted; `archived_on` is the date it was archived, not a last-seen date. Five ASN labels archived, `HGTLD` reseeded because it is live; a 12-entry allowlist pins the before/after resolution diff
 - [2026-09-10 The nightly syncs its build inputs](log/2026-09-10-nightly-input-sync.md) - the scrape holds its inputs for 32 minutes before the build reads them, so `update-data` re-points HEAD at current `main` and adopts `data/manual/` before building, and the consumer guard narrowed to `data/source/` plus `data/generated/` - the paths the patch actually writes. `git restore`, not `git checkout <tip> -- <path>`, which defaults to overlay mode and resurrects deleted files. `rebase` now measures staleness from `EXPECTED_HEAD` and script safety from the job's own `HEAD`, because sync makes them different commits

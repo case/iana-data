@@ -1,9 +1,9 @@
 ---
 title: Tier 1 artifacts live: organizations, places, cultures, agreements
-summary: All four typed-graph artifacts now built, consumed, and integrity-tested; supersedes the SEED-ONLY note from 2026-05-24
-created: 2026-05-25
-author: Eric Case
-tags: [schema, typed-graph, organizations, places, cultures, agreements]
+  summary: All four typed-graph artifacts now built, consumed, and integrity-tested; supersedes the SEED-ONLY note from 2026-05-24
+  created: 2026-05-25
+  author: Eric Case
+  tags: [schema, typed-graph, organizations, places, cultures, agreements]
 ---
 
 # Tier 1 artifacts live (2026-05-25)

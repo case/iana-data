@@ -66,5 +66,5 @@ buy a relaxed assertion. Overlap with `display_name` is allowed: `nic-chile` see
 `src/`, so an in-flight run can pair the old resolver with the migrated seed. Measured, that loses
 **zero** attributions - every affected TLD carries a live sibling label. Regenerating is still right:
 `sync` passes `--guard data/generated/` and declines adoption when a guarded path moved, so such a
-run keeps old code *and* old seed. Merge count is irrelevant - `ci-land-data-patch:145` diffs the
+run keeps old code _and_ old seed. Merge count is irrelevant - `ci-land-data-patch:145` diffs the
 checkout against the fetched tip - so only moving a guarded path matters.

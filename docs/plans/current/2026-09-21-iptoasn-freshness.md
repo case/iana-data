@@ -78,13 +78,13 @@ timestamp every night and passes. Upstream freshness stays unverified, as M3 alr
 - [ ] Compute age **at the health check**, not frozen before the ~32-minute TLD scrape
 - [ ] Adapt `tests/utilities/test_download.py:894` only, keeping its file and result assertions
 - [ ] Acceptance tests, **split by layer**, because the two layers answer "absent" differently:
-      - *Health check*: zero age, exactly the limit, just over, future-dated, malformed and
-        timezone-naive all decide recency. **Absent skips the check and stays healthy**, which is
-        what keeps existing callers passing
-      - *Workflow*: an empty or unparseable query result sets `healthy=false`, and the existing
-        contract turns that into preserve-and-alert. This is the only layer where absent is fatal
+      - _Health check_: zero age, exactly the limit, just over, future-dated, malformed and
+      timezone-naive all decide recency. **Absent skips the check and stays healthy**, which is
+      what keeps existing callers passing
+      - _Workflow_: an empty or unparseable query result sets `healthy=false`, and the existing
+      contract turns that into preserve-and-alert. This is the only layer where absent is fatal
       - Assert the stale path preserves and alerts, and that tests still run against preserved ASN.
-        Keep all of them independent of the live artifact's real age
+      Keep all of them independent of the live artifact's real age
 - [ ] **Removal ships separately from the gate.** The gate needs no schema change, and
       `metadata.json` is published and documented (`README.md:101`). Removing the writer, the
       committed key and the test is a second, announced change

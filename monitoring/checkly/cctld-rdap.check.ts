@@ -1,12 +1,6 @@
 import * as path from "path";
 import * as fs from "fs";
-import {
-  ApiCheck,
-  AssertionBuilder,
-  CheckGroupV2,
-  Dashboard,
-  RetryStrategyBuilder,
-} from "checkly/constructs";
+import { ApiCheck, AssertionBuilder, CheckGroupV2, Dashboard, RetryStrategyBuilder } from "checkly/constructs";
 
 const group = new CheckGroupV2("cctld-rdap", {
   name: "ccTLD RDAP",
@@ -42,9 +36,7 @@ const data: SupplementalData = JSON.parse(fs.readFileSync(dataPath, "utf-8"));
 // The monitoring field controls whether the check is activated
 for (const server of data.ccTldRdapServers) {
   const { tld, rdapServer, backendOperator, monitoring } = server;
-  const operatorTag = `operator-${
-    backendOperator.toLowerCase().replace(/ /g, "-")
-  }`;
+  const operatorTag = `operator-${backendOperator.toLowerCase().replace(/ /g, "-")}`;
 
   // Check for known domain - should return 200 with valid RDAP domain response
   new ApiCheck(`${tld}-200`, {
@@ -78,8 +70,7 @@ const operatorTags = [
 new Dashboard("cctld-rdap-dashboard", {
   customUrl: "cctld-rdap",
   header: "ccTLD RDAP Status",
-  description:
-    "Monitoring 200s from ccTLD RDAP servers that aren't in the IANA RDAP bootstrap file.",
+  description: "Monitoring 200s from ccTLD RDAP servers that aren't in the IANA RDAP bootstrap file.",
   tags: ["cctld-rdap", ...operatorTags],
   checksPerPage: 20,
   width: "FULL",

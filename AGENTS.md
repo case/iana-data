@@ -3,6 +3,7 @@
 A compilation of IANA- and ICANN-published, canonical data about the domain ecosystem. See [`docs/memory/product.md`](docs/memory/product.md) for what this is, [`docs/memory/architecture.md`](docs/memory/architecture.md) for how it's currently built.
 
 <!-- project-memory:start -->
+
 ## Project memory
 
 Project memory lives in `docs/memory/`. The index is at [`docs/memory/memory-index.md`](docs/memory/memory-index.md).
@@ -18,4 +19,5 @@ Project memory lives in `docs/memory/`. The index is at [`docs/memory/memory-ind
 **When memory contradicts the code**: surface the conflict. Trust the code after verifying, then update or remove the stale entry.
 
 **Monorepos**: if this repo contains subprojects with their own `docs/memory/`, treat each subproject's memory as authoritative for work inside that subproject. The root `docs/memory/` covers concerns that span subprojects. See [`docs/memory/product.md`](docs/memory/product.md#monorepos) for the rationale.
+
 <!-- project-memory:end -->

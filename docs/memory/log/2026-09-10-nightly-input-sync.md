@@ -21,12 +21,12 @@ but the whole run was thrown away to avoid publishing one stale field.
 
 Measured from the API for that run, not estimated:
 
-| Step                   | Duration |
-| ---------------------- | -------- |
-| TLD scrape, 8 batches  | 32m 30s  |
-| Build `tlds.json`      | 5s       |
-| Tests                  | 2m 21s   |
-| Patch and upload       | 1s       |
+| Step                  | Duration |
+| --------------------- | -------- |
+| TLD scrape, 8 batches | 32m 30s  |
+| Build `tlds.json`     | 5s       |
+| Tests                 | 2m 21s   |
+| Patch and upload      | 1s       |
 
 The job holds its inputs for 32 minutes before it reads them. Everything after is under three
 minutes. So the fix is not to rebuild after the collision; it is to re-read the inputs
@@ -68,7 +68,7 @@ last scrape batch and the first read. It fetches `main`, and when neither guarde
 ## rebase now measures two things from two commits
 
 Advancing `EXPECTED_HEAD` past the consumer's own checkout broke an assumption the old code
-relied on silently: that `EXPECTED_HEAD` *is* the commit `actions/checkout` produced.
+relied on silently: that `EXPECTED_HEAD` _is_ the commit `actions/checkout` produced.
 
 - **Staleness** is `EXPECTED_HEAD..target` over the guarded paths - the patch's base.
 - **Script safety** is `HEAD..target` over `bin/` and `.github/` - this job's own checkout,

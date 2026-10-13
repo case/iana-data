@@ -12,11 +12,11 @@ tags: [log, decision, manual-data, organizations, asn, drift, verisign]
 
 This is the reverse of [2026-08-18 hgtld-retired](2026-08-18-hgtld-retired.md), on the same four prefixes.
 
-| | ASN | `as_org` string |
-|---|---|---|
-| 2026-07-15 snapshot | 36623 | `HGTLD` |
-| 2026-08-18 CI artifact | 397200 | `VRSN-AC28` |
-| 2026-09-11 live table | 36623 | `HGTLD` |
+|                        | ASN    | `as_org` string |
+| ---------------------- | ------ | --------------- |
+| 2026-07-15 snapshot    | 36623  | `HGTLD`         |
+| 2026-08-18 CI artifact | 397200 | `VRSN-AC28`     |
+| 2026-09-11 live table  | 36623  | `HGTLD`         |
 
 `192.41.162.0/24`, `192.48.79.0/24`, `192.52.178.0/24`, `192.55.83.0/24` moved back. `VRSN-AC28` now returns 0 rows; AS397198/397200/397204 are absent entirely. The pair is oscillating between two labels for one set of prefixes, so treat neither as the stable one.
 

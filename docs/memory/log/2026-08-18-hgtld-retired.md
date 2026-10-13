@@ -10,10 +10,10 @@ tags: [log, decision, manual-data, organizations, asn, drift, verisign]
 
 `test_source_names_appear_in_raw_data` failed with `verisign / asn / 'HGTLD' - no raw match` and no near matches. Same class of upstream drift as [2026-07-16 teleinfo-asn-rename](2026-07-16-teleinfo-asn-rename.md), one step further: the string did not get renamed, the whole ASN left the table.
 
-| | ASN | `as_org` string |
-|---|---|---|
-| Before (2026-07-15 snapshot) | 36623 | `HGTLD` |
-| Live (2026-08-18 CI artifact) | 397200 | `VRSN-AC28` |
+|                               | ASN    | `as_org` string |
+| ----------------------------- | ------ | --------------- |
+| Before (2026-07-15 snapshot)  | 36623  | `HGTLD`         |
+| Live (2026-08-18 CI artifact) | 397200 | `VRSN-AC28`     |
 
 `192.41.162.0/24`, `192.48.79.0/24`, `192.52.178.0/24`, `192.55.83.0/24` and their v6 siblings all moved. AS36623 no longer appears at any row, and `grep -c HGTLD` over the current table returns 0 - the entire `[letter]GTLD` label family is gone, with no `*GTLD`-suffixed `as_org` left anywhere. Verisign's surviving labels are VGRS-REGISTRY-AS, VERISIGN-CORP, VERISIGNGRS, VERISIGN-INC, VERISIGN-AS, VGRS-AC22, VERISIGN-ILG1, VRSN-AC50-340 and VRSN-AC28.
 
