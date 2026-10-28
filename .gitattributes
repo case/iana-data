@@ -5,3 +5,4 @@
 # stored bytes; `-eol` is required or these inherit eol=lf from the rule above.
 *.cmd -text -eol
 *.bat -text -eol
+docs/memory/memory-index.md merge=union
