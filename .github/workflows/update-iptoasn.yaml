@@ -11,15 +11,19 @@ concurrency:
   group: update-iptoasn
   cancel-in-progress: false
 
+permissions: {}
+
 jobs:
   download-iptoasn:
+    permissions:
+      contents: read
     runs-on: ubuntu-slim
     timeout-minutes: 14
 
     steps:
       - name: Check out repository
         timeout-minutes: 2
-        uses: actions/checkout@v7.0.1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       # Every step is capped so the failure path fits the job cap and the
       # failure() alerts still run. Why: docs/memory/log/2026-09-24-iptoasn-freshness.md
@@ -45,7 +49,7 @@ jobs:
       # it does not bound total duration.
       - name: Upload artifact
         timeout-minutes: 1
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
         with:
           name: iptoasn-${{ steps.download.outputs.date }}
           path: ip2asn-combined.tsv.gz
@@ -66,7 +70,7 @@ jobs:
       - name: Email notification if download fails
         if: failure()
         timeout-minutes: 1
-        uses: case/actions-email@v1
+        uses: case/actions-email@96f6c77293226d2d4e2bee851e616543992cf3ea # v1
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           EMAIL_FROM: ${{ secrets.EMAIL_FROM }}

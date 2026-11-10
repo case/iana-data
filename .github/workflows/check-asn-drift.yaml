@@ -25,7 +25,6 @@ jobs:
       drifted: ${{ steps.check.outputs.drifted }}
       changed: ${{ steps.archive.outputs.changed }}
       patch_artifact: ${{ steps.archive.outputs.artifact }}
-      outcome: ${{ steps.archive.outputs.outcome }}
 
     steps:
       - name: Check out repository
@@ -159,8 +158,6 @@ jobs:
     runs-on: ubuntu-24.04
     # Step caps below sum to 35, under this job cap.
     timeout-minutes: 45
-    outputs:
-      outcome: ${{ steps.pr.outputs.outcome }}
 
     steps:
       - name: Check out repository

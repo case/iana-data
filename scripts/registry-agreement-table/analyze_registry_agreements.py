@@ -11,7 +11,7 @@ Provides insights into the registry agreement data including:
 import csv
 import sys
 from collections import Counter
-from datetime import datetime
+from datetime import UTC, datetime
 from pathlib import Path
 
 # Add src to path
@@ -33,9 +33,9 @@ def parse_date(date_str: str) -> datetime | None:
     if not date_str:
         return None
     try:
-        # Source CSV carries date-only values with no zone. The result feeds year
-        # counts and display only, never zone-sensitive arithmetic.
-        return datetime.strptime(date_str, "%d %b %Y")  # noqa: DTZ007
+        # Source CSV carries date-only values with no zone; UTC is nominal. The
+        # result feeds year counts and display only.
+        return datetime.strptime(date_str, "%d %b %Y").replace(tzinfo=UTC)
     except ValueError:
         return None
 

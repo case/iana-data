@@ -325,7 +325,10 @@ jobs:
       # Before the tests, so the tree that ships is the tree that was tested.
       # last_downloaded moves only on a build that consumed the artifact.
       - name: Record the iptoasn artifact in metadata
-        if: steps.build.outcome == 'success' && steps.download-iptoasn.outcome == 'success'
+        if: >-
+          steps.build.outcome == 'success' &&
+          steps.get-iptoasn-run.outcome == 'success' &&
+          steps.download-iptoasn.outcome == 'success'
         timeout-minutes: 3
         env:
           CONSUMED: ${{ steps.build.outputs.consumed_asn }}

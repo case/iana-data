@@ -761,6 +761,50 @@ class TestTimeoutBudgets:
         )
 
 
+class TestActionPins:
+    """Run metadata gates the build, so a moved tag must not change a workflow."""
+
+    # No YAML parser is a dependency here; a `uses:` value is one plain scalar.
+    USES = re.compile(r"^\s*(?:- )?uses: (?!\./)(\S+?)@(\S+)", re.MULTILINE)
+
+    def _pins(self):
+        pins: dict[str, set[str]] = {}
+        root = REPO_ROOT / ".github"
+        files = [*(root / "workflows").glob("*.yaml"), *root.glob("actions/*/*.yaml")]
+        for path in sorted(files):
+            for action, ref in self.USES.findall(path.read_text()):
+                pins.setdefault(action, set()).add(f"{ref} ({path.name})")
+        return pins
+
+    def test_every_action_is_pinned_to_a_full_commit_sha(self):
+        pins = self._pins()
+
+        assert len(pins) >= 5, f"only {len(pins)} actions found; the guard is vacuous"
+        loose = sorted(
+            f"{action}@{use}"
+            for action, uses in pins.items()
+            for use in uses
+            if not re.fullmatch(r"[0-9a-f]{40}", use.split(" ")[0])
+        )
+        assert not loose, f"not pinned to a SHA: {loose}"
+
+    def test_each_action_uses_one_sha_everywhere(self):
+        """Matching pins bump forward together in one Dependabot group."""
+        split = {
+            action: sorted(uses)
+            for action, uses in self._pins().items()
+            if len({use.split(" ")[0] for use in uses}) > 1
+        }
+        assert not split, f"pinned to more than one ref: {split}"
+
+    def test_every_workflow_declares_its_permissions(self):
+        """Without a top-level block the token keeps the repository default."""
+        for path in sorted((REPO_ROOT / ".github" / "workflows").glob("*.yaml")):
+            assert re.search(r"^permissions:", path.read_text(), re.MULTILINE), (
+                f"{path.name} has no top-level permissions block"
+            )
+
+
 class TestOwnership:
     def test_refuses_a_branch_last_committed_by_someone_else(
         self, pushable, tmp_path, signing_key

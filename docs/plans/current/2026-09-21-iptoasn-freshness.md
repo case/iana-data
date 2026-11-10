@@ -214,7 +214,7 @@ rewrite for that field, and no deprecation window.
 
 ## Deferred, recorded not built
 
-Two left; the producer timeout below shipped with this plan.
+One left; the producer timeout and the pinning below shipped with this plan.
 
 - **Content hash beside `run_id`.** The only thing that would catch upstream serving a stale dataset
   with a fresh run timestamp, which this plan concedes the run-recency gate cannot detect. One
@@ -223,9 +223,10 @@ Two left; the producer timeout below shipped with this plan.
       `--max-time 120 --retry 2 --retry-max-time 240`, a step cap of 8 minutes, and an explicit job cap of 14 - the job had
       none, which meant `TestTimeoutBudgets` skipped it entirely. A stalled fetch can no longer end
       the job before its `failure()` alert runs.
-- **`update-iptoasn.yaml` uses floating action tags and carries no `permissions:` block** while every
-  other workflow pins SHAs and starts from `permissions: {}`. Its run metadata is now a gate input,
-  which raises the stakes on hardening it.
+- [x] ~~**`update-iptoasn.yaml` uses floating action tags and carries no `permissions:` block.**~~
+      **Done.** It and `tests.yaml` now pin every action to the SHA the other workflows use, and the
+      producer starts from `permissions: {}`. `TestActionPins` holds each action to one SHA across
+      workflows, so the Dependabot group bumps them together.
 
 ## Open questions
 

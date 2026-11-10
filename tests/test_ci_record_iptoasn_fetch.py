@@ -184,3 +184,14 @@ def test_both_consumers_refuse_an_ambiguous_artifact_set():
             "actions/runs/$run_id/artifacts" in text
         ), name
         assert "expected exactly 1" in text, name
+
+
+def test_the_record_step_needs_a_found_producer_run():
+    """An empty run id downloads nothing yet succeeds, moving last_checked."""
+    text = (WORKFLOWS / "update-data.yaml").read_text(encoding="utf-8")
+    start = text.index("- name: Record the iptoasn artifact in metadata")
+    condition = text[start : text.index("timeout-minutes:", start)]
+
+    assert "steps.get-iptoasn-run.outcome == 'success'" in condition
+    assert "steps.download-iptoasn.outcome == 'success'" in condition
+    assert "steps.build.outcome == 'success'" in condition
