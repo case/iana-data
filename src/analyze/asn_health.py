@@ -9,6 +9,7 @@ docs/plans/current/2026-09-11-asn-drift-automation.md
 import logging
 from collections.abc import Iterable, Mapping
 from dataclasses import dataclass
+from datetime import datetime
 from pathlib import Path
 
 from ..parse.iptoasn import ASNLookup
@@ -44,6 +45,10 @@ class Thresholds:
     min_addresses_ipv4: int = 4000
     min_addresses_ipv6: int = 3800
     min_records: int = 500_000
+    # 40h, not 48h: the safe band is 37.2-40.7h against 80 nights of observed
+    # queue delay. Why: docs/memory/log/2026-09-24-iptoasn-freshness.md
+    max_age_hours: float = 40.0
+    max_clock_skew_minutes: float = 5.0
 
     def max_unrouted(self, family: str) -> int:
         return self.max_unrouted_ipv4 if family == "ipv4" else self.max_unrouted_ipv6
@@ -150,6 +155,68 @@ def health_problems(
                 f"below the {limits.min_useful_label_coverage:.0%} floor"
             )
     return problems
+
+
+def _parse_artifact_stamp(created_at: str) -> datetime | str:
+    """The parsed timestamp, or the reason it is unusable."""
+    if not created_at or not created_at.strip():
+        return "artifact creation timestamp is empty"
+    try:
+        stamp = datetime.fromisoformat(created_at.strip())
+    except ValueError:
+        return f"artifact creation timestamp is unparseable: {created_at!r}"
+    if stamp.tzinfo is None:
+        return f"artifact creation timestamp has no timezone: {created_at!r}"
+    return stamp
+
+
+def artifact_age_hours(created_at: str, now: datetime) -> float | None:
+    """The artifact's age in hours, or None when the timestamp is unusable.
+
+    Negative when the timestamp is ahead of ``now``. Logged on every run so the
+    threshold can be refined from observation rather than argument.
+    """
+    stamp = _parse_artifact_stamp(created_at)
+    if isinstance(stamp, str):
+        return None
+    return (now - stamp).total_seconds() / 3600
+
+
+def artifact_age_problem(
+    created_at: str,
+    now: datetime,
+    thresholds: Thresholds | None = None,
+) -> str | None:
+    """Why the artifact is too old to trust, or None when its age is acceptable.
+
+    Args:
+        created_at: RFC3339 timestamp from the producer run. An empty string is a
+            problem, never a pass: only an omitted value skips the check, and that
+            decision belongs to the caller.
+        now: Evaluated against this, so a test can pin the exact boundary.
+        thresholds: Supplies max_age_hours and max_clock_skew_minutes.
+
+    Returns:
+        One human-readable string, or None. A timezone-naive or unparseable
+        timestamp is a problem, as is one dated past the clock-skew tolerance.
+    """
+    limits = thresholds or Thresholds()
+    stamp = _parse_artifact_stamp(created_at)
+    if isinstance(stamp, str):
+        return stamp
+
+    age_hours = (now - stamp).total_seconds() / 3600
+    if age_hours < -(limits.max_clock_skew_minutes / 60):
+        return (
+            f"artifact creation timestamp is {-age_hours:.2f}h in the future, "
+            f"beyond the {limits.max_clock_skew_minutes:.0f}m clock-skew tolerance"
+        )
+    if age_hours > limits.max_age_hours:
+        return (
+            f"artifact is {age_hours:.2f}h old, "
+            f"above the {limits.max_age_hours:.0f}h ceiling"
+        )
+    return None
 
 
 def nameserver_addresses(entries: Iterable[dict]) -> dict[str, list[str]]:

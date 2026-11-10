@@ -39,6 +39,41 @@ def load_metadata() -> MetadataDict:
     return {}
 
 
+def record_iptoasn_fetch(
+    checked_at: str,
+    downloaded_at: str | None = None,
+    run_id: str | None = None,
+) -> None:
+    """Record an iptoasn artifact fetch, merging into any existing entry.
+
+    Args:
+        checked_at: When the artifact was pulled. Moves on every fetch.
+        downloaded_at: When the artifact now in hand was obtained. Supplied only
+            when the artifact fed the build, so a preserve night leaves the
+            previous value in place, matching this file's convention that
+            last_downloaded tracks content that reached the published data.
+        run_id: The producer run behind ``downloaded_at``. Omitting it alongside
+            ``downloaded_at`` clears any stored run id, because a direct download
+            from upstream is not attributable to a producer run.
+
+    Raises:
+        ValueError: If ``run_id`` is given without ``downloaded_at``.
+    """
+    if run_id is not None and downloaded_at is None:
+        raise ValueError("run_id needs downloaded_at; alone it names no artifact")
+
+    metadata = load_metadata()
+    entry = dict(metadata.get("IPTOASN", {}))
+    entry["last_checked"] = checked_at
+    if downloaded_at is not None:
+        entry["last_downloaded"] = downloaded_at
+        entry.pop("run_id", None)
+        if run_id is not None:
+            entry["run_id"] = run_id
+    metadata["IPTOASN"] = entry
+    save_metadata(metadata)
+
+
 def save_metadata(metadata: MetadataDict) -> None:
     """Save metadata for future conditional requests."""
     metadata_path = Path(METADATA_FILE)

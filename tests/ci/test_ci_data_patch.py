@@ -748,6 +748,15 @@ class TestTimeoutBudgets:
                 )
         assert checked >= 4, f"only {checked} jobs inspected; the guard is vacuous"
 
+    def test_the_iptoasn_fetch_is_bounded(self):
+        """An unbounded curl can burn the runner cap before failure() can alert."""
+        text = (REPO_ROOT / ".github" / "workflows" / "update-iptoasn.yaml").read_text()
+
+        assert "--max-time" in text
+        assert re.search(r"^    timeout-minutes: \d+", text, re.MULTILINE), (
+            "the producer job needs its own cap, or TestTimeoutBudgets skips it"
+        )
+
 
 class TestOwnership:
     def test_refuses_a_branch_last_committed_by_someone_else(

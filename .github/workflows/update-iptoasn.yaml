@@ -14,16 +14,23 @@ concurrency:
 jobs:
   download-iptoasn:
     runs-on: ubuntu-slim
+    timeout-minutes: 14
 
     steps:
       - name: Check out repository
+        timeout-minutes: 2
         uses: actions/checkout@v7.0.1
 
+      # Every step is capped so the failure path fits the job cap and the
+      # failure() alerts still run. Why: docs/memory/log/2026-09-24-iptoasn-freshness.md
       - name: Download iptoasn data
         id: download
+        timeout-minutes: 8
         run: |
-          # Download the combined IPv4+IPv6 ASN data
-          curl -fsSL -o ip2asn-combined.tsv.gz https://iptoasn.com/data/ip2asn-combined.tsv.gz
+          # --retry-max-time bounds the retry window; curl honours Retry-After, so
+          # --retry-delay alone does not. Worst case ~365s, inside the 480s cap.
+          curl -fsSL --max-time 120 --retry 2 --retry-delay 5 --retry-max-time 240 \
+            -o ip2asn-combined.tsv.gz https://iptoasn.com/data/ip2asn-combined.tsv.gz
 
           # Get file size for logging
           SIZE=$(stat -c%s ip2asn-combined.tsv.gz)
@@ -34,7 +41,10 @@ jobs:
           DATE=$(date -u +%Y-%m-%d)
           echo "date=$DATE" >> "$GITHUB_OUTPUT"
 
+      # Capped like every other step: the upload stall timer resets on progress, so
+      # it does not bound total duration.
       - name: Upload artifact
+        timeout-minutes: 1
         uses: actions/upload-artifact@v7
         with:
           name: iptoasn-${{ steps.download.outputs.date }}
@@ -45,6 +55,7 @@ jobs:
 
       - name: Notification if download fails
         if: failure()
+        timeout-minutes: 1
         uses: ./.github/actions/pushover
         with:
           pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
@@ -54,6 +65,7 @@ jobs:
 
       - name: Email notification if download fails
         if: failure()
+        timeout-minutes: 1
         uses: case/actions-email@v1
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}

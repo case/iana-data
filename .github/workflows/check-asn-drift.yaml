@@ -52,13 +52,29 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          run_id=$(gh run list --workflow=update-iptoasn.yaml --status=success \
-            --limit=1 --json databaseId -q '.[0].databaseId')
-          if [ -z "$run_id" ]; then
+          # One -q: a repeated flag overwrites rather than accumulating, and two
+          # gh calls could pair one run's id with another's timestamp.
+          result=$(gh run list --workflow=update-iptoasn.yaml --status=success --branch main \
+            --limit=1 --json databaseId,updatedAt \
+            -q '.[0] | "\(.databaseId) \(.updatedAt)"')
+          run_id="${result%% *}"
+          updated_at="${result##* }"
+          # Fail closed: this job archives labels, so a stale artifact it cannot
+          # date would propose archiving labels that are still live.
+          if [ -z "$run_id" ] || [ -z "$updated_at" ] || [ "$run_id" = "$updated_at" ]; then
             echo "::error::No successful update-iptoasn run found"
             exit 1
           fi
+          # merge-multiple is last-writer-wins, so two artifacts on one run (a
+          # rerun on a later date) would pair old bytes with a fresh timestamp.
+          count=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$run_id/artifacts" \
+            --jq '[.artifacts[] | select(.name | startswith("iptoasn-")) | select(.expired == false)] | length')
+          if [ "$count" != "1" ]; then
+            echo "::error::run $run_id carries $count unexpired iptoasn artifacts, expected exactly 1"
+            exit 1
+          fi
           echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+          echo "updated_at=$updated_at" >> "$GITHUB_OUTPUT"
 
       - name: Download iptoasn artifact
         timeout-minutes: 5
@@ -76,11 +92,16 @@ jobs:
       - name: Detect drifted ASN labels
         id: check
         timeout-minutes: 15
+        env:
+          IPTOASN_UPDATED_AT: ${{ steps.iptoasn-run.outputs.updated_at }}
+          IPTOASN_RUN_ID: ${{ steps.iptoasn-run.outputs.run_id }}
         run: |
           set -o pipefail
           report="$RUNNER_TEMP/drift-report.log"
           status=0
-          bin/check-asn-drift 2>&1 | tee "$report" || status=$?
+          bin/check-asn-drift \
+            --artifact-created-at "$IPTOASN_UPDATED_AT" \
+            --run-id "$IPTOASN_RUN_ID" 2>&1 | tee "$report" || status=$?
           if [ "$status" -gt 1 ] || ! grep -q '^asn check: .*artifact healthy' "$report"; then
             echo "::error::ASN drift check exited $status without completing healthily"
             exit 1

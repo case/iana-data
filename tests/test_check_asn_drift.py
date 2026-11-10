@@ -7,6 +7,8 @@ guarded by __main__, so importing only adjusts sys.path and pulls helpers.
 import gzip
 import importlib.util
 import json
+import re
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
 import pytest
@@ -137,12 +139,21 @@ class TestCheckHealth:
         assert lookup is None
 
 
+def _health(problems, lookup):
+    """A check_health stub with its real signature, so a wrong call still fails."""
+
+    def stub(thresholds=None, *, artifact_created_at=None, now=None):
+        return problems, lookup
+
+    return stub
+
+
 class TestExitCodes:
     """0 clean, 1 drift, 2 error - the contract the workflow branches on."""
 
     def test_unhealthy_exits_2_without_building(self, monkeypatch, capsys):
         monkeypatch.setattr(
-            detector, "check_health", lambda: (["artifact is missing"], None)
+            detector, "check_health", _health(["artifact is missing"], None)
         )
         monkeypatch.setattr(
             detector,
@@ -156,7 +167,7 @@ class TestExitCodes:
 
     def test_health_only_exits_0_and_emits_the_machine_line(self, monkeypatch, capsys):
         """The nightly parses asn-health:; removing it would break the gate silently."""
-        monkeypatch.setattr(detector, "check_health", lambda: ([], object()))
+        monkeypatch.setattr(detector, "check_health", _health([], object()))
         monkeypatch.setattr(detector, "repairable_damage", lambda _: 0)
         monkeypatch.setattr(
             detector,
@@ -169,7 +180,7 @@ class TestExitCodes:
         assert "asn-health: healthy=true damaged=false" in capsys.readouterr().out
 
     def test_health_only_reports_damage_when_repairable(self, monkeypatch, capsys):
-        monkeypatch.setattr(detector, "check_health", lambda: ([], object()))
+        monkeypatch.setattr(detector, "check_health", _health([], object()))
         monkeypatch.setattr(detector, "repairable_damage", lambda _: 4)
         monkeypatch.setattr("sys.argv", ["check-asn-drift", "--health-only"])
 
@@ -177,14 +188,14 @@ class TestExitCodes:
         assert "asn-health: healthy=true damaged=true" in capsys.readouterr().out
 
     def test_an_unhealthy_run_emits_the_machine_line_too(self, monkeypatch, capsys):
-        monkeypatch.setattr(detector, "check_health", lambda: (["broken"], None))
+        monkeypatch.setattr(detector, "check_health", _health(["broken"], None))
         monkeypatch.setattr("sys.argv", ["check-asn-drift", "--health-only"])
 
         assert detector.main() == detector.ERROR
         assert "asn-health: healthy=false" in capsys.readouterr().out
 
     def test_drift_exits_1(self, monkeypatch):
-        monkeypatch.setattr(detector, "check_health", lambda: ([], object()))
+        monkeypatch.setattr(detector, "check_health", _health([], object()))
         monkeypatch.setattr(detector, "build_raw_asn_labels", lambda: {"LIVE"})
         monkeypatch.setattr(
             detector, "parse_organizations_manual", lambda: _seed(asn=["GONE"])
@@ -194,7 +205,7 @@ class TestExitCodes:
         assert detector.main() == detector.DRIFT
 
     def test_clean_exits_0(self, monkeypatch):
-        monkeypatch.setattr(detector, "check_health", lambda: ([], object()))
+        monkeypatch.setattr(detector, "check_health", _health([], object()))
         monkeypatch.setattr(detector, "build_raw_asn_labels", lambda: {"LIVE"})
         monkeypatch.setattr(
             detector, "parse_organizations_manual", lambda: _seed(asn=["LIVE"])
@@ -205,7 +216,7 @@ class TestExitCodes:
 
     def test_a_build_failure_exits_2_not_1(self, monkeypatch, capsys):
         """A failed build must not read as 'no drift found'."""
-        monkeypatch.setattr(detector, "check_health", lambda: ([], object()))
+        monkeypatch.setattr(detector, "check_health", _health([], object()))
 
         def boom():
             raise RuntimeError("build exploded")
@@ -446,7 +457,7 @@ class TestBuildErrorReturn:
         assert "build error: disk full" in capsys.readouterr().out
 
     def test_a_returned_build_error_exits_2(self, monkeypatch, capsys):
-        monkeypatch.setattr(detector, "check_health", lambda: ([], object()))
+        monkeypatch.setattr(detector, "check_health", _health([], object()))
         monkeypatch.setattr(detector, "build_raw_asn_labels", lambda: None)
         monkeypatch.setattr("sys.argv", ["check-asn-drift"])
 
@@ -455,7 +466,7 @@ class TestBuildErrorReturn:
 
     def test_a_damage_crash_exits_2_not_1(self, monkeypatch, capsys):
         """Damage evaluation sits inside main()'s try; moving it out fails here."""
-        monkeypatch.setattr(detector, "check_health", lambda _=None: ([], object()))
+        monkeypatch.setattr(detector, "check_health", _health([], object()))
 
         def boom(_):
             raise RuntimeError("damage exploded")
@@ -469,7 +480,7 @@ class TestBuildErrorReturn:
         assert "damage exploded" in out
 
     def test_a_health_crash_exits_2_not_1(self, monkeypatch, capsys):
-        def boom():
+        def boom(thresholds=None, *, artifact_created_at=None, now=None):
             raise RuntimeError("unexpected")
 
         monkeypatch.setattr(detector, "check_health", boom)
@@ -601,3 +612,120 @@ class TestRecoveryCountsDistinctAddresses:
         self._committed(tmp_path, monkeypatch, [[{"as_org": "Unknown"}]])
 
         assert detector.repairable_damage(ASNLookup([])) == 0
+
+
+class TestRecencyWiring:
+    """A stale artifact reads as healthy, so its labels publish as current."""
+
+    NOW = datetime(2026, 9, 24, 7, 0, tzinfo=UTC)
+
+    def _valid_artifact(self, tmp_path, monkeypatch):
+        path = tmp_path / "artifact.gz"
+        with gzip.open(path, "wt", encoding="utf-8") as handle:
+            handle.write(VALID_ROWS)
+        monkeypatch.setattr(detector, "get_iptoasn_path", lambda: path)
+        monkeypatch.setattr(detector, "source_page_addresses", lambda _: {})
+        monkeypatch.setattr(detector, "committed_addresses", dict)
+
+    def _stamp(self, **delta):
+        return (self.NOW - timedelta(**delta)).isoformat().replace("+00:00", "Z")
+
+    def test_a_stale_artifact_is_reported_as_a_problem(self, monkeypatch, tmp_path):
+        self._valid_artifact(tmp_path, monkeypatch)
+
+        problems, _ = detector.check_health(
+            artifact_created_at=self._stamp(hours=41), now=self.NOW
+        )
+
+        assert [p for p in problems if "above the 40h ceiling" in p]
+
+    def test_a_fresh_artifact_adds_no_recency_problem(self, monkeypatch, tmp_path):
+        self._valid_artifact(tmp_path, monkeypatch)
+
+        problems, _ = detector.check_health(
+            artifact_created_at=self._stamp(hours=3), now=self.NOW
+        )
+
+        assert not [p for p in problems if "ceiling" in p and "artifact is" in p]
+
+    def test_an_omitted_timestamp_skips_the_check(self, monkeypatch, tmp_path):
+        """Local runs and tests.yaml pass nothing; they must keep working."""
+        self._valid_artifact(tmp_path, monkeypatch)
+
+        problems, _ = detector.check_health(now=self.NOW)
+
+        assert not [p for p in problems if "timestamp" in p or "old" in p]
+
+    def test_an_empty_timestamp_is_a_problem_not_a_skip(self, monkeypatch, tmp_path):
+        """A failed gh query yields ""; treating it as absent reopens the hole."""
+        self._valid_artifact(tmp_path, monkeypatch)
+
+        problems, _ = detector.check_health(artifact_created_at="", now=self.NOW)
+
+        assert [p for p in problems if "empty" in p]
+
+    def test_thresholds_stay_positional(self, monkeypatch, tmp_path):
+        """check_health(Thresholds(...)) is an existing call shape; keep it working."""
+        self._valid_artifact(tmp_path, monkeypatch)
+
+        problems, _ = detector.check_health(Thresholds(min_records=1))
+
+        assert not [p for p in problems if "usable records" in p]
+
+    def test_main_logs_the_run_id_and_age(self, monkeypatch, capsys):
+        monkeypatch.setattr(detector, "check_health", _health([], object()))
+        monkeypatch.setattr(detector, "repairable_damage", lambda _: 0)
+        monkeypatch.setattr(
+            "sys.argv",
+            [
+                "check-asn-drift",
+                "--health-only",
+                "--run-id",
+                "12345",
+                "--artifact-created-at",
+                "2026-09-24T03:36:05Z",
+            ],
+        )
+
+        assert detector.main() == detector.CLEAN
+        out = capsys.readouterr().out
+        assert "asn artifact: run=12345" in out
+        assert "ceiling=40h" in out
+        # "age=" alone also matches "age=unknown", which a dropped computation prints.
+        assert "age=unknown" not in out
+        assert re.search(r"age=-?\d+\.\d\dh", out), out
+
+    def test_main_logs_unknown_when_no_timestamp_is_passed(self, monkeypatch, capsys):
+        monkeypatch.setattr(detector, "check_health", _health([], object()))
+        monkeypatch.setattr(detector, "repairable_damage", lambda _: 0)
+        monkeypatch.setattr("sys.argv", ["check-asn-drift", "--health-only"])
+
+        assert detector.main() == detector.CLEAN
+        out = capsys.readouterr().out
+        assert "asn artifact: run=unknown" in out
+        assert "age=unknown" in out
+
+    def test_main_passes_the_timestamp_through_to_check_health(
+        self, monkeypatch, capsys
+    ):
+        """The flag must reach check_health; parsing it in main() alone is inert."""
+        seen = {}
+
+        def spy(thresholds=None, *, artifact_created_at=None, now=None):
+            seen["stamp"] = artifact_created_at
+            return ["artifact is 99.00h old, above the 40h ceiling"], None
+
+        monkeypatch.setattr(detector, "check_health", spy)
+        monkeypatch.setattr(
+            "sys.argv",
+            [
+                "check-asn-drift",
+                "--health-only",
+                "--artifact-created-at",
+                "2026-01-01T00:00:00Z",
+            ],
+        )
+
+        assert detector.main() == detector.ERROR
+        assert seen["stamp"] == "2026-01-01T00:00:00Z"
+        assert "asn-health: healthy=false" in capsys.readouterr().out

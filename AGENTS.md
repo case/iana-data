@@ -19,3 +19,9 @@ Project memory lives in `docs/memory/`. The index is at [`docs/memory/memory-ind
 
 **Monorepos**: if this repo contains subprojects with their own `docs/memory/`, treat each subproject's memory as authoritative for work inside that subproject. The root `docs/memory/` covers concerns that span subprojects. See [`docs/memory/product.md`](docs/memory/product.md#monorepos) for the rationale.
 <!-- project-memory:end -->
+
+## Plans
+
+Plans live in `docs/plans/current/`, named `yyyy-mm-dd-slug.md`. When every item in a plan is closed,
+move it to `docs/plans/archive/` and repoint any inbound links. The durable decisions belong in a
+memory entry, so an archived plan is history rather than a reference.

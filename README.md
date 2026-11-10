@@ -98,7 +98,7 @@ There are a few challenges with these data files, for example:
 ## Supplemental data
 
 - The `data/manual/supplemental-cctld-rdap.json` file is the manually-edited list of ccTLD servers that aren't in the IANA file. Ideally, we'll find more, and add them here.
-- The `data/generated/metadata.json` file keeps track of our lifecycle of http fetches
+- The `data/generated/metadata.json` file keeps track of our lifecycle of http fetches. `last_checked` moves every time a source is polled; `last_downloaded` moves only when new content reached the published data. The `IPTOASN` entry also carries `run_id`, the GitHub Actions run of `update-iptoasn.yaml` that produced the artifact its `last_downloaded` refers to.
 - The `data/generated/idn-script-mapping.json` file maps IDNs to their Scripts, e.g. Arabic, Cyrillic, etc. This isn't the same as a TLD's language, but it's close enough, and it's canonical data from the Unicode strings.
 
 ## `tlds.json`

@@ -487,8 +487,7 @@ def test_build_tlds_json_org_annotations_use_alias_and_slug(shared_build):
 
 
 def test_build_does_not_rewrite_iptoasn_metadata(temp_output, tmp_path, monkeypatch):
-    """Build loads iptoasn data but must not touch metadata.json; the download
-    step owns IPTOASN.last_downloaded."""
+    """Build must not touch metadata.json; bin/ci-record-iptoasn-fetch owns it."""
     metadata_path = tmp_path / "metadata.json"
     sentinel = {"IPTOASN": {"last_downloaded": "2020-01-01T00:00:00Z"}}
     metadata_path.write_text(json.dumps(sentinel))
