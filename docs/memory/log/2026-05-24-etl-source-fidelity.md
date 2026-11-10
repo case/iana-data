@@ -13,6 +13,7 @@ tags: [etl, parsing, tld-html, policy]
 `download_tld_pages` previously saved `extract_main_content(response.text)`, where the old `extract_main_content` (an `HTMLParser`) **re-serialized** the page: it decoded `&amp;`->`&`, dropped HTML comments, and rewrote tags. That made the stored "source" a lossy transform, unlike every other source (`iana-root.html`, RDAP, ICANN CSV/JSON), which is stored raw and corrected in its parser.
 
 **Change:**
+
 - `extract_main_content` is now a **verbatim `<main>...</main>` byte-slice** (regex `<main\b[^>]*>.*?</main\s*>`, DOTALL|IGNORECASE). Entities, comments, and formatting are preserved; site chrome (≈72% of each page) is stripped; footprint ≈ unchanged (~2.5 KB/page). Returns `""` when no `<main>`, so `download_tld_pages` keeps its full-page `-full` fallback.
 - `parse_tld_page` (Transform) owns decoding: the org extractors and the regex-extracted URL/server fields (`registry_url`, `whois_server`, `rdap_server`) now `html.unescape()` their captures.
 - The org extractor regex now tolerates **1+ `<br>`** (`(?:\s*<br\s*/?>)+`). The old pattern required `<br><br>`, which only existed because the old `extract_main_content` turned upstream `<br/>` into `<br></br>`; on a faithful slice (raw `<br/>`) selectolax yields a single `<br>`, so the old regex silently dropped `admin`/`tech`.

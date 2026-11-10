@@ -88,21 +88,21 @@ timestamp every night and passes. Upstream freshness stays unverified, as M3 alr
 - [x] ~~Adapt `tests/utilities/test_download.py:894`~~ **Not needed.** The field is kept, so the
       assertion passes unchanged, with its file and result assertions intact
 - [~] Acceptance tests, **split by layer**. The health-check layer is fully covered; the
-      **workflow layer is not**. No test executes a workflow `run:` body, so the `${result%% *}`
-      split, the `"null null"` equality check and the `-z` pre-check are unverified. What is covered
-      is behavioural where it could be: the `--consumed` decision moved into
-      `bin/ci-record-iptoasn-fetch.py` and is unit-tested, so no shell edit can swap it. The rest is
-      structural - which branch each `consumed_asn` assignment sits in, bounded by its own `fi`, and
-      that the artifact-count strings are present. The string checks do **not** demonstrate the
-      refusal behaves correctly. Closing this properly means lifting the remaining `run:` bodies into
-      `bin/` scripts. Original intent:
-      - *Health check*: zero age, exactly the limit, just over, future-dated, malformed and
-        timezone-naive all decide recency. **Absent skips the check and stays healthy**, which is
-        what keeps existing callers passing
-      - *Workflow*: an empty or unparseable query result sets `healthy=false`, and the existing
-        contract turns that into preserve-and-alert. This is the only layer where absent is fatal
-      - Assert the stale path preserves and alerts, and that tests still run against preserved ASN.
-        Keep all of them independent of the live artifact's real age
+  **workflow layer is not**. No test executes a workflow `run:` body, so the `${result%% *}`
+  split, the `"null null"` equality check and the `-z` pre-check are unverified. What is covered
+  is behavioural where it could be: the `--consumed` decision moved into
+  `bin/ci-record-iptoasn-fetch.py` and is unit-tested, so no shell edit can swap it. The rest is
+  structural - which branch each `consumed_asn` assignment sits in, bounded by its own `fi`, and
+  that the artifact-count strings are present. The string checks do **not** demonstrate the
+  refusal behaves correctly. Closing this properly means lifting the remaining `run:` bodies into
+  `bin/` scripts. Original intent:
+  - _Health check_: zero age, exactly the limit, just over, future-dated, malformed and
+    timezone-naive all decide recency. **Absent skips the check and stays healthy**, which is
+    what keeps existing callers passing
+  - _Workflow_: an empty or unparseable query result sets `healthy=false`, and the existing
+    contract turns that into preserve-and-alert. This is the only layer where absent is fatal
+  - Assert the stale path preserves and alerts, and that tests still run against preserved ASN.
+    Keep all of them independent of the live artifact's real age
 - [x] ~~**Removal ships separately from the gate.**~~ **Reversed - nothing is removed.** See "The field is populated, not removed" below. The deprecation-window question is moot. Original reasoning: The gate needs no schema change, and
       `metadata.json` is published and documented (`README.md:101`). Removing the writer, the
       committed key and the test is a second, announced change
@@ -123,11 +123,11 @@ Measured over 80 scheduled runs of each, as offsets from their own cron:
 
 Artifact age at the nightly's health check follows from those bounds:
 
-| case                   | min age | max age |
-| ---------------------- | ------- | ------- |
-| same-day               | -7.27h  | 13.17h  |
-| yesterday's artifact   | 16.73h  | 37.17h  |
-| day-before artifact    | 40.73h  | 61.17h  |
+| case                 | min age | max age |
+| -------------------- | ------- | ------- |
+| same-day             | -7.27h  | 13.17h  |
+| yesterday's artifact | 16.73h  | 37.17h  |
+| day-before artifact  | 40.73h  | 61.17h  |
 
 The gate must accept up to **37.17h** and reject from **40.73h**, so the safe band is 37.2-40.7h.
 **48h sits outside it** and accepts the 40.73h case, which is the failure the gate exists to prevent.
@@ -194,7 +194,7 @@ while carrying a current timestamp - defeating the gate and potentially archivin
 This plan proposed deleting `IPTOASN.last_downloaded`. That decision rested on there being no
 trustworthy timestamp to write, which the gate's own work invalidates.
 
-The name was already correct. The producer run *is* the fetch of `https://iptoasn.com/...`
+The name was already correct. The producer run _is_ the fetch of `https://iptoasn.com/...`
 (`update-iptoasn.yaml:25`), so its run timestamp records the same fact every other entry records:
 when the data now in hand was obtained upstream. Only the observer differs.
 

@@ -22,6 +22,8 @@ EXCLUDED_DIRS = {".git", ".venv", "node_modules", "__pycache__"}
 # Test fixtures that are intentionally invalid JSON.
 EXCLUDED_FILES = {
     Path("tests/fixtures/metadata/corrupted-metadata.json"),
+    # JSONC with comments, which dprint itself parses on every run.
+    Path("dprint.json"),
 }
 
 # Dirs whose JSON we author/generate, so we format-enforce them. data/source

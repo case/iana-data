@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-21T08:07:41Z",
+  "publication": "2026-09-28T08:41:21Z",
   "sources": {
     "iana_root_db": "https://www.iana.org/domains/root/db",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -18379,7 +18379,7 @@
       "rdap_server": "https://rdap.centralnic.com/bh/",
       "tld_created": "1994-02-01",
       "tld_updated": [
-        "2026-09-02"
+        "2026-09-23"
       ],
       "annotations": {
         "iana_tech_alias": "Tucows",
@@ -20241,7 +20241,7 @@
       "rdap_server": "https://rdap.nic.blackfriday/",
       "tld_created": "2014-04-17",
       "tld_updated": [
-        "2024-04-16"
+        "2026-09-21"
       ],
       "annotations": {
         "iana_sponsor_alias": "GoDaddy Registry",
@@ -26423,9 +26423,9 @@
           "ipv4": [
             {
               "ip": "31.44.1.137",
-              "asn": 0,
-              "as_org": "Not routed",
-              "as_country": "None"
+              "asn": 208951,
+              "as_org": "AS-ITGLOBALCOM ITGLOBAL.COM",
+              "as_country": "NL"
             }
           ],
           "ipv6": [
@@ -32198,9 +32198,9 @@
           "ipv4": [
             {
               "ip": "185.21.168.17",
-              "asn": 57382,
-              "as_org": "TK1",
-              "as_country": "TK"
+              "asn": 61005,
+              "as_org": "AS-OPENTLD1",
+              "as_country": "NL"
             }
           ],
           "ipv6": [
@@ -32217,9 +32217,9 @@
           "ipv4": [
             {
               "ip": "185.21.169.17",
-              "asn": 57382,
-              "as_org": "TK1",
-              "as_country": "TK"
+              "asn": 61005,
+              "as_org": "AS-OPENTLD1",
+              "as_country": "NL"
             }
           ],
           "ipv6": [
@@ -32236,9 +32236,9 @@
           "ipv4": [
             {
               "ip": "185.21.170.17",
-              "asn": 198147,
-              "as_org": "TK2",
-              "as_country": "TK"
+              "asn": 61007,
+              "as_org": "AS-OPENTLD2",
+              "as_country": "NL"
             }
           ],
           "ipv6": [
@@ -32255,9 +32255,9 @@
           "ipv4": [
             {
               "ip": "185.21.171.17",
-              "asn": 198147,
-              "as_org": "TK2",
-              "as_country": "TK"
+              "asn": 61007,
+              "as_org": "AS-OPENTLD2",
+              "as_country": "NL"
             }
           ],
           "ipv6": [
@@ -37508,7 +37508,7 @@
           "ipv4": [
             {
               "ip": "203.119.29.1",
-              "asn": 24409,
+              "asn": 24406,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -38465,17 +38465,17 @@
           "ipv4": [
             {
               "ip": "192.33.14.30",
-              "asn": 396654,
-              "as_org": "VRSN-AC50-340",
-              "as_country": "US"
+              "asn": 396751,
+              "as_org": "AS396751",
+              "as_country": "Unknown"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:503:231d::2:30",
-              "asn": 396654,
-              "as_org": "VRSN-AC50-340",
-              "as_country": "US"
+              "asn": 396690,
+              "as_org": "AS396690",
+              "as_country": "Unknown"
             }
           ]
         },
@@ -53360,17 +53360,17 @@
           "ipv4": [
             {
               "ip": "192.33.14.30",
-              "asn": 396654,
-              "as_org": "VRSN-AC50-340",
-              "as_country": "US"
+              "asn": 396751,
+              "as_org": "AS396751",
+              "as_country": "Unknown"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:503:231d::2:30",
-              "asn": 396654,
-              "as_org": "VRSN-AC50-340",
-              "as_country": "US"
+              "asn": 396690,
+              "as_org": "AS396690",
+              "as_country": "Unknown"
             }
           ]
         },
@@ -67779,7 +67779,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-05-24",
       "tld_updated": [
-        "2025-10-07"
+        "2026-09-22"
       ],
       "annotations": {
         "iana_sponsor_alias": "Identity Digital",
@@ -73912,9 +73912,9 @@
           "ipv4": [
             {
               "ip": "185.21.168.65",
-              "asn": 57382,
-              "as_org": "TK1",
-              "as_country": "TK"
+              "asn": 61005,
+              "as_org": "AS-OPENTLD1",
+              "as_country": "NL"
             }
           ],
           "ipv6": [
@@ -73931,9 +73931,9 @@
           "ipv4": [
             {
               "ip": "185.21.169.65",
-              "asn": 57382,
-              "as_org": "TK1",
-              "as_country": "TK"
+              "asn": 61005,
+              "as_org": "AS-OPENTLD1",
+              "as_country": "NL"
             }
           ],
           "ipv6": [
@@ -73950,9 +73950,9 @@
           "ipv4": [
             {
               "ip": "185.21.170.65",
-              "asn": 198147,
-              "as_org": "TK2",
-              "as_country": "TK"
+              "asn": 61007,
+              "as_org": "AS-OPENTLD2",
+              "as_country": "NL"
             }
           ],
           "ipv6": [
@@ -73969,9 +73969,9 @@
           "ipv4": [
             {
               "ip": "185.21.171.65",
-              "asn": 198147,
-              "as_org": "TK2",
-              "as_country": "TK"
+              "asn": 61007,
+              "as_org": "AS-OPENTLD2",
+              "as_country": "NL"
             }
           ],
           "ipv6": [
@@ -74000,7 +74000,7 @@
       "registry_url": "http://www.gr",
       "tld_created": "1989-02-19",
       "tld_updated": [
-        "2026-09-02"
+        "2026-09-23"
       ],
       "annotations": {
         "country_name_iso": "Greece",
@@ -92374,7 +92374,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-05-08",
       "tld_updated": [
-        "2025-09-25"
+        "2026-09-22"
       ],
       "annotations": {
         "iana_sponsor_alias": "Identity Digital",
@@ -110895,7 +110895,7 @@
       },
       "tld_created": "1985-01-01",
       "tld_updated": [
-        "2026-09-11"
+        "2026-09-25"
       ],
       "nameservers": [
         {
@@ -116744,8 +116744,8 @@
             },
             {
               "ip": "196.45.188.5",
-              "asn": 328919,
-              "as_org": "OCL-AS",
+              "asn": 36969,
+              "as_org": "MTL-AS",
               "as_country": "MW"
             }
           ],
@@ -118648,17 +118648,17 @@
           "ipv4": [
             {
               "ip": "192.33.14.30",
-              "asn": 396654,
-              "as_org": "VRSN-AC50-340",
-              "as_country": "US"
+              "asn": 396751,
+              "as_org": "AS396751",
+              "as_country": "Unknown"
             }
           ],
           "ipv6": [
             {
               "ip": "2001:503:231d::2:30",
-              "asn": 396654,
-              "as_org": "VRSN-AC50-340",
-              "as_country": "US"
+              "asn": 396690,
+              "as_org": "AS396690",
+              "as_country": "Unknown"
             }
           ]
         },
@@ -130845,7 +130845,7 @@
       "rdap_server": "https://rdap.nic.photo/",
       "tld_created": "2014-01-16",
       "tld_updated": [
-        "2024-04-17"
+        "2026-09-21"
       ],
       "annotations": {
         "iana_sponsor_alias": "GoDaddy Registry",
@@ -171537,7 +171537,7 @@
       "rdap_server": "https://rdap.zdnsgtld.com/top/",
       "tld_created": "2014-07-24",
       "tld_updated": [
-        "2026-04-15"
+        "2026-09-23"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -193140,9 +193140,9 @@
           "ipv4": [
             {
               "ip": "31.44.1.137",
-              "asn": 0,
-              "as_org": "Not routed",
-              "as_country": "None"
+              "asn": 208951,
+              "as_org": "AS-ITGLOBALCOM ITGLOBAL.COM",
+              "as_country": "NL"
             }
           ],
           "ipv6": [
@@ -196807,7 +196807,7 @@
           "ipv4": [
             {
               "ip": "125.208.36.1",
-              "asn": 24409,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -196944,7 +196944,7 @@
           "ipv4": [
             {
               "ip": "125.208.36.1",
-              "asn": 24409,
+              "asn": 24151,
               "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
               "as_country": "CN"
             }
@@ -202645,7 +202645,7 @@
       },
       "tld_created": "2019-06-13",
       "tld_updated": [
-        "2026-09-02"
+        "2026-09-23"
       ],
       "annotations": {
         "iana_tech_alias": "Tucows",

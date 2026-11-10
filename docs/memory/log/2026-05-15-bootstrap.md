@@ -11,6 +11,7 @@ tags: [log, meta]
 Created the project memory system using `init/bootstrap.py`.
 
 Initial files:
+
 - `AGENTS.md` + `CLAUDE.md` at repo root
 - `docs/memory/memory-index.md`, `product.md`, `architecture.md`
 - This log entry

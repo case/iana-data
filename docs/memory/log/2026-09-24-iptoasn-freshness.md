@@ -65,7 +65,7 @@ bytes rather than the run record. Worth revisiting if the margin ever bites.
 
 Removal was the plan's answer when the only candidate timestamp was the gzip mtime. With a
 server-generated producer-run timestamp the field can simply become true, and the name was already
-right: the producer run *is* the fetch from iptoasn.com, so the recorded fact matches every other
+right: the producer run _is_ the fetch from iptoasn.com, so the recorded fact matches every other
 entry in the file.
 
 It now follows this file's existing convention, that `last_downloaded` moves only when content

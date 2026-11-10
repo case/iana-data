@@ -6,6 +6,7 @@ two jobs, and so do the tests: bin/ci-refresh-coordinates fetches from Wikidata
 and holds no credentials, bin/ci-open-drift-pr signs and pushes and holds both.
 """
 
+import os
 import shutil
 import subprocess
 from pathlib import Path
@@ -22,7 +23,8 @@ ISOLATED_GIT_ENV = {
     "GIT_CONFIG_SYSTEM": "/dev/null",
     "GIT_TERMINAL_PROMPT": "0",
     "HOME": "/nonexistent",
-    "PATH": "/usr/local/bin:/usr/bin:/bin",
+    # Inherited: the scripts need bash 4+, which macOS keeps outside the system dirs.
+    "PATH": os.environ.get("PATH", os.defpath),
 }
 
 GH_STUB = """#!/usr/bin/env bash

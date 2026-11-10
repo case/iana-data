@@ -34,8 +34,8 @@ A schema change, automation that maintains it, and a tolerance for the window be
 
 | Bucket          | `source_names` mismatch | Live-data assertion that fails only because an `asn` label is gone |
 | --------------- | ----------------------- | ------------------------------------------------------------------ |
-| `iana`, `icann` | **fail**                | **fail**                                                            |
-| `asn`           | **warn**                | **warn**                                                            |
+| `iana`, `icann` | **fail**                | **fail**                                                           |
+| `asn`           | **warn**                | **warn**                                                           |
 
 The `asn` warn is permanent, not window-scoped, and archive state plays no part in deciding it.
 
@@ -43,12 +43,12 @@ The `asn` warn is permanent, not window-scoped, and archive state plays no part 
 
 Four independently deployable steps, in dependency order. Each is a separate reviewed change; none assumes the next one lands.
 
-| Milestone                     | Delivers                                    | Depends on |
-| ----------------------------- | ------------------------------------------- | ---------- |
-| **M1** Stop the nightly blocking | Data refresh survives an `asn` flap       | -          |
-| **M2** The `archived` bucket  | Honest schema for labels upstream dropped   | M1         |
-| **M3** Health gate + detector | Nightly survives a bad artifact; drift detectable | M2       |
-| **M4** Archival automation    | Drift proposes its own fix as a PR           | M3         |
+| Milestone                        | Delivers                                          | Depends on |
+| -------------------------------- | ------------------------------------------------- | ---------- |
+| **M1** Stop the nightly blocking | Data refresh survives an `asn` flap               | -          |
+| **M2** The `archived` bucket     | Honest schema for labels upstream dropped         | M1         |
+| **M3** Health gate + detector    | Nightly survives a bad artifact; drift detectable | M2         |
+| **M4** Archival automation       | Drift proposes its own fix as a PR                | M3         |
 
 M1 is the whole of the urgent problem. M2 is data modelling. M3 keeps the nightly moving when the ASN artifact is bad and builds the detector; M4 turns drift into a PR. M4 is the only one needing **write** credentials - M3 uses the existing Pushover secrets.
 
@@ -60,12 +60,12 @@ Test-only: no schema change and no CI change. It added the shared helper and its
 
 **Four** live-data assertions block the nightly, not one:
 
-| Test                                                  | Currently asserts                          |
-| ----------------------------------------------------- | ------------------------------------------ |
-| `test_source_names_appear_in_raw_data:224`            | every `source_names` string matches raw data |
-| `test_every_org_has_at_least_one_role:98`             | no org has zero roles                       |
-| `test_uk_nameservers_span_distinct_operators:274`     | `{nominet, ultradns} <= .uk as_org_slugs`   |
-| `test_knipp_spans_iana_tech_and_asn_operator:281`     | `knipp-medien` holds an `asn.operator` role |
+| Test                                              | Currently asserts                            |
+| ------------------------------------------------- | -------------------------------------------- |
+| `test_source_names_appear_in_raw_data:224`        | every `source_names` string matches raw data |
+| `test_every_org_has_at_least_one_role:98`         | no org has zero roles                        |
+| `test_uk_nameservers_span_distinct_operators:274` | `{nominet, ultradns} <= .uk as_org_slugs`    |
+| `test_knipp_spans_iana_tech_and_asn_operator:281` | `knipp-medien` holds an `asn.operator` role  |
 
 The last two encode real invariants using live orgs as the example, so an ASN label drift breaks them for a reason unrelated to what they test.
 
@@ -80,7 +80,7 @@ The condition is **observable, not causal**. The graph cannot tell upstream drif
 - [x] **Empty `source_names` fails, not warns** - both `{}` and `{"asn": []}`, so the rule is not vacuously true
 - [x] `test_uk_nameservers_span_distinct_operators` and `test_knipp_spans_iana_tech_and_asn_operator`: both index into optional structure (`as_org_slugs`, `roles["asn"]["operator"]`), so a disappearance raises `KeyError` before any helper runs. Handle the absent key first
 - [x] Warnings use `warnings.warn`, not `logging`. There are no warning filters and `addopts` (`pyproject.toml:31`) sets none, so pytest's summary shows them; a log line on a passing test would be captured and lost
-- [x] Fixtures drive **all four caller paths** with synthetic graphs, not just the helper: absent optional keys; a live fallback name with a missing relationship; concurrent `asn` drift *and* a genuine `iana` failure; both empty-source forms. Assert both the warnings and the retained hard failures
+- [x] Fixtures drive **all four caller paths** with synthetic graphs, not just the helper: absent optional keys; a live fallback name with a missing relationship; concurrent `asn` drift _and_ a genuine `iana` failure; both empty-source forms. Assert both the warnings and the retained hard failures
 - [x] Do **not** verify against today's seed with `VRSN-AC28` removed. It already sits in `aliases` with only `VRSN-AC50-340` under `source_names.asn`, so that exercises nothing. Use a fixture carrying the earlier active seed
 - [x] `README.md:300` ("no record is ever orphaned") and `:306` (every org carries `roles`) are corrected **here**, not deferred. M1 makes both false, and deferring leaves the repo inconsistent if M2 never lands
 
@@ -140,7 +140,7 @@ alert. The nightly completes and IANA changes publish, while ASN keeps its **com
 Committed is not the same as last known good, and preserving is not free: the lookup is keyed by
 address, so any address absent from the committed population still lands as `as_org: "Unknown"`
 (`src/build/tlds.py:706-728,752-761`). See "Accepted cost of a fallback night" for the full shape.
-What the mode prevents is a *degraded artifact* overwriting good committed values.
+What the mode prevents is a _degraded artifact_ overwriting good committed values.
 
 This also pays off M1's admitted debt: M1 gave up the blocking safeguard **and its alert**, since a
 warning fires no notification. The alert comes back here without re-arming the flap.
@@ -160,13 +160,13 @@ address on an existing TLD hits the same path. Self-healing once a healthy artif
 Nine committed `data/generated/tlds.json` snapshots, 2026-07-01 to 2026-09-11, deduplicated
 addresses, predicate `asn != 0`:
 
-| signal | observed range |
-| --- | --- |
-| IPv4 non-zero-ASN coverage | 99.9566 - 99.9783% (1-2 unrouted of ~4,610) |
+| signal                     | observed range                               |
+| -------------------------- | -------------------------------------------- |
+| IPv4 non-zero-ASN coverage | 99.9566 - 99.9783% (1-2 unrouted of ~4,610)  |
 | IPv6 non-zero-ASN coverage | 99.7696 - 99.8158% (8-10 unrouted of ~4,340) |
-| distinct `as_org` labels | 386 - 393 |
-| distinct addresses | IPv4 4,600-4,612, IPv6 4,333-4,345 |
-| artifact rows (one sample) | 718,331, all parseable |
+| distinct `as_org` labels   | 386 - 393                                    |
+| distinct addresses         | IPv4 4,600-4,612, IPv6 4,333-4,345           |
+| artifact rows (one sample) | 718,331, all parseable                       |
 
 `asn == 0` records carry `as_org: "Not routed"`, **not** `"Unknown"`; only a lookup miss yields
 `"Unknown"`. Counting the wrong one reports 100% coverage and hides the real figure.
@@ -192,15 +192,15 @@ M3 reverses it, because it conflates two different things.
 
 Inclusive boundaries, measured over the nine snapshots above.
 
-| signal | population | observed | fails when |
-| --- | --- | --- | --- |
-| IPv4 unrouted (`asn == 0`) | distinct v4 addresses | 1-2 of ~4,610 | above 25 |
-| IPv6 unrouted (`asn == 0`) | distinct v6 addresses | 8-10 of ~4,340 | above 60 |
-| IPv4 useful-label coverage | distinct v4 addresses | 99.9783% | below 95% |
-| IPv6 useful-label coverage | distinct v6 addresses | 99.8158% | below 95% |
-| IPv4 distinct addresses | built graph | 4,600-4,612 | below 4,000 |
-| IPv6 distinct addresses | built graph | 4,333-4,345 | below 3,800 |
-| artifact parseable rows | the gzip | 718,331 (one sample) | below 500,000 |
+| signal                     | population            | observed             | fails when    |
+| -------------------------- | --------------------- | -------------------- | ------------- |
+| IPv4 unrouted (`asn == 0`) | distinct v4 addresses | 1-2 of ~4,610        | above 25      |
+| IPv6 unrouted (`asn == 0`) | distinct v6 addresses | 8-10 of ~4,340       | above 60      |
+| IPv4 useful-label coverage | distinct v4 addresses | 99.9783%             | below 95%     |
+| IPv6 useful-label coverage | distinct v6 addresses | 99.8158%             | below 95%     |
+| IPv4 distinct addresses    | built graph           | 4,600-4,612          | below 4,000   |
+| IPv6 distinct addresses    | built graph           | 4,333-4,345          | below 3,800   |
+| artifact parseable rows    | the gzip              | 718,331 (one sample) | below 500,000 |
 
 **Useful-label coverage is a separate signal from unrouted count, and label cardinality is not a
 substitute for either.** A cardinality floor of 300 would permit dropping the 86 most-used labels,
@@ -217,7 +217,7 @@ Record counts and label coverage are anchored to a single measured artifact unti
 - [x] `src/analyze/asn_health.py`: pure functions over an address set plus an `ASNLookup`. No full
       build - the gate looks up an address set against the new artifact, so it runs before the build
 - [x] **Probe both address sets.** The committed `tlds.json` population is a stable baseline but is
-      *last night's*; an artifact can cover it perfectly and omit ranges holding tonight's new
+      _last night's_; an artifact can cover it perfectly and omit ranges holding tonight's new
       addresses. Parse the already-downloaded TLD pages for tonight's addresses too - no extra
       download, no output build
 - [x] **Validate range endpoints when parsing, not on lookup.** The parser moved to
@@ -232,14 +232,14 @@ Record counts and label coverage are anchored to a single measured artifact unti
       100% coverage from two records
 - [x] `bin/check-asn-drift`, a bash wrapper over `bin/check-asn-drift.py` so it runs under uv
       the way `bin/lint` invokes `bin/lint-json.py`: health first, then
-      `DRIFT <slug> <label>` and `RETURNED <slug> <label>` lines plus an `asn check: ` summary.
+      `DRIFT <slug> <label>` and `RETURNED <slug> <label>` lines plus an `"asn check: "` summary.
       Exit 0 clean, 1 drift, 2 error. Health failure short-circuits drift reporting, because bad
       input manufactures a full set of false DRIFT lines
 - [x] **Failure contract, so "never blocks" is real.** Only an explicit healthy result permits
       `--all`. A failed evaluation, a missing output, or a timeout selects `--preserve-asn`. None of
       those may fail the producer job - `update-data.yaml:365` requires it to succeed
 - [x] **Alert on unhealthy or indeterminate health regardless of the mode chosen.** Tying the alert
-      to a *downgrade* leaves a corrupt artifact silent on every preserve night, since those nights
+      to a _downgrade_ leaves a corrupt artifact silent on every preserve night, since those nights
       have no downgrade. Repetition policy can differ
 - [x] **A recovery trigger, because fallback is not self-healing.** `--all` runs only on an IANA
       source change, so an `Unknown` committed during fallback is re-copied every preserve night
@@ -255,12 +255,12 @@ Record counts and label coverage are anchored to a single measured artifact unti
 degradation is not limited to brand-new TLDs:
 
 - Any address absent from the committed population gets `asn: 0`, `as_org: "Unknown"`,
-  `as_country: "None"` - including a *replaced* address on an existing TLD.
+  `as_country: "None"` - including a _replaced_ address on an existing TLD.
 - A new TLD reusing already-known addresses keeps full enrichment.
 - A missing label removes that address's `as_org_slugs` and `as_org_aliases`
   (`src/build/tlds.py:698`) and the matching `organizations.json` operator relationship.
 - Existing addresses keep whatever routing metadata was committed, which may itself be stale.
-  Committed does not mean last known *good*.
+  Committed does not mean last known _good_.
 
 The mode still rebuilds everything else and applies current `data/manual/` curation.
 
@@ -303,7 +303,7 @@ no judgment attached. And ASN fields live inside `tlds.json`, so splitting them 
 racing on one file or holding the nightly patch back.
 
 Measured, night-to-night `as_org` churn is 0-16 addresses of ~8,950, so volume was **not** the
-reason: a generated-ASN PR would have been perfectly reviewable. Accepted loss: a *wrong* `as_org`
+reason: a generated-ASN PR would have been perfectly reviewable. Accepted loss: a _wrong_ `as_org`
 never surfaces, but that is the label-correctness problem M3 defers, which a PR would not catch
 either.
 
@@ -314,21 +314,21 @@ either.
 - [x] Persists through the atomic writer behind `write_json_if_changed`. `canonicalize_json_file` only re-reads and reformats a path, so it cannot save a modified object
 - [x] Never moves an entry out of `archived`, never rewrites an existing `archived_on`
 - [x] Rebuilds the resolver from the transformed seed and refuses the patch on any new collision or changed resolution
-- [x] **Pending-date semantics.** Each run rebuilds from `main`, which holds no pending entry, so a regenerated `archived_on` makes unchanged drift differ day to day. `ci-land-data-patch:292` sets `new_content` by diffing the guarded files, so the date alone would trigger a daily comment. Carry dates forward from the pending branch for labels still in the proposal, or compare membership separately for notification purposes. Test across two UTC dates; a same-day rerun misses this. Carry-forward also needs the branch to be *present*: `actions/checkout` fetches one ref at depth 1, so the producer runs `ci-land-data-patch fetch-branch` first. See "Tree equality" under Still open for the part of this that did not ship
+- [x] **Pending-date semantics.** Each run rebuilds from `main`, which holds no pending entry, so a regenerated `archived_on` makes unchanged drift differ day to day. `ci-land-data-patch:292` sets `new_content` by diffing the guarded files, so the date alone would trigger a daily comment. Carry dates forward from the pending branch for labels still in the proposal, or compare membership separately for notification purposes. Test across two UTC dates; a same-day rerun misses this. Carry-forward also needs the branch to be _present_: `actions/checkout` fetches one ref at depth 1, so the producer runs `ci-land-data-patch fetch-branch` first. See "Tree equality" under Still open for the part of this that did not ship
 - [x] **Input guard covers `data/source/` too**, not just `data/manual`. ASN detection depends on the root database and TLD pages, so the coordinate rebase guard (`check-coordinates.yaml:170`) is insufficient
 - [~] State transitions: the archiver's own transformations are covered - unchanged drift, partial
-      return, complete return, additive `{A}` to `{A,B}`, duplicates, and a crashed detector. Three
-      are **not**: a pending `{A}` genuinely being replaced by `{B}` (the existing test starts with
-      A already archived), the "exactly one notification" assertion, and proof that an ASN run
-      leaves the coordinate branch and PR untouched. The first two depend on the notification key
-      that was not built; see Still open
+  return, complete return, additive `{A}` to `{A,B}`, duplicates, and a crashed detector. Three
+  are **not**: a pending `{A}` genuinely being replaced by `{B}` (the existing test starts with
+  A already archived), the "exactly one notification" assertion, and proof that an ASN run
+  leaves the coordinate branch and PR untouched. The first two depend on the notification key
+  that was not built; see Still open
 - [x] **When drift clears the open PR is closed with a comment**, and repeated clean runs do not repeat it. `check-coordinates.yaml:139` skips signing with no patch, which would strand the proposal. This closure path bypasses the ownership checks in the commit path unless handled
 - [x] `bin/ci-open-drift-pr` takes title, subject, preamble **and reviewer instructions** from the environment (`DRIFT_PR_TITLE`, `DRIFT_COMMIT_SUBJECT`, `DRIFT_PREAMBLE`, `DRIFT_REVIEW_INSTRUCTIONS`), defaulting to the coordinate strings. Its only positional argument stays the report path. The Wikidata instruction would otherwise ship in every ASN PR
 - [~] **Notification policy, decided 2026-09-17: dedupe on state change, heartbeat only where the
-      state is invisible.** Only the content-keyed half shipped: an open PR is not re-commented when
-      the proposal is unchanged. The `(outcome, drift-set membership)` key, the human-closed
-      suppression and the 7-day blocked-create heartbeat are **not built** - see Still open. Recorded
-      here because the decision stands; the implementation is partial
+  state is invisible.** Only the content-keyed half shipped: an open PR is not re-commented when
+  the proposal is unchanged. The `(outcome, drift-set membership)` key, the human-closed
+  suppression and the 7-day blocked-create heartbeat are **not built** - see Still open. Recorded
+  here because the decision stands; the implementation is partial
 - [x] **Unchanged runs are silent.** The comment was posted before `new_content` was consulted; the conditional now sits at `bin/ci-open-drift-pr:99-107`. Tests assert the absence of the call, not just the outcome string
 - [x] The coordinate caller keeps its current strings; `tests/ci/test_ci_open_drift_pr.py` passes unchanged
 - [x] `.github/workflows/check-asn-drift.yaml`, daily 01:00 UTC between the 00:00 producer and 02:00 consumer. Three jobs as built: `check-asn-drift`, `sign-asn-drift`, `close-asn-drift`

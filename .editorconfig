@@ -1,0 +1,46 @@
+# Formatting baseline shared across repos. See editorconfig.org.
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+# shfmt reads this; tools that do not understand it ignore it. Under [*] rather
+# than [*.sh] so it also reaches extensionless scripts, which [*.sh] never matches.
+switch_case_indent = true
+
+# Trailing whitespace can encode a Markdown hard line break; keep it.
+[*.md]
+trim_trailing_whitespace = false
+
+# PEP 8 uses four-space indentation.
+[*.py]
+indent_size = 4
+
+# gofmt enforces tabs.
+[*.go]
+indent_style = tab
+
+# caddy fmt enforces tabs.
+[Caddyfile*]
+indent_style = tab
+
+# Package Control rewrites this file with tabs.
+[Package Control.sublime-settings]
+indent_style = tab
+
+# PowerShell Practice and Style says four spaces. PSScriptAnalyzer cannot read
+# .editorconfig, so a repo formatting .ps1 must mirror this in its own settings.
+[*.ps1]
+indent_size = 4
+
+# Make requires literal tabs in recipes.
+[{Makefile,*.mk}]
+indent_style = tab
+
+# Windows batch scripts expect CRLF.
+[*.{bat,cmd}]
+end_of_line = crlf

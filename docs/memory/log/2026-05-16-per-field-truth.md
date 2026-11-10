@@ -12,13 +12,13 @@ Each IANA data source is authoritative for a specific set of fields. The build n
 
 ## Authoritative source per field
 
-| Source                                  | Authoritative for                                          | Role                |
-|-----------------------------------------|------------------------------------------------------------|---------------------|
-| `iana-root.html` (Root Zone DB)         | TLD set membership, delegation status, manager, iana_tag   | Primary build input |
+| Source                                  | Authoritative for                                                     | Role                |
+| --------------------------------------- | --------------------------------------------------------------------- | ------------------- |
+| `iana-root.html` (Root Zone DB)         | TLD set membership, delegation status, manager, iana_tag              | Primary build input |
 | `iana-rdap.json` (RDAP bootstrap)       | RDAP server URLs for TLDs IANA has bootstrapped (predominantly gTLDs) | Annotation input    |
-| `supplemental-cctld-rdap.json` (manual) | ccTLD RDAP servers not registered in IANA's bootstrap     | Annotation input    |
-| `icann-registry-agreement-table.csv`    | gTLD agreement metadata (sponsorship, brand status)        | Annotation input    |
-| `iana-tlds.txt` (alphabetical list)     | Nothing the build consumes                                 | Advisory only       |
+| `supplemental-cctld-rdap.json` (manual) | ccTLD RDAP servers not registered in IANA's bootstrap                 | Annotation input    |
+| `icann-registry-agreement-table.csv`    | gTLD agreement metadata (sponsorship, brand status)                   | Annotation input    |
+| `iana-tlds.txt` (alphabetical list)     | Nothing the build consumes                                            | Advisory only       |
 
 ## Why
 

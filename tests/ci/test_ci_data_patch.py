@@ -6,7 +6,9 @@ and drives bin/ci-apply-data-patch and bin/ci-land-data-patch as CI does.
 """
 
 import base64
+import os
 import re
+import shlex
 import shutil
 import subprocess
 from pathlib import Path
@@ -25,7 +27,8 @@ ISOLATED_GIT_ENV = {
     "GIT_CONFIG_SYSTEM": "/dev/null",
     "GIT_TERMINAL_PROMPT": "0",
     "HOME": "/nonexistent",
-    "PATH": "/usr/local/bin:/usr/bin:/bin",
+    # Inherited: the scripts need bash 4+, which macOS keeps outside the system dirs.
+    "PATH": os.environ.get("PATH", os.defpath),
 }
 
 
@@ -673,7 +676,7 @@ class TestPushSafety:
 
         # A git wrapper that lets the branch move between the lease fetch and the
         # push, which is the only window --force-with-lease protects.
-        real_git = shutil.which("git")
+        real_git = shlex.quote(shutil.which("git") or "git")  # path may contain spaces
         stub_dir = tmp_path / "race-bin"
         stub_dir.mkdir()
         racer = tmp_path / "racer.sh"
@@ -837,7 +840,7 @@ class TestLease:
             ),
         )
 
-        real_git = shutil.which("git")
+        real_git = shlex.quote(shutil.which("git") or "git")  # path may contain spaces
         stub_dir = tmp_path / "push-stub"
         stub_dir.mkdir()
         log = tmp_path / "push.log"

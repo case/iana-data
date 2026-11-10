@@ -2,7 +2,7 @@
 
 ## Tl;dr
 
-[IANA](https://www.iana.org/) and [ICANN](https://www.icann.org/) publish a lot of canonical, interesting, and useful _structured_ information about the top-level domain namespace. This project fetches nightly copies of their data, and jams it into a single `data/generated/tlds.json` file so that it's all in a single place. 
+[IANA](https://www.iana.org/) and [ICANN](https://www.icann.org/) publish a lot of canonical, interesting, and useful _structured_ information about the top-level domain namespace. This project fetches nightly copies of their data, and jams it into a single `data/generated/tlds.json` file so that it's all in a single place.
 
 It's sort of an API-in-a-box, for exploring the TLD cinematic universe. It's _small data_, so this git repo has the change history from each nightly snapshot. For example:
 
@@ -29,7 +29,7 @@ Later on, we'll work on a friendly UI for all this.
 
 ## Background
 
-IANA publishes some raw, canonical data about the DNS and root zone TLDs. This project is an attempt to make the  data easier to explore and interpret.
+IANA publishes some raw, canonical data about the DNS and root zone TLDs. This project is an attempt to make the data easier to explore and interpret.
 
 Here are some of the questions we'd like to be able to answer, from the IANA data:
 
@@ -297,7 +297,7 @@ Alongside `tlds.json`, the build ships four derived reverse-index artifacts that
 - **Cultures**: ethno-linguistic communities like the Basques or Welsh (`cultures.json`).
 - **Agreement types**: the ICANN registry-agreement enum (`agreements.json`).
 
-Each TLD relates to one or more Organizations through *roles* (Sponsor, Administrative Contact, Technical Contact, and ICANN Registry Operator for gTLDs), to zero or more Places (most ccTLDs map to one country; geographic gTLDs map to a city, subdivision, country, or supranational region), to an optional Culture, and to its agreement types. Each derived artifact is a deterministic reverse index of `tlds.json`: delete it and `./bin/build --preserve-asn` rebuilds it. Every cross-file relationship is enforced by referential-integrity tests, so a foreign key can never dangle. Records are not orphaned either, with one deliberate exception: an organization whose only names are ASN labels — seeded in `source_names.asn`, retired into `archived.asn`, or both — keeps its record when none of them matches the current TLD data, so it carries no `roles` until a label matches again or a curator resolves it.
+Each TLD relates to one or more Organizations through _roles_ (Sponsor, Administrative Contact, Technical Contact, and ICANN Registry Operator for gTLDs), to zero or more Places (most ccTLDs map to one country; geographic gTLDs map to a city, subdivision, country, or supranational region), to an optional Culture, and to its agreement types. Each derived artifact is a deterministic reverse index of `tlds.json`: delete it and `./bin/build --preserve-asn` rebuilds it. Every cross-file relationship is enforced by referential-integrity tests, so a foreign key can never dangle. Records are not orphaned either, with one deliberate exception: an organization whose only names are ASN labels — seeded in `source_names.asn`, retired into `archived.asn`, or both — keeps its record when none of them matches the current TLD data, so it carries no `roles` until a label matches again or a curator resolves it.
 
 ## `organizations.json`
 
@@ -343,11 +343,13 @@ The `data/generated/agreements.json` file is the ICANN registry-agreement-type e
 - `make coverage` - See the test coverage
 
 **Data downloads**
+
 - `make download-core` - Downloads the three core IANA files, respecting cache headers
 - `make download-tld-pages` - Downloads the individual TLD HTML pages
 - `make download-tld-pages GROUPS="a b c"` - Specify one or more groups of pages to download, by letter
 
 **Misc**
+
 - `make analyze-idn-scripts` - analyzes the IDNs, and prints their associated Unicode label names
 - `make generate-idn-mapping` - creates the `data/generated/idn-script-mapping.json` file, by mapping IDNs like `ελ` to their Unicode character labels (e.g. `GREEK`), then using `pycountry` to map their labels to their ISO script names
 - `make analyze-registry-agreements` - summarizes the contents of the ICANN Registry Agreements file
@@ -377,18 +379,18 @@ Dependencies:
 
 ## Todo
 
-### Current 
+### Current
 
 - [ ] Email alerts, similar to Pushover
 - [ ] TLDs summary (delegated, gtld/cctld, IDNs, brands, etc.) in the Readme, via GH Actions auto-update
 - [ ] Zone file sizes - maybe via the [ICANN Monthly Registry Reports](https://www.icann.org/resources/pages/xbox-2015-10-01-en)?
-    - `activity` csv - has interesting data, e.g.
-      - `dns-udp-queries-received`
-      - `dns-udp-queries-responded`
-      - `dns-tcp-queries-received`
-      - `dns-tcp-queries-responded`
-      - `rdap-queries`
-    - `transactions` csv - `totals-domains` column -> `Totals` row has the total for the given month
+  - `activity` csv - has interesting data, e.g.
+    - `dns-udp-queries-received`
+    - `dns-udp-queries-responded`
+    - `dns-tcp-queries-received`
+    - `dns-tcp-queries-responded`
+    - `rdap-queries`
+  - `transactions` csv - `totals-domains` column -> `Totals` row has the total for the given month
 
 ### Later
 
@@ -402,9 +404,9 @@ Dependencies:
 - [ ] PeeringDB API script (or integration of some sort), for deriving AS Org alias names
 - [ ] Data integrity - more e2e tests to confirm that the data all lines up. E.g. the TLD pages <-> RDAP bootstrap file <-> full root db html page contents
 - [ ] Check other git repos, for TLDs TXT list change history
-    - [some txt file history](https://github.com/ris-work/TLD-watch/commits/master/)
-    - [Go project](https://github.com/jehiah/generic_tlds/commits/master/)
-    - ZoneDB has some history
+  - [some txt file history](https://github.com/ris-work/TLD-watch/commits/master/)
+  - [Go project](https://github.com/jehiah/generic_tlds/commits/master/)
+  - ZoneDB has some history
 
 **If anyone asks**
 
@@ -415,7 +417,7 @@ Dependencies:
 
 - [x] Basic CLI
 - [x] File downloads, adhere to cache, etc. headers (be a good citizen)
-- [x] Downloads for core files - Metadata file for tracking last-downloaded dates, header values, etc. 
+- [x] Downloads for core files - Metadata file for tracking last-downloaded dates, header values, etc.
 - [x] Tests, fixtures, test coverage, linting
 - [x] Enhanced Bootstrap file (`tlds.json`) - Data structure, build functionality
 - [x] Integration tests - Data accuracy, integrity, and overlap tests
