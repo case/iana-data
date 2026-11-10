@@ -15,12 +15,15 @@ import json
 import sys
 import tempfile
 import zlib
+from datetime import UTC, datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from src.analyze.asn_health import (
     Thresholds,
+    artifact_age_hours,
+    artifact_age_problem,
     health_problems,
     is_useful_label,
     measure,
@@ -59,8 +62,18 @@ def committed_addresses() -> dict[str, list[str]]:
 
 def check_health(
     thresholds: Thresholds | None = None,
+    *,
+    artifact_created_at: str | None = None,
+    now: datetime | None = None,
 ) -> tuple[list[str], ASNLookup | None]:
     """Problems with the current artifact, plus the lookup when it was readable.
+
+    Args:
+        thresholds: Overrides the measured defaults.
+        artifact_created_at: RFC3339 timestamp from the producer run. None skips
+            the recency check, which keeps local runs working; an empty string is
+            a problem. Fail-closed on a missing value belongs to the workflow.
+        now: Recency is evaluated against this, defaulting to the current time.
 
     Returns:
         ``(problems, lookup)``. The lookup is None when the artifact could not be
@@ -83,6 +96,12 @@ def check_health(
             measure(tonight, lookup), record_count, thresholds
         )
     ]
+    if artifact_created_at is not None:
+        stale = artifact_age_problem(
+            artifact_created_at, now or datetime.now(UTC), thresholds
+        )
+        if stale:
+            problems.append(stale)
     committed = committed_addresses()
     if committed:
         problems += [
@@ -192,10 +211,35 @@ def main() -> int:
         action="store_true",
         help="check the artifact and skip the build and drift report",
     )
+    parser.add_argument(
+        "--artifact-created-at",
+        default=None,
+        help="RFC3339 time the producer run built the artifact; omit to skip the "
+        "recency check",
+    )
+    parser.add_argument(
+        "--run-id",
+        default=None,
+        help="producer run id, logged so a verdict can be traced to its artifact",
+    )
     args = parser.parse_args()
 
+    now = datetime.now(UTC)
+    age = (
+        artifact_age_hours(args.artifact_created_at, now)
+        if args.artifact_created_at is not None
+        else None
+    )
+    print(
+        f"asn artifact: run={args.run_id or 'unknown'} "
+        f"age={'unknown' if age is None else f'{age:.2f}h'} "
+        f"ceiling={Thresholds().max_age_hours:.0f}h"
+    )
+
     try:
-        problems, lookup = check_health()
+        problems, lookup = check_health(
+            artifact_created_at=args.artifact_created_at, now=now
+        )
         damaged = 0
         if not problems and args.health_only and lookup is not None:
             damaged = repairable_damage(lookup)

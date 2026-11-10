@@ -16,7 +16,12 @@ from ..config import (
     SOURCE_FILES,
 )
 from .cache import is_cache_fresh, parse_cache_control_max_age
-from .metadata import load_metadata, save_metadata, utc_timestamp
+from .metadata import (
+    load_metadata,
+    record_iptoasn_fetch,
+    save_metadata,
+    utc_timestamp,
+)
 from .retry import make_request_with_retry
 from .urls import get_tld_file_path, get_tld_page_url
 
@@ -262,9 +267,8 @@ def download_iptoasn() -> str:
                     f.write(response.content)
                 size_mb = len(response.content) / (1024 * 1024)
                 logger.info("  → %s (%.1f MB)", filepath, size_mb)
-                metadata = load_metadata()
-                metadata["IPTOASN"] = {"last_downloaded": utc_timestamp()}
-                save_metadata(metadata)
+                stamp = utc_timestamp()
+                record_iptoasn_fetch(checked_at=stamp, downloaded_at=stamp)
                 return "downloaded"
             else:
                 logger.error("HTTP %d for %s", response.status_code, IPTOASN_URL)

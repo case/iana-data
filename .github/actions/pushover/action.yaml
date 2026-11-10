@@ -18,12 +18,10 @@ runs:
   steps:
     - name: Send Pushover notification
       shell: bash
-      run: |
-        curl -Ss --fail-with-body --max-time 15 -X POST -H 'Content-type: application/json' \
-          --data '{
-            "token": "${{ inputs.pushover_api_token }}",
-            "user": "${{ inputs.pushover_user_key }}",
-            "title": "${{ inputs.title }}",
-            "message": "${{ inputs.message }}"
-          }' \
-          https://api.pushover.net/1/messages.json
+      env:
+        PUSHOVER_API_TOKEN: ${{ inputs.pushover_api_token }}
+        PUSHOVER_USER_KEY: ${{ inputs.pushover_user_key }}
+        PUSHOVER_TITLE: ${{ inputs.title }}
+        PUSHOVER_MESSAGE: ${{ inputs.message }}
+      # Inputs travel as environment, never templated into the script text.
+      run: '"$GITHUB_ACTION_PATH/../../../bin/ci-send-pushover"'

@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Send one Pushover notification from the PUSHOVER_* environment variables.
+# Fields reach curl as arguments, so shell syntax in a title or message stays text.
+set -euo pipefail
+
+: "${PUSHOVER_API_TOKEN:?PUSHOVER_API_TOKEN is required}"
+: "${PUSHOVER_USER_KEY:?PUSHOVER_USER_KEY is required}"
+: "${PUSHOVER_TITLE:?PUSHOVER_TITLE is required}"
+: "${PUSHOVER_MESSAGE:?PUSHOVER_MESSAGE is required}"
+
+curl -Ss --fail-with-body --max-time 15 \
+  --data-urlencode "token=$PUSHOVER_API_TOKEN" \
+  --data-urlencode "user=$PUSHOVER_USER_KEY" \
+  --data-urlencode "title=$PUSHOVER_TITLE" \
+  --data-urlencode "message=$PUSHOVER_MESSAGE" \
+  "${PUSHOVER_URL:-https://api.pushover.net/1/messages.json}"

@@ -118,13 +118,27 @@ jobs:
         id: get-iptoasn-run
         continue-on-error: true
         run: |
-          RUN_ID=$(gh run list --workflow=update-iptoasn.yaml --status=success --limit=1 --json databaseId -q '.[0].databaseId')
-          if [ -z "$RUN_ID" ]; then
+          # One -q: a repeated flag overwrites rather than accumulating, and two
+          # gh calls could pair one run's id with another's timestamp.
+          result=$(gh run list --workflow=update-iptoasn.yaml --status=success --branch main --limit=1 \
+            --json databaseId,updatedAt -q '.[0] | "\(.databaseId) \(.updatedAt)"')
+          RUN_ID="${result%% *}"
+          UPDATED_AT="${result##* }"
+          if [ -z "$RUN_ID" ] || [ -z "$UPDATED_AT" ] || [ "$RUN_ID" = "$UPDATED_AT" ]; then
             echo "::error::No successful update-iptoasn run found; cannot fetch required iptoasn data"
             exit 1
           fi
+          # merge-multiple is last-writer-wins, so two artifacts on one run (a
+          # rerun on a later date) would pair old bytes with a fresh timestamp.
+          COUNT=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$RUN_ID/artifacts" \
+            --jq '[.artifacts[] | select(.name | startswith("iptoasn-")) | select(.expired == false)] | length')
+          if [ "$COUNT" != "1" ]; then
+            echo "::error::run $RUN_ID carries $COUNT unexpired iptoasn artifacts, expected exactly 1"
+            exit 1
+          fi
           echo "run_id=$RUN_ID" >> "$GITHUB_OUTPUT"
-          echo "Found successful iptoasn workflow run: $RUN_ID"
+          echo "updated_at=$UPDATED_AT" >> "$GITHUB_OUTPUT"
+          echo "Found successful iptoasn workflow run: $RUN_ID, artifact built $UPDATED_AT"
         env:
           GH_TOKEN: ${{ github.token }}
 
@@ -254,10 +268,20 @@ jobs:
         id: asn-health
         continue-on-error: true
         timeout-minutes: 3
+        env:
+          IPTOASN_UPDATED_AT: ${{ steps.get-iptoasn-run.outputs.updated_at }}
+          IPTOASN_RUN_ID: ${{ steps.get-iptoasn-run.outputs.run_id }}
         run: |
           healthy=false
           damaged=false
-          if output=$(./bin/check-asn-drift --health-only 2>&1); then
+          output=""
+          # Fail closed here, not in the checker: an absent timestamp skips its
+          # recency check by design, so the workflow must never pass an empty one.
+          if [ -z "$IPTOASN_UPDATED_AT" ]; then
+            output="UNHEALTHY no producer run timestamp; refusing to judge recency"
+          elif output=$(./bin/check-asn-drift --health-only \
+            --artifact-created-at "$IPTOASN_UPDATED_AT" \
+            --run-id "$IPTOASN_RUN_ID" 2>&1); then
             line=$(printf '%s\n' "$output" | grep '^asn-health:' || true)
             case "$line" in *healthy=true*) healthy=true ;; esac
             case "$line" in *damaged=true*) damaged=true ;; esac
@@ -290,11 +314,29 @@ jobs:
           if [ "$ASN_HEALTHY" = "true" ] &&
              { [ "$SOURCE_CHANGED" = "true" ] || [ "$ASN_DAMAGED" = "true" ]; }; then
             echo "Artifact healthy: full build with ASN refresh"
+            echo "consumed_asn=true" >> "$GITHUB_OUTPUT"
             ./bin/build --all
           else
             echo "Preserving committed ASN (healthy=$ASN_HEALTHY, source_changed=$SOURCE_CHANGED, damaged=$ASN_DAMAGED)"
+            echo "consumed_asn=false" >> "$GITHUB_OUTPUT"
             ./bin/build --preserve-asn
           fi
+
+      # Before the tests, so the tree that ships is the tree that was tested.
+      # last_downloaded moves only on a build that consumed the artifact.
+      - name: Record the iptoasn artifact in metadata
+        if: >-
+          steps.build.outcome == 'success' &&
+          steps.get-iptoasn-run.outcome == 'success' &&
+          steps.download-iptoasn.outcome == 'success'
+        timeout-minutes: 3
+        env:
+          CONSUMED: ${{ steps.build.outputs.consumed_asn }}
+          IPTOASN_UPDATED_AT: ${{ steps.get-iptoasn-run.outputs.updated_at }}
+          IPTOASN_RUN_ID: ${{ steps.get-iptoasn-run.outputs.run_id }}
+        run: |
+          bin/ci-record-iptoasn-fetch --consumed "$CONSUMED" \
+            --downloaded-at "$IPTOASN_UPDATED_AT" --run-id "$IPTOASN_RUN_ID"
 
       - name: Notification if build fails
         if: failure() && steps.build.outcome == 'failure'

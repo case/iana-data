@@ -4,6 +4,8 @@ Each class names the attack it defends. The measured baseline these thresholds
 sit outside: docs/plans/current/2026-09-11-asn-drift-automation.md
 """
 
+from datetime import UTC, datetime, timedelta
+
 import pytest
 
 from src.analyze.asn_health import (
@@ -11,6 +13,7 @@ from src.analyze.asn_health import (
     SENTINEL_LABELS,
     FamilyHealth,
     Thresholds,
+    artifact_age_problem,
     health_problems,
     is_useful_label,
     measure,
@@ -375,3 +378,93 @@ class TestSourcePageAddresses:
 
     def test_an_empty_tree_yields_empty_families(self, tmp_path):
         assert source_page_addresses(tmp_path) == {f: [] for f in FAMILIES}
+
+
+NOW = datetime(2026, 9, 24, 7, 0, tzinfo=UTC)
+
+
+def _stamp(**delta):
+    """A timestamp `delta` before NOW, in the producer's own RFC3339 shape."""
+    return (NOW - timedelta(**delta)).isoformat().replace("+00:00", "Z")
+
+
+class TestArtifactRecency:
+    """A stale artifact reads as healthy, so its labels publish as current."""
+
+    def test_a_fresh_artifact_has_no_problem(self):
+        assert artifact_age_problem(_stamp(hours=3), NOW) is None
+
+    def test_zero_age_is_accepted(self):
+        assert artifact_age_problem(_stamp(hours=0), NOW) is None
+
+    def test_exactly_the_ceiling_is_accepted(self):
+        assert artifact_age_problem(_stamp(hours=40), NOW) is None
+
+    def test_just_over_the_ceiling_is_caught(self):
+        problem = artifact_age_problem(_stamp(hours=40, seconds=1), NOW)
+
+        assert problem is not None
+        assert "40.00h old" in problem
+
+    def test_yesterdays_artifact_is_accepted_at_the_observed_worst_case(self):
+        """37.17h at job start, from the observed producer and nightly offsets."""
+        assert artifact_age_problem(_stamp(hours=37, minutes=10), NOW) is None
+
+    def test_yesterdays_artifact_is_accepted_on_a_slow_scrape_night(self):
+        """Job start plus the ~2.2h scrape; 0.6h of margin against the ceiling."""
+        assert artifact_age_problem(_stamp(hours=39, minutes=24), NOW) is None
+
+    def test_an_artifact_two_cycles_old_is_caught(self):
+        """40.73h, the floor for the day-before artifact. An age gate cannot say why."""
+        assert artifact_age_problem(_stamp(hours=40, minutes=44), NOW) is not None
+
+    def test_an_empty_timestamp_is_a_problem_not_a_skip(self):
+        problem = artifact_age_problem("", NOW)
+
+        assert problem is not None
+        assert "empty" in problem
+
+    def test_a_whitespace_timestamp_is_a_problem(self):
+        assert artifact_age_problem("   ", NOW) is not None
+
+    def test_an_unparseable_timestamp_is_a_problem(self):
+        problem = artifact_age_problem("not-a-date", NOW)
+
+        assert problem is not None
+        assert "unparseable" in problem
+
+    def test_a_timezone_naive_timestamp_is_a_problem(self):
+        problem = artifact_age_problem("2026-09-24T03:36:05", NOW)
+
+        assert problem is not None
+        assert "no timezone" in problem
+
+    def test_a_trailing_z_parses(self):
+        assert artifact_age_problem("2026-09-24T04:00:00Z", NOW) is None
+
+    def test_an_offset_timestamp_parses(self):
+        assert artifact_age_problem("2026-09-24T05:00:00+02:00", NOW) is None
+
+    def test_clock_skew_inside_the_tolerance_is_accepted(self):
+        assert artifact_age_problem(_stamp(minutes=-4), NOW) is None
+
+    def test_a_future_timestamp_beyond_the_tolerance_is_caught(self):
+        problem = artifact_age_problem(_stamp(hours=-6), NOW)
+
+        assert problem is not None
+        assert "in the future" in problem
+
+    def test_a_far_future_timestamp_cannot_satisfy_the_ceiling(self):
+        """A year-2099 stamp passes `age <= ceiling`; only the lower bound stops it."""
+        assert artifact_age_problem("2099-01-01T00:00:00Z", NOW) is not None
+
+    def test_the_ceiling_is_overridable(self):
+        tight = Thresholds(max_age_hours=6.0)
+
+        assert artifact_age_problem(_stamp(hours=8), NOW, tight) is not None
+        assert artifact_age_problem(_stamp(hours=8), NOW) is None
+
+    def test_the_skew_tolerance_is_overridable(self):
+        wide = Thresholds(max_clock_skew_minutes=600.0)
+
+        assert artifact_age_problem(_stamp(hours=-6), NOW, wide) is None

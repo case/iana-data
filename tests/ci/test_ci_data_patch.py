@@ -751,6 +751,37 @@ class TestTimeoutBudgets:
                 )
         assert checked >= 4, f"only {checked} jobs inspected; the guard is vacuous"
 
+    def test_the_iptoasn_fetch_is_bounded(self):
+        """An unbounded curl can burn the runner cap before failure() can alert."""
+        text = (REPO_ROOT / ".github" / "workflows" / "update-iptoasn.yaml").read_text()
+
+        assert "--max-time" in text
+
+
+class TestActionPins:
+    """jactionlint requires SHA pins; this adds that each action has only one."""
+
+    # No YAML parser is a dependency here; a `uses:` value is one plain scalar.
+    USES = re.compile(r"^\s*(?:- )?uses: (?!\./)(\S+?)@(\S+)", re.MULTILINE)
+
+    def _pins(self):
+        pins: dict[str, set[str]] = {}
+        root = REPO_ROOT / ".github"
+        files = [*(root / "workflows").glob("*.yaml"), *root.glob("actions/*/*.yaml")]
+        for path in sorted(files):
+            for action, ref in self.USES.findall(path.read_text()):
+                pins.setdefault(action, set()).add(f"{ref} ({path.name})")
+        return pins
+
+    def test_each_action_uses_one_sha_everywhere(self):
+        """Matching pins bump forward together in one Dependabot group."""
+        split = {
+            action: sorted(uses)
+            for action, uses in self._pins().items()
+            if len({use.split(" ")[0] for use in uses}) > 1
+        }
+        assert not split, f"pinned to more than one ref: {split}"
+
 
 class TestOwnership:
     def test_refuses_a_branch_last_committed_by_someone_else(

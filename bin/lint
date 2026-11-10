@@ -19,6 +19,10 @@ if ! command -v dprint > /dev/null; then
   echo "bin/lint: dprint not found; install it (mise install)" >&2
   exit 1
 fi
+if ! command -v jactionlint > /dev/null; then
+  echo "bin/lint: jactionlint not found; install it (mise install)" >&2
+  exit 1
+fi
 
 # Found by shebang, so a rename or a not-yet-added file cannot drop out of
 # scope. Why: docs/memory/log/2026-09-09-shellcheck-pin.md
@@ -58,6 +62,8 @@ group "JSON: parse + canonical format (whole repo)" \
   uv run python bin/lint-json.py
 group "Formatting: dprint check (whole repo, per dprint.json)" \
   dprint check
+group "GitHub Actions: jactionlint (workflows, actions, dependabot)" \
+  jactionlint --profile default --no-online
 
 printf '\n'
 if [ ${#failed[@]} -eq 0 ]; then
