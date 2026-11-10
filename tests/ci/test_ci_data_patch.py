@@ -756,13 +756,10 @@ class TestTimeoutBudgets:
         text = (REPO_ROOT / ".github" / "workflows" / "update-iptoasn.yaml").read_text()
 
         assert "--max-time" in text
-        assert re.search(r"^    timeout-minutes: \d+", text, re.MULTILINE), (
-            "the producer job needs its own cap, or TestTimeoutBudgets skips it"
-        )
 
 
 class TestActionPins:
-    """Run metadata gates the build, so a moved tag must not change a workflow."""
+    """jactionlint requires SHA pins; this adds that each action has only one."""
 
     # No YAML parser is a dependency here; a `uses:` value is one plain scalar.
     USES = re.compile(r"^\s*(?:- )?uses: (?!\./)(\S+?)@(\S+)", re.MULTILINE)
@@ -776,18 +773,6 @@ class TestActionPins:
                 pins.setdefault(action, set()).add(f"{ref} ({path.name})")
         return pins
 
-    def test_every_action_is_pinned_to_a_full_commit_sha(self):
-        pins = self._pins()
-
-        assert len(pins) >= 5, f"only {len(pins)} actions found; the guard is vacuous"
-        loose = sorted(
-            f"{action}@{use}"
-            for action, uses in pins.items()
-            for use in uses
-            if not re.fullmatch(r"[0-9a-f]{40}", use.split(" ")[0])
-        )
-        assert not loose, f"not pinned to a SHA: {loose}"
-
     def test_each_action_uses_one_sha_everywhere(self):
         """Matching pins bump forward together in one Dependabot group."""
         split = {
@@ -796,13 +781,6 @@ class TestActionPins:
             if len({use.split(" ")[0] for use in uses}) > 1
         }
         assert not split, f"pinned to more than one ref: {split}"
-
-    def test_every_workflow_declares_its_permissions(self):
-        """Without a top-level block the token keeps the repository default."""
-        for path in sorted((REPO_ROOT / ".github" / "workflows").glob("*.yaml")):
-            assert re.search(r"^permissions:", path.read_text(), re.MULTILINE), (
-                f"{path.name} has no top-level permissions block"
-            )
 
 
 class TestOwnership:

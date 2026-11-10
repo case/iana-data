@@ -77,12 +77,15 @@ against a nightly `last_checked`. A preserve night is iptoasn's 304: `last_check
 clears it, since bytes fetched from upstream are not attributable to a producer run.
 
 `bin/ci-record-iptoasn-fetch` owns the write, gated on the build having consumed the artifact.
+`last_checked` is stamped when that step runs, up to about two hours after the download; daily
+granularity is all it is for. The step exits non-zero if the entry did not reach disk, because
+`save_metadata` only logs a failed write.
 It cannot live in the build: `test_build_does_not_rewrite_iptoasn_metadata` pins that boundary.
 
 ## Action pins match across workflows
 
 The producer's run metadata is now a gate input, so `update-iptoasn.yaml` and `tests.yaml` pin every
 action to a full SHA, the same one the other workflows use, and the producer starts from
-`permissions: {}`. `TestActionPins` fails on a tag pin or on one action pinned to two SHAs, which keeps
+`permissions: {}`. `jactionlint` fails on a tag pin and `TestActionPins` on one action pinned to two SHAs, which keeps
 the Dependabot `github-actions` group bumping them together. `workflows-disabled/` is out of scope:
 nothing runs it and Dependabot does not scan it.

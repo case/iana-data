@@ -43,5 +43,5 @@ local action already requires.
 
 ## Action pins
 
-`TestActionPins` holds every action to a full SHA and to one SHA across workflows. See
+`jactionlint` rejects a tag pin; `TestActionPins` adds that each action has one SHA across workflows. See
 [iptoasn freshness](2026-09-24-iptoasn-freshness.md#action-pins-match-across-workflows).

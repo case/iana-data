@@ -64,6 +64,14 @@ def test_a_preserve_night_records_only_last_checked(metadata_file, monkeypatch):
     assert "run_id" not in entry
 
 
+def test_a_failed_write_exits_nonzero(metadata_file, monkeypatch, capsys):
+    """A metadata file that cannot be written must fail the nightly step."""
+    metadata_file.mkdir()
+
+    assert _run(monkeypatch) == 1
+    assert "::error::" in capsys.readouterr().out
+
+
 @pytest.mark.parametrize(
     "args",
     [

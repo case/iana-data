@@ -312,3 +312,11 @@ class TestRecordIptoasnFetch:
         record_iptoasn_fetch(checked_at="2026-09-24T09:00:00Z")
 
         assert json.loads(path.read_text())["IPTOASN"]["run_id"] == "111"
+
+    def test_a_write_that_did_not_land_raises(self, tmp_path, monkeypatch):
+        """save_metadata only logs a failed write; the nightly needs a non-zero exit."""
+        path = self._metadata(tmp_path, monkeypatch)
+        path.mkdir()
+
+        with pytest.raises(OSError, match="not written"):
+            record_iptoasn_fetch(checked_at="2026-09-24T07:10:00Z")

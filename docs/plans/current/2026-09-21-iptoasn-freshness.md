@@ -201,7 +201,8 @@ when the data now in hand was obtained upstream. Only the observer differs.
 Keeping it removes work rather than adding it - no rename, no schema change, no `README.md:101`
 rewrite for that field, and no deprecation window.
 
-- [x] `last_checked` moves on every night an artifact was pulled; `last_downloaded` and `run_id` move
+- [x] `last_checked` moves on every night an artifact was pulled, stamped when the nightly records
+      the fetch after its build rather than at download; `last_downloaded` and `run_id` move
       only when the build consumed it. This is the convention the file already follows, which
       `ROOT_ZONE_DB` demonstrates by sitting ten months stale against a nightly `last_checked`. A
       preserve night is iptoasn's 304

@@ -50,7 +50,7 @@ def main() -> int:
             downloaded_at=args.downloaded_at,
             run_id=args.run_id,
         )
-    except ValueError as exc:
+    except (ValueError, OSError) as exc:
         print(f"::error::{exc}")
         return 1
     consumed = "and consumed" if args.downloaded_at else "not consumed"

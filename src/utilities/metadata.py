@@ -47,7 +47,9 @@ def record_iptoasn_fetch(
     """Record an iptoasn artifact fetch, merging into any existing entry.
 
     Args:
-        checked_at: When the artifact was pulled. Moves on every fetch.
+        checked_at: When the caller recorded this fetch. A direct download
+            passes its download time; the nightly passes the time after its
+            build. Moves on every fetch.
         downloaded_at: When the artifact now in hand was obtained. Supplied only
             when the artifact fed the build, so a preserve night leaves the
             previous value in place, matching this file's convention that
@@ -58,6 +60,8 @@ def record_iptoasn_fetch(
 
     Raises:
         ValueError: If ``run_id`` is given without ``downloaded_at``.
+        OSError: If the entry is not on disk afterwards. ``save_metadata`` only
+            logs a failed write, which its download callers rely on.
     """
     if run_id is not None and downloaded_at is None:
         raise ValueError("run_id needs downloaded_at; alone it names no artifact")
@@ -72,6 +76,8 @@ def record_iptoasn_fetch(
             entry["run_id"] = run_id
     metadata["IPTOASN"] = entry
     save_metadata(metadata)
+    if load_metadata().get("IPTOASN") != entry:
+        raise OSError(f"IPTOASN metadata was not written to {METADATA_FILE}")
 
 
 def save_metadata(metadata: MetadataDict) -> None:
