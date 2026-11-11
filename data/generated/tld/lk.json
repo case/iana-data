@@ -1,18 +1,20 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-07T22:58:14Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "lk",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
     "orgs": {
       "iana": {
-        "sponsor": "Council for Information Technology\nLK Domain Registrar",
+        "sponsor": "Council for Information Technology LK Domain Registrar",
         "admin": "LK Domain Registry",
         "tech": "LK Domain Registry"
       }
@@ -34,6 +36,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 11103,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "7501eacaa82e0c06362c68bcdb7f794d5c050eac50417c298884ad69cb3055d4"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "d.nic.lk",

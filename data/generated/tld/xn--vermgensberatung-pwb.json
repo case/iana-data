@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--vermgensberatung-pwb",
     "tld_unicode": "vermögensberatung",
     "tld_script": "Latin",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -32,11 +34,14 @@
     },
     "registry_url": "http://www.dvag-registry.de",
     "whois_server": "whois.nic.xn--vermgensberatung-pwb",
-    "rdap_server": "https://rdap.centralnic.com/xn--vermgensberatung-pwb",
+    "rdap_server": "https://rdap.centralnic.com/xn--vermgensberatung-pwb/",
     "tld_created": "2014-09-18",
     "tld_updated": [
       "2023-10-16"
     ],
+    "events": {
+      "delegation": "2014-09-27"
+    },
     "annotations": {
       "iana_tech_alias": "CentralNic",
       "iana_tech_slug": "centralnic",
@@ -46,6 +51,8 @@
         "non_sponsored"
       ],
       "icann_translation_en": "financial advice",
+      "iana_translation_en": "financial advice",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -53,8 +60,23 @@
         "centralnic"
       ],
       "language_code": "de",
-      "language_name_en": "German"
+      "language_name_en": "German",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 30509,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "b1d9b6e7e50bd1ac597183b160050a398919dde4a33fac3714bccaedd4bfd2ef"
+      },
+      {
+        "key_tag": 64685,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "aafbcb4c8bb1cd236d7cd0ea943987f94de28cb6da343813af260076d97828a1"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.xn--vermgensberatung-pwb",

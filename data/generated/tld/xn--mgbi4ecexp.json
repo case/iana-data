@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--mgbi4ecexp",
     "tld_unicode": "كاثوليك",
     "tld_script": "Arabic",
+    "tld_script_code": "Arab",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -37,6 +39,9 @@
     "tld_updated": [
       "2023-12-21"
     ],
+    "events": {
+      "delegation": "2016-12-01"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -45,6 +50,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "catholic",
+      "iana_translation_en": "Catholic",
+      "iana_transliteration": "katholik",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -52,8 +60,17 @@
         "ultradns"
       ],
       "language_code": "ar",
-      "language_name_en": "Arabic"
+      "language_name_en": "Arabic",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 5914,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "308b25083f486a76906992484720bd2f9f944fcb49111512ea95957417f3c03d"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.xn--mgbi4ecexp",

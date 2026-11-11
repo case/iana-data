@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-19T03:21:21Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "sncf",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "http://www.sncf.com",
     "whois_server": "whois.nic.sncf",
-    "rdap_server": "https://rdap.nic.sncf",
+    "rdap_server": "https://rdap.nic.sncf/",
     "tld_created": "2015-05-08",
     "tld_updated": [
       "2026-08-18"
     ],
+    "events": {
+      "delegation": "2015-06-03"
+    },
     "annotations": {
       "iana_tech_alias": "AFNIC.fr",
       "iana_tech_slug": "afnic",
@@ -44,6 +49,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "AFNIC.fr",
         "Netnod AB",
@@ -55,6 +61,14 @@
         "packet-clearing-house"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 16126,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "81ad0ee1a4de6523b159c6b73fa0c4c0d0ce96d591e4b47632346e33c01cde86"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "d.nic.fr",

@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "aarp",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -29,11 +31,14 @@
       }
     },
     "whois_server": "whois.nic.aarp",
-    "rdap_server": "https://rdap.nic.aarp",
+    "rdap_server": "https://rdap.nic.aarp/",
     "tld_created": "2015-10-22",
     "tld_updated": [
       "2024-08-23"
     ],
+    "events": {
+      "delegation": "2015-11-03"
+    },
     "annotations": {
       "iana_tech_alias": "GoDaddy Registry",
       "iana_tech_slug": "godaddy-registry",
@@ -43,6 +48,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -50,6 +56,14 @@
         "ultradns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 26254,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "bff5bd7c3f7a468cdcc7caf66e978a5d9b5211f39241039a5218b82aa62fb6c6"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.aarp",

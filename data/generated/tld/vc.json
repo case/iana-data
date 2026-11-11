@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "vc",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -14,14 +16,14 @@
       "iana": {
         "sponsor": "Ministry of Telecommunications, Science, Technology and Industry",
         "admin": "Ministry of Telecommunications, Science, Technology and Industry",
-        "tech": "Identity Digital Inc."
+        "tech": "Identity Digital Limited"
       }
     },
     "whois_server": "whois.identitydigital.services",
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "1991-09-03",
     "tld_updated": [
-      "2024-07-09"
+      "2026-11-04"
     ],
     "annotations": {
       "iana_tech_alias": "Identity Digital",
@@ -36,6 +38,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 40792,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "44dd3a9aaf598db49a9a5c23ca7c9b7e3f1fc2b8a5aeb364e8ca0e441f75f9a5"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a0.cctld.afilias-nst.info",

@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "oracle",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -14,7 +16,7 @@
       "iana": {
         "sponsor": "Oracle Corporation",
         "admin": "Markmonitor Inc.",
-        "tech": "Identity Digital Inc."
+        "tech": "Identity Digital Limited"
       },
       "icann": {
         "registry_operator": "Oracle Corporation",
@@ -32,8 +34,11 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "2015-01-15",
     "tld_updated": [
-      "2024-02-09"
+      "2026-11-09"
     ],
+    "events": {
+      "delegation": "2015-03-03"
+    },
     "annotations": {
       "iana_tech_alias": "Identity Digital",
       "iana_tech_slug": "identity-digital",
@@ -43,6 +48,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Identity Digital"
       ],
@@ -50,6 +56,20 @@
         "identity-digital"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 51169,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "43a2fd7b6df137824c6ee5b145ad5fa8664600165ef0c9772b1d286bcda63873"
+      },
+      {
+        "key_tag": 46726,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "bd5ce61fdcd7e3a558182d19875ffee39d6f00ffb7a82aa29769e6f063429893"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a0.nic.oracle",

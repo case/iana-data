@@ -1,15 +1,17 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-11T03:43:07Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--clchc0ea0b2g2a9gcd",
     "tld_unicode": "சிங்கப்பூர்",
     "tld_script": "Tamil",
+    "tld_script_code": "Taml",
     "tld_iso": "sg",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -27,9 +29,14 @@
     "tld_updated": [
       "2026-02-11"
     ],
+    "events": {
+      "delegation": "2011-02-08"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "country_name_iso": "Singapore",
+      "iana_translation_en": "Singapore",
+      "iana_transliteration": "cinkappur",
       "as_org_aliases": [
         "APNIC",
         "CIRA.ca",
@@ -44,8 +51,17 @@
       ],
       "geographic_scope": "country",
       "language_code": "ta",
-      "language_name_en": "Tamil"
+      "language_name_en": "Tamil",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 47752,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "f76b1d7f3857a37138b77beed55b38160ee01fc53dae8dedb41b91b4c443be71"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "dsany2.sgnic.sg",

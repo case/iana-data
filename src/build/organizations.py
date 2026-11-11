@@ -21,7 +21,7 @@ _DESCRIPTION = (
 )
 
 _SOURCES = [
-    "data/source/iana-root.html (IANA)",
+    "data/source/iana-tlds.json (IANA)",
     "data/source/icann-gtlds.json (ICANN)",
     "data/source/iptoasn/ip2asn-combined.tsv.gz (ASN routing data)",
     "data/manual/organizations.json (editorial)",

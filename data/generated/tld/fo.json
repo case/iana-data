@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-07T22:58:14Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "fo",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -19,7 +21,7 @@
     },
     "registry_url": "http://www.nic.fo/",
     "whois_server": "whois.nic.fo",
-    "rdap_server": "https://rdap.centralnic.com/fo",
+    "rdap_server": "https://rdap.centralnic.com/fo/",
     "tld_created": "1993-05-14",
     "tld_updated": [
       "2026-02-13"
@@ -39,6 +41,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 14231,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "2828b71e13a64b57b7bb68c56519d583597bec04ef2721d967622223f4ccf36b"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.fo",

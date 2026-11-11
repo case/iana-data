@@ -14,7 +14,9 @@ from pathlib import Path
 import pytest
 
 from src.analyze.asn_health import Thresholds
+from src.parse.iana_tlds_json import IanaTldsError, parse_iana_tlds
 from src.parse.iptoasn import ASNLookup, ASNRecord
+from tests.iana_tlds_documents import document, domain
 
 
 def _asn_record(start, end, org, asn=64500):
@@ -385,8 +387,8 @@ class TestCheckHealthEndToEnd:
         )
         monkeypatch.setattr(
             detector,
-            "source_page_addresses",
-            lambda _: {"ipv4": ["1.0.0.5"], "ipv6": []},
+            "current_addresses",
+            lambda: {"ipv4": ["1.0.0.5"], "ipv6": []},
         )
         monkeypatch.setattr(detector, "committed_addresses", dict)
 
@@ -413,7 +415,7 @@ class TestCheckHealthEndToEnd:
             "ipv4": [f"10.{i // 256}.{i % 256}.1" for i in range(4100)],
             "ipv6": [f"2001:db8:{i:x}::1" for i in range(3900)],
         }
-        monkeypatch.setattr(detector, "source_page_addresses", lambda _: addresses)
+        monkeypatch.setattr(detector, "current_addresses", lambda: addresses)
         monkeypatch.setattr(detector, "committed_addresses", lambda: addresses)
 
         problems, lookup = detector.check_health(
@@ -431,7 +433,7 @@ class TestCheckHealthEndToEnd:
             detector, "get_iptoasn_path", lambda: self._artifact(tmp_path, VALID_ROWS)
         )
         monkeypatch.setattr(
-            detector, "source_page_addresses", lambda _: {"ipv4": [], "ipv6": []}
+            detector, "current_addresses", lambda: {"ipv4": [], "ipv6": []}
         )
         monkeypatch.setattr(
             detector, "committed_addresses", lambda: {"ipv4": ["1.0.0.5"], "ipv6": []}
@@ -439,7 +441,7 @@ class TestCheckHealthEndToEnd:
 
         problems, _ = detector.check_health()
 
-        assert [p for p in problems if p.startswith("current TLD pages:")]
+        assert [p for p in problems if p.startswith("current TLD records:")]
         assert [p for p in problems if p.startswith("committed graph:")]
 
 
@@ -488,6 +490,38 @@ class TestBuildErrorReturn:
 
         assert detector.main() == detector.ERROR
         assert "asn-health: healthy=false" in capsys.readouterr().out
+
+
+class TestCurrentAddresses:
+    """Tonight's population comes from the IANA TLD JSON, and fails closed."""
+
+    def test_it_reads_the_nameservers_of_the_json_records(self, monkeypatch):
+        records = parse_iana_tlds(document(domain()))
+        monkeypatch.setattr(detector, "load_iana_tlds", lambda: records)
+
+        assert detector.current_addresses() == {
+            "ipv4": ["192.0.2.1"],
+            "ipv6": ["2001:db8::1"],
+        }
+
+    def test_a_malformed_json_exits_2_rather_than_measuring_nothing(
+        self, monkeypatch, tmp_path, capsys
+    ):
+        artifact = tmp_path / "artifact.gz"
+        with gzip.open(artifact, "wt", encoding="utf-8") as handle:
+            handle.write(VALID_ROWS)
+        monkeypatch.setattr(detector, "get_iptoasn_path", lambda: artifact)
+
+        def malformed():
+            raise IanaTldsError("domains is empty")
+
+        monkeypatch.setattr(detector, "load_iana_tlds", malformed)
+        monkeypatch.setattr("sys.argv", ["check-asn-drift", "--health-only"])
+
+        assert detector.main() == detector.ERROR
+        out = capsys.readouterr().out
+        assert "domains is empty" in out
+        assert "asn-health: healthy=false" in out
 
 
 class TestRecoveryDoesNotOscillate:
@@ -624,7 +658,7 @@ class TestRecencyWiring:
         with gzip.open(path, "wt", encoding="utf-8") as handle:
             handle.write(VALID_ROWS)
         monkeypatch.setattr(detector, "get_iptoasn_path", lambda: path)
-        monkeypatch.setattr(detector, "source_page_addresses", lambda _: {})
+        monkeypatch.setattr(detector, "current_addresses", dict)
         monkeypatch.setattr(detector, "committed_addresses", dict)
 
     def _stamp(self, **delta):

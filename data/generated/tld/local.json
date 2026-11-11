@@ -1,0 +1,18 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-11-11T03:06:23Z",
+  "sources": {
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "local",
+    "tld_script_code": "Latn",
+    "status": "reserved",
+    "delegated": false,
+    "iana_tag": "special-use",
+    "type": "special-use",
+    "purpose": "Used by Multicast DNS (mDNS) to allow devices to find each other on local networks",
+    "remarks": "The .local domain is used for Multicast DNS (mDNS), allowing devices to find each other on local networks without needing a central DNS server. Commonly used by services like Bonjour/ZeroConf, it helps discover devices like printer.local or speaker.local connected to your local network.\r\n\r\nFor further information, see [Multicast DNS](https://www.iana.org/go/rfc6762) (RFC 6762)."
+  }
+}

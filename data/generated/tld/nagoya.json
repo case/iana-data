@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "nagoya",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2019-08-20"
     ],
+    "events": {
+      "delegation": "2014-01-29"
+    },
     "annotations": {
       "iana_sponsor_alias": "GMO Registry",
       "iana_sponsor_slug": "gmo-registry",
@@ -49,6 +54,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -57,6 +63,14 @@
       ],
       "geographic_scope": "city"
     },
+    "ds_records": [
+      {
+        "key_tag": 44545,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "c856432f455a59b06c6964821f01a64fc0957dcb854eb10435e79caeb6c2486d"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.gmoregistry.net",

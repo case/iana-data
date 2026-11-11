@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "icbc",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2024-12-12"
     ],
+    "events": {
+      "delegation": "2015-05-13"
+    },
     "annotations": {
       "iana_tech_alias": "ZDNS",
       "iana_tech_slug": "zdns",
@@ -44,6 +49,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "ZDNS"
       ],
@@ -51,6 +57,14 @@
         "zdns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 52120,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "36fd8acb79ed5963abd523bb73b5c9fa39f8d206ed2488436d1795b1228766ee"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.zdnscloud.cn",

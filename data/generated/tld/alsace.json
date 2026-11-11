@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-05T03:36:57Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "alsace",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "https://www.mondomaine.alsace",
     "whois_server": "whois.nic.alsace",
-    "rdap_server": "https://rdap.nic.alsace",
+    "rdap_server": "https://rdap.nic.alsace/",
     "tld_created": "2014-09-18",
     "tld_updated": [
       "2026-08-04"
     ],
+    "events": {
+      "delegation": "2014-10-04"
+    },
     "annotations": {
       "iana_tech_alias": "AFNIC.fr",
       "iana_tech_slug": "afnic",
@@ -43,6 +48,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "AFNIC.fr",
         "Netnod AB",
@@ -55,6 +61,14 @@
       ],
       "geographic_scope": "subdivision"
     },
+    "ds_records": [
+      {
+        "key_tag": 6291,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "49dda30e62091f08c72b6dd7a3c99ecd70f46ed3cce811be8d8209246ac04547"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "d.nic.fr",

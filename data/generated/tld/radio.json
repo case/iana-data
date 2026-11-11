@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-10T07:29:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "radio",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2026-09-09"
     ],
+    "events": {
+      "delegation": "2016-10-12"
+    },
     "annotations": {
       "iana_tech_alias": "CentralNic",
       "iana_tech_slug": "centralnic",
@@ -44,6 +49,7 @@
         "community",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -51,6 +57,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 62727,
+        "algorithm": 10,
+        "digest_type": 2,
+        "digest": "3863e4a0c36a262785c1703b5cff54cdbd56cd40bb414b45599848ce972e26b9"
+      },
+      {
+        "key_tag": 8022,
+        "algorithm": 10,
+        "digest_type": 2,
+        "digest": "0803cb1e944b9a6416d0e2f7a071d03a87754b0804f8833f63d250dd080a5590"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.radio",

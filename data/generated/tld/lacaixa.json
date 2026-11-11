@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "lacaixa",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,12 +37,16 @@
     "tld_updated": [
       "2026-05-11"
     ],
+    "events": {
+      "delegation": "2014-07-18"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Knipp Medien"
       ],
@@ -48,6 +54,14 @@
         "knipp-medien"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 36309,
+        "algorithm": 10,
+        "digest_type": 2,
+        "digest": "1472bab3ddf6ca893b478bb871e9c9a21c0e01d468c9a9117771e29bcc93d1b9"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "anycast10.irondns.net",

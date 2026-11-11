@@ -1,19 +1,20 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "cba",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
     "orgs": {
       "iana": {
         "sponsor": "COMMONWEALTH BANK OF AUSTRALIA",
-        "admin": "Ground Floor",
         "tech": "COMMONWEALTH BANK OF AUSTRALIA"
       },
       "icann": {
@@ -35,6 +36,9 @@
     "tld_updated": [
       "2026-08-04"
     ],
+    "events": {
+      "delegation": "2015-06-22"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -42,6 +46,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -49,6 +54,14 @@
         "ultradns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 31729,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "84871955bc863e5911b72369b1d1eb75ff087a8093edb4ba4bfb48f95813c034"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.cba",

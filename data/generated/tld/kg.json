@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-07T22:58:14Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "kg",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -35,6 +37,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 45982,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "d642af8c9bb761e035ce77a48750bbaa64b41cfa0799d8d94498cfa335fa1380"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "kg.cctld.authdns.ripe.net",

@@ -1,19 +1,21 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-11T03:43:07Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "cr",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
     "orgs": {
       "iana": {
         "sponsor": "National Academy of Sciences (Academia Nacional de Ciencias)",
-        "admin": "National Academy of Sciences\nAcademia Nacional de Ciencias",
+        "admin": "National Academy of Sciences Academia Nacional de Ciencias",
         "tech": "National Academy of Sciences Academia Nacional de Ciencias"
       }
     },
@@ -43,6 +45,20 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 52616,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "32a4e37fd3637311376a54e6aaa0dadbe15a2c2f28e5c8cea1a2a197d5492a6f"
+      },
+      {
+        "key_tag": 52616,
+        "algorithm": 13,
+        "digest_type": 4,
+        "digest": "410cc5c7602218cf3eebf89cdca774e8741a6a0528f13f956b1cb0a0c51663709a2474a74a9a1c87183d0f401a439248"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.lactld.org",

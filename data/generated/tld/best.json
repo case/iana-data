@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "best",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2026-02-11"
     ],
+    "events": {
+      "delegation": "2014-02-27"
+    },
     "annotations": {
       "iana_tech_alias": "CentralNic",
       "iana_tech_slug": "centralnic",
@@ -43,6 +48,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -50,6 +56,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 41279,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "d0c266b147e9fa7122215ccca36b23d43407bd2f03b2e3b6e917d350b31aa5fd"
+      },
+      {
+        "key_tag": 13966,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "1b34271dc3cac4d1faa279893902bd3330eab9675dab6dba03fd163437e7d12a"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.best",

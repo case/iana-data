@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "bd",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -14,7 +16,7 @@
       "iana": {
         "sponsor": "Posts and Telecommunications Division",
         "admin": "Posts and Telecommunications Division",
-        "tech": "Bangladesh Telecommunications\nCompany Limited (BTCL)"
+        "tech": "Bangladesh Telecommunications Company Limited (BTCL)"
       }
     },
     "registry_url": "https://bdia.btcl.com.bd/",
@@ -32,6 +34,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 7807,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "fee7d4265c78882701e52ec56d56316a985047d0fc24f095ba90f772458cb5ec"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "bd-ns.anycast.pch.net",

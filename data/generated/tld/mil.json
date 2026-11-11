@@ -1,15 +1,23 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-26T07:35:36Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "mil",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
-    "iana_tag": "sponsored",
+    "iana_tag": "generic",
     "type": "gtld",
+    "archived": {
+      "iana_tag": {
+        "value": "sponsored",
+        "archived_on": "2026-11-10"
+      }
+    },
     "orgs": {
       "iana": {
         "sponsor": "DoD Network Information Center",
@@ -20,6 +28,17 @@
     "tld_created": "1985-01-01",
     "tld_updated": [
       "2026-09-25"
+    ],
+    "annotations": {
+      "iana_delegation_round": "pre-icann"
+    },
+    "ds_records": [
+      {
+        "key_tag": 31892,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "6c728f7465c2d5534fdf7d389a9343bdfc7d2bb43e65405c9e1a392b069b1aac"
+      }
     ],
     "nameservers": [
       {

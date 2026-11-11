@@ -1,0 +1,18 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-11-11T03:06:23Z",
+  "sources": {
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "onion",
+    "tld_script_code": "Latn",
+    "status": "reserved",
+    "delegated": false,
+    "iana_tag": "special-use",
+    "type": "special-use",
+    "purpose": "Used to access devices over the Tor network",
+    "remarks": "Used to access devices over the Tor network.\r\n\r\nFor further information, see [The \".onion\" Special-Use Domain Name](https://www.iana.org/go/rfc7686) (RFC 7686)."
+  }
+}

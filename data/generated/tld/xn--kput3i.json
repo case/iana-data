@@ -1,22 +1,23 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-16T08:10:23Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--kput3i",
     "tld_unicode": "手机",
     "tld_script": "Han-CJK",
+    "tld_script_code": "Hani",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
     "orgs": {
       "iana": {
         "sponsor": "Beijing RITT-Net Technology Development Co., Ltd",
-        "admin": "Beijing RITT-Net Technology Development Co., Ltd",
-        "tech": "Building 13, Yard 1, Baosheng South Road"
+        "admin": "Beijing RITT-Net Technology Development Co., Ltd"
       },
       "icann": {
         "registry_operator": "Beijing RITT-Net Technology Development Co., Ltd",
@@ -37,6 +38,9 @@
     "tld_updated": [
       "2025-04-25"
     ],
+    "events": {
+      "delegation": "2014-06-17"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -44,6 +48,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "cell",
+      "iana_translation_en": "cell phone",
+      "iana_transliteration": "shouji",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Microsoft",
         "Teleinfo"
@@ -53,8 +60,23 @@
         "teleinfo"
       ],
       "language_code": "zh",
-      "language_name_en": "Chinese"
+      "language_name_en": "Chinese",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 27565,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "a00d06ba7171102d9575f47af108b70ff9e24ce0d2ed3ad8f8923f14bb58f217"
+      },
+      {
+        "key_tag": 33427,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "c125fe3fc3d32cdac7709cd8b89732578a80ce3d5547b4dcce3c50217bd4864d"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns1.teleinfo.cn",

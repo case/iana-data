@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-10T07:29:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "ir",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -27,6 +29,20 @@
       "country_name_iso": "Iran, Islamic Republic of",
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 47300,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "7ab287956a55abd60dc8697c2049738fd5eeab6f2070152b015d59929521dada"
+      },
+      {
+        "key_tag": 47300,
+        "algorithm": 13,
+        "digest_type": 4,
+        "digest": "fe3a9bfd3aed31cbd1e2f6b45c88d81b5cca68cdc9d46080c1c4afbd491ae3a9f6dfbfc4320111144c375d648ae3cdf6"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.ir",

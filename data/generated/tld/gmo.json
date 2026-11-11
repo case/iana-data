@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "gmo",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2019-08-20"
     ],
+    "events": {
+      "delegation": "2014-05-03"
+    },
     "annotations": {
       "iana_sponsor_alias": "GMO Registry",
       "iana_sponsor_slug": "gmo-registry",
@@ -49,6 +54,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -56,6 +62,14 @@
         "ultradns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 44245,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "a4cd5d4fc4b18dc7162e94a9f9ac801ad4e67a5db3048691bee28e4f2cc7666b"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.gmoregistry.net",

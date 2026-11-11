@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--flw351e",
     "tld_unicode": "谷歌",
     "tld_script": "Han-CJK",
+    "tld_script_code": "Hani",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -36,6 +38,9 @@
     "tld_updated": [
       "2025-04-11"
     ],
+    "events": {
+      "delegation": "2014-11-20"
+    },
     "annotations": {
       "iana_sponsor_alias": "Google",
       "iana_sponsor_slug": "google",
@@ -52,6 +57,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "google",
+      "iana_translation_en": "Google",
+      "iana_transliteration": "guge",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Google"
       ],
@@ -59,8 +67,17 @@
         "google"
       ],
       "language_code": "zh",
-      "language_name_en": "Chinese"
+      "language_name_en": "Chinese",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 48919,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "aaacfe5efe147ef640dba9107a36f9e43bc2b3f736a538a680cd1c01aafe41fb"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns-tld1.charlestonroadregistry.com",

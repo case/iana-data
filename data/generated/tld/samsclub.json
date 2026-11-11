@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "samsclub",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "http://www.samsclub.com",
     "whois_server": "whois.nic.samsclub",
-    "rdap_server": "https://rdap.nic.samsclub",
+    "rdap_server": "https://rdap.nic.samsclub/",
     "tld_created": "2016-07-21",
     "tld_updated": [
       "2024-11-20"
     ],
+    "events": {
+      "delegation": "2016-08-18"
+    },
     "annotations": {
       "iana_sponsor_alias": "Walmart",
       "iana_sponsor_slug": "walmart",
@@ -50,6 +55,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -57,6 +63,20 @@
         "ultradns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 60532,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "3d5123de8729f24800c0715726142c8317b27134af028dc67f541de50903643b"
+      },
+      {
+        "key_tag": 35602,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "29e4496bea5e1cec89fcb45cbd4d9c45d0a024eb2b3bb1245f67ef66ba89d210"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.samsclub",

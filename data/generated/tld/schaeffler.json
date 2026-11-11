@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-09T06:15:40Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "schaeffler",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2023-05-04"
     ],
+    "events": {
+      "delegation": "2015-12-24"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -42,6 +47,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "nic.at",
         "RcodeZero"
@@ -51,6 +57,14 @@
         "rcodezero"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 5269,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "7cb20720c71b7de03c050c85d6a41ec795f90912f8918c4fa5f2ab37c45cdbb7"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.dns.nic.schaeffler",

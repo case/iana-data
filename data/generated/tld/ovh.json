@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-06T05:43:13Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "ovh",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "https://www.ovh.com",
     "whois_server": "whois.nic.ovh",
-    "rdap_server": "https://rdap.nic.ovh",
+    "rdap_server": "https://rdap.nic.ovh/",
     "tld_created": "2014-05-01",
     "tld_updated": [
       "2026-08-05"
     ],
+    "events": {
+      "delegation": "2014-06-19"
+    },
     "annotations": {
       "iana_tech_alias": "AFNIC.fr",
       "iana_tech_slug": "afnic",
@@ -44,6 +49,7 @@
         "community",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "AFNIC.fr",
         "Netnod AB",
@@ -55,6 +61,14 @@
         "packet-clearing-house"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 51966,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "ca942c4051cffd445f83dee1ac0a94e67c0a59e549f2981d4a243d16f2c98f2b"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "d.nic.fr",

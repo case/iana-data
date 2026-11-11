@@ -16,24 +16,35 @@ def test_iana_urls_defined():
     """Test that IANA URLs are properly defined."""
     assert "RDAP_BOOTSTRAP" in IANA_URLS
     assert "TLD_LIST" in IANA_URLS
-    assert "ROOT_ZONE_DB" in IANA_URLS
+    assert "IANA_TLDS" in IANA_URLS
+    assert "IANA_TLDS_SCHEMA" in IANA_URLS
+    assert "ROOT_ZONE_DB" not in IANA_URLS
 
     # Verify URLs are strings and look valid
     assert IANA_URLS["RDAP_BOOTSTRAP"].startswith("https://")
     assert IANA_URLS["TLD_LIST"].startswith("https://")
-    assert IANA_URLS["ROOT_ZONE_DB"].startswith("https://")
+    assert IANA_URLS["IANA_TLDS"] == "https://data.iana.org/TLD/v1/tlds.json"
+    assert IANA_URLS["IANA_TLDS_SCHEMA"] == (
+        "https://data.iana.org/TLD/v1/tlds-schema.json"
+    )
 
 
 def test_source_files_defined():
     """Test that source file names are properly defined."""
     assert "RDAP_BOOTSTRAP" in SOURCE_FILES
     assert "TLD_LIST" in SOURCE_FILES
-    assert "ROOT_ZONE_DB" in SOURCE_FILES
+    assert "ROOT_ZONE_DB" not in SOURCE_FILES
 
     # Verify file names are strings
     assert isinstance(SOURCE_FILES["RDAP_BOOTSTRAP"], str)
     assert isinstance(SOURCE_FILES["TLD_LIST"], str)
-    assert isinstance(SOURCE_FILES["ROOT_ZONE_DB"], str)
+    assert SOURCE_FILES["IANA_TLDS"] == "iana-tlds.json"
+    assert SOURCE_FILES["IANA_TLDS_SCHEMA"] == "iana-tlds-schema.json"
+
+
+def test_every_downloaded_iana_source_has_a_file_name():
+    """The downloader indexes SOURCE_FILES by every IANA_URLS key."""
+    assert set(IANA_URLS) <= set(SOURCE_FILES)
 
 
 def test_directories_defined():

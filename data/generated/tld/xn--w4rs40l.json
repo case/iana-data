@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--w4rs40l",
     "tld_unicode": "嘉里",
     "tld_script": "Han-CJK",
+    "tld_script_code": "Hani",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -37,6 +39,9 @@
     "tld_updated": [
       "2025-12-08"
     ],
+    "events": {
+      "delegation": "2016-05-16"
+    },
     "annotations": {
       "iana_sponsor_alias": "Kerry Trading",
       "iana_sponsor_slug": "kerry-trading",
@@ -53,6 +58,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "kerry",
+      "iana_translation_en": "Kerry",
+      "iana_transliteration": "jiali",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Identity Digital"
       ],
@@ -60,8 +68,17 @@
         "identity-digital"
       ],
       "language_code": "zh",
-      "language_name_en": "Chinese"
+      "language_name_en": "Chinese",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 56524,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "b8c49da52d3bef085a04146ec9c966c341dd0c187019934c7862d57274aa49ce"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "v0n0.nic.xn--w4rs40l",

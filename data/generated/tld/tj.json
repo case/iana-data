@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-09T06:15:40Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "tj",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -20,7 +22,7 @@
     "registry_url": "http://www.nic.tj",
     "tld_created": "1997-12-11",
     "tld_updated": [
-      "2020-03-09"
+      "2026-10-05"
     ],
     "annotations": {
       "country_name_iso": "Tajikistan",
@@ -42,18 +44,6 @@
             "ip": "91.218.160.197",
             "asn": 51346,
             "as_org": "TOJIKTELECOM-AS",
-            "as_country": "TJ"
-          }
-        ],
-        "ipv6": []
-      },
-      {
-        "hostname": "ns2.tojikiston.com",
-        "ipv4": [
-          {
-            "ip": "193.111.11.4",
-            "asn": 24722,
-            "as_org": "BABILON-AS",
             "as_country": "TJ"
           }
         ],
@@ -90,9 +80,9 @@
         ],
         "ipv6": [
           {
-            "ip": "2001:67c:e0::117",
+            "ip": "2a13:27c0:30::117",
             "asn": 0,
-            "as_org": "Not routed",
+            "as_org": "Unknown",
             "as_country": "None"
           }
         ]

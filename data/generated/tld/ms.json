@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-06T05:43:13Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "ms",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -19,7 +21,7 @@
     },
     "registry_url": "http://www.nic.ms",
     "whois_server": "whois.nic.ms",
-    "rdap_server": "https://rdap.nic.ms",
+    "rdap_server": "https://rdap.nic.ms/",
     "tld_created": "1997-03-06",
     "tld_updated": [
       "2026-08-05"
@@ -39,6 +41,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 50317,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "a32757d135853b428cc7825f0bb88fa79f73a2fe497fb4e9f69611cc1687572a"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.lactld.org",

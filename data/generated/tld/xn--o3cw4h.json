@@ -1,15 +1,17 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-07T22:58:14Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--o3cw4h",
     "tld_unicode": "ไทย",
     "tld_script": "Thai",
+    "tld_script_code": "Thai",
     "tld_iso": "th",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -22,14 +24,19 @@
     },
     "registry_url": "http://www.thnic.co.th",
     "whois_server": "whois.thnic.co.th",
-    "rdap_server": "https://rdap.thains.co.th",
+    "rdap_server": "https://rdap.thains.co.th/",
     "tld_created": "2010-08-19",
     "tld_updated": [
       "2025-01-23"
     ],
+    "events": {
+      "delegation": "2010-08-17"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "country_name_iso": "Thailand",
+      "iana_translation_en": "Thai",
+      "iana_transliteration": "thai",
       "as_org_aliases": [
         "Netnod AB",
         "Packet Clearing House"
@@ -40,8 +47,17 @@
       ],
       "geographic_scope": "country",
       "language_code": "th",
-      "language_name_en": "Thai"
+      "language_name_en": "Thai",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 27061,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "53856679ac45ea6562ef4ecd2de7aea57d786870979f09c4bc1d5244c2e2a9c9"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.thains.co.th",

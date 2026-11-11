@@ -1,15 +1,17 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--80ao21a",
     "tld_unicode": "қаз",
     "tld_script": "Cyrillic",
+    "tld_script_code": "Cyrl",
     "tld_iso": "kz",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -26,8 +28,12 @@
     "tld_updated": [
       "2023-03-07"
     ],
+    "events": {
+      "delegation": "2012-03-03"
+    },
     "annotations": {
       "country_name_iso": "Kazakhstan",
+      "iana_transliteration": "kaz",
       "as_org_aliases": [
         "Packet Clearing House"
       ],
@@ -36,8 +42,17 @@
       ],
       "geographic_scope": "country",
       "language_code": "kk",
-      "language_name_en": "Kazakh"
+      "language_name_en": "Kazakh",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 12941,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "1e67e661e644f9c2cc122cf6307ce2ba434a1d3aebec08769bf5a28ec697f8db"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns.nic.kz",

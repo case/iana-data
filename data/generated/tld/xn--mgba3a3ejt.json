@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--mgba3a3ejt",
     "tld_unicode": "ارامكو",
     "tld_script": "Arabic",
+    "tld_script_code": "Arab",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -36,6 +38,9 @@
     "tld_updated": [
       "2024-05-11"
     ],
+    "events": {
+      "delegation": "2015-10-15"
+    },
     "annotations": {
       "iana_tech_alias": "GoDaddy Registry",
       "iana_tech_slug": "godaddy-registry",
@@ -45,6 +50,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "aramco",
+      "iana_translation_en": "Aramco",
+      "iana_transliteration": "aramko",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -52,8 +60,17 @@
         "ultradns"
       ],
       "language_code": "ar",
-      "language_name_en": "Arabic"
+      "language_name_en": "Arabic",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 11089,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "c3a28d5f3c622803433961c5b5769c4df33e5c83abe9d1c2dd78ff4657fc8468"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.xn--mgba3a3ejt",

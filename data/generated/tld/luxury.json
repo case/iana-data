@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "luxury",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2023-10-05"
     ],
+    "events": {
+      "delegation": "2014-01-18"
+    },
     "annotations": {
       "iana_tech_alias": "CentralNic",
       "iana_tech_slug": "centralnic",
@@ -43,6 +48,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -50,6 +56,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 32039,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "deb7fe904a2e04500acc98f3f5b9d6db275139fbc92ebb2938bcf9e842812935"
+      },
+      {
+        "key_tag": 9355,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "0da436d04a11933d6bae25e2aecef3cefcb34e407feb3ba999a7190964f3c3d0"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.luxury",

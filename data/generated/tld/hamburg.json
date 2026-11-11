@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-09T06:15:40Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "hamburg",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2026-05-07"
     ],
+    "events": {
+      "delegation": "2014-06-04"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -42,6 +47,7 @@
         "community",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "nic.at",
         "RcodeZero"
@@ -52,6 +58,26 @@
       ],
       "geographic_scope": "city"
     },
+    "ds_records": [
+      {
+        "key_tag": 12136,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "8bdc8642f1c0275904aea61c126d9d5a5db25881a564348af218eb4165bef7c5"
+      },
+      {
+        "key_tag": 31894,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "0c985a6cbba65067171ebe40e4062058ef01bdd53a2d3321a0c52031755b1bbb"
+      },
+      {
+        "key_tag": 64352,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "fcf7645470d9feaa79704e7c85c15ae34ba3270a6c87666ed54fc2857337ee24"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.dns.nic.hamburg",

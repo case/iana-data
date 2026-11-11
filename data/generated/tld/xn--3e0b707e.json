@@ -1,15 +1,17 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-17T07:39:21Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--3e0b707e",
     "tld_unicode": "한국",
     "tld_script": "Hangul",
+    "tld_script_code": "Hang",
     "tld_iso": "kr",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -22,11 +24,14 @@
     },
     "registry_url": "http://www.nic.or.kr",
     "whois_server": "whois.kr",
-    "rdap_server": "https://rdap.nic.or.kr",
+    "rdap_server": "https://rdap.nic.or.kr/",
     "tld_created": "2011-02-05",
     "tld_updated": [
       "2026-09-16"
     ],
+    "events": {
+      "delegation": "2011-02-06"
+    },
     "annotations": {
       "iana_sponsor_alias": "KISA.kr",
       "iana_sponsor_slug": "kisa",
@@ -36,10 +41,21 @@
       "iana_tech_slug": "kisa",
       "rdap_source": "IANA",
       "country_name_iso": "Korea, Republic of",
+      "iana_translation_en": "South Korea",
+      "iana_transliteration": "hanguk",
       "geographic_scope": "country",
       "language_code": "ko",
-      "language_name_en": "Korean"
+      "language_name_en": "Korean",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 13541,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "cac673c4f8b94ca8a18e39a0e4a0a516c10f8a63657673d1a610afbfdaf1a91a"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "b.dns.kr",

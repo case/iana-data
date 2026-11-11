@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "amex",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -34,6 +36,9 @@
     "tld_updated": [
       "2024-05-11"
     ],
+    "events": {
+      "delegation": "2016-08-08"
+    },
     "annotations": {
       "iana_tech_alias": "GoDaddy Registry",
       "iana_tech_slug": "godaddy-registry",
@@ -43,6 +48,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -50,6 +56,14 @@
         "ultradns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 33586,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "7deb639c1b7c68838cb13ac4063cef638bd32b47a399f6fe712e893a9a8cec19"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.amex",

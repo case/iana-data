@@ -1,15 +1,17 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-11T03:43:07Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--d1alf",
     "tld_unicode": "мкд",
     "tld_script": "Cyrillic",
+    "tld_script_code": "Cyrl",
     "tld_iso": "mk",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -26,8 +28,12 @@
     "tld_updated": [
       "2024-02-21"
     ],
+    "events": {
+      "delegation": "2014-10-24"
+    },
     "annotations": {
       "country_name_iso": "North Macedonia",
+      "iana_transliteration": "mkd",
       "as_org_aliases": [
         "ACOnet",
         "ARNES.si",
@@ -40,7 +46,8 @@
       ],
       "geographic_scope": "country",
       "language_code": "mk",
-      "language_name_en": "Macedonian"
+      "language_name_en": "Macedonian",
+      "language_code_source": "IANA"
     },
     "nameservers": [
       {

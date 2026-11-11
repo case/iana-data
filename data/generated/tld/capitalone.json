@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "capitalone",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "http://www.capitalone.com",
     "whois_server": "whois.nic.capitalone",
-    "rdap_server": "https://rdap.nic.capitalone",
+    "rdap_server": "https://rdap.nic.capitalone/",
     "tld_created": "2016-08-04",
     "tld_updated": [
       "2025-08-13"
     ],
+    "events": {
+      "delegation": "2016-08-10"
+    },
     "annotations": {
       "iana_tech_alias": "GoDaddy Registry",
       "iana_tech_slug": "godaddy-registry",
@@ -44,6 +49,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -51,6 +57,20 @@
         "ultradns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 16365,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "017564f7c0204b23e19605e08e5dcf57c286d6d5097b53440de91d4f04d3abac"
+      },
+      {
+        "key_tag": 35674,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "18a369b6ca7ecd8c34858091e85c169d7d7df070b019a714e8928f6489ed4985"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.capitalone",

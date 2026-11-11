@@ -1,19 +1,20 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-07T22:58:14Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "rio",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
     "orgs": {
       "iana": {
         "sponsor": "Empresa Municipal de Informática SA - IPLANRIO",
-        "admin": "Rua Beatriz Larragoiti Lucas 121 7o andar",
         "tech": "NIC.br"
       },
       "icann": {
@@ -34,6 +35,9 @@
     "tld_updated": [
       "2025-08-14"
     ],
+    "events": {
+      "delegation": "2014-05-22"
+    },
     "annotations": {
       "iana_tech_alias": "NIC.br",
       "iana_tech_slug": "nic-br",
@@ -42,6 +46,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "NIC.br"
       ],
@@ -50,6 +55,14 @@
       ],
       "geographic_scope": "city"
     },
+    "ds_records": [
+      {
+        "key_tag": 50876,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "b4e05083f7129fab32ea7a6c847999ae437c7f2a8fc11d621f73e4fb386347d4"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.dns.br",

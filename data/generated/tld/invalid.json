@@ -1,0 +1,18 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-11-11T03:06:23Z",
+  "sources": {
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "invalid",
+    "tld_script_code": "Latn",
+    "status": "reserved",
+    "delegated": false,
+    "iana_tag": "special-use",
+    "type": "special-use",
+    "purpose": "Used for clearly invalid domain names.",
+    "remarks": "The .invalid top-level domain is reserved for cases where a domain is purposely not meant to resolve. It's often used in technical documentation, testing, or error handling to signal a non-functional or deliberately bogus address.\r\n\r\nFor further information, see [Special-Use Domain Names](https://www.iana.org/go/rfc6761#section-6.5) (RFC 6761) and [Reserved Top Level DNS Names](https://www.iana.org/go/rfc2606) (RFC 2606)."
+  }
+}

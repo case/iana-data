@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "inc",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2023-11-17"
     ],
+    "events": {
+      "delegation": "2018-07-17"
+    },
     "annotations": {
       "iana_tech_alias": "CentralNic",
       "iana_tech_slug": "centralnic",
@@ -43,6 +48,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -50,6 +56,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 18077,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "42f81b888d9b44d561060b7dc32796807f2a99f2d151b3837019aba31c8966a0"
+      },
+      {
+        "key_tag": 13114,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "8ef8eca3d31fc473c78b0cf4641bd536920e064d500f3a01ac96405cf5f8edcb"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.inc",

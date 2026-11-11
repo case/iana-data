@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--9et52u",
     "tld_unicode": "时尚",
     "tld_script": "Han-CJK",
+    "tld_script_code": "Hani",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -32,11 +34,14 @@
     },
     "registry_url": "http://www.shishang.wang",
     "whois_server": "whois.gtld.zdns.cn",
-    "rdap_server": "https://rdap.zdnsgtld.com/xn--9et52u",
+    "rdap_server": "https://rdap.zdnsgtld.com/xn--9et52u/",
     "tld_created": "2015-03-12",
     "tld_updated": [
       "2026-05-22"
     ],
+    "events": {
+      "delegation": "2015-03-27"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -44,6 +49,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "vogue",
+      "iana_translation_en": "vogue",
+      "iana_transliteration": "shishang",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "ZDNS"
       ],
@@ -51,8 +59,17 @@
         "zdns"
       ],
       "language_code": "zh",
-      "language_name_en": "Chinese"
+      "language_name_en": "Chinese",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 46544,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "0310cad1673a9aeca7a4eb6c955ea0bebefd87c77c702772e94aa0eb31cb82d3"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.zdnscloud.cn",

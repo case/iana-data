@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-28T14:17:09Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "bostik",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "https://www.bostik.com",
     "whois_server": "whois.nic.bostik",
-    "rdap_server": "https://rdap.nic.bostik",
+    "rdap_server": "https://rdap.nic.bostik/",
     "tld_created": "2015-11-06",
     "tld_updated": [
       "2026-08-27"
     ],
+    "events": {
+      "delegation": "2015-11-25"
+    },
     "annotations": {
       "iana_tech_alias": "AFNIC.fr",
       "iana_tech_slug": "afnic",
@@ -44,6 +49,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "AFNIC.fr",
         "Netnod AB",
@@ -55,6 +61,14 @@
         "packet-clearing-house"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 15906,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "716bfd888f02f8fc2c568f20b530a836d82476e9e6e56c6db1bb0f1e98767b68"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "d.nic.fr",

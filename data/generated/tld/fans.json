@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "fans",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "http://www.nic.fans/",
     "whois_server": "whois.nic.fans",
-    "rdap_server": "https://rdap.centralnic.com/fans",
+    "rdap_server": "https://rdap.centralnic.com/fans/",
     "tld_created": "2015-02-05",
     "tld_updated": [
-      "2023-12-07"
+      "2026-10-30"
     ],
+    "events": {
+      "delegation": "2015-02-19"
+    },
     "annotations": {
       "iana_admin_alias": "ZDNS",
       "iana_admin_slug": "zdns",
@@ -45,6 +50,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -52,6 +58,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 25466,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "7842246f760a21e694f1d8b64754f0d5bb27ef6a33f25e2f3f2dee26b33b118b"
+      },
+      {
+        "key_tag": 46294,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "c84814f11abfa3a32c3403cd3072afe0cc289e7c2fd92b25ef789778e491d680"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.fans",

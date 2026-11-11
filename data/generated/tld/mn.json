@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "mn",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -22,7 +24,7 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "1995-03-02",
     "tld_updated": [
-      "2022-06-15"
+      "2026-11-06"
     ],
     "annotations": {
       "iana_sponsor_alias": "Datacom Mongolia",
@@ -41,6 +43,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 65249,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "f0cd5ca84d86b800821b7fe8569842c854f94cc49ae3ef3390330f96e381adf5"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a0.cctld.afilias-nst.info",

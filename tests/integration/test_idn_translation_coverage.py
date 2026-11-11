@@ -1,7 +1,8 @@
 """Every delegated IDN TLD must have at least one English-meaning source.
 
-A new IDN delegation that slips through ICANN's Translation column AND isn't
-tagged geographic/cultural AND isn't a country-code IDN would be uncovered.
+A new IDN delegation that slips through ICANN's Translation column AND IANA's
+translation AND isn't tagged geographic/cultural AND isn't a country-code IDN
+would be uncovered.
 This test fails loudly when that happens so a curator knows to either tag it
 or add a manual ``icann_translation_en`` override in ``annotations.json``.
 """
@@ -15,6 +16,8 @@ def _english_sources(
     annotations = entry.get("annotations", {})
     if annotations.get("icann_translation_en"):
         sources.append("icann_translation_en")
+    if annotations.get("iana_translation_en"):
+        sources.append("iana_translation_en")
     if annotations.get("geographic_scope") and tld in places_by_tld:
         sources.append(f"place:{places_by_tld[tld]}")
     if (slug := annotations.get("cultural_affiliation")) and slug in cultures_by_slug:
@@ -26,8 +29,8 @@ def _english_sources(
 
 def test_every_idn_has_an_english_meaning(typed_graph):
     """Every delegated IDN resolves to an English string through at least one
-    of: ICANN translation, geographic_scope -> place, cultural_affiliation ->
-    culture, or country-code -> tld_iso country."""
+    of: ICANN translation, IANA translation, geographic_scope -> place,
+    cultural_affiliation -> culture, or country-code -> tld_iso country."""
     places_by_tld = {
         tld: p["slug"] for p in typed_graph.places["places"] for tld in p["tlds"]
     }
@@ -45,3 +48,13 @@ def test_every_idn_has_an_english_meaning(typed_graph):
         "(add icann_translation_en in annotations.json, or tag geographic/cultural): "
         f"{uncovered}"
     )
+
+
+def test_iana_translation_alone_is_an_english_source():
+    entry = {"annotations": {"iana_translation_en": "Taiwan"}}
+
+    assert _english_sources("xn--kpry57d", entry, {}, {}) == ["iana_translation_en"]
+
+
+def test_no_annotation_is_no_english_source():
+    assert _english_sources("xn--kpry57d", {"annotations": {}}, {}, {}) == []

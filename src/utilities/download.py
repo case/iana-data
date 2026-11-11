@@ -1,7 +1,7 @@
 """Download utilities for IANA data files."""
 
+import json
 import logging
-import time
 from collections.abc import Callable
 from pathlib import Path
 
@@ -16,6 +16,7 @@ from ..config import (
     SOURCE_FILES,
 )
 from .cache import is_cache_fresh, parse_cache_control_max_age
+from .file_io import atomic_write_bytes
 from .metadata import (
     load_metadata,
     record_iptoasn_fetch,
@@ -23,9 +24,12 @@ from .metadata import (
     utc_timestamp,
 )
 from .retry import make_request_with_retry
-from .urls import get_tld_file_path, get_tld_page_url
 
 logger = logging.getLogger(__name__)
+
+
+class InvalidPayloadError(ValueError):
+    """A downloaded payload was fetched but is not usable; the stored file stands."""
 
 
 # =============================================================================
@@ -102,12 +106,15 @@ def download_iana_files() -> dict[str, str]:
         A dict mapping source keys to their download status:
         - "downloaded": File was updated
         - "not_modified": File hasn't changed
-        - "error": Download failed
+        - "error": The fetch failed; the stored file stands
+        - "invalid": The payload was fetched and rejected; the stored file stands
+
+        Both failures leave the previous data usable, so a caller may continue.
     """
     # Lazy imports to avoid circular dependency
     from ..parse import (
+        iana_tlds_json_content_changed,
         rdap_json_content_changed,
-        root_db_html_content_changed,
         tlds_txt_content_changed,
     )
 
@@ -117,6 +124,9 @@ def download_iana_files() -> dict[str, str]:
     # Ensure source directory exists
     Path(SOURCE_DIR).mkdir(parents=True, exist_ok=True)
 
+    schema_path = Path(SOURCE_DIR) / SOURCE_FILES["IANA_TLDS_SCHEMA"]
+    schema_before = schema_path.read_bytes() if schema_path.exists() else None
+
     with httpx2.Client(timeout=30.0, follow_redirects=True) as client:
         for key, url in IANA_URLS.items():
             filename = SOURCE_FILES[key]
@@ -124,12 +134,16 @@ def download_iana_files() -> dict[str, str]:
 
             # Use content validators to ignore timestamp-only changes
             content_validator = None
+            payload_validator = None
             if key == "TLD_LIST":
                 content_validator = tlds_txt_content_changed
             elif key == "RDAP_BOOTSTRAP":
                 content_validator = rdap_json_content_changed
-            elif key == "ROOT_ZONE_DB":
-                content_validator = root_db_html_content_changed
+            elif key == "IANA_TLDS":
+                content_validator = iana_tlds_json_content_changed
+                payload_validator = _validate_iana_tlds_payload
+            elif key == "IANA_TLDS_SCHEMA":
+                payload_validator = _validate_iana_tlds_schema_payload
 
             results[key] = _download_file_impl(
                 client=client,
@@ -138,106 +152,12 @@ def download_iana_files() -> dict[str, str]:
                 filepath=filepath,
                 metadata=metadata,
                 content_validator=content_validator,
+                payload_validator=payload_validator,
             )
+
+    _hold_back_schema_the_stored_data_breaks(schema_before, metadata, results)
 
     # Save updated metadata
-    save_metadata(metadata)
-
-    return results
-
-
-def download_tld_pages(
-    tlds: list[str] | None = None,
-    base_dir: Path | None = None,
-    delay: float = 1.0,
-) -> dict[str, str]:
-    """
-    Download TLD detail pages from IANA.
-
-    Args:
-        tlds: List of TLDs to download. If None, downloads all TLDs from source file
-        base_dir: Base directory for storing pages. Defaults to data/source/tld-pages
-        delay: Seconds to wait between requests to avoid hammering server (default: 1.0)
-
-    Returns:
-        Dict mapping TLD to status: "downloaded", "error"
-    """
-    # Lazy imports to avoid circular dependency
-    from ..parse import extract_main_content, parse_root_db_tlds
-
-    if base_dir is None:
-        base_dir = Path("data/source/tld-pages")
-
-    # Get TLD list if not provided. Source from the root DB (all TLDs the build
-    # iterates), not the delegated-only tlds.txt, so page coverage matches.
-    if tlds is None:
-        tlds = parse_root_db_tlds()
-        if not tlds:
-            logger.error(
-                "No TLDs found. Run --download first to fetch the root zone database."
-            )
-            return {}
-
-    # Load metadata
-    metadata = load_metadata()
-
-    results: dict[str, str] = {}
-
-    # Update last_checked timestamp
-    checked_time = utc_timestamp()
-
-    with httpx2.Client(timeout=30.0, follow_redirects=True) as client:
-        for i, tld in enumerate(tlds):
-            url = get_tld_page_url(tld)
-            file_path = get_tld_file_path(tld, base_dir)
-
-            try:
-                logger.info("Downloading %s...", tld)
-                response = make_request_with_retry(client, url)
-
-                if response.status_code == 200:
-                    # Extract main content
-                    main_content = extract_main_content(response.text)
-
-                    # Create directory if needed
-                    file_path.parent.mkdir(parents=True, exist_ok=True)
-
-                    if main_content:
-                        # Save extracted main content
-                        with open(file_path, "w", encoding="utf-8") as f:
-                            f.write(main_content)
-                        logger.info("  → %s", file_path)
-                    else:
-                        # Fallback: save full HTML if main content extraction fails
-                        fallback_path = file_path.with_stem(f"{file_path.stem}-full")
-                        logger.warning(
-                            "No <main> content found for %s, saving full HTML as fallback to %s",
-                            tld,
-                            fallback_path,
-                        )
-                        with open(fallback_path, "w", encoding="utf-8") as f:
-                            f.write(response.text)
-                        logger.info("  → %s (fallback)", fallback_path)
-
-                    results[tld] = "downloaded"
-                else:
-                    logger.error("HTTP %d for %s", response.status_code, tld)
-                    results[tld] = "error"
-
-            except Exception as e:
-                logger.error("Error downloading %s: %s", tld, e)
-                results[tld] = "error"
-
-            # Rate limiting: wait between requests (skip after last item)
-            if delay > 0 and i < len(tlds) - 1:
-                time.sleep(delay)
-
-    # Update metadata with TLD_HTML entry
-    metadata["TLD_HTML"] = {
-        "last_checked": checked_time,
-    }
-
-    # Save metadata
     save_metadata(metadata)
 
     return results
@@ -293,6 +213,71 @@ def get_iptoasn_path() -> Path:
 # =============================================================================
 
 
+def _decode_json_payload(content: bytes) -> object:
+    try:
+        return json.loads(content.decode("utf-8"))
+    except ValueError as exc:
+        raise InvalidPayloadError(f"payload is not JSON: {exc}") from exc
+
+
+def _validate_iana_tlds_payload(content: bytes) -> None:
+    """Raise InvalidPayloadError unless ``content`` fits the stored schema and the parser."""
+    from ..parse.iana_tlds_json import parse_iana_tlds
+    from ..parse.iana_tlds_schema import iana_tlds_conformance_problems
+
+    document = _decode_json_payload(content)
+    schema_path = Path(SOURCE_DIR) / SOURCE_FILES["IANA_TLDS_SCHEMA"]
+    try:
+        schema = json.loads(schema_path.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as exc:
+        raise InvalidPayloadError(f"no stored schema to check against: {exc}") from exc
+    if problems := iana_tlds_conformance_problems(document, schema):
+        raise InvalidPayloadError("breaks the IANA schema: " + "; ".join(problems))
+    try:
+        parse_iana_tlds(document)
+    except ValueError as exc:
+        raise InvalidPayloadError(f"rejected by the parser: {exc}") from exc
+
+
+def _validate_iana_tlds_schema_payload(content: bytes) -> None:
+    """Raise InvalidPayloadError unless ``content`` is IANA's TLD JSON schema."""
+    from ..parse.iana_tlds_schema import iana_tlds_schema_problems
+
+    if problems := iana_tlds_schema_problems(_decode_json_payload(content)):
+        raise InvalidPayloadError("; ".join(problems))
+
+
+def _hold_back_schema_the_stored_data_breaks(
+    schema_before: bytes | None, metadata: dict, results: dict[str, str]
+) -> None:
+    """Restore the old schema, as "invalid", when the stored TLD JSON breaks the new one."""
+    from ..parse.iana_tlds_schema import iana_tlds_conformance_problems
+
+    schema_path = Path(SOURCE_DIR) / SOURCE_FILES["IANA_TLDS_SCHEMA"]
+    data_path = Path(SOURCE_DIR) / SOURCE_FILES["IANA_TLDS"]
+    if results.get("IANA_TLDS_SCHEMA") != "downloaded" or not data_path.exists():
+        return
+    try:
+        document = json.loads(data_path.read_text(encoding="utf-8"))
+        schema = json.loads(schema_path.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as exc:
+        problems = [f"cannot read the stored pair: {exc}"]
+    else:
+        problems = iana_tlds_conformance_problems(document, schema)
+    if not problems:
+        return
+
+    logger.error(
+        "Holding back the new IANA schema: stored data breaks it: %s", problems
+    )
+    if schema_before is None:
+        schema_path.unlink(missing_ok=True)
+    else:
+        atomic_write_bytes(schema_path, schema_before)
+    metadata.get("IANA_TLDS_SCHEMA", {}).pop("cache_data", None)
+    results["IANA_TLDS_SCHEMA"] = "invalid"
+
+
 def _drop_cache_from_other_url(key: str, url: str, metadata: dict) -> None:
     """Discard cache validators recorded against a different URL, or against none."""
     entry = metadata.get(key)
@@ -334,6 +319,7 @@ def _download_file_impl(
     metadata: dict,
     content_validator: Callable[[Path, str], bool] | None = None,
     transform: Callable[[str], bytes] | None = None,
+    payload_validator: Callable[[bytes], None] | None = None,
 ) -> str:
     """
     Internal implementation for downloading a single file.
@@ -350,9 +336,11 @@ def _download_file_impl(
         content_validator: Optional callback to check if content actually changed.
         transform: Optional callback converting the response body into the bytes
             to save. See download_file.
+        payload_validator: Optional callback that raises InvalidPayloadError for
+            a body that must not replace the stored file.
 
     Returns:
-        Status: "downloaded", "not_modified", or "error"
+        Status: "downloaded", "not_modified", "error", or "invalid"
     """
     # Validators describe one URL. Repointing a key must not carry them across.
     _drop_cache_from_other_url(key, url, metadata)
@@ -389,6 +377,10 @@ def _download_file_impl(
             # Not modified
             return "not_modified"
         elif response.status_code == 200:
+            # Before anything is stored, so a rejected body earns no validators.
+            if payload_validator is not None:
+                payload_validator(response.content)
+
             # Check with content validator if provided
             if content_validator and not content_validator(filepath, response.text):
                 # Recorded here too: a source that reports "unchanged" every
@@ -411,10 +403,8 @@ def _download_file_impl(
             )
 
             if not derived_unchanged:
-                # Download successful, save file
-                filepath.parent.mkdir(parents=True, exist_ok=True)
-                with open(filepath, "wb") as f:
-                    f.write(content)
+                # Download successful: replace the stored file in one step
+                atomic_write_bytes(filepath, content)
 
             # Only a response we processed to the end earns its validators. A
             # transform that raised must be retried, not answered with a 304.
@@ -425,6 +415,9 @@ def _download_file_impl(
             return "not_modified" if derived_unchanged else "downloaded"
         else:
             return "error"
+    except InvalidPayloadError as e:
+        logger.error("Invalid payload for %s, keeping the stored file: %s", key, e)
+        return "invalid"
     except Exception as e:
         logger.error("Error downloading %s: %s", key, e)
         return "error"

@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "gy",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -19,7 +21,7 @@
     },
     "registry_url": "https://registry.gy/",
     "whois_server": "whois.registry.gy",
-    "rdap_server": "https://rdap.registry.gy",
+    "rdap_server": "https://rdap.registry.gy/",
     "tld_created": "1994-09-13",
     "tld_updated": [
       "2026-04-10"
@@ -37,6 +39,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 50885,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "6b06025eccb7efb21793e58afd2ce16d5949884f4ac352047daccd841627a3df"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.lactld.org",

@@ -1,15 +1,17 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--node",
     "tld_unicode": "გე",
     "tld_script": "Georgian",
+    "tld_script_code": "Geor",
     "tld_iso": "ge",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -25,8 +27,12 @@
     "tld_updated": [
       "2024-06-26"
     ],
+    "events": {
+      "delegation": "2014-10-24"
+    },
     "annotations": {
       "country_name_iso": "Georgia",
+      "iana_transliteration": "ge",
       "as_org_aliases": [
         "Packet Clearing House"
       ],
@@ -35,7 +41,8 @@
       ],
       "geographic_scope": "country",
       "language_code": "ka",
-      "language_name_en": "Georgian"
+      "language_name_en": "Georgian",
+      "language_code_source": "IANA"
     },
     "nameservers": [
       {

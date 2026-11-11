@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-24T22:45:17Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "ses",
+    "tld_script_code": "Latn",
+    "status": "retired",
     "delegated": false,
     "iana_tag": "generic",
     "type": "gtld",
@@ -27,12 +29,17 @@
     "tld_updated": [
       "2022-12-16"
     ],
+    "events": {
+      "delegation": "2016-07-09",
+      "revocation": "2022-12-16"
+    },
     "annotations": {
       "registry_agreement_types": [
         "base",
         "brand",
         "non_sponsored"
-      ]
+      ],
+      "iana_delegation_round": "2012"
     }
   }
 }

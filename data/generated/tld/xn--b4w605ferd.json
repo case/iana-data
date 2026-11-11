@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--b4w605ferd",
     "tld_unicode": "淡马锡",
     "tld_script": "Han-CJK",
+    "tld_script_code": "Hani",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -37,6 +39,9 @@
     "tld_updated": [
       "2025-08-27"
     ],
+    "events": {
+      "delegation": "2015-01-24"
+    },
     "annotations": {
       "iana_tech_alias": "Identity Digital",
       "iana_tech_slug": "identity-digital",
@@ -47,6 +52,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "temasek",
+      "iana_translation_en": "Temasek",
+      "iana_transliteration": "danmaxi",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Identity Digital"
       ],
@@ -54,8 +62,17 @@
         "identity-digital"
       ],
       "language_code": "zh",
-      "language_name_en": "Chinese"
+      "language_name_en": "Chinese",
+      "language_code_source": "derived"
     },
+    "ds_records": [
+      {
+        "key_tag": 56659,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "bd5e5982605e7ec6077b7742d7894a6959657afbfe9ee345eda682a9a4bf0252"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a0.nic.xn--b4w605ferd",

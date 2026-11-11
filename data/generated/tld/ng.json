@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-06T05:43:13Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "ng",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -19,7 +21,7 @@
     },
     "registry_url": "https://www.nira.org.ng/",
     "whois_server": "whois.nic.net.ng",
-    "rdap_server": "https://rdap.nic.net.ng",
+    "rdap_server": "https://rdap.nic.net.ng/",
     "tld_created": "1995-03-15",
     "tld_updated": [
       "2026-08-05"
@@ -39,6 +41,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 45566,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "746cd3ccef614ad2a4b08f4e45ccd57dd935e37449e7c5df07f35ad7c88fc361"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns2.nic.net.ng",

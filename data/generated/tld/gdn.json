@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-09T06:15:40Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "gdn",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,12 +37,16 @@
     "tld_updated": [
       "2026-05-05"
     ],
+    "events": {
+      "delegation": "2015-02-13"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "nic.at",
         "RcodeZero"
@@ -50,6 +56,20 @@
         "rcodezero"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 51961,
+        "algorithm": 8,
+        "digest_type": 1,
+        "digest": "560ebea2094d97bb3bab16b77a706d00ec30c203"
+      },
+      {
+        "key_tag": 31024,
+        "algorithm": 8,
+        "digest_type": 1,
+        "digest": "32d0919bdaec6321eb1d8be9956d062a10f92e6e"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns1.nic.gdn",

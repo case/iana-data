@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "saarland",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "http://www.nic-saarland.de",
     "whois_server": "whois.nic.saarland",
-    "rdap_server": "https://rdap.centralnic.com/saarland",
+    "rdap_server": "https://rdap.centralnic.com/saarland/",
     "tld_created": "2014-03-20",
     "tld_updated": [
       "2023-09-08"
     ],
+    "events": {
+      "delegation": "2014-04-02"
+    },
     "annotations": {
       "iana_tech_alias": "CentralNic",
       "iana_tech_slug": "centralnic",
@@ -43,6 +48,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -51,6 +57,20 @@
       ],
       "geographic_scope": "subdivision"
     },
+    "ds_records": [
+      {
+        "key_tag": 46559,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "ad4f2ac407e370565df690b65cc4db568a2f4396403fab61d2dcf21cf7d2d823"
+      },
+      {
+        "key_tag": 48752,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "4ca46968a784b92804d8b08d61ffa40a44c037863c90d8318faa32dd7d6f6a24"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.saarland",

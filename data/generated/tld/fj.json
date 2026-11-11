@@ -1,25 +1,27 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-19T03:21:21Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "fj",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
     "orgs": {
       "iana": {
-        "sponsor": "The University of the South Pacific\nIT Services",
+        "sponsor": "The University of the South Pacific IT Services",
         "admin": "The University of the South Pacific, IT Services",
         "tech": "The University of the South Pacific, IT Services"
       }
     },
     "registry_url": "https://www.domains.fj/",
     "whois_server": "www.whois.fj",
-    "rdap_server": "https://www.rdap.fj",
+    "rdap_server": "https://www.rdap.fj/",
     "tld_created": "1992-06-03",
     "tld_updated": [
       "2026-08-17"
@@ -37,6 +39,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 53415,
+        "algorithm": 15,
+        "digest_type": 2,
+        "digest": "df3e20395d74ef8ade4a2f2f00e21ff979c6665476989b521ca92b1ca2684b78"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns1.fj",

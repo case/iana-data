@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--3bst00m",
     "tld_unicode": "集团",
     "tld_script": "Han-CJK",
+    "tld_script_code": "Hani",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -32,11 +34,14 @@
     },
     "registry_url": "http://www.jituan.wang",
     "whois_server": "whois.gtld.zdns.cn",
-    "rdap_server": "https://rdap.zdnsgtld.com/xn--3bst00m",
+    "rdap_server": "https://rdap.zdnsgtld.com/xn--3bst00m/",
     "tld_created": "2013-12-12",
     "tld_updated": [
       "2026-05-22"
     ],
+    "events": {
+      "delegation": "2014-01-03"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -44,6 +49,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "corporate group",
+      "iana_translation_en": "group",
+      "iana_transliteration": "jituan",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "ZDNS"
       ],
@@ -51,8 +59,17 @@
         "zdns"
       ],
       "language_code": "zh",
-      "language_name_en": "Chinese"
+      "language_name_en": "Chinese",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 35945,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "5a563eded23044a6c1b623a011123e7ad260b656f89301f500d7fcd04223a801"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.zdnscloud.cn",

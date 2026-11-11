@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-07T22:58:14Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "th",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -19,7 +21,7 @@
     },
     "registry_url": "http://www.thnic.co.th",
     "whois_server": "whois.thnic.co.th",
-    "rdap_server": "https://rdap.thains.co.th",
+    "rdap_server": "https://rdap.thains.co.th/",
     "tld_created": "1988-09-07",
     "tld_updated": [
       "2025-01-23"
@@ -39,6 +41,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 19117,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "e26bf35f73234ac50c600632fc717ae491f4a8b4f662fb29234f5499acfebf64"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.thains.co.th",

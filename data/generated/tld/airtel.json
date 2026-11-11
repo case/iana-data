@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "airtel",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "http://www.airtel.in",
     "whois_server": "whois.nic.airtel",
-    "rdap_server": "https://rdap.nic.airtel",
+    "rdap_server": "https://rdap.nic.airtel/",
     "tld_created": "2015-06-18",
     "tld_updated": [
       "2025-12-11"
     ],
+    "events": {
+      "delegation": "2015-07-08"
+    },
     "annotations": {
       "iana_tech_alias": "GoDaddy Registry",
       "iana_tech_slug": "godaddy-registry",
@@ -44,6 +49,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -51,6 +57,14 @@
         "ultradns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 33365,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "49d75f57e4393dfa7fb4fb380df31f83d178109da2a791f9d6d1d875260113be"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.airtel",

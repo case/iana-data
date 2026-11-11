@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "wme",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "http://www.wmeentertainment.com",
     "whois_server": "whois.nic.wme",
-    "rdap_server": "https://rdap.centralnic.com/wme",
+    "rdap_server": "https://rdap.centralnic.com/wme/",
     "tld_created": "2014-08-22",
     "tld_updated": [
       "2023-09-19"
     ],
+    "events": {
+      "delegation": "2014-09-10"
+    },
     "annotations": {
       "iana_admin_alias": "CentralNic",
       "iana_admin_slug": "centralnic",
@@ -46,6 +51,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -53,6 +59,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 7259,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "e7cb7561099040db08978f7696320ddaf323f52ddbf951fa5f4c44b2f34e38bd"
+      },
+      {
+        "key_tag": 60194,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "a1d20932b733059c4bb7e989fdf75a19a787eb186ce2db5648b1560c1db54495"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.wme",

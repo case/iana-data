@@ -17,12 +17,12 @@ from ..config import (
     ORGANIZATIONS_OUTPUT_FILE,
     PLACES_OUTPUT_FILE,
     TLD_DIR,
-    TLD_PAGES_DIR,
     TLDS_INDEX_FILE,
     TLDS_OUTPUT_FILE,
 )
 from ..parse.country import get_country_name, is_cctld
 from ..parse.gtlds_json import GtldRecord, parse_gtlds_json
+from ..parse.iana_tlds_json import IanaTld, load_iana_tlds
 from ..parse.iptoasn import ASNLookup, ASNRecord, parse_gzipped_iptoasn
 from ..parse.manual_annotations import parse_manual_annotations
 from ..parse.organizations import (
@@ -36,16 +36,14 @@ from ..parse.registry_agreement_csv import (
     get_normalized_agreement_types,
     parse_registry_agreement_csv,
 )
-from ..parse.root_db_html import derive_type_from_iana_tag, parse_root_db_html
 from ..parse.supplemental_cctld_rdap import parse_supplemental_cctld_rdap
-from ..parse.tld_html import parse_tld_page
+from ..parse.tld_archive import parse_tld_archive
 from ..utilities.content_changed import write_json_if_changed
 from ..utilities.download import get_iptoasn_path
 from ..utilities.file_io import read_json_file
-from ..utilities.urls import get_tld_file_path
 from .agreements import build_agreements_json
 from .cultures import build_cultures_json
-from .idn_language import derive_language
+from .idn_language import choose_language_code, derive_language, language_name_en
 from .organizations import build_organizations_json
 from .places import build_places_json
 
@@ -96,12 +94,19 @@ def build_tlds_json(
 
     Returns:
         dict: Result summary with counts
+
+    Raises:
+        IanaTldsError: the IANA TLD JSON is missing or malformed.
+        TldArchiveError: the archive seed is missing or fails validation.
+        ValueError: a record has more than one distinct RDAP base URL, or a
+            language code has no English name.
     """
     if output_paths is None:
         output_paths = OutputPaths.from_config()
     # Parse source files
     logger.info("Parsing source files...")
-    root_zone_entries = parse_root_db_html()
+    iana_records = load_iana_tlds()
+    tld_archive = parse_tld_archive()
     rdap_lookup = parse_rdap_json()
     supplemental_rdap = parse_supplemental_cctld_rdap()
     registry_agreements = parse_registry_agreement_csv()
@@ -154,35 +159,15 @@ def build_tlds_json(
                 iptoasn_path,
             )
 
-    # Load and parse TLD pages
-    logger.info("Parsing TLD pages...")
-    tld_pages_dir = Path(TLD_PAGES_DIR)
-    tld_page_data: dict[str, dict[str, Any]] = {}
-
-    for entry in root_zone_entries:
-        tld = entry["domain"].lstrip(".")
-        file_path = get_tld_file_path(tld, tld_pages_dir)
-
-        if file_path.exists():
-            try:
-                html = file_path.read_text(encoding="utf-8")
-                tld_page_data[tld] = parse_tld_page(html)
-            except Exception as e:
-                logger.warning("Error parsing TLD page for %s: %s", tld, e)
-
-    logger.info("Parsed %d TLD pages", len(tld_page_data))
-
     # Build TLD entries
     logger.info("Building TLD entries...")
     tlds = []
-    for entry in root_zone_entries:
-        tld = entry["domain"].lstrip(".")
-        page_data = tld_page_data.get(tld, {})
+    for record in iana_records:
         tld_entry = _build_tld_entry(
-            entry,
+            record,
+            tld_archive.get(record.name, {}),
             rdap_lookup,
             supplemental_rdap,
-            page_data,
             idn_script_mapping,
             registry_agreements,
             gtld_records,
@@ -200,7 +185,7 @@ def build_tlds_json(
     # unchanged artifacts, so per-file publication reads as "last changed".
     publication = datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
     sources = {
-        "iana_root_db": IANA_URLS["ROOT_ZONE_DB"],
+        "iana_tlds": IANA_URLS["IANA_TLDS"],
         "iana_rdap": IANA_URLS["RDAP_BOOTSTRAP"],
     }
 
@@ -312,6 +297,20 @@ def build_tlds_json(
                 "error": f"Failed to write {name}",
             }
 
+    # Last, so a failed write never costs a per-TLD file its replacement.
+    pruned, prune_failed = _prune_per_tld_files(tlds, output_paths.tld_dir)
+    if prune_failed:
+        logger.error("Could not prune stale per-TLD file(s): %s", prune_failed)
+        return {
+            "total_tlds": len(tlds),
+            "output_file": str(output_paths.tlds_json),
+            "file_size": output_paths.tlds_json.stat().st_size,
+            "changed": changed,
+            "error": f"Failed to prune {len(prune_failed)} stale per-TLD file(s)",
+        }
+    if pruned:
+        logger.info("Pruned %d per-TLD file(s) with no record: %s", len(pruned), pruned)
+
     logger.info(f"Successfully built {len(tlds)} TLD entries")
     return {
         "total_tlds": len(tlds),
@@ -358,6 +357,26 @@ def _write_per_tld_files(
         else:
             unchanged += 1
     return failed, written, unchanged
+
+
+def _prune_per_tld_files(
+    tlds: list[dict], tld_dir: Path
+) -> tuple[list[str], list[str]]:
+    """Delete each ``<slug>.json`` in tld_dir with no entry; return (pruned, failed)."""
+    keep = {f"{entry['tld']}.json" for entry in tlds}
+    pruned: list[str] = []
+    failed: list[str] = []
+    for path in sorted(tld_dir.glob("*.json")):
+        if path.name in keep or path.is_symlink() or not path.is_file():
+            continue
+        try:
+            path.unlink()
+        except OSError as exc:
+            logger.error("Error removing %s: %s", path, exc)
+            failed.append(path.stem)
+        else:
+            pruned.append(path.stem)
+    return pruned, failed
 
 
 def _write_tlds_index(
@@ -413,11 +432,31 @@ def _add_org_annotation(
         annotations[f"{prefix}_slug"] = org["slug"]
 
 
+def _derive_type(iana_tag: str) -> str:
+    """Simplified type: "cctld", "special-use", or "gtld" (the catch-all bucket)."""
+    if iana_tag == "country-code":
+        return "cctld"
+    if iana_tag == "special-use":
+        return "special-use"
+    return "gtld"
+
+
+def _rdap_base_url(record: IanaTld) -> str | None:
+    """The record's one RDAP base URL, or None; several distinct URLs raise."""
+    distinct = list(dict.fromkeys(record.rdap_base_urls))
+    if len(distinct) > 1:
+        raise ValueError(
+            f"{record.name} has {len(distinct)} distinct RDAP base URLs "
+            f"({distinct}); tlds.json models one rdap_server per TLD"
+        )
+    return distinct[0] if distinct else None
+
+
 def _build_tld_entry(
-    root_zone_entry: dict,
+    record: IanaTld,
+    archive_entry: dict[str, Any],
     rdap_lookup: dict[str, str],
     supplemental_rdap: dict[str, dict],
-    page_data: dict[str, Any],
     idn_script_mapping: dict[str, str],
     registry_agreements: dict[str, RegistryAgreement],
     gtld_records: dict[str, GtldRecord],
@@ -429,10 +468,10 @@ def _build_tld_entry(
     Build a single TLD entry for output.
 
     Args:
-        root_zone_entry: Entry from root zone parser
+        record: The TLD's record from the IANA TLD JSON
+        archive_entry: The TLD's archive seed entry, or an empty dict
         rdap_lookup: Map of TLD to IANA RDAP server URL
         supplemental_rdap: Map of TLD to supplemental RDAP data
-        page_data: Parsed data from TLD detail page
         idn_script_mapping: Map of IDN TLD to script name
         registry_agreements: Map of TLD to ICANN registry agreement data
         gtld_records: Map of TLD to ICANN gTLDs-report data (orgs.icann.*)
@@ -442,54 +481,54 @@ def _build_tld_entry(
 
     Returns:
         dict: TLD entry following schema
+
+    Raises:
+        ValueError: the record has more than one distinct RDAP base URL, or its
+            language code has no English name.
     """
-    tld = root_zone_entry["domain"].lstrip(".")
-    tld_manager = root_zone_entry["manager"]
-    iana_tag = root_zone_entry["type"]
+    tld = record.name
+    iana_tag = record.type
 
     # Build core fields
     entry: dict[str, Any] = {
         "tld": tld,
     }
 
-    # Add tld_unicode for IDNs
-    if tld.startswith("xn--"):
-        try:
-            tld_unicode = tld.encode("ascii").decode("idna")
-            entry["tld_unicode"] = tld_unicode
-        except UnicodeError as e:
-            logger.warning("Could not decode IDN %s, omitting tld_unicode: %s", tld, e)
+    if record.ulabel is not None:
+        entry["tld_unicode"] = record.ulabel
 
     # Add tld_script for IDNs
     if tld in idn_script_mapping:
         entry["tld_script"] = idn_script_mapping[tld]
 
-    # Add tld_iso for IDN ccTLDs (from page data)
-    if "tld_iso" in page_data:
-        entry["tld_iso"] = page_data["tld_iso"]
+    entry["tld_script_code"] = record.script_code
 
-    # Add delegated status
-    entry["delegated"] = tld_manager != "Not assigned"
+    # IDN ccTLDs only. Lowercased: _add_idn_mappings keys on the ASCII ccTLD.
+    if record.iso3166_code is not None:
+        entry["tld_iso"] = record.iso3166_code.lower()
 
-    # Add IANA tag
+    entry["status"] = record.status
+    entry["delegated"] = record.status == "active"
     entry["iana_tag"] = iana_tag
+    entry["type"] = _derive_type(iana_tag)
 
-    # Derive type from IANA tag
-    entry["type"] = derive_type_from_iana_tag(iana_tag)
+    if "archived" in archive_entry:
+        entry["archived"] = archive_entry["archived"]
 
     # Build orgs object (canonical data only), nested by source.
     orgs: dict[str, Any] = {}
-    iana_roles: dict[str, str] = {}
-    if tld_manager != "Not assigned":
-        iana_roles["sponsor"] = tld_manager
-    if "orgs" in page_data:
-        if "admin" in page_data["orgs"]:
-            iana_roles["admin"] = page_data["orgs"]["admin"]
-        if "tech" in page_data["orgs"]:
-            iana_roles["tech"] = page_data["orgs"]["tech"]
+    iana_roles: dict[str, str] = {
+        role: name
+        for role, name in (
+            ("sponsor", record.manager),
+            ("admin", record.admin),
+            ("tech", record.tech),
+        )
+        if name is not None
+    }
 
-    # Roles grouped by source: orgs.iana from the IANA root DB + per-TLD pages,
-    # orgs.icann from the ICANN gTLDs report (gTLDs only; ccTLDs are absent).
+    # Roles grouped by source: orgs.iana from the IANA TLD JSON, orgs.icann
+    # from the ICANN gTLDs report (gTLDs only; ccTLDs are absent).
     if iana_roles:
         orgs["iana"] = iana_roles
     if tld in gtld_records:
@@ -503,60 +542,70 @@ def _build_tld_entry(
     # nameservers is the last field in each TLD record (easier to skim visually).
     as_org_found: dict[str, str] = {}
     enriched_nameservers: list[dict[str, Any]] | None = None
-    if "nameservers" in page_data:
+    if record.nameservers:
         enriched_nameservers = _enrich_nameservers_with_asn(
-            page_data["nameservers"],
+            [
+                {"hostname": ns.name, "ipv4": list(ns.ipv4), "ipv6": list(ns.ipv6)}
+                for ns in record.nameservers
+            ],
             asn_lookup,
             resolver,
             as_org_found,
         )
 
     # Add registry information
-    if "registry_url" in page_data:
-        entry["registry_url"] = page_data["registry_url"]
+    if record.registration_url is not None:
+        entry["registry_url"] = record.registration_url
 
-    if "whois_server" in page_data:
-        entry["whois_server"] = page_data["whois_server"]
+    if record.whois_server is not None:
+        entry["whois_server"] = record.whois_server
 
-    # Add RDAP server - prefer page data, then IANA, then supplemental
-    rdap_server = None
-    rdap_source = None
+    # Add RDAP server: the record's own URL, then the bootstrap file, then supplemental
+    rdap_server = _rdap_base_url(record)
+    rdap_source = "IANA" if rdap_server else None
 
-    if "rdap_server" in page_data:
-        rdap_server = page_data["rdap_server"]
-        rdap_source = "IANA"
-    elif tld in rdap_lookup:
+    if rdap_server is None and tld in rdap_lookup:
         rdap_server = rdap_lookup[tld]
         rdap_source = "IANA"
-    elif tld in supplemental_rdap:
+    elif rdap_server is None and tld in supplemental_rdap:
         rdap_server = supplemental_rdap[tld]["rdap_server"]
         rdap_source = "supplemental"
 
     if rdap_server:
         entry["rdap_server"] = rdap_server
 
-    # Add dates from page data
-    if "tld_created" in page_data:
-        entry["tld_created"] = page_data["tld_created"]
+    # tld_created has no live source; it survives only in the archive seed.
+    if "tld_created" in archive_entry:
+        entry["tld_created"] = archive_entry["tld_created"]
 
-    if "tld_updated" in page_data:
-        entry["tld_updated"] = [page_data["tld_updated"]]
+    if record.last_updated is not None:
+        entry["tld_updated"] = [record.last_updated]
+
+    events = {
+        name: when
+        for name, when in (
+            ("delegation", record.delegation),
+            ("revocation", record.revocation),
+        )
+        if when is not None
+    }
+    if events:
+        entry["events"] = events
+
+    if record.purpose is not None:
+        entry["purpose"] = record.purpose
+    if record.remarks is not None:
+        entry["remarks"] = record.remarks
 
     # Add annotations if needed (non-canonical / derived data)
     annotations: dict[str, str | list[str]] = {}
 
     # Resolve each registry org position to organizations.json, denormalizing
     # its display_name (label) and slug (FK) whenever the raw value resolves.
-    sponsor = tld_manager if tld_manager != "Not assigned" else None
-    page_orgs = page_data.get("orgs", {})
     icann_record = gtld_records.get(tld)
-    _add_org_annotation(annotations, resolver, "iana", sponsor, "iana_sponsor")
-    _add_org_annotation(
-        annotations, resolver, "iana", page_orgs.get("admin"), "iana_admin"
-    )
-    _add_org_annotation(
-        annotations, resolver, "iana", page_orgs.get("tech"), "iana_tech"
-    )
+    _add_org_annotation(annotations, resolver, "iana", record.manager, "iana_sponsor")
+    _add_org_annotation(annotations, resolver, "iana", record.admin, "iana_admin")
+    _add_org_annotation(annotations, resolver, "iana", record.tech, "iana_tech")
     _add_org_annotation(
         annotations,
         resolver,
@@ -594,6 +643,14 @@ def _build_tld_entry(
         if translation:
             annotations["icann_translation_en"] = translation
 
+    # IANA's own values, verbatim, beside ICANN's rather than merged with it.
+    if record.translation is not None:
+        annotations["iana_translation_en"] = record.translation
+    if record.transliteration is not None:
+        annotations["iana_transliteration"] = record.transliteration
+    if record.delegation_round is not None:
+        annotations["iana_delegation_round"] = record.delegation_round
+
     # Nameserver infra operators: both arrays sorted by slug so they stay
     # strictly parallel (index i is one org's slug and its display_name).
     if as_org_found:
@@ -620,14 +677,31 @@ def _build_tld_entry(
     if manual.get("cultural_affiliation"):
         annotations["cultural_affiliation"] = manual["cultural_affiliation"]
 
-    language = derive_language(
+    derived = derive_language(
         entry.get("tld_script"), entry.get("tld_iso"), manual.get("language_code")
     )
+    language = choose_language_code(
+        record.language_code, derived[0] if derived else None
+    )
     if language is not None:
-        annotations["language_code"], annotations["language_name_en"] = language
+        code, source = language
+        annotations["language_code"] = code
+        annotations["language_name_en"] = language_name_en(code)
+        annotations["language_code_source"] = source
 
     if annotations:
         entry["annotations"] = annotations
+
+    if record.ds_records:
+        entry["ds_records"] = [
+            {
+                "key_tag": ds.key_tag,
+                "algorithm": ds.algorithm,
+                "digest_type": ds.digest_type,
+                "digest": ds.digest,
+            }
+            for ds in record.ds_records
+        ]
 
     if enriched_nameservers is not None:
         entry["nameservers"] = enriched_nameservers

@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "osaka",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2024-05-11"
     ],
+    "events": {
+      "delegation": "2014-12-13"
+    },
     "annotations": {
       "iana_tech_alias": "GoDaddy Registry",
       "iana_tech_slug": "godaddy-registry",
@@ -44,6 +49,7 @@
         "community",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -52,6 +58,14 @@
       ],
       "geographic_scope": "city"
     },
+    "ds_records": [
+      {
+        "key_tag": 49957,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "7e2477a5bcb64b013ba654f6efb43c6478dc172d05463cd8c43c2dd7187e9b2d"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.osaka",

@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "baseball",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2024-05-11"
     ],
+    "events": {
+      "delegation": "2016-10-30"
+    },
     "annotations": {
       "iana_tech_alias": "GoDaddy Registry",
       "iana_tech_slug": "godaddy-registry",
@@ -43,6 +48,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -50,6 +56,14 @@
         "ultradns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 11122,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "440e52af38c50a3e6eddd224aa4c2ddb50a3b6313ebd36baaace8ff520d03a07"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.baseball",

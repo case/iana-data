@@ -28,9 +28,10 @@ from src.analyze.asn_health import (
     is_useful_label,
     measure,
     nameserver_addresses,
-    source_page_addresses,
+    source_nameserver_addresses,
 )
-from src.config import TLD_PAGES_DIR, TLDS_OUTPUT_FILE
+from src.config import TLDS_OUTPUT_FILE
+from src.parse.iana_tlds_json import load_iana_tlds
 from src.parse.iptoasn import ASNLookup, parse_gzipped_iptoasn
 from src.parse.organizations import archived_names, parse_organizations_manual
 from src.utilities.download import get_iptoasn_path
@@ -46,6 +47,14 @@ def load_artifact(path: Path) -> tuple[ASNLookup, int]:
     """Parse the gzipped artifact into a lookup plus its usable-record count."""
     records = parse_gzipped_iptoasn(path)
     return ASNLookup(records), len(records)
+
+
+def current_addresses() -> dict[str, list[str]]:
+    """Tonight's nameserver addresses, from the downloaded IANA TLD JSON.
+
+    Raises IanaTldsError when the file is missing or malformed.
+    """
+    return source_nameserver_addresses(load_iana_tlds())
 
 
 def committed_addresses() -> dict[str, list[str]]:
@@ -89,9 +98,9 @@ def check_health(
 
     # Tonight's population is checked on its own: merging it with last night's
     # would let a total collection failure hide behind the committed addresses.
-    tonight = source_page_addresses(Path(TLD_PAGES_DIR))
+    tonight = current_addresses()
     problems = [
-        f"current TLD pages: {problem}"
+        f"current TLD records: {problem}"
         for problem in health_problems(
             measure(tonight, lookup), record_count, thresholds
         )

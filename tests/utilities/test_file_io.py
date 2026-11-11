@@ -1,8 +1,11 @@
 """Tests for centralized file I/O utilities."""
 
+import stat
 from pathlib import Path
 
-from src.utilities.file_io import read_json_file, read_text_file
+import pytest
+
+from src.utilities.file_io import atomic_write_bytes, read_json_file, read_text_file
 
 FIXTURES_DIR = Path(__file__).parent.parent / "fixtures" / "source" / "core"
 
@@ -143,3 +146,43 @@ def test_read_text_file_permission_error_with_custom_default(tmp_path, monkeypat
     content = read_text_file(filepath, default="FAILED")
 
     assert content == "FAILED"
+
+
+# --- atomic_write_bytes ---
+
+
+def test_atomic_write_bytes_creates_the_file_and_its_parents(tmp_path):
+    target = tmp_path / "nested" / "dir" / "file.json"
+
+    atomic_write_bytes(target, b"new")
+
+    assert target.read_bytes() == b"new"
+    assert [p.name for p in target.parent.iterdir()] == ["file.json"]
+
+
+def test_atomic_write_bytes_replaces_an_existing_file_world_readable(tmp_path):
+    target = tmp_path / "file.json"
+    target.write_bytes(b"old")
+
+    atomic_write_bytes(target, b"new")
+
+    assert target.read_bytes() == b"new"
+    assert stat.S_IMODE(target.stat().st_mode) == 0o644
+
+
+def test_atomic_write_bytes_keeps_the_original_when_the_replace_fails(
+    tmp_path, monkeypatch
+):
+    target = tmp_path / "file.json"
+    target.write_bytes(b"old")
+
+    def refuse(src, dst):
+        raise OSError("replace refused")
+
+    monkeypatch.setattr("src.utilities.file_io.os.replace", refuse)
+
+    with pytest.raises(OSError, match="replace refused"):
+        atomic_write_bytes(target, b"new")
+
+    assert target.read_bytes() == b"old"
+    assert [p.name for p in tmp_path.iterdir()] == ["file.json"]

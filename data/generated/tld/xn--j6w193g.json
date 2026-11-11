@@ -1,15 +1,17 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-23T07:46:56Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--j6w193g",
     "tld_unicode": "香港",
     "tld_script": "Han-CJK",
+    "tld_script_code": "Hani",
     "tld_iso": "hk",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -26,8 +28,13 @@
     "tld_updated": [
       "2026-01-07"
     ],
+    "events": {
+      "delegation": "2010-07-12"
+    },
     "annotations": {
       "country_name_iso": "Hong Kong",
+      "iana_translation_en": "Hong Kong",
+      "iana_transliteration": "heung gong",
       "as_org_aliases": [
         "APNIC",
         "CNNIC.cn",
@@ -44,8 +51,17 @@
       ],
       "geographic_scope": "country",
       "language_code": "zh-Hant",
-      "language_name_en": "Chinese (Traditional)"
+      "language_name_en": "Chinese (Traditional)",
+      "language_code_source": "refined"
     },
+    "ds_records": [
+      {
+        "key_tag": 29905,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "1520d14524e15029b5b0f9a2ce10d1dee15b90b873f615cae51fa4e2fe317efd"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "c.hkirc.net.hk",

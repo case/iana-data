@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-06T05:43:13Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "ua",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -19,7 +21,7 @@
     },
     "registry_url": "https://www.hostmaster.ua/",
     "whois_server": "whois.ua",
-    "rdap_server": "https://rdap.hostmaster.ua",
+    "rdap_server": "https://rdap.hostmaster.ua/",
     "tld_created": "1992-12-01",
     "tld_updated": [
       "2026-08-05"
@@ -41,6 +43,20 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 51024,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "1bdca65b3ba927efb64909637c10adf90763ea7ab5d0ac1597c66cd6c6caeb6c"
+      },
+      {
+        "key_tag": 51024,
+        "algorithm": 13,
+        "digest_type": 4,
+        "digest": "61195cabb323f940314d1bbec97f4eba54d2d7ba49aa244948c8c29844e43a42293ee100841009fbfe85f1ab7ceffacf"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "bg.ns.ua",

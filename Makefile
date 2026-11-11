@@ -12,7 +12,6 @@ help:
 	@echo "  make checkly-test              Run Checkly tests"
 	@echo "  make download-core             Download core IANA data files"
 	@echo "  make download-iptoasn          Download iptoasn data for ASN lookups"
-	@echo "  make download-tld-pages        Download TLD pages (optional GROUPS=...)"
 	@echo "  make generate-idn-mapping      Generate IDN script mapping"
 	@echo "  make typecheck                 Run pyright type checker"
 	@echo ""
@@ -27,10 +26,6 @@ help:
 .PHONY: download-core
 download-core:
 	uv run python -m src.cli --download
-
-.PHONY: download-tld-pages
-download-tld-pages:
-	uv run python -m src.cli --download-tld-pages $(GROUPS)
 
 .PHONY: download-iptoasn
 download-iptoasn:

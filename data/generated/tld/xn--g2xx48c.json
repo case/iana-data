@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--g2xx48c",
     "tld_unicode": "购物",
     "tld_script": "Han-CJK",
+    "tld_script_code": "Hani",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -37,6 +39,9 @@
     "tld_updated": [
       "2025-03-13"
     ],
+    "events": {
+      "delegation": "2016-01-16"
+    },
     "annotations": {
       "iana_tech_alias": "GoDaddy Registry",
       "iana_tech_slug": "godaddy-registry",
@@ -46,6 +51,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "shopping",
+      "iana_translation_en": "shopping",
+      "iana_transliteration": "gouwu",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -53,8 +61,17 @@
         "ultradns"
       ],
       "language_code": "zh",
-      "language_name_en": "Chinese"
+      "language_name_en": "Chinese",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 11539,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "fd57401d8cbd9ec59540ddf8fffa884bc523d94b9a30d5efd81ece063376ff0b"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.xn--g2xx48c",

@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-28T08:41:21Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--3pxu8k",
     "tld_unicode": "点看",
     "tld_script": "Han-CJK",
+    "tld_script_code": "Hani",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -37,6 +39,9 @@
     "tld_updated": [
       "2026-03-30"
     ],
+    "events": {
+      "delegation": "2015-07-28"
+    },
     "annotations": {
       "iana_sponsor_alias": "VeriSign",
       "iana_sponsor_slug": "verisign",
@@ -52,6 +57,8 @@
         "non_sponsored"
       ],
       "icann_translation_en": "dot com",
+      "iana_transliteration": "diankan",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "VeriSign"
       ],
@@ -59,8 +66,17 @@
         "verisign"
       ],
       "language_code": "zh",
-      "language_name_en": "Chinese"
+      "language_name_en": "Chinese",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 8889,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "a7964e99e01ad992c2a95e529d44dd75ba9826b70c11690f089a5fcc63fe07ba"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ac1.nstld.com",

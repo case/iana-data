@@ -18,9 +18,11 @@ from src.analyze.asn_health import (
     is_useful_label,
     measure,
     nameserver_addresses,
-    source_page_addresses,
+    source_nameserver_addresses,
 )
+from src.parse.iana_tlds_json import parse_iana_tlds
 from src.parse.iptoasn import ASNLookup, ASNRecord
+from tests.iana_tlds_documents import document, domain, not_delegated
 
 HEALTHY_RECORDS = 600_000
 
@@ -361,23 +363,35 @@ class TestUsefulLabelPredicate:
         assert [p for p in health_problems(families, HEALTHY_RECORDS) if "useful" in p]
 
 
-class TestSourcePageAddresses:
-    """Pages are sharded into subdirectories; a flat glob finds nothing."""
+class TestSourceNameserverAddresses:
+    """Tonight's addresses come from the IANA TLD JSON records."""
 
-    def test_it_finds_a_page_in_a_subdirectory(self, tmp_path):
-        (tmp_path / "c").mkdir()
-        (tmp_path / "c" / "com.html").write_text(
-            "<table><tr><th>Name Server</th><th>IP Address</th></tr>"
-            "<tr><td>a.example</td><td>1.2.3.4</td></tr></table>",
-            encoding="utf-8",
+    def test_it_collects_both_families_across_records(self):
+        records = parse_iana_tlds(
+            document(
+                domain(name="aa"),
+                domain(
+                    name="bb",
+                    nameservers=[
+                        {"name": "a.nic.bb", "ipv4": ["198.51.100.7"], "ipv6": []},
+                        {"name": "b.nic.bb", "ipv4": [], "ipv6": ["2001:db8::2"]},
+                    ],
+                ),
+            )
         )
 
-        found = source_page_addresses(tmp_path)
+        assert source_nameserver_addresses(records) == {
+            "ipv4": ["192.0.2.1", "198.51.100.7"],
+            "ipv6": ["2001:db8::1", "2001:db8::2"],
+        }
 
-        assert "1.2.3.4" in found["ipv4"]
+    def test_records_without_nameservers_yield_empty_families(self):
+        records = parse_iana_tlds(document(not_delegated("retired")))
 
-    def test_an_empty_tree_yields_empty_families(self, tmp_path):
-        assert source_page_addresses(tmp_path) == {f: [] for f in FAMILIES}
+        assert source_nameserver_addresses(records) == {f: [] for f in FAMILIES}
+
+    def test_no_records_yield_empty_families(self):
+        assert source_nameserver_addresses([]) == {f: [] for f in FAMILIES}
 
 
 NOW = datetime(2026, 9, 24, 7, 0, tzinfo=UTC)

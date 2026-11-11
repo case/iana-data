@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-28T08:41:21Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "mtn",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -34,6 +36,9 @@
     "tld_updated": [
       "2025-01-28"
     ],
+    "events": {
+      "delegation": "2015-03-25"
+    },
     "annotations": {
       "iana_admin_alias": "Nominet",
       "iana_admin_slug": "nominet",
@@ -45,6 +50,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Nominet",
         "UltraDNS"
@@ -54,6 +60,14 @@
         "ultradns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 18374,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "58114b80a64f8617af3ec29668c55519d8ccb44a203562d746e7f2cc8850a1eb"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "dns1.nic.mtn",

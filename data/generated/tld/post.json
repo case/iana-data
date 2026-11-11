@@ -1,15 +1,23 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "post",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
-    "iana_tag": "sponsored",
+    "iana_tag": "generic",
     "type": "gtld",
+    "archived": {
+      "iana_tag": {
+        "value": "sponsored",
+        "archived_on": "2026-11-10"
+      }
+    },
     "orgs": {
       "iana": {
         "sponsor": "Universal Postal Union",
@@ -35,6 +43,9 @@
     "tld_updated": [
       "2025-05-15"
     ],
+    "events": {
+      "delegation": "2012-08-07"
+    },
     "annotations": {
       "iana_tech_alias": "Identity Digital",
       "iana_tech_slug": "identity-digital",
@@ -42,6 +53,7 @@
       "registry_agreement_types": [
         "sponsored"
       ],
+      "iana_delegation_round": "2004",
       "as_org_aliases": [
         "Identity Digital"
       ],
@@ -49,6 +61,14 @@
         "identity-digital"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 35725,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "5b8265dc3f1952980ab5369253c4a4ed9d674d91b8c39360b22a7deaef168fe0"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "v0n0.nic.post",

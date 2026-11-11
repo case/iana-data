@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-02T03:37:08Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "li",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -41,6 +43,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 22695,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "798ef08ce942abacfa9a8db7b70f2a6f5a4c19c709e4d16c676bb8a5fdc9e2dd"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.li",

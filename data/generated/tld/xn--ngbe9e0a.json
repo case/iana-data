@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--ngbe9e0a",
     "tld_unicode": "بيتك",
     "tld_script": "Arabic",
+    "tld_script_code": "Arab",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -37,6 +39,9 @@
     "tld_updated": [
       "2026-04-06"
     ],
+    "events": {
+      "delegation": "2015-12-15"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -44,6 +49,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "your own house",
+      "iana_translation_en": "home",
+      "iana_transliteration": "baytak",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Packet Clearing House",
         "Tucows"
@@ -53,8 +61,17 @@
         "tucows"
       ],
       "language_code": "ar",
-      "language_name_en": "Arabic"
+      "language_name_en": "Arabic",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 47272,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "72ae7c768d1138f861c424a6403323280dbb940bb8759ef51f3e334f71ccd9c4"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns01.trs-dns.com",

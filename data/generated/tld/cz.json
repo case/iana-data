@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-11T03:43:07Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "cz",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -19,7 +21,7 @@
     },
     "registry_url": "http://www.nic.cz/",
     "whois_server": "whois.nic.cz",
-    "rdap_server": "https://rdap.nic.cz",
+    "rdap_server": "https://rdap.nic.cz/",
     "tld_created": "1993-01-13",
     "tld_updated": [
       "2023-03-07"
@@ -35,6 +37,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 20237,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "cff0f3ecdbc529c1f0031ba1840bfb835853b9209ed1e508fff48451d7b778e2"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.ns.nic.cz",

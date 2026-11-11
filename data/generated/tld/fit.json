@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "fit",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -33,8 +35,11 @@
     "rdap_server": "https://rdap.nic.fit/",
     "tld_created": "2014-12-18",
     "tld_updated": [
-      "2024-04-16"
+      "2026-10-14"
     ],
+    "events": {
+      "delegation": "2015-01-09"
+    },
     "annotations": {
       "iana_sponsor_alias": "GoDaddy Registry",
       "iana_sponsor_slug": "godaddy-registry",
@@ -49,6 +54,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -56,6 +62,14 @@
         "ultradns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 21471,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "cd76d8a8ccdb036f24027e99a811e6212f9a889283a2d9f66d1328b2e671296c"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.fit",

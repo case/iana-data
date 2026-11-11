@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "schwarz",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "https://www.nic.schwarz",
     "whois_server": "whois.nic.schwarz",
-    "rdap_server": "https://rdap.centralnic.com/schwarz",
+    "rdap_server": "https://rdap.centralnic.com/schwarz/",
     "tld_created": "2014-12-04",
     "tld_updated": [
       "2023-11-06"
     ],
+    "events": {
+      "delegation": "2014-12-13"
+    },
     "annotations": {
       "iana_tech_alias": "CentralNic",
       "iana_tech_slug": "centralnic",
@@ -44,6 +49,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -51,6 +57,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 21945,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "65795ac97bb20d4d18cda59e8cb0bca258156f4a2ad3e3d2495259efd1708357"
+      },
+      {
+        "key_tag": 19729,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "776ae387424072c0216e5ec2a5d726f289d74e1bd1527400e490982c28789f5b"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.schwarz",

@@ -1,15 +1,17 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--54b7fta0cc",
     "tld_unicode": "বাংলা",
     "tld_script": "Bengali",
+    "tld_script_code": "Beng",
     "tld_iso": "bd",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -25,8 +27,13 @@
     "tld_updated": [
       "2024-05-29"
     ],
+    "events": {
+      "delegation": "2016-10-04"
+    },
     "annotations": {
       "country_name_iso": "Bangladesh",
+      "iana_translation_en": "Bangladesh",
+      "iana_transliteration": "bangla",
       "as_org_aliases": [
         "Packet Clearing House"
       ],
@@ -35,8 +42,23 @@
       ],
       "geographic_scope": "country",
       "language_code": "bn",
-      "language_name_en": "Bengali"
+      "language_name_en": "Bengali",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 63049,
+        "algorithm": 8,
+        "digest_type": 1,
+        "digest": "91e8936dfe81e7350daf041bd12b77f29643a13d"
+      },
+      {
+        "key_tag": 63049,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "dcdd04c4493e029dee060d18a91e87be930b9ce4c54fc7921f51f27455843dcb"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "bayanno.btcl.net.bd",

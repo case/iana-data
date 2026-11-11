@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "la",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -21,92 +23,114 @@
     "whois_server": "whois.nic.la",
     "tld_created": "1996-05-14",
     "tld_updated": [
-      "2025-08-21"
+      "2026-11-02"
     ],
     "annotations": {
       "country_name_iso": "Lao People's Democratic Republic",
       "as_org_aliases": [
-        "CentralNic"
+        "Packet Clearing House",
+        "Tucows"
       ],
       "as_org_slugs": [
-        "centralnic"
+        "packet-clearing-house",
+        "tucows"
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 42973,
+        "algorithm": 7,
+        "digest_type": 2,
+        "digest": "e7d0c3bcdf60e8d842e882d90b4ec263c8889b760098492c798841c13b4ea13f"
+      },
+      {
+        "key_tag": 42973,
+        "algorithm": 7,
+        "digest_type": 1,
+        "digest": "1f0cefa420e9101bb5791f3ab93e85917a72978b"
+      },
+      {
+        "key_tag": 25164,
+        "algorithm": 7,
+        "digest_type": 2,
+        "digest": "1217c71860e555f30e3f6e241e613f1cca5543dd54bf097dcc0b4a9d6429d24e"
+      }
+    ],
     "nameservers": [
       {
-        "hostname": "ns1.nic.la",
+        "hostname": "ns01.trs-dns.com",
         "ipv4": [
           {
-            "ip": "185.24.64.15",
-            "asn": 60890,
-            "as_org": "CENTRALNIC-ANYCAST-B CentralNic Anycast-B AS Number",
-            "as_country": "GB"
+            "ip": "64.96.1.1",
+            "asn": 393818,
+            "as_org": "TUCOWS-TRS-DNS1",
+            "as_country": "CA"
           }
         ],
         "ipv6": [
           {
-            "ip": "2a04:2b00:13cc::1:15",
-            "asn": 60890,
-            "as_org": "CENTRALNIC-ANYCAST-B CentralNic Anycast-B AS Number",
-            "as_country": "GB"
+            "ip": "2620:57:4001::1",
+            "asn": 393818,
+            "as_org": "TUCOWS-TRS-DNS1",
+            "as_country": "CA"
           }
         ]
       },
       {
-        "hostname": "ns2.nic.la",
+        "hostname": "ns01.trs-dns.net",
         "ipv4": [
           {
-            "ip": "194.169.218.14",
-            "asn": 199330,
-            "as_org": "CENTRALNIC-ANYCAST-A CentralNic Anycast-A AS Number",
-            "as_country": "GB"
+            "ip": "64.96.2.1",
+            "asn": 63363,
+            "as_org": "TUCOWS-TRS-DNS2",
+            "as_country": "CA"
           }
         ],
         "ipv6": [
           {
-            "ip": "2001:67c:13cc::1:14",
-            "asn": 199330,
-            "as_org": "CENTRALNIC-ANYCAST-A CentralNic Anycast-A AS Number",
-            "as_country": "GB"
+            "ip": "2620:57:4002::1",
+            "asn": 63363,
+            "as_org": "TUCOWS-TRS-DNS2",
+            "as_country": "CA"
           }
         ]
       },
       {
-        "hostname": "ns3.nic.la",
+        "hostname": "ns10.trs-dns.info",
         "ipv4": [
           {
-            "ip": "185.24.64.14",
-            "asn": 60890,
-            "as_org": "CENTRALNIC-ANYCAST-B CentralNic Anycast-B AS Number",
-            "as_country": "GB"
+            "ip": "64.78.204.1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
           }
         ],
         "ipv6": [
           {
-            "ip": "2a04:2b00:13cc::1:14",
-            "asn": 60890,
-            "as_org": "CENTRALNIC-ANYCAST-B CentralNic Anycast-B AS Number",
-            "as_country": "GB"
+            "ip": "2620:171:812:1534:8::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
           }
         ]
       },
       {
-        "hostname": "ns4.nic.la",
+        "hostname": "ns10.trs-dns.org",
         "ipv4": [
           {
-            "ip": "194.169.218.15",
-            "asn": 199330,
-            "as_org": "CENTRALNIC-ANYCAST-A CentralNic Anycast-A AS Number",
-            "as_country": "GB"
+            "ip": "64.78.205.1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
           }
         ],
         "ipv6": [
           {
-            "ip": "2001:67c:13cc::1:15",
-            "asn": 199330,
-            "as_org": "CENTRALNIC-ANYCAST-A CentralNic Anycast-A AS Number",
-            "as_country": "GB"
+            "ip": "2620:171:813:1534:8::1",
+            "asn": 42,
+            "as_org": "WOODYNET-1",
+            "as_country": "US"
           }
         ]
       }

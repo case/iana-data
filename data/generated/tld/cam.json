@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "cam",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2026-01-13"
     ],
+    "events": {
+      "delegation": "2016-06-16"
+    },
     "annotations": {
       "iana_tech_alias": "CentralNic",
       "iana_tech_slug": "centralnic",
@@ -43,6 +48,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -50,6 +56,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 5089,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "a17021ada565f6b13749741dc51a25b0f524bae6b753343155cfe8426cd29462"
+      },
+      {
+        "key_tag": 63412,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "574852572a5d0fa1b6c9d1b008851e74a34298e5dcbb0979c347753eec1a23d4"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.cam",

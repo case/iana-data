@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--4gbrim",
     "tld_unicode": "موقع",
     "tld_script": "Arabic",
+    "tld_script_code": "Arab",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -37,6 +39,9 @@
     "tld_updated": [
       "2023-11-17"
     ],
+    "events": {
+      "delegation": "2014-05-28"
+    },
     "annotations": {
       "iana_admin_alias": "CentralNic",
       "iana_admin_slug": "centralnic",
@@ -48,6 +53,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "site",
+      "iana_translation_en": "site",
+      "iana_transliteration": "mawqi",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -55,8 +63,23 @@
         "centralnic"
       ],
       "language_code": "ar",
-      "language_name_en": "Arabic"
+      "language_name_en": "Arabic",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 25097,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "123b7c37a9dfd48ded1914c9172ee05865d10e47c0517f40659cb0305ba0d8b3"
+      },
+      {
+        "key_tag": 62231,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "c095636f7f327234bd3ae9d0d1fac82d5f1e1ff46cb1fc5ea76628b1430e6dc8"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.xn--4gbrim",

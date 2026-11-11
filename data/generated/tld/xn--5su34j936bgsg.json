@@ -1,21 +1,22 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--5su34j936bgsg",
     "tld_unicode": "香格里拉",
     "tld_script": "Han-CJK",
+    "tld_script_code": "Hani",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
     "orgs": {
       "iana": {
         "sponsor": "Shangri-La International Hotel Management Limited",
-        "admin": "28/F. Kerry Centre",
         "tech": "Identity Digital Limited"
       },
       "icann": {
@@ -37,6 +38,9 @@
     "tld_updated": [
       "2025-12-08"
     ],
+    "events": {
+      "delegation": "2016-07-02"
+    },
     "annotations": {
       "iana_tech_alias": "Identity Digital",
       "iana_tech_slug": "identity-digital",
@@ -47,6 +51,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "shangri-la",
+      "iana_translation_en": "Shangri-La",
+      "iana_transliteration": "xianggelila",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Identity Digital"
       ],
@@ -54,8 +61,17 @@
         "identity-digital"
       ],
       "language_code": "zh",
-      "language_name_en": "Chinese"
+      "language_name_en": "Chinese",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 46216,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "a488e3a362b06a6999e5025415a1e989cf592c01e996a0e94104e296a1bded34"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "v0n0.nic.xn--5su34j936bgsg",

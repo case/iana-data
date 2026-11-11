@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "reit",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "http://www.reit.com",
     "whois_server": "whois.nic.reit",
-    "rdap_server": "https://rdap.centralnic.com/reit",
+    "rdap_server": "https://rdap.centralnic.com/reit/",
     "tld_created": "2014-10-23",
     "tld_updated": [
       "2023-09-19"
     ],
+    "events": {
+      "delegation": "2014-11-12"
+    },
     "annotations": {
       "iana_tech_alias": "CentralNic",
       "iana_tech_slug": "centralnic",
@@ -44,6 +49,7 @@
         "community",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -51,6 +57,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 44512,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "661fbde636973834f5d417d3897ddf8590461da6f020cfaa4274718dd926c523"
+      },
+      {
+        "key_tag": 51490,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "4dd84ee5eaf91cbbd8fddc5ab21382c030860e1fa9bf9d6412d8b4fe5dc9e353"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.reit",

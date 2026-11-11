@@ -1,22 +1,22 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--kcrx77d1x4a",
     "tld_unicode": "飞利浦",
     "tld_script": "Han-CJK",
+    "tld_script_code": "Hani",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
     "orgs": {
       "iana": {
-        "sponsor": "Koninklijke Philips N.V.",
-        "admin": "High Tech Campus 5",
-        "tech": "High Tech Campus 5"
+        "sponsor": "Koninklijke Philips N.V."
       },
       "icann": {
         "registry_operator": "Koninklijke Philips N.V.",
@@ -37,6 +37,9 @@
     "tld_updated": [
       "2023-11-30"
     ],
+    "events": {
+      "delegation": "2015-04-07"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -45,6 +48,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "philips",
+      "iana_translation_en": "Philips",
+      "iana_transliteration": "feilipu",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -52,8 +58,17 @@
         "ultradns"
       ],
       "language_code": "zh",
-      "language_name_en": "Chinese"
+      "language_name_en": "Chinese",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 52825,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "5bb0dda1180fdf0f6c0932f027c0b6faf19cfa8e9848f954046d4bd63ebfbc5c"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.xn--kcrx77d1x4a",

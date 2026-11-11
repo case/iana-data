@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--80adxhks",
     "tld_unicode": "москва",
     "tld_script": "Cyrillic",
+    "tld_script_code": "Cyrl",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -32,11 +34,14 @@
     },
     "registry_url": "http://www.faitid.org",
     "whois_server": "whois.nic.xn--80adxhks",
-    "rdap_server": "https://rdap.flexireg.net",
+    "rdap_server": "https://rdap.flexireg.net/",
     "tld_created": "2014-04-17",
     "tld_updated": [
       "2025-05-29"
     ],
+    "events": {
+      "delegation": "2014-04-24"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -44,6 +49,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "moscow",
+      "iana_translation_en": "Moscow",
+      "iana_transliteration": "moskva",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Knipp Medien"
       ],
@@ -52,8 +60,17 @@
       ],
       "geographic_scope": "city",
       "language_code": "ru",
-      "language_name_en": "Russian"
+      "language_name_en": "Russian",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 33904,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "7af8634483e30e963abfbf03f2efe17732ba3c4d2f5020777a415420048f5fcf"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.dns.flexireg.ru",

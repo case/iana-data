@@ -1,25 +1,26 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-11T03:43:07Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "lb",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
     "orgs": {
       "iana": {
         "sponsor": "Internet Society Lebanon",
-        "admin": "Internet Society Lebanon",
-        "tech": "5147 Crystal Springs Drive NE"
+        "admin": "Internet Society Lebanon"
       }
     },
     "registry_url": "https://www.lbdr.org.lb",
     "whois_server": "whois.lbdr.org.lb",
-    "rdap_server": "https://rdap.lbdr.org.lb",
+    "rdap_server": "https://rdap.lbdr.org.lb/",
     "tld_created": "1993-08-25",
     "tld_updated": [
       "2024-02-26"
@@ -39,6 +40,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 3842,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "c838938c2127e3e10e15f92106ec565ef273b2ef7e3aeebe5a2162862fd3b469"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "b.ns.lb",

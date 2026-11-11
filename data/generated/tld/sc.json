@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-09T06:15:40Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "sc",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -22,10 +24,10 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "1997-05-09",
     "tld_updated": [
-      "2026-06-08"
+      "2026-11-05"
     ],
     "annotations": {
-      "rdap_source": "supplemental",
+      "rdap_source": "IANA",
       "country_name_iso": "Seychelles",
       "as_org_aliases": [
         "Identity Digital"
@@ -35,6 +37,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 35612,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "7a60fd508decc8b4cbeecc9c85edbbbe689f70310d97cfd5ee4ac2643dd1da10"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a0.cctld.afilias-nst.info",
@@ -149,18 +159,6 @@
             "as_country": "US"
           }
         ]
-      },
-      {
-        "hostname": "ns1.nic.sc",
-        "ipv4": [
-          {
-            "ip": "41.86.57.54",
-            "asn": 36958,
-            "as_org": "CWSeychelles-AS",
-            "as_country": "SC"
-          }
-        ],
-        "ipv6": []
       }
     ]
   }

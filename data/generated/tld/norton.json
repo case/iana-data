@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "norton",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "http://www.symantec.com",
     "whois_server": "whois.nic.norton",
-    "rdap_server": "https://rdap.nic.norton",
+    "rdap_server": "https://rdap.nic.norton/",
     "tld_created": "2015-09-24",
     "tld_updated": [
       "2025-08-14"
     ],
+    "events": {
+      "delegation": "2015-12-03"
+    },
     "annotations": {
       "iana_tech_alias": "GoDaddy Registry",
       "iana_tech_slug": "godaddy-registry",
@@ -44,6 +49,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -51,6 +57,20 @@
         "ultradns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 13095,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "8a3e13067f0237e9f16d0c6d25c72b262af2e49bbba4345c70e1ba5fd19ac321"
+      },
+      {
+        "key_tag": 47347,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "119e98d6a7c8ad1c5199b2fbb3de5b330021f366400d6b4b8409400a738e1d7a"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.norton",

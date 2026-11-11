@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "ag",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -14,7 +16,7 @@
       "iana": {
         "sponsor": "UHSA School of Medicine",
         "admin": "UHSA School of Medicine",
-        "tech": "Afilias Limited"
+        "tech": "Identity Digital Limited"
       }
     },
     "registry_url": "http://www.nic.ag",
@@ -22,7 +24,7 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "1991-09-03",
     "tld_updated": [
-      "2021-02-08"
+      "2026-10-16"
     ],
     "annotations": {
       "iana_tech_alias": "Identity Digital",
@@ -37,6 +39,20 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 8905,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "e3cdce330b6f170283c06a1e3aad11c098ad4a83cfc0f3cb603ecfc49af4a059"
+      },
+      {
+        "key_tag": 25471,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "87c1af4c67cfc9f894472c11db013f3494b6cec33811d07400c57790278bafa6"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a0.cctld.afilias-nst.info",

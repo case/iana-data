@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "sport",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2023-07-14"
     ],
+    "events": {
+      "delegation": "2018-01-10"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -42,6 +47,7 @@
         "community",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Knipp Medien"
       ],
@@ -49,6 +55,14 @@
         "knipp-medien"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 32491,
+        "algorithm": 10,
+        "digest_type": 2,
+        "digest": "3b39adb8057a67441e2b11fdd23417e52f7f5b17e134f12027b3c382535972da"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "anycast10.irondns.net",

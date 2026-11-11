@@ -5,13 +5,12 @@ indexes it so a raw per-source org string resolves to one canonical record.
 """
 
 import logging
-import re
 from dataclasses import dataclass
-from datetime import date
 from pathlib import Path
 from typing import Any
 
 from ..config import MANUAL_DIR, MANUAL_FILES
+from ..utilities.dates import iso_date_problem
 from ..utilities.file_io import read_json_file
 
 logger = logging.getLogger(__name__)
@@ -23,9 +22,6 @@ SOURCES: tuple[str, ...] = ("iana", "icann", "asn")
 
 # The complete key set of one archived entry. Unknown keys are a curation error.
 ARCHIVED_ENTRY_KEYS: frozenset[str] = frozenset({"name", "archived_on"})
-
-# date.fromisoformat also accepts "20260912", which the seed must not carry.
-_ARCHIVED_ON_SHAPE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 
 def parse_organizations_manual(filepath: Path | None = None) -> list[OrgRecord]:
@@ -101,13 +97,8 @@ def _string_set(value: Any) -> tuple[set[str], str]:
 
 def _validate_archived_on(where: str, value: Any) -> list[str]:
     """Problems with one ``archived_on`` value, or an empty list."""
-    if not isinstance(value, str) or not _ARCHIVED_ON_SHAPE.match(value):
-        return [f"{where} archived_on is {value!r}, expected YYYY-MM-DD"]
-    try:
-        date.fromisoformat(value)
-    except ValueError as exc:
-        return [f"{where} archived_on {value!r} is not a real date: {exc}"]
-    return []
+    problem = iso_date_problem(value)
+    return [f"{where} archived_on {problem}"] if problem else []
 
 
 def _archived_entry_shape_problems(where: str, entry: Any) -> list[str]:

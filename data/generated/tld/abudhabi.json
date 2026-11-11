@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "abudhabi",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -29,17 +31,21 @@
       }
     },
     "whois_server": "whois.nic.abudhabi",
-    "rdap_server": "https://rdap.nic.abudhabi",
+    "rdap_server": "https://rdap.nic.abudhabi/",
     "tld_created": "2016-02-26",
     "tld_updated": [
       "2019-11-26"
     ],
+    "events": {
+      "delegation": "2016-04-06"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -48,6 +54,20 @@
       ],
       "geographic_scope": "city"
     },
+    "ds_records": [
+      {
+        "key_tag": 15247,
+        "algorithm": 8,
+        "digest_type": 1,
+        "digest": "d2c05ad2312ebe77f6149f8b962dd9012d6d2cca"
+      },
+      {
+        "key_tag": 15247,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "4146c35f5ee96a341ee8c8f0aca17a2cbb52fcd1d6d1c95c9aab70061a7ac692"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "gtld.alpha.aridns.net.au",

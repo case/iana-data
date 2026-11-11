@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--w4r85el8fhu5dnra",
     "tld_unicode": "嘉里大酒店",
     "tld_script": "Han-CJK",
+    "tld_script_code": "Hani",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -37,6 +39,9 @@
     "tld_updated": [
       "2025-12-08"
     ],
+    "events": {
+      "delegation": "2016-03-05"
+    },
     "annotations": {
       "iana_sponsor_alias": "Kerry Trading",
       "iana_sponsor_slug": "kerry-trading",
@@ -52,6 +57,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "kerry hotels",
+      "iana_translation_en": "Kerry Hotels",
+      "iana_transliteration": "jia li da jiudian",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Identity Digital"
       ],
@@ -59,8 +67,17 @@
         "identity-digital"
       ],
       "language_code": "zh",
-      "language_name_en": "Chinese"
+      "language_name_en": "Chinese",
+      "language_code_source": "derived"
     },
+    "ds_records": [
+      {
+        "key_tag": 57124,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "02b28cd1839a544e6b0b047b0cc37a3c7d4dc4e34453ade1960d56127a776014"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "v0n0.nic.xn--w4r85el8fhu5dnra",

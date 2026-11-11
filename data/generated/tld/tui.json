@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-07T03:38:44Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "tui",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "http://www.tuiregistry.com",
     "whois_server": "whois.nic.tui",
-    "rdap_server": "https://rdap.centralnic.com/tui",
+    "rdap_server": "https://rdap.centralnic.com/tui/",
     "tld_created": "2014-09-18",
     "tld_updated": [
       "2026-07-06"
     ],
+    "events": {
+      "delegation": "2014-09-27"
+    },
     "annotations": {
       "iana_tech_alias": "CentralNic",
       "iana_tech_slug": "centralnic",
@@ -44,6 +49,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -51,6 +57,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 35342,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "60bac1e816660ea6cc89bbe453c4cac50ee7fbc9bbac3ca6f8eebfb1a24af721"
+      },
+      {
+        "key_tag": 23341,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "6e0f7acb53334cd152a11d99f274fc3bb7da5aeb5ee1d08b74490ce25e116642"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.tui",

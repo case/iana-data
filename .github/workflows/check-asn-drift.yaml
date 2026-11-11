@@ -173,8 +173,8 @@ jobs:
           name: ${{ needs.check-asn-drift.outputs.patch_artifact }}
           path: ${{ runner.temp }}/asn-archive
 
-      # data/source is guarded too: ASN detection reads the root database and
-      # the TLD pages, so a source change during the run invalidates the report.
+      # data/source is guarded too: ASN detection reads the IANA TLD JSON, so a
+      # source change during the run invalidates the report.
       - name: Rebase onto current main
         timeout-minutes: 5
         env:

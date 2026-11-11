@@ -1,15 +1,23 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-05T03:36:57Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "aero",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
-    "iana_tag": "sponsored",
+    "iana_tag": "generic",
     "type": "gtld",
+    "archived": {
+      "iana_tag": {
+        "value": "sponsored",
+        "archived_on": "2026-11-10"
+      }
+    },
     "orgs": {
       "iana": {
         "sponsor": "Societe Internationale de Telecommunications Aeronautique (SITA INC USA)",
@@ -33,7 +41,7 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "2001-12-21",
     "tld_updated": [
-      "2026-08-04"
+      "2026-10-23"
     ],
     "annotations": {
       "iana_admin_alias": "Identity Digital",
@@ -44,6 +52,7 @@
       "registry_agreement_types": [
         "sponsored"
       ],
+      "iana_delegation_round": "2000",
       "as_org_aliases": [
         "Identity Digital"
       ],
@@ -51,6 +60,14 @@
         "identity-digital"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 13390,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "476c157160e29d180ee3649e065103e06fed3c94f1d212a45276aa84f8d3db06"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a0.nic.aero",

@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "bauhaus",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2023-07-07"
     ],
+    "events": {
+      "delegation": "2015-04-05"
+    },
     "annotations": {
       "iana_tech_alias": "Knipp Medien",
       "iana_tech_slug": "knipp-medien",
@@ -44,6 +49,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Knipp Medien"
       ],
@@ -51,6 +57,14 @@
         "knipp-medien"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 3408,
+        "algorithm": 10,
+        "digest_type": 2,
+        "digest": "8e5c6c53e04001f14305794f1b28eb612b8d297cc190f8662b53e3710ce82456"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "anycast10.irondns.net",

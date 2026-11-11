@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-09T06:15:40Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "berlin",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2026-05-07"
     ],
+    "events": {
+      "delegation": "2014-01-08"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -42,6 +47,7 @@
         "community",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "nic.at",
         "RcodeZero"
@@ -52,6 +58,26 @@
       ],
       "geographic_scope": "city"
     },
+    "ds_records": [
+      {
+        "key_tag": 47974,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "b1ddc962a9293cda1c2ae8f951c86a8f391248c50751ad61f642d46d0f644b41"
+      },
+      {
+        "key_tag": 7669,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "169700d66838fc2a4fe16098924c9da5f3d167da2697461c144c50d47ed123b0"
+      },
+      {
+        "key_tag": 30464,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "7d53c720e3bfc56f260c98235e5a8cc86565cae370fe4e24692d3c134208ca94"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.dns.nic.berlin",

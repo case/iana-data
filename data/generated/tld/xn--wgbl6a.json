@@ -1,15 +1,17 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--wgbl6a",
     "tld_unicode": "قطر",
     "tld_script": "Arabic",
+    "tld_script_code": "Arab",
     "tld_iso": "qa",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -26,8 +28,13 @@
     "tld_updated": [
       "2023-03-07"
     ],
+    "events": {
+      "delegation": "2010-12-24"
+    },
     "annotations": {
       "country_name_iso": "Qatar",
+      "iana_translation_en": "Qatar",
+      "iana_transliteration": "qatar",
       "as_org_aliases": [
         "Packet Clearing House",
         "UltraDNS"
@@ -38,7 +45,8 @@
       ],
       "geographic_scope": "country",
       "language_code": "ar",
-      "language_name_en": "Arabic"
+      "language_name_en": "Arabic",
+      "language_code_source": "IANA"
     },
     "nameservers": [
       {

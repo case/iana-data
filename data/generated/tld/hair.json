@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "hair",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2025-08-12"
     ],
+    "events": {
+      "delegation": "2016-12-02"
+    },
     "annotations": {
       "iana_sponsor_alias": "xyz.com",
       "iana_sponsor_slug": "xyz-com",
@@ -49,6 +54,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -56,6 +62,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 39236,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "d8c88daa478496c4f99a8cb5cacb0746cdde2612e9668beb6f7d683ac220313b"
+      },
+      {
+        "key_tag": 30070,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "70efc235a8da1ce4cafcb1fdfba2bd6115ad02b6062adebc6e8ab91ca3a6bd79"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.hair",

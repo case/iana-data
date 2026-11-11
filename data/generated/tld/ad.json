@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-11T03:43:07Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "ad",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -19,7 +21,7 @@
     },
     "registry_url": "https://www.domini.ad",
     "whois_server": "whois.nic.ad",
-    "rdap_server": "https://rdap.nic.ad",
+    "rdap_server": "https://rdap.nic.ad/",
     "tld_created": "1996-01-09",
     "tld_updated": [
       "2025-11-10"
@@ -39,6 +41,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 6062,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "3c07a798097f38d173d98194f436a2ed29443ecc1da0d9f8da8abfa29348d6ce"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ad.ns.nic.es",

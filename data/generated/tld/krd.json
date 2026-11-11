@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "krd",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,17 +32,21 @@
     },
     "registry_url": "https://dot.krd",
     "whois_server": "whois.nic.krd",
-    "rdap_server": "https://rdap.nic.krd",
+    "rdap_server": "https://rdap.nic.krd/",
     "tld_created": "2014-07-10",
     "tld_updated": [
       "2023-12-11"
     ],
+    "events": {
+      "delegation": "2014-07-18"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -49,6 +55,14 @@
       ],
       "cultural_affiliation": "kurdish"
     },
+    "ds_records": [
+      {
+        "key_tag": 62344,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "5a1637513252be2e160bafa8e86c853914d8418598064dc8a9e23a6ca266bedd"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.krd",

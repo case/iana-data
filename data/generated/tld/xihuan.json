@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-16T08:10:23Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xihuan",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -33,14 +35,18 @@
     "rdap_server": "https://rdap.teleinfo.cn/",
     "tld_created": "2016-03-18",
     "tld_updated": [
-      "2025-10-24"
+      "2026-08-11"
     ],
+    "events": {
+      "delegation": "2016-03-30"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Microsoft",
         "Teleinfo"
@@ -50,6 +56,20 @@
         "teleinfo"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 27565,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "b77f15373b8af8e7ba2d8641701ae833416f8d439bbdaee71d18ce55efde7903"
+      },
+      {
+        "key_tag": 33427,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "1061b1aacada68d55b091340a0765746a4fa68530d47faa10edfcd3237e3748c"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns1.teleinfo.cn",

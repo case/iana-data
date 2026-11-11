@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-30T03:46:49Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "alibaba",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,14 +37,26 @@
     "tld_updated": [
       "2026-06-29"
     ],
+    "events": {
+      "delegation": "2016-01-16"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
         "base",
         "brand",
         "non_sponsored"
-      ]
+      ],
+      "iana_delegation_round": "2012"
     },
+    "ds_records": [
+      {
+        "key_tag": 41398,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "cd1b16213c4d753d587ba7c4f29a1d27ee0a64d70f4cc8c4c1500f1770a9ddd5"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns1.nic.alibaba",

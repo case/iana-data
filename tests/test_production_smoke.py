@@ -41,7 +41,6 @@ def test_cli_module_can_run():
 
     This is how GitHub Actions runs the CLI:
     - make download-core → uv run python -m src.cli --download
-    - make download-tld-pages → uv run python -m src.cli --download-tld-pages
     - ./bin/build --all → generate-idn-mapping + uv run python -m src.cli --build
     """
     result = subprocess.run(
@@ -56,7 +55,7 @@ def test_cli_module_can_run():
     assert "IANA data ETL" in result.stdout
     assert "--download" in result.stdout
     assert "--build" in result.stdout
-    assert "--download-tld-pages" in result.stdout
+    assert "--download-tld-pages" not in result.stdout
 
 
 def test_cli_download_flag_works():
@@ -75,30 +74,6 @@ def test_cli_download_flag_works():
     # Exit code doesn't matter - we just care it doesn't have import errors
     assert "circular import" not in result.stderr.lower()
     assert "ImportError" not in result.stderr
-
-
-def test_cli_download_tld_pages_flag_works():
-    """Test that --download-tld-pages flag works (used by: make download-tld-pages GROUPS='a b')."""
-    # Pass a specific invalid TLD to avoid actually downloading anything
-    # We just want to verify the CLI accepts the flag and doesn't have import errors
-    result = subprocess.run(
-        [
-            sys.executable,
-            "-m",
-            "src.cli",
-            "--download-tld-pages",
-            "nonexistent-tld-for-testing",
-        ],
-        capture_output=True,
-        text=True,
-        timeout=10,
-        check=False,
-    )
-
-    # Should not crash with import errors
-    assert "circular import" not in result.stderr.lower()
-    assert "ImportError" not in result.stderr
-    # Either succeeds or fails gracefully (exit code doesn't matter for this test)
 
 
 def test_cli_analyze_flag_works():
@@ -122,7 +97,6 @@ def test_makefile_targets_exist():
 
     GitHub Actions workflow uses these Make targets:
     - make download-core
-    - make download-tld-pages GROUPS="..."
     - make generate-idn-mapping
 
     Build/lint/test are run via bin/build, bin/lint, bin/test, not via make.
@@ -131,7 +105,6 @@ def test_makefile_targets_exist():
 
     required_targets = [
         "download-core",
-        "download-tld-pages",
         "generate-idn-mapping",
     ]
 
@@ -180,7 +153,6 @@ def test_all_cli_subcommands_have_help():
     # All subcommands used in production should be documented
     required_flags = [
         "--download",
-        "--download-tld-pages",
         "--analyze",
         "--build",
     ]

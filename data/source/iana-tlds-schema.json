@@ -1,0 +1,610 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://data.iana.org/TLD/v1/tlds-schema.json",
+  "title": "Top-Level Domains export",
+  "description": "Machine-readable export of Top-Level Domains in the Domain Name System",
+  "type": "object",
+  "required": [
+    "meta",
+    "domains"
+  ],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": [
+        "generated",
+        "source",
+        "schema",
+        "specversion"
+      ],
+      "properties": {
+        "generated": {
+          "description": "When this file was produced, as an RFC 3339 timestamp in UTC.",
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.[0-9]+)?(Z|\\+00:00)$"
+        },
+        "source": {
+          "description": "The interactive presentation of this data.",
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https?://"
+        },
+        "schema": {
+          "description": "URL of the JSON Schema this file conforms to.",
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https?://"
+        },
+        "specversion": {
+          "description": "Version of this document format. Additions (new keys, new annotation keys) may appear without a version change and consumers should ignore keys they do not recognize; the version is incremented only for changes that break existing consumers.",
+          "type": "integer",
+          "const": 1
+        }
+      }
+    },
+    "domains": {
+      "description": "All records, sorted by name in ascending ASCII order. Names are unique.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/domain"
+      }
+    }
+  },
+  "$defs": {
+    "date": {
+      "description": "A calendar date in ISO 8601 YYYY-MM-DD form.",
+      "type": "string",
+      "format": "date",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "eventDate": {
+      "description": "An ISO 8601 date at the precision to which it is recorded: YYYY-MM-DD normally; YYYY-MM or YYYY only for early events that have no precise record.",
+      "type": "string",
+      "pattern": "^[0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?$"
+    },
+    "nullableString": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "hostname": {
+      "description": "A host name in lower-case ASCII without a trailing dot.",
+      "type": "string",
+      "format": "hostname",
+      "pattern": "^[a-z0-9]([a-z0-9-]*[a-z0-9])?(\\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+$"
+    },
+    "address": {
+      "description": "A postal address as supplied by the contact or manager. Each field is given where recorded.",
+      "type": "object",
+      "required": [
+        "address_lines",
+        "city",
+        "state",
+        "postal_code",
+        "country",
+        "country_iso"
+      ],
+      "properties": {
+        "address_lines": {
+          "description": "Ordered free-text address lines preceding the locality, as supplied: a street address, post office box, building, care-of or other delivery line.",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "city": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "state": {
+          "description": "State, province or other subnational region, where recorded.",
+          "$ref": "#/$defs/nullableString"
+        },
+        "postal_code": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "country": {
+          "description": "Country or territory name as recorded, normally the ISO 3166-1 English short name.",
+          "$ref": "#/$defs/nullableString"
+        },
+        "country_iso": {
+          "description": "ISO 3166-1 alpha-2 code for the country, where recorded.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[A-Z]{2}$"
+        }
+      }
+    },
+    "manager": {
+      "description": "The organization responsible for managing the TLD.",
+      "type": "object",
+      "required": [
+        "organization",
+        "address",
+        "last_updated"
+      ],
+      "properties": {
+        "organization": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "address": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/address"
+            }
+          ]
+        },
+        "last_updated": {
+          "description": "Date this manager record was last changed, where recorded.",
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/date"
+            }
+          ]
+        }
+      }
+    },
+    "contact": {
+      "description": "A point of contact for the TLD.",
+      "type": "object",
+      "required": [
+        "name",
+        "organization",
+        "address",
+        "phone",
+        "fax",
+        "last_updated"
+      ],
+      "properties": {
+        "name": {
+          "description": "Person or role name.",
+          "$ref": "#/$defs/nullableString"
+        },
+        "organization": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "address": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/address"
+            }
+          ]
+        },
+        "phone": {
+          "description": "Telephone number as supplied by the contact.",
+          "$ref": "#/$defs/nullableString"
+        },
+        "fax": {
+          "description": "Fax number as supplied by the contact.",
+          "$ref": "#/$defs/nullableString"
+        },
+        "last_updated": {
+          "description": "Date this contact record was last changed, where recorded.",
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/date"
+            }
+          ]
+        }
+      }
+    },
+    "dsRecord": {
+      "description": "A DS record published in the root zone for this TLD (RFC 4034 section 5).",
+      "type": "object",
+      "required": [
+        "key_tag",
+        "algorithm",
+        "digest_type",
+        "digest"
+      ],
+      "properties": {
+        "key_tag": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65535
+        },
+        "algorithm": {
+          "description": "DNSSEC algorithm number from the IANA DNS Security Algorithm Numbers registry.",
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255
+        },
+        "digest_type": {
+          "description": "Digest type from the IANA DS-RR Digest Types registry.",
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 255
+        },
+        "digest": {
+          "description": "Digest as lower-case hexadecimal.",
+          "type": "string",
+          "pattern": "^([0-9a-f]{2})+$"
+        }
+      }
+    },
+    "nameserver": {
+      "description": "An authoritative name server delegated in the root zone, with any glue addresses.",
+      "type": "object",
+      "required": [
+        "name",
+        "ipv4",
+        "ipv6"
+      ],
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/hostname"
+        },
+        "ipv4": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "ipv4"
+          }
+        },
+        "ipv6": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "ipv6"
+          }
+        }
+      }
+    },
+    "domain": {
+      "type": "object",
+      "required": [
+        "name",
+        "status",
+        "type",
+        "script_code",
+        "annotations",
+        "manager",
+        "contacts",
+        "nameservers",
+        "ds_records",
+        "rdap_base_urls",
+        "whois_server",
+        "registration_url",
+        "events",
+        "last_updated"
+      ],
+      "properties": {
+        "name": {
+          "description": "The TLD label in lower-case ASCII, following LDH rules (letters, digits and hyphens; no leading or trailing hyphen; at most 63 octets). For an internationalized domain name (IDN) this is the A-label (xn--...).",
+          "type": "string",
+          "pattern": "^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?$"
+        },
+        "ulabel": {
+          "description": "The U-label (Unicode form) of an IDN TLD. Present for IDNs.",
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "description": "'active': delegated in the root zone. 'retired': formerly delegated and now removed from the root zone. 'eligible': a string that is eligible for delegation but is not currently delegated (it may have been delegated in the past). 'reserved': not delegated and not available for delegation.",
+          "type": "string",
+          "enum": [
+            "active",
+            "retired",
+            "eligible",
+            "reserved"
+          ]
+        },
+        "type": {
+          "description": "'generic': gTLD. 'country-code': ccTLD, including IDN ccTLDs. 'special-use': names with a special technical purpose that are not available for general delegation, such as .arpa, .example and .onion. 'test': the IDN test TLDs delegated in 2007 and since retired.",
+          "type": "string",
+          "enum": [
+            "generic",
+            "country-code",
+            "special-use",
+            "test"
+          ]
+        },
+        "script_code": {
+          "description": "Four-letter script subtag for the script of the label, from the IANA Language Subtag Registry.",
+          "type": "string",
+          "pattern": "^[A-Z][a-z]{3}$"
+        },
+        "iso3166_code": {
+          "description": "For an IDN ccTLD, the upper-case ISO 3166-1 alpha-2 code of the corresponding country or territory.",
+          "type": "string",
+          "pattern": "^[A-Z]{2}$"
+        },
+        "annotations": {
+          "description": "Supplementary metadata. Each key is present only when a value is recorded.",
+          "type": "object",
+          "properties": {
+            "delegation_round": {
+              "description": "The application round under which the TLD was delegated: 'pre-icann' for delegations before ICANN's application rounds, otherwise the year the round opened.",
+              "type": "string",
+              "minLength": 1
+            },
+            "language_code": {
+              "description": "The language of the label as a BCP 47 language tag.",
+              "type": "string",
+              "minLength": 1
+            },
+            "transliteration": {
+              "description": "A romanization of the label. No particular transliteration scheme is implied.",
+              "type": "string",
+              "minLength": 1
+            },
+            "translation": {
+              "description": "The meaning of the label in English.",
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "manager": {
+          "description": "The organization responsible for managing the TLD, where recorded.",
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/manager"
+            }
+          ]
+        },
+        "contacts": {
+          "description": "Points of contact for the TLD, where recorded.",
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "required": [
+                "admin",
+                "tech"
+              ],
+              "properties": {
+                "admin": {
+                  "$ref": "#/$defs/contact"
+                },
+                "tech": {
+                  "$ref": "#/$defs/contact"
+                }
+              }
+            }
+          ]
+        },
+        "nameservers": {
+          "description": "Name servers delegated in the root zone. Empty when the TLD is not delegated.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/nameserver"
+          }
+        },
+        "ds_records": {
+          "description": "DS records in the root zone. Empty when the TLD is not delegated or not signed.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/dsRecord"
+          }
+        },
+        "rdap_base_urls": {
+          "description": "RDAP base URLs. Empty when none are recorded. RDAP clients should use the IANA RDAP bootstrap registry for DNS (https://data.iana.org/rdap/dns.json).",
+          "type": "array",
+          "items": {
+            "description": "An RDAP base URL, ending in '/'.",
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https?://.*/$"
+          }
+        },
+        "whois_server": {
+          "description": "WHOIS (port 43) server host name, where recorded.",
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/hostname"
+            }
+          ]
+        },
+        "registration_url": {
+          "description": "Web site for registration services as supplied by the manager, where recorded.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri",
+          "pattern": "^https?://"
+        },
+        "purpose": {
+          "description": "One-sentence summary of why the TLD is reserved or set aside for a particular use. Always present for a reserved TLD.",
+          "type": "string",
+          "minLength": 1
+        },
+        "remarks": {
+          "description": "Explanatory text of any unique considerations for the TLD, in Markdown.",
+          "type": "string",
+          "contentMediaType": "text/markdown",
+          "minLength": 1
+        },
+        "events": {
+          "type": "object",
+          "required": [
+            "delegation",
+            "revocation"
+          ],
+          "properties": {
+            "delegation": {
+              "description": "When the TLD was delegated in the root zone, where recorded. May be a year or year-month where the exact date is not known.",
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "#/$defs/eventDate"
+                }
+              ]
+            },
+            "revocation": {
+              "description": "When a revoked TLD was removed from the root zone. May be a year or year-month where the exact date is not known.",
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "#/$defs/eventDate"
+                }
+              ]
+            }
+          }
+        },
+        "last_updated": {
+          "description": "Date the record for this TLD was last changed, where recorded.",
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/date"
+            }
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "active"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "manager": {
+                "type": "object"
+              },
+              "contacts": {
+                "type": "object"
+              },
+              "nameservers": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "retired",
+                  "eligible",
+                  "reserved"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "nameservers": {
+                "maxItems": 0
+              },
+              "ds_records": {
+                "maxItems": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "retired"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "events": {
+                "properties": {
+                  "revocation": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "reserved"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "purpose"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "name": {
+                "pattern": "^xn--"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "ulabel"
+            ]
+          }
+        },
+        {
+          "if": {
+            "allOf": [
+              {
+                "properties": {
+                  "type": {
+                    "const": "country-code"
+                  }
+                }
+              },
+              {
+                "properties": {
+                  "name": {
+                    "pattern": "^xn--"
+                  }
+                }
+              }
+            ]
+          },
+          "then": {
+            "required": [
+              "iso3166_code"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "icu",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "http://nic.icu/",
     "whois_server": "whois.nic.icu",
-    "rdap_server": "https://rdap.centralnic.com/icu",
+    "rdap_server": "https://rdap.centralnic.com/icu/",
     "tld_created": "2015-03-06",
     "tld_updated": [
       "2024-06-19"
     ],
+    "events": {
+      "delegation": "2015-05-02"
+    },
     "annotations": {
       "iana_sponsor_alias": "Shortdot",
       "iana_sponsor_slug": "shortdot",
@@ -47,6 +52,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -54,6 +60,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 31762,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "ccc397a837f6491166129e1d99ed03cca6635166b2f5b58c65b5cf516ae92b8f"
+      },
+      {
+        "key_tag": 46625,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "bb6ac27bbb99b05da380516d9c342bec3585259e22e4791472908e4370067886"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.icu",

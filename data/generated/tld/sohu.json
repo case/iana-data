@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "sohu",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -28,17 +30,21 @@
         "date_removed": null
       }
     },
-    "rdap_server": "https://rdap.zdnsgtld.com/sohu",
+    "rdap_server": "https://rdap.zdnsgtld.com/sohu/",
     "tld_created": "2014-02-27",
     "tld_updated": [
       "2024-11-18"
     ],
+    "events": {
+      "delegation": "2014-03-25"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "ZDNS"
       ],
@@ -46,6 +52,14 @@
         "zdns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 61396,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "44f80a22b60d8c7a4e02d5c1b57af36da11d0cefe4320e588e20dcd4b2a80f09"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.zdnscloud.cn",

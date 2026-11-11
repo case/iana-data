@@ -1,15 +1,23 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-05T03:36:57Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "museum",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
-    "iana_tag": "sponsored",
+    "iana_tag": "generic",
     "type": "gtld",
+    "archived": {
+      "iana_tag": {
+        "value": "sponsored",
+        "archived_on": "2026-11-10"
+      }
+    },
     "orgs": {
       "iana": {
         "sponsor": "Museum Domain Management Association",
@@ -30,7 +38,7 @@
     },
     "registry_url": "https://about.museum",
     "whois_server": "whois.nic.museum",
-    "rdap_server": "https://rdap.nic.museum",
+    "rdap_server": "https://rdap.nic.museum/",
     "tld_created": "2001-10-20",
     "tld_updated": [
       "2026-08-04"
@@ -45,6 +53,7 @@
         "community",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2000",
       "as_org_aliases": [
         "AFNIC.fr",
         "Netnod AB",
@@ -56,6 +65,14 @@
         "packet-clearing-house"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 23046,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "c19f3e83b491c5690ef879dd0c1e4be96ee555c6ded17ff901312fa73fd9e53c"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "d.nic.fr",

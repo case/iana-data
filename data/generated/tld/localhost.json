@@ -1,0 +1,18 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-11-11T03:06:23Z",
+  "sources": {
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "localhost",
+    "tld_script_code": "Latn",
+    "status": "reserved",
+    "delegated": false,
+    "iana_tag": "special-use",
+    "type": "special-use",
+    "purpose": "Refers to the same device",
+    "remarks": "The .localhost domain is typically configured to point to your device, i.e. to IP address 127.0.0.1 (IPv4) or ::1 (IPv6). This is known as a loopback, and it is widely used in software development and testing when an application needs to connect to another service running on the same device.\r\n\r\nFor further information, see [Special-Use Domain Names](https://www.iana.org/go/rfc6761#section-6.5) (RFC 6761) and [Reserved Top Level DNS Names](https://www.iana.org/go/rfc2606) (RFC 2606)."
+  }
+}

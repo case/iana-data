@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-16T08:10:23Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "uz",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -19,7 +21,7 @@
     },
     "registry_url": "http://www.cctld.uz/",
     "whois_server": "whois.cctld.uz",
-    "rdap_server": "https://rdap.cctld.uz",
+    "rdap_server": "https://rdap.cctld.uz/",
     "tld_created": "1995-04-29",
     "tld_updated": [
       "2026-03-30"
@@ -29,6 +31,14 @@
       "country_name_iso": "Uzbekistan",
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 3685,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "d058d5a354efb638058dabd7e0310af31bd168ffdccf49405750bf4d5ce5ae0b"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns1.uz",

@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-11T03:43:07Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "eu",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -39,6 +41,14 @@
       ],
       "geographic_scope": "supranational"
     },
+    "ds_records": [
+      {
+        "key_tag": 35926,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "89b9ef0445904e7c6074b5bece823c3e264fbd91c103d10bde603412343ce70c"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "be.dns.eu",

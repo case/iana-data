@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-29T03:33:22Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--d1acj3b",
     "tld_unicode": "дети",
     "tld_script": "Cyrillic",
+    "tld_script_code": "Cyrl",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -37,6 +39,9 @@
     "tld_updated": [
       "2026-07-27"
     ],
+    "events": {
+      "delegation": "2014-02-26"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -44,6 +49,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "kids",
+      "iana_translation_en": "kids",
+      "iana_transliteration": "deti",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "MSK-IX.ru"
       ],
@@ -51,8 +59,17 @@
         "msk-ix"
       ],
       "language_code": "ru",
-      "language_name_en": "Russian"
+      "language_name_en": "Russian",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 17425,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "42cea58066d1f44740c3356e0a9b0cb02052bbfdf4f7cdefd0e7988d61e88184"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.dns.ripn.net",

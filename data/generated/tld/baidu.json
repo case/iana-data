@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "baidu",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "http://www.zdns.cn",
     "whois_server": "whois.gtld.knet.cn",
-    "rdap_server": "https://rdap.zdnsgtld.com/baidu",
+    "rdap_server": "https://rdap.zdnsgtld.com/baidu/",
     "tld_created": "2015-12-17",
     "tld_updated": [
       "2024-12-12"
     ],
+    "events": {
+      "delegation": "2016-01-05"
+    },
     "annotations": {
       "iana_tech_alias": "ZDNS",
       "iana_tech_slug": "zdns",
@@ -44,6 +49,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "ZDNS"
       ],
@@ -51,6 +57,14 @@
         "zdns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 23825,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "7daede4b986a05b32cd3698ce14d0a0866d12a2ab955b8dc3659d25d7ad65cbe"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.zdnscloud.cn",

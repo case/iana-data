@@ -1,15 +1,17 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--l1acc",
     "tld_unicode": "мон",
     "tld_script": "Cyrillic",
+    "tld_script_code": "Cyrl",
     "tld_iso": "mn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -26,6 +28,9 @@
     "tld_updated": [
       "2025-06-18"
     ],
+    "events": {
+      "delegation": "2013-08-17"
+    },
     "annotations": {
       "iana_sponsor_alias": "Datacom Mongolia",
       "iana_sponsor_slug": "datacom-mongolia",
@@ -34,10 +39,26 @@
       "iana_tech_alias": "Datacom Mongolia",
       "iana_tech_slug": "datacom-mongolia",
       "country_name_iso": "Mongolia",
+      "iana_transliteration": "mon",
       "geographic_scope": "country",
       "language_code": "mn",
-      "language_name_en": "Mongolian"
+      "language_name_en": "Mongolian",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 47327,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "5080adfc58d869d0b7e45816945e93354233abf3406f23525fd02d9e8701c434"
+      },
+      {
+        "key_tag": 47327,
+        "algorithm": 13,
+        "digest_type": 4,
+        "digest": "ad7439b54ab7bdf624aa203ba36971b08472051ced05d0dca1897184a5ce1da092071eccf10b3adb6c2a51ba32a8da4b"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns10.dns.mn",

@@ -1,20 +1,22 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "audi",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
     "orgs": {
       "iana": {
         "sponsor": "AUDI Aktiengesellschaft",
-        "admin": "STACKIT GmbH & Co. KG",
-        "tech": "Afilias"
+        "admin": "Schwarz Digits Cloud GmbH & Co. KG",
+        "tech": "Identity Digital Limited"
       },
       "icann": {
         "registry_operator": "AUDI Aktiengesellschaft",
@@ -33,8 +35,11 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "2015-11-12",
     "tld_updated": [
-      "2025-03-07"
+      "2026-10-23"
     ],
+    "events": {
+      "delegation": "2015-11-25"
+    },
     "annotations": {
       "iana_sponsor_alias": "Audi",
       "iana_sponsor_slug": "audi",
@@ -49,6 +54,7 @@
         "community",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Identity Digital"
       ],
@@ -56,6 +62,14 @@
         "identity-digital"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 51269,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "4d5405a75b7a816d31a93b6e3f9e1d6813e71635b21639eb43e0be3b93ba9508"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a0.nic.audi",

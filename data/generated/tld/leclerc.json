@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-22T03:18:19Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "leclerc",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "http://www.mouvement-leclerc.com",
     "whois_server": "whois.nic.leclerc",
-    "rdap_server": "https://rdap.nic.leclerc",
+    "rdap_server": "https://rdap.nic.leclerc/",
     "tld_created": "2015-01-29",
     "tld_updated": [
       "2026-08-21"
     ],
+    "events": {
+      "delegation": "2015-03-03"
+    },
     "annotations": {
       "iana_tech_alias": "AFNIC.fr",
       "iana_tech_slug": "afnic",
@@ -45,6 +50,7 @@
         "community",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "AFNIC.fr",
         "Netnod AB",
@@ -56,6 +62,14 @@
         "packet-clearing-house"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 65159,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "f29cb282be2c2750719574ba14a6fab762e2ddca5fb7d3d6c582c43b5da78dcb"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "d.nic.fr",

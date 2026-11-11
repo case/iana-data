@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-11T07:27:57Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "dj",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -32,6 +34,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 61034,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "0c2c47e824f78c04c693ad40d26847a634b89a498f0b874b5a3a736e24c0c9f6"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns1.djibtelecom.dj",

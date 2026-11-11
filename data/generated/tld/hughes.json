@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "hughes",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -14,7 +16,7 @@
       "iana": {
         "sponsor": "Hughes Satellite Systems Corporation",
         "admin": "Hughes Satellite Systems Corporation",
-        "tech": "Afilias"
+        "tech": "Identity Digital Limited"
       },
       "icann": {
         "registry_operator": "Hughes Satellite Systems Corporation",
@@ -33,8 +35,11 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "2016-08-04",
     "tld_updated": [
-      "2023-08-11"
+      "2026-11-05"
     ],
+    "events": {
+      "delegation": "2016-08-10"
+    },
     "annotations": {
       "iana_tech_alias": "Identity Digital",
       "iana_tech_slug": "identity-digital",
@@ -44,6 +49,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Identity Digital"
       ],
@@ -51,6 +57,14 @@
         "identity-digital"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 28339,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "ba1ad019c2fcf85daa184ad17f16ef0654c4f73879de044f7be13483dcfbba1e"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a0.nic.hughes",

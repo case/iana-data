@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "poker",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -34,6 +36,9 @@
     "tld_updated": [
       "2025-09-04"
     ],
+    "events": {
+      "delegation": "2014-10-15"
+    },
     "annotations": {
       "iana_sponsor_alias": "Identity Digital",
       "iana_sponsor_slug": "identity-digital",
@@ -48,6 +53,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Identity Digital"
       ],
@@ -55,6 +61,14 @@
         "identity-digital"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 12856,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "571efc932d4c25e2f41df9e216b66732f8d17bb7efd2f6230af3127948ba167c"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a0.nic.poker",

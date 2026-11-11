@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-30T03:31:23Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "mg",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -19,7 +21,7 @@
     },
     "registry_url": "http://www.nic.mg",
     "whois_server": "whois.nic.mg",
-    "rdap_server": "http://rdap.nic.mg",
+    "rdap_server": "http://rdap.nic.mg/",
     "tld_created": "1995-07-25",
     "tld_updated": [
       "2025-10-02"
@@ -39,6 +41,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 31916,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "61c4c85f931e44175e37e585d4ecf728fe63587742d7335836e1e686ad44950e"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "dns-tld.ird.fr",

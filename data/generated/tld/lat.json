@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "lat",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2025-08-12"
     ],
+    "events": {
+      "delegation": "2015-01-09"
+    },
     "annotations": {
       "iana_sponsor_alias": "xyz.com",
       "iana_sponsor_slug": "xyz-com",
@@ -49,6 +54,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -57,6 +63,20 @@
       ],
       "geographic_scope": "supranational"
     },
+    "ds_records": [
+      {
+        "key_tag": 42520,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "fae20127b971e74d949e113cd4d738f82d6d53c5091b76cda93a5877554df1f4"
+      },
+      {
+        "key_tag": 25789,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "16aae37ef2d2a809d0d1ed18b045161dd63607375e23687ed840c78d8ab4387e"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.lat",

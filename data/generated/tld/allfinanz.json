@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "allfinanz",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "http://www.allfinanz-registry.de",
     "whois_server": "whois.nic.allfinanz",
-    "rdap_server": "https://rdap.centralnic.com/allfinanz",
+    "rdap_server": "https://rdap.centralnic.com/allfinanz/",
     "tld_created": "2014-09-25",
     "tld_updated": [
       "2023-11-06"
     ],
+    "events": {
+      "delegation": "2014-10-01"
+    },
     "annotations": {
       "iana_tech_alias": "CentralNic",
       "iana_tech_slug": "centralnic",
@@ -43,6 +48,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -50,6 +56,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 11155,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "2337b2a34993e96d38fc18da0873463c467385bfe16e09e51245673f027f913a"
+      },
+      {
+        "key_tag": 34586,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "cb14a0af7298e258cea6b3a50686520d007a20ac3bc3e676e67d050ee42a0d61"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.allfinanz",

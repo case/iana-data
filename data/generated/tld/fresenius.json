@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "fresenius",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "http://www.freseniusregistry.com",
     "whois_server": "whois.nic.fresenius",
-    "rdap_server": "https://rdap.centralnic.com/fresenius",
+    "rdap_server": "https://rdap.centralnic.com/fresenius/",
     "tld_created": "2015-12-17",
     "tld_updated": [
       "2023-11-06"
     ],
+    "events": {
+      "delegation": "2016-01-09"
+    },
     "annotations": {
       "iana_tech_alias": "CentralNic",
       "iana_tech_slug": "centralnic",
@@ -44,6 +49,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -51,6 +57,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 14099,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "3a1c09d9328367d2077aa1418dacab1e9799c6e419409c35416ed57ad0d61dd2"
+      },
+      {
+        "key_tag": 48287,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "a4740830986280d4ba13af47a2d92ae0a9561caa98eded550725bb2143f9ae88"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.fresenius",

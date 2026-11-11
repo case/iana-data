@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "trv",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2023-08-11"
     ],
+    "events": {
+      "delegation": "2015-12-11"
+    },
     "annotations": {
       "iana_sponsor_alias": "Travelers Insurance",
       "iana_sponsor_slug": "travelers-insurance",
@@ -49,6 +54,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Identity Digital"
       ],
@@ -56,6 +62,14 @@
         "identity-digital"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 48547,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "f525871ee63ffed32856ba0c67f5115d5b011a437b67250e357df2bdcf1ea31c"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a0.nic.trv",

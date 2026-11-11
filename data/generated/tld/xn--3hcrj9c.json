@@ -1,15 +1,17 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-02T07:14:48Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--3hcrj9c",
     "tld_unicode": "ଭାରତ",
     "tld_script": "Oriya",
+    "tld_script_code": "Orya",
     "tld_iso": "in",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -26,6 +28,9 @@
     "tld_updated": [
       "2026-09-01"
     ],
+    "events": {
+      "delegation": "2017-06-29"
+    },
     "annotations": {
       "iana_sponsor_alias": "NIXI.in",
       "iana_sponsor_slug": "nixi",
@@ -34,6 +39,8 @@
       "iana_tech_alias": "NIXI.in",
       "iana_tech_slug": "nixi",
       "country_name_iso": "India",
+      "iana_translation_en": "India",
+      "iana_transliteration": "bharat",
       "as_org_aliases": [
         "Packet Clearing House",
         "Tucows"
@@ -43,9 +50,18 @@
         "tucows"
       ],
       "geographic_scope": "country",
-      "language_code": "or",
-      "language_name_en": "Odia"
+      "language_code": "ory",
+      "language_name_en": "Odia",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 9504,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "ce4c7c86962e419139f99e8bc928c5cb38f65916f75e12aa938c108baf355c21"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns1.registry.in",

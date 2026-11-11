@@ -1,11 +1,13 @@
 """Tests for download utilities."""
 
+import json
 import shutil
 from datetime import UTC
 from pathlib import Path
 from unittest.mock import Mock, patch
 
 import httpx2
+import pytest
 
 from src.utilities.download import (
     _download_file_impl,
@@ -13,10 +15,13 @@ from src.utilities.download import (
     download_iana_files,
 )
 from src.utilities.metadata import utc_timestamp
+from tests.dated_fixtures import latest_fixture
 
 FIXTURES_DIR = Path(__file__).parent.parent / "fixtures"
 SOURCE_FIXTURES_DIR = FIXTURES_DIR / "source" / "core"
 METADATA_FIXTURES_DIR = FIXTURES_DIR / "metadata"
+IANA_TLDS_FIXTURE = latest_fixture(SOURCE_FIXTURES_DIR, "iana-tlds.json")
+IANA_TLDS_SCHEMA_FIXTURE = latest_fixture(SOURCE_FIXTURES_DIR, "iana-tlds-schema.json")
 
 
 def load_fixture_headers(fixture_name):
@@ -62,10 +67,15 @@ def test_download_first_time(tmp_path):
             load_fixture_headers("tlds-txt"),
             load_fixture_content("tlds.txt"),
         ),
-        "https://www.iana.org/domains/root/db": (
+        "https://data.iana.org/TLD/v1/tlds.json": (
             200,
-            load_fixture_headers("root-html"),
-            load_fixture_content("root.html"),
+            {},
+            IANA_TLDS_FIXTURE.read_bytes(),
+        ),
+        "https://data.iana.org/TLD/v1/tlds-schema.json": (
+            200,
+            {},
+            IANA_TLDS_SCHEMA_FIXTURE.read_bytes(),
         ),
     }
 
@@ -92,12 +102,16 @@ def test_download_first_time(tmp_path):
         # All files should be downloaded
         assert results["RDAP_BOOTSTRAP"] == "downloaded"
         assert results["TLD_LIST"] == "downloaded"
-        assert results["ROOT_ZONE_DB"] == "downloaded"
+        assert results["IANA_TLDS"] == "downloaded"
+        assert results["IANA_TLDS_SCHEMA"] == "downloaded"
 
         # Files should exist
         assert (source_dir / "iana-rdap.json").exists()
         assert (source_dir / "iana-tlds.txt").exists()
-        assert (source_dir / "iana-root.html").exists()
+        assert (source_dir / "iana-tlds.json").read_bytes() == (
+            IANA_TLDS_FIXTURE.read_bytes()
+        )
+        assert (source_dir / "iana-tlds-schema.json").exists()
 
 
 def test_download_with_304_not_modified(tmp_path):
@@ -146,30 +160,31 @@ def test_download_with_fresh_cache(tmp_path):
     # Copy existing files
     shutil.copy(SOURCE_FIXTURES_DIR / "rdap.json", source_dir / "iana-rdap.json")
     shutil.copy(SOURCE_FIXTURES_DIR / "tlds.txt", source_dir / "iana-tlds.txt")
-    shutil.copy(SOURCE_FIXTURES_DIR / "root.html", source_dir / "iana-root.html")
+    shutil.copy(IANA_TLDS_FIXTURE, source_dir / "iana-tlds.json")
 
     # Copy fresh cache metadata fixture
     metadata_file = generated_dir / "metadata.json"
     shutil.copy(METADATA_FIXTURES_DIR / "fresh-cache-metadata.json", metadata_file)
 
-    root_zone_request_made = False
+    iana_tlds_request_made = False
 
     def mock_get(url, headers=None):
         # RDAP and TLD_LIST should still make requests (but get 304 responses)
         if (
             url == "https://data.iana.org/rdap/dns.json"
             or url == "https://data.iana.org/TLD/tlds-alpha-by-domain.txt"
+            or url == "https://data.iana.org/TLD/v1/tlds-schema.json"
         ):
             response = Mock(spec=httpx2.Response)
             response.status_code = 304
             response.headers = {}
             return response
-        elif url == "https://www.iana.org/domains/root/db":
-            # ROOT_ZONE_DB should NOT make a request (cache is fresh)
-            nonlocal root_zone_request_made
-            root_zone_request_made = True
+        elif url == "https://data.iana.org/TLD/v1/tlds.json":
+            # IANA_TLDS should NOT make a request (cache is fresh)
+            nonlocal iana_tlds_request_made
+            iana_tlds_request_made = True
             raise AssertionError(
-                "Should not make HTTP request for ROOT_ZONE_DB when cache is fresh"
+                "Should not make HTTP request for IANA_TLDS when cache is fresh"
             )
         raise AssertionError(f"Unexpected URL: {url}")
 
@@ -191,11 +206,9 @@ def test_download_with_fresh_cache(tmp_path):
 
         results = download_iana_files()
 
-        # ROOT_ZONE_DB should skip HTTP request due to fresh cache
-        assert results["ROOT_ZONE_DB"] == "not_modified"
-        assert (
-            not root_zone_request_made
-        )  # No HTTP request should be made for ROOT_ZONE_DB
+        # IANA_TLDS should skip HTTP request due to fresh cache
+        assert results["IANA_TLDS"] == "not_modified"
+        assert not iana_tlds_request_made
 
         # RDAP and TLD_LIST should still make requests but get 304
         assert results["RDAP_BOOTSTRAP"] == "not_modified"
@@ -300,7 +313,8 @@ def test_download_handles_http_error(tmp_path):
         # All should return error
         assert results["RDAP_BOOTSTRAP"] == "error"
         assert results["TLD_LIST"] == "error"
-        assert results["ROOT_ZONE_DB"] == "error"
+        assert results["IANA_TLDS"] == "error"
+        assert results["IANA_TLDS_SCHEMA"] == "error"
 
 
 def test_download_file_impl_single_file(tmp_path):
@@ -606,258 +620,6 @@ def test_download_file_impl_cache_fresh_initializes_metadata(tmp_path):
     assert result == "not_modified"
     # Metadata should have last_checked updated
     assert "last_checked" in metadata["TEST_KEY"]
-
-
-def test_download_tld_pages_default_base_dir(tmp_path):
-    """Test download_tld_pages default base_dir assignment (covers line 147)."""
-    from src.utilities.download import download_tld_pages
-
-    generated_dir = tmp_path / "data" / "generated"
-    generated_dir.mkdir(parents=True)
-
-    # Test by reading the source to verify line 147 assigns the default
-    # We cannot actually use base_dir=None without touching production files
-    # So we use an explicit tmp_path but verify the code structure
-
-    def mock_request(client, url, headers=None):
-        response = Mock(spec=httpx2.Response)
-        response.status_code = 200
-        response.headers = {}
-        response.content = b"<html><main>TLD page content</main></html>"
-        response.text = "<html><main>TLD page content</main></html>"
-        return response
-
-    with (
-        patch(
-            "src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")
-        ),
-        patch(
-            "src.utilities.download.make_request_with_retry", side_effect=mock_request
-        ),
-        patch("httpx2.Client") as mock_client_class,
-    ):
-        mock_client_class.return_value.__enter__.return_value.get = mock_request
-
-        # Use explicit base_dir to avoid touching production
-        result = download_tld_pages(
-            tlds=["test"], base_dir=tmp_path / "tld-pages", delay=0
-        )
-
-    # Verify download succeeded
-    assert result["test"] == "downloaded"
-
-    # Verify file was created in tmp_path, not production
-    assert (tmp_path / "tld-pages" / "t" / "test.html").exists()
-    assert not Path("data/source/tld-pages/t/test.html").exists()
-
-
-def test_download_tld_pages_parses_tlds_from_file(tmp_path):
-    """Test download_tld_pages parses TLDs from file when tlds=None (covers lines 151-154)."""
-    source_dir = tmp_path / "data" / "source"
-    generated_dir = tmp_path / "data" / "generated"
-    source_dir.mkdir(parents=True)
-    generated_dir.mkdir(parents=True)
-
-    # Create a TLD file
-    tlds_file = source_dir / "iana-tlds.txt"
-    tlds_file.write_text("# Version 2025011800\naaa\ncom\n")
-
-    # Mock response
-    def mock_request(client, url, headers=None):
-        response = Mock(spec=httpx2.Response)
-        response.status_code = 200
-        response.headers = {}
-        response.content = b"<html><main>TLD page</main></html>"
-        response.text = "<html><main>TLD page</main></html>"
-        return response
-
-    from src.utilities.download import download_tld_pages
-
-    with (
-        patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
-        patch(
-            "src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")
-        ),
-        patch(
-            "src.utilities.download.make_request_with_retry", side_effect=mock_request
-        ),
-        patch("httpx2.Client") as mock_client_class,
-    ):
-        mock_client_class.return_value.__enter__.return_value.get = mock_request
-
-        # Call with tlds=None (should parse from file)
-        result = download_tld_pages(tlds=None, base_dir=tmp_path / "tld-pages", delay=0)
-
-    # Check that it downloaded both TLDs from file
-    assert "aaa" in result
-    assert "com" in result
-
-
-def test_download_tld_pages_fallback_on_extraction_failure(tmp_path):
-    """Test download_tld_pages fallback when main content extraction fails (covers lines 187-195)."""
-    generated_dir = tmp_path / "data" / "generated"
-    generated_dir.mkdir(parents=True)
-    base_dir = tmp_path / "tld-pages"
-
-    # Mock response with NO <main> tag (extraction will fail)
-    def mock_request(client, url, headers=None):
-        response = Mock(spec=httpx2.Response)
-        response.status_code = 200
-        response.headers = {}
-        response.content = b"<html><body><p>No main tag here</p></body></html>"
-        response.text = "<html><body><p>No main tag here</p></body></html>"
-        return response
-
-    from src.utilities.download import download_tld_pages
-
-    with (
-        patch(
-            "src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")
-        ),
-        patch(
-            "src.utilities.download.make_request_with_retry", side_effect=mock_request
-        ),
-        patch("httpx2.Client") as mock_client_class,
-    ):
-        mock_client_class.return_value.__enter__.return_value.get = mock_request
-
-        result = download_tld_pages(tlds=["test"], base_dir=base_dir, delay=0)
-
-    # Check that it used fallback path
-    assert result["test"] == "downloaded"
-    # Should create -full suffix file since extraction failed
-    fallback_path = base_dir / "t" / "test-full.html"
-    assert fallback_path.exists()
-    assert "No main tag here" in fallback_path.read_text()
-
-
-def test_download_tld_pages_handles_non_200_response(tmp_path):
-    """Test download_tld_pages handles non-200 status codes (covers lines 199-200)."""
-    generated_dir = tmp_path / "data" / "generated"
-    generated_dir.mkdir(parents=True)
-
-    # Mock 404 response
-    def mock_request(client, url, headers=None):
-        response = Mock(spec=httpx2.Response)
-        response.status_code = 404
-        response.headers = {}
-        return response
-
-    from src.utilities.download import download_tld_pages
-
-    with (
-        patch(
-            "src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")
-        ),
-        patch(
-            "src.utilities.download.make_request_with_retry", side_effect=mock_request
-        ),
-        patch("httpx2.Client") as mock_client_class,
-    ):
-        mock_client_class.return_value.__enter__.return_value.get = mock_request
-
-        result = download_tld_pages(
-            tlds=["notfound"], base_dir=tmp_path / "tld-pages", delay=0
-        )
-
-    # Should return error status
-    assert result["notfound"] == "error"
-
-
-def test_download_tld_pages_handles_exception(tmp_path):
-    """Test download_tld_pages handles exceptions gracefully (covers lines 202-204)."""
-    generated_dir = tmp_path / "data" / "generated"
-    generated_dir.mkdir(parents=True)
-
-    # Mock to raise exception
-    def mock_request(client, url, headers=None):
-        raise RuntimeError("Network error")
-
-    from src.utilities.download import download_tld_pages
-
-    with (
-        patch(
-            "src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")
-        ),
-        patch(
-            "src.utilities.download.make_request_with_retry", side_effect=mock_request
-        ),
-        patch("httpx2.Client") as mock_client_class,
-    ):
-        mock_client_class.return_value.__enter__.return_value.get = mock_request
-
-        result = download_tld_pages(
-            tlds=["error"], base_dir=tmp_path / "tld-pages", delay=0
-        )
-
-    # Should return error status
-    assert result["error"] == "error"
-
-
-def test_download_tld_pages_delay_between_requests(tmp_path):
-    """Test download_tld_pages waits between requests (covers line 208)."""
-    generated_dir = tmp_path / "data" / "generated"
-    generated_dir.mkdir(parents=True)
-
-    call_count = [0]
-
-    # Mock response
-    def mock_request(client, url, headers=None):
-        call_count[0] += 1
-        response = Mock(spec=httpx2.Response)
-        response.status_code = 200
-        response.headers = {}
-        response.content = b"<html><main>content</main></html>"
-        response.text = "<html><main>content</main></html>"
-        return response
-
-    from src.utilities.download import download_tld_pages
-
-    with (
-        patch(
-            "src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")
-        ),
-        patch(
-            "src.utilities.download.make_request_with_retry", side_effect=mock_request
-        ),
-        patch("src.utilities.download.time.sleep") as mock_sleep,
-        patch("httpx2.Client") as mock_client_class,
-    ):
-        mock_client_class.return_value.__enter__.return_value.get = mock_request
-
-        # Download 3 TLDs with delay=0.5
-        result = download_tld_pages(
-            tlds=["aaa", "bbb", "ccc"], base_dir=tmp_path / "tld-pages", delay=0.5
-        )
-
-    # Should download all 3
-    assert len(result) == 3
-    assert all(status == "downloaded" for status in result.values())
-
-    # Should call sleep 2 times (not after last TLD)
-    assert mock_sleep.call_count == 2
-    mock_sleep.assert_called_with(0.5)
-
-
-def test_download_tld_pages_empty_tld_list(tmp_path):
-    """Test download_tld_pages when empty TLD list is provided (covers lines 155-157)."""
-    from src.utilities.download import download_tld_pages
-
-    generated_dir = tmp_path / "data" / "generated"
-    generated_dir.mkdir(parents=True)
-
-    # Patch metadata file to prevent writing to production
-    with patch(
-        "src.utilities.metadata.METADATA_FILE", str(generated_dir / "metadata.json")
-    ):
-        # Pass empty list directly - this exercises the empty list check without needing to mock
-        result = download_tld_pages(tlds=[], base_dir=tmp_path / "tld-pages", delay=0)
-
-    # Should return empty dict when no TLDs provided
-    assert result == {}
-
-
-# === Tests for download_iptoasn ===
 
 
 def test_download_iptoasn_success(tmp_path):
@@ -1392,3 +1154,303 @@ def test_download_file_keeps_freshness_window_anchored_to_the_last_real_save(tmp
     assert result == "not_modified"
     assert metadata["TEST"]["cache_data"]["last_downloaded"] == anchored
     assert metadata["TEST"]["cache_data"]["etag"] == 'W/"new"'
+
+
+# --- IANA TLD JSON and its schema: checked before either replaces a stored file ---
+
+IANA_TLDS_URL = "https://data.iana.org/TLD/v1/tlds.json"
+IANA_TLDS_SCHEMA_URL = "https://data.iana.org/TLD/v1/tlds-schema.json"
+STORED_DATA = IANA_TLDS_FIXTURE.read_bytes()
+STORED_SCHEMA = IANA_TLDS_SCHEMA_FIXTURE.read_bytes()
+
+
+def _download_with(tmp_path, bodies, *, stored=None):
+    """Run download_iana_files over ``bodies``; a URL not in it answers 304.
+
+    Stores the fixture pair first by default. Returns (results, source_dir, metadata).
+    """
+    source_dir, generated_dir = setup_test_env(tmp_path)
+    if stored is None:
+        stored = {"iana-tlds.json": STORED_DATA, "iana-tlds-schema.json": STORED_SCHEMA}
+    for name, content in stored.items():
+        (source_dir / name).write_bytes(content)
+    metadata_file = generated_dir / "metadata.json"
+
+    def mock_get(url, headers=None):
+        response = Mock(spec=httpx2.Response)
+        body = bodies.get(url)
+        if isinstance(body, Exception):
+            raise body
+        if body is None:
+            response.status_code = 304
+            response.headers = {}
+            return response
+        response.status_code = 200
+        response.headers = {"etag": '"fresh"'}
+        response.content = body
+        response.text = body.decode("utf-8", errors="replace")
+        return response
+
+    with (
+        patch("src.utilities.download.SOURCE_DIR", str(source_dir)),
+        patch("src.utilities.metadata.METADATA_FILE", str(metadata_file)),
+        patch("httpx2.Client") as mock_client,
+    ):
+        mock_client.return_value.__enter__.return_value.get = mock_get
+        results = download_iana_files()
+
+    return results, source_dir, json.loads(metadata_file.read_text())
+
+
+def _data(mutate=None, **meta):
+    """The TLD JSON fixture as bytes, with ``meta`` updated and ``mutate`` applied."""
+    document = json.loads(STORED_DATA)
+    document["meta"].update(meta)
+    if mutate is not None:
+        mutate(document)
+    return json.dumps(document).encode("utf-8")
+
+
+def _schema(mutate):
+    """The schema fixture as bytes, with ``mutate`` applied."""
+    schema = json.loads(STORED_SCHEMA)
+    mutate(schema)
+    return json.dumps(schema).encode("utf-8")
+
+
+def _stored_names(source_dir):
+    return sorted(p.name for p in source_dir.iterdir())
+
+
+PAIR = ["iana-tlds-schema.json", "iana-tlds.json"]
+
+
+def test_iana_tlds_changed_payload_replaces_the_stored_file(tmp_path):
+    def change(document):
+        document["domains"][0]["whois_server"] = "whois.changed.example"
+
+    body = _data(change)
+
+    results, source_dir, metadata = _download_with(tmp_path, {IANA_TLDS_URL: body})
+
+    assert results["IANA_TLDS"] == "downloaded"
+    assert (source_dir / "iana-tlds.json").read_bytes() == body
+    assert metadata["IANA_TLDS"]["cache_data"]["etag"] == '"fresh"'
+    assert _stored_names(source_dir) == PAIR
+
+
+def test_iana_tlds_timestamp_only_change_keeps_the_stored_bytes(tmp_path):
+    body = _data(generated="2026-12-01T00:00:00+00:00")
+    assert body != STORED_DATA
+
+    results, source_dir, _ = _download_with(tmp_path, {IANA_TLDS_URL: body})
+
+    assert results["IANA_TLDS"] == "not_modified"
+    assert (source_dir / "iana-tlds.json").read_bytes() == STORED_DATA
+
+
+def _ftp_registration_url(document):
+    document["domains"][0]["registration_url"] = "ftp://nic.example"
+
+
+def _rdap_without_trailing_slash(document):
+    document["domains"][0]["rdap_base_urls"] = ["https://rdap.example"]
+
+
+def _ds_key_tag_out_of_range(document):
+    document["domains"][0]["ds_records"][0]["key_tag"] = 70000
+
+
+def _retired_with_nameservers(document):
+    document["domains"][0]["status"] = "retired"
+
+
+@pytest.mark.parametrize(
+    "body",
+    [
+        b"<html>503 Service Unavailable</html>",
+        b"",
+        b"\xff\xfe not utf-8",
+        b"[]",
+        b'{"meta": {"specversion": 1}, "domains": []}',
+        _data(specversion=2),
+        _data(_ftp_registration_url),
+        _data(_rdap_without_trailing_slash),
+        _data(_ds_key_tag_out_of_range),
+        _data(_retired_with_nameservers),
+    ],
+    ids=[
+        "html",
+        "empty",
+        "not-utf8",
+        "array",
+        "no-domains",
+        "specversion-2",
+        "schema-only-registration-url",
+        "schema-only-rdap-slash",
+        "schema-only-ds-range",
+        "retired-with-nameservers",
+    ],
+)
+def test_iana_tlds_invalid_payload_is_reported_and_never_stored(tmp_path, body):
+    results, source_dir, metadata = _download_with(tmp_path, {IANA_TLDS_URL: body})
+
+    assert results["IANA_TLDS"] == "invalid"
+    assert (source_dir / "iana-tlds.json").read_bytes() == STORED_DATA
+    # No validators: the next run must fetch again rather than be answered 304.
+    assert "cache_data" not in metadata["IANA_TLDS"]
+    assert _stored_names(source_dir) == PAIR
+
+
+def test_iana_tlds_with_no_stored_schema_is_rejected_not_trusted(tmp_path):
+    results, source_dir, _ = _download_with(
+        tmp_path, {IANA_TLDS_URL: _data()}, stored={}
+    )
+
+    assert results["IANA_TLDS"] == "invalid"
+    assert list(source_dir.iterdir()) == []
+
+
+def test_iana_tlds_fetch_failure_is_an_error_and_keeps_the_stored_file(tmp_path):
+    results, source_dir, _ = _download_with(
+        tmp_path, {IANA_TLDS_URL: httpx2.ConnectError("Connection failed")}
+    )
+
+    assert results["IANA_TLDS"] == "error"
+    assert (source_dir / "iana-tlds.json").read_bytes() == STORED_DATA
+
+
+def _drop_id(schema):
+    del schema["$id"]
+
+
+def _other_id(schema):
+    schema["$id"] = "https://example.com/other-schema.json"
+
+
+def _malformed(schema):
+    schema["type"] = 7
+
+
+@pytest.mark.parametrize(
+    "body",
+    [
+        b"not json",
+        b"[]",
+        b"{}",
+        _schema(_drop_id),
+        _schema(_other_id),
+        _schema(_malformed),
+        b'{"$id": "https://data.iana.org/TLD/v1/tlds-schema.json", "type": "object"}',
+    ],
+    ids=[
+        "not-json",
+        "array",
+        "accepts-everything",
+        "no-id",
+        "another-schema",
+        "malformed-schema",
+        "no-record-definition",
+    ],
+)
+def test_iana_tlds_schema_invalid_payload_is_reported_and_never_stored(tmp_path, body):
+    results, source_dir, metadata = _download_with(
+        tmp_path, {IANA_TLDS_SCHEMA_URL: body}
+    )
+
+    assert results["IANA_TLDS_SCHEMA"] == "invalid"
+    assert (source_dir / "iana-tlds-schema.json").read_bytes() == STORED_SCHEMA
+    assert "cache_data" not in metadata["IANA_TLDS_SCHEMA"]
+    assert _stored_names(source_dir) == PAIR
+
+
+def _add_description(schema):
+    schema["description"] = "A newer wording of the same rules"
+
+
+def _forbid_active(schema):
+    schema["$defs"]["domain"]["properties"]["status"]["enum"] = ["retired"]
+
+
+def _allow_pending(schema):
+    schema["$defs"]["domain"]["properties"]["status"]["enum"].append("pending")
+
+
+def test_a_new_schema_the_stored_data_satisfies_is_stored(tmp_path):
+    body = _schema(_add_description)
+
+    results, source_dir, metadata = _download_with(
+        tmp_path, {IANA_TLDS_SCHEMA_URL: body}
+    )
+
+    assert results["IANA_TLDS_SCHEMA"] == "downloaded"
+    assert (source_dir / "iana-tlds-schema.json").read_bytes() == body
+    assert metadata["IANA_TLDS_SCHEMA"]["cache_data"]["etag"] == '"fresh"'
+
+
+def test_a_new_schema_the_stored_data_breaks_is_held_back(tmp_path):
+    """The stored pair is tested together, so it must never disagree."""
+    results, source_dir, metadata = _download_with(
+        tmp_path, {IANA_TLDS_SCHEMA_URL: _schema(_forbid_active)}
+    )
+
+    assert results["IANA_TLDS_SCHEMA"] == "invalid"
+    assert (source_dir / "iana-tlds-schema.json").read_bytes() == STORED_SCHEMA
+    assert (source_dir / "iana-tlds.json").read_bytes() == STORED_DATA
+    # Fetched again next run, not answered 304 while the old schema is in place.
+    assert "cache_data" not in metadata["IANA_TLDS_SCHEMA"]
+    assert _stored_names(source_dir) == PAIR
+
+
+def test_new_data_is_checked_against_the_schema_fetched_in_the_same_run(tmp_path):
+    """A value only the new schema allows is accepted when both arrive together."""
+
+    def pending(document):
+        document["domains"][0]["status"] = "pending"
+
+    results, source_dir, _ = _download_with(
+        tmp_path,
+        {IANA_TLDS_SCHEMA_URL: _schema(_allow_pending), IANA_TLDS_URL: _data(pending)},
+    )
+
+    # The schema allows it; the build's parser does not know the status yet.
+    assert results["IANA_TLDS_SCHEMA"] == "downloaded"
+    assert results["IANA_TLDS"] == "invalid"
+    assert (source_dir / "iana-tlds.json").read_bytes() == STORED_DATA
+
+
+def test_rejected_data_does_not_take_a_good_new_schema_down_with_it(tmp_path):
+    body = _schema(_add_description)
+
+    results, source_dir, _ = _download_with(
+        tmp_path, {IANA_TLDS_URL: b"nope", IANA_TLDS_SCHEMA_URL: body}
+    )
+
+    assert results["IANA_TLDS"] == "invalid"
+    assert results["IANA_TLDS_SCHEMA"] == "downloaded"
+    assert (source_dir / "iana-tlds-schema.json").read_bytes() == body
+    assert (source_dir / "iana-tlds.json").read_bytes() == STORED_DATA
+
+
+def test_a_first_download_stores_the_schema_then_the_data(tmp_path):
+    results, source_dir, _ = _download_with(
+        tmp_path,
+        {IANA_TLDS_SCHEMA_URL: STORED_SCHEMA, IANA_TLDS_URL: STORED_DATA},
+        stored={},
+    )
+
+    assert results["IANA_TLDS_SCHEMA"] == "downloaded"
+    assert results["IANA_TLDS"] == "downloaded"
+    assert _stored_names(source_dir) == PAIR
+
+
+def test_a_first_schema_the_stored_data_breaks_is_removed_again(tmp_path):
+    """With no earlier schema to restore, holding back means storing none."""
+    results, source_dir, _ = _download_with(
+        tmp_path,
+        {IANA_TLDS_SCHEMA_URL: _schema(_forbid_active)},
+        stored={"iana-tlds.json": STORED_DATA},
+    )
+
+    assert results["IANA_TLDS_SCHEMA"] == "invalid"
+    assert _stored_names(source_dir) == ["iana-tlds.json"]

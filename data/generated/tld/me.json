@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "me",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -14,7 +16,7 @@
       "iana": {
         "sponsor": "Government of Montenegro",
         "admin": "University of Montenegro, Faculty of Electrical Engineering",
-        "tech": "Center of Information System (CIS)\nUniversity of Montenegro"
+        "tech": "Center of Information System (CIS) University of Montenegro"
       }
     },
     "registry_url": "http://www.domain.me",
@@ -35,6 +37,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 45352,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "7708c8a6d5d72b63214bbff50cb54553f7e07a1fa5e9074bd8d63c43102d8559"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a0.nic.me",

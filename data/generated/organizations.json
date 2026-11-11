@@ -1,8 +1,8 @@
 {
   "description": "Organizations that play roles for TLDs in the IANA root zone, with a reverse-index of those roles. Consolidated subset: this covers the curated multi-source organizations only; the single-source long tail is not yet included, so absence here does not mean a TLD has no operator.",
-  "publication": "2026-09-12T19:48:09Z",
+  "publication": "2026-11-11T03:06:24Z",
   "sources": [
-    "data/source/iana-root.html (IANA)",
+    "data/source/iana-tlds.json (IANA)",
     "data/source/icann-gtlds.json (ICANN)",
     "data/source/iptoasn/ip2asn-combined.tsv.gz (ASN routing data)",
     "data/manual/organizations.json (editorial)"
@@ -704,7 +704,6 @@
             "jnj",
             "kpn",
             "kred",
-            "la",
             "lat",
             "lidl",
             "llp",
@@ -749,7 +748,6 @@
             "wme",
             "xn--4gbrim",
             "xn--mgbx4cd0ab",
-            "xn--q7ce6a",
             "xn--vermgensberater-ctb",
             "xn--vermgensberatung-pwb",
             "xyz",
@@ -2267,7 +2265,6 @@
           "Afilias Limited",
           "Binky Moon, LLC",
           "Dog Beach, LLC",
-          "Donuts Inc",
           "Identity Digital Inc.",
           "Identity Digital Limited",
           "Identity Digital Limited c/o Identity Digital Inc.",
@@ -2282,6 +2279,14 @@
         "asn": [
           "AFILIAS-SECONDARY-DNS",
           "AS-AFILIAS1"
+        ]
+      },
+      "archived": {
+        "iana": [
+          {
+            "name": "Donuts Inc",
+            "archived_on": "2026-11-10"
+          }
         ]
       },
       "aliases": [],
@@ -2835,6 +2840,7 @@
             "works",
             "world",
             "wtf",
+            "xn--5tzm5g",
             "xn--6frz82g",
             "xn--czrs0t",
             "xn--fjq720a",
@@ -3033,7 +3039,6 @@
             "hdfc",
             "hdfcbank",
             "healthcare",
-            "helsinki",
             "hermes",
             "hkt",
             "hockey",
@@ -3068,7 +3073,6 @@
             "jll",
             "jot",
             "juegos",
-            "juniper",
             "kaufen",
             "kerryhotels",
             "kerryproperties",
@@ -3778,7 +3782,6 @@
             "hdfc",
             "hdfcbank",
             "healthcare",
-            "helsinki",
             "hermes",
             "hkt",
             "hockey",
@@ -3816,7 +3819,6 @@
             "jp",
             "jprs",
             "juegos",
-            "juniper",
             "kaufen",
             "kerryhotels",
             "kerryproperties",
@@ -5034,6 +5036,7 @@
             "kw",
             "ky",
             "kz",
+            "la",
             "latino",
             "leclerc",
             "li",
@@ -5162,6 +5165,7 @@
             "xn--ogbpf8fl",
             "xn--p1acf",
             "xn--pgbs0dh",
+            "xn--q7ce6a",
             "xn--rvc1e0am3e",
             "xn--s9brj9c",
             "xn--wgbh1c",
@@ -5855,6 +5859,7 @@
             "iq",
             "kfh",
             "ky",
+            "la",
             "latino",
             "lifestyle",
             "link",
@@ -5901,6 +5906,7 @@
             "xn--mgbgu82a",
             "xn--mgbtx2b",
             "xn--ngbe9e0a",
+            "xn--q7ce6a",
             "xn--rvc1e0am3e",
             "xn--s9brj9c",
             "xn--xkc2dl3a5ee0h",

@@ -1,15 +1,17 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-24T07:37:38Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--mgbcpq6gpa1a",
     "tld_unicode": "البحرين",
     "tld_script": "Arabic",
+    "tld_script_code": "Arab",
     "tld_iso": "bh",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -20,14 +22,23 @@
         "tech": "Tucows.com, Co."
       }
     },
+    "registry_url": "https://register.bh",
+    "whois_server": "whois.bhregistry.bh",
+    "rdap_server": "https://rdap.bhregistry.bh/rdap/",
     "tld_created": "2019-06-13",
     "tld_updated": [
-      "2026-09-23"
+      "2026-09-28"
     ],
+    "events": {
+      "delegation": "2020-01-30"
+    },
     "annotations": {
       "iana_tech_alias": "Tucows",
       "iana_tech_slug": "tucows",
+      "rdap_source": "IANA",
       "country_name_iso": "Bahrain",
+      "iana_translation_en": "Bahrain",
+      "iana_transliteration": "al-bahrain",
       "as_org_aliases": [
         "Packet Clearing House",
         "Tucows"
@@ -38,8 +49,17 @@
       ],
       "geographic_scope": "country",
       "language_code": "ar",
-      "language_name_en": "Arabic"
+      "language_name_en": "Arabic",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 22024,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "7d1259cceacb19ea52d0ede37f98e085b560c9c8d5a5cf696dc38411c7df2c2e"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns01.trs-dns.com",

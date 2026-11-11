@@ -50,9 +50,8 @@ Here are some of the questions we'd like to be able to answer, from the IANA dat
 Here are the data files we're working with:
 
 - IANA - The [All TLDs text file](https://data.iana.org/TLD/tlds-alpha-by-domain.txt)
-- IANA - The [Root DB html file](https://www.iana.org/domains/root/db), which (alas) doesn't appear to be available in a friendlier format
+- IANA - The [TLD JSON file](https://data.iana.org/TLD/v1/tlds.json), the machine-readable export of the [Root Zone Database](https://www.iana.org/domains/root/db), with its [schema](https://data.iana.org/TLD/v1/tlds-schema.json)
 - IANA - The [RDAP bootstrap file](https://data.iana.org/rdap/dns.json)
-- IANA - The individual TLD pages, like [this one for `.beer`](https://www.iana.org/domains/root/db/beer.html)
 - ICANN - The [Registry Agreements table CSV](https://www.icann.org/en/registry-agreements), which help us identify which are Brand TLDs, etc.
 - IPtoASN - [Public Domain-licensed data](https://iptoasn.com/) that maps IP ranges to their AS orgs and countries. This lets us see which ASNs are used for which sets of Nameserver IPs, for example.
 
@@ -67,20 +66,14 @@ There are a few challenges with these data files, for example:
 - All two-character ASCII TLDs are ccTLDs, but not all two-character IDNs are ccTLDs
 - All the TLDs in there are delegated, which is handy. E.g. "currently in the DNS"
 
-**For the "Root DB" html file:**
+**For the TLD JSON file:**
 
-- It lists more TLDs than the "All TLDs" file, because it also includes some `undelegated` TLDs
-- It has more "types" than just `generic` and `country-code` - it also lists `sponsored`, `infrastructure`, and `generic-restricted`
-- It shows the Unicode IDN variants in the rendered html, and their ASCII variants in their `href` links to the per-TLD pages on the IANA website
-- We can use the combination of `country-code` and IDN status, to determine which IDNs are ccTLDs vs. gTLDs
-- Etc
-
-**For the individual TLD pages:**
-
-- There are entities - sponsoring org, and administrative and technical contacts
-- Creation and Updated dates are there
-- Nameserver hosts are there
-- Etc
+- It lists more TLDs than the "All TLDs" file, because it also includes TLDs that are not delegated: `retired`, `eligible` and `reserved`
+- Its `type` is one of `generic`, `country-code`, `special-use` or `test`. The older `sponsored`, `infrastructure` and `generic-restricted` values are gone, and we keep them under `archived.iana_tag`
+- It carries the Unicode label, the script, and for IDN ccTLDs the ISO 3166-1 code of the country
+- It carries the manager, the administrative and technical contacts, the nameservers with their addresses, and the DS records
+- It no longer carries a TLD's creation date. We keep the dates we had in `data/manual/tld-archive.json`
+- `data/source/archive/` holds the last Root Zone Database HTML pages, which carried this data before IANA published the JSON file
 
 **For the RDAP bootstrap file:**
 
@@ -115,7 +108,7 @@ Here is its schema:
   "description": "string",          // Human-readable description of this file
   "publication": "ISO8601 timestamp", // When this file was published/generated (ISO 8601 with timezone)
   "sources": {
-    "iana_root_db": "url",          // URL to IANA Root Zone Database
+    "iana_tlds": "url",             // URL to the IANA TLD JSON file
     "iana_rdap": "url"              // URL to IANA RDAP Bootstrap file
   },
 
@@ -126,15 +119,23 @@ Here is its schema:
       "tld": "string",                     // ASCII TLD without leading dot (e.g. "com", "xn--flw351e") [REQUIRED]
       "tld_unicode": "string",             // Unicode representation (only for IDNs, e.g. "谷歌") [OPTIONAL - omit if not IDN]
       "tld_script": "string",              // Unicode script name for IDNs (e.g. "Han-CJK", "Arabic", "Cyrillic") [OPTIONAL - IDNs only]
+      "tld_script_code": "string",         // IANA's ISO 15924 script code for the label (e.g. "Latn", "Hani") [REQUIRED]
       "tld_iso": "string",                 // ISO 3166-1 alpha-2 ccTLD this IDN is equivalent to (e.g. "cn") [OPTIONAL - IDN ccTLDs only]
       "idn": ["string"],                   // Array of IDN variants of this ccTLD (e.g. ["xn--fiqs8s", "xn--fiqz9s"]) [OPTIONAL - ISO ccTLDs only]
-      "delegated": boolean,                // true if TLD Manager is assigned, false if "Not assigned"; removed/retired TLDs are retained with false [REQUIRED]
-      "iana_tag": "string",                // IANA tag: "generic" | "country-code" | "sponsored" | "infrastructure" | "generic-restricted" | "test" [REQUIRED]
-      "type": "string",                    // Derived type: "gtld" | "cctld" | "infrastructure" [REQUIRED]
+      "status": "string",                  // IANA status: "active" | "retired" | "eligible" | "reserved" [REQUIRED]
+      "delegated": boolean,                // true exactly when status is "active"; every other record is retained with false [REQUIRED]
+      "iana_tag": "string",                // IANA type: "generic" | "country-code" | "special-use" | "test" [REQUIRED]
+      "type": "string",                    // Derived type: "gtld" | "cctld" | "special-use" ("test" derives "gtld") [REQUIRED]
+      "archived": {                        // Values IANA no longer publishes [OPTIONAL - omit if none]
+        "iana_tag": {
+          "value": "string",               // The former tag: "sponsored" | "generic-restricted" | "infrastructure"
+          "archived_on": "string"          // Date we archived it (YYYY-MM-DD)
+        }
+      },
 
       // --- Organizations (canonical data, nested by source) ---
       "orgs": {                            // Organizations associated with this TLD [OPTIONAL - omit if undelegated]
-        "iana": {                          // Roles per the IANA Root Zone Database + per-TLD pages [OPTIONAL - omit if none]
+        "iana": {                          // Roles per the IANA TLD JSON [OPTIONAL - omit if none]
           "sponsor": "string",             // Sponsoring Organisation (TLD Manager) [REQUIRED if iana present]
           "admin": "string",               // Administrative Contact organization [OPTIONAL - omit if empty]
           "tech": "string"                 // Technical Contact organization [OPTIONAL - omit if empty]
@@ -151,6 +152,16 @@ Here is its schema:
           "date_removed": "string"         // Root-zone removal date (YYYY-MM-DD); pairs with contract_terminated [null if active]
         }
       },
+
+      // --- DS Records ---
+      "ds_records": [                      // DS records in the root zone [OPTIONAL - omit if undelegated or unsigned]
+        {
+          "key_tag": number,
+          "algorithm": number,             // DNSSEC algorithm number
+          "digest_type": number,           // DS digest type
+          "digest": "string"               // Lower-case hexadecimal
+        }
+      ],
 
       // --- Name Servers ---
       "nameservers": [                     // Array of nameserver objects [OPTIONAL - omit if undelegated]
@@ -181,16 +192,16 @@ Here is its schema:
       "rdap_server": "string",             // RDAP server URL (e.g. "https://rdap.verisign.com/com/v1/") [OPTIONAL - omit if no RDAP]
 
       // --- Dates ---
-      "tld_created": "string",             // TLD registration date (YYYY-MM-DD) [OPTIONAL - omit if not present]
+      "tld_created": "string",             // TLD registration date (YYYY-MM-DD), from data/manual/tld-archive.json; absent for a TLD delegated after 2026-09-28 [OPTIONAL]
       "tld_updated": ["string"],           // TLD record update dates (YYYY-MM-DD), array to track history [OPTIONAL - omit if not present]
+      "events": {                          // IANA's recorded events [OPTIONAL - omit if none; each key omitted if not recorded]
+        "delegation": "string",            // When the TLD was delegated (YYYY, YYYY-MM or YYYY-MM-DD)
+        "revocation": "string"             // When the TLD was removed from the root zone (same precision)
+      },
 
-      // --- IANA Reports ---
-      "iana_reports": [                    // Array of IANA delegation/transfer reports [OPTIONAL - omit if no reports]
-        {
-          "title": "string",               // Report title
-          "date": "string"                 // Report date (YYYY-MM-DD)
-        }
-      ],
+      // --- Special-use names ---
+      "purpose": "string",                 // Why the name is reserved or set aside [OPTIONAL - special-use only]
+      "remarks": "string",                 // IANA's explanatory text, in Markdown [OPTIONAL - special-use only]
 
       // --- Annotations (supplemental/derived/non-canonical data) ---
       "annotations": {                     // [OPTIONAL - omit entire object if no annotations]
@@ -223,10 +234,15 @@ Here is its schema:
         "registry_agreement_types": ["string"], // Array of agreement types: "base" | "brand" | "community" | "sponsored" | "non_sponsored"
         "icann_translation_en": "string",  // ICANN's raw English Translation of an IDN label, source-faithful [OPTIONAL - IDN gTLDs only]
 
-        // IDN language metadata (derived from tld_script via Unicode CLDR likelySubtags,
-        // with per-(script, region) and per-TLD overrides where the default is wrong)
+        // IANA's own annotations, verbatim
+        "iana_translation_en": "string",   // IANA's English meaning of an IDN label [OPTIONAL - IDNs]
+        "iana_transliteration": "string",  // IANA's romanization of an IDN label [OPTIONAL - IDNs]
+        "iana_delegation_round": "string", // "pre-icann", or the year the application round opened [OPTIONAL - gTLDs]
+
+        // IDN language metadata. IANA's tag, unless ours refines it; ours alone when IANA has none
         "language_code": "string",         // BCP-47 code (e.g. "ar", "hi", "zh-Hant-TW") [OPTIONAL - IDN only]
         "language_name_en": "string",      // English name (e.g. "Arabic", "Hindi", "Chinese (Taiwan)") [OPTIONAL - IDN only]
+        "language_code_source": "string",  // "IANA" | "refined" | "derived" [OPTIONAL - IDN only]
 
         // AS Org infrastructure operators (resolved against organizations.json)
         "as_org_aliases": ["string"],      // Canonical DNS provider display_names hosting nameservers (e.g. ["Identity Digital", "VeriSign"])
@@ -275,17 +291,29 @@ The Translation column from ICANN's registry-agreement CSV is preserved **verbat
 
 For a clean "this TLD means X in English" narrative, combine `icann_translation_en` with `language_name_en` and let the reader judge from `tld_unicode`. Or filter to TLDs where `iana_tag == "generic"` and `specification_13` is false (most likely to be real translations).
 
-### `tld_unicode` is computed locally, not from a published source
+### `tld_unicode` is IANA's U-label
 
-`tld_unicode` is produced by Python's stdlib IDNA codec (`tld.encode("ascii").decode("idna")`), which implements **IDNA2003** (RFC 3490). For today's IDN TLDs this matches ICANN's published `uLabel` exactly; a future IDN containing IDNA2008-divergent characters (German ß, Greek final sigma, ZWJ/ZWNJ) would decode differently. A cross-source verification test catches that case before the bad value ships.
+`tld_unicode` is the `ulabel` IANA publishes for each IDN. It is copied, not computed.
 
 ### `delegated: false` records are retained in `tlds.json`
 
-Removed gTLDs, retired ccTLDs (`.an` Netherlands Antilles, etc.), and IANA test TLDs all stay in `tlds.json` with `delegated: false`. The 1,594 total = 1,437 delegated + 157 non-delegated. **Filter on `delegated: true`** for the current live set; the historical retention is deliberate so removal dates and the original record stay queryable.
+Every record IANA lists stays in `tlds.json`, and `delegated` is true only for `status: "active"`. As of 2026-11-10 that is 1,603 records: 1,436 active, 154 retired (removed gTLDs, dissolved-country ccTLDs such as `.an` and `.yu`, and the IANA test TLDs), 5 eligible ccTLDs that are not delegated, and 8 reserved special-use names such as `.local` and `.onion`. **Filter on `delegated: true`** for the current live set; the retention is deliberate so removal dates and the original record stay queryable.
 
-### `language_code` and `language_name_en` are derived per-IDN, not from a published source
+A reserved name has no organizations, nameservers or dates. It carries `purpose` and `remarks` instead.
 
-The IDN language fields are derived from `tld_script` via Unicode CLDR `likelySubtags`, with per-(script, region) overrides for ccTLDs and per-TLD overrides in `data/manual/annotations.json` for the edge cases (Sindhi `.ڀارت` is Arabic-script but Sindhi-language; Taiwanese TLDs carry `zh-Hant-TW`; etc.). There is no IANA or ICANN language field. Registries publish IDN tables tagged with BCP-47, but those are registry-policy tags (which scripts they accept for second-level registrations), not the A-label's own language. See `src/build/idn_language.py` for the resolution rules and `tests/build/test_idn_language_provenance.py` for the CLDR provenance check.
+### `iana_tag` values IANA dropped are kept under `archived`
+
+IANA used to tag 14 TLDs `sponsored`, 3 `generic-restricted` and `.arpa` `infrastructure`. It now publishes `generic` for the first 17 and `special-use` for `.arpa`. Each of those 18 records keeps its former value at `archived.iana_tag`, with the date we archived it.
+
+### `language_code` prefers IANA's tag
+
+IANA publishes a BCP-47 `language_code` for most IDNs. We use it, with one exception: when our own value extends IANA's with a subtag (IANA says `zh`, ours says `zh-Hant-TW`), ours is kept. `language_code_source` records which happened: `IANA`, `refined`, or `derived` when IANA has no tag.
+
+Our own value comes from `tld_script` via Unicode CLDR `likelySubtags`, with per-(script, region) overrides for ccTLDs and per-TLD overrides in `data/manual/annotations.json`. See `src/build/idn_language.py` for the rules and `tests/build/test_idn_language_provenance.py` for the CLDR provenance check.
+
+### Stability
+
+This data has no versioned releases or changelog yet. Field names and values can change without notice while the model settles, so pin to a commit if you depend on a particular shape.
 
 ## The typed graph
 
@@ -344,9 +372,7 @@ The `data/generated/agreements.json` file is the ICANN registry-agreement-type e
 
 **Data downloads**
 
-- `make download-core` - Downloads the three core IANA files, respecting cache headers
-- `make download-tld-pages` - Downloads the individual TLD HTML pages
-- `make download-tld-pages GROUPS="a b c"` - Specify one or more groups of pages to download, by letter
+- `make download-core` - Downloads the core IANA files, respecting cache headers. The TLD JSON is parsed before it replaces the stored copy; a rejected or failed download keeps the previous file
 
 **Misc**
 

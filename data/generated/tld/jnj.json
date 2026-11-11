@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "jnj",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -29,11 +31,14 @@
       }
     },
     "registry_url": "http://www.jnj.com/",
-    "rdap_server": "https://rdap.centralnicregistry.com/jnj",
+    "rdap_server": "https://rdap.centralnicregistry.com/jnj/",
     "tld_created": "2016-01-14",
     "tld_updated": [
       "2025-04-09"
     ],
+    "events": {
+      "delegation": "2016-04-08"
+    },
     "annotations": {
       "iana_admin_alias": "CentralNic",
       "iana_admin_slug": "centralnic",
@@ -45,6 +50,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -52,6 +58,26 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 8032,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "5cf2a2dfa2b3a5b5c8b3f42bd42290fe5632dc8720b48286573c4aca21fd8c82"
+      },
+      {
+        "key_tag": 26597,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "7e3b6b8a5f7500c0435fb77fbc0e6da91492a6c0db6a6b949a12b18922b29439"
+      },
+      {
+        "key_tag": 26597,
+        "algorithm": 8,
+        "digest_type": 4,
+        "digest": "871a5a0fdd65c42b38c1c997863b4738f5cd2a22ddd29e9709db7721f4376ffefd097341222f38b3c7aafb6de7b2acc7"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "w.nic.jnj",

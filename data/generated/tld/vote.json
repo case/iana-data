@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "vote",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -34,6 +36,9 @@
     "tld_updated": [
       "2025-10-07"
     ],
+    "events": {
+      "delegation": "2014-03-02"
+    },
     "annotations": {
       "iana_admin_alias": "Identity Digital",
       "iana_admin_slug": "identity-digital",
@@ -44,6 +49,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Identity Digital"
       ],
@@ -51,6 +57,14 @@
         "identity-digital"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 62749,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "101d2ae9c31fbe10078e74d477010aa5c8966d814421123a893b8b0e7b46891a"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a0.nic.vote",

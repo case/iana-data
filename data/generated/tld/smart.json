@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "smart",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -29,11 +31,14 @@
       }
     },
     "whois_server": "whois.nic.smart",
-    "rdap_server": "https://rdap.centralnic.com/smart",
+    "rdap_server": "https://rdap.centralnic.com/smart/",
     "tld_created": "2016-04-21",
     "tld_updated": [
       "2024-05-28"
     ],
+    "events": {
+      "delegation": "2016-07-15"
+    },
     "annotations": {
       "iana_tech_alias": "CentralNic",
       "iana_tech_slug": "centralnic",
@@ -43,6 +48,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -50,6 +56,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 10241,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "1fc272fd0bb0d9ae922348c5c63f401a9e1fba71c8cb452af5df5e4e005237cf"
+      },
+      {
+        "key_tag": 22664,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "4c3f407c25e49dfd591a1603309be05a0410277178fdd9c29ec178c32dd2d1cb"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.smart",

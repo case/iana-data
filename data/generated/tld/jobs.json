@@ -1,15 +1,23 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-28T08:41:21Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "jobs",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
-    "iana_tag": "sponsored",
+    "iana_tag": "generic",
     "type": "gtld",
+    "archived": {
+      "iana_tag": {
+        "value": "sponsored",
+        "archived_on": "2026-11-10"
+      }
+    },
     "orgs": {
       "iana": {
         "sponsor": "Employ Media LLC",
@@ -49,6 +57,7 @@
         "community",
         "sponsored"
       ],
+      "iana_delegation_round": "2004",
       "as_org_aliases": [
         "Nominet",
         "UltraDNS"
@@ -58,6 +67,14 @@
         "ultradns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 47990,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "813737ed8ea193eae37c0c2f95758a0de0b5069a20a9b0e8f4955908ac40c57a"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "dns1.nic.jobs",

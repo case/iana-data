@@ -6,16 +6,12 @@ limits. Thresholds, their measured baseline, and the attacks each one answers:
 docs/plans/current/2026-09-11-asn-drift-automation.md
 """
 
-import logging
 from collections.abc import Iterable, Mapping
 from dataclasses import dataclass
 from datetime import datetime
-from pathlib import Path
 
+from ..parse.iana_tlds_json import IanaTld
 from ..parse.iptoasn import ASNLookup
-from ..parse.tld_html import parse_tld_page
-
-logger = logging.getLogger(__name__)
 
 # as_org values that carry no operator identity. Excluded from useful-label
 # counts, or a total collapse to one placeholder reads as healthy diversity.
@@ -232,24 +228,17 @@ def nameserver_addresses(entries: Iterable[dict]) -> dict[str, list[str]]:
     return out
 
 
-def source_page_addresses(pages_dir: Path) -> dict[str, list[str]]:
-    """Tonight's nameserver addresses, parsed from the downloaded TLD pages.
+def source_nameserver_addresses(records: Iterable[IanaTld]) -> dict[str, list[str]]:
+    """Tonight's nameserver addresses, from the downloaded IANA TLD JSON records.
 
     The committed graph holds last night's population, so an artifact can cover
     it perfectly and still omit ranges holding an address introduced today.
     """
     out: dict[str, list[str]] = {family: [] for family in FAMILIES}
-    # Pages are sharded into per-letter and idn subdirectories by
-    # get_tld_file_path, so a flat glob silently finds nothing.
-    for page in sorted(pages_dir.rglob("*.html")):
-        try:
-            parsed = parse_tld_page(page.read_text(encoding="utf-8"))
-        except (OSError, ValueError) as exc:
-            logger.warning("Skipping unreadable TLD page %s: %s", page.name, exc)
-            continue
-        for nameserver in parsed.get("nameservers", []):
-            for family in FAMILIES:
-                out[family].extend(nameserver.get(family, []))
+    for record in records:
+        for nameserver in record.nameservers:
+            out["ipv4"].extend(nameserver.ipv4)
+            out["ipv6"].extend(nameserver.ipv6)
     return out
 
 

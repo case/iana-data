@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--ngbrx",
     "tld_unicode": "عرب",
     "tld_script": "Arabic",
+    "tld_script_code": "Arab",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -36,6 +38,9 @@
     "tld_updated": [
       "2020-05-14"
     ],
+    "events": {
+      "delegation": "2017-05-23"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -43,6 +48,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "arab",
+      "iana_translation_en": "Arab",
+      "iana_transliteration": "arab",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -51,8 +59,23 @@
       ],
       "cultural_affiliation": "arab",
       "language_code": "ar",
-      "language_name_en": "Arabic"
+      "language_name_en": "Arabic",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 37096,
+        "algorithm": 8,
+        "digest_type": 1,
+        "digest": "71bd52e2a76beef79d624f5294c98588f940402c"
+      },
+      {
+        "key_tag": 37096,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "dd05b598b64707491e63a742d3e61edbb57091b5b93c8e0d65422595ad255ad4"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "gtld.alpha.aridns.net.au",

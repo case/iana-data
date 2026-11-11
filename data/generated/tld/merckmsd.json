@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "merckmsd",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -29,11 +31,14 @@
       }
     },
     "whois_server": "whois.nic.merckmsd",
-    "rdap_server": "https://rdap.nic.merckmsd",
+    "rdap_server": "https://rdap.nic.merckmsd/",
     "tld_created": "2017-06-15",
     "tld_updated": [
       "2025-01-24"
     ],
+    "events": {
+      "delegation": "2017-07-10"
+    },
     "annotations": {
       "iana_tech_alias": "GoDaddy Registry",
       "iana_tech_slug": "godaddy-registry",
@@ -42,6 +47,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -49,6 +55,14 @@
         "ultradns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 5134,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "f4c8e4ac4a227663517fb28feaa416635cc013ccab079eceda756a89541baaba"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.merckmsd",

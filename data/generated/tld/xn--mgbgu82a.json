@@ -1,15 +1,17 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-02T07:14:48Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--mgbgu82a",
     "tld_unicode": "ڀارت",
     "tld_script": "Arabic",
+    "tld_script_code": "Arab",
     "tld_iso": "in",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -26,6 +28,9 @@
     "tld_updated": [
       "2026-09-01"
     ],
+    "events": {
+      "delegation": "2017-06-29"
+    },
     "annotations": {
       "iana_sponsor_alias": "NIXI.in",
       "iana_sponsor_slug": "nixi",
@@ -34,6 +39,8 @@
       "iana_tech_alias": "NIXI.in",
       "iana_tech_slug": "nixi",
       "country_name_iso": "India",
+      "iana_translation_en": "India",
+      "iana_transliteration": "bharat",
       "as_org_aliases": [
         "Packet Clearing House",
         "Tucows"
@@ -43,9 +50,18 @@
         "tucows"
       ],
       "geographic_scope": "country",
-      "language_code": "ar",
-      "language_name_en": "Arabic"
+      "language_code": "sd",
+      "language_name_en": "Sindhi",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 29871,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "0cee2b6a6ad8917255b1af4df53fff4cfac10aec17facddd7d83a370f1dc6b8f"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns1.registry.in",

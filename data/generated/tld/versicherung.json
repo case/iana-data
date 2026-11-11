@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-09T06:15:40Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "versicherung",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -29,12 +31,14 @@
       }
     },
     "registry_url": "http://nic.versicherung",
-    "whois_server": "whois.nic.versicherung",
     "rdap_server": "https://rdap.nic.versicherung/v1/",
     "tld_created": "2014-05-15",
     "tld_updated": [
-      "2026-04-29"
+      "2026-10-05"
     ],
+    "events": {
+      "delegation": "2014-05-22"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -42,6 +46,7 @@
         "community",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "nic.at",
         "RcodeZero"
@@ -51,6 +56,26 @@
         "rcodezero"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 26134,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "925ee924b5bc6876443e476c16eaf5bf02885acadbdf27ca2c87be8eeb7f3b41"
+      },
+      {
+        "key_tag": 40642,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "0467a13928ccb19d281df83a64fe82ee5556806625e034b146d2261e1e2632b2"
+      },
+      {
+        "key_tag": 23345,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "032eda7e733e515e9393c7f949eb6aecc0920d423b5e2c7f59f48911dc1e7063"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.dns.nic.versicherung",

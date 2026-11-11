@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--bck1b9a5dre4c",
     "tld_unicode": "ファッション",
     "tld_script": "Katakana",
+    "tld_script_code": "Kana",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -37,6 +39,9 @@
     "tld_updated": [
       "2025-06-17"
     ],
+    "events": {
+      "delegation": "2016-02-21"
+    },
     "annotations": {
       "iana_sponsor_alias": "Amazon",
       "iana_sponsor_slug": "amazon",
@@ -52,6 +57,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "fashion",
+      "iana_translation_en": "fashion",
+      "iana_transliteration": "fasshon",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Identity Digital"
       ],
@@ -59,8 +67,17 @@
         "identity-digital"
       ],
       "language_code": "ja",
-      "language_name_en": "Japanese"
+      "language_name_en": "Japanese",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 59140,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "05f9b4a2cc75f4cc41150454bb3911c3a8b0874d626162842146114819b45443"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "v0n0.nic.xn--bck1b9a5dre4c",

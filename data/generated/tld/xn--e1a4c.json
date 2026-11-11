@@ -1,15 +1,17 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-11T03:43:07Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--e1a4c",
     "tld_unicode": "ею",
     "tld_script": "Cyrillic",
+    "tld_script_code": "Cyrl",
     "tld_iso": "eu",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -26,8 +28,12 @@
     "tld_updated": [
       "2025-12-22"
     ],
+    "events": {
+      "delegation": "2016-02-12"
+    },
     "annotations": {
       "country_name_iso": "European Union",
+      "iana_transliteration": "eu",
       "as_org_aliases": [
         "ARNES.si",
         "DENIC.de",
@@ -42,8 +48,17 @@
       ],
       "geographic_scope": "supranational",
       "language_code": "bg",
-      "language_name_en": "Bulgarian"
+      "language_name_en": "Bulgarian",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 8731,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "90045c6e0579687c19d9318132095adbc9532831f3d175004d8e4a05fb05d268"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "be.dns.eu",

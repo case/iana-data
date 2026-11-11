@@ -1,20 +1,21 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "weather",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
     "orgs": {
       "iana": {
         "sponsor": "The Weather Company, LLC",
-        "admin": "The Weather Company, LLC",
-        "tech": "2155 E GoDaddy Way"
+        "admin": "The Weather Company, LLC"
       },
       "icann": {
         "registry_operator": "The Weather Company, LLC",
@@ -34,12 +35,16 @@
     "tld_updated": [
       "2026-03-01"
     ],
+    "events": {
+      "delegation": "2016-01-12"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -47,6 +52,14 @@
         "ultradns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 1249,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "96765e88a1b12cce10c5c67934b10344ad4e5d63588e4b9d442fc533c8224f01"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.weather",

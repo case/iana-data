@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-28T08:41:21Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "by",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -21,12 +23,20 @@
     "whois_server": "whois.cctld.by",
     "tld_created": "1994-05-10",
     "tld_updated": [
-      "2025-01-09"
+      "2026-10-19"
     ],
     "annotations": {
       "country_name_iso": "Belarus",
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 495,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "2d14284f8e47b53f839bd8068d438680b4b6c7a645769c9d89b47df0c5359b7b"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "dns1.tld.becloudby.com",
@@ -89,20 +99,13 @@
         "hostname": "dns4.tld.becloudby.tech",
         "ipv4": [
           {
-            "ip": "31.44.1.137",
-            "asn": 208951,
-            "as_org": "AS-ITGLOBALCOM ITGLOBAL.COM",
-            "as_country": "NL"
+            "ip": "176.123.180.172",
+            "asn": 0,
+            "as_org": "Unknown",
+            "as_country": "None"
           }
         ],
-        "ipv6": [
-          {
-            "ip": "2a0e:b81:8001:1001::2",
-            "asn": 208951,
-            "as_org": "AS-ITGLOBALCOM ITGLOBAL.COM",
-            "as_country": "NL"
-          }
-        ]
+        "ipv6": []
       },
       {
         "hostname": "dns7.tld.becloudby.com",

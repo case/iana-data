@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "sbs",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2024-06-19"
     ],
+    "events": {
+      "delegation": "2015-10-29"
+    },
     "annotations": {
       "iana_sponsor_alias": "Shortdot",
       "iana_sponsor_slug": "shortdot",
@@ -47,6 +52,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -54,6 +60,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 56056,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "ef6d326e9513ea4c07f99a08afcdc5f3d9e3f6eb73000af57d6fc3deca1ca31c"
+      },
+      {
+        "key_tag": 9116,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "012791072305ec41947811dfdf889333d7e177007132faaf8d78873d0c38dfc6"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.sbs",

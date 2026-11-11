@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "moto",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2025-02-07"
     ],
+    "events": {
+      "delegation": "2016-11-12"
+    },
     "annotations": {
       "iana_tech_alias": "GoDaddy Registry",
       "iana_tech_slug": "godaddy-registry",
@@ -44,6 +49,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -51,6 +57,14 @@
         "ultradns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 5671,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "6c1c11faaa1afb7c6198f3cd2bad469e9c0e5d1d714189a4992699093440d97c"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.moto",

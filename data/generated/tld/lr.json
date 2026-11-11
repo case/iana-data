@@ -1,20 +1,21 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-07T22:58:14Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "lr",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
     "orgs": {
       "iana": {
         "sponsor": "Data Technology Solutions, Inc.",
-        "admin": "Data Technology Solutions, Inc.",
-        "tech": "5147 Crystal Springs Drive NE"
+        "admin": "Data Technology Solutions, Inc."
       }
     },
     "registry_url": "http://psg.com/dns/lr",
@@ -38,6 +39,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 29984,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "aa0ec78a15474b054759a26a2be9d85a97f5fe9fe485a206e68b4f83b07789f8"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "fork.sth.dnsnode.net",

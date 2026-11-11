@@ -1,0 +1,4880 @@
+{
+  "aaa": {
+    "tld_created": "2015-08-13"
+  },
+  "aarp": {
+    "tld_created": "2015-10-22"
+  },
+  "abarth": {
+    "tld_created": "2016-07-14"
+  },
+  "abb": {
+    "tld_created": "2015-04-09"
+  },
+  "abbott": {
+    "tld_created": "2014-11-20"
+  },
+  "abbvie": {
+    "tld_created": "2016-02-26"
+  },
+  "abc": {
+    "tld_created": "2016-07-21"
+  },
+  "able": {
+    "tld_created": "2016-03-03"
+  },
+  "abogado": {
+    "tld_created": "2014-07-10"
+  },
+  "abudhabi": {
+    "tld_created": "2016-02-26"
+  },
+  "ac": {
+    "tld_created": "1997-12-19"
+  },
+  "academy": {
+    "tld_created": "2013-12-12"
+  },
+  "accenture": {
+    "tld_created": "2015-04-30"
+  },
+  "accountant": {
+    "tld_created": "2015-02-05"
+  },
+  "accountants": {
+    "tld_created": "2014-04-24"
+  },
+  "aco": {
+    "tld_created": "2015-07-16"
+  },
+  "active": {
+    "tld_created": "2014-06-19"
+  },
+  "actor": {
+    "tld_created": "2014-02-20"
+  },
+  "ad": {
+    "tld_created": "1996-01-09"
+  },
+  "adac": {
+    "tld_created": "2015-11-20"
+  },
+  "ads": {
+    "tld_created": "2015-02-05"
+  },
+  "adult": {
+    "tld_created": "2014-11-26"
+  },
+  "ae": {
+    "tld_created": "1992-12-01"
+  },
+  "aeg": {
+    "tld_created": "2015-06-11"
+  },
+  "aero": {
+    "tld_created": "2001-12-21",
+    "archived": {
+      "iana_tag": {
+        "value": "sponsored",
+        "archived_on": "2026-11-10"
+      }
+    }
+  },
+  "aetna": {
+    "tld_created": "2016-04-21"
+  },
+  "af": {
+    "tld_created": "1997-10-16"
+  },
+  "afamilycompany": {
+    "tld_created": "2016-07-14"
+  },
+  "afl": {
+    "tld_created": "2015-02-19"
+  },
+  "africa": {
+    "tld_created": "2017-02-11"
+  },
+  "ag": {
+    "tld_created": "1991-09-03"
+  },
+  "agakhan": {
+    "tld_created": "2016-03-31"
+  },
+  "agency": {
+    "tld_created": "2014-01-09"
+  },
+  "ai": {
+    "tld_created": "1995-02-16"
+  },
+  "aig": {
+    "tld_created": "2015-04-09"
+  },
+  "aigo": {
+    "tld_created": "2016-08-04"
+  },
+  "airbus": {
+    "tld_created": "2016-05-26"
+  },
+  "airforce": {
+    "tld_created": "2014-04-17"
+  },
+  "airtel": {
+    "tld_created": "2015-06-18"
+  },
+  "akdn": {
+    "tld_created": "2016-03-31"
+  },
+  "al": {
+    "tld_created": "1992-04-21"
+  },
+  "alfaromeo": {
+    "tld_created": "2016-07-21"
+  },
+  "alibaba": {
+    "tld_created": "2016-01-08"
+  },
+  "alipay": {
+    "tld_created": "2016-01-08"
+  },
+  "allfinanz": {
+    "tld_created": "2014-09-25"
+  },
+  "allstate": {
+    "tld_created": "2016-02-05"
+  },
+  "ally": {
+    "tld_created": "2015-10-22"
+  },
+  "alsace": {
+    "tld_created": "2014-09-18"
+  },
+  "alstom": {
+    "tld_created": "2015-12-04"
+  },
+  "am": {
+    "tld_created": "1994-08-26"
+  },
+  "amazon": {
+    "tld_created": "2020-05-28"
+  },
+  "americanexpress": {
+    "tld_created": "2016-07-22"
+  },
+  "americanfamily": {
+    "tld_created": "2016-07-14"
+  },
+  "amex": {
+    "tld_created": "2016-07-21"
+  },
+  "amfam": {
+    "tld_created": "2016-07-14"
+  },
+  "amica": {
+    "tld_created": "2015-08-06"
+  },
+  "amsterdam": {
+    "tld_created": "2014-11-20"
+  },
+  "an": {
+    "tld_created": "1993-09-09"
+  },
+  "analytics": {
+    "tld_created": "2015-11-20"
+  },
+  "android": {
+    "tld_created": "2014-10-30"
+  },
+  "anquan": {
+    "tld_created": "2016-03-18"
+  },
+  "anz": {
+    "tld_created": "2016-06-09"
+  },
+  "ao": {
+    "tld_created": "1995-11-15"
+  },
+  "aol": {
+    "tld_created": "2016-10-27"
+  },
+  "apartments": {
+    "tld_created": "2015-02-05"
+  },
+  "app": {
+    "tld_created": "2015-06-25"
+  },
+  "apple": {
+    "tld_created": "2015-07-02"
+  },
+  "aq": {
+    "tld_created": "1992-02-26"
+  },
+  "aquarelle": {
+    "tld_created": "2014-11-06"
+  },
+  "ar": {
+    "tld_created": "1987-09-23"
+  },
+  "arab": {
+    "tld_created": "2017-05-11"
+  },
+  "aramco": {
+    "tld_created": "2015-08-20"
+  },
+  "archi": {
+    "tld_created": "2014-03-20"
+  },
+  "army": {
+    "tld_created": "2014-05-29"
+  },
+  "arpa": {
+    "tld_created": "1985-01-01",
+    "archived": {
+      "iana_tag": {
+        "value": "infrastructure",
+        "archived_on": "2026-11-10"
+      }
+    }
+  },
+  "art": {
+    "tld_created": "2016-06-09"
+  },
+  "arte": {
+    "tld_created": "2015-09-24"
+  },
+  "as": {
+    "tld_created": "1997-06-12"
+  },
+  "asda": {
+    "tld_created": "2016-07-21"
+  },
+  "asia": {
+    "tld_created": "2007-05-02",
+    "archived": {
+      "iana_tag": {
+        "value": "sponsored",
+        "archived_on": "2026-11-10"
+      }
+    }
+  },
+  "associates": {
+    "tld_created": "2014-04-03"
+  },
+  "at": {
+    "tld_created": "1988-01-20"
+  },
+  "athleta": {
+    "tld_created": "2016-07-14"
+  },
+  "attorney": {
+    "tld_created": "2014-05-22"
+  },
+  "au": {
+    "tld_created": "1986-03-05"
+  },
+  "auction": {
+    "tld_created": "2014-04-24"
+  },
+  "audi": {
+    "tld_created": "2015-11-12"
+  },
+  "audible": {
+    "tld_created": "2016-05-19"
+  },
+  "audio": {
+    "tld_created": "2014-05-08"
+  },
+  "auspost": {
+    "tld_created": "2016-08-11"
+  },
+  "author": {
+    "tld_created": "2015-11-12"
+  },
+  "auto": {
+    "tld_created": "2015-03-12"
+  },
+  "autos": {
+    "tld_created": "2014-05-01"
+  },
+  "avianca": {
+    "tld_created": "2016-02-26"
+  },
+  "aw": {
+    "tld_created": "1996-02-20"
+  },
+  "aws": {
+    "tld_created": "2016-03-18"
+  },
+  "ax": {
+    "tld_created": "2006-06-21"
+  },
+  "axa": {
+    "tld_created": "2014-03-13"
+  },
+  "az": {
+    "tld_created": "1993-08-25"
+  },
+  "azure": {
+    "tld_created": "2015-04-30"
+  },
+  "ba": {
+    "tld_created": "1996-08-14"
+  },
+  "baby": {
+    "tld_created": "2016-01-14"
+  },
+  "baidu": {
+    "tld_created": "2015-12-17"
+  },
+  "banamex": {
+    "tld_created": "2016-07-21"
+  },
+  "bananarepublic": {
+    "tld_created": "2016-07-14"
+  },
+  "band": {
+    "tld_created": "2014-10-01"
+  },
+  "bank": {
+    "tld_created": "2014-11-26"
+  },
+  "bar": {
+    "tld_created": "2014-02-13"
+  },
+  "barcelona": {
+    "tld_created": "2015-06-04"
+  },
+  "barclaycard": {
+    "tld_created": "2015-01-08"
+  },
+  "barclays": {
+    "tld_created": "2015-01-08"
+  },
+  "barefoot": {
+    "tld_created": "2015-10-24"
+  },
+  "bargains": {
+    "tld_created": "2014-01-16"
+  },
+  "baseball": {
+    "tld_created": "2016-09-29"
+  },
+  "basketball": {
+    "tld_created": "2016-10-13"
+  },
+  "bauhaus": {
+    "tld_created": "2015-03-12"
+  },
+  "bayern": {
+    "tld_created": "2014-03-13"
+  },
+  "bb": {
+    "tld_created": "1991-09-03"
+  },
+  "bbc": {
+    "tld_created": "2015-03-12"
+  },
+  "bbt": {
+    "tld_created": "2016-05-12"
+  },
+  "bbva": {
+    "tld_created": "2015-04-23"
+  },
+  "bcg": {
+    "tld_created": "2016-02-11"
+  },
+  "bcn": {
+    "tld_created": "2015-06-04"
+  },
+  "bd": {
+    "tld_created": "1999-05-20"
+  },
+  "be": {
+    "tld_created": "1988-08-05"
+  },
+  "beats": {
+    "tld_created": "2015-08-13"
+  },
+  "beauty": {
+    "tld_created": "2016-04-07"
+  },
+  "beer": {
+    "tld_created": "2014-03-13"
+  },
+  "bentley": {
+    "tld_created": "2015-05-14"
+  },
+  "berlin": {
+    "tld_created": "2013-12-19"
+  },
+  "best": {
+    "tld_created": "2014-02-20"
+  },
+  "bestbuy": {
+    "tld_created": "2015-12-10"
+  },
+  "bet": {
+    "tld_created": "2015-07-16"
+  },
+  "bf": {
+    "tld_created": "1993-03-29"
+  },
+  "bg": {
+    "tld_created": "1995-01-03"
+  },
+  "bh": {
+    "tld_created": "1994-02-01"
+  },
+  "bharti": {
+    "tld_created": "2015-05-08"
+  },
+  "bi": {
+    "tld_created": "1996-10-21"
+  },
+  "bible": {
+    "tld_created": "2015-05-14"
+  },
+  "bid": {
+    "tld_created": "2014-02-13"
+  },
+  "bike": {
+    "tld_created": "2013-11-08"
+  },
+  "bing": {
+    "tld_created": "2015-04-30"
+  },
+  "bingo": {
+    "tld_created": "2015-01-29"
+  },
+  "bio": {
+    "tld_created": "2014-05-15"
+  },
+  "biz": {
+    "tld_created": "2001-06-26",
+    "archived": {
+      "iana_tag": {
+        "value": "generic-restricted",
+        "archived_on": "2026-11-10"
+      }
+    }
+  },
+  "bj": {
+    "tld_created": "1996-01-18"
+  },
+  "bl": {
+    "tld_created": "2007-10-11"
+  },
+  "black": {
+    "tld_created": "2014-03-20"
+  },
+  "blackfriday": {
+    "tld_created": "2014-04-17"
+  },
+  "blanco": {
+    "tld_created": "2016-06-03"
+  },
+  "blockbuster": {
+    "tld_created": "2016-06-30"
+  },
+  "blog": {
+    "tld_created": "2016-05-12"
+  },
+  "bloomberg": {
+    "tld_created": "2014-10-16"
+  },
+  "blue": {
+    "tld_created": "2014-01-23"
+  },
+  "bm": {
+    "tld_created": "1993-03-31"
+  },
+  "bms": {
+    "tld_created": "2015-09-10"
+  },
+  "bmw": {
+    "tld_created": "2014-06-05"
+  },
+  "bn": {
+    "tld_created": "1994-06-03"
+  },
+  "bnl": {
+    "tld_created": "2015-06-11"
+  },
+  "bnpparibas": {
+    "tld_created": "2014-07-31"
+  },
+  "bo": {
+    "tld_created": "1991-02-26"
+  },
+  "boats": {
+    "tld_created": "2015-02-13"
+  },
+  "boehringer": {
+    "tld_created": "2015-11-06"
+  },
+  "bofa": {
+    "tld_created": "2016-07-28"
+  },
+  "bom": {
+    "tld_created": "2015-05-29"
+  },
+  "bond": {
+    "tld_created": "2014-10-30"
+  },
+  "boo": {
+    "tld_created": "2014-06-12"
+  },
+  "book": {
+    "tld_created": "2015-11-12"
+  },
+  "booking": {
+    "tld_created": "2016-07-07"
+  },
+  "boots": {
+    "tld_created": "2015-06-18"
+  },
+  "bosch": {
+    "tld_created": "2015-12-18"
+  },
+  "bostik": {
+    "tld_created": "2015-11-06"
+  },
+  "boston": {
+    "tld_created": "2016-11-21"
+  },
+  "bot": {
+    "tld_created": "2015-11-12"
+  },
+  "boutique": {
+    "tld_created": "2014-01-16"
+  },
+  "box": {
+    "tld_created": "2016-10-27"
+  },
+  "bq": {
+    "tld_created": "2010-12-20"
+  },
+  "br": {
+    "tld_created": "1989-04-18"
+  },
+  "bradesco": {
+    "tld_created": "2015-05-29"
+  },
+  "bridgestone": {
+    "tld_created": "2015-04-16"
+  },
+  "broadway": {
+    "tld_created": "2015-10-08"
+  },
+  "broker": {
+    "tld_created": "2015-03-06"
+  },
+  "brother": {
+    "tld_created": "2015-04-09"
+  },
+  "brussels": {
+    "tld_created": "2014-06-05"
+  },
+  "bs": {
+    "tld_created": "1991-09-03"
+  },
+  "bt": {
+    "tld_created": "1997-07-16"
+  },
+  "budapest": {
+    "tld_created": "2014-02-28"
+  },
+  "bugatti": {
+    "tld_created": "2015-11-12"
+  },
+  "build": {
+    "tld_created": "2014-01-09"
+  },
+  "builders": {
+    "tld_created": "2013-12-19"
+  },
+  "business": {
+    "tld_created": "2014-08-18"
+  },
+  "buy": {
+    "tld_created": "2015-11-20"
+  },
+  "buzz": {
+    "tld_created": "2013-12-12"
+  },
+  "bv": {
+    "tld_created": "1997-08-21"
+  },
+  "bw": {
+    "tld_created": "1993-03-19"
+  },
+  "by": {
+    "tld_created": "1994-05-10"
+  },
+  "bz": {
+    "tld_created": "1991-09-03"
+  },
+  "bzh": {
+    "tld_created": "2014-05-29"
+  },
+  "ca": {
+    "tld_created": "1987-05-14"
+  },
+  "cab": {
+    "tld_created": "2013-12-12"
+  },
+  "cafe": {
+    "tld_created": "2015-03-12"
+  },
+  "cal": {
+    "tld_created": "2014-09-04"
+  },
+  "call": {
+    "tld_created": "2015-11-12"
+  },
+  "calvinklein": {
+    "tld_created": "2016-07-28"
+  },
+  "cam": {
+    "tld_created": "2016-06-09"
+  },
+  "camera": {
+    "tld_created": "2013-10-31"
+  },
+  "camp": {
+    "tld_created": "2013-12-12"
+  },
+  "cancerresearch": {
+    "tld_created": "2014-06-19"
+  },
+  "canon": {
+    "tld_created": "2015-01-29"
+  },
+  "capetown": {
+    "tld_created": "2014-06-05"
+  },
+  "capital": {
+    "tld_created": "2014-04-03"
+  },
+  "capitalone": {
+    "tld_created": "2016-08-04"
+  },
+  "car": {
+    "tld_created": "2015-08-26"
+  },
+  "caravan": {
+    "tld_created": "2014-05-22"
+  },
+  "cards": {
+    "tld_created": "2014-02-06"
+  },
+  "care": {
+    "tld_created": "2014-04-17"
+  },
+  "career": {
+    "tld_created": "2014-03-20"
+  },
+  "careers": {
+    "tld_created": "2013-12-12"
+  },
+  "cars": {
+    "tld_created": "2015-03-12"
+  },
+  "cartier": {
+    "tld_created": "2014-11-20"
+  },
+  "casa": {
+    "tld_created": "2014-08-18"
+  },
+  "case": {
+    "tld_created": "2016-10-27"
+  },
+  "caseih": {
+    "tld_created": "2016-10-27"
+  },
+  "cash": {
+    "tld_created": "2014-04-17"
+  },
+  "casino": {
+    "tld_created": "2015-02-13"
+  },
+  "cat": {
+    "tld_created": "2005-12-19",
+    "archived": {
+      "iana_tag": {
+        "value": "sponsored",
+        "archived_on": "2026-11-10"
+      }
+    }
+  },
+  "catering": {
+    "tld_created": "2014-01-30"
+  },
+  "catholic": {
+    "tld_created": "2016-11-16"
+  },
+  "cba": {
+    "tld_created": "2015-03-26"
+  },
+  "cbn": {
+    "tld_created": "2014-11-20"
+  },
+  "cbre": {
+    "tld_created": "2016-06-16"
+  },
+  "cbs": {
+    "tld_created": "2016-07-21"
+  },
+  "cc": {
+    "tld_created": "1997-10-13"
+  },
+  "cd": {
+    "tld_created": "1997-08-20"
+  },
+  "ceb": {
+    "tld_created": "2015-07-02"
+  },
+  "center": {
+    "tld_created": "2013-12-12"
+  },
+  "ceo": {
+    "tld_created": "2013-12-19"
+  },
+  "cern": {
+    "tld_created": "2014-08-13"
+  },
+  "cf": {
+    "tld_created": "1996-04-24"
+  },
+  "cfa": {
+    "tld_created": "2015-04-16"
+  },
+  "cfd": {
+    "tld_created": "2015-03-06"
+  },
+  "cg": {
+    "tld_created": "1997-01-14"
+  },
+  "ch": {
+    "tld_created": "1987-05-20"
+  },
+  "chanel": {
+    "tld_created": "2015-06-18"
+  },
+  "channel": {
+    "tld_created": "2014-08-23"
+  },
+  "charity": {
+    "tld_created": "2018-05-17"
+  },
+  "chase": {
+    "tld_created": "2016-01-14"
+  },
+  "chat": {
+    "tld_created": "2015-01-29"
+  },
+  "cheap": {
+    "tld_created": "2014-01-09"
+  },
+  "chintai": {
+    "tld_created": "2016-03-03"
+  },
+  "chloe": {
+    "tld_created": "2015-01-08"
+  },
+  "christmas": {
+    "tld_created": "2014-02-13"
+  },
+  "chrome": {
+    "tld_created": "2014-09-04"
+  },
+  "chrysler": {
+    "tld_created": "2016-07-07"
+  },
+  "church": {
+    "tld_created": "2014-05-08"
+  },
+  "ci": {
+    "tld_created": "1995-02-14"
+  },
+  "cipriani": {
+    "tld_created": "2015-07-30"
+  },
+  "circle": {
+    "tld_created": "2015-11-12"
+  },
+  "cisco": {
+    "tld_created": "2015-04-16"
+  },
+  "citadel": {
+    "tld_created": "2016-06-30"
+  },
+  "citi": {
+    "tld_created": "2016-07-21"
+  },
+  "citic": {
+    "tld_created": "2014-04-17"
+  },
+  "city": {
+    "tld_created": "2014-07-03"
+  },
+  "cityeats": {
+    "tld_created": "2015-09-24"
+  },
+  "ck": {
+    "tld_created": "1995-08-08"
+  },
+  "cl": {
+    "tld_created": "1987-12-15"
+  },
+  "claims": {
+    "tld_created": "2014-05-01"
+  },
+  "cleaning": {
+    "tld_created": "2014-01-30"
+  },
+  "click": {
+    "tld_created": "2014-08-15"
+  },
+  "clinic": {
+    "tld_created": "2014-04-11"
+  },
+  "clinique": {
+    "tld_created": "2015-12-10"
+  },
+  "clothing": {
+    "tld_created": "2013-10-31"
+  },
+  "cloud": {
+    "tld_created": "2015-06-18"
+  },
+  "club": {
+    "tld_created": "2014-01-09"
+  },
+  "clubmed": {
+    "tld_created": "2015-09-24"
+  },
+  "cm": {
+    "tld_created": "1995-04-29"
+  },
+  "cn": {
+    "tld_created": "1990-11-28"
+  },
+  "co": {
+    "tld_created": "1991-12-24"
+  },
+  "coach": {
+    "tld_created": "2014-11-20"
+  },
+  "codes": {
+    "tld_created": "2013-12-19"
+  },
+  "coffee": {
+    "tld_created": "2013-12-19"
+  },
+  "college": {
+    "tld_created": "2014-03-13"
+  },
+  "cologne": {
+    "tld_created": "2014-03-13"
+  },
+  "com": {
+    "tld_created": "1985-01-01"
+  },
+  "comcast": {
+    "tld_created": "2016-06-16"
+  },
+  "commbank": {
+    "tld_created": "2015-03-26"
+  },
+  "community": {
+    "tld_created": "2014-01-23"
+  },
+  "company": {
+    "tld_created": "2013-12-12"
+  },
+  "compare": {
+    "tld_created": "2015-12-23"
+  },
+  "computer": {
+    "tld_created": "2013-12-12"
+  },
+  "comsec": {
+    "tld_created": "2015-10-08"
+  },
+  "condos": {
+    "tld_created": "2014-02-06"
+  },
+  "construction": {
+    "tld_created": "2013-11-08"
+  },
+  "consulting": {
+    "tld_created": "2014-01-30"
+  },
+  "contact": {
+    "tld_created": "2015-12-10"
+  },
+  "contractors": {
+    "tld_created": "2013-11-08"
+  },
+  "cooking": {
+    "tld_created": "2014-02-28"
+  },
+  "cookingchannel": {
+    "tld_created": "2016-05-05"
+  },
+  "cool": {
+    "tld_created": "2014-01-16"
+  },
+  "coop": {
+    "tld_created": "2001-12-15",
+    "archived": {
+      "iana_tag": {
+        "value": "sponsored",
+        "archived_on": "2026-11-10"
+      }
+    }
+  },
+  "corsica": {
+    "tld_created": "2015-04-23"
+  },
+  "country": {
+    "tld_created": "2014-02-28"
+  },
+  "coupon": {
+    "tld_created": "2016-01-29"
+  },
+  "coupons": {
+    "tld_created": "2015-05-08"
+  },
+  "courses": {
+    "tld_created": "2015-02-19"
+  },
+  "cpa": {
+    "tld_created": "2019-09-11"
+  },
+  "cr": {
+    "tld_created": "1990-09-10"
+  },
+  "credit": {
+    "tld_created": "2014-04-24"
+  },
+  "creditcard": {
+    "tld_created": "2014-04-24"
+  },
+  "creditunion": {
+    "tld_created": "2015-10-15"
+  },
+  "cricket": {
+    "tld_created": "2014-11-13"
+  },
+  "crown": {
+    "tld_created": "2015-06-04"
+  },
+  "crs": {
+    "tld_created": "2014-08-28"
+  },
+  "cruise": {
+    "tld_created": "2016-10-21"
+  },
+  "cruises": {
+    "tld_created": "2014-01-30"
+  },
+  "csc": {
+    "tld_created": "2015-08-06"
+  },
+  "cu": {
+    "tld_created": "1992-06-03"
+  },
+  "cuisinella": {
+    "tld_created": "2014-06-19"
+  },
+  "cv": {
+    "tld_created": "1996-10-21"
+  },
+  "cw": {
+    "tld_created": "2010-12-20"
+  },
+  "cx": {
+    "tld_created": "1997-04-24"
+  },
+  "cy": {
+    "tld_created": "1994-07-26"
+  },
+  "cymru": {
+    "tld_created": "2014-07-31"
+  },
+  "cyou": {
+    "tld_created": "2015-03-19"
+  },
+  "cz": {
+    "tld_created": "1993-01-13"
+  },
+  "dabur": {
+    "tld_created": "2015-01-15"
+  },
+  "dad": {
+    "tld_created": "2014-06-12"
+  },
+  "dance": {
+    "tld_created": "2014-01-09"
+  },
+  "data": {
+    "tld_created": "2016-12-15"
+  },
+  "date": {
+    "tld_created": "2015-02-05"
+  },
+  "dating": {
+    "tld_created": "2014-01-23"
+  },
+  "datsun": {
+    "tld_created": "2014-07-10"
+  },
+  "day": {
+    "tld_created": "2014-06-12"
+  },
+  "dclk": {
+    "tld_created": "2015-01-08"
+  },
+  "dds": {
+    "tld_created": "2016-01-08"
+  },
+  "de": {
+    "tld_created": "1986-11-05"
+  },
+  "deal": {
+    "tld_created": "2016-05-19"
+  },
+  "dealer": {
+    "tld_created": "2015-11-25"
+  },
+  "deals": {
+    "tld_created": "2014-07-03"
+  },
+  "degree": {
+    "tld_created": "2014-05-22"
+  },
+  "delivery": {
+    "tld_created": "2014-10-16"
+  },
+  "dell": {
+    "tld_created": "2015-04-30"
+  },
+  "deloitte": {
+    "tld_created": "2015-12-23"
+  },
+  "delta": {
+    "tld_created": "2015-06-25"
+  },
+  "democrat": {
+    "tld_created": "2014-01-09"
+  },
+  "dental": {
+    "tld_created": "2014-04-17"
+  },
+  "dentist": {
+    "tld_created": "2014-05-22"
+  },
+  "desi": {
+    "tld_created": "2014-03-06"
+  },
+  "design": {
+    "tld_created": "2014-12-18"
+  },
+  "dev": {
+    "tld_created": "2014-11-20"
+  },
+  "dhl": {
+    "tld_created": "2016-05-26"
+  },
+  "diamonds": {
+    "tld_created": "2013-11-13"
+  },
+  "diet": {
+    "tld_created": "2014-08-15"
+  },
+  "digital": {
+    "tld_created": "2014-04-17"
+  },
+  "direct": {
+    "tld_created": "2014-05-22"
+  },
+  "directory": {
+    "tld_created": "2013-11-13"
+  },
+  "discount": {
+    "tld_created": "2014-04-17"
+  },
+  "discover": {
+    "tld_created": "2016-07-14"
+  },
+  "dish": {
+    "tld_created": "2016-08-04"
+  },
+  "diy": {
+    "tld_created": "2016-07-21"
+  },
+  "dj": {
+    "tld_created": "1996-05-22"
+  },
+  "dk": {
+    "tld_created": "1987-07-14"
+  },
+  "dm": {
+    "tld_created": "1991-09-03"
+  },
+  "dnp": {
+    "tld_created": "2014-02-27"
+  },
+  "do": {
+    "tld_created": "1991-08-25"
+  },
+  "docs": {
+    "tld_created": "2014-11-20"
+  },
+  "doctor": {
+    "tld_created": "2016-07-14"
+  },
+  "dodge": {
+    "tld_created": "2016-07-07"
+  },
+  "dog": {
+    "tld_created": "2015-04-16"
+  },
+  "doha": {
+    "tld_created": "2015-02-27"
+  },
+  "domains": {
+    "tld_created": "2013-12-12"
+  },
+  "doosan": {
+    "tld_created": "2014-10-30"
+  },
+  "dot": {
+    "tld_created": "2016-04-21"
+  },
+  "download": {
+    "tld_created": "2015-02-05"
+  },
+  "drive": {
+    "tld_created": "2015-06-04"
+  },
+  "dtv": {
+    "tld_created": "2016-05-19"
+  },
+  "dubai": {
+    "tld_created": "2015-12-17"
+  },
+  "duck": {
+    "tld_created": "2016-07-14"
+  },
+  "dunlop": {
+    "tld_created": "2015-12-17"
+  },
+  "duns": {
+    "tld_created": "2016-07-14"
+  },
+  "dupont": {
+    "tld_created": "2016-05-05"
+  },
+  "durban": {
+    "tld_created": "2014-06-05"
+  },
+  "dvag": {
+    "tld_created": "2014-09-18"
+  },
+  "dvr": {
+    "tld_created": "2016-09-22"
+  },
+  "dz": {
+    "tld_created": "1994-01-03"
+  },
+  "earth": {
+    "tld_created": "2015-04-16"
+  },
+  "eat": {
+    "tld_created": "2014-06-12"
+  },
+  "ec": {
+    "tld_created": "1991-02-01"
+  },
+  "eco": {
+    "tld_created": "2016-08-18"
+  },
+  "edeka": {
+    "tld_created": "2016-01-08"
+  },
+  "edu": {
+    "tld_created": "1985-01-01",
+    "archived": {
+      "iana_tag": {
+        "value": "sponsored",
+        "archived_on": "2026-11-10"
+      }
+    }
+  },
+  "education": {
+    "tld_created": "2013-12-19"
+  },
+  "ee": {
+    "tld_created": "1992-06-03"
+  },
+  "eg": {
+    "tld_created": "1990-11-30"
+  },
+  "email": {
+    "tld_created": "2013-12-19"
+  },
+  "emerck": {
+    "tld_created": "2014-09-11"
+  },
+  "energy": {
+    "tld_created": "2014-10-16"
+  },
+  "engineer": {
+    "tld_created": "2014-05-29"
+  },
+  "engineering": {
+    "tld_created": "2014-04-03"
+  },
+  "enterprises": {
+    "tld_created": "2013-11-13"
+  },
+  "epost": {
+    "tld_created": "2016-05-26"
+  },
+  "epson": {
+    "tld_created": "2015-02-19"
+  },
+  "equipment": {
+    "tld_created": "2013-10-31"
+  },
+  "er": {
+    "tld_created": "1996-09-24"
+  },
+  "ericsson": {
+    "tld_created": "2016-04-14"
+  },
+  "erni": {
+    "tld_created": "2015-02-05"
+  },
+  "es": {
+    "tld_created": "1988-04-14"
+  },
+  "esq": {
+    "tld_created": "2014-08-23"
+  },
+  "estate": {
+    "tld_created": "2013-11-08"
+  },
+  "esurance": {
+    "tld_created": "2016-06-24"
+  },
+  "et": {
+    "tld_created": "1995-10-15"
+  },
+  "etisalat": {
+    "tld_created": "2017-05-11"
+  },
+  "eu": {
+    "tld_created": "2005-04-28"
+  },
+  "eurovision": {
+    "tld_created": "2014-08-28"
+  },
+  "eus": {
+    "tld_created": "2014-03-06"
+  },
+  "events": {
+    "tld_created": "2014-01-30"
+  },
+  "everbank": {
+    "tld_created": "2014-07-31"
+  },
+  "exchange": {
+    "tld_created": "2014-04-17"
+  },
+  "expert": {
+    "tld_created": "2014-01-16"
+  },
+  "exposed": {
+    "tld_created": "2014-01-30"
+  },
+  "express": {
+    "tld_created": "2015-03-12"
+  },
+  "extraspace": {
+    "tld_created": "2016-02-26"
+  },
+  "fage": {
+    "tld_created": "2015-06-25"
+  },
+  "fail": {
+    "tld_created": "2014-04-17"
+  },
+  "fairwinds": {
+    "tld_created": "2015-10-29"
+  },
+  "faith": {
+    "tld_created": "2015-02-05"
+  },
+  "family": {
+    "tld_created": "2015-08-06"
+  },
+  "fan": {
+    "tld_created": "2015-02-28"
+  },
+  "fans": {
+    "tld_created": "2015-02-05"
+  },
+  "farm": {
+    "tld_created": "2013-12-19"
+  },
+  "farmers": {
+    "tld_created": "2016-04-21"
+  },
+  "fashion": {
+    "tld_created": "2014-10-23"
+  },
+  "fast": {
+    "tld_created": "2015-11-12"
+  },
+  "fedex": {
+    "tld_created": "2016-06-09"
+  },
+  "feedback": {
+    "tld_created": "2014-03-06"
+  },
+  "ferrari": {
+    "tld_created": "2016-07-14"
+  },
+  "ferrero": {
+    "tld_created": "2015-09-10"
+  },
+  "fi": {
+    "tld_created": "1986-12-17"
+  },
+  "fiat": {
+    "tld_created": "2016-07-14"
+  },
+  "fidelity": {
+    "tld_created": "2016-07-28"
+  },
+  "fido": {
+    "tld_created": "2016-08-18"
+  },
+  "film": {
+    "tld_created": "2015-02-27"
+  },
+  "final": {
+    "tld_created": "2015-05-29"
+  },
+  "finance": {
+    "tld_created": "2014-04-24"
+  },
+  "financial": {
+    "tld_created": "2014-04-17"
+  },
+  "fire": {
+    "tld_created": "2016-05-19"
+  },
+  "firestone": {
+    "tld_created": "2015-10-29"
+  },
+  "firmdale": {
+    "tld_created": "2014-09-04"
+  },
+  "fish": {
+    "tld_created": "2014-02-13"
+  },
+  "fishing": {
+    "tld_created": "2014-02-28"
+  },
+  "fit": {
+    "tld_created": "2014-12-18"
+  },
+  "fitness": {
+    "tld_created": "2014-04-11"
+  },
+  "fj": {
+    "tld_created": "1992-06-03"
+  },
+  "fk": {
+    "tld_created": "1997-03-26"
+  },
+  "flickr": {
+    "tld_created": "2016-01-29"
+  },
+  "flights": {
+    "tld_created": "2014-01-30"
+  },
+  "flir": {
+    "tld_created": "2016-03-03"
+  },
+  "florist": {
+    "tld_created": "2013-12-19"
+  },
+  "flowers": {
+    "tld_created": "2014-12-18"
+  },
+  "flsmidth": {
+    "tld_created": "2014-09-25"
+  },
+  "fly": {
+    "tld_created": "2014-08-23"
+  },
+  "fm": {
+    "tld_created": "1995-04-19"
+  },
+  "fo": {
+    "tld_created": "1993-05-14"
+  },
+  "foo": {
+    "tld_created": "2014-03-20"
+  },
+  "food": {
+    "tld_created": "2016-11-04"
+  },
+  "foodnetwork": {
+    "tld_created": "2016-05-05"
+  },
+  "football": {
+    "tld_created": "2015-02-13"
+  },
+  "ford": {
+    "tld_created": "2015-12-10"
+  },
+  "forex": {
+    "tld_created": "2015-03-06"
+  },
+  "forsale": {
+    "tld_created": "2014-09-24"
+  },
+  "forum": {
+    "tld_created": "2015-06-11"
+  },
+  "foundation": {
+    "tld_created": "2014-02-06"
+  },
+  "fox": {
+    "tld_created": "2015-11-20"
+  },
+  "fr": {
+    "tld_created": "1986-09-02"
+  },
+  "free": {
+    "tld_created": "2016-10-27"
+  },
+  "fresenius": {
+    "tld_created": "2015-12-17"
+  },
+  "frl": {
+    "tld_created": "2014-08-22"
+  },
+  "frogans": {
+    "tld_created": "2014-04-03"
+  },
+  "frontdoor": {
+    "tld_created": "2016-05-05"
+  },
+  "frontier": {
+    "tld_created": "2016-01-29"
+  },
+  "ftr": {
+    "tld_created": "2016-01-29"
+  },
+  "fujitsu": {
+    "tld_created": "2016-06-30"
+  },
+  "fujixerox": {
+    "tld_created": "2016-07-07"
+  },
+  "fun": {
+    "tld_created": "2016-11-30"
+  },
+  "fund": {
+    "tld_created": "2014-04-17"
+  },
+  "furniture": {
+    "tld_created": "2014-04-17"
+  },
+  "futbol": {
+    "tld_created": "2014-02-06"
+  },
+  "fyi": {
+    "tld_created": "2015-05-14"
+  },
+  "ga": {
+    "tld_created": "1994-12-12"
+  },
+  "gal": {
+    "tld_created": "2014-03-13"
+  },
+  "gallery": {
+    "tld_created": "2013-11-08"
+  },
+  "gallo": {
+    "tld_created": "2015-10-24"
+  },
+  "gallup": {
+    "tld_created": "2015-10-15"
+  },
+  "game": {
+    "tld_created": "2015-07-02"
+  },
+  "games": {
+    "tld_created": "2016-05-24"
+  },
+  "gap": {
+    "tld_created": "2016-07-14"
+  },
+  "garden": {
+    "tld_created": "2014-10-23"
+  },
+  "gay": {
+    "tld_created": "2019-07-19"
+  },
+  "gb": {
+    "tld_created": "1985-07-24"
+  },
+  "gbiz": {
+    "tld_created": "2014-08-23"
+  },
+  "gd": {
+    "tld_created": "1992-06-03"
+  },
+  "gdn": {
+    "tld_created": "2014-12-04"
+  },
+  "ge": {
+    "tld_created": "1992-12-02"
+  },
+  "gea": {
+    "tld_created": "2015-07-09"
+  },
+  "gent": {
+    "tld_created": "2014-07-03"
+  },
+  "genting": {
+    "tld_created": "2015-06-11"
+  },
+  "george": {
+    "tld_created": "2016-07-21"
+  },
+  "gf": {
+    "tld_created": "1996-07-25"
+  },
+  "gg": {
+    "tld_created": "1996-08-07"
+  },
+  "ggee": {
+    "tld_created": "2014-12-18"
+  },
+  "gh": {
+    "tld_created": "1995-01-19"
+  },
+  "gi": {
+    "tld_created": "1995-12-05"
+  },
+  "gift": {
+    "tld_created": "2014-01-09"
+  },
+  "gifts": {
+    "tld_created": "2014-07-31"
+  },
+  "gives": {
+    "tld_created": "2014-05-29"
+  },
+  "giving": {
+    "tld_created": "2015-06-11"
+  },
+  "gl": {
+    "tld_created": "1994-04-08"
+  },
+  "glade": {
+    "tld_created": "2016-07-14"
+  },
+  "glass": {
+    "tld_created": "2013-12-19"
+  },
+  "gle": {
+    "tld_created": "2014-09-04"
+  },
+  "global": {
+    "tld_created": "2014-05-29"
+  },
+  "globo": {
+    "tld_created": "2014-02-20"
+  },
+  "gm": {
+    "tld_created": "1997-03-28"
+  },
+  "gmail": {
+    "tld_created": "2014-08-23"
+  },
+  "gmbh": {
+    "tld_created": "2016-03-03"
+  },
+  "gmo": {
+    "tld_created": "2014-02-27"
+  },
+  "gmx": {
+    "tld_created": "2014-08-07"
+  },
+  "gn": {
+    "tld_created": "1994-08-09"
+  },
+  "godaddy": {
+    "tld_created": "2016-06-24"
+  },
+  "gold": {
+    "tld_created": "2015-03-12"
+  },
+  "goldpoint": {
+    "tld_created": "2015-02-13"
+  },
+  "golf": {
+    "tld_created": "2015-03-12"
+  },
+  "goo": {
+    "tld_created": "2015-02-13"
+  },
+  "goodhands": {
+    "tld_created": "2016-02-05"
+  },
+  "goodyear": {
+    "tld_created": "2015-12-17"
+  },
+  "goog": {
+    "tld_created": "2015-01-08"
+  },
+  "google": {
+    "tld_created": "2014-09-04"
+  },
+  "gop": {
+    "tld_created": "2014-03-06"
+  },
+  "got": {
+    "tld_created": "2015-11-12"
+  },
+  "gov": {
+    "tld_created": "1985-01-01",
+    "archived": {
+      "iana_tag": {
+        "value": "sponsored",
+        "archived_on": "2026-11-10"
+      }
+    }
+  },
+  "gp": {
+    "tld_created": "1996-10-21"
+  },
+  "gq": {
+    "tld_created": "1997-07-10"
+  },
+  "gr": {
+    "tld_created": "1989-02-19"
+  },
+  "grainger": {
+    "tld_created": "2015-10-29"
+  },
+  "graphics": {
+    "tld_created": "2013-11-08"
+  },
+  "gratis": {
+    "tld_created": "2014-04-17"
+  },
+  "green": {
+    "tld_created": "2014-06-12"
+  },
+  "gripe": {
+    "tld_created": "2014-04-03"
+  },
+  "grocery": {
+    "tld_created": "2017-06-08"
+  },
+  "group": {
+    "tld_created": "2015-07-30"
+  },
+  "gs": {
+    "tld_created": "1997-07-31"
+  },
+  "gt": {
+    "tld_created": "1992-08-14"
+  },
+  "gu": {
+    "tld_created": "1994-04-15"
+  },
+  "guardian": {
+    "tld_created": "2016-04-14"
+  },
+  "gucci": {
+    "tld_created": "2015-03-06"
+  },
+  "guge": {
+    "tld_created": "2015-02-19"
+  },
+  "guide": {
+    "tld_created": "2014-05-08"
+  },
+  "guitars": {
+    "tld_created": "2014-01-09"
+  },
+  "guru": {
+    "tld_created": "2013-10-31"
+  },
+  "gw": {
+    "tld_created": "1997-02-04"
+  },
+  "gy": {
+    "tld_created": "1994-09-13"
+  },
+  "hair": {
+    "tld_created": "2016-09-16"
+  },
+  "hamburg": {
+    "tld_created": "2014-05-22"
+  },
+  "hangout": {
+    "tld_created": "2015-01-08"
+  },
+  "haus": {
+    "tld_created": "2014-03-26"
+  },
+  "hbo": {
+    "tld_created": "2016-07-08"
+  },
+  "hdfc": {
+    "tld_created": "2016-07-21"
+  },
+  "hdfcbank": {
+    "tld_created": "2016-02-05"
+  },
+  "health": {
+    "tld_created": "2015-09-17"
+  },
+  "healthcare": {
+    "tld_created": "2014-07-24"
+  },
+  "help": {
+    "tld_created": "2014-08-15"
+  },
+  "helsinki": {
+    "tld_created": "2015-12-10"
+  },
+  "here": {
+    "tld_created": "2014-06-12"
+  },
+  "hermes": {
+    "tld_created": "2014-10-30"
+  },
+  "hgtv": {
+    "tld_created": "2016-05-05"
+  },
+  "hiphop": {
+    "tld_created": "2014-05-08"
+  },
+  "hisamitsu": {
+    "tld_created": "2016-05-13"
+  },
+  "hitachi": {
+    "tld_created": "2015-04-23"
+  },
+  "hiv": {
+    "tld_created": "2014-05-22"
+  },
+  "hk": {
+    "tld_created": "1990-01-03"
+  },
+  "hkt": {
+    "tld_created": "2016-04-15"
+  },
+  "hm": {
+    "tld_created": "1997-07-24"
+  },
+  "hn": {
+    "tld_created": "1993-04-16"
+  },
+  "hockey": {
+    "tld_created": "2015-04-30"
+  },
+  "holdings": {
+    "tld_created": "2013-10-31"
+  },
+  "holiday": {
+    "tld_created": "2013-12-19"
+  },
+  "homedepot": {
+    "tld_created": "2015-05-29"
+  },
+  "homegoods": {
+    "tld_created": "2016-04-07"
+  },
+  "homes": {
+    "tld_created": "2014-05-01"
+  },
+  "homesense": {
+    "tld_created": "2016-04-07"
+  },
+  "honda": {
+    "tld_created": "2015-03-06"
+  },
+  "honeywell": {
+    "tld_created": "2016-06-03"
+  },
+  "horse": {
+    "tld_created": "2014-02-28"
+  },
+  "hospital": {
+    "tld_created": "2016-12-02"
+  },
+  "host": {
+    "tld_created": "2014-05-22"
+  },
+  "hosting": {
+    "tld_created": "2014-08-15"
+  },
+  "hot": {
+    "tld_created": "2016-07-21"
+  },
+  "hoteles": {
+    "tld_created": "2015-05-14"
+  },
+  "hotels": {
+    "tld_created": "2016-09-16"
+  },
+  "hotmail": {
+    "tld_created": "2015-04-30"
+  },
+  "house": {
+    "tld_created": "2013-12-19"
+  },
+  "how": {
+    "tld_created": "2014-06-12"
+  },
+  "hr": {
+    "tld_created": "1993-02-27"
+  },
+  "hsbc": {
+    "tld_created": "2015-01-15"
+  },
+  "ht": {
+    "tld_created": "1997-03-06"
+  },
+  "htc": {
+    "tld_created": "2016-03-03"
+  },
+  "hu": {
+    "tld_created": "1990-11-07"
+  },
+  "hughes": {
+    "tld_created": "2016-08-04"
+  },
+  "hyatt": {
+    "tld_created": "2016-07-22"
+  },
+  "hyundai": {
+    "tld_created": "2015-09-17"
+  },
+  "ibm": {
+    "tld_created": "2014-09-25"
+  },
+  "icbc": {
+    "tld_created": "2015-04-09"
+  },
+  "ice": {
+    "tld_created": "2015-07-09"
+  },
+  "icu": {
+    "tld_created": "2015-03-06"
+  },
+  "id": {
+    "tld_created": "1993-02-27"
+  },
+  "ie": {
+    "tld_created": "1988-01-27"
+  },
+  "ieee": {
+    "tld_created": "2016-06-09"
+  },
+  "ifm": {
+    "tld_created": "2015-01-15"
+  },
+  "iinet": {
+    "tld_created": "2014-08-18"
+  },
+  "ikano": {
+    "tld_created": "2016-06-03"
+  },
+  "il": {
+    "tld_created": "1985-10-24"
+  },
+  "im": {
+    "tld_created": "1996-09-11"
+  },
+  "imamat": {
+    "tld_created": "2016-04-07"
+  },
+  "imdb": {
+    "tld_created": "2016-05-19"
+  },
+  "immo": {
+    "tld_created": "2014-08-22"
+  },
+  "immobilien": {
+    "tld_created": "2013-12-19"
+  },
+  "in": {
+    "tld_created": "1989-05-08"
+  },
+  "inc": {
+    "tld_created": "2018-07-03"
+  },
+  "industries": {
+    "tld_created": "2014-02-13"
+  },
+  "infiniti": {
+    "tld_created": "2014-07-10"
+  },
+  "info": {
+    "tld_created": "2001-06-26"
+  },
+  "ing": {
+    "tld_created": "2014-06-12"
+  },
+  "ink": {
+    "tld_created": "2014-02-27"
+  },
+  "institute": {
+    "tld_created": "2013-12-19"
+  },
+  "insurance": {
+    "tld_created": "2015-11-06"
+  },
+  "insure": {
+    "tld_created": "2014-04-24"
+  },
+  "int": {
+    "tld_created": "1988-11-03",
+    "archived": {
+      "iana_tag": {
+        "value": "sponsored",
+        "archived_on": "2026-11-10"
+      }
+    }
+  },
+  "intel": {
+    "tld_created": "2016-04-21"
+  },
+  "international": {
+    "tld_created": "2013-12-19"
+  },
+  "intuit": {
+    "tld_created": "2016-06-09"
+  },
+  "investments": {
+    "tld_created": "2014-04-17"
+  },
+  "io": {
+    "tld_created": "1997-09-16"
+  },
+  "ipiranga": {
+    "tld_created": "2015-04-02"
+  },
+  "iq": {
+    "tld_created": "1997-05-09"
+  },
+  "ir": {
+    "tld_created": "1994-04-06"
+  },
+  "irish": {
+    "tld_created": "2014-11-06"
+  },
+  "is": {
+    "tld_created": "1987-11-18"
+  },
+  "iselect": {
+    "tld_created": "2015-11-20"
+  },
+  "ismaili": {
+    "tld_created": "2016-04-07"
+  },
+  "ist": {
+    "tld_created": "2015-05-29"
+  },
+  "istanbul": {
+    "tld_created": "2015-05-29"
+  },
+  "it": {
+    "tld_created": "1987-12-23"
+  },
+  "itau": {
+    "tld_created": "2015-05-29"
+  },
+  "itv": {
+    "tld_created": "2016-05-19"
+  },
+  "iveco": {
+    "tld_created": "2016-10-27"
+  },
+  "iwc": {
+    "tld_created": "2014-11-20"
+  },
+  "jaguar": {
+    "tld_created": "2015-10-15"
+  },
+  "java": {
+    "tld_created": "2015-01-15"
+  },
+  "jcb": {
+    "tld_created": "2015-01-08"
+  },
+  "jcp": {
+    "tld_created": "2016-03-03"
+  },
+  "je": {
+    "tld_created": "1996-08-08"
+  },
+  "jeep": {
+    "tld_created": "2016-07-07"
+  },
+  "jetzt": {
+    "tld_created": "2014-03-06"
+  },
+  "jewelry": {
+    "tld_created": "2015-04-09"
+  },
+  "jio": {
+    "tld_created": "2016-08-11"
+  },
+  "jlc": {
+    "tld_created": "2015-03-12"
+  },
+  "jll": {
+    "tld_created": "2015-05-14"
+  },
+  "jm": {
+    "tld_created": "1991-09-24"
+  },
+  "jmp": {
+    "tld_created": "2015-11-20"
+  },
+  "jnj": {
+    "tld_created": "2016-01-14"
+  },
+  "jo": {
+    "tld_created": "1994-11-23"
+  },
+  "jobs": {
+    "tld_created": "2005-09-08",
+    "archived": {
+      "iana_tag": {
+        "value": "sponsored",
+        "archived_on": "2026-11-10"
+      }
+    }
+  },
+  "joburg": {
+    "tld_created": "2014-06-05"
+  },
+  "jot": {
+    "tld_created": "2015-11-12"
+  },
+  "joy": {
+    "tld_created": "2015-11-12"
+  },
+  "jp": {
+    "tld_created": "1986-08-05"
+  },
+  "jpmorgan": {
+    "tld_created": "2016-01-14"
+  },
+  "jprs": {
+    "tld_created": "2014-12-18"
+  },
+  "juegos": {
+    "tld_created": "2014-05-08"
+  },
+  "juniper": {
+    "tld_created": "2016-06-30"
+  },
+  "kaufen": {
+    "tld_created": "2013-12-19"
+  },
+  "kddi": {
+    "tld_created": "2014-12-18"
+  },
+  "ke": {
+    "tld_created": "1993-04-29"
+  },
+  "kerryhotels": {
+    "tld_created": "2015-12-17"
+  },
+  "kerrylogistics": {
+    "tld_created": "2015-12-17"
+  },
+  "kerryproperties": {
+    "tld_created": "2015-12-17"
+  },
+  "kfh": {
+    "tld_created": "2015-10-29"
+  },
+  "kg": {
+    "tld_created": "1995-07-12"
+  },
+  "kh": {
+    "tld_created": "1996-02-20"
+  },
+  "ki": {
+    "tld_created": "1995-04-19"
+  },
+  "kia": {
+    "tld_created": "2015-09-17"
+  },
+  "kids": {
+    "tld_created": "2022-03-05"
+  },
+  "kim": {
+    "tld_created": "2013-12-19"
+  },
+  "kinder": {
+    "tld_created": "2015-09-10"
+  },
+  "kindle": {
+    "tld_created": "2016-05-19"
+  },
+  "kitchen": {
+    "tld_created": "2013-11-13"
+  },
+  "kiwi": {
+    "tld_created": "2013-11-25"
+  },
+  "km": {
+    "tld_created": "1998-06-08"
+  },
+  "kn": {
+    "tld_created": "1991-09-03"
+  },
+  "koeln": {
+    "tld_created": "2014-02-20"
+  },
+  "komatsu": {
+    "tld_created": "2015-03-06"
+  },
+  "kosher": {
+    "tld_created": "2016-06-03"
+  },
+  "kp": {
+    "tld_created": "2007-09-24"
+  },
+  "kpmg": {
+    "tld_created": "2016-01-14"
+  },
+  "kpn": {
+    "tld_created": "2015-12-04"
+  },
+  "kr": {
+    "tld_created": "1986-09-29"
+  },
+  "krd": {
+    "tld_created": "2014-07-10"
+  },
+  "kred": {
+    "tld_created": "2014-02-20"
+  },
+  "kuokgroup": {
+    "tld_created": "2015-12-17"
+  },
+  "kw": {
+    "tld_created": "1992-10-26"
+  },
+  "ky": {
+    "tld_created": "1995-05-03"
+  },
+  "kyoto": {
+    "tld_created": "2015-01-08"
+  },
+  "kz": {
+    "tld_created": "1994-09-19"
+  },
+  "la": {
+    "tld_created": "1996-05-14"
+  },
+  "lacaixa": {
+    "tld_created": "2014-07-10"
+  },
+  "ladbrokes": {
+    "tld_created": "2016-07-14"
+  },
+  "lamborghini": {
+    "tld_created": "2015-11-12"
+  },
+  "lamer": {
+    "tld_created": "2015-12-10"
+  },
+  "lancaster": {
+    "tld_created": "2015-06-18"
+  },
+  "lancia": {
+    "tld_created": "2016-07-14"
+  },
+  "lancome": {
+    "tld_created": "2016-07-07"
+  },
+  "land": {
+    "tld_created": "2013-11-08"
+  },
+  "landrover": {
+    "tld_created": "2015-10-15"
+  },
+  "lanxess": {
+    "tld_created": "2016-01-08"
+  },
+  "lasalle": {
+    "tld_created": "2015-06-04"
+  },
+  "lat": {
+    "tld_created": "2014-12-04"
+  },
+  "latino": {
+    "tld_created": "2016-06-30"
+  },
+  "latrobe": {
+    "tld_created": "2014-11-06"
+  },
+  "law": {
+    "tld_created": "2015-06-18"
+  },
+  "lawyer": {
+    "tld_created": "2014-05-22"
+  },
+  "lb": {
+    "tld_created": "1993-08-25"
+  },
+  "lc": {
+    "tld_created": "1991-09-03"
+  },
+  "lds": {
+    "tld_created": "2014-10-16"
+  },
+  "lease": {
+    "tld_created": "2014-04-03"
+  },
+  "leclerc": {
+    "tld_created": "2015-01-29"
+  },
+  "lefrak": {
+    "tld_created": "2016-03-31"
+  },
+  "legal": {
+    "tld_created": "2014-11-20"
+  },
+  "lego": {
+    "tld_created": "2016-03-24"
+  },
+  "lexus": {
+    "tld_created": "2015-07-16"
+  },
+  "lgbt": {
+    "tld_created": "2014-06-26"
+  },
+  "li": {
+    "tld_created": "1993-02-26"
+  },
+  "liaison": {
+    "tld_created": "2015-03-19"
+  },
+  "lidl": {
+    "tld_created": "2014-12-04"
+  },
+  "life": {
+    "tld_created": "2014-05-08"
+  },
+  "lifeinsurance": {
+    "tld_created": "2015-07-09"
+  },
+  "lifestyle": {
+    "tld_created": "2015-10-01"
+  },
+  "lighting": {
+    "tld_created": "2013-10-31"
+  },
+  "like": {
+    "tld_created": "2015-11-12"
+  },
+  "lilly": {
+    "tld_created": "2016-05-19"
+  },
+  "limited": {
+    "tld_created": "2014-04-17"
+  },
+  "limo": {
+    "tld_created": "2013-12-12"
+  },
+  "lincoln": {
+    "tld_created": "2015-12-10"
+  },
+  "linde": {
+    "tld_created": "2015-09-03"
+  },
+  "link": {
+    "tld_created": "2014-01-09"
+  },
+  "lipsy": {
+    "tld_created": "2016-04-21"
+  },
+  "live": {
+    "tld_created": "2015-06-25"
+  },
+  "living": {
+    "tld_created": "2015-12-10"
+  },
+  "lixil": {
+    "tld_created": "2015-07-16"
+  },
+  "lk": {
+    "tld_created": "1990-06-15"
+  },
+  "llc": {
+    "tld_created": "2018-02-16"
+  },
+  "llp": {
+    "tld_created": "2019-11-20"
+  },
+  "loan": {
+    "tld_created": "2015-02-05"
+  },
+  "loans": {
+    "tld_created": "2014-05-08"
+  },
+  "locker": {
+    "tld_created": "2016-05-19"
+  },
+  "locus": {
+    "tld_created": "2016-02-26"
+  },
+  "loft": {
+    "tld_created": "2016-07-21"
+  },
+  "lol": {
+    "tld_created": "2015-04-23"
+  },
+  "london": {
+    "tld_created": "2014-02-13"
+  },
+  "lotte": {
+    "tld_created": "2015-01-08"
+  },
+  "lotto": {
+    "tld_created": "2014-06-05"
+  },
+  "love": {
+    "tld_created": "2015-03-25"
+  },
+  "lpl": {
+    "tld_created": "2016-06-30"
+  },
+  "lplfinancial": {
+    "tld_created": "2016-06-30"
+  },
+  "lr": {
+    "tld_created": "1997-04-09"
+  },
+  "ls": {
+    "tld_created": "1993-01-13"
+  },
+  "lt": {
+    "tld_created": "1992-06-03"
+  },
+  "ltd": {
+    "tld_created": "2015-08-06"
+  },
+  "ltda": {
+    "tld_created": "2014-07-03"
+  },
+  "lu": {
+    "tld_created": "1995-01-27"
+  },
+  "lundbeck": {
+    "tld_created": "2016-06-16"
+  },
+  "lupin": {
+    "tld_created": "2015-03-19"
+  },
+  "luxe": {
+    "tld_created": "2014-03-13"
+  },
+  "luxury": {
+    "tld_created": "2014-01-09"
+  },
+  "lv": {
+    "tld_created": "1993-04-29"
+  },
+  "ly": {
+    "tld_created": "1997-04-23"
+  },
+  "ma": {
+    "tld_created": "1993-11-26"
+  },
+  "macys": {
+    "tld_created": "2016-06-24"
+  },
+  "madrid": {
+    "tld_created": "2014-10-02"
+  },
+  "maif": {
+    "tld_created": "2015-02-13"
+  },
+  "maison": {
+    "tld_created": "2014-02-06"
+  },
+  "makeup": {
+    "tld_created": "2015-12-23"
+  },
+  "man": {
+    "tld_created": "2015-02-27"
+  },
+  "management": {
+    "tld_created": "2013-12-12"
+  },
+  "mango": {
+    "tld_created": "2014-01-23"
+  },
+  "map": {
+    "tld_created": "2017-06-08"
+  },
+  "market": {
+    "tld_created": "2014-05-22"
+  },
+  "marketing": {
+    "tld_created": "2014-01-09"
+  },
+  "markets": {
+    "tld_created": "2015-03-06"
+  },
+  "marriott": {
+    "tld_created": "2014-12-18"
+  },
+  "marshalls": {
+    "tld_created": "2016-04-07"
+  },
+  "maserati": {
+    "tld_created": "2016-07-14"
+  },
+  "mattel": {
+    "tld_created": "2016-01-22"
+  },
+  "mba": {
+    "tld_created": "2015-05-14"
+  },
+  "mc": {
+    "tld_created": "1995-01-20"
+  },
+  "mcd": {
+    "tld_created": "2016-07-07"
+  },
+  "mcdonalds": {
+    "tld_created": "2016-07-07"
+  },
+  "mckinsey": {
+    "tld_created": "2016-07-21"
+  },
+  "md": {
+    "tld_created": "1994-03-24"
+  },
+  "me": {
+    "tld_created": "2007-09-24"
+  },
+  "med": {
+    "tld_created": "2015-11-12"
+  },
+  "media": {
+    "tld_created": "2014-04-03"
+  },
+  "meet": {
+    "tld_created": "2014-03-20"
+  },
+  "melbourne": {
+    "tld_created": "2014-07-03"
+  },
+  "meme": {
+    "tld_created": "2014-06-12"
+  },
+  "memorial": {
+    "tld_created": "2014-11-20"
+  },
+  "men": {
+    "tld_created": "2015-05-08"
+  },
+  "menu": {
+    "tld_created": "2013-11-13"
+  },
+  "meo": {
+    "tld_created": "2015-01-15"
+  },
+  "merckmsd": {
+    "tld_created": "2017-06-15"
+  },
+  "metlife": {
+    "tld_created": "2016-03-18"
+  },
+  "mf": {
+    "tld_created": "2007-10-11"
+  },
+  "mg": {
+    "tld_created": "1995-07-25"
+  },
+  "mh": {
+    "tld_created": "1996-08-16"
+  },
+  "miami": {
+    "tld_created": "2014-02-28"
+  },
+  "microsoft": {
+    "tld_created": "2015-04-30"
+  },
+  "mil": {
+    "tld_created": "1985-01-01",
+    "archived": {
+      "iana_tag": {
+        "value": "sponsored",
+        "archived_on": "2026-11-10"
+      }
+    }
+  },
+  "mini": {
+    "tld_created": "2014-06-05"
+  },
+  "mint": {
+    "tld_created": "2016-06-09"
+  },
+  "mit": {
+    "tld_created": "2016-06-24"
+  },
+  "mitsubishi": {
+    "tld_created": "2016-06-24"
+  },
+  "mk": {
+    "tld_created": "1993-09-23"
+  },
+  "ml": {
+    "tld_created": "1993-09-29"
+  },
+  "mlb": {
+    "tld_created": "2016-05-05"
+  },
+  "mls": {
+    "tld_created": "2015-08-20"
+  },
+  "mm": {
+    "tld_created": "1997-02-04"
+  },
+  "mma": {
+    "tld_created": "2015-02-27"
+  },
+  "mn": {
+    "tld_created": "1995-03-02"
+  },
+  "mo": {
+    "tld_created": "1992-09-17"
+  },
+  "mobi": {
+    "tld_created": "2005-10-17"
+  },
+  "mobile": {
+    "tld_created": "2016-12-15"
+  },
+  "mobily": {
+    "tld_created": "2015-12-03"
+  },
+  "moda": {
+    "tld_created": "2014-01-09"
+  },
+  "moe": {
+    "tld_created": "2014-03-13"
+  },
+  "moi": {
+    "tld_created": "2015-09-10"
+  },
+  "mom": {
+    "tld_created": "2015-08-13"
+  },
+  "monash": {
+    "tld_created": "2014-01-09"
+  },
+  "money": {
+    "tld_created": "2014-11-20"
+  },
+  "monster": {
+    "tld_created": "2015-12-23"
+  },
+  "montblanc": {
+    "tld_created": "2014-11-20"
+  },
+  "mopar": {
+    "tld_created": "2016-07-07"
+  },
+  "mormon": {
+    "tld_created": "2014-10-16"
+  },
+  "mortgage": {
+    "tld_created": "2014-05-22"
+  },
+  "moscow": {
+    "tld_created": "2014-04-17"
+  },
+  "moto": {
+    "tld_created": "2016-09-30"
+  },
+  "motorcycles": {
+    "tld_created": "2014-05-01"
+  },
+  "mov": {
+    "tld_created": "2014-06-12"
+  },
+  "movie": {
+    "tld_created": "2015-03-12"
+  },
+  "movistar": {
+    "tld_created": "2015-06-18"
+  },
+  "mp": {
+    "tld_created": "1996-10-22"
+  },
+  "mq": {
+    "tld_created": "1997-03-28"
+  },
+  "mr": {
+    "tld_created": "1996-04-24"
+  },
+  "ms": {
+    "tld_created": "1997-03-06"
+  },
+  "msd": {
+    "tld_created": "2016-06-24"
+  },
+  "mt": {
+    "tld_created": "1992-12-02"
+  },
+  "mtn": {
+    "tld_created": "2015-03-12"
+  },
+  "mtpc": {
+    "tld_created": "2015-02-27"
+  },
+  "mtr": {
+    "tld_created": "2015-07-31"
+  },
+  "mu": {
+    "tld_created": "1995-10-06"
+  },
+  "museum": {
+    "tld_created": "2001-10-20",
+    "archived": {
+      "iana_tag": {
+        "value": "sponsored",
+        "archived_on": "2026-11-10"
+      }
+    }
+  },
+  "music": {
+    "tld_created": "2021-10-14"
+  },
+  "mutual": {
+    "tld_created": "2015-07-02"
+  },
+  "mutuelle": {
+    "tld_created": "2015-09-24"
+  },
+  "mv": {
+    "tld_created": "1996-09-25"
+  },
+  "mw": {
+    "tld_created": "1997-01-03"
+  },
+  "mx": {
+    "tld_created": "1989-02-01"
+  },
+  "my": {
+    "tld_created": "1987-06-08"
+  },
+  "mz": {
+    "tld_created": "1992-09-04"
+  },
+  "na": {
+    "tld_created": "1991-05-08"
+  },
+  "nab": {
+    "tld_created": "2016-08-04"
+  },
+  "nadex": {
+    "tld_created": "2015-04-02"
+  },
+  "nagoya": {
+    "tld_created": "2014-01-16"
+  },
+  "name": {
+    "tld_created": "2001-08-17",
+    "archived": {
+      "iana_tag": {
+        "value": "generic-restricted",
+        "archived_on": "2026-11-10"
+      }
+    }
+  },
+  "nationwide": {
+    "tld_created": "2016-04-22"
+  },
+  "natura": {
+    "tld_created": "2016-01-29"
+  },
+  "navy": {
+    "tld_created": "2014-05-29"
+  },
+  "nba": {
+    "tld_created": "2016-07-14"
+  },
+  "nc": {
+    "tld_created": "1993-10-13"
+  },
+  "ne": {
+    "tld_created": "1996-04-24"
+  },
+  "nec": {
+    "tld_created": "2015-04-02"
+  },
+  "net": {
+    "tld_created": "1985-01-01"
+  },
+  "netbank": {
+    "tld_created": "2015-03-26"
+  },
+  "netflix": {
+    "tld_created": "2016-05-05"
+  },
+  "network": {
+    "tld_created": "2014-08-18"
+  },
+  "neustar": {
+    "tld_created": "2014-02-06"
+  },
+  "new": {
+    "tld_created": "2014-06-12"
+  },
+  "newholland": {
+    "tld_created": "2016-10-27"
+  },
+  "news": {
+    "tld_created": "2015-03-12"
+  },
+  "next": {
+    "tld_created": "2016-04-21"
+  },
+  "nextdirect": {
+    "tld_created": "2016-04-21"
+  },
+  "nexus": {
+    "tld_created": "2014-09-04"
+  },
+  "nf": {
+    "tld_created": "1996-03-18"
+  },
+  "nfl": {
+    "tld_created": "2016-06-03"
+  },
+  "ng": {
+    "tld_created": "1995-03-15"
+  },
+  "ngo": {
+    "tld_created": "2014-07-10"
+  },
+  "nhk": {
+    "tld_created": "2014-04-24"
+  },
+  "ni": {
+    "tld_created": "1989-10-13"
+  },
+  "nico": {
+    "tld_created": "2015-02-05"
+  },
+  "nike": {
+    "tld_created": "2015-10-29"
+  },
+  "nikon": {
+    "tld_created": "2015-10-01"
+  },
+  "ninja": {
+    "tld_created": "2013-12-19"
+  },
+  "nissan": {
+    "tld_created": "2014-07-10"
+  },
+  "nissay": {
+    "tld_created": "2016-01-08"
+  },
+  "nl": {
+    "tld_created": "1986-04-25"
+  },
+  "no": {
+    "tld_created": "1987-03-17"
+  },
+  "nokia": {
+    "tld_created": "2015-04-23"
+  },
+  "northwesternmutual": {
+    "tld_created": "2015-12-04"
+  },
+  "norton": {
+    "tld_created": "2015-09-24"
+  },
+  "now": {
+    "tld_created": "2016-05-19"
+  },
+  "nowruz": {
+    "tld_created": "2015-11-25"
+  },
+  "nowtv": {
+    "tld_created": "2016-04-15"
+  },
+  "np": {
+    "tld_created": "1995-01-25"
+  },
+  "nr": {
+    "tld_created": "1998-03-30"
+  },
+  "nra": {
+    "tld_created": "2014-07-10"
+  },
+  "nrw": {
+    "tld_created": "2014-05-29"
+  },
+  "ntt": {
+    "tld_created": "2015-01-08"
+  },
+  "nu": {
+    "tld_created": "1997-06-20"
+  },
+  "nyc": {
+    "tld_created": "2014-03-13"
+  },
+  "nz": {
+    "tld_created": "1987-01-19"
+  },
+  "obi": {
+    "tld_created": "2015-09-03"
+  },
+  "observer": {
+    "tld_created": "2016-09-15"
+  },
+  "off": {
+    "tld_created": "2016-07-14"
+  },
+  "office": {
+    "tld_created": "2015-06-04"
+  },
+  "okinawa": {
+    "tld_created": "2014-02-20"
+  },
+  "olayan": {
+    "tld_created": "2016-04-21"
+  },
+  "olayangroup": {
+    "tld_created": "2016-04-21"
+  },
+  "oldnavy": {
+    "tld_created": "2016-07-14"
+  },
+  "ollo": {
+    "tld_created": "2016-05-19"
+  },
+  "om": {
+    "tld_created": "1996-04-11"
+  },
+  "omega": {
+    "tld_created": "2015-04-23"
+  },
+  "one": {
+    "tld_created": "2014-12-18"
+  },
+  "ong": {
+    "tld_created": "2014-07-10"
+  },
+  "onl": {
+    "tld_created": "2013-12-12"
+  },
+  "online": {
+    "tld_created": "2015-03-06"
+  },
+  "onyourside": {
+    "tld_created": "2016-04-22"
+  },
+  "ooo": {
+    "tld_created": "2014-07-31"
+  },
+  "open": {
+    "tld_created": "2016-07-21"
+  },
+  "oracle": {
+    "tld_created": "2015-01-15"
+  },
+  "orange": {
+    "tld_created": "2015-06-18"
+  },
+  "org": {
+    "tld_created": "1985-01-01"
+  },
+  "organic": {
+    "tld_created": "2014-05-29"
+  },
+  "orientexpress": {
+    "tld_created": "2016-06-14"
+  },
+  "origins": {
+    "tld_created": "2015-12-10"
+  },
+  "osaka": {
+    "tld_created": "2014-12-04"
+  },
+  "otsuka": {
+    "tld_created": "2014-06-26"
+  },
+  "ott": {
+    "tld_created": "2016-05-19"
+  },
+  "ovh": {
+    "tld_created": "2014-05-01"
+  },
+  "pa": {
+    "tld_created": "1994-05-25"
+  },
+  "page": {
+    "tld_created": "2015-02-05"
+  },
+  "pamperedchef": {
+    "tld_created": "2015-05-14"
+  },
+  "panasonic": {
+    "tld_created": "2016-06-24"
+  },
+  "panerai": {
+    "tld_created": "2015-02-19"
+  },
+  "paris": {
+    "tld_created": "2014-03-27"
+  },
+  "pars": {
+    "tld_created": "2015-11-25"
+  },
+  "partners": {
+    "tld_created": "2014-01-30"
+  },
+  "parts": {
+    "tld_created": "2014-02-06"
+  },
+  "party": {
+    "tld_created": "2014-10-23"
+  },
+  "passagens": {
+    "tld_created": "2016-02-19"
+  },
+  "pay": {
+    "tld_created": "2016-07-21"
+  },
+  "pccw": {
+    "tld_created": "2016-04-15"
+  },
+  "pe": {
+    "tld_created": "1991-11-25"
+  },
+  "pet": {
+    "tld_created": "2015-07-16"
+  },
+  "pf": {
+    "tld_created": "1996-03-19"
+  },
+  "pfizer": {
+    "tld_created": "2016-06-16"
+  },
+  "pg": {
+    "tld_created": "1991-09-26"
+  },
+  "ph": {
+    "tld_created": "1990-09-14"
+  },
+  "pharmacy": {
+    "tld_created": "2014-08-28"
+  },
+  "phd": {
+    "tld_created": "2017-06-15"
+  },
+  "philips": {
+    "tld_created": "2015-02-05"
+  },
+  "phone": {
+    "tld_created": "2016-12-15"
+  },
+  "photo": {
+    "tld_created": "2014-01-16"
+  },
+  "photography": {
+    "tld_created": "2013-11-13"
+  },
+  "photos": {
+    "tld_created": "2013-12-12"
+  },
+  "physio": {
+    "tld_created": "2014-06-05"
+  },
+  "piaget": {
+    "tld_created": "2015-01-08"
+  },
+  "pics": {
+    "tld_created": "2014-01-09"
+  },
+  "pictet": {
+    "tld_created": "2015-01-08"
+  },
+  "pictures": {
+    "tld_created": "2014-04-03"
+  },
+  "pid": {
+    "tld_created": "2015-12-10"
+  },
+  "pin": {
+    "tld_created": "2015-11-12"
+  },
+  "ping": {
+    "tld_created": "2015-09-24"
+  },
+  "pink": {
+    "tld_created": "2013-12-19"
+  },
+  "pioneer": {
+    "tld_created": "2016-05-26"
+  },
+  "pizza": {
+    "tld_created": "2014-08-22"
+  },
+  "pk": {
+    "tld_created": "1992-06-03"
+  },
+  "pl": {
+    "tld_created": "1990-07-30"
+  },
+  "place": {
+    "tld_created": "2014-06-05"
+  },
+  "play": {
+    "tld_created": "2015-06-04"
+  },
+  "playstation": {
+    "tld_created": "2015-09-24"
+  },
+  "plumbing": {
+    "tld_created": "2013-11-08"
+  },
+  "plus": {
+    "tld_created": "2015-03-12"
+  },
+  "pm": {
+    "tld_created": "1997-08-20"
+  },
+  "pn": {
+    "tld_created": "1997-07-10"
+  },
+  "pnc": {
+    "tld_created": "2015-10-29"
+  },
+  "pohl": {
+    "tld_created": "2014-09-18"
+  },
+  "poker": {
+    "tld_created": "2014-09-04"
+  },
+  "politie": {
+    "tld_created": "2016-06-16"
+  },
+  "porn": {
+    "tld_created": "2014-11-26"
+  },
+  "post": {
+    "tld_created": "2012-08-07",
+    "archived": {
+      "iana_tag": {
+        "value": "sponsored",
+        "archived_on": "2026-11-10"
+      }
+    }
+  },
+  "pr": {
+    "tld_created": "1989-08-27"
+  },
+  "pramerica": {
+    "tld_created": "2016-07-14"
+  },
+  "praxi": {
+    "tld_created": "2014-03-27"
+  },
+  "press": {
+    "tld_created": "2014-05-22"
+  },
+  "prime": {
+    "tld_created": "2016-05-19"
+  },
+  "pro": {
+    "tld_created": "2002-05-08",
+    "archived": {
+      "iana_tag": {
+        "value": "generic-restricted",
+        "archived_on": "2026-11-10"
+      }
+    }
+  },
+  "prod": {
+    "tld_created": "2014-08-23"
+  },
+  "productions": {
+    "tld_created": "2014-02-06"
+  },
+  "prof": {
+    "tld_created": "2014-09-04"
+  },
+  "progressive": {
+    "tld_created": "2016-02-19"
+  },
+  "promo": {
+    "tld_created": "2015-12-18"
+  },
+  "properties": {
+    "tld_created": "2014-01-30"
+  },
+  "property": {
+    "tld_created": "2014-08-15"
+  },
+  "protection": {
+    "tld_created": "2015-08-13"
+  },
+  "pru": {
+    "tld_created": "2016-07-14"
+  },
+  "prudential": {
+    "tld_created": "2016-07-14"
+  },
+  "ps": {
+    "tld_created": "2000-03-22"
+  },
+  "pt": {
+    "tld_created": "1988-06-30"
+  },
+  "pub": {
+    "tld_created": "2014-02-20"
+  },
+  "pw": {
+    "tld_created": "1997-06-12"
+  },
+  "pwc": {
+    "tld_created": "2016-01-15"
+  },
+  "py": {
+    "tld_created": "1991-09-09"
+  },
+  "qa": {
+    "tld_created": "1996-06-12"
+  },
+  "qpon": {
+    "tld_created": "2014-01-09"
+  },
+  "quebec": {
+    "tld_created": "2014-03-13"
+  },
+  "quest": {
+    "tld_created": "2015-08-06"
+  },
+  "qvc": {
+    "tld_created": "2016-07-21"
+  },
+  "racing": {
+    "tld_created": "2015-03-26"
+  },
+  "radio": {
+    "tld_created": "2016-09-22"
+  },
+  "raid": {
+    "tld_created": "2016-07-14"
+  },
+  "re": {
+    "tld_created": "1997-04-07"
+  },
+  "read": {
+    "tld_created": "2015-11-12"
+  },
+  "realestate": {
+    "tld_created": "2016-04-28"
+  },
+  "realtor": {
+    "tld_created": "2014-07-24"
+  },
+  "realty": {
+    "tld_created": "2015-06-11"
+  },
+  "recipes": {
+    "tld_created": "2013-12-12"
+  },
+  "red": {
+    "tld_created": "2014-01-16"
+  },
+  "redstone": {
+    "tld_created": "2015-03-06"
+  },
+  "redumbrella": {
+    "tld_created": "2015-11-20"
+  },
+  "rehab": {
+    "tld_created": "2014-05-29"
+  },
+  "reise": {
+    "tld_created": "2014-05-15"
+  },
+  "reisen": {
+    "tld_created": "2014-04-03"
+  },
+  "reit": {
+    "tld_created": "2014-10-23"
+  },
+  "reliance": {
+    "tld_created": "2016-08-11"
+  },
+  "ren": {
+    "tld_created": "2014-02-28"
+  },
+  "rent": {
+    "tld_created": "2015-04-02"
+  },
+  "rentals": {
+    "tld_created": "2014-01-30"
+  },
+  "repair": {
+    "tld_created": "2013-12-19"
+  },
+  "report": {
+    "tld_created": "2014-01-30"
+  },
+  "republican": {
+    "tld_created": "2014-05-29"
+  },
+  "rest": {
+    "tld_created": "2014-03-06"
+  },
+  "restaurant": {
+    "tld_created": "2014-07-31"
+  },
+  "review": {
+    "tld_created": "2015-02-05"
+  },
+  "reviews": {
+    "tld_created": "2014-02-06"
+  },
+  "rexroth": {
+    "tld_created": "2015-12-17"
+  },
+  "rich": {
+    "tld_created": "2014-01-16"
+  },
+  "richardli": {
+    "tld_created": "2016-04-15"
+  },
+  "ricoh": {
+    "tld_created": "2015-03-06"
+  },
+  "rightathome": {
+    "tld_created": "2016-07-14"
+  },
+  "ril": {
+    "tld_created": "2016-08-11"
+  },
+  "rio": {
+    "tld_created": "2014-05-15"
+  },
+  "rip": {
+    "tld_created": "2014-10-09"
+  },
+  "rmit": {
+    "tld_created": "2015-12-23"
+  },
+  "ro": {
+    "tld_created": "1993-02-26"
+  },
+  "rocher": {
+    "tld_created": "2015-09-10"
+  },
+  "rocks": {
+    "tld_created": "2014-01-16"
+  },
+  "rodeo": {
+    "tld_created": "2014-02-28"
+  },
+  "rogers": {
+    "tld_created": "2016-08-18"
+  },
+  "room": {
+    "tld_created": "2015-11-12"
+  },
+  "rs": {
+    "tld_created": "2007-09-24"
+  },
+  "rsvp": {
+    "tld_created": "2014-08-23"
+  },
+  "ru": {
+    "tld_created": "1994-04-07"
+  },
+  "rugby": {
+    "tld_created": "2017-03-23"
+  },
+  "ruhr": {
+    "tld_created": "2013-11-25"
+  },
+  "run": {
+    "tld_created": "2015-04-30"
+  },
+  "rw": {
+    "tld_created": "1996-10-21"
+  },
+  "rwe": {
+    "tld_created": "2015-10-01"
+  },
+  "ryukyu": {
+    "tld_created": "2014-03-13"
+  },
+  "sa": {
+    "tld_created": "1994-05-17"
+  },
+  "saarland": {
+    "tld_created": "2014-03-20"
+  },
+  "safe": {
+    "tld_created": "2015-11-12"
+  },
+  "safety": {
+    "tld_created": "2015-04-23"
+  },
+  "sakura": {
+    "tld_created": "2015-06-04"
+  },
+  "sale": {
+    "tld_created": "2014-12-17"
+  },
+  "salon": {
+    "tld_created": "2015-11-12"
+  },
+  "samsclub": {
+    "tld_created": "2016-07-21"
+  },
+  "samsung": {
+    "tld_created": "2014-10-30"
+  },
+  "sandvik": {
+    "tld_created": "2015-05-14"
+  },
+  "sandvikcoromant": {
+    "tld_created": "2015-05-14"
+  },
+  "sanofi": {
+    "tld_created": "2015-07-16"
+  },
+  "sap": {
+    "tld_created": "2015-03-19"
+  },
+  "sapo": {
+    "tld_created": "2015-01-15"
+  },
+  "sarl": {
+    "tld_created": "2014-07-31"
+  },
+  "sas": {
+    "tld_created": "2015-11-20"
+  },
+  "save": {
+    "tld_created": "2016-05-19"
+  },
+  "saxo": {
+    "tld_created": "2015-01-15"
+  },
+  "sb": {
+    "tld_created": "1994-04-19"
+  },
+  "sbi": {
+    "tld_created": "2016-03-24"
+  },
+  "sbs": {
+    "tld_created": "2015-09-24"
+  },
+  "sc": {
+    "tld_created": "1997-05-09"
+  },
+  "sca": {
+    "tld_created": "2014-07-17"
+  },
+  "scb": {
+    "tld_created": "2014-06-26"
+  },
+  "schaeffler": {
+    "tld_created": "2015-12-17"
+  },
+  "schmidt": {
+    "tld_created": "2014-06-19"
+  },
+  "scholarships": {
+    "tld_created": "2014-07-10"
+  },
+  "school": {
+    "tld_created": "2015-02-13"
+  },
+  "schule": {
+    "tld_created": "2014-04-11"
+  },
+  "schwarz": {
+    "tld_created": "2014-12-04"
+  },
+  "science": {
+    "tld_created": "2014-10-23"
+  },
+  "scjohnson": {
+    "tld_created": "2016-07-14"
+  },
+  "scor": {
+    "tld_created": "2015-04-30"
+  },
+  "scot": {
+    "tld_created": "2014-06-05"
+  },
+  "sd": {
+    "tld_created": "1997-03-06"
+  },
+  "se": {
+    "tld_created": "1986-09-04"
+  },
+  "search": {
+    "tld_created": "2017-06-08"
+  },
+  "seat": {
+    "tld_created": "2015-03-06"
+  },
+  "secure": {
+    "tld_created": "2016-07-21"
+  },
+  "security": {
+    "tld_created": "2015-09-03"
+  },
+  "seek": {
+    "tld_created": "2015-04-16"
+  },
+  "select": {
+    "tld_created": "2015-12-23"
+  },
+  "sener": {
+    "tld_created": "2015-04-02"
+  },
+  "services": {
+    "tld_created": "2014-04-03"
+  },
+  "ses": {
+    "tld_created": "2016-05-05"
+  },
+  "seven": {
+    "tld_created": "2015-09-23"
+  },
+  "sew": {
+    "tld_created": "2014-11-06"
+  },
+  "sex": {
+    "tld_created": "2015-04-09"
+  },
+  "sexy": {
+    "tld_created": "2013-11-08"
+  },
+  "sfr": {
+    "tld_created": "2015-11-12"
+  },
+  "sg": {
+    "tld_created": "1988-10-19"
+  },
+  "sh": {
+    "tld_created": "1997-09-23"
+  },
+  "shangrila": {
+    "tld_created": "2016-06-24"
+  },
+  "sharp": {
+    "tld_created": "2015-11-25"
+  },
+  "shaw": {
+    "tld_created": "2016-03-10"
+  },
+  "shell": {
+    "tld_created": "2015-11-06"
+  },
+  "shia": {
+    "tld_created": "2015-11-25"
+  },
+  "shiksha": {
+    "tld_created": "2014-01-16"
+  },
+  "shoes": {
+    "tld_created": "2013-12-12"
+  },
+  "shop": {
+    "tld_created": "2016-05-05"
+  },
+  "shopping": {
+    "tld_created": "2016-06-08"
+  },
+  "shouji": {
+    "tld_created": "2016-03-18"
+  },
+  "show": {
+    "tld_created": "2015-04-09"
+  },
+  "showtime": {
+    "tld_created": "2016-07-21"
+  },
+  "shriram": {
+    "tld_created": "2014-12-04"
+  },
+  "si": {
+    "tld_created": "1992-04-01"
+  },
+  "silk": {
+    "tld_created": "2016-05-19"
+  },
+  "sina": {
+    "tld_created": "2016-02-29"
+  },
+  "singles": {
+    "tld_created": "2013-10-31"
+  },
+  "site": {
+    "tld_created": "2015-03-06"
+  },
+  "sj": {
+    "tld_created": "1997-08-21"
+  },
+  "sk": {
+    "tld_created": "1993-03-29"
+  },
+  "ski": {
+    "tld_created": "2015-05-14"
+  },
+  "skin": {
+    "tld_created": "2015-12-23"
+  },
+  "sky": {
+    "tld_created": "2014-10-02"
+  },
+  "skype": {
+    "tld_created": "2015-03-19"
+  },
+  "sl": {
+    "tld_created": "1997-05-09"
+  },
+  "sling": {
+    "tld_created": "2016-08-04"
+  },
+  "sm": {
+    "tld_created": "1995-08-16"
+  },
+  "smart": {
+    "tld_created": "2016-04-21"
+  },
+  "smile": {
+    "tld_created": "2015-11-12"
+  },
+  "sn": {
+    "tld_created": "1993-03-19"
+  },
+  "sncf": {
+    "tld_created": "2015-05-08"
+  },
+  "so": {
+    "tld_created": "1997-08-28"
+  },
+  "soccer": {
+    "tld_created": "2015-05-08"
+  },
+  "social": {
+    "tld_created": "2014-01-09"
+  },
+  "softbank": {
+    "tld_created": "2015-12-23"
+  },
+  "software": {
+    "tld_created": "2014-05-22"
+  },
+  "sohu": {
+    "tld_created": "2014-02-27"
+  },
+  "solar": {
+    "tld_created": "2013-12-19"
+  },
+  "solutions": {
+    "tld_created": "2013-12-19"
+  },
+  "song": {
+    "tld_created": "2016-01-29"
+  },
+  "sony": {
+    "tld_created": "2015-03-06"
+  },
+  "soy": {
+    "tld_created": "2014-03-20"
+  },
+  "spa": {
+    "tld_created": "2020-09-25"
+  },
+  "space": {
+    "tld_created": "2014-05-22"
+  },
+  "spiegel": {
+    "tld_created": "2014-06-19"
+  },
+  "sport": {
+    "tld_created": "2018-01-05"
+  },
+  "spot": {
+    "tld_created": "2016-01-29"
+  },
+  "spreadbetting": {
+    "tld_created": "2015-03-06"
+  },
+  "sr": {
+    "tld_created": "1991-09-03"
+  },
+  "srl": {
+    "tld_created": "2015-07-09"
+  },
+  "srt": {
+    "tld_created": "2016-07-07"
+  },
+  "ss": {
+    "tld_created": "2011-08-31"
+  },
+  "st": {
+    "tld_created": "1997-11-07"
+  },
+  "stada": {
+    "tld_created": "2015-08-13"
+  },
+  "staples": {
+    "tld_created": "2016-06-09"
+  },
+  "star": {
+    "tld_created": "2015-12-10"
+  },
+  "starhub": {
+    "tld_created": "2015-05-08"
+  },
+  "statebank": {
+    "tld_created": "2016-03-24"
+  },
+  "statefarm": {
+    "tld_created": "2015-11-06"
+  },
+  "statoil": {
+    "tld_created": "2015-06-11"
+  },
+  "stc": {
+    "tld_created": "2015-08-20"
+  },
+  "stcgroup": {
+    "tld_created": "2015-08-20"
+  },
+  "stockholm": {
+    "tld_created": "2015-09-17"
+  },
+  "storage": {
+    "tld_created": "2015-12-10"
+  },
+  "store": {
+    "tld_created": "2016-02-11"
+  },
+  "stream": {
+    "tld_created": "2016-02-26"
+  },
+  "studio": {
+    "tld_created": "2015-06-25"
+  },
+  "study": {
+    "tld_created": "2015-02-19"
+  },
+  "style": {
+    "tld_created": "2015-01-29"
+  },
+  "su": {
+    "tld_created": "1990-09-19"
+  },
+  "sucks": {
+    "tld_created": "2015-02-19"
+  },
+  "supplies": {
+    "tld_created": "2014-02-13"
+  },
+  "supply": {
+    "tld_created": "2014-02-13"
+  },
+  "support": {
+    "tld_created": "2013-12-12"
+  },
+  "surf": {
+    "tld_created": "2014-03-13"
+  },
+  "surgery": {
+    "tld_created": "2014-04-17"
+  },
+  "suzuki": {
+    "tld_created": "2014-06-26"
+  },
+  "sv": {
+    "tld_created": "1994-11-04"
+  },
+  "swatch": {
+    "tld_created": "2015-04-23"
+  },
+  "swiftcover": {
+    "tld_created": "2016-06-09"
+  },
+  "swiss": {
+    "tld_created": "2015-04-16"
+  },
+  "sx": {
+    "tld_created": "2010-12-20"
+  },
+  "sy": {
+    "tld_created": "1996-02-20"
+  },
+  "sydney": {
+    "tld_created": "2014-10-30"
+  },
+  "symantec": {
+    "tld_created": "2015-09-24"
+  },
+  "systems": {
+    "tld_created": "2013-12-12"
+  },
+  "sz": {
+    "tld_created": "1993-07-19"
+  },
+  "tab": {
+    "tld_created": "2015-09-04"
+  },
+  "taipei": {
+    "tld_created": "2014-09-25"
+  },
+  "talk": {
+    "tld_created": "2016-03-18"
+  },
+  "taobao": {
+    "tld_created": "2016-01-08"
+  },
+  "target": {
+    "tld_created": "2016-07-21"
+  },
+  "tatamotors": {
+    "tld_created": "2015-07-16"
+  },
+  "tatar": {
+    "tld_created": "2014-07-03"
+  },
+  "tattoo": {
+    "tld_created": "2013-11-08"
+  },
+  "tax": {
+    "tld_created": "2014-04-17"
+  },
+  "taxi": {
+    "tld_created": "2015-04-30"
+  },
+  "tc": {
+    "tld_created": "1997-01-27"
+  },
+  "tci": {
+    "tld_created": "2015-11-25"
+  },
+  "td": {
+    "tld_created": "1997-11-03"
+  },
+  "tdk": {
+    "tld_created": "2016-03-10"
+  },
+  "team": {
+    "tld_created": "2015-04-09"
+  },
+  "tech": {
+    "tld_created": "2015-03-12"
+  },
+  "technology": {
+    "tld_created": "2013-11-08"
+  },
+  "tel": {
+    "tld_created": "2007-03-01",
+    "archived": {
+      "iana_tag": {
+        "value": "sponsored",
+        "archived_on": "2026-11-10"
+      }
+    }
+  },
+  "telecity": {
+    "tld_created": "2016-02-11"
+  },
+  "telefonica": {
+    "tld_created": "2015-06-18"
+  },
+  "temasek": {
+    "tld_created": "2014-12-18"
+  },
+  "tennis": {
+    "tld_created": "2015-01-29"
+  },
+  "teva": {
+    "tld_created": "2016-02-19"
+  },
+  "tf": {
+    "tld_created": "1997-08-26"
+  },
+  "tg": {
+    "tld_created": "1996-09-05"
+  },
+  "th": {
+    "tld_created": "1988-09-07"
+  },
+  "thd": {
+    "tld_created": "2015-05-14"
+  },
+  "theater": {
+    "tld_created": "2015-04-30"
+  },
+  "theatre": {
+    "tld_created": "2015-08-13"
+  },
+  "tiaa": {
+    "tld_created": "2016-03-24"
+  },
+  "tickets": {
+    "tld_created": "2015-03-19"
+  },
+  "tienda": {
+    "tld_created": "2014-01-16"
+  },
+  "tiffany": {
+    "tld_created": "2015-12-17"
+  },
+  "tips": {
+    "tld_created": "2013-11-13"
+  },
+  "tires": {
+    "tld_created": "2014-12-11"
+  },
+  "tirol": {
+    "tld_created": "2014-05-29"
+  },
+  "tj": {
+    "tld_created": "1997-12-11"
+  },
+  "tjmaxx": {
+    "tld_created": "2016-04-07"
+  },
+  "tjx": {
+    "tld_created": "2016-04-07"
+  },
+  "tk": {
+    "tld_created": "1997-11-07"
+  },
+  "tkmaxx": {
+    "tld_created": "2016-04-07"
+  },
+  "tl": {
+    "tld_created": "2005-03-23"
+  },
+  "tm": {
+    "tld_created": "1997-05-30"
+  },
+  "tmall": {
+    "tld_created": "2016-01-08"
+  },
+  "tn": {
+    "tld_created": "1991-05-17"
+  },
+  "to": {
+    "tld_created": "1995-12-18"
+  },
+  "today": {
+    "tld_created": "2013-11-13"
+  },
+  "tokyo": {
+    "tld_created": "2014-01-16"
+  },
+  "tools": {
+    "tld_created": "2014-01-16"
+  },
+  "top": {
+    "tld_created": "2014-07-24"
+  },
+  "toray": {
+    "tld_created": "2015-04-16"
+  },
+  "toshiba": {
+    "tld_created": "2014-10-09"
+  },
+  "total": {
+    "tld_created": "2016-02-05"
+  },
+  "tours": {
+    "tld_created": "2015-03-12"
+  },
+  "town": {
+    "tld_created": "2014-04-03"
+  },
+  "toyota": {
+    "tld_created": "2015-07-16"
+  },
+  "toys": {
+    "tld_created": "2014-04-03"
+  },
+  "tp": {
+    "tld_created": "1997-05-09"
+  },
+  "tr": {
+    "tld_created": "1990-09-17"
+  },
+  "trade": {
+    "tld_created": "2014-03-06"
+  },
+  "trading": {
+    "tld_created": "2015-03-06"
+  },
+  "training": {
+    "tld_created": "2013-12-19"
+  },
+  "travel": {
+    "tld_created": "2005-07-27",
+    "archived": {
+      "iana_tag": {
+        "value": "sponsored",
+        "archived_on": "2026-11-10"
+      }
+    }
+  },
+  "travelchannel": {
+    "tld_created": "2016-05-05"
+  },
+  "travelers": {
+    "tld_created": "2015-11-25"
+  },
+  "travelersinsurance": {
+    "tld_created": "2015-11-25"
+  },
+  "trust": {
+    "tld_created": "2014-11-26"
+  },
+  "trv": {
+    "tld_created": "2015-11-25"
+  },
+  "tt": {
+    "tld_created": "1991-09-03"
+  },
+  "tube": {
+    "tld_created": "2015-12-23"
+  },
+  "tui": {
+    "tld_created": "2014-09-18"
+  },
+  "tunes": {
+    "tld_created": "2016-01-29"
+  },
+  "tushu": {
+    "tld_created": "2015-11-12"
+  },
+  "tv": {
+    "tld_created": "1996-03-18"
+  },
+  "tvs": {
+    "tld_created": "2016-02-05"
+  },
+  "tw": {
+    "tld_created": "1989-07-31"
+  },
+  "tz": {
+    "tld_created": "1995-07-14"
+  },
+  "ua": {
+    "tld_created": "1992-12-01"
+  },
+  "ubank": {
+    "tld_created": "2016-08-04"
+  },
+  "ubs": {
+    "tld_created": "2015-06-11"
+  },
+  "uconnect": {
+    "tld_created": "2016-07-07"
+  },
+  "ug": {
+    "tld_created": "1995-03-08"
+  },
+  "uk": {
+    "tld_created": "1985-07-24"
+  },
+  "um": {
+    "tld_created": "2008-04-21"
+  },
+  "unicom": {
+    "tld_created": "2016-01-22"
+  },
+  "university": {
+    "tld_created": "2014-04-03"
+  },
+  "uno": {
+    "tld_created": "2013-11-13"
+  },
+  "uol": {
+    "tld_created": "2014-08-07"
+  },
+  "ups": {
+    "tld_created": "2016-04-14"
+  },
+  "us": {
+    "tld_created": "1985-02-15"
+  },
+  "uy": {
+    "tld_created": "1990-09-10"
+  },
+  "uz": {
+    "tld_created": "1995-04-29"
+  },
+  "va": {
+    "tld_created": "1995-09-11"
+  },
+  "vacations": {
+    "tld_created": "2014-02-13"
+  },
+  "vana": {
+    "tld_created": "2015-09-24"
+  },
+  "vanguard": {
+    "tld_created": "2016-08-18"
+  },
+  "vc": {
+    "tld_created": "1991-09-03"
+  },
+  "ve": {
+    "tld_created": "1991-03-07"
+  },
+  "vegas": {
+    "tld_created": "2014-03-20"
+  },
+  "ventures": {
+    "tld_created": "2013-10-31"
+  },
+  "verisign": {
+    "tld_created": "2015-11-06"
+  },
+  "versicherung": {
+    "tld_created": "2014-05-15"
+  },
+  "vet": {
+    "tld_created": "2014-05-22"
+  },
+  "vg": {
+    "tld_created": "1997-02-20"
+  },
+  "vi": {
+    "tld_created": "1995-08-31"
+  },
+  "viajes": {
+    "tld_created": "2013-12-12"
+  },
+  "video": {
+    "tld_created": "2014-12-17"
+  },
+  "vig": {
+    "tld_created": "2015-11-25"
+  },
+  "viking": {
+    "tld_created": "2015-10-15"
+  },
+  "villas": {
+    "tld_created": "2014-02-06"
+  },
+  "vin": {
+    "tld_created": "2015-07-23"
+  },
+  "vip": {
+    "tld_created": "2015-07-30"
+  },
+  "virgin": {
+    "tld_created": "2015-09-10"
+  },
+  "visa": {
+    "tld_created": "2016-06-30"
+  },
+  "vision": {
+    "tld_created": "2014-02-06"
+  },
+  "vista": {
+    "tld_created": "2015-06-04"
+  },
+  "vistaprint": {
+    "tld_created": "2015-06-04"
+  },
+  "viva": {
+    "tld_created": "2015-08-20"
+  },
+  "vivo": {
+    "tld_created": "2016-05-26"
+  },
+  "vlaanderen": {
+    "tld_created": "2014-06-05"
+  },
+  "vn": {
+    "tld_created": "1994-04-14"
+  },
+  "vodka": {
+    "tld_created": "2014-02-28"
+  },
+  "volkswagen": {
+    "tld_created": "2015-12-23"
+  },
+  "volvo": {
+    "tld_created": "2016-01-29"
+  },
+  "vote": {
+    "tld_created": "2014-02-13"
+  },
+  "voting": {
+    "tld_created": "2014-01-16"
+  },
+  "voto": {
+    "tld_created": "2014-02-13"
+  },
+  "voyage": {
+    "tld_created": "2013-10-31"
+  },
+  "vu": {
+    "tld_created": "1995-04-10"
+  },
+  "vuelos": {
+    "tld_created": "2016-02-19"
+  },
+  "wales": {
+    "tld_created": "2014-07-31"
+  },
+  "walmart": {
+    "tld_created": "2016-07-21"
+  },
+  "walter": {
+    "tld_created": "2015-05-14"
+  },
+  "wang": {
+    "tld_created": "2013-12-12"
+  },
+  "wanggou": {
+    "tld_created": "2015-11-12"
+  },
+  "warman": {
+    "tld_created": "2016-04-14"
+  },
+  "watch": {
+    "tld_created": "2014-01-16"
+  },
+  "watches": {
+    "tld_created": "2015-11-12"
+  },
+  "weather": {
+    "tld_created": "2015-12-23"
+  },
+  "weatherchannel": {
+    "tld_created": "2016-01-22"
+  },
+  "webcam": {
+    "tld_created": "2014-03-06"
+  },
+  "weber": {
+    "tld_created": "2015-12-10"
+  },
+  "website": {
+    "tld_created": "2014-05-22"
+  },
+  "wed": {
+    "tld_created": "2013-12-12"
+  },
+  "wedding": {
+    "tld_created": "2014-07-10"
+  },
+  "weibo": {
+    "tld_created": "2016-02-29"
+  },
+  "weir": {
+    "tld_created": "2015-04-02"
+  },
+  "wf": {
+    "tld_created": "1997-11-14"
+  },
+  "whoswho": {
+    "tld_created": "2014-06-12"
+  },
+  "wien": {
+    "tld_created": "2013-12-19"
+  },
+  "wiki": {
+    "tld_created": "2014-02-06"
+  },
+  "williamhill": {
+    "tld_created": "2014-07-03"
+  },
+  "win": {
+    "tld_created": "2015-02-05"
+  },
+  "windows": {
+    "tld_created": "2015-04-30"
+  },
+  "wine": {
+    "tld_created": "2015-07-23"
+  },
+  "winners": {
+    "tld_created": "2016-04-07"
+  },
+  "wme": {
+    "tld_created": "2014-08-22"
+  },
+  "wolterskluwer": {
+    "tld_created": "2016-02-05"
+  },
+  "woodside": {
+    "tld_created": "2016-01-08"
+  },
+  "work": {
+    "tld_created": "2014-08-18"
+  },
+  "works": {
+    "tld_created": "2014-01-16"
+  },
+  "world": {
+    "tld_created": "2014-09-11"
+  },
+  "wow": {
+    "tld_created": "2016-09-16"
+  },
+  "ws": {
+    "tld_created": "1995-07-14"
+  },
+  "wtc": {
+    "tld_created": "2014-04-17"
+  },
+  "wtf": {
+    "tld_created": "2014-04-17"
+  },
+  "xbox": {
+    "tld_created": "2015-04-30"
+  },
+  "xerox": {
+    "tld_created": "2015-04-02"
+  },
+  "xfinity": {
+    "tld_created": "2016-06-16"
+  },
+  "xihuan": {
+    "tld_created": "2016-03-18"
+  },
+  "xin": {
+    "tld_created": "2015-02-19"
+  },
+  "xn--0zwm56d": {
+    "tld_created": "2007-10-19"
+  },
+  "xn--11b4c3d": {
+    "tld_created": "2015-07-02"
+  },
+  "xn--11b5bs3a9aj6g": {
+    "tld_created": "2007-10-19"
+  },
+  "xn--1ck2e1b": {
+    "tld_created": "2016-01-29"
+  },
+  "xn--1qqw23a": {
+    "tld_created": "2014-07-17"
+  },
+  "xn--2scrj9c": {
+    "tld_created": "2016-04-18"
+  },
+  "xn--30rr7y": {
+    "tld_created": "2015-03-12"
+  },
+  "xn--3bst00m": {
+    "tld_created": "2013-12-12"
+  },
+  "xn--3ds443g": {
+    "tld_created": "2013-12-19"
+  },
+  "xn--3e0b707e": {
+    "tld_created": "2011-02-05"
+  },
+  "xn--3hcrj9c": {
+    "tld_created": "2016-04-18"
+  },
+  "xn--3oq18vl8pn36a": {
+    "tld_created": "2016-07-21"
+  },
+  "xn--3pxu8k": {
+    "tld_created": "2015-07-02"
+  },
+  "xn--42c2d9a": {
+    "tld_created": "2015-07-02"
+  },
+  "xn--45br5cyl": {
+    "tld_created": "2016-04-18"
+  },
+  "xn--45brj9c": {
+    "tld_created": "2011-02-05"
+  },
+  "xn--45q11c": {
+    "tld_created": "2014-11-06"
+  },
+  "xn--4dbrk0ce": {
+    "tld_created": "2020-06-16"
+  },
+  "xn--4gbrim": {
+    "tld_created": "2014-05-15"
+  },
+  "xn--54b7fta0cc": {
+    "tld_created": "2011-03-30"
+  },
+  "xn--55qw42g": {
+    "tld_created": "2013-12-12"
+  },
+  "xn--55qx5d": {
+    "tld_created": "2014-01-09"
+  },
+  "xn--5su34j936bgsg": {
+    "tld_created": "2016-06-24"
+  },
+  "xn--5tzm5g": {
+    "tld_created": "2015-12-04"
+  },
+  "xn--6frz82g": {
+    "tld_created": "2014-01-23"
+  },
+  "xn--6qq986b3xl": {
+    "tld_created": "2013-12-12"
+  },
+  "xn--80adxhks": {
+    "tld_created": "2014-04-17"
+  },
+  "xn--80akhbyknj4f": {
+    "tld_created": "2007-10-19"
+  },
+  "xn--80ao21a": {
+    "tld_created": "2011-09-15"
+  },
+  "xn--80aqecdr1a": {
+    "tld_created": "2016-11-16"
+  },
+  "xn--80asehdb": {
+    "tld_created": "2013-10-21"
+  },
+  "xn--80aswg": {
+    "tld_created": "2013-10-21"
+  },
+  "xn--8y0a063a": {
+    "tld_created": "2015-12-10"
+  },
+  "xn--90a3ac": {
+    "tld_created": "2011-02-05"
+  },
+  "xn--90ae": {
+    "tld_created": "2016-03-05"
+  },
+  "xn--90ais": {
+    "tld_created": "2014-09-29"
+  },
+  "xn--9dbq2a": {
+    "tld_created": "2015-07-02"
+  },
+  "xn--9et52u": {
+    "tld_created": "2015-03-12"
+  },
+  "xn--9krt00a": {
+    "tld_created": "2016-02-29"
+  },
+  "xn--9t4b11yi5a": {
+    "tld_created": "2007-10-19"
+  },
+  "xn--b4w605ferd": {
+    "tld_created": "2014-12-18"
+  },
+  "xn--bck1b9a5dre4c": {
+    "tld_created": "2016-01-29"
+  },
+  "xn--c1avg": {
+    "tld_created": "2014-02-27"
+  },
+  "xn--c2br7g": {
+    "tld_created": "2015-07-02"
+  },
+  "xn--cck2b3b": {
+    "tld_created": "2016-01-29"
+  },
+  "xn--cckwcxetd": {
+    "tld_created": "2020-05-28"
+  },
+  "xn--cg4bki": {
+    "tld_created": "2013-12-12"
+  },
+  "xn--clchc0ea0b2g2a9gcd": {
+    "tld_created": "2011-02-05"
+  },
+  "xn--czr694b": {
+    "tld_created": "2014-05-08"
+  },
+  "xn--czrs0t": {
+    "tld_created": "2014-11-20"
+  },
+  "xn--czru2d": {
+    "tld_created": "2014-02-27"
+  },
+  "xn--d1acj3b": {
+    "tld_created": "2014-02-13"
+  },
+  "xn--d1alf": {
+    "tld_created": "2014-04-21"
+  },
+  "xn--deba0ad": {
+    "tld_created": "2007-10-19"
+  },
+  "xn--e1a4c": {
+    "tld_created": "2015-12-08"
+  },
+  "xn--eckvdtc9d": {
+    "tld_created": "2015-11-25"
+  },
+  "xn--efvy88h": {
+    "tld_created": "2015-08-06"
+  },
+  "xn--estv75g": {
+    "tld_created": "2015-04-23"
+  },
+  "xn--fct429k": {
+    "tld_created": "2016-03-18"
+  },
+  "xn--fhbei": {
+    "tld_created": "2015-07-02"
+  },
+  "xn--fiq228c5hs": {
+    "tld_created": "2013-12-19"
+  },
+  "xn--fiq64b": {
+    "tld_created": "2014-01-09"
+  },
+  "xn--fiqs8s": {
+    "tld_created": "2010-07-09"
+  },
+  "xn--fiqz9s": {
+    "tld_created": "2010-07-09"
+  },
+  "xn--fjq720a": {
+    "tld_created": "2014-07-17"
+  },
+  "xn--flw351e": {
+    "tld_created": "2014-10-09"
+  },
+  "xn--fpcrj9c3d": {
+    "tld_created": "2011-02-05"
+  },
+  "xn--fzc2c9e2c": {
+    "tld_created": "2010-08-19"
+  },
+  "xn--fzys8d69uvgm": {
+    "tld_created": "2016-04-15"
+  },
+  "xn--g2xx48c": {
+    "tld_created": "2016-01-08"
+  },
+  "xn--g6w251d": {
+    "tld_created": "2007-10-19"
+  },
+  "xn--gckr3f0f": {
+    "tld_created": "2016-01-29"
+  },
+  "xn--gecrj9c": {
+    "tld_created": "2011-02-05"
+  },
+  "xn--gk3at1e": {
+    "tld_created": "2016-09-16"
+  },
+  "xn--h2breg3eve": {
+    "tld_created": "2016-08-15"
+  },
+  "xn--h2brj9c": {
+    "tld_created": "2011-02-05"
+  },
+  "xn--h2brj9c8c": {
+    "tld_created": "2016-08-15"
+  },
+  "xn--hgbk6aj7f53bba": {
+    "tld_created": "2007-10-19"
+  },
+  "xn--hlcj6aya9esc7a": {
+    "tld_created": "2007-10-19"
+  },
+  "xn--hxt814e": {
+    "tld_created": "2014-11-20"
+  },
+  "xn--i1b6b1a6a2e": {
+    "tld_created": "2014-02-27"
+  },
+  "xn--imr513n": {
+    "tld_created": "2015-05-08"
+  },
+  "xn--io0a7i": {
+    "tld_created": "2014-01-09"
+  },
+  "xn--j1aef": {
+    "tld_created": "2015-07-02"
+  },
+  "xn--j1amh": {
+    "tld_created": "2011-03-01"
+  },
+  "xn--j6w193g": {
+    "tld_created": "2010-07-12"
+  },
+  "xn--jlq480n2rg": {
+    "tld_created": "2020-05-28"
+  },
+  "xn--jlq61u9w7b": {
+    "tld_created": "2015-04-23"
+  },
+  "xn--jvr189m": {
+    "tld_created": "2016-01-29"
+  },
+  "xn--jxalpdlp": {
+    "tld_created": "2007-10-19"
+  },
+  "xn--kcrx77d1x4a": {
+    "tld_created": "2015-02-13"
+  },
+  "xn--kgbechtv": {
+    "tld_created": "2007-10-19"
+  },
+  "xn--kprw13d": {
+    "tld_created": "2010-07-14"
+  },
+  "xn--kpry57d": {
+    "tld_created": "2010-07-14"
+  },
+  "xn--kpu716f": {
+    "tld_created": "2015-11-12"
+  },
+  "xn--kput3i": {
+    "tld_created": "2014-06-05"
+  },
+  "xn--l1acc": {
+    "tld_created": "2012-06-21"
+  },
+  "xn--lgbbat1ad8j": {
+    "tld_created": "2011-02-05"
+  },
+  "xn--mgb9awbf": {
+    "tld_created": "2011-02-05"
+  },
+  "xn--mgba3a3ejt": {
+    "tld_created": "2015-08-20"
+  },
+  "xn--mgba3a4f16a": {
+    "tld_created": "2011-02-05"
+  },
+  "xn--mgba7c0bbn0a": {
+    "tld_created": "2016-04-21"
+  },
+  "xn--mgbaakc7dvf": {
+    "tld_created": "2017-05-18"
+  },
+  "xn--mgbaam7a8h": {
+    "tld_created": "2010-05-05"
+  },
+  "xn--mgbab2bd": {
+    "tld_created": "2014-02-06"
+  },
+  "xn--mgbah1a3hjkrd": {
+    "tld_created": "2017-11-28"
+  },
+  "xn--mgbai9azgqp6j": {
+    "tld_created": "2011-02-28"
+  },
+  "xn--mgbayh7gpa": {
+    "tld_created": "2010-08-20"
+  },
+  "xn--mgbb9fbpob": {
+    "tld_created": "2015-12-03"
+  },
+  "xn--mgbbh1a": {
+    "tld_created": "2016-08-15"
+  },
+  "xn--mgbbh1a71e": {
+    "tld_created": "2011-02-05"
+  },
+  "xn--mgbc0a9azcg": {
+    "tld_created": "2011-02-05"
+  },
+  "xn--mgbca7dzdo": {
+    "tld_created": "2016-03-03"
+  },
+  "xn--mgbcpq6gpa1a": {
+    "tld_created": "2019-06-13"
+  },
+  "xn--mgberp4a5d4ar": {
+    "tld_created": "2010-05-05"
+  },
+  "xn--mgbgu82a": {
+    "tld_created": "2016-08-15"
+  },
+  "xn--mgbi4ecexp": {
+    "tld_created": "2016-11-16"
+  },
+  "xn--mgbpl2fh": {
+    "tld_created": "2012-11-20"
+  },
+  "xn--mgbt3dhd": {
+    "tld_created": "2015-11-25"
+  },
+  "xn--mgbtx2b": {
+    "tld_created": "2014-09-29"
+  },
+  "xn--mgbx4cd0ab": {
+    "tld_created": "2011-10-22"
+  },
+  "xn--mix891f": {
+    "tld_created": "2015-04-21"
+  },
+  "xn--mk1bu44c": {
+    "tld_created": "2015-07-02"
+  },
+  "xn--mxtq1m": {
+    "tld_created": "2015-01-08"
+  },
+  "xn--ngbc5azd": {
+    "tld_created": "2013-10-21"
+  },
+  "xn--ngbe9e0a": {
+    "tld_created": "2015-10-29"
+  },
+  "xn--ngbrx": {
+    "tld_created": "2017-05-11"
+  },
+  "xn--node": {
+    "tld_created": "2011-02-11"
+  },
+  "xn--nqv7f": {
+    "tld_created": "2014-02-27"
+  },
+  "xn--nqv7fs00ema": {
+    "tld_created": "2014-02-27"
+  },
+  "xn--nyqy26a": {
+    "tld_created": "2015-03-12"
+  },
+  "xn--o3cw4h": {
+    "tld_created": "2010-08-19"
+  },
+  "xn--ogbpf8fl": {
+    "tld_created": "2011-02-05"
+  },
+  "xn--otu796d": {
+    "tld_created": "2017-12-21"
+  },
+  "xn--p1acf": {
+    "tld_created": "2014-07-03"
+  },
+  "xn--p1ai": {
+    "tld_created": "2010-05-12"
+  },
+  "xn--pbt977c": {
+    "tld_created": "2015-11-12"
+  },
+  "xn--pgbs0dh": {
+    "tld_created": "2010-08-19"
+  },
+  "xn--pssy2u": {
+    "tld_created": "2015-07-02"
+  },
+  "xn--q7ce6a": {
+    "tld_created": "2019-06-10"
+  },
+  "xn--q9jyb4c": {
+    "tld_created": "2013-11-13"
+  },
+  "xn--qcka1pmc": {
+    "tld_created": "2014-10-09"
+  },
+  "xn--qxa6a": {
+    "tld_created": "2019-07-18"
+  },
+  "xn--qxam": {
+    "tld_created": "2015-05-06"
+  },
+  "xn--rhqv96g": {
+    "tld_created": "2014-03-06"
+  },
+  "xn--rovu88b": {
+    "tld_created": "2016-01-29"
+  },
+  "xn--rvc1e0am3e": {
+    "tld_created": "2016-04-18"
+  },
+  "xn--s9brj9c": {
+    "tld_created": "2011-02-05"
+  },
+  "xn--ses554g": {
+    "tld_created": "2014-03-13"
+  },
+  "xn--t60b56a": {
+    "tld_created": "2015-07-02"
+  },
+  "xn--tckwe": {
+    "tld_created": "2015-07-02"
+  },
+  "xn--tiq49xqyj": {
+    "tld_created": "2016-11-16"
+  },
+  "xn--unup4y": {
+    "tld_created": "2013-10-21"
+  },
+  "xn--vermgensberater-ctb": {
+    "tld_created": "2014-09-18"
+  },
+  "xn--vermgensberatung-pwb": {
+    "tld_created": "2014-09-18"
+  },
+  "xn--vhquv": {
+    "tld_created": "2013-11-25"
+  },
+  "xn--vuq861b": {
+    "tld_created": "2015-02-05"
+  },
+  "xn--w4r85el8fhu5dnra": {
+    "tld_created": "2016-02-05"
+  },
+  "xn--w4rs40l": {
+    "tld_created": "2016-02-05"
+  },
+  "xn--wgbh1c": {
+    "tld_created": "2010-05-05"
+  },
+  "xn--wgbl6a": {
+    "tld_created": "2010-12-24"
+  },
+  "xn--xhq521b": {
+    "tld_created": "2014-07-24"
+  },
+  "xn--xkc2al3hye2a": {
+    "tld_created": "2010-08-19"
+  },
+  "xn--xkc2dl3a5ee0h": {
+    "tld_created": "2011-02-05"
+  },
+  "xn--y9a3aq": {
+    "tld_created": "2014-11-26"
+  },
+  "xn--yfro4i67o": {
+    "tld_created": "2011-02-05"
+  },
+  "xn--ygbi2ammx": {
+    "tld_created": "2010-08-20"
+  },
+  "xn--zckzah": {
+    "tld_created": "2007-10-19"
+  },
+  "xn--zfr164b": {
+    "tld_created": "2013-12-12"
+  },
+  "xperia": {
+    "tld_created": "2015-07-23"
+  },
+  "xxx": {
+    "tld_created": "2011-04-15",
+    "archived": {
+      "iana_tag": {
+        "value": "sponsored",
+        "archived_on": "2026-11-10"
+      }
+    }
+  },
+  "xyz": {
+    "tld_created": "2014-02-06"
+  },
+  "yachts": {
+    "tld_created": "2014-05-01"
+  },
+  "yahoo": {
+    "tld_created": "2016-01-29"
+  },
+  "yamaxun": {
+    "tld_created": "2015-09-10"
+  },
+  "yandex": {
+    "tld_created": "2014-07-10"
+  },
+  "ye": {
+    "tld_created": "1996-08-19"
+  },
+  "yodobashi": {
+    "tld_created": "2015-02-13"
+  },
+  "yoga": {
+    "tld_created": "2014-08-15"
+  },
+  "yokohama": {
+    "tld_created": "2014-03-27"
+  },
+  "you": {
+    "tld_created": "2016-03-18"
+  },
+  "youtube": {
+    "tld_created": "2014-08-23"
+  },
+  "yt": {
+    "tld_created": "1997-11-17"
+  },
+  "yun": {
+    "tld_created": "2016-03-18"
+  },
+  "za": {
+    "tld_created": "1990-11-07"
+  },
+  "zappos": {
+    "tld_created": "2016-05-19"
+  },
+  "zara": {
+    "tld_created": "2015-09-10"
+  },
+  "zero": {
+    "tld_created": "2015-11-12"
+  },
+  "zip": {
+    "tld_created": "2014-08-23"
+  },
+  "zippo": {
+    "tld_created": "2016-05-26"
+  },
+  "zm": {
+    "tld_created": "1994-03-25"
+  },
+  "zone": {
+    "tld_created": "2014-01-09"
+  },
+  "zuerich": {
+    "tld_created": "2014-12-18"
+  },
+  "zw": {
+    "tld_created": "1991-11-06"
+  }
+}

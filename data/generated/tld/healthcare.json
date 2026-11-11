@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "healthcare",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -32,8 +34,11 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "2014-07-24",
     "tld_updated": [
-      "2025-10-07"
+      "2026-11-05"
     ],
+    "events": {
+      "delegation": "2014-07-30"
+    },
     "annotations": {
       "iana_sponsor_alias": "Identity Digital",
       "iana_sponsor_slug": "identity-digital",
@@ -48,6 +53,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Identity Digital"
       ],
@@ -55,6 +61,14 @@
         "identity-digital"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 43802,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "2b7f3c3400e34536d0afbd986d12b419f38d797731890602806488b0c9fb3874"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "v0n0.nic.healthcare",

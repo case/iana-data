@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-28T08:41:21Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--jlq480n2rg",
     "tld_unicode": "亚马逊",
     "tld_script": "Han-CJK",
+    "tld_script_code": "Hani",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -36,6 +38,9 @@
     "tld_updated": [
       "2025-02-14"
     ],
+    "events": {
+      "delegation": "2020-06-02"
+    },
     "annotations": {
       "iana_sponsor_alias": "Amazon",
       "iana_sponsor_slug": "amazon",
@@ -50,6 +55,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "amazon",
+      "iana_translation_en": "Amazon",
+      "iana_transliteration": "yamaxun",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Nominet",
         "UltraDNS"
@@ -59,8 +67,17 @@
         "ultradns"
       ],
       "language_code": "zh",
-      "language_name_en": "Chinese"
+      "language_name_en": "Chinese",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 31571,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "3ccfc69c090a34ca30db066549363f433af1b5066fa8bd957f9116d5404d12c1"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "dns1.nic.xn--jlq480n2rg",

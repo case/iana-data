@@ -14,7 +14,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from src.config import IDN_SCRIPT_MAPPING_FILE
-from src.parse.root_db_html import parse_root_db_html
+from src.parse.iana_tlds_json import IanaTldsError, load_iana_tlds
 
 try:
     import pycountry
@@ -136,21 +136,16 @@ def detect_tld_script(tld: str) -> str | None:
 
 def main():
     """Generate IDN script mappings."""
-    # Parse root zone database to get all TLDs (delegated and undelegated)
-    print("Parsing root zone database...")
+    # Read the IANA TLD JSON to get all TLDs (delegated and undelegated)
+    print("Reading IANA TLD JSON...")
     try:
-        root_zone_entries = parse_root_db_html()
-    except Exception as e:
-        print(f"Error parsing root zone database: {e}")
-        print("Run 'make download-core' first")
+        records = load_iana_tlds()
+    except IanaTldsError as e:
+        print(f"Error reading IANA TLD JSON: {e}")
         return 1
 
     # Find all IDN TLDs (starting with xn--)
-    idn_tlds = []
-    for entry in root_zone_entries:
-        tld = entry["domain"].lstrip(".")
-        if tld.startswith("xn--"):
-            idn_tlds.append(tld)
+    idn_tlds = [record.name for record in records if record.name.startswith("xn--")]
 
     print(f"Found {len(idn_tlds)} IDN TLDs (delegated and undelegated)")
 

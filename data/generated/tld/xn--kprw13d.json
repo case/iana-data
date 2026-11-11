@@ -1,15 +1,17 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-07T22:58:14Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--kprw13d",
     "tld_unicode": "台湾",
     "tld_script": "Han-CJK",
+    "tld_script_code": "Hani",
     "tld_iso": "tw",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -26,8 +28,13 @@
     "tld_updated": [
       "2026-04-24"
     ],
+    "events": {
+      "delegation": "2010-07-14"
+    },
     "annotations": {
       "country_name_iso": "Taiwan, Province of China",
+      "iana_translation_en": "Taiwan",
+      "iana_transliteration": "taiwan",
       "as_org_aliases": [
         "APNIC",
         "Google",
@@ -42,8 +49,17 @@
       ],
       "geographic_scope": "country",
       "language_code": "zh-Hant-TW",
-      "language_name_en": "Chinese (Taiwan)"
+      "language_name_en": "Chinese (Taiwan)",
+      "language_code_source": "refined"
     },
+    "ds_records": [
+      {
+        "key_tag": 793,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "3c11a9316d6c1539925062743f8edd026dccbed251bf6470e633bf8f27d3bc02"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "anytld.apnic.net",
