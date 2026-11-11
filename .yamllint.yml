@@ -15,4 +15,3 @@ rules:
 ignore: |
   .venv/
   node_modules/
-  .github/workflows/workflows-disabled/

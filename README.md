@@ -73,7 +73,7 @@ There are a few challenges with these data files, for example:
 - It carries the Unicode label, the script, and for IDN ccTLDs the ISO 3166-1 code of the country
 - It carries the manager, the administrative and technical contacts, the nameservers with their addresses, and the DS records
 - It no longer carries a TLD's creation date. We keep the dates we had in `data/manual/tld-archive.json`
-- `data/source/archive/` holds the last Root Zone Database HTML pages, which carried this data before IANA published the JSON file
+- `data/source/archive/` holds the last Root Zone Database HTML pages, which carried this data before IANA published the JSON file, and the page captures the HTML parsers were tested against
 
 **For the RDAP bootstrap file:**
 
@@ -366,9 +366,10 @@ The `data/generated/agreements.json` file is the ICANN registry-agreement-type e
 
 ## Local usage
 
-- `make deps` - Install the project dependencies
-- `make test` - Run all the tests
-- `make coverage` - See the test coverage
+- `bin/setup` - Install the pinned toolchain and the project dependencies
+- `bin/lint` - Run the linters, formatters and type checker
+- `bin/test` - Run the linters, then all the tests with coverage
+- `bin/build --preserve-asn` - Rebuild `data/generated/`, keeping the committed ASN data
 
 **Data downloads**
 
@@ -388,6 +389,7 @@ Dependencies:
 - [httpx2](https://github.com/pydantic/httpx2/) - Friendly HTTP usage
 - [tenacity](https://github.com/jd/tenacity) - Friendly HTTP retries
 - [selectolax](https://github.com/rushter/selectolax) - HTML parsing
+- [jsonschema](https://github.com/python-jsonschema/jsonschema) - Validates the IANA TLD JSON against IANA's schema
 - [pyright](https://github.com/microsoft/pyright) - Type checking
 - [pytest](https://github.com/pytest-dev/pytest/) - Testing & coverage framework
 - [pycountry](https://github.com/pycountry/pycountry/) - ISO 3166 country code name mapping
@@ -428,7 +430,7 @@ Dependencies:
 - [ ] Wikidata contribution - figure out how to programmatically get (some or all of) this data into Wikidata, and / or Wikipedia
 - [ ] Add a `version` field to the `tlds.json` schema?
 - [ ] PeeringDB API script (or integration of some sort), for deriving AS Org alias names
-- [ ] Data integrity - more e2e tests to confirm that the data all lines up. E.g. the TLD pages <-> RDAP bootstrap file <-> full root db html page contents
+- [ ] Data integrity - more e2e tests to confirm that the data all lines up. E.g. the TLD JSON <-> RDAP bootstrap file <-> TLD list
 - [ ] Check other git repos, for TLDs TXT list change history
   - [some txt file history](https://github.com/ris-work/TLD-watch/commits/master/)
   - [Go project](https://github.com/jehiah/generic_tlds/commits/master/)

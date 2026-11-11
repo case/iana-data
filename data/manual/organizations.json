@@ -4,12 +4,24 @@
     "slug": "aconet",
     "source_names": {
       "asn": [
-        "ACONET ACOnet Backbone",
-        "ACONET_SERVICES ACOnet Services @ Vienna Internet eXchange"
+        "ACOnet - ACONET",
+        "ACOnet_Services - ACONET"
       ]
     },
     "aliases": [],
-    "homepage": "https://www.aco.net/"
+    "homepage": "https://www.aco.net/",
+    "archived": {
+      "asn": [
+        {
+          "name": "ACONET ACOnet Backbone",
+          "archived_on": "2026-11-02"
+        },
+        {
+          "name": "ACONET_SERVICES ACOnet Services @ Vienna Internet eXchange",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "AFNIC.fr",
@@ -20,22 +32,38 @@
         "Association Française pour le Nommage Internet en Coopération (A.F.N.I.C.)"
       ],
       "asn": [
-        "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation"
+        "NIC-FR-DNS-UNICAST-PARIS2 - AFNIC (Association Francaise pour le Nommage Internet en Cooperation)"
       ]
     },
     "aliases": [],
-    "homepage": "https://www.afnic.fr/"
+    "homepage": "https://www.afnic.fr/",
+    "archived": {
+      "asn": [
+        {
+          "name": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "AFRINIC",
     "slug": "afrinic",
     "source_names": {
       "asn": [
-        "AFRINIC-ANYCAST"
+        "African Network Information Center - (AfriNIC) Ltd - African Network Information Center - (AfriNIC) Ltd"
       ]
     },
     "aliases": [],
-    "homepage": "https://afrinic.net/"
+    "homepage": "https://afrinic.net/",
+    "archived": {
+      "asn": [
+        {
+          "name": "AFRINIC-ANYCAST",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "Amazon",
@@ -51,25 +79,45 @@
         "Amazon Registry Services, Inc."
       ],
       "asn": [
-        "AMAZON-02",
-        "AMAZON-AES"
+        "AMAZON-02 - Amazon.com, Inc.",
+        "AMAZON-AES - Amazon.com, Inc."
       ]
     },
     "aliases": [
       "Amazon Registry"
     ],
-    "homepage": "https://www.registry.amazon/"
+    "homepage": "https://www.registry.amazon/",
+    "archived": {
+      "asn": [
+        {
+          "name": "AMAZON-02",
+          "archived_on": "2026-11-02"
+        },
+        {
+          "name": "AMAZON-AES",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "APNIC",
     "slug": "apnic",
     "source_names": {
       "asn": [
-        "APNIC-ANYCAST APNIC ANYCAST ASN"
+        "APNIC-ANYCAST - Asia Pacific Network Information Centre"
       ]
     },
     "aliases": [],
-    "homepage": "https://www.apnic.net/"
+    "homepage": "https://www.apnic.net/",
+    "archived": {
+      "asn": [
+        {
+          "name": "APNIC-ANYCAST APNIC ANYCAST ASN",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "Apple",
@@ -92,11 +140,19 @@
     "slug": "arnes",
     "source_names": {
       "asn": [
-        "ARNES-NET Academic and Research Network of Slovenia"
+        "ARNES-NET ARNES"
       ]
     },
     "aliases": [],
-    "homepage": "https://www.arnes.si/"
+    "homepage": "https://www.arnes.si/",
+    "archived": {
+      "asn": [
+        {
+          "name": "ARNES-NET Academic and Research Network of Slovenia",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "Audi",
@@ -138,25 +194,53 @@
         "CentralNic Registry"
       ],
       "asn": [
-        "CENTRALNIC-ANYCAST-A CentralNic Anycast-A AS Number",
-        "CENTRALNIC-ANYCAST-B CentralNic Anycast-B AS Number",
-        "CENTRALNIC-ANYCAST-E",
-        "CENTRALNIC-ANYCAST-F"
+        "CENTRALNIC-ANYCAST-A CentralNic Ltd",
+        "CENTRALNIC-ANYCAST-B CentralNic Ltd",
+        "CENTRALNIC-ANYCAST-E CentralNic Ltd",
+        "CentralNic-Anycast-F CentralNic Ltd"
       ]
     },
     "aliases": [],
-    "homepage": "https://centralnicregistry.com/"
+    "homepage": "https://centralnicregistry.com/",
+    "archived": {
+      "asn": [
+        {
+          "name": "CENTRALNIC-ANYCAST-A CentralNic Anycast-A AS Number",
+          "archived_on": "2026-11-02"
+        },
+        {
+          "name": "CENTRALNIC-ANYCAST-B CentralNic Anycast-B AS Number",
+          "archived_on": "2026-11-02"
+        },
+        {
+          "name": "CENTRALNIC-ANYCAST-E",
+          "archived_on": "2026-11-02"
+        },
+        {
+          "name": "CENTRALNIC-ANYCAST-F",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "Chinese University of Hong Kong",
     "slug": "cuhk",
     "source_names": {
       "asn": [
-        "ERX-CUHKNET The Chinese University of Hong Kong"
+        "ERX-CUHKNET - The Chinese University of Hong Kong"
       ]
     },
     "aliases": [],
-    "homepage": "https://www.cuhk.edu.hk/"
+    "homepage": "https://www.cuhk.edu.hk/",
+    "archived": {
+      "asn": [
+        {
+          "name": "ERX-CUHKNET The Chinese University of Hong Kong",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "CIRA.ca",
@@ -167,20 +251,36 @@
         "Canadian Internet Registration Authority (CIRA)"
       ],
       "asn": [
-        "CIRA-5",
-        "CIRA-CLOUD1",
-        "CIRA-CLOUD2"
+        "CIRA-5 - CIRA Canadian Internet Registration Authority Autorit Canadienne pour les enregistrements Internet",
+        "CIRA-CLOUD1 - CIRA Canadian Internet Registration Authority Autorit Canadienne pour les enregistrements Internet",
+        "CIRA-CLOUD2 - CIRA Canadian Internet Registration Authority Autorit Canadienne pour les enregistrements Internet"
       ]
     },
     "aliases": [],
-    "homepage": "https://www.cira.ca/"
+    "homepage": "https://www.cira.ca/",
+    "archived": {
+      "asn": [
+        {
+          "name": "CIRA-5",
+          "archived_on": "2026-11-02"
+        },
+        {
+          "name": "CIRA-CLOUD1",
+          "archived_on": "2026-11-02"
+        },
+        {
+          "name": "CIRA-CLOUD2",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "Cloudflare",
     "slug": "cloudflare",
     "source_names": {
       "asn": [
-        "CLOUDFLARESPECTRUM Cloudflare, Inc."
+        "CLOUDFLARESPECTRUM Cloudflare London, LLC"
       ]
     },
     "archived": {
@@ -188,6 +288,10 @@
         {
           "name": "CLOUDFLARENET",
           "archived_on": "2026-09-12"
+        },
+        {
+          "name": "CLOUDFLARESPECTRUM Cloudflare, Inc.",
+          "archived_on": "2026-11-02"
         }
       ]
     },
@@ -205,34 +309,62 @@
         "China Internet Network Information Center (CNNIC)"
       ],
       "asn": [
-        "CNNIC-CRITICAL-AP China Internet Network Infomation Center"
+        "CNNIC-CRITICAL-AP - China Internet Network Infomation Center"
       ]
     },
     "aliases": [],
-    "homepage": "https://www.cnnic.com.cn/"
+    "homepage": "https://www.cnnic.com.cn/",
+    "archived": {
+      "asn": [
+        {
+          "name": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "Community DNS",
     "slug": "community-dns",
     "source_names": {
       "asn": [
-        "COMMUNITYDNS"
+        "COMMUNITYDNS Community DNS Limited"
       ]
     },
     "aliases": [],
-    "homepage": "https://www.communitydns.net/"
+    "homepage": "https://www.communitydns.net/",
+    "archived": {
+      "asn": [
+        {
+          "name": "COMMUNITYDNS",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "CZNIC.cz",
     "slug": "cznic",
     "source_names": {
       "asn": [
-        "CZNIC-AS",
-        "CZNIC-AS2"
+        "CZNIC-AS CZ.NIC, z.s.p.o.",
+        "CZNIC-AS2 CZ.NIC, z.s.p.o."
       ]
     },
     "aliases": [],
-    "homepage": "https://www.nic.cz/"
+    "homepage": "https://www.nic.cz/",
+    "archived": {
+      "asn": [
+        {
+          "name": "CZNIC-AS",
+          "archived_on": "2026-11-02"
+        },
+        {
+          "name": "CZNIC-AS2",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "Datacom Mongolia",
@@ -252,12 +384,24 @@
     "slug": "denic",
     "source_names": {
       "asn": [
-        "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
-        "DENIC-SERVICES"
+        "DENIC-ANYCAST-AS DENIC eG",
+        "DENIC-SERVICES Stefan Pattberg trading as DENIC Services GmbH & Co. KG"
       ]
     },
     "aliases": [],
-    "homepage": "https://www.denic.de/"
+    "homepage": "https://www.denic.de/",
+    "archived": {
+      "asn": [
+        {
+          "name": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+          "archived_on": "2026-11-02"
+        },
+        {
+          "name": "DENIC-SERVICES",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "Dish Network",
@@ -284,22 +428,38 @@
         "DNS Belgium vzw/asbl"
       ],
       "asn": [
-        "DNS-ANYCAST DNS.be Anycast - Toplevel .be domain registry"
+        "DNS-ANYCAST DNS-Belgium VZW"
       ]
     },
     "aliases": [],
-    "homepage": "https://www.dnsbelgium.be/"
+    "homepage": "https://www.dnsbelgium.be/",
+    "archived": {
+      "asn": [
+        {
+          "name": "DNS-ANYCAST DNS.be Anycast - Toplevel .be domain registry",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "DNS.PT",
     "slug": "dns-pt",
     "source_names": {
       "asn": [
-        "DNS"
+        "DNSPT Associacao DNS.PT"
       ]
     },
     "aliases": [],
-    "homepage": "https://www.pt.pt/"
+    "homepage": "https://www.pt.pt/",
+    "archived": {
+      "asn": [
+        {
+          "name": "DNS",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "DotCooperation",
@@ -321,11 +481,19 @@
     "slug": "forth-gr",
     "source_names": {
       "asn": [
-        "FORTH-AS"
+        "FORTH-AS Foundation of Research and Technology Hellas"
       ]
     },
     "aliases": [],
-    "homepage": "https://www.forth.gr/"
+    "homepage": "https://www.forth.gr/",
+    "archived": {
+      "asn": [
+        {
+          "name": "FORTH-AS",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "fTLD Registry",
@@ -389,26 +557,50 @@
         "Charleston Road Registry Inc."
       ],
       "asn": [
-        "GOOGLE",
-        "GOOGLE-CLOUD-PLATFORM",
-        "YOUTUBE YOUTUBE"
+        "GOOGLE - Google LLC",
+        "GOOGLE-CLOUD-PLATFORM - Google LLC",
+        "YOUTUBE Google Ireland Limited"
       ]
     },
     "aliases": [
       "Google Registry"
     ],
-    "homepage": "https://registry.google/"
+    "homepage": "https://registry.google/",
+    "archived": {
+      "asn": [
+        {
+          "name": "GOOGLE",
+          "archived_on": "2026-11-02"
+        },
+        {
+          "name": "GOOGLE-CLOUD-PLATFORM",
+          "archived_on": "2026-11-02"
+        },
+        {
+          "name": "YOUTUBE YOUTUBE",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "Gransy",
     "slug": "gransy",
     "source_names": {
       "asn": [
-        "GRANSY Gransy s.r.o. gransy.com"
+        "GRANSY Gransy s.r.o."
       ]
     },
     "aliases": [],
-    "homepage": "https://gransy.com/"
+    "homepage": "https://gransy.com/",
+    "archived": {
+      "asn": [
+        {
+          "name": "GRANSY Gransy s.r.o. gransy.com",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "GRS Domains",
@@ -471,11 +663,19 @@
     "slug": "hetzner",
     "source_names": {
       "asn": [
-        "HETZNER-AS"
+        "HETZNER-AS Hetzner Online GmbH"
       ]
     },
     "aliases": [],
-    "homepage": "https://www.hetzner.com/"
+    "homepage": "https://www.hetzner.com/",
+    "archived": {
+      "asn": [
+        {
+          "name": "HETZNER-AS",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "IBM",
@@ -543,8 +743,8 @@
         "Identity Digital Domains Limited"
       ],
       "asn": [
-        "AFILIAS-SECONDARY-DNS",
-        "AS-AFILIAS1"
+        "AFiLIAS-SECONDARY-DNS Identity Digital Limited",
+        "AS-AFILIAS1 - Afilias, Inc."
       ]
     },
     "archived": {
@@ -552,6 +752,16 @@
         {
           "name": "Donuts Inc",
           "archived_on": "2026-11-10"
+        }
+      ],
+      "asn": [
+        {
+          "name": "AFILIAS-SECONDARY-DNS",
+          "archived_on": "2026-11-02"
+        },
+        {
+          "name": "AS-AFILIAS1",
+          "archived_on": "2026-11-02"
         }
       ]
     },
@@ -603,23 +813,43 @@
         "Knipp Medien und Kommunikation GmbH"
       ],
       "asn": [
-        "KNIPP-IRONDNS1-AS Technologiepark",
-        "KNIPPWORLDWI"
+        "KNIPP-IRONDNS1-AS Knipp Medien und Kommunikation GmbH",
+        "KNIPPWORLDWIDE Knipp Medien und Kommunikation GmbH"
       ]
     },
     "aliases": [],
-    "homepage": "https://knipp.de"
+    "homepage": "https://knipp.de",
+    "archived": {
+      "asn": [
+        {
+          "name": "KNIPP-IRONDNS1-AS Technologiepark",
+          "archived_on": "2026-11-02"
+        },
+        {
+          "name": "KNIPPWORLDWI",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "LACTLD",
     "slug": "lactld",
     "source_names": {
       "asn": [
-        "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION"
+        "AS61455 - LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION"
       ]
     },
     "aliases": [],
-    "homepage": "https://lactld.org/"
+    "homepage": "https://lactld.org/",
+    "archived": {
+      "asn": [
+        {
+          "name": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "LDS",
@@ -647,35 +877,67 @@
         "Microsoft Corporation"
       ],
       "asn": [
-        "MICROSOFT-CORP-MSN-AS-BLOCK"
+        "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation"
       ]
     },
     "aliases": [],
-    "homepage": "https://www.microsoft.com/"
+    "homepage": "https://www.microsoft.com/",
+    "archived": {
+      "asn": [
+        {
+          "name": "MICROSOFT-CORP-MSN-AS-BLOCK",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "MSK-IX.ru",
     "slug": "msk-ix",
     "source_names": {
       "asn": [
-        "RIPN-",
-        "RIPN-NS5-RU-MSK"
+        "RIPN-RU Join-stock company \"Internet Exchange\"MSK-IX\"",
+        "RIPN-NS5-RU-MSK Join-stock company \"Internet Exchange\"MSK-IX\""
       ]
     },
     "aliases": [],
-    "homepage": "https://www.msk-ix.ru/"
+    "homepage": "https://www.msk-ix.ru/",
+    "archived": {
+      "asn": [
+        {
+          "name": "RIPN-",
+          "archived_on": "2026-11-02"
+        },
+        {
+          "name": "RIPN-NS5-RU-MSK",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "Nask.pl",
     "slug": "nask-pl",
     "source_names": {
       "asn": [
-        "NASK-DNS-ANYCAST",
-        "NASK-DNS-ANYCAST2"
+        "NASK-DNS-ANYCAST NAUKOWA I AKADEMICKA SIEC KOMPUTEROWA - PANSTWOWY INSTYTUT BADAWCZY",
+        "NASK-DNS-ANYCAST2 NAUKOWA I AKADEMICKA SIEC KOMPUTEROWA - PANSTWOWY INSTYTUT BADAWCZY"
       ]
     },
     "aliases": [],
-    "homepage": "https://www.nask.pl/"
+    "homepage": "https://www.nask.pl/",
+    "archived": {
+      "asn": [
+        {
+          "name": "NASK-DNS-ANYCAST",
+          "archived_on": "2026-11-02"
+        },
+        {
+          "name": "NASK-DNS-ANYCAST2",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "Netnod AB",
@@ -683,58 +945,119 @@
     "source_names": {
       "asn": [
         "NETNOD-IX Netnod AB",
-        "NETNOD-NDS $Id: aut-num_AS56908,v 1.1 20160307 11:15:51 mem Exp $",
-        "NETNOD-GBG Netnod Equipment located at IX in Gothenburg",
-        "NETNOD-SVL Netnod Equipment located at IX in Sundsvall",
-        "NETNOD-LUL Netnod Equipment located at IX in Lulea"
+        "NETNOD-GBG Netnod AB",
+        "NETNOD-LUL Netnod AB",
+        "NETNOD-NDS Netnod AB",
+        "NETNOD-SVL Netnod AB"
       ]
     },
     "aliases": [],
-    "homepage": "https://www.netnod.se/"
+    "homepage": "https://www.netnod.se/",
+    "archived": {
+      "asn": [
+        {
+          "name": "NETNOD-GBG Netnod Equipment located at IX in Gothenburg",
+          "archived_on": "2026-11-02"
+        },
+        {
+          "name": "NETNOD-LUL Netnod Equipment located at IX in Lulea",
+          "archived_on": "2026-11-02"
+        },
+        {
+          "name": "NETNOD-NDS $Id: aut-num_AS56908,v 1.1 20160307 11:15:51 mem Exp $",
+          "archived_on": "2026-11-02"
+        },
+        {
+          "name": "NETNOD-SVL Netnod Equipment located at IX in Sundsvall",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "NIC Chile",
     "slug": "nic-chile",
     "source_names": {
       "asn": [
-        "NIC Chile"
+        "AS52234 - NIC Chile",
+        "AS52304 - NIC Chile",
+        "AS52305 - NIC Chile",
+        "AS52306 - NIC Chile"
       ]
     },
     "aliases": [],
-    "homepage": "https://www.nic.cl/"
+    "homepage": "https://www.nic.cl/",
+    "archived": {
+      "asn": [
+        {
+          "name": "NIC Chile",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "nic.at",
     "slug": "nic-at",
     "source_names": {
       "asn": [
-        "NICAT-MINICAST-AS"
+        "NICAT-MINICAST-AS nic.at GmbH"
       ]
     },
     "aliases": [],
-    "homepage": "https://www.nic.at/"
+    "homepage": "https://www.nic.at/",
+    "archived": {
+      "asn": [
+        {
+          "name": "NICAT-MINICAST-AS",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "NIC.br",
     "slug": "nic-br",
     "source_names": {
       "asn": [
-        "Nucleo de Inf. e Coord. do Ponto BR - NIC."
+        "AS10906 - Nucleo de Inf. e Coord. do Ponto BR - NIC.BR",
+        "AS11284 - Nucleo de Inf. e Coord. do Ponto BR - NIC.BR",
+        "AS11644 - Nucleo de Inf. e Coord. do Ponto BR - NIC.BR",
+        "AS12136 - Nucleo de Inf. e Coord. do Ponto BR - NIC.BR",
+        "AS14650 - Nucleo de Inf. e Coord. do Ponto BR - NIC.BR",
+        "AS22548 - Nucleo de Inf. e Coord. do Ponto BR - NIC.BR",
+        "AS53035 - Nucleo de Inf. e Coord. do Ponto BR - NIC.BR"
       ]
     },
     "aliases": [],
-    "homepage": "https://nic.br/"
+    "homepage": "https://nic.br/",
+    "archived": {
+      "asn": [
+        {
+          "name": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "NIC.cr",
     "slug": "nic-cr",
     "source_names": {
       "asn": [
-        "Academia Nacional de Ciencias"
+        "AS263779 - Academia Nacional de Ciencias"
       ]
     },
     "aliases": [],
-    "homepage": "https://nic.cr/"
+    "homepage": "https://nic.cr/",
+    "archived": {
+      "asn": [
+        {
+          "name": "Academia Nacional de Ciencias",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "NIXI.in",
@@ -760,23 +1083,43 @@
         "Nominet UK"
       ],
       "asn": [
-        "NOMINETANYCAST"
+        "NOMINETANYCAST Nominet UK"
       ]
     },
     "aliases": [],
-    "homepage": "https://nominet.uk/"
+    "homepage": "https://nominet.uk/",
+    "archived": {
+      "asn": [
+        {
+          "name": "NOMINETANYCAST",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "Norid.no",
     "slug": "norid",
     "source_names": {
       "asn": [
-        "UNINETT UNINETT, The Norwegian University & Research Network",
-        "GLOBALCONNECT-"
+        "GlobalConnect-AS2116 GLOBALCONNECT AS",
+        "UNINETT - Sikt - Kunnskapssektorens Tjenesteleverandor"
       ]
     },
     "aliases": [],
-    "homepage": "https://www.norid.no/"
+    "homepage": "https://www.norid.no/",
+    "archived": {
+      "asn": [
+        {
+          "name": "GLOBALCONNECT-",
+          "archived_on": "2026-11-02"
+        },
+        {
+          "name": "UNINETT UNINETT, The Norwegian University & Research Network",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "Packet Clearing House",
@@ -786,11 +1129,19 @@
         "Packet Clearing House"
       ],
       "asn": [
-        "WOODYNET-1"
+        "WOODYNET-1 - WoodyNet, Inc."
       ]
     },
     "aliases": [],
-    "homepage": "https://www.pch.net/"
+    "homepage": "https://www.pch.net/",
+    "archived": {
+      "asn": [
+        {
+          "name": "WOODYNET-1",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "PIR",
@@ -824,56 +1175,100 @@
     "slug": "rcodezero",
     "source_names": {
       "asn": [
-        "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS"
+        "RCODEZERO-ANYCAST-SEC1-TLD ipcom GmbH"
       ]
     },
     "aliases": [],
-    "homepage": "https://www.rcodezero.at/"
+    "homepage": "https://www.rcodezero.at/",
+    "archived": {
+      "asn": [
+        {
+          "name": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "Red.es",
     "slug": "red-es",
     "source_names": {
       "asn": [
-        "RED-ES-AS"
+        "RED-ES-AS Entidad Publica Empresarial Red.es"
       ]
     },
     "aliases": [],
-    "homepage": "https://www.red.es/"
+    "homepage": "https://www.red.es/",
+    "archived": {
+      "asn": [
+        {
+          "name": "RED-ES-AS",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "RGnet",
     "slug": "rgnet",
     "source_names": {
       "asn": [
-        "RGNET-SEA RGnet Seattle Westin"
+        "RGNET-SEA RGnet OU"
       ]
     },
     "aliases": [],
-    "homepage": "https://rg.net/"
+    "homepage": "https://rg.net/",
+    "archived": {
+      "asn": [
+        {
+          "name": "RGNET-SEA RGnet Seattle Westin",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "RIPE NCC",
     "slug": "ripe-ncc",
     "source_names": {
       "asn": [
-        "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
-        "K-ROOT-SERVER Reseaux IP Europeens Network Coordination Centre RIPE NCC"
+        "K-ROOT-SERVER Reseaux IP Europeens Network Coordination Centre (RIPE NCC)",
+        "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre (RIPE NCC)"
       ]
     },
     "aliases": [],
-    "homepage": "https://www.ripe.net/"
+    "homepage": "https://www.ripe.net/",
+    "archived": {
+      "asn": [
+        {
+          "name": "K-ROOT-SERVER Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+          "archived_on": "2026-11-02"
+        },
+        {
+          "name": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "RYCE",
     "slug": "ryce",
     "source_names": {
       "asn": [
-        "COMPASS-AS"
+        "COMPASS-AS Compass-Verlag GmbH"
       ]
     },
     "aliases": [],
-    "homepage": "https://ryce-rsp.com/"
+    "homepage": "https://ryce-rsp.com/",
+    "archived": {
+      "asn": [
+        {
+          "name": "COMPASS-AS",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "Second Genistry",
@@ -913,11 +1308,19 @@
     "slug": "sidn",
     "source_names": {
       "asn": [
-        "SIDN-ANYCAST"
+        "SIDN-ANYCAST Stichting Internet Domeinregistratie Nederland"
       ]
     },
     "aliases": [],
-    "homepage": "https://www.sidn.nl/"
+    "homepage": "https://www.sidn.nl/",
+    "archived": {
+      "asn": [
+        {
+          "name": "SIDN-ANYCAST",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "Sony",
@@ -952,22 +1355,34 @@
     "slug": "switch",
     "source_names": {
       "asn": [
-        "SWITCH Switch, Swiss Academic and Research Network"
+        "Switch SWITCH"
       ]
     },
     "aliases": [],
-    "homepage": "https://www.switch.ch/"
+    "homepage": "https://www.switch.ch/",
+    "archived": {
+      "asn": [
+        {
+          "name": "SWITCH Switch, Swiss Academic and Research Network",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "Teleinfo",
     "slug": "teleinfo",
     "source_names": {
       "asn": [
-        "CAICT-AS-AP China Academy of Information and Communications Technology"
+        "CAICT-AS-AP - China Academy of Information and Communications Technology"
       ]
     },
     "archived": {
       "asn": [
+        {
+          "name": "CAICT-AS-AP China Academy of Information and Communications Technology",
+          "archived_on": "2026-11-02"
+        },
         {
           "name": "CAICTNET Chinese Academy of Telecommunication Research",
           "archived_on": "2026-09-12"
@@ -1015,36 +1430,65 @@
         "Tucows.com, Co."
       ],
       "asn": [
-        "TUCOWS-TRS-DNS1",
-        "TUCOWS-TRS-DNS2"
+        "TUCOWS-TRS-DNS1 - Tucows.com Co.",
+        "TUCOWS-TRS-DNS2 - Tucows.com Co."
       ]
     },
     "aliases": [
       "Tucows Registry"
     ],
-    "homepage": "https://www.tucows.com/"
+    "homepage": "https://www.tucows.com/",
+    "archived": {
+      "asn": [
+        {
+          "name": "TUCOWS-TRS-DNS1",
+          "archived_on": "2026-11-02"
+        },
+        {
+          "name": "TUCOWS-TRS-DNS2",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "UltraDNS",
     "slug": "ultradns",
     "source_names": {
       "asn": [
-        "SECURITYSERVICES"
+        "SECURITYSERVICES - Vercara, LLC",
+        "VERCARA - Vercara, LLC"
       ]
     },
     "aliases": [],
-    "homepage": "https://vercara.digicert.com/"
+    "homepage": "https://vercara.digicert.com/",
+    "archived": {
+      "asn": [
+        {
+          "name": "SECURITYSERVICES",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "University of Oregon",
     "slug": "university-of-oregon",
     "source_names": {
       "asn": [
-        "UONET"
+        "UONET - University of Oregon"
       ]
     },
     "aliases": [],
-    "homepage": "https://www.uoregon.edu/"
+    "homepage": "https://www.uoregon.edu/",
+    "archived": {
+      "asn": [
+        {
+          "name": "UONET",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "VeriSign",
@@ -1063,12 +1507,16 @@
         "VeriSign, Inc."
       ],
       "asn": [
-        "HGTLD",
-        "VRSN-AC50-340"
+        "VRSN-AC28 - VeriSign Global Registry Services",
+        "VRSN-AC50-340 - VeriSign Global Registry Services"
       ]
     },
     "archived": {
       "asn": [
+        {
+          "name": "HGTLD",
+          "archived_on": "2026-09-28"
+        },
         {
           "name": "VERISIGN-AS",
           "archived_on": "2026-09-12"
@@ -1080,6 +1528,10 @@
         {
           "name": "VRSN-AC28",
           "archived_on": "2026-09-12"
+        },
+        {
+          "name": "VRSN-AC50-340",
+          "archived_on": "2026-11-02"
         }
       ]
     },
@@ -1127,11 +1579,19 @@
         "ZA Central Registry NPC trading as ZA Central Registry"
       ],
       "asn": [
-        "ZACR"
+        "ZA CENTRAL REGISTRY NPC - ZA CENTRAL REGISTRY NPC"
       ]
     },
     "aliases": [],
-    "homepage": "https://registry.net.za/"
+    "homepage": "https://registry.net.za/",
+    "archived": {
+      "asn": [
+        {
+          "name": "ZACR",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   },
   {
     "display_name": "ZDNS",
@@ -1142,12 +1602,28 @@
         "ZDNS, Ltd."
       ],
       "asn": [
-        "ZDNS Internet Domain Name System Beijing Engineering Resrarch Center Ltd.",
-        "CHINA169-BACKBONE CHINA UNICOM China169 Backbone",
-        "CMNET-BEIJING-AP China Mobile Communicaitons Corporation"
+        "CHINA169-Backbone - CHINA UNICOM China169 Backbone",
+        "CMNET-BEIJING-AP - China Mobile Communicaitons Corporation",
+        "ZDNS - Internet Domain Name System Beijing Engineering Resrarch Center Ltd."
       ]
     },
     "aliases": [],
-    "homepage": "https://www.zdns.com/"
+    "homepage": "https://www.zdns.com/",
+    "archived": {
+      "asn": [
+        {
+          "name": "CHINA169-BACKBONE CHINA UNICOM China169 Backbone",
+          "archived_on": "2026-11-02"
+        },
+        {
+          "name": "CMNET-BEIJING-AP China Mobile Communicaitons Corporation",
+          "archived_on": "2026-11-02"
+        },
+        {
+          "name": "ZDNS Internet Domain Name System Beijing Engineering Resrarch Center Ltd.",
+          "archived_on": "2026-11-02"
+        }
+      ]
+    }
   }
 ]
