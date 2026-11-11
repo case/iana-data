@@ -1,0 +1,936 @@
+{
+  "meta": {
+    "generated": "2026-11-10T18:19:02+00:00",
+    "source": "https://www.iana.org/domains/root/db",
+    "schema": "https://data.iana.org/TLD/v1/tlds-schema.json",
+    "specversion": 1
+  },
+  "domains": [
+    {
+      "name": "aaa",
+      "status": "active",
+      "type": "generic",
+      "script_code": "Latn",
+      "annotations": {
+        "delegation_round": "2012"
+      },
+      "manager": {
+        "organization": "American Automobile Association, Inc.",
+        "address": {
+          "address_lines": [
+            "1000 AAA Drive"
+          ],
+          "city": "Heathrow",
+          "state": "FL",
+          "postal_code": "32746",
+          "country": "United States of America (the)",
+          "country_iso": "US"
+        },
+        "last_updated": "2022-07-21"
+      },
+      "contacts": {
+        "admin": {
+          "name": "Chris Niemi",
+          "organization": "Markmonitor Inc.",
+          "address": {
+            "address_lines": [
+              "1120 S. Rackham Way, Suite 300"
+            ],
+            "city": "Meridian",
+            "state": "ID",
+            "postal_code": "83642",
+            "country": "United States of America (the)",
+            "country_iso": "US"
+          },
+          "phone": "+1(208) 389-5740",
+          "fax": null,
+          "last_updated": "2024-01-31"
+        },
+        "tech": {
+          "name": "IANA Contact",
+          "organization": "GoDaddy Registry",
+          "address": {
+            "address_lines": [
+              "100 S. Mill Ave, Suite 1600"
+            ],
+            "city": "Tempe",
+            "state": "AZ",
+            "postal_code": "85281",
+            "country": "United States of America (the)",
+            "country_iso": "US"
+          },
+          "phone": "+1 480 505 8800",
+          "fax": "+1 480 624 2546",
+          "last_updated": "2024-05-11"
+        }
+      },
+      "nameservers": [
+        {
+          "name": "a.nic.aaa",
+          "ipv4": [
+            "37.209.192.9"
+          ],
+          "ipv6": [
+            "2001:dcd:1::9"
+          ]
+        },
+        {
+          "name": "b.nic.aaa",
+          "ipv4": [
+            "37.209.194.9"
+          ],
+          "ipv6": [
+            "2001:dcd:2::9"
+          ]
+        },
+        {
+          "name": "c.nic.aaa",
+          "ipv4": [
+            "37.209.196.9"
+          ],
+          "ipv6": [
+            "2001:dcd:3::9"
+          ]
+        },
+        {
+          "name": "ns1.dns.nic.aaa",
+          "ipv4": [
+            "156.154.144.2"
+          ],
+          "ipv6": [
+            "2610:a1:1071::2"
+          ]
+        },
+        {
+          "name": "ns2.dns.nic.aaa",
+          "ipv4": [
+            "156.154.145.2"
+          ],
+          "ipv6": [
+            "2610:a1:1072::2"
+          ]
+        },
+        {
+          "name": "ns3.dns.nic.aaa",
+          "ipv4": [
+            "156.154.159.2"
+          ],
+          "ipv6": [
+            "2610:a1:1073::2"
+          ]
+        }
+      ],
+      "ds_records": [
+        {
+          "key_tag": 31852,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "89f7670afc091b199b47900e4ce4135b9463b7f74d3d19a1c732e78c345d4de6"
+        }
+      ],
+      "rdap_base_urls": [
+        "https://rdap.nic.aaa/"
+      ],
+      "whois_server": "whois.nic.aaa",
+      "registration_url": "http://www.aaa.com",
+      "events": {
+        "delegation": "2015-08-28",
+        "revocation": null
+      },
+      "last_updated": "2024-12-11"
+    },
+    {
+      "name": "abarth",
+      "status": "retired",
+      "type": "generic",
+      "script_code": "Latn",
+      "annotations": {
+        "delegation_round": "2012"
+      },
+      "manager": null,
+      "contacts": null,
+      "nameservers": [],
+      "ds_records": [],
+      "rdap_base_urls": [],
+      "whois_server": null,
+      "registration_url": null,
+      "events": {
+        "delegation": "2016-08-04",
+        "revocation": "2023-06-05"
+      },
+      "last_updated": "2023-06-05"
+    },
+    {
+      "name": "aco",
+      "status": "active",
+      "type": "generic",
+      "script_code": "Latn",
+      "annotations": {
+        "delegation_round": "2012"
+      },
+      "manager": {
+        "organization": "ACO Severin Ahlmann GmbH & Co. KG",
+        "address": {
+          "address_lines": [
+            "Am Ahlmannkai"
+          ],
+          "city": "Buedelsdorf",
+          "state": "Schleswig-Holstein",
+          "postal_code": "24782",
+          "country": "Germany",
+          "country_iso": "DE"
+        },
+        "last_updated": "2022-06-22"
+      },
+      "contacts": {
+        "admin": {
+          "name": "CEO",
+          "organization": "LEMARIT GmbH",
+          "address": {
+            "address_lines": [
+              "Werkstrasse 12"
+            ],
+            "city": "Harrislee",
+            "state": "Schleswig-Holstein",
+            "postal_code": "24955",
+            "country": "Germany",
+            "country_iso": "DE"
+          },
+          "phone": "+49 461 5050 35 - 0",
+          "fax": null,
+          "last_updated": "2015-08-27"
+        },
+        "tech": {
+          "name": "CTO",
+          "organization": "LEMARIT GmbH",
+          "address": {
+            "address_lines": [
+              "Werkstrasse 12"
+            ],
+            "city": "Harrislee",
+            "state": "Schleswig-Holstein",
+            "postal_code": "24955",
+            "country": "Germany",
+            "country_iso": "DE"
+          },
+          "phone": "+49 4615050350",
+          "fax": "+49 461 50503535",
+          "last_updated": "2020-11-30"
+        }
+      },
+      "nameservers": [
+        {
+          "name": "a.dns.nic.aco",
+          "ipv4": [
+            "194.0.25.32"
+          ],
+          "ipv6": [
+            "2001:678:20::32"
+          ]
+        },
+        {
+          "name": "m.dns.nic.aco",
+          "ipv4": [
+            "194.0.26.12"
+          ],
+          "ipv6": [
+            "2001:67c:10e0::12"
+          ]
+        },
+        {
+          "name": "n.dns.nic.aco",
+          "ipv4": [
+            "194.0.24.12"
+          ],
+          "ipv6": [
+            "2001:678:24::12"
+          ]
+        }
+      ],
+      "ds_records": [
+        {
+          "key_tag": 8201,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "e32174a9c6e3e3899cf5e0fe6053d8d9e615e0c2993ca32db589027f03aec0c9"
+        }
+      ],
+      "rdap_base_urls": [
+        "https://rdap.nic.aco/"
+      ],
+      "whois_server": "whois.nic.aco",
+      "registration_url": "http://www.aco.com",
+      "events": {
+        "delegation": "2015-08-27",
+        "revocation": null
+      },
+      "last_updated": "2022-06-22"
+    },
+    {
+      "name": "arpa",
+      "status": "active",
+      "type": "special-use",
+      "script_code": "Latn",
+      "annotations": {},
+      "manager": {
+        "organization": "Internet Architecture Board (IAB)",
+        "address": {
+          "address_lines": [
+            "c/o IETF Administration LLC",
+            "1000 N. West St.",
+            "Suite 1200"
+          ],
+          "city": "Wilmington",
+          "state": "DE",
+          "postal_code": "19801",
+          "country": "United States of America (the)",
+          "country_iso": "US"
+        },
+        "last_updated": "2022-10-07"
+      },
+      "contacts": {
+        "admin": {
+          "name": "Internet Architecture Board (IAB)",
+          "organization": "Internet Architecture Board (IAB)",
+          "address": {
+            "address_lines": [
+              "c/o IETF Administration LLC",
+              "1000 N. West St.",
+              "Suite 1200"
+            ],
+            "city": "Wilmington",
+            "state": "DE",
+            "postal_code": "19801",
+            "country": "United States of America (the)",
+            "country_iso": "US"
+          },
+          "phone": "+1 510 492 4080",
+          "fax": "+1 510 492 4001",
+          "last_updated": "2020-07-15"
+        },
+        "tech": {
+          "name": "Internet Assigned Numbers Authority (IANA)",
+          "organization": "Internet Corporation for Assigned Names and Numbers (ICANN)",
+          "address": {
+            "address_lines": [
+              "12025 Waterfront Drive",
+              "Suite 300"
+            ],
+            "city": "Los Angeles",
+            "state": "CA",
+            "postal_code": "90094",
+            "country": "United States of America (the)",
+            "country_iso": "US"
+          },
+          "phone": "+1 310 301 5800",
+          "fax": "+1 310 823-8649",
+          "last_updated": "2014-09-30"
+        }
+      },
+      "nameservers": [
+        {
+          "name": "a.ns.arpa",
+          "ipv4": [
+            "198.41.0.4"
+          ],
+          "ipv6": [
+            "2001:503:ba3e::2:30"
+          ]
+        },
+        {
+          "name": "b.ns.arpa",
+          "ipv4": [
+            "170.247.170.2"
+          ],
+          "ipv6": [
+            "2801:1b8:10::b"
+          ]
+        },
+        {
+          "name": "c.ns.arpa",
+          "ipv4": [
+            "192.33.4.12"
+          ],
+          "ipv6": [
+            "2001:500:2::c"
+          ]
+        },
+        {
+          "name": "d.ns.arpa",
+          "ipv4": [
+            "199.7.91.13"
+          ],
+          "ipv6": [
+            "2001:500:2d::d"
+          ]
+        },
+        {
+          "name": "e.ns.arpa",
+          "ipv4": [
+            "192.203.230.10"
+          ],
+          "ipv6": [
+            "2001:500:a8::e"
+          ]
+        },
+        {
+          "name": "f.ns.arpa",
+          "ipv4": [
+            "192.5.5.241"
+          ],
+          "ipv6": [
+            "2001:500:2f::f"
+          ]
+        },
+        {
+          "name": "g.ns.arpa",
+          "ipv4": [
+            "192.112.36.4"
+          ],
+          "ipv6": [
+            "2001:500:12::d0d"
+          ]
+        },
+        {
+          "name": "h.ns.arpa",
+          "ipv4": [
+            "198.97.190.53"
+          ],
+          "ipv6": [
+            "2001:500:1::53"
+          ]
+        },
+        {
+          "name": "i.ns.arpa",
+          "ipv4": [
+            "192.36.148.17"
+          ],
+          "ipv6": [
+            "2001:7fe::53"
+          ]
+        },
+        {
+          "name": "k.ns.arpa",
+          "ipv4": [
+            "193.0.14.129"
+          ],
+          "ipv6": [
+            "2001:7fd::1"
+          ]
+        },
+        {
+          "name": "l.ns.arpa",
+          "ipv4": [
+            "199.7.83.42"
+          ],
+          "ipv6": [
+            "2001:500:9f::42"
+          ]
+        },
+        {
+          "name": "m.ns.arpa",
+          "ipv4": [
+            "202.12.27.33"
+          ],
+          "ipv6": [
+            "2001:dc3::35"
+          ]
+        }
+      ],
+      "ds_records": [
+        {
+          "key_tag": 42581,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "f28391c1ed4dc0f151edd251a3103dce0b9a5a251acf6e24073771d71f3c40f9"
+        }
+      ],
+      "rdap_base_urls": [],
+      "whois_server": "whois.iana.org",
+      "registration_url": "https://www.iana.org/domains/arpa",
+      "purpose": "Supports infrastructure identifier spaces",
+      "remarks": "The .arpa top-level domain is the “Address and Routing Parameter Area” domain and is designated to be used exclusively for Internet-infrastructure purposes. IANA administers the domain in cooperation with the Internet technical community through the guidance of the Internet Architecture Board.\r\n\r\nFor further information, see [Management Guidelines & Operational Requirements for the Address and Routing Parameter Area Domain (\"arpa\")](https://www.iana.org/go/rfc3172) (RFC 3172).",
+      "events": {
+        "delegation": null,
+        "revocation": null
+      },
+      "last_updated": "2023-11-27"
+    },
+    {
+      "name": "bl",
+      "status": "eligible",
+      "type": "country-code",
+      "script_code": "Latn",
+      "annotations": {},
+      "manager": null,
+      "contacts": null,
+      "nameservers": [],
+      "ds_records": [],
+      "rdap_base_urls": [],
+      "whois_server": null,
+      "registration_url": null,
+      "events": {
+        "delegation": null,
+        "revocation": null
+      },
+      "last_updated": "2007-10-10"
+    },
+    {
+      "name": "de",
+      "status": "active",
+      "type": "country-code",
+      "script_code": "Latn",
+      "annotations": {},
+      "manager": {
+        "organization": "DENIC eG",
+        "address": {
+          "address_lines": [
+            "Theodor-Stern-Kai 1"
+          ],
+          "city": "Frankfurt am Main",
+          "state": null,
+          "postal_code": "60596",
+          "country": "Germany",
+          "country_iso": "DE"
+        },
+        "last_updated": "2023-04-04"
+      },
+      "contacts": {
+        "admin": {
+          "name": "Vorstand DENIC eG",
+          "organization": "DENIC eG",
+          "address": {
+            "address_lines": [
+              "Theodor-Stern-Kai 1"
+            ],
+            "city": "Frankfurt am Main",
+            "state": null,
+            "postal_code": "60596",
+            "country": "Germany",
+            "country_iso": "DE"
+          },
+          "phone": "+49 69 27235 0",
+          "fax": "+49 69 27235 235",
+          "last_updated": "2023-04-04"
+        },
+        "tech": {
+          "name": "Business Services",
+          "organization": "DENIC eG",
+          "address": {
+            "address_lines": [
+              "Theodor-Stern-Kai 1"
+            ],
+            "city": "Frankfurt am Main",
+            "state": null,
+            "postal_code": "60596",
+            "country": "Germany",
+            "country_iso": "DE"
+          },
+          "phone": "+49 69 27235 272",
+          "fax": "+49 69 27235 234",
+          "last_updated": "2023-04-04"
+        }
+      },
+      "nameservers": [
+        {
+          "name": "a.nic.de",
+          "ipv4": [
+            "194.0.0.53"
+          ],
+          "ipv6": [
+            "2001:678:2::53"
+          ]
+        },
+        {
+          "name": "f.nic.de",
+          "ipv4": [
+            "81.91.164.5"
+          ],
+          "ipv6": [
+            "2a02:568:0:2::53"
+          ]
+        },
+        {
+          "name": "l.de.net",
+          "ipv4": [
+            "77.67.63.105"
+          ],
+          "ipv6": [
+            "2001:668:1f:11::105"
+          ]
+        },
+        {
+          "name": "n.de.net",
+          "ipv4": [
+            "194.146.107.6"
+          ],
+          "ipv6": [
+            "2001:67c:1011:1::53"
+          ]
+        },
+        {
+          "name": "s.de.net",
+          "ipv4": [
+            "195.243.137.26"
+          ],
+          "ipv6": [
+            "2003:8:14::53"
+          ]
+        },
+        {
+          "name": "z.nic.de",
+          "ipv4": [
+            "194.246.96.1"
+          ],
+          "ipv6": [
+            "2a02:568:fe02::de"
+          ]
+        }
+      ],
+      "ds_records": [
+        {
+          "key_tag": 26755,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "f341357809a5954311ccb82ade114c6c1d724a75c0395137aa3978035425e78d"
+        }
+      ],
+      "rdap_base_urls": [],
+      "whois_server": "whois.denic.de",
+      "registration_url": "http://www.denic.de/",
+      "events": {
+        "delegation": null,
+        "revocation": null
+      },
+      "last_updated": "2026-08-04"
+    },
+    {
+      "name": "local",
+      "status": "reserved",
+      "type": "special-use",
+      "script_code": "Latn",
+      "annotations": {},
+      "manager": null,
+      "contacts": null,
+      "nameservers": [],
+      "ds_records": [],
+      "rdap_base_urls": [],
+      "whois_server": null,
+      "registration_url": null,
+      "purpose": "Used by Multicast DNS (mDNS) to allow devices to find each other on local networks",
+      "remarks": "The .local domain is used for Multicast DNS (mDNS), allowing devices to find each other on local networks without needing a central DNS server. Commonly used by services like Bonjour/ZeroConf, it helps discover devices like printer.local or speaker.local connected to your local network.\r\n\r\nFor further information, see [Multicast DNS](https://www.iana.org/go/rfc6762) (RFC 6762).",
+      "events": {
+        "delegation": null,
+        "revocation": null
+      },
+      "last_updated": null
+    },
+    {
+      "name": "xn--0zwm56d",
+      "ulabel": "测试",
+      "status": "retired",
+      "type": "test",
+      "script_code": "Hani",
+      "annotations": {
+        "language_code": "zh",
+        "transliteration": "ceshi",
+        "translation": "test"
+      },
+      "manager": null,
+      "contacts": null,
+      "nameservers": [],
+      "ds_records": [],
+      "rdap_base_urls": [],
+      "whois_server": null,
+      "registration_url": null,
+      "events": {
+        "delegation": "2007-10-09",
+        "revocation": "2013-10-31"
+      },
+      "last_updated": "2020-04-02"
+    },
+    {
+      "name": "xn--flw351e",
+      "ulabel": "谷歌",
+      "status": "active",
+      "type": "generic",
+      "script_code": "Hani",
+      "annotations": {
+        "delegation_round": "2012",
+        "language_code": "zh",
+        "transliteration": "guge",
+        "translation": "Google"
+      },
+      "manager": {
+        "organization": "Charleston Road Registry Inc.",
+        "address": {
+          "address_lines": [
+            "1600 Amphitheatre Parkway"
+          ],
+          "city": "Mountain View",
+          "state": "CA",
+          "postal_code": "94043",
+          "country": "United States of America (the)",
+          "country_iso": "US"
+        },
+        "last_updated": "2020-04-20"
+      },
+      "contacts": {
+        "admin": {
+          "name": "TLD Admin",
+          "organization": "Google Inc.",
+          "address": {
+            "address_lines": [
+              "111 8th Avenue"
+            ],
+            "city": "New York",
+            "state": "NY",
+            "postal_code": "10011",
+            "country": "United States of America (the)",
+            "country_iso": "US"
+          },
+          "phone": "+1 404 978 8419",
+          "fax": "+1 650 492 5631",
+          "last_updated": "2020-04-20"
+        },
+        "tech": {
+          "name": "TLD Engineering",
+          "organization": "Google Inc.",
+          "address": {
+            "address_lines": [
+              "76 Ninth Avenue, 4th Floor"
+            ],
+            "city": "New York",
+            "state": "NY",
+            "postal_code": "10011",
+            "country": "United States of America (the)",
+            "country_iso": "US"
+          },
+          "phone": "+1 404 978 8419",
+          "fax": "+1 650 492 5631",
+          "last_updated": "2020-02-18"
+        }
+      },
+      "nameservers": [
+        {
+          "name": "ns-tld1.charlestonroadregistry.com",
+          "ipv4": [
+            "216.239.32.105"
+          ],
+          "ipv6": [
+            "2001:4860:4802:32::69"
+          ]
+        },
+        {
+          "name": "ns-tld2.charlestonroadregistry.com",
+          "ipv4": [
+            "216.239.34.105"
+          ],
+          "ipv6": [
+            "2001:4860:4802:34::69"
+          ]
+        },
+        {
+          "name": "ns-tld3.charlestonroadregistry.com",
+          "ipv4": [
+            "216.239.36.105"
+          ],
+          "ipv6": [
+            "2001:4860:4802:36::69"
+          ]
+        },
+        {
+          "name": "ns-tld4.charlestonroadregistry.com",
+          "ipv4": [
+            "216.239.38.105"
+          ],
+          "ipv6": [
+            "2001:4860:4802:38::69"
+          ]
+        },
+        {
+          "name": "ns-tld5.charlestonroadregistry.com",
+          "ipv4": [
+            "216.239.60.105"
+          ],
+          "ipv6": [
+            "2001:4860:4805::69"
+          ]
+        }
+      ],
+      "ds_records": [
+        {
+          "key_tag": 48919,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "aaacfe5efe147ef640dba9107a36f9e43bc2b3f736a538a680cd1c01aafe41fb"
+        }
+      ],
+      "rdap_base_urls": [
+        "https://pubapi.registry.google/rdap/"
+      ],
+      "whois_server": null,
+      "registration_url": "https://www.registry.google",
+      "events": {
+        "delegation": "2014-11-20",
+        "revocation": null
+      },
+      "last_updated": "2025-04-11"
+    },
+    {
+      "name": "xn--kpry57d",
+      "ulabel": "台灣",
+      "status": "active",
+      "type": "country-code",
+      "script_code": "Hani",
+      "iso3166_code": "TW",
+      "annotations": {
+        "language_code": "zh",
+        "transliteration": "taiwan",
+        "translation": "Taiwan"
+      },
+      "manager": {
+        "organization": "Taiwan Network Information Center (TWNIC)",
+        "address": {
+          "address_lines": [
+            "3F., No. 123, Sec. 4, Bade Rd.",
+            "Songshan Dist."
+          ],
+          "city": "Taipei",
+          "state": null,
+          "postal_code": "105",
+          "country": "Taiwan",
+          "country_iso": null
+        },
+        "last_updated": "2023-01-19"
+      },
+      "contacts": {
+        "admin": {
+          "name": "Jofan Yu",
+          "organization": "Taiwan Network Information Center (TWNIC)",
+          "address": {
+            "address_lines": [
+              "3F., No. 123, Sec. 4, Bade Rd.",
+              "Songshan Dist."
+            ],
+            "city": "Taipei",
+            "state": null,
+            "postal_code": "105",
+            "country": "Taiwan",
+            "country_iso": null
+          },
+          "phone": "+886 2 2528 9696",
+          "fax": "+886 2 2528 7756",
+          "last_updated": "2024-12-27"
+        },
+        "tech": {
+          "name": "Technical Director",
+          "organization": "Taiwan Network Information Center (TWNIC)",
+          "address": {
+            "address_lines": [
+              "3F., No. 123, Sec. 4, Bade Rd.",
+              "Songshan Dist."
+            ],
+            "city": "Taipei",
+            "state": null,
+            "postal_code": "105",
+            "country": "Taiwan",
+            "country_iso": null
+          },
+          "phone": "+886 2 2528 9696",
+          "fax": "+886 2 2528 7756",
+          "last_updated": "2023-01-19"
+        }
+      },
+      "nameservers": [
+        {
+          "name": "anytld.apnic.net",
+          "ipv4": [
+            "202.12.31.53"
+          ],
+          "ipv6": [
+            "2001:dd8:12::53"
+          ]
+        },
+        {
+          "name": "d.dns.tw",
+          "ipv4": [
+            "60.199.165.186"
+          ],
+          "ipv6": [
+            "2001:4541:9010:7::186"
+          ]
+        },
+        {
+          "name": "e.dns.tw",
+          "ipv4": [
+            "211.20.231.11"
+          ],
+          "ipv6": [
+            "2001:b000:1e0:c000::11"
+          ]
+        },
+        {
+          "name": "f.dns.tw",
+          "ipv4": [
+            "40.65.125.222"
+          ],
+          "ipv6": []
+        },
+        {
+          "name": "g.dns.tw",
+          "ipv4": [
+            "34.141.111.176"
+          ],
+          "ipv6": []
+        },
+        {
+          "name": "h.dns.tw",
+          "ipv4": [
+            "204.61.216.119"
+          ],
+          "ipv6": [
+            "2001:500:14:6119:ad::1"
+          ]
+        }
+      ],
+      "ds_records": [
+        {
+          "key_tag": 47369,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "8c19bb787937ba0edbd264a2975b896ddf25f9c1a36e87a94c3995dbdd1a220e"
+        }
+      ],
+      "rdap_base_urls": [
+        "https://ccrdap.twnic.tw/taiwan/"
+      ],
+      "whois_server": "whois.twnic.net.tw",
+      "registration_url": "http://rs.twnic.net.tw",
+      "events": {
+        "delegation": "2010-07-14",
+        "revocation": null
+      },
+      "last_updated": "2026-04-24"
+    },
+    {
+      "name": "yu",
+      "status": "retired",
+      "type": "country-code",
+      "script_code": "Latn",
+      "annotations": {},
+      "manager": null,
+      "contacts": null,
+      "nameservers": [],
+      "ds_records": [],
+      "rdap_base_urls": [],
+      "whois_server": null,
+      "registration_url": null,
+      "events": {
+        "delegation": null,
+        "revocation": "2010-04-01"
+      },
+      "last_updated": null
+    }
+  ]
+}
