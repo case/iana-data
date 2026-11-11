@@ -28,25 +28,6 @@
       "cache_max_age": "600"
     }
   },
-  "ROOT_ZONE_DB": {
-    "last_checked": "2026-09-28T08:10:52Z",
-    "last_downloaded": "2025-11-26T02:35:40Z",
-    "last_changed": "2025-11-25T02:35:09Z",
-    "headers": {
-      "cache_control": "public, max-age=21603",
-      "cache_max_age": "21603"
-    },
-    "cache_data": {
-      "url": "https://www.iana.org/domains/root/db",
-      "last_modified": "Mon, 28 Sep 2026 05:07:59 GMT",
-      "cache_control": "public, max-age=21603",
-      "cache_max_age": "21603",
-      "last_downloaded": "2026-09-10T06:58:47Z"
-    }
-  },
-  "TLD_HTML": {
-    "last_checked": "2026-09-28T08:37:14Z"
-  },
   "REGISTRY_AGREEMENT_TABLE": {
     "headers": {
       "etag": "W/\"329e3-19aa7ccdea5-br\"",

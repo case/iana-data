@@ -5,13 +5,16 @@ import logging
 import sys
 from pathlib import Path
 
-from .analyze import analyze_rdap_json, analyze_root_db_html, analyze_tlds_txt
+from .analyze import analyze_rdap_json, analyze_tlds_txt
 from .build import build_tlds_json
 from .config import IANA_URLS, SOURCE_DIR, SOURCE_FILES, setup_logging
-from .parse import parse_root_db_tlds
-from .utilities import download_iana_files, download_iptoasn, download_tld_pages
+from .utilities import download_iana_files, download_iptoasn
 
 logger = logging.getLogger(__name__)
+
+# --download outcomes that keep every stored file usable.
+EXIT_FETCH_FAILED = 3
+EXIT_PAYLOAD_REJECTED = 4
 
 
 def main() -> int:
@@ -57,17 +60,6 @@ def main() -> int:
     )
 
     parser.add_argument(
-        "--download-tld-pages",
-        nargs="*",
-        metavar="PREFIX",
-        help=(
-            "Download individual TLD detail pages from IANA. "
-            "Specify prefixes to filter (e.g., 'a b c' for TLDs starting with a, b, or c), "
-            "or omit to download all TLD pages."
-        ),
-    )
-
-    parser.add_argument(
         "--download-iptoasn",
         action="store_true",
         help="Download iptoasn data file for ASN lookups during build.",
@@ -108,14 +100,19 @@ def main() -> int:
                 "downloaded": "✓",
                 "not_modified": "-",
                 "error": "✗",
+                "invalid": "✗",
             }.get(status, "?")
 
-            log_func = logger.error if status == "error" else logger.info
+            failed = status in {"error", "invalid"}
+            log_func = logger.error if failed else logger.info
             log_func("  %s %s: %s", status_symbol, source, status)
 
-        # Return error code if any downloads failed
+        # Not 1 or 2: an uncaught exception exits 1 and argparse exits 2, and the
+        # nightly continues on these two codes only.
+        if any(results.get(s) == "invalid" for s in sources_to_download):
+            return EXIT_PAYLOAD_REJECTED
         if any(results.get(s) == "error" for s in sources_to_download):
-            return 1
+            return EXIT_FETCH_FAILED
 
         return 0
 
@@ -124,9 +121,6 @@ def main() -> int:
         analyzers = {
             "tlds-txt": lambda: analyze_tlds_txt(
                 Path(SOURCE_DIR) / SOURCE_FILES["TLD_LIST"]
-            ),
-            "root-db": lambda: analyze_root_db_html(
-                Path(SOURCE_DIR) / SOURCE_FILES["ROOT_ZONE_DB"]
             ),
             "rdap": lambda: analyze_rdap_json(
                 Path(SOURCE_DIR) / SOURCE_FILES["RDAP_BOOTSTRAP"]
@@ -208,60 +202,6 @@ def main() -> int:
         else:
             logger.error("  ✗ iptoasn: %s", result)
             return 1
-
-    if getattr(args, "download_tld_pages", None) is not None:
-        # Load TLD list from source file
-        all_tlds = parse_root_db_tlds()
-        if not all_tlds:
-            logger.error(
-                "No TLDs found. Run --download first to fetch the root zone database."
-            )
-            return 1
-
-        # Filter TLDs by prefix if specified
-        prefixes = args.download_tld_pages
-        if prefixes:
-            # Normalize prefixes to lowercase
-            prefixes = [p.lower() for p in prefixes]
-
-            # Special handling: if "x" is in prefixes but "xn--" is not,
-            # exclude xn-- TLDs from being matched by "x"
-            exclude_xn = "x" in prefixes and "xn--" not in prefixes
-
-            def matches_prefix(tld: str) -> bool:
-                tld_lower = tld.lower()
-                if exclude_xn and tld_lower.startswith("xn--"):
-                    return False
-                return tld_lower.startswith(tuple(prefixes))
-
-            tlds_to_download = [tld for tld in all_tlds if matches_prefix(tld)]
-            logger.info(
-                "Downloading TLD pages for prefixes: %s (%d TLDs)",
-                ", ".join(prefixes),
-                len(tlds_to_download),
-            )
-        else:
-            tlds_to_download = all_tlds
-            logger.info("Downloading all TLD pages (%d TLDs)...", len(tlds_to_download))
-
-        if not tlds_to_download:
-            logger.warning("No TLDs match the specified prefixes")
-            return 0
-
-        # Perform download
-        results = download_tld_pages(tlds_to_download)
-
-        # Report results
-        downloaded = sum(1 for status in results.values() if status == "downloaded")
-        errors = sum(1 for status in results.values() if status == "error")
-
-        logger.info("Download complete:")
-        logger.info("  Downloaded: %d", downloaded)
-        if errors:
-            logger.error("  Errors: %d", errors)
-            return 1
-
-        return 0
 
     # No arguments provided
     parser.print_help()

@@ -1,19 +1,19 @@
-"""Analyze nameserver IP address data from TLD HTML pages.
+"""Analyze nameserver IP address data from the IANA TLD JSON.
 
-This script scans all TLD pages to understand the IP address landscape:
+This script reads every TLD record to understand the IP address landscape:
 - Count of IPv4 vs IPv6 addresses
 - TLDs with/without nameservers
 - Edge cases (multiple IPs per type, missing IPs, etc.)
-- HTML structure variations
 """
 
-import ipaddress
-import re
+import sys
 from collections import Counter
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from selectolax.parser import HTMLParser
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from src.parse.iana_tlds_json import IanaTld, IanaTldsError, load_iana_tlds
 
 
 @dataclass
@@ -23,7 +23,6 @@ class NameserverInfo:
     hostname: str
     ipv4_addresses: list[str] = field(default_factory=list)
     ipv6_addresses: list[str] = field(default_factory=list)
-    raw_ip_text: str = ""
 
 
 @dataclass
@@ -32,129 +31,35 @@ class TLDAnalysis:
 
     tld: str
     nameservers: list[NameserverInfo] = field(default_factory=list)
-    parse_errors: list[str] = field(default_factory=list)
 
 
-def normalize_ipv6(addr: str) -> str:
-    """Normalize IPv6 address to compressed form."""
+def analyze_record(record: IanaTld) -> TLDAnalysis:
+    """Collect one TLD record's nameservers and their addresses."""
+    return TLDAnalysis(
+        tld=record.name,
+        nameservers=[
+            NameserverInfo(
+                hostname=ns.name,
+                ipv4_addresses=list(ns.ipv4),
+                ipv6_addresses=list(ns.ipv6),
+            )
+            for ns in record.nameservers
+        ],
+    )
+
+
+def main() -> int:
+    """Run the analysis on every TLD record."""
     try:
-        return str(ipaddress.IPv6Address(addr))
-    except ipaddress.AddressValueError:
-        return addr
+        records = load_iana_tlds()
+    except IanaTldsError as exc:
+        print(f"Error: {exc}")
+        return 1
 
-
-def classify_ip(ip: str) -> str | None:
-    """Classify an IP address as 'ipv4' or 'ipv6', or None if invalid."""
-    ip = ip.strip()
-    if not ip:
-        return None
-    try:
-        ipaddress.IPv4Address(ip)
-        return "ipv4"
-    except ipaddress.AddressValueError:
-        pass
-    try:
-        ipaddress.IPv6Address(ip)
-        return "ipv6"
-    except ipaddress.AddressValueError:
-        pass
-    return None
-
-
-def parse_nameservers_with_ips(html: str) -> tuple[list[NameserverInfo], list[str]]:
-    """Parse nameservers and their IP addresses from TLD HTML.
-
-    Returns:
-        Tuple of (nameserver_list, parse_errors)
-    """
-    tree = HTMLParser(html)
-    nameservers: list[NameserverInfo] = []
-    errors: list[str] = []
-
-    for table in tree.css("table"):
-        # Check if this looks like a nameserver table
-        thead = table.css_first("thead")
-        if not thead:
-            continue
-
-        header_text = thead.text().lower()
-        if "host name" not in header_text and "ip address" not in header_text:
-            continue
-
-        # Found the nameserver table
-        for row in table.css("tbody tr"):
-            tds = row.css("td")
-            if len(tds) < 2:
-                if len(tds) == 1:
-                    errors.append(f"Row with only 1 td: {tds[0].text().strip()}")
-                continue
-
-            hostname = tds[0].text().strip()
-            if not hostname:
-                continue
-
-            # Get raw IP text and parse it
-            ip_td = tds[1]
-            raw_ip_html = ip_td.html or ""
-            raw_ip_text = ip_td.text().strip()
-
-            ns_info = NameserverInfo(hostname=hostname, raw_ip_text=raw_ip_text)
-
-            # Split on <br> tags or newlines
-            # The HTML often has <br></br> or <br><br> patterns
-            ip_parts = re.split(r"<br\s*/?>(?:</br>)?|\n", raw_ip_html)
-
-            for part in ip_parts:
-                # Extract text content, removing any HTML tags
-                ip_text = re.sub(r"<[^>]+>", "", part).strip()
-                if not ip_text:
-                    continue
-
-                ip_type = classify_ip(ip_text)
-                if ip_type == "ipv4":
-                    ns_info.ipv4_addresses.append(ip_text)
-                elif ip_type == "ipv6":
-                    # Normalize IPv6
-                    ns_info.ipv6_addresses.append(normalize_ipv6(ip_text))
-                elif ip_text:
-                    errors.append(f"Unrecognized IP format for {hostname}: '{ip_text}'")
-
-            nameservers.append(ns_info)
-
-        # Found and processed the nameserver table
-        break
-
-    return nameservers, errors
-
-
-def analyze_tld_file(html_path: Path) -> TLDAnalysis:
-    """Analyze a single TLD HTML file."""
-    tld = html_path.stem
-    html = html_path.read_text()
-
-    nameservers, errors = parse_nameservers_with_ips(html)
-
-    return TLDAnalysis(tld=tld, nameservers=nameservers, parse_errors=errors)
-
-
-def main() -> None:
-    """Run the analysis on all TLD pages."""
-    tld_pages_dir = Path("data/source/tld-pages")
-
-    if not tld_pages_dir.exists():
-        print(f"Error: {tld_pages_dir} not found")
-        return
-
-    # Collect all HTML files
-    html_files = sorted(tld_pages_dir.glob("**/*.html"))
-    print(f"Found {len(html_files)} TLD HTML files")
+    print(f"Found {len(records)} TLD records")
     print()
 
-    # Analyze each file
-    analyses: list[TLDAnalysis] = []
-    for html_path in html_files:
-        analysis = analyze_tld_file(html_path)
-        analyses.append(analysis)
+    analyses = [analyze_record(record) for record in records]
 
     # === Summary Statistics ===
     print("=" * 60)
@@ -199,12 +104,12 @@ def main() -> None:
     for a in analyses:
         for ns in a.nameservers:
             if not ns.ipv4_addresses and not ns.ipv6_addresses:
-                ns_without_ips.append((a.tld, ns.hostname, ns.raw_ip_text))
+                ns_without_ips.append((a.tld, ns.hostname))
 
     print(f"\nNameservers without any IP addresses: {len(ns_without_ips)}")
     if ns_without_ips:
-        for tld, hostname, raw in ns_without_ips[:10]:
-            print(f"  {tld}: {hostname} (raw: '{raw}')")
+        for tld, hostname in ns_without_ips[:10]:
+            print(f"  {tld}: {hostname}")
         if len(ns_without_ips) > 10:
             print(f"  ... and {len(ns_without_ips) - 10} more")
 
@@ -253,19 +158,6 @@ def main() -> None:
     print(f"\nNameservers with multiple IPv6 addresses: {len(ns_multi_ipv6)}")
     for tld, hostname, ips in ns_multi_ipv6[:5]:
         print(f"  {tld}: {hostname} -> {ips}")
-
-    # === Parse Errors ===
-    print()
-    print("=" * 60)
-    print("PARSE ERRORS")
-    print("=" * 60)
-
-    all_errors = [(a.tld, err) for a in analyses for err in a.parse_errors]
-    print(f"Total parse errors: {len(all_errors)}")
-    for tld, err in all_errors[:20]:
-        print(f"  {tld}: {err}")
-    if len(all_errors) > 20:
-        print(f"  ... and {len(all_errors) - 20} more")
 
     # === Unique Hostnames ===
     print()
@@ -355,6 +247,8 @@ def main() -> None:
             if len(analysis.nameservers) > 2:
                 print(f"    ... and {len(analysis.nameservers) - 2} more nameservers")
 
+    return 0
+
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

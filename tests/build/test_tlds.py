@@ -24,8 +24,8 @@ from src.build.tlds import (
     _ip_to_asn_object,
     build_tlds_json,
 )
+from src.parse.iana_tlds_json import load_iana_tlds
 from src.parse.rdap_json import parse_rdap_json
-from src.parse.root_db_html import parse_root_db_html
 
 FIXTURES_DIR = Path(__file__).parent.parent / "fixtures" / "source" / "core"
 
@@ -98,15 +98,15 @@ def test_build_tlds_json_has_correct_structure(shared_build):
     assert "publication" in data
     assert "sources" in data
     assert "tlds" in data
-    assert "iana_root_db" in data["sources"]
+    assert data["sources"]["iana_tlds"] == "https://data.iana.org/TLD/v1/tlds.json"
+    assert "iana_root_db" not in data["sources"]
     assert "iana_rdap" in data["sources"]
     assert isinstance(data["tlds"], list)
 
 
 def test_build_tlds_json_tld_count_matches_source(shared_build):
-    """Number of TLDs in output matches root zone source."""
-    root_zone_entries = parse_root_db_html()
-    expected_count = len(root_zone_entries)
+    """Number of TLDs in output matches the IANA TLD JSON."""
+    expected_count = len(load_iana_tlds())
 
     assert shared_build.result["total_tlds"] == expected_count
 
@@ -120,7 +120,14 @@ def test_build_tlds_json_has_required_fields(shared_build):
     with open(shared_build.tlds_json) as f:
         data = json.load(f)
 
-    required_keys = {"tld", "delegated", "iana_tag", "type"}
+    required_keys = {
+        "tld",
+        "tld_script_code",
+        "status",
+        "delegated",
+        "iana_tag",
+        "type",
+    }
     for i, tld_entry in enumerate(data["tlds"]):
         missing = required_keys - tld_entry.keys()
         assert not missing, (
@@ -146,23 +153,81 @@ def test_build_tlds_json_derives_type_correctly(shared_build):
         iana_tag = tld_entry["iana_tag"]
         derived_type = tld_entry["type"]
 
+        assert iana_tag in {"generic", "country-code", "special-use", "test"}
         if iana_tag == "country-code":
             assert derived_type == "cctld"
-        elif iana_tag == "infrastructure":
-            assert derived_type == "infrastructure"
+        elif iana_tag == "special-use":
+            assert derived_type == "special-use"
         else:
             assert derived_type == "gtld"
 
 
-def test_build_tlds_json_arpa_is_infrastructure_type(shared_build):
-    """.arpa is the lone infrastructure TLD and is typed as such, not gtld."""
+def test_build_tlds_json_arpa_is_special_use_with_archived_infrastructure_tag(
+    shared_build,
+):
+    """.arpa is delegated and special-use; its old infrastructure tag is archived."""
     with open(shared_build.tlds_json) as f:
         data = json.load(f)
 
     arpa = {e["tld"]: e for e in data["tlds"]}["arpa"]
 
-    assert arpa["iana_tag"] == "infrastructure"
-    assert arpa["type"] == "infrastructure"
+    assert arpa["delegated"] is True
+    assert arpa["iana_tag"] == "special-use"
+    assert arpa["type"] == "special-use"
+    assert arpa["archived"]["iana_tag"]["value"] == "infrastructure"
+
+
+def test_build_tlds_json_reserved_names_are_undelegated_special_use(shared_build):
+    """The reserved special-use names are present, with no delegation data."""
+    with open(shared_build.tlds_json) as f:
+        data = json.load(f)
+
+    reserved = [e for e in data["tlds"] if e["status"] == "reserved"]
+
+    assert {e["tld"] for e in reserved} >= {"local", "onion", "test", "example"}
+    for entry in reserved:
+        assert entry["delegated"] is False
+        assert entry["type"] == "special-use"
+        assert entry["purpose"]
+        assert not {"orgs", "nameservers", "tld_created", "tld_updated"} & set(entry)
+
+
+def test_build_tlds_json_sponsored_tag_is_archived_not_current(shared_build):
+    """A TLD IANA no longer tags as sponsored keeps the old value under archived."""
+    with open(shared_build.tlds_json) as f:
+        data = json.load(f)
+
+    aero = {e["tld"]: e for e in data["tlds"]}["aero"]
+
+    assert aero["iana_tag"] == "generic"
+    assert aero["type"] == "gtld"
+    assert aero["archived"] == {
+        "iana_tag": {"value": "sponsored", "archived_on": "2026-11-10"}
+    }
+
+
+def test_build_tlds_json_tld_created_comes_from_the_archive_seed(shared_build):
+    with open(shared_build.tlds_json) as f:
+        data = json.load(f)
+
+    assert {e["tld"]: e for e in data["tlds"]}["com"]["tld_created"] == "1985-01-01"
+
+
+def test_build_tlds_json_every_idn_cctld_is_listed_on_its_ascii_cctld(shared_build):
+    """Guards the tld_iso case: an uppercase code silently drops every idn array."""
+    with open(shared_build.tlds_json) as f:
+        data = json.load(f)
+
+    by_tld = {e["tld"]: e for e in data["tlds"]}
+    idn_cctlds = [e for e in data["tlds"] if "tld_iso" in e]
+
+    assert idn_cctlds
+    for entry in idn_cctlds:
+        assert entry["tld_iso"] == entry["tld_iso"].lower()
+        parent = by_tld.get(entry["tld_iso"])
+        if parent is not None:
+            assert entry["tld"] in parent.get("idn", []), entry["tld"]
+    assert any(e["tld_iso"] in by_tld for e in idn_cctlds)
 
 
 def test_build_tlds_json_delegated_status(shared_build):
@@ -218,20 +283,6 @@ def test_build_tlds_json_publication_timestamp_format(shared_build):
     assert publication.endswith("Z")
     assert "." not in publication
     assert len(publication) == 20
-
-
-def test_build_tlds_json_delegated_count_matches_root_db(shared_build):
-    """Delegated TLD count matches root zone DB assigned entries."""
-    root_zone_entries = parse_root_db_html()
-    expected_delegated_count = sum(
-        1 for entry in root_zone_entries if entry["manager"] != "Not assigned"
-    )
-
-    with open(shared_build.tlds_json) as f:
-        data = json.load(f)
-
-    delegated_tlds = [entry for entry in data["tlds"] if entry["delegated"]]
-    assert len(delegated_tlds) == expected_delegated_count
 
 
 def test_build_tlds_json_ascii_cctld_has_country_name(shared_build):
@@ -568,7 +619,7 @@ def test_per_tld_file_is_self_contained(shared_build):
     assert "publication" in per_tld
     assert "sources" in per_tld
     assert "tld" in per_tld
-    assert "iana_root_db" in per_tld["sources"]
+    assert "iana_tlds" in per_tld["sources"]
     assert "iana_rdap" in per_tld["sources"]
 
 
@@ -624,6 +675,68 @@ def test_index_entry_shape(shared_build):
 
     assert "com" in by_slug
     assert "tld_unicode" not in by_slug["com"]
+
+
+def test_stale_per_tld_files_are_pruned_to_exactly_the_tld_set(temp_output):
+    """A per-TLD file with no record is removed; the set equals the TLD set."""
+    temp_output.tld_dir.mkdir(parents=True)
+    stale = temp_output.tld_dir / "emerson.json"
+    stale.write_text("{}", encoding="utf-8")
+    not_json = temp_output.tld_dir / "notes.txt"
+    not_json.write_text("keep", encoding="utf-8")
+    nested = temp_output.tld_dir / "nested"
+    nested.mkdir()
+    (nested / "stale.json").write_text("{}", encoding="utf-8")
+
+    result = build_tlds_json(temp_output, preserve_asn=_preserve())
+
+    assert "error" not in result
+    with open(temp_output.tlds_json) as f:
+        expected = {entry["tld"] for entry in json.load(f)["tlds"]}
+    assert {p.stem for p in temp_output.tld_dir.glob("*.json")} == expected
+    assert not stale.exists()
+    assert not_json.read_text(encoding="utf-8") == "keep"
+    assert (nested / "stale.json").exists()
+
+
+def test_stale_per_tld_files_survive_a_failed_write(temp_output, monkeypatch):
+    """Pruning runs only after every write succeeded."""
+    import src.build.tlds as tlds_module
+
+    temp_output.tld_dir.mkdir(parents=True)
+    stale = temp_output.tld_dir / "emerson.json"
+    stale.write_text("{}", encoding="utf-8")
+    real_write = tlds_module.write_json_if_changed
+
+    def flaky_write(filepath, data, **kwargs):
+        if str(filepath).endswith("/com.json"):
+            return (False, "error")
+        return real_write(filepath, data, **kwargs)
+
+    monkeypatch.setattr(tlds_module, "write_json_if_changed", flaky_write)
+
+    result = build_tlds_json(temp_output, preserve_asn=_preserve())
+
+    assert "error" in result
+    assert stale.exists()
+
+
+def test_a_prune_failure_is_a_build_error(temp_output, monkeypatch):
+    temp_output.tld_dir.mkdir(parents=True)
+    stale = temp_output.tld_dir / "emerson.json"
+    stale.write_text("{}", encoding="utf-8")
+    real_unlink = Path.unlink
+
+    def refuse(self, *args, **kwargs):
+        if self.name == "emerson.json":
+            raise PermissionError("read-only")
+        return real_unlink(self, *args, **kwargs)
+
+    monkeypatch.setattr(Path, "unlink", refuse)
+
+    result = build_tlds_json(temp_output, preserve_asn=_preserve())
+
+    assert "prune" in result["error"]
 
 
 def test_empty_tld_dir_recovery(temp_output):

@@ -13,7 +13,7 @@ import re
 from datetime import date
 from typing import Any, Final
 
-from selectolax.parser import HTMLParser as SelectolaxParser
+from selectolax.lexbor import LexborHTMLParser
 
 from ..config import REGISTRY_AGREEMENT_TYPE_MAPPING
 
@@ -76,7 +76,7 @@ def extract_registry_agreements(html: str) -> list[dict[str, Any]]:
         RegistryAgreementPageError: If the embedded state is absent, unparseable,
             missing the expected key path, or empty.
     """
-    node = SelectolaxParser(html).css_first(NG_STATE_SELECTOR)
+    node = LexborHTMLParser(html).css_first(NG_STATE_SELECTOR)
     if node is None:
         raise RegistryAgreementPageError(
             f"no {NG_STATE_SELECTOR} element on the registry agreements page"

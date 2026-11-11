@@ -4,10 +4,10 @@ These tests assert that the shipped tlds.json is consistent with the
 authoritative IANA source for each field. Per the .merck drift incident
 (commit 9a2c1b9, March 2026), we follow per-field source-of-truth:
 
-- Root DB (iana-root.html) is authoritative for the TLD set, delegation
-  status, manager, and type.
+- The IANA TLD JSON (iana-tlds.json, the Root Zone Database export) is
+  authoritative for the TLD set, delegation status, manager, and type.
 - IANA RDAP bootstrap is authoritative for gTLD RDAP server URLs.
-- iana-tlds.txt is advisory only; it drifts from root DB in normal
+- iana-tlds.txt is advisory only; it drifts from the JSON in normal
   operation. test_source_drift.py surfaces the drift as warnings; the
   build must not depend on it.
 
@@ -28,8 +28,8 @@ from _pytest.monkeypatch import MonkeyPatch
 import src.build.tlds as build_module
 from src.build.tlds import OutputPaths, build_tlds_json
 from src.config import TLDS_OUTPUT_FILE
+from src.parse.iana_tlds_json import load_iana_tlds
 from src.parse.rdap_json import parse_rdap_json
-from src.parse.root_db_html import parse_root_db_html
 
 
 @pytest.fixture(scope="module")
@@ -66,23 +66,24 @@ def tlds_data(tmp_path_factory):
         mp.undo()
 
 
-def test_built_tlds_set_equals_root_db_set(tlds_data):
-    """Every TLD in root DB is in tlds.json and nothing extra.
+def test_built_tlds_set_equals_iana_tlds_set(tlds_data):
+    """Every TLD in the IANA TLD JSON is in tlds.json and nothing extra.
 
     Stronger than count equality: catches the "drop entry X, duplicate
     entry Y, count unchanged" regression that count-based tests miss.
 
-    Asserts against root DB only, not against tlds.txt or the union of
+    Asserts against the JSON only, not against tlds.txt or the union of
     sources, because per-field source-of-truth means tlds.txt drift is
     not a build error (see .merck incident, commit 9a2c1b9).
     """
-    expected = {entry["domain"].lstrip(".").lower() for entry in parse_root_db_html()}
-    actual = {entry["tld"].lower() for entry in tlds_data["tlds"]}
+    expected = {record.name for record in load_iana_tlds()}
+    actual = [entry["tld"] for entry in tlds_data["tlds"]]
 
-    missing = expected - actual
-    extra = actual - expected
+    assert len(actual) == len(set(actual)), "tlds.json repeats a TLD"
+    missing = expected - set(actual)
+    extra = set(actual) - expected
     assert not missing and not extra, (
-        f"TLD set mismatch vs root DB. "
+        f"TLD set mismatch vs IANA TLD JSON. "
         f"Missing from tlds.json: {sorted(missing)}. "
         f"Extra in tlds.json: {sorted(extra)}."
     )
@@ -92,7 +93,7 @@ def test_built_rdap_entries_present_and_iana_sourced(tlds_data):
     """Every TLD in the IANA RDAP bootstrap appears in tlds.json with an IANA-sourced rdap_server.
 
     Does NOT exact-match URL strings because the build's source precedence
-    is page_data > bootstrap > supplemental, and the two IANA sources can
+    is TLD JSON > bootstrap > supplemental, and the two IANA sources can
     disagree on URL normalization (e.g., trailing slash). The invariants
     that actually matter: the TLD entry exists, rdap_server is populated,
     and annotations.rdap_source is "IANA" (not "supplemental").
@@ -122,24 +123,23 @@ def test_built_rdap_entries_present_and_iana_sourced(tlds_data):
     )
 
 
-def test_built_delegation_flag_matches_root_db(tlds_data):
-    """For every TLD, delegated flag matches manager-not-not-assigned in root DB."""
-    root_db_by_tld = {
-        entry["domain"].lstrip(".").lower(): (entry["manager"] != "Not assigned")
-        for entry in parse_root_db_html()
+def test_built_delegation_flag_matches_iana_tlds_status(tlds_data):
+    """For every TLD, delegated is true exactly when the JSON status is "active"."""
+    active_by_tld = {
+        record.name: record.status == "active" for record in load_iana_tlds()
     }
 
     mismatches = []
     for entry in tlds_data["tlds"]:
         tld = entry["tld"].lower()
-        if tld not in root_db_by_tld:
+        if tld not in active_by_tld:
             continue
-        expected_delegated = root_db_by_tld[tld]
+        expected_delegated = active_by_tld[tld]
         if entry["delegated"] != expected_delegated:
             mismatches.append((tld, entry["delegated"], expected_delegated))
 
     assert not mismatches, (
-        f"delegated flag mismatch vs root DB for {len(mismatches)} TLD(s) "
+        f"delegated flag mismatch vs IANA TLD JSON for {len(mismatches)} TLD(s) "
         f"(first 5: {mismatches[:5]})"
     )
 
@@ -147,21 +147,21 @@ def test_built_delegation_flag_matches_root_db(tlds_data):
 def test_built_tld_count_within_baseline_threshold(tlds_data):
     """Defend against systematic parser regression by comparing to a recorded baseline.
 
-    All the other reconciliation tests above compare parse_root_db_html()
+    All the other reconciliation tests above compare load_iana_tlds()
     against the built tlds.json. Both sides flow through the same parser,
-    so a parser regression that silently shrinks the set (e.g., a regex
-    change that fails to match some root-zone rows) would not be caught.
-    Both sides shrink together and the cross-source equality still holds.
+    so a parser regression that silently shrinks the set (e.g., a filter
+    that drops some records) would not be caught. Both sides shrink
+    together and the cross-source equality still holds.
 
     This test guards against that by comparing the current TLD count
     against a baseline recorded inline below. The 5% threshold (~80 TLDs
-    out of ~1594) is well above IANA's annual TLD growth rate. Update
+    out of ~1603) is well above IANA's annual TLD growth rate. Update
     the baseline constants when a legitimate IANA expansion crosses the
     threshold (e.g., ICANN's next-round gTLD additions).
     """
-    baseline_as_of = "2026-05-16"
-    baseline_total = 1594
-    baseline_delegated = 1437
+    baseline_as_of = "2026-11-10"
+    baseline_total = 1603
+    baseline_delegated = 1436
     threshold = 0.05
 
     actual_total = len(tlds_data["tlds"])
@@ -192,9 +192,9 @@ def test_built_tld_count_within_baseline_threshold(tlds_data):
 def test_build_does_not_import_tlds_txt():
     """Architectural invariant: build must not depend on the tlds_txt module.
 
-    tlds.txt drifts from root DB in normal operation (see .merck
+    tlds.txt drifts from the IANA TLD JSON in normal operation (see .merck
     incident, commit 9a2c1b9, where the build was rewritten to derive
-    delegation status from root DB alone). Re-introducing any tlds_txt
+    delegation status from the Root Zone Database alone). Re-introducing any tlds_txt
     module symbol into the build path would resurrect that
     drift-as-build-failure class of bug.
 
@@ -219,5 +219,5 @@ def test_build_does_not_import_tlds_txt():
     assert not violations, (
         f"src/build/tlds.py imports from tlds_txt module: {violations}. "
         "Per .merck incident (commit 9a2c1b9), build must derive TLD "
-        "set membership from root DB alone."
+        "set membership from the IANA TLD JSON alone."
     )

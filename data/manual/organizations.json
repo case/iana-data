@@ -531,7 +531,6 @@
         "Afilias Limited",
         "Binky Moon, LLC",
         "Dog Beach, LLC",
-        "Donuts Inc",
         "Identity Digital Inc.",
         "Identity Digital Limited",
         "Identity Digital Limited c/o Identity Digital Inc.",
@@ -546,6 +545,14 @@
       "asn": [
         "AFILIAS-SECONDARY-DNS",
         "AS-AFILIAS1"
+      ]
+    },
+    "archived": {
+      "iana": [
+        {
+          "name": "Donuts Inc",
+          "archived_on": "2026-11-10"
+        }
       ]
     },
     "aliases": [],

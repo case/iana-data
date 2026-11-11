@@ -1,13 +1,11 @@
 """Tests for CLI module."""
 
 import sys
-from pathlib import Path
 from unittest.mock import patch
 
-from src.cli import main
-from src.parse import parse_tlds_txt
+import pytest
 
-FIXTURES_DIR = Path(__file__).parent / "fixtures"
+from src.cli import EXIT_FETCH_FAILED, EXIT_PAYLOAD_REJECTED, main
 
 
 class TestDownloadCommand:
@@ -18,7 +16,7 @@ class TestDownloadCommand:
         mock_results = {
             "RDAP_BOOTSTRAP": "downloaded",
             "TLD_LIST": "not_modified",
-            "ROOT_ZONE_DB": "downloaded",
+            "IANA_TLDS": "downloaded",
         }
 
         with (
@@ -46,7 +44,7 @@ class TestDownloadCommand:
         mock_results = {
             "RDAP_BOOTSTRAP": "downloaded",
             "TLD_LIST": "error",
-            "ROOT_ZONE_DB": "downloaded",
+            "IANA_TLDS": "downloaded",
         }
 
         with (
@@ -55,7 +53,59 @@ class TestDownloadCommand:
         ):
             result = main()
 
-        assert result == 1
+        assert result == EXIT_FETCH_FAILED == 3
+
+    def test_download_crash_is_not_mistaken_for_a_failed_fetch(self):
+        """An uncaught exception exits 1 in Python, so it must not share a code."""
+        with (
+            patch("src.cli.download_iana_files", side_effect=RuntimeError("boom")),
+            patch.object(sys, "argv", ["cli", "--download"]),
+            pytest.raises(RuntimeError, match="boom"),
+        ):
+            main()
+
+        assert 1 not in {EXIT_FETCH_FAILED, EXIT_PAYLOAD_REJECTED}
+        assert 2 not in {EXIT_FETCH_FAILED, EXIT_PAYLOAD_REJECTED}
+
+    def test_download_with_invalid_payload_has_its_own_exit_code(self):
+        """A rejected payload has its own exit code, so the nightly can alert on it."""
+        mock_results = {
+            "RDAP_BOOTSTRAP": "downloaded",
+            "TLD_LIST": "not_modified",
+            "IANA_TLDS": "invalid",
+        }
+
+        with (
+            patch("src.cli.download_iana_files", return_value=mock_results),
+            patch.object(sys, "argv", ["cli", "--download"]),
+        ):
+            result = main()
+
+        assert result == EXIT_PAYLOAD_REJECTED == 4
+
+    def test_download_invalid_payload_outranks_a_fetch_error(self):
+        mock_results = {
+            "RDAP_BOOTSTRAP": "error",
+            "TLD_LIST": "not_modified",
+            "IANA_TLDS": "invalid",
+        }
+
+        with (
+            patch("src.cli.download_iana_files", return_value=mock_results),
+            patch.object(sys, "argv", ["cli", "--download"]),
+        ):
+            result = main()
+
+        assert result == EXIT_PAYLOAD_REJECTED == 4
+
+    def test_download_tld_pages_flag_is_gone(self):
+        with (
+            patch.object(sys, "argv", ["cli", "--download-tld-pages"]),
+            pytest.raises(SystemExit) as excinfo,
+        ):
+            main()
+
+        assert excinfo.value.code == 2
 
     def test_download_invalid_source(self):
         """Test download with invalid source name."""
@@ -65,139 +115,6 @@ class TestDownloadCommand:
         assert result == 1
 
 
-class TestDownloadTldPagesCommand:
-    """Tests for --download-tld-pages command."""
-
-    def test_download_tld_pages_with_prefix(self):
-        """Test downloading TLD pages with prefix filter."""
-        mock_tlds = ["aaa", "aarp", "abb"]
-        mock_results = {"aaa": "downloaded", "aarp": "downloaded", "abb": "downloaded"}
-
-        with (
-            patch("src.cli.parse_root_db_tlds", return_value=mock_tlds),
-            patch("src.cli.download_tld_pages", return_value=mock_results),
-            patch.object(sys, "argv", ["cli", "--download-tld-pages", "a"]),
-        ):
-            result = main()
-
-        assert result == 0
-
-    def test_download_tld_pages_with_errors(self):
-        """Test download TLD pages returns error on failures."""
-        mock_tlds = ["com", "net"]
-        mock_results = {"com": "downloaded", "net": "error"}
-
-        with (
-            patch("src.cli.parse_root_db_tlds", return_value=mock_tlds),
-            patch("src.cli.download_tld_pages", return_value=mock_results),
-            patch.object(sys, "argv", ["cli", "--download-tld-pages", "c", "n"]),
-        ):
-            result = main()
-
-        assert result == 1
-
-    def test_download_tld_pages_no_tlds_found(self):
-        """Test download TLD pages when no TLDs are found."""
-        with (
-            patch("src.cli.parse_root_db_tlds", return_value=[]),
-            patch.object(sys, "argv", ["cli", "--download-tld-pages"]),
-        ):
-            result = main()
-
-        assert result == 1
-
-    def test_download_tld_pages_no_matching_prefix(self):
-        """Test download TLD pages when no TLDs match prefix."""
-        mock_tlds = ["com", "net", "org"]
-
-        with (
-            patch("src.cli.parse_root_db_tlds", return_value=mock_tlds),
-            patch.object(sys, "argv", ["cli", "--download-tld-pages", "z"]),
-        ):
-            result = main()
-
-        assert result == 0  # No error, just no TLDs to download
-
-    def test_download_tld_pages_x_prefix_excludes_xn(self):
-        """Test that 'x' prefix doesn't match 'xn--' TLDs unless explicitly specified."""
-        fixture_path = FIXTURES_DIR / "source" / "core" / "tlds.txt"
-        tlds = parse_tlds_txt(fixture_path)
-
-        # Fixture contains: xbox, xyz, xn--2scrj9c, xn--4dbrk0ce, xn--flw351e, xn--kpry57d, xn--wgbh1c
-        x_tlds = [t for t in tlds if t.startswith("x")]
-        xn_tlds = [t for t in tlds if t.startswith("xn--")]
-        non_xn_x_tlds = [t for t in x_tlds if not t.startswith("xn--")]
-
-        # Verify fixture has the expected TLDs
-        assert len(non_xn_x_tlds) == 2  # xbox, xyz
-        assert len(xn_tlds) == 5
-
-        with (
-            patch("src.cli.parse_root_db_tlds", return_value=tlds),
-            patch("src.cli.download_tld_pages") as mock_download,
-            patch.object(sys, "argv", ["cli", "--download-tld-pages", "x"]),
-        ):
-            mock_download.return_value = {t: "downloaded" for t in non_xn_x_tlds}
-            result = main()
-
-        # Should only download non-IDN x TLDs
-        assert result == 0
-        mock_download.assert_called_once()
-        downloaded_tlds = mock_download.call_args[0][0]
-        assert "xbox" in downloaded_tlds
-        assert "xyz" in downloaded_tlds
-        # xn-- TLDs should NOT be included
-        for xn_tld in xn_tlds:
-            assert xn_tld not in downloaded_tlds
-
-    def test_download_tld_pages_xn_prefix_explicit(self):
-        """Test that 'xn--' prefix explicitly downloads IDN TLDs."""
-        fixture_path = FIXTURES_DIR / "source" / "core" / "tlds.txt"
-        tlds = parse_tlds_txt(fixture_path)
-        xn_tlds = [t for t in tlds if t.startswith("xn--")]
-
-        with (
-            patch("src.cli.parse_root_db_tlds", return_value=tlds),
-            patch("src.cli.download_tld_pages") as mock_download,
-            patch.object(sys, "argv", ["cli", "--download-tld-pages", "xn--"]),
-        ):
-            mock_download.return_value = {t: "downloaded" for t in xn_tlds}
-            result = main()
-
-        # Should only download xn-- TLDs
-        assert result == 0
-        mock_download.assert_called_once()
-        downloaded_tlds = mock_download.call_args[0][0]
-        assert "xbox" not in downloaded_tlds
-        assert "xyz" not in downloaded_tlds
-        for xn_tld in xn_tlds:
-            assert xn_tld in downloaded_tlds
-
-    def test_download_tld_pages_x_and_xn_prefix_together(self):
-        """Test that 'x' and 'xn--' together downloads all x TLDs."""
-        fixture_path = FIXTURES_DIR / "source" / "core" / "tlds.txt"
-        tlds = parse_tlds_txt(fixture_path)
-        all_x_tlds = [t for t in tlds if t.startswith("x")]
-
-        with (
-            patch("src.cli.parse_root_db_tlds", return_value=tlds),
-            patch("src.cli.download_tld_pages") as mock_download,
-            patch.object(sys, "argv", ["cli", "--download-tld-pages", "x", "xn--"]),
-        ):
-            mock_download.return_value = {t: "downloaded" for t in all_x_tlds}
-            result = main()
-
-        # Should download all x TLDs including xn--
-        assert result == 0
-        mock_download.assert_called_once()
-        downloaded_tlds = mock_download.call_args[0][0]
-        assert len(downloaded_tlds) == 7  # 2 non-IDN + 5 IDN
-        assert "xbox" in downloaded_tlds
-        assert "xyz" in downloaded_tlds
-        for xn_tld in [t for t in tlds if t.startswith("xn--")]:
-            assert xn_tld in downloaded_tlds
-
-
 class TestAnalyzeCommand:
     """Tests for --analyze command."""
 
@@ -205,7 +122,6 @@ class TestAnalyzeCommand:
         """Test analyzing all files successfully."""
         with (
             patch("src.cli.analyze_tlds_txt", return_value=0),
-            patch("src.cli.analyze_root_db_html", return_value=0),
             patch("src.cli.analyze_rdap_json", return_value=0),
             patch.object(sys, "argv", ["cli", "--analyze"]),
         ):

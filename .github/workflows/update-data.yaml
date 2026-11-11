@@ -48,14 +48,27 @@ jobs:
         timeout-minutes: 15
         run: bin/setup
 
-      - name: Download core data (RDAP, TLD list, root zone DB)
+      # Exit 3 is a failed fetch and 4 a rejected payload. Both keep the stored
+      # file, so continue and alert. Not `make`, which turns every failure into 2.
+      - name: Download core data (RDAP, TLD list, TLD JSON and schema)
         id: download-core
         timeout-minutes: 10
-        continue-on-error: true
-        run: make download-core
+        run: |
+          status=0
+          uv run python -m src.cli --download || status=$?
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          case "$status" in
+            0) ;;
+            3) echo "::warning::A core download failed; continuing on the stored files" ;;
+            4) echo "::warning::A core download was rejected; continuing on the stored files" ;;
+            *)
+              echo "::error::The downloader crashed or was misused (exit $status)"
+              exit 1
+              ;;
+          esac
 
-      - name: Notification if core download fails
-        if: steps.download-core.outcome == 'failure'
+      - name: Notification if a core download fails
+        if: always() && steps.download-core.outputs.status == '3'
         continue-on-error: true
         timeout-minutes: 2
         uses: ./.github/actions/pushover
@@ -63,7 +76,18 @@ jobs:
           pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
           pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
           title: "IANA core data download failed"
-          message: "❌ Failed to download IANA core data files"
+          message: "⚠️ A core IANA download failed; the nightly continued on the stored files"
+
+      - name: Notification if a core download is rejected
+        if: always() && steps.download-core.outputs.status == '4'
+        continue-on-error: true
+        timeout-minutes: 2
+        uses: ./.github/actions/pushover
+        with:
+          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
+          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
+          title: "IANA core data rejected"
+          message: "⚠️ A downloaded IANA file failed validation; the nightly continued on the stored copy"
 
       - name: Download ICANN Registry Agreement Table
         id: download-registry-agreement
@@ -168,76 +192,7 @@ jobs:
             ls -la data/source/iptoasn/ || true
           fi
 
-      # 8 batches of ~200 of the ~1,600 TLDs, ~3-4 min each, isolating failures.
-      # Each continues on error so one bad batch does not lose the others.
-      - name: "Download TLDs: a-b (198 TLDs)"
-        id: download-tlds-ab
-        timeout-minutes: 12
-        continue-on-error: true
-        run: make download-tld-pages GROUPS="a b"
-
-      - name: "Download TLDs: c-d (187 TLDs)"
-        id: download-tlds-cd
-        timeout-minutes: 12
-        continue-on-error: true
-        run: make download-tld-pages GROUPS="c d"
-
-      - name: "Download TLDs: e-h (227 TLDs)"
-        id: download-tlds-eh
-        timeout-minutes: 12
-        continue-on-error: true
-        run: make download-tld-pages GROUPS="e f g h"
-
-      - name: "Download TLDs: i + IDN (215 TLDs)"
-        id: download-tlds-i-idn
-        timeout-minutes: 12
-        continue-on-error: true
-        run: make download-tld-pages GROUPS="i xn--"
-
-      - name: "Download TLDs: j-m (221 TLDs)"
-        id: download-tlds-jm
-        timeout-minutes: 12
-        continue-on-error: true
-        run: make download-tld-pages GROUPS="j k l m"
-
-      - name: "Download TLDs: n-q (158 TLDs)"
-        id: download-tlds-nq
-        timeout-minutes: 12
-        continue-on-error: true
-        run: make download-tld-pages GROUPS="n o p q"
-
-      - name: "Download TLDs: r-s (190 TLDs)"
-        id: download-tlds-rs
-        timeout-minutes: 12
-        continue-on-error: true
-        run: make download-tld-pages GROUPS="r s"
-
-      - name: "Download TLDs: t-z (188 TLDs)"
-        id: download-tlds-tz
-        timeout-minutes: 12
-        continue-on-error: true
-        run: make download-tld-pages GROUPS="t u v w y z"
-
-      - name: Notification if TLD download fails
-        if: |
-          steps.download-tlds-ab.outcome == 'failure' ||
-          steps.download-tlds-cd.outcome == 'failure' ||
-          steps.download-tlds-eh.outcome == 'failure' ||
-          steps.download-tlds-i-idn.outcome == 'failure' ||
-          steps.download-tlds-jm.outcome == 'failure' ||
-          steps.download-tlds-nq.outcome == 'failure' ||
-          steps.download-tlds-rs.outcome == 'failure' ||
-          steps.download-tlds-tz.outcome == 'failure'
-        continue-on-error: true
-        timeout-minutes: 2
-        uses: ./.github/actions/pushover
-        with:
-          pushover_api_token: ${{ secrets.PUSHOVER_API_TOKEN }}
-          pushover_user_key: ${{ secrets.PUSHOVER_USER_KEY }}
-          title: "IANA TLD data download failed"
-          message: "❌ Failed to download IANA TLD data files"
-
-      # The scrape holds its inputs for ~32 minutes before the build reads them.
+      # The downloads hold their inputs for a while before the build reads them.
       # Why here: docs/memory/log/2026-09-10-nightly-input-sync.md
       - name: Sync build inputs with current main
         id: sync-inputs

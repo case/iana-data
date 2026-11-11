@@ -1,8 +1,12 @@
-"""Tests for src.build.idn_language.derive_language."""
+"""Tests for src.build.idn_language."""
 
 import pytest
 
-from src.build.idn_language import derive_language
+from src.build.idn_language import (
+    choose_language_code,
+    derive_language,
+    language_name_en,
+)
 
 
 def test_script_default_for_gtld():
@@ -75,3 +79,37 @@ def test_chinese_variant_overrides():
         "zh-Hant-TW",
         "Chinese (Taiwan)",
     )
+
+
+# --- choose_language_code: IANA's tag against ours ---
+
+
+@pytest.mark.parametrize(
+    ("iana_code", "derived_code", "expected"),
+    [
+        ("zh", "zh-Hans", ("zh-Hans", "refined")),
+        ("zh", "zh-Hant-TW", ("zh-Hant-TW", "refined")),
+        ("ZH", "zh-Hans", ("zh-Hans", "refined")),
+        ("zh", "zh", ("zh", "IANA")),
+        ("ory", "or", ("ory", "IANA")),
+        ("sat", "hi", ("sat", "IANA")),
+        ("zh", "zhx", ("zh", "IANA")),
+        ("zh-Hans", "zh", ("zh-Hans", "IANA")),
+        ("ru", None, ("ru", "IANA")),
+        (None, "ar", ("ar", "derived")),
+        ("", "ar", ("ar", "derived")),
+        (None, None, None),
+    ],
+)
+def test_choose_language_code(iana_code, derived_code, expected):
+    assert choose_language_code(iana_code, derived_code) == expected
+
+
+@pytest.mark.parametrize("code", ["ory", "yi", "sat", "ks"])
+def test_language_name_en_covers_codes_only_iana_uses(code):
+    assert language_name_en(code)
+
+
+def test_language_name_en_unknown_code_raises():
+    with pytest.raises(ValueError, match="No English name for language_code='xx'"):
+        language_name_en("xx")

@@ -6,9 +6,9 @@ from pathlib import Path
 import pytest
 
 from src.config import MANUAL_DIR, SOURCE_DIR, SOURCE_FILES, TLDS_OUTPUT_FILE
+from src.parse.iana_tlds_json import load_iana_tlds
 from src.parse.manual_annotations import parse_manual_annotations
 from src.parse.rdap_json import parse_rdap_json
-from src.parse.root_db_html import parse_root_db_html
 from src.parse.supplemental_cctld_rdap import parse_supplemental_cctld_rdap
 
 FIXTURES_DIR = Path(__file__).parent.parent / "fixtures"
@@ -110,117 +110,6 @@ def test_no_overlap_in_fixture_data():
     )
 
 
-def test_delegated_tlds_count_matches_source():
-    """Test that delegated TLDs in tlds.json matches assigned entries in root DB.
-
-    The root zone DB is the authoritative source for delegation status.
-    Our built tlds.json should have the same count of delegated TLDs as
-    the root DB has entries with an assigned manager.
-    """
-    # Parse root zone DB to get expected delegated count
-    root_db_path = Path(SOURCE_DIR) / SOURCE_FILES["ROOT_ZONE_DB"]
-    root_db_entries = parse_root_db_html(root_db_path)
-    expected_delegated_count = sum(
-        1 for entry in root_db_entries if entry["manager"] != "Not assigned"
-    )
-
-    # Parse built tlds.json
-    tlds_json_path = Path(TLDS_OUTPUT_FILE)
-    assert tlds_json_path.exists(), (
-        f"Built tlds.json file not found at {tlds_json_path}. "
-        f"Run './bin/build' first to generate this file."
-    )
-
-    with open(tlds_json_path) as f:
-        tlds_data = json.load(f)
-
-    # Count delegated TLDs in output
-    delegated_tlds = [entry for entry in tlds_data["tlds"] if entry["delegated"]]
-    actual_delegated_count = len(delegated_tlds)
-
-    # Counts should match the root DB (our source of truth)
-    assert actual_delegated_count == expected_delegated_count, (
-        f"Delegated TLD count mismatch: "
-        f"tlds.json has {actual_delegated_count} delegated TLDs, "
-        f"but root DB has {expected_delegated_count} assigned entries. "
-        f"These should match as the root DB is the source of truth for delegation."
-    )
-
-
-def test_undelegated_tlds_count_matches_not_assigned():
-    """Test that undelegated TLDs in tlds.json matches 'Not assigned' count in root DB.
-
-    The root DB HTML contains TLDs with manager 'Not assigned' which should
-    match the count of undelegated TLDs in our built tlds.json.
-    """
-    # Parse root DB HTML to count "Not assigned" entries
-    root_db_path = Path(SOURCE_DIR) / SOURCE_FILES["ROOT_ZONE_DB"]
-    root_db_entries = parse_root_db_html(root_db_path)
-    not_assigned_count = sum(
-        1 for entry in root_db_entries if entry["manager"] == "Not assigned"
-    )
-
-    # Parse built tlds.json
-    tlds_json_path = Path(TLDS_OUTPUT_FILE)
-    assert tlds_json_path.exists(), (
-        f"Built tlds.json file not found at {tlds_json_path}. "
-        f"Run './bin/build' first to generate this file."
-    )
-
-    with open(tlds_json_path) as f:
-        tlds_data = json.load(f)
-
-    # Count undelegated TLDs in output
-    undelegated_tlds = [entry for entry in tlds_data["tlds"] if not entry["delegated"]]
-    undelegated_count = len(undelegated_tlds)
-
-    # Counts should match
-    assert undelegated_count == not_assigned_count, (
-        f"Undelegated TLD count mismatch: "
-        f"tlds.json has {undelegated_count} undelegated TLDs, "
-        f"but root DB has {not_assigned_count} 'Not assigned' managers. "
-        f"These should match as 'Not assigned' indicates undelegated TLDs."
-    )
-
-
-def test_total_tlds_math_is_correct():
-    """Test that delegated + undelegated = total TLDs in tlds.json.
-
-    This verifies our accounting is correct using a single source of truth:
-    - delegated + undelegated in tlds.json = total entries in root DB HTML
-    """
-    # Parse built tlds.json
-    tlds_json_path = Path(TLDS_OUTPUT_FILE)
-    assert tlds_json_path.exists(), (
-        f"Built tlds.json file not found at {tlds_json_path}. "
-        f"Run './bin/build' first to generate this file."
-    )
-
-    with open(tlds_json_path) as f:
-        tlds_data = json.load(f)
-
-    delegated_tlds = [entry for entry in tlds_data["tlds"] if entry["delegated"]]
-    undelegated_tlds = [entry for entry in tlds_data["tlds"] if not entry["delegated"]]
-    delegated_count = len(delegated_tlds)
-    undelegated_count = len(undelegated_tlds)
-
-    # Parse root DB HTML (total count)
-    root_db_path = Path(SOURCE_DIR) / SOURCE_FILES["ROOT_ZONE_DB"]
-    root_db_entries = parse_root_db_html(root_db_path)
-    total_count = len(root_db_entries)
-
-    # Math should add up
-    calculated_total = delegated_count + undelegated_count
-
-    assert calculated_total == total_count, (
-        f"TLD count math error: "
-        f"{delegated_count} delegated + "
-        f"{undelegated_count} undelegated = "
-        f"{calculated_total}, but root DB has {total_count} total TLDs. "
-        f"These should match. Difference: {total_count - calculated_total}"
-    )
-
-
 # --- ICANN gTLDs Report Source Invariants ---
 #
 # These guard assumptions baked into the gTLDs parser against the live source
@@ -304,8 +193,7 @@ def test_manual_annotations_values_are_valid():
     assert annotations, "Manual annotations file should not be empty"
 
     valid_scopes = {"city", "subdivision", "country", "supranational"}
-    root_db_path = Path(SOURCE_DIR) / SOURCE_FILES["ROOT_ZONE_DB"]
-    known_tlds = {e["domain"].lstrip(".") for e in parse_root_db_html(root_db_path)}
+    known_tlds = {record.name for record in load_iana_tlds()}
 
     bad_tlds = sorted(set(annotations) - known_tlds)
     assert not bad_tlds, f"Annotations reference unknown TLD(s): {bad_tlds}"

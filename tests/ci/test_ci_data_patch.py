@@ -398,7 +398,7 @@ def nightly(tmp_path: Path) -> tuple[Path, Path, Path]:
     for relative, text in (
         ("data/manual/places.json", '{"lat": 1}\n'),
         ("data/manual/cultures.json", "{}\n"),
-        ("data/source/iana-root.html", "<html>old\n"),
+        ("data/source/iana-tlds.json", '{"v": "old"}\n'),
         ("data/generated/keep.json", "{}\n"),
         ("bin/ci-land-data-patch", "#!/usr/bin/env bash\n"),
     ):
@@ -1075,7 +1075,7 @@ class TestSyncInputs:
 
     def scrape(self, producer: Path) -> None:
         """What the download steps leave in the working tree, uncommitted."""
-        (producer / "data" / "source" / "iana-root.html").write_text("<html>fresh\n")
+        (producer / "data" / "source" / "iana-tlds.json").write_text('{"v": "fresh"}\n')
         (producer / "data" / "generated" / "keep.json").write_text('{"v": 2}\n')
 
     def test_adopts_the_branch_inputs_and_keeps_the_scrape(self, nightly, tmp_path):
@@ -1093,8 +1093,8 @@ class TestSyncInputs:
             producer / "data" / "manual" / "places.json"
         ).read_text() == '{"lat": 2}\n'
         assert (
-            producer / "data" / "source" / "iana-root.html"
-        ).read_text() == "<html>fresh\n"
+            producer / "data" / "source" / "iana-tlds.json"
+        ).read_text() == '{"v": "fresh"}\n'
         assert (
             producer / "data" / "generated" / "keep.json"
         ).read_text() == '{"v": 2}\n'
@@ -1198,8 +1198,8 @@ class TestSyncInputs:
             git(bare, "show", "main:data/manual/places.json").stdout == '{"lat": 2}\n'
         )
         assert (
-            git(bare, "show", "main:data/source/iana-root.html").stdout
-            == "<html>fresh\n"
+            git(bare, "show", "main:data/source/iana-tlds.json").stdout
+            == '{"v": "fresh"}\n'
         )
 
     def test_a_path_main_adds_elsewhere_under_data_survives(
@@ -1264,8 +1264,8 @@ class TestSyncInputs:
         ).read_text() == '{"lat": 42}\n'
         assert not (shallow / "data" / "manual" / "cultures.json").exists()
         assert (
-            shallow / "data" / "source" / "iana-root.html"
-        ).read_text() == "<html>fresh\n"
+            shallow / "data" / "source" / "iana-tlds.json"
+        ).read_text() == '{"v": "fresh"}\n'
         assert (
             git(shallow, "diff", "--name-only", "HEAD", "--", "data/manual").stdout
             == ""
@@ -1310,8 +1310,8 @@ class TestSyncInputs:
             git(bare, "show", "main:data/manual/places.json").stdout == '{"lat": 9}\n'
         )
         assert (
-            git(bare, "show", "main:data/source/iana-root.html").stdout
-            == "<html>fresh\n"
+            git(bare, "show", "main:data/source/iana-tlds.json").stdout
+            == '{"v": "fresh"}\n'
         )
 
 

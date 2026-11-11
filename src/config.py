@@ -6,7 +6,9 @@ from typing import Final
 IANA_URLS: Final[dict[str, str]] = {
     "RDAP_BOOTSTRAP": "https://data.iana.org/rdap/dns.json",
     "TLD_LIST": "https://data.iana.org/TLD/tlds-alpha-by-domain.txt",
-    "ROOT_ZONE_DB": "https://www.iana.org/domains/root/db",
+    # The schema comes first: the downloader checks the TLD JSON against it.
+    "IANA_TLDS_SCHEMA": "https://data.iana.org/TLD/v1/tlds-schema.json",
+    "IANA_TLDS": "https://data.iana.org/TLD/v1/tlds.json",
 }
 
 ICANN_URLS: Final[dict[str, str]] = {
@@ -19,12 +21,12 @@ IPTOASN_DIR: Final[str] = "data/source/iptoasn"
 IPTOASN_FILE: Final[str] = "ip2asn-combined.tsv.gz"
 
 SOURCE_DIR: Final[str] = "data/source"
-TLD_PAGES_DIR: Final[str] = "data/source/tld-pages"
 
 SOURCE_FILES: Final[dict[str, str]] = {
     "RDAP_BOOTSTRAP": "iana-rdap.json",
     "TLD_LIST": "iana-tlds.txt",
-    "ROOT_ZONE_DB": "iana-root.html",
+    "IANA_TLDS": "iana-tlds.json",
+    "IANA_TLDS_SCHEMA": "iana-tlds-schema.json",
     "REGISTRY_AGREEMENT_TABLE": "icann-registry-agreement-table.csv",
     "GTLDS_JSON": "icann-gtlds.json",
 }
@@ -49,6 +51,7 @@ MANUAL_FILES: Final[dict[str, str]] = {
     "COUNTRY_COORDINATES": "country-coordinates.json",
     "CULTURES": "cultures.json",
     "DEPENDENT_TERRITORIES": "dependent-territories.json",
+    "TLD_ARCHIVE": "tld-archive.json",
 }
 
 # Test fixtures

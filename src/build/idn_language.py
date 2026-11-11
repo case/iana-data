@@ -66,6 +66,7 @@ LANGUAGE_NAMES_EN: Final[dict[str, str]] = {
     "kk": "Kazakh",
     "kn": "Kannada",
     "ko": "Korean",
+    "ks": "Kashmiri",
     "lo": "Lao",
     "mai": "Maithili",
     "mk": "Macedonian",
@@ -73,9 +74,11 @@ LANGUAGE_NAMES_EN: Final[dict[str, str]] = {
     "mn": "Mongolian",
     "ms": "Malay",
     "or": "Odia",
+    "ory": "Odia",
     "pa": "Punjabi",
     "ru": "Russian",
     "sa": "Sanskrit",
+    "sat": "Santali",
     "sd": "Sindhi",
     "si": "Sinhala",
     "sr": "Serbian",
@@ -84,6 +87,7 @@ LANGUAGE_NAMES_EN: Final[dict[str, str]] = {
     "th": "Thai",
     "uk": "Ukrainian",
     "ur": "Urdu",
+    "yi": "Yiddish",
     "zh": "Chinese",
     "zh-Hans": "Chinese (Simplified)",
     "zh-Hant": "Chinese (Traditional)",
@@ -117,10 +121,35 @@ def derive_language(
                 f"add it to SCRIPT_LANGUAGE_DEFAULTS in src/build/idn_language.py"
             )
 
+    return code, language_name_en(code)
+
+
+def language_name_en(code: str) -> str:
+    """The English name for a BCP-47 ``code``; raises ``ValueError`` if unmapped."""
     name = LANGUAGE_NAMES_EN.get(code)
     if name is None:
         raise ValueError(
             f"No English name for language_code={code!r}; "
             f"add it to LANGUAGE_NAMES_EN in src/build/idn_language.py"
         )
-    return code, name
+    return name
+
+
+def choose_language_code(
+    iana_code: str | None, derived_code: str | None
+) -> tuple[str, str] | None:
+    """Pick between IANA's language tag and ours; ``None`` when neither exists.
+
+    Returns ``(language_code, source)``. Ours wins as ``refined`` only when it
+    extends IANA's tag with a subtag; otherwise IANA's wins as ``IANA``; ours
+    alone is ``derived``.
+    """
+    if iana_code and derived_code:
+        if derived_code.lower().startswith(f"{iana_code.lower()}-"):
+            return derived_code, "refined"
+        return iana_code, "IANA"
+    if iana_code:
+        return iana_code, "IANA"
+    if derived_code:
+        return derived_code, "derived"
+    return None
