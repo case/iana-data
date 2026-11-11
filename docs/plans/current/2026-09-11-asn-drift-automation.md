@@ -218,7 +218,7 @@ Record counts and label coverage are anchored to a single measured artifact unti
       build - the gate looks up an address set against the new artifact, so it runs before the build
 - [x] **Probe both address sets.** The committed `tlds.json` population is a stable baseline but is
       _last night's_; an artifact can cover it perfectly and omit ranges holding tonight's new
-      addresses. Parse the already-downloaded TLD pages for tonight's addresses too - no extra
+      addresses. Parse the already-downloaded IANA TLD JSON for tonight's addresses too - no extra
       download, no output build
 - [x] **Validate range endpoints when parsing, not on lookup.** The parser moved to
       `parse_gzipped_iptoasn` in `src/parse/iptoasn.py`, shared with the build, because the two
@@ -315,7 +315,7 @@ either.
 - [x] Never moves an entry out of `archived`, never rewrites an existing `archived_on`
 - [x] Rebuilds the resolver from the transformed seed and refuses the patch on any new collision or changed resolution
 - [x] **Pending-date semantics.** Each run rebuilds from `main`, which holds no pending entry, so a regenerated `archived_on` makes unchanged drift differ day to day. `ci-land-data-patch:292` sets `new_content` by diffing the guarded files, so the date alone would trigger a daily comment. Carry dates forward from the pending branch for labels still in the proposal, or compare membership separately for notification purposes. Test across two UTC dates; a same-day rerun misses this. Carry-forward also needs the branch to be _present_: `actions/checkout` fetches one ref at depth 1, so the producer runs `ci-land-data-patch fetch-branch` first. See "Tree equality" under Still open for the part of this that did not ship
-- [x] **Input guard covers `data/source/` too**, not just `data/manual`. ASN detection depends on the root database and TLD pages, so the coordinate rebase guard (`check-coordinates.yaml:170`) is insufficient
+- [x] **Input guard covers `data/source/` too**, not just `data/manual`. ASN detection depends on the IANA TLD JSON, so the coordinate rebase guard (`check-coordinates.yaml:170`) is insufficient
 - [~] State transitions: the archiver's own transformations are covered - unchanged drift, partial
   return, complete return, additive `{A}` to `{A,B}`, duplicates, and a crashed detector. Three
   are **not**: a pending `{A}` genuinely being replaced by `{B}` (the existing test starts with

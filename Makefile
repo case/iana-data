@@ -17,7 +17,7 @@ help:
 	@echo ""
 	@echo "Scripts (run directly, not via make):"
 	@echo "  bin/setup                      Install dependencies (uv sync, pnpm install)"
-	@echo "  bin/lint                       Run ruff check, ruff format check, pyright"
+	@echo "  bin/lint                       Run ruff, pyright, shellcheck, JSON, dprint and jactionlint checks"
 	@echo "  bin/test                       Run lint then pytest"
 	@echo "  bin/build --preserve-asn       Build, keeping committed ASN (local/dev; no iptoasn refresh)"
 	@echo "  bin/build --all                Full build, refreshing ASN from iptoasn (CI)"

@@ -15,7 +15,8 @@ field-by-field evidence.
 
 `data/source/iana-tlds.json` (`https://data.iana.org/TLD/v1/tlds.json`) is the only IANA TLD source.
 The index parser, the per-TLD page parser and the page downloader are deleted. The last HTML copies
-are frozen under `data/source/archive/`, with their first-capture dates as prefixes.
+are frozen under `data/source/archive/`, with their first-capture dates as prefixes. The page captures
+the deleted parsers were tested against sit beside them, in `2025-11-18-iana-tld-page-fixtures/`.
 
 The parser (`src/parse/iana_tlds_json.py`) is hand-written and fails closed. It rejects an unknown
 `status`, `type` or `specversion`, a missing key the build reads, a wrong type, and a broken
