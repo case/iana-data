@@ -40,7 +40,7 @@ jobs:
 
       - name: Install mise and the pinned toolchain
         timeout-minutes: 5
-        uses: jdx/mise-action@9b200bcecbfd6303e69a4a261b2e09e3757440a7 # v5.2.0
+        uses: jdx/mise-action@f5be966e4a917d54244728e6a5fdcd1d93a35e6c # v5.2.6
 
       # Exit 1 means drift or an unreachable article, but a crash and a missing
       # places.json exit 1 too, so the check's own summary line is what proves it
@@ -73,7 +73,7 @@ jobs:
       - name: Upload coordinate refresh patch
         if: steps.refresh.outputs.changed == 'true'
         timeout-minutes: 3
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
         with:
           name: ${{ steps.refresh.outputs.artifact }}
           path: |
@@ -150,7 +150,7 @@ jobs:
 
       - name: Download coordinate refresh patch
         timeout-minutes: 3
-        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8
         with:
           name: ${{ needs.check-coordinates.outputs.patch_artifact }}
           path: ${{ runner.temp }}/coordinate-refresh
