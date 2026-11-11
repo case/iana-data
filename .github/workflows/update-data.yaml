@@ -433,7 +433,7 @@ jobs:
         if: failure()
         continue-on-error: true
         timeout-minutes: 2
-        uses: case/actions-email@96f6c77293226d2d4e2bee851e616543992cf3ea # v1
+        uses: case/actions-email@defdefd7255b0cfaa42373a7a61734b6b392c199 # v1
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
@@ -470,7 +470,7 @@ jobs:
       - name: Email notification if data committed
         continue-on-error: true
         timeout-minutes: 2
-        uses: case/actions-email@96f6c77293226d2d4e2bee851e616543992cf3ea # v1
+        uses: case/actions-email@defdefd7255b0cfaa42373a7a61734b6b392c199 # v1
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
