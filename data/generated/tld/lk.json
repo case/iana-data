@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -51,7 +51,7 @@
           {
             "ip": "123.231.6.18",
             "asn": 18001,
-            "as_org": "DIALOG-AS Dialog Axiata PLC.",
+            "as_org": "DIALOG-AS - Dialog Axiata PLC.",
             "as_country": "LK"
           }
         ],
@@ -59,7 +59,7 @@
           {
             "ip": "2402:4000:479:c5::a",
             "asn": 18001,
-            "as_org": "DIALOG-AS Dialog Axiata PLC.",
+            "as_org": "DIALOG-AS - Dialog Axiata PLC.",
             "as_country": "LK"
           }
         ]
@@ -70,7 +70,7 @@
           {
             "ip": "43.252.12.206",
             "asn": 17470,
-            "as_org": "HUTCHISON-LK Hutchison Telecommunications Lanka Private Limited",
+            "as_org": "HUTCHISON-LK - Hutchison Telecommunications Lanka (Private) Limited",
             "as_country": "LK"
           }
         ],
@@ -78,7 +78,7 @@
           {
             "ip": "2404:8a00:0:a00::4005",
             "asn": 17470,
-            "as_org": "HUTCHISON-LK Hutchison Telecommunications Lanka Private Limited",
+            "as_org": "HUTCHISON-LK - Hutchison Telecommunications Lanka (Private) Limited",
             "as_country": "LK"
           }
         ]
@@ -89,7 +89,7 @@
           {
             "ip": "202.129.235.229",
             "asn": 45356,
-            "as_org": "MOBITEL-LK Mobitel Pvt Ltd",
+            "as_org": "MOBITEL-LK - Mobitel Pvt Ltd",
             "as_country": "LK"
           }
         ],
@@ -97,7 +97,7 @@
           {
             "ip": "2407:c00:21:8:202:129:235:229",
             "asn": 45356,
-            "as_org": "MOBITEL-LK Mobitel Pvt Ltd",
+            "as_org": "MOBITEL-LK - Mobitel Pvt Ltd",
             "as_country": "LK"
           }
         ]
@@ -108,7 +108,7 @@
           {
             "ip": "192.248.1.162",
             "asn": 38229,
-            "as_org": "LEARN-LK Lanka Education & Research Network, NREN",
+            "as_org": "LEARN-LK - Lanka Education & Research Network, NREN",
             "as_country": "LK"
           }
         ],
@@ -116,7 +116,7 @@
           {
             "ip": "2401:dd00:1::162",
             "asn": 38229,
-            "as_org": "LEARN-LK Lanka Education & Research Network, NREN",
+            "as_org": "LEARN-LK - Lanka Education & Research Network, NREN",
             "as_country": "LK"
           }
         ]
@@ -127,7 +127,7 @@
           {
             "ip": "204.61.216.27",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -135,7 +135,7 @@
           {
             "ip": "2001:500:14:6027:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]
@@ -146,7 +146,7 @@
           {
             "ip": "128.10.2.5",
             "asn": 17,
-            "as_org": "PURDUE",
+            "as_org": "PURDUE - Purdue University",
             "as_country": "US"
           }
         ],
@@ -158,7 +158,7 @@
           {
             "ip": "203.94.66.129",
             "asn": 9329,
-            "as_org": "SLTINT-AS-AP Sri Lanka Telecom Internet",
+            "as_org": "SLTINT-AS-AP - Sri Lanka Telecom Internet",
             "as_country": "LK"
           }
         ],
@@ -166,7 +166,7 @@
           {
             "ip": "2402:d000:100c::129",
             "asn": 9329,
-            "as_org": "SLTINT-AS-AP Sri Lanka Telecom Internet",
+            "as_org": "SLTINT-AS-AP - Sri Lanka Telecom Internet",
             "as_country": "LK"
           }
         ]
@@ -177,7 +177,7 @@
           {
             "ip": "185.38.108.108",
             "asn": 60592,
-            "as_org": "GRANSY Gransy s.r.o. gransy.com",
+            "as_org": "GRANSY Gransy s.r.o.",
             "as_country": "CZ"
           }
         ],
@@ -185,7 +185,7 @@
           {
             "ip": "2a00:fea0:dead::beef",
             "asn": 60592,
-            "as_org": "GRANSY Gransy s.r.o. gransy.com",
+            "as_org": "GRANSY Gransy s.r.o.",
             "as_country": "CZ"
           }
         ]

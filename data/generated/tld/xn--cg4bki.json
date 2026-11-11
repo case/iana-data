@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -71,7 +71,7 @@
           {
             "ip": "23.2.10.1",
             "asn": 21342,
-            "as_org": "AKAMAI-ASN2",
+            "as_org": "AKAMAI-ASN2 Akamai International B.V.",
             "as_country": "NL"
           }
         ],
@@ -79,7 +79,7 @@
           {
             "ip": "2600:1405:4800::1",
             "asn": 21342,
-            "as_org": "AKAMAI-ASN2",
+            "as_org": "AKAMAI-ASN2 Akamai International B.V.",
             "as_country": "NL"
           }
         ]
@@ -90,7 +90,7 @@
           {
             "ip": "184.29.150.1",
             "asn": 21342,
-            "as_org": "AKAMAI-ASN2",
+            "as_org": "AKAMAI-ASN2 Akamai International B.V.",
             "as_country": "NL"
           }
         ],
@@ -98,7 +98,7 @@
           {
             "ip": "2600:1405:400::1",
             "asn": 21342,
-            "as_org": "AKAMAI-ASN2",
+            "as_org": "AKAMAI-ASN2 Akamai International B.V.",
             "as_country": "NL"
           }
         ]
@@ -109,7 +109,7 @@
           {
             "ip": "184.29.154.1",
             "asn": 21342,
-            "as_org": "AKAMAI-ASN2",
+            "as_org": "AKAMAI-ASN2 Akamai International B.V.",
             "as_country": "NL"
           }
         ],
@@ -117,7 +117,7 @@
           {
             "ip": "2600:1405:2400::1",
             "asn": 21342,
-            "as_org": "AKAMAI-ASN2",
+            "as_org": "AKAMAI-ASN2 Akamai International B.V.",
             "as_country": "NL"
           }
         ]
@@ -128,7 +128,7 @@
           {
             "ip": "184.29.157.1",
             "asn": 21342,
-            "as_org": "AKAMAI-ASN2",
+            "as_org": "AKAMAI-ASN2 Akamai International B.V.",
             "as_country": "NL"
           }
         ],
@@ -136,7 +136,7 @@
           {
             "ip": "2600:1405:3c00::1",
             "asn": 21342,
-            "as_org": "AKAMAI-ASN2",
+            "as_org": "AKAMAI-ASN2 Akamai International B.V.",
             "as_country": "NL"
           }
         ]
@@ -147,7 +147,7 @@
           {
             "ip": "23.59.162.1",
             "asn": 21342,
-            "as_org": "AKAMAI-ASN2",
+            "as_org": "AKAMAI-ASN2 Akamai International B.V.",
             "as_country": "NL"
           }
         ],
@@ -155,7 +155,7 @@
           {
             "ip": "2600:1405:7800::1",
             "asn": 21342,
-            "as_org": "AKAMAI-ASN2",
+            "as_org": "AKAMAI-ASN2 Akamai International B.V.",
             "as_country": "NL"
           }
         ]
@@ -166,7 +166,7 @@
           {
             "ip": "96.16.208.1",
             "asn": 21342,
-            "as_org": "AKAMAI-ASN2",
+            "as_org": "AKAMAI-ASN2 Akamai International B.V.",
             "as_country": "NL"
           }
         ],
@@ -174,7 +174,7 @@
           {
             "ip": "2600:1405:a800::1",
             "asn": 21342,
-            "as_org": "AKAMAI-ASN2",
+            "as_org": "AKAMAI-ASN2 Akamai International B.V.",
             "as_country": "NL"
           }
         ]
@@ -185,7 +185,7 @@
           {
             "ip": "140.238.4.10",
             "asn": 31898,
-            "as_org": "ORACLE-BMC-31898",
+            "as_org": "ORACLE-BMC-31898 - Oracle Corporation",
             "as_country": "US"
           }
         ],
@@ -193,7 +193,7 @@
           {
             "ip": "2603:c022:8004:5d05:ca27:7608:ff55:38fe",
             "asn": 31898,
-            "as_org": "ORACLE-BMC-31898",
+            "as_org": "ORACLE-BMC-31898 - Oracle Corporation",
             "as_country": "US"
           }
         ]

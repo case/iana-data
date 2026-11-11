@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -71,7 +71,7 @@
           {
             "ip": "204.61.216.36",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -79,7 +79,7 @@
           {
             "ip": "2001:678:94:53::53",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]
@@ -90,7 +90,7 @@
           {
             "ip": "46.226.142.147",
             "asn": 56588,
-            "as_org": "EE-CERT EE CERT",
+            "as_org": "EE-CERT Information System Authority",
             "as_country": "EE"
           }
         ],
@@ -98,7 +98,7 @@
           {
             "ip": "2a00:6a00:ad1:814::147",
             "asn": 56588,
-            "as_org": "EE-CERT EE CERT",
+            "as_org": "EE-CERT Information System Authority",
             "as_country": "EE"
           }
         ]
@@ -109,7 +109,7 @@
           {
             "ip": "193.40.132.5",
             "asn": 3221,
-            "as_org": "EENET-AS",
+            "as_org": "EENet-AS Haridus- ja Teadusministeerium",
             "as_country": "EE"
           }
         ],
@@ -117,7 +117,7 @@
           {
             "ip": "2001:bb8:4001::53",
             "asn": 3221,
-            "as_org": "EENET-AS",
+            "as_org": "EENet-AS Haridus- ja Teadusministeerium",
             "as_country": "EE"
           }
         ]
@@ -128,7 +128,7 @@
           {
             "ip": "195.43.87.10",
             "asn": 51349,
-            "as_org": "EIS-AS",
+            "as_org": "EIS-AS Foundation Eesti Interneti Sihtasutus",
             "as_country": "EE"
           }
         ],

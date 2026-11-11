@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -52,7 +52,7 @@
           {
             "ip": "78.104.145.6",
             "asn": 1120,
-            "as_org": "ACONET_SERVICES ACOnet Services @ Vienna Internet eXchange",
+            "as_org": "ACOnet_Services - ACONET",
             "as_country": "EU"
           }
         ],
@@ -60,7 +60,7 @@
           {
             "ip": "2001:628:453:bb::6",
             "asn": 1120,
-            "as_org": "ACONET_SERVICES ACOnet Services @ Vienna Internet eXchange",
+            "as_org": "ACOnet_Services - ACONET",
             "as_country": "EU"
           }
         ]
@@ -71,7 +71,7 @@
           {
             "ip": "194.0.11.113",
             "asn": 31529,
-            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_org": "DENIC-ANYCAST-AS DENIC eG",
             "as_country": "DE"
           }
         ],
@@ -79,7 +79,7 @@
           {
             "ip": "2001:678:e:113::53",
             "asn": 31529,
-            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_org": "DENIC-ANYCAST-AS DENIC eG",
             "as_country": "DE"
           }
         ]
@@ -89,17 +89,17 @@
         "ipv4": [
           {
             "ip": "194.102.178.21",
-            "asn": 0,
-            "as_org": "Unknown",
-            "as_country": "None"
+            "asn": 41494,
+            "as_org": "ASOCIATIA-INTERLAN Asociatia Interlan",
+            "as_country": "RO"
           }
         ],
         "ipv6": [
           {
             "ip": "2a03:5e81::194:102:178:21",
-            "asn": 0,
-            "as_org": "Unknown",
-            "as_country": "None"
+            "asn": 41494,
+            "as_org": "ASOCIATIA-INTERLAN Asociatia Interlan",
+            "as_country": "RO"
           }
         ]
       },
@@ -109,7 +109,7 @@
           {
             "ip": "81.91.161.99",
             "asn": 8763,
-            "as_org": "DENIC-AS Theodor-Stern-Kai 1",
+            "as_org": "DENIC-AS DENIC eG",
             "as_country": "DE"
           }
         ],
@@ -121,7 +121,7 @@
           {
             "ip": "192.162.16.18",
             "asn": 3233,
-            "as_org": "ICI-ROTLD Romanian National R&D Network",
+            "as_org": "ICI-ROTLD Institutul National de Cercetare-Dezvoltare in informatica - ICI Bucuresti",
             "as_country": "RO"
           }
         ],
@@ -129,7 +129,7 @@
           {
             "ip": "2a03:5e80:0:4:192:162:16:18",
             "asn": 3233,
-            "as_org": "ICI-ROTLD Romanian National R&D Network",
+            "as_org": "ICI-ROTLD Institutul National de Cercetare-Dezvoltare in informatica - ICI Bucuresti",
             "as_country": "RO"
           }
         ]
@@ -140,7 +140,7 @@
           {
             "ip": "192.162.16.20",
             "asn": 3233,
-            "as_org": "ICI-ROTLD Romanian National R&D Network",
+            "as_org": "ICI-ROTLD Institutul National de Cercetare-Dezvoltare in informatica - ICI Bucuresti",
             "as_country": "RO"
           }
         ],
@@ -148,7 +148,7 @@
           {
             "ip": "2a03:5e80:0:4:192:162:16:20",
             "asn": 3233,
-            "as_org": "ICI-ROTLD Romanian National R&D Network",
+            "as_org": "ICI-ROTLD Institutul National de Cercetare-Dezvoltare in informatica - ICI Bucuresti",
             "as_country": "RO"
           }
         ]
@@ -159,7 +159,7 @@
           {
             "ip": "193.230.31.230",
             "asn": 3233,
-            "as_org": "ICI-ROTLD Romanian National R&D Network",
+            "as_org": "ICI-ROTLD Institutul National de Cercetare-Dezvoltare in informatica - ICI Bucuresti",
             "as_country": "RO"
           }
         ],
@@ -167,7 +167,7 @@
           {
             "ip": "2a03:5e80:0:5:193:230:31:230",
             "asn": 3233,
-            "as_org": "ICI-ROTLD Romanian National R&D Network",
+            "as_org": "ICI-ROTLD Institutul National de Cercetare-Dezvoltare in informatica - ICI Bucuresti",
             "as_country": "RO"
           }
         ]

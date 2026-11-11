@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -54,7 +54,7 @@
           {
             "ip": "194.0.0.53",
             "asn": 31529,
-            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_org": "DENIC-ANYCAST-AS DENIC eG",
             "as_country": "DE"
           }
         ],
@@ -62,7 +62,7 @@
           {
             "ip": "2001:678:2::53",
             "asn": 31529,
-            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_org": "DENIC-ANYCAST-AS DENIC eG",
             "as_country": "DE"
           }
         ]
@@ -73,7 +73,7 @@
           {
             "ip": "81.91.164.5",
             "asn": 31529,
-            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_org": "DENIC-ANYCAST-AS DENIC eG",
             "as_country": "DE"
           }
         ],
@@ -81,7 +81,7 @@
           {
             "ip": "2a02:568:0:2::53",
             "asn": 31529,
-            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_org": "DENIC-ANYCAST-AS DENIC eG",
             "as_country": "DE"
           }
         ]
@@ -92,7 +92,7 @@
           {
             "ip": "77.67.63.105",
             "asn": 3257,
-            "as_org": "GTT-BACKBONE GTT",
+            "as_org": "GTT-BACKBONE GTT Communications Inc.",
             "as_country": "US"
           }
         ],
@@ -100,7 +100,7 @@
           {
             "ip": "2001:668:1f:11::105",
             "asn": 3257,
-            "as_org": "GTT-BACKBONE GTT",
+            "as_org": "GTT-BACKBONE GTT Communications Inc.",
             "as_country": "US"
           }
         ]
@@ -130,7 +130,7 @@
           {
             "ip": "195.243.137.26",
             "asn": 3320,
-            "as_org": "DTAG Internet service provider operations",
+            "as_org": "DTAG Deutsche Telekom AG",
             "as_country": "DE"
           }
         ],
@@ -138,7 +138,7 @@
           {
             "ip": "2003:8:14::53",
             "asn": 3320,
-            "as_org": "DTAG Internet service provider operations",
+            "as_org": "DTAG Deutsche Telekom AG",
             "as_country": "DE"
           }
         ]
@@ -149,7 +149,7 @@
           {
             "ip": "194.246.96.1",
             "asn": 31529,
-            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_org": "DENIC-ANYCAST-AS DENIC eG",
             "as_country": "DE"
           }
         ],
@@ -157,7 +157,7 @@
           {
             "ip": "2a02:568:fe02::de",
             "asn": 31529,
-            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_org": "DENIC-ANYCAST-AS DENIC eG",
             "as_country": "DE"
           }
         ]

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -44,7 +44,7 @@
           {
             "ip": "185.108.181.191",
             "asn": 39279,
-            "as_org": "CTS-",
+            "as_org": "CTS-MD Information Technology and Cyber Security Service",
             "as_country": "MD"
           }
         ],
@@ -56,7 +56,7 @@
           {
             "ip": "185.108.181.192",
             "asn": 39279,
-            "as_org": "CTS-",
+            "as_org": "CTS-MD Information Technology and Cyber Security Service",
             "as_country": "MD"
           }
         ],
@@ -68,7 +68,7 @@
           {
             "ip": "144.217.93.2",
             "asn": 16276,
-            "as_org": "OVH",
+            "as_org": "OVH OVH SAS",
             "as_country": "FR"
           }
         ],
@@ -76,7 +76,7 @@
           {
             "ip": "2607:5300:201:3100::2f69",
             "asn": 16276,
-            "as_org": "OVH",
+            "as_org": "OVH OVH SAS",
             "as_country": "FR"
           }
         ]
@@ -87,7 +87,7 @@
           {
             "ip": "92.222.76.179",
             "asn": 16276,
-            "as_org": "OVH",
+            "as_org": "OVH OVH SAS",
             "as_country": "FR"
           }
         ],
@@ -95,7 +95,7 @@
           {
             "ip": "2001:41d0:401:3100::7162",
             "asn": 16276,
-            "as_org": "OVH",
+            "as_org": "OVH OVH SAS",
             "as_country": "FR"
           }
         ]

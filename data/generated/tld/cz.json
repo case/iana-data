@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -52,7 +52,7 @@
           {
             "ip": "194.0.12.1",
             "asn": 25192,
-            "as_org": "CZNIC-AS",
+            "as_org": "CZNIC-AS CZ.NIC, z.s.p.o.",
             "as_country": "CZ"
           }
         ],
@@ -60,7 +60,7 @@
           {
             "ip": "2001:678:f::1",
             "asn": 25192,
-            "as_org": "CZNIC-AS",
+            "as_org": "CZNIC-AS CZ.NIC, z.s.p.o.",
             "as_country": "CZ"
           }
         ]
@@ -71,7 +71,7 @@
           {
             "ip": "194.0.13.1",
             "asn": 25192,
-            "as_org": "CZNIC-AS",
+            "as_org": "CZNIC-AS CZ.NIC, z.s.p.o.",
             "as_country": "CZ"
           }
         ],
@@ -79,7 +79,7 @@
           {
             "ip": "2001:678:10::1",
             "asn": 25192,
-            "as_org": "CZNIC-AS",
+            "as_org": "CZNIC-AS CZ.NIC, z.s.p.o.",
             "as_country": "CZ"
           }
         ]
@@ -90,7 +90,7 @@
           {
             "ip": "194.0.14.1",
             "asn": 200070,
-            "as_org": "CZNIC-AS2",
+            "as_org": "CZNIC-AS2 CZ.NIC, z.s.p.o.",
             "as_country": "CZ"
           }
         ],
@@ -98,7 +98,7 @@
           {
             "ip": "2001:678:11::1",
             "asn": 200070,
-            "as_org": "CZNIC-AS2",
+            "as_org": "CZNIC-AS2 CZ.NIC, z.s.p.o.",
             "as_country": "CZ"
           }
         ]
@@ -109,7 +109,7 @@
           {
             "ip": "193.29.206.1",
             "asn": 25192,
-            "as_org": "CZNIC-AS",
+            "as_org": "CZNIC-AS CZ.NIC, z.s.p.o.",
             "as_country": "CZ"
           }
         ],
@@ -117,7 +117,7 @@
           {
             "ip": "2001:678:1::1",
             "asn": 25192,
-            "as_org": "CZNIC-AS",
+            "as_org": "CZNIC-AS CZ.NIC, z.s.p.o.",
             "as_country": "CZ"
           }
         ]

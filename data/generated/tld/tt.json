@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -53,7 +53,7 @@
           {
             "ip": "200.0.68.10",
             "asn": 61455,
-            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_org": "AS61455 - LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
             "as_country": "UY"
           }
         ],
@@ -61,7 +61,7 @@
           {
             "ip": "2801:14:a000::10",
             "asn": 61455,
-            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_org": "AS61455 - LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
             "as_country": "UY"
           }
         ]
@@ -72,7 +72,7 @@
           {
             "ip": "204.61.216.63",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -80,7 +80,7 @@
           {
             "ip": "2001:500:14:6063:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]
@@ -91,7 +91,7 @@
           {
             "ip": "193.0.9.50",
             "asn": 197000,
-            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre (RIPE NCC)",
             "as_country": "NL"
           }
         ],
@@ -99,7 +99,7 @@
           {
             "ip": "2a13:27c0:30::50",
             "asn": 197000,
-            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre (RIPE NCC)",
             "as_country": "NL"
           }
         ]

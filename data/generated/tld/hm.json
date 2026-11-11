@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -36,7 +36,7 @@
           {
             "ip": "223.252.41.82",
             "asn": 45671,
-            "as_org": "AS45671-NET-AU Wholesale Services Provider",
+            "as_org": "AS45671-NET-AU - Wholesale Services Provider",
             "as_country": "AU"
           }
         ],
@@ -48,7 +48,7 @@
           {
             "ip": "223.252.41.83",
             "asn": 45671,
-            "as_org": "AS45671-NET-AU Wholesale Services Provider",
+            "as_org": "AS45671-NET-AU - Wholesale Services Provider",
             "as_country": "AU"
           }
         ],
@@ -60,7 +60,7 @@
           {
             "ip": "128.199.180.188",
             "asn": 14061,
-            "as_org": "DIGITALOCEAN-ASN",
+            "as_org": "DIGITALOCEAN-ASN - DigitalOcean, LLC",
             "as_country": "US"
           }
         ],

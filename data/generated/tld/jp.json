@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -52,7 +52,7 @@
           {
             "ip": "203.119.1.1",
             "asn": 23774,
-            "as_org": "A-DNS-JP Japan Registry Service Co., Ltd.",
+            "as_org": "A-DNS-JP - Japan Registry Service Co., Ltd.",
             "as_country": "JP"
           }
         ],
@@ -60,7 +60,7 @@
           {
             "ip": "2001:dc4::1",
             "asn": 23774,
-            "as_org": "A-DNS-JP Japan Registry Service Co., Ltd.",
+            "as_org": "A-DNS-JP - Japan Registry Service Co., Ltd.",
             "as_country": "JP"
           }
         ]
@@ -71,7 +71,7 @@
           {
             "ip": "202.12.30.131",
             "asn": 2515,
-            "as_org": "JPNIC Japan Network Information Center",
+            "as_org": "JPNIC - Japan Network Information Center",
             "as_country": "JP"
           }
         ],
@@ -79,7 +79,7 @@
           {
             "ip": "2001:dc2::1",
             "asn": 2515,
-            "as_org": "JPNIC Japan Network Information Center",
+            "as_org": "JPNIC - Japan Network Information Center",
             "as_country": "JP"
           }
         ]
@@ -90,7 +90,7 @@
           {
             "ip": "156.154.100.5",
             "asn": 12008,
-            "as_org": "SECURITYSERVICES",
+            "as_org": "VERCARA - Vercara, LLC",
             "as_country": "US"
           }
         ],
@@ -98,7 +98,7 @@
           {
             "ip": "2001:502:ad09::5",
             "asn": 12008,
-            "as_org": "SECURITYSERVICES",
+            "as_org": "VERCARA - Vercara, LLC",
             "as_country": "US"
           }
         ]
@@ -109,7 +109,7 @@
           {
             "ip": "210.138.175.244",
             "asn": 2497,
-            "as_org": "IIJ Internet Initiative Japan Inc.",
+            "as_org": "IIJ - Internet Initiative Japan Inc.",
             "as_country": "JP"
           }
         ],
@@ -117,7 +117,7 @@
           {
             "ip": "2001:240::53",
             "asn": 2497,
-            "as_org": "IIJ Internet Initiative Japan Inc.",
+            "as_org": "IIJ - Internet Initiative Japan Inc.",
             "as_country": "JP"
           }
         ]
@@ -128,7 +128,7 @@
           {
             "ip": "192.50.43.53",
             "asn": 23634,
-            "as_org": "E-DNS-JP WIDE Project",
+            "as_org": "E-DNS-JP - WIDE Project",
             "as_country": "JP"
           }
         ],
@@ -136,7 +136,7 @@
           {
             "ip": "2001:200:c000::35",
             "asn": 23634,
-            "as_org": "E-DNS-JP WIDE Project",
+            "as_org": "E-DNS-JP - WIDE Project",
             "as_country": "JP"
           }
         ]
@@ -147,7 +147,7 @@
           {
             "ip": "150.100.6.8",
             "asn": 2907,
-            "as_org": "SINET-AS Research Organization of Information and Systems, National Institute of Informatics",
+            "as_org": "SINET-AS - Research Organization of Information and Systems, National Institute of Informatics",
             "as_country": "JP"
           }
         ],
@@ -155,7 +155,7 @@
           {
             "ip": "2001:2f8:0:100::153",
             "asn": 2907,
-            "as_org": "SINET-AS Research Organization of Information and Systems, National Institute of Informatics",
+            "as_org": "SINET-AS - Research Organization of Information and Systems, National Institute of Informatics",
             "as_country": "JP"
           }
         ]
@@ -166,7 +166,7 @@
           {
             "ip": "203.119.40.1",
             "asn": 24252,
-            "as_org": "JPRS-NAYUTA Japan Registry Service Co., Ltd.",
+            "as_org": "JPRS-NAYUTA - Japan Registry Service Co., Ltd.",
             "as_country": "JP"
           }
         ],
@@ -178,7 +178,7 @@
           {
             "ip": "161.232.72.25",
             "asn": 12041,
-            "as_org": "AS-AFILIAS1",
+            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
             "as_country": "US"
           }
         ],
@@ -186,7 +186,7 @@
           {
             "ip": "2a01:8840:1bc::25",
             "asn": 12041,
-            "as_org": "AS-AFILIAS1",
+            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
             "as_country": "US"
           }
         ]

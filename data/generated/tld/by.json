@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -44,7 +44,7 @@
           {
             "ip": "93.125.25.72",
             "asn": 60330,
-            "as_org": "BCTBY-AS",
+            "as_org": "BCTBY-AS Belarusian Cloud Technologies LLC",
             "as_country": "BY"
           }
         ],
@@ -52,7 +52,7 @@
           {
             "ip": "2a00:c827:a:2::2",
             "asn": 60330,
-            "as_org": "BCTBY-AS",
+            "as_org": "BCTBY-AS Belarusian Cloud Technologies LLC",
             "as_country": "BY"
           }
         ]
@@ -63,7 +63,7 @@
           {
             "ip": "93.125.25.73",
             "asn": 60330,
-            "as_org": "BCTBY-AS",
+            "as_org": "BCTBY-AS Belarusian Cloud Technologies LLC",
             "as_country": "BY"
           }
         ],
@@ -71,7 +71,7 @@
           {
             "ip": "2a00:c827:a:3::2",
             "asn": 60330,
-            "as_org": "BCTBY-AS",
+            "as_org": "BCTBY-AS Belarusian Cloud Technologies LLC",
             "as_country": "BY"
           }
         ]
@@ -82,7 +82,7 @@
           {
             "ip": "185.98.83.4",
             "asn": 49063,
-            "as_org": "DTLN",
+            "as_org": "DTLN Data Storage Center JSC",
             "as_country": "RU"
           }
         ],
@@ -90,7 +90,7 @@
           {
             "ip": "2a01:ba80:e:c:1::4c",
             "asn": 49063,
-            "as_org": "DTLN",
+            "as_org": "DTLN Data Storage Center JSC",
             "as_country": "RU"
           }
         ]
@@ -100,9 +100,9 @@
         "ipv4": [
           {
             "ip": "176.123.180.172",
-            "asn": 0,
-            "as_org": "Unknown",
-            "as_country": "None"
+            "asn": 57008,
+            "as_org": "ITGLOBAL-AS ITGLOBAL.COM KZ LLP",
+            "as_country": "KZ"
           }
         ],
         "ipv6": []
@@ -113,7 +113,7 @@
           {
             "ip": "31.44.5.245",
             "asn": 208951,
-            "as_org": "AS-ITGLOBALCOM ITGLOBAL.COM",
+            "as_org": "AS-ITGLOBALCOM ITGLOBAL.COM NL B.V.",
             "as_country": "NL"
           }
         ],

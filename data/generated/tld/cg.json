@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -41,7 +41,7 @@
           {
             "ip": "54.39.22.36",
             "asn": 16276,
-            "as_org": "OVH",
+            "as_org": "OVH OVH SAS",
             "as_country": "FR"
           }
         ],
@@ -49,7 +49,7 @@
           {
             "ip": "2607:5300:201:3100::2b7c",
             "asn": 16276,
-            "as_org": "OVH",
+            "as_org": "OVH OVH SAS",
             "as_country": "FR"
           }
         ]
@@ -60,7 +60,7 @@
           {
             "ip": "51.91.97.36",
             "asn": 16276,
-            "as_org": "OVH",
+            "as_org": "OVH OVH SAS",
             "as_country": "FR"
           }
         ],
@@ -68,7 +68,7 @@
           {
             "ip": "2001:41d0:404:200::6c01",
             "asn": 16276,
-            "as_org": "OVH",
+            "as_org": "OVH OVH SAS",
             "as_country": "FR"
           }
         ]
@@ -79,7 +79,7 @@
           {
             "ip": "204.61.216.155",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -87,7 +87,7 @@
           {
             "ip": "2001:500:14:6155:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]
@@ -98,7 +98,7 @@
           {
             "ip": "51.79.160.242",
             "asn": 16276,
-            "as_org": "OVH",
+            "as_org": "OVH OVH SAS",
             "as_country": "FR"
           }
         ],
@@ -106,7 +106,7 @@
           {
             "ip": "2402:1f00:8000:800::25ed",
             "asn": 16276,
-            "as_org": "OVH",
+            "as_org": "OVH OVH SAS",
             "as_country": "FR"
           }
         ]
@@ -117,7 +117,7 @@
           {
             "ip": "192.36.125.2",
             "asn": 1653,
-            "as_org": "SUNET SUNET Swedish University Network",
+            "as_org": "SUNET - Vetenskapsradet / SUNET",
             "as_country": "EU"
           }
         ],
@@ -125,7 +125,7 @@
           {
             "ip": "2001:6b0:7::2",
             "asn": 1653,
-            "as_org": "SUNET SUNET Swedish University Network",
+            "as_org": "SUNET - Vetenskapsradet / SUNET",
             "as_country": "EU"
           }
         ]

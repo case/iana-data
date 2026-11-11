@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -69,7 +69,7 @@
           {
             "ip": "203.119.2.218",
             "asn": 9735,
-            "as_org": "HKDNR-AS-AP Hong Kong Domain Name Registration Co. Ltd",
+            "as_org": "HKDNR-AS-AP - Hong Kong Domain Name Registration Co. Ltd",
             "as_country": "HK"
           }
         ],
@@ -77,7 +77,7 @@
           {
             "ip": "2001:dca:4000::cb77:2da",
             "asn": 9735,
-            "as_org": "HKDNR-AS-AP Hong Kong Domain Name Registration Co. Ltd",
+            "as_org": "HKDNR-AS-AP - Hong Kong Domain Name Registration Co. Ltd",
             "as_country": "HK"
           }
         ]
@@ -88,7 +88,7 @@
           {
             "ip": "203.119.87.218",
             "asn": 9735,
-            "as_org": "HKDNR-AS-AP Hong Kong Domain Name Registration Co. Ltd",
+            "as_org": "HKDNR-AS-AP - Hong Kong Domain Name Registration Co. Ltd",
             "as_country": "HK"
           }
         ],
@@ -96,7 +96,7 @@
           {
             "ip": "2001:dca:2000::cb77:57da",
             "asn": 9735,
-            "as_org": "HKDNR-AS-AP Hong Kong Domain Name Registration Co. Ltd",
+            "as_org": "HKDNR-AS-AP - Hong Kong Domain Name Registration Co. Ltd",
             "as_country": "HK"
           }
         ]
@@ -107,7 +107,7 @@
           {
             "ip": "125.208.49.10",
             "asn": 24151,
-            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_org": "CNNIC-CRITICAL-AP - China Internet Network Infomation Center",
             "as_country": "CN"
           }
         ],
@@ -115,7 +115,7 @@
           {
             "ip": "2001:dc7:feff::10",
             "asn": 24151,
-            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_org": "CNNIC-CRITICAL-AP - China Internet Network Infomation Center",
             "as_country": "CN"
           }
         ]
@@ -126,7 +126,7 @@
           {
             "ip": "202.12.31.53",
             "asn": 18366,
-            "as_org": "APNIC-ANYCAST APNIC ANYCAST ASN",
+            "as_org": "APNIC-ANYCAST - Asia Pacific Network Information Centre",
             "as_country": "AU"
           }
         ],
@@ -134,7 +134,7 @@
           {
             "ip": "2001:dd8:12::53",
             "asn": 18366,
-            "as_org": "APNIC-ANYCAST APNIC ANYCAST ASN",
+            "as_org": "APNIC-ANYCAST - Asia Pacific Network Information Centre",
             "as_country": "AU"
           }
         ]
@@ -145,7 +145,7 @@
           {
             "ip": "210.201.138.58",
             "asn": 9311,
-            "as_org": "HITRON-AS-AP HITRON TECHNOLOGY INC.",
+            "as_org": "HITRON-AS-AP - HITRON TECHNOLOGY INC.",
             "as_country": "TW"
           }
         ],
@@ -153,7 +153,7 @@
           {
             "ip": "2404:0:10a0::58",
             "asn": 17709,
-            "as_org": "APT Asia Pacific Telecom",
+            "as_org": "APT - Asia Pacific Telecom",
             "as_country": "TW"
           }
         ]
@@ -164,7 +164,7 @@
           {
             "ip": "204.61.216.46",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -172,7 +172,7 @@
           {
             "ip": "2001:500:14:6046:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]
@@ -183,7 +183,7 @@
           {
             "ip": "202.45.188.39",
             "asn": 4641,
-            "as_org": "HKIX-AS-AP The Hong Kong Internet Exchange Limited",
+            "as_org": "HKIX-AS-AP - The Hong Kong Internet Exchange Limited",
             "as_country": "HK"
           }
         ],
@@ -191,7 +191,7 @@
           {
             "ip": "2405:3001:1:3a::27",
             "asn": 4641,
-            "as_org": "HKIX-AS-AP The Hong Kong Internet Exchange Limited",
+            "as_org": "HKIX-AS-AP - The Hong Kong Internet Exchange Limited",
             "as_country": "HK"
           }
         ]
@@ -202,7 +202,7 @@
           {
             "ip": "137.189.6.21",
             "asn": 3661,
-            "as_org": "ERX-CUHKNET The Chinese University of Hong Kong",
+            "as_org": "ERX-CUHKNET - The Chinese University of Hong Kong",
             "as_country": "HK"
           }
         ],
@@ -210,7 +210,7 @@
           {
             "ip": "2405:3000:3:6::15",
             "asn": 3661,
-            "as_org": "ERX-CUHKNET The Chinese University of Hong Kong",
+            "as_org": "ERX-CUHKNET - The Chinese University of Hong Kong",
             "as_country": "HK"
           }
         ]

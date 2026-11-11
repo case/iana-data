@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -44,7 +44,7 @@
           {
             "ip": "194.183.64.11",
             "asn": 15433,
-            "as_org": "TISM Telecom Italia San Marino.",
+            "as_org": "Tism Telecom Italia San Marino S.p.A",
             "as_country": "SM"
           }
         ],
@@ -56,7 +56,7 @@
           {
             "ip": "194.183.64.10",
             "asn": 15433,
-            "as_org": "TISM Telecom Italia San Marino.",
+            "as_org": "Tism Telecom Italia San Marino S.p.A",
             "as_country": "SM"
           }
         ],
@@ -68,7 +68,7 @@
           {
             "ip": "194.0.27.12",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -76,7 +76,7 @@
           {
             "ip": "2001:678:28:0:c2:b7:40:12",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]
@@ -87,7 +87,7 @@
           {
             "ip": "193.0.9.110",
             "asn": 197000,
-            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre (RIPE NCC)",
             "as_country": "NL"
           }
         ],
@@ -95,7 +95,7 @@
           {
             "ip": "2a13:27c0:30::110",
             "asn": 197000,
-            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre (RIPE NCC)",
             "as_country": "NL"
           }
         ]

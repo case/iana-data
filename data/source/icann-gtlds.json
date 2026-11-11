@@ -3009,7 +3009,7 @@
     "delegationDate" : "2014-03-19",
     "gTLD" : "cologne",
     "registryClassDomainNameList" : null,
-    "registryOperator" : "dotKoeln GmbH",
+    "registryOperator" : "domainworx Service & Management GmbH",
     "registryOperatorCountryCode" : null,
     "removalDate" : null,
     "specification13" : false,
@@ -6209,7 +6209,7 @@
     "registryClassDomainNameList" : null,
     "registryOperator" : "City of Helsinki",
     "registryOperatorCountryCode" : null,
-    "removalDate" : null,
+    "removalDate" : "2026-10-28",
     "specification13" : false,
     "thirdOrLowerLevelRegistration" : false,
     "uLabel" : null
@@ -7353,7 +7353,7 @@
     "registryClassDomainNameList" : null,
     "registryOperator" : "JUNIPER NETWORKS, INC.",
     "registryOperatorCountryCode" : null,
-    "removalDate" : null,
+    "removalDate" : "2026-09-30",
     "specification13" : true,
     "thirdOrLowerLevelRegistration" : false,
     "uLabel" : null
@@ -7533,7 +7533,7 @@
     "delegationDate" : "2014-03-05",
     "gTLD" : "koeln",
     "registryClassDomainNameList" : null,
-    "registryOperator" : "dotKoeln GmbH",
+    "registryOperator" : "domainworx Service & Management GmbH",
     "registryOperatorCountryCode" : null,
     "removalDate" : null,
     "specification13" : false,
@@ -12876,7 +12876,7 @@
     "delegationDate" : "2015-12-22",
     "gTLD" : "star",
     "registryClassDomainNameList" : null,
-    "registryOperator" : "Star India Private Limited",
+    "registryOperator" : "JioStar India Private Limited",
     "registryOperatorCountryCode" : null,
     "removalDate" : null,
     "specification13" : false,
@@ -16588,6 +16588,6 @@
     "thirdOrLowerLevelRegistration" : false,
     "uLabel" : null
   } ],
-  "updatedOn" : "2026-09-28T02:10:40.244+0000",
+  "updatedOn" : "2026-11-11T21:46:47.992+0000",
   "version" : 2
 }

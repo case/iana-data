@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -56,7 +56,7 @@
           {
             "ip": "203.119.25.1",
             "asn": 24151,
-            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_org": "CNNIC-CRITICAL-AP - China Internet Network Infomation Center",
             "as_country": "CN"
           }
         ],
@@ -64,7 +64,7 @@
           {
             "ip": "2001:dc7::1",
             "asn": 24409,
-            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_org": "CNNIC-CRITICAL-AP - China Internet Network Infomation Center",
             "as_country": "CN"
           }
         ]
@@ -74,8 +74,8 @@
         "ipv4": [
           {
             "ip": "203.119.26.1",
-            "asn": 24406,
-            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "asn": 24151,
+            "as_org": "CNNIC-CRITICAL-AP - China Internet Network Infomation Center",
             "as_country": "CN"
           }
         ],
@@ -83,7 +83,7 @@
           {
             "ip": "2001:dc7:1::1",
             "asn": 24409,
-            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_org": "CNNIC-CRITICAL-AP - China Internet Network Infomation Center",
             "as_country": "CN"
           }
         ]
@@ -94,7 +94,7 @@
           {
             "ip": "203.119.27.1",
             "asn": 24406,
-            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_org": "CNNIC-CRITICAL-AP - China Internet Network Infomation Center",
             "as_country": "CN"
           }
         ],
@@ -102,7 +102,7 @@
           {
             "ip": "2001:dc7:2::1",
             "asn": 24151,
-            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_org": "CNNIC-CRITICAL-AP - China Internet Network Infomation Center",
             "as_country": "CN"
           }
         ]
@@ -113,7 +113,7 @@
           {
             "ip": "203.119.28.1",
             "asn": 24409,
-            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_org": "CNNIC-CRITICAL-AP - China Internet Network Infomation Center",
             "as_country": "CN"
           }
         ],
@@ -121,7 +121,7 @@
           {
             "ip": "2001:dc7:1000::1",
             "asn": 24409,
-            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_org": "CNNIC-CRITICAL-AP - China Internet Network Infomation Center",
             "as_country": "CN"
           }
         ]
@@ -131,8 +131,8 @@
         "ipv4": [
           {
             "ip": "203.119.29.1",
-            "asn": 24406,
-            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "asn": 24151,
+            "as_org": "CNNIC-CRITICAL-AP - China Internet Network Infomation Center",
             "as_country": "CN"
           }
         ],
@@ -140,7 +140,7 @@
           {
             "ip": "2001:dc7:3::1",
             "asn": 24151,
-            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_org": "CNNIC-CRITICAL-AP - China Internet Network Infomation Center",
             "as_country": "CN"
           }
         ]
@@ -151,7 +151,7 @@
           {
             "ip": "202.112.0.44",
             "asn": 4538,
-            "as_org": "ERX-CERNET-BKB China Education and Research Network Center",
+            "as_org": "ERX-CERNET-BKB - China Education and Research Network Center",
             "as_country": "CN"
           }
         ],

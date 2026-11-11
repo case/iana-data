@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -47,7 +47,7 @@
           {
             "ip": "200.0.68.10",
             "asn": 61455,
-            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_org": "AS61455 - LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
             "as_country": "UY"
           }
         ],
@@ -55,7 +55,7 @@
           {
             "ip": "2801:14:a000::10",
             "asn": 61455,
-            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_org": "AS61455 - LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
             "as_country": "UY"
           }
         ]
@@ -66,7 +66,7 @@
           {
             "ip": "168.243.17.2",
             "asn": 271966,
-            "as_org": "Red Avanzada de Investigacion, Ciencia y Educacion Salvadorena",
+            "as_org": "AS271966 - Red Avanzada de Investigacion, Ciencia y Educacion Salvadorena",
             "as_country": "SV"
           }
         ],
@@ -78,7 +78,7 @@
           {
             "ip": "200.160.0.5",
             "asn": 22548,
-            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_org": "AS22548 - Nucleo de Inf. e Coord. do Ponto BR - NIC.BR",
             "as_country": "BR"
           }
         ],
@@ -86,7 +86,7 @@
           {
             "ip": "2001:12ff:0:a20::5",
             "asn": 22548,
-            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_org": "AS22548 - Nucleo de Inf. e Coord. do Ponto BR - NIC.BR",
             "as_country": "BR"
           }
         ]
@@ -97,7 +97,7 @@
           {
             "ip": "200.107.82.38",
             "asn": 263779,
-            "as_org": "Academia Nacional de Ciencias",
+            "as_org": "AS263779 - Academia Nacional de Ciencias",
             "as_country": "CR"
           }
         ],
@@ -105,7 +105,7 @@
           {
             "ip": "2001:13c7:7004:1::38",
             "asn": 263779,
-            "as_org": "Academia Nacional de Ciencias",
+            "as_org": "AS263779 - Academia Nacional de Ciencias",
             "as_country": "CR"
           }
         ]
@@ -116,7 +116,7 @@
           {
             "ip": "204.61.216.112",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -124,7 +124,7 @@
           {
             "ip": "2001:500:14:6112:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]
@@ -135,7 +135,7 @@
           {
             "ip": "131.100.140.162",
             "asn": 26617,
-            "as_org": "Navega.com S.A.",
+            "as_org": "AS26617 - Navega.com S.A.",
             "as_country": "GT"
           }
         ],

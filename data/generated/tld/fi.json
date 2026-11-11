@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -62,7 +62,7 @@
           {
             "ip": "193.166.4.1",
             "asn": 1741,
-            "as_org": "FUNETAS",
+            "as_org": "FUNETAS CSC - Tieteen tietotekniikan keskus Oy",
             "as_country": "FI"
           }
         ],
@@ -70,7 +70,7 @@
           {
             "ip": "2001:708:10:53::53",
             "asn": 1741,
-            "as_org": "FUNETAS",
+            "as_org": "FUNETAS CSC - Tieteen tietotekniikan keskus Oy",
             "as_country": "FI"
           }
         ]
@@ -100,7 +100,7 @@
           {
             "ip": "194.0.11.104",
             "asn": 31529,
-            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_org": "DENIC-ANYCAST-AS DENIC eG",
             "as_country": "DE"
           }
         ],
@@ -108,7 +108,7 @@
           {
             "ip": "2001:678:e:104::53",
             "asn": 31529,
-            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_org": "DENIC-ANYCAST-AS DENIC eG",
             "as_country": "DE"
           }
         ]
@@ -138,7 +138,7 @@
           {
             "ip": "194.0.1.14",
             "asn": 42909,
-            "as_org": "COMMUNITYDNS",
+            "as_org": "COMMUNITYDNS Community DNS Limited",
             "as_country": "GB"
           }
         ],
@@ -146,7 +146,7 @@
           {
             "ip": "2001:678:4::e",
             "asn": 42909,
-            "as_org": "COMMUNITYDNS",
+            "as_org": "COMMUNITYDNS Community DNS Limited",
             "as_country": "GB"
           }
         ]
@@ -157,7 +157,7 @@
           {
             "ip": "80.248.170.230",
             "asn": 24713,
-            "as_org": "CGI-FINLAND",
+            "as_org": "CGI-Finland CGI Suomi Oy",
             "as_country": "FI"
           }
         ],
@@ -165,7 +165,7 @@
           {
             "ip": "2a03:d640:100:1::6",
             "asn": 24713,
-            "as_org": "CGI-FINLAND",
+            "as_org": "CGI-Finland CGI Suomi Oy",
             "as_country": "FI"
           }
         ]
@@ -176,7 +176,7 @@
           {
             "ip": "204.61.216.98",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -184,7 +184,7 @@
           {
             "ip": "2001:500:14:6098:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]
@@ -195,7 +195,7 @@
           {
             "ip": "194.0.25.30",
             "asn": 1921,
-            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD ipcom GmbH",
             "as_country": "AT"
           }
         ],
@@ -203,7 +203,7 @@
           {
             "ip": "2001:678:20::30",
             "asn": 1921,
-            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD ipcom GmbH",
             "as_country": "AT"
           }
         ]
@@ -214,7 +214,7 @@
           {
             "ip": "185.159.199.190",
             "asn": 396501,
-            "as_org": "CIRA-5",
+            "as_org": "CIRA-5 - CIRA Canadian Internet Registration Authority Autorit Canadienne pour les enregistrements Internet",
             "as_country": "CA"
           }
         ],
@@ -222,7 +222,7 @@
           {
             "ip": "2620:10a:80ac::190",
             "asn": 396501,
-            "as_org": "CIRA-5",
+            "as_org": "CIRA-5 - CIRA Canadian Internet Registration Authority Autorit Canadienne pour les enregistrements Internet",
             "as_country": "CA"
           }
         ]
@@ -233,7 +233,7 @@
           {
             "ip": "213.186.229.226",
             "asn": 16086,
-            "as_org": "DNA",
+            "as_org": "DNA DNA Oyj",
             "as_country": "FI"
           }
         ],
@@ -241,7 +241,7 @@
           {
             "ip": "2001:14b8:188d::53",
             "asn": 16086,
-            "as_org": "DNA",
+            "as_org": "DNA DNA Oyj",
             "as_country": "FI"
           }
         ]

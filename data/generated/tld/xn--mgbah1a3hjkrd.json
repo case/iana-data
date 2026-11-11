@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -36,12 +36,10 @@
       "iana_translation_en": "Mauritania",
       "iana_transliteration": "muritania",
       "as_org_aliases": [
-        "AFNIC.fr",
         "AFRINIC",
         "Packet Clearing House"
       ],
       "as_org_slugs": [
-        "afnic",
         "afrinic",
         "packet-clearing-house"
       ],
@@ -65,7 +63,7 @@
           {
             "ip": "196.216.168.53",
             "asn": 37177,
-            "as_org": "AFRINIC-ANYCAST",
+            "as_org": "African Network Information Center - (AfriNIC) Ltd - African Network Information Center - (AfriNIC) Ltd",
             "as_country": "MU"
           }
         ],
@@ -73,7 +71,7 @@
           {
             "ip": "2001:43f8:120::53",
             "asn": 37177,
-            "as_org": "AFRINIC-ANYCAST",
+            "as_org": "African Network Information Center - (AfriNIC) Ltd - African Network Information Center - (AfriNIC) Ltd",
             "as_country": "MU"
           }
         ]
@@ -83,8 +81,8 @@
         "ipv4": [
           {
             "ip": "194.0.9.1",
-            "asn": 2486,
-            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "asn": 2484,
+            "as_org": "NIC-FR-DNS-ANYCAST-AFNIC - AFNIC (Association Francaise pour le Nommage Internet en Cooperation)",
             "as_country": "FR"
           }
         ],
@@ -92,7 +90,7 @@
           {
             "ip": "2001:678:c::1",
             "asn": 2484,
-            "as_org": "NIC-FR-DNS-ANYCAST-AFNIC AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_org": "NIC-FR-DNS-ANYCAST-AFNIC - AFNIC (Association Francaise pour le Nommage Internet en Cooperation)",
             "as_country": "FR"
           }
         ]
@@ -103,7 +101,7 @@
           {
             "ip": "193.146.150.193",
             "asn": 766,
-            "as_org": "REDIRIS RedIRIS Autonomous System",
+            "as_org": "RedIRIS Entidad Publica Empresarial Red.es",
             "as_country": "ES"
           }
         ],
@@ -115,7 +113,7 @@
           {
             "ip": "82.151.64.2",
             "asn": 29544,
-            "as_org": "MAURITEL",
+            "as_org": "Mauritanian Telecommunication Company - Mauritanian Telecommunication Company",
             "as_country": "MR"
           }
         ],
@@ -127,7 +125,7 @@
           {
             "ip": "204.61.216.135",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -135,7 +133,7 @@
           {
             "ip": "2001:500:14:6135:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]

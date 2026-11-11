@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -54,7 +54,7 @@
           {
             "ip": "193.163.102.222",
             "asn": 39839,
-            "as_org": "DK-PUNKTUM The .DK TLD Registry",
+            "as_org": "DK-PUNKTUM Punktum dk A/S",
             "as_country": "DK"
           }
         ],
@@ -62,7 +62,7 @@
           {
             "ip": "2a01:630:0:80::53",
             "asn": 39839,
-            "as_org": "DK-PUNKTUM The .DK TLD Registry",
+            "as_org": "DK-PUNKTUM Punktum dk A/S",
             "as_country": "DK"
           }
         ]
@@ -73,7 +73,7 @@
           {
             "ip": "185.159.199.45",
             "asn": 396501,
-            "as_org": "CIRA-5",
+            "as_org": "CIRA-5 - CIRA Canadian Internet Registration Authority Autorit Canadienne pour les enregistrements Internet",
             "as_country": "CA"
           }
         ],
@@ -81,7 +81,7 @@
           {
             "ip": "2620:10a:80ac::45",
             "asn": 396501,
-            "as_org": "CIRA-5",
+            "as_org": "CIRA-5 - CIRA Canadian Internet Registration Authority Autorit Canadienne pour les enregistrements Internet",
             "as_country": "CA"
           }
         ]
@@ -92,7 +92,7 @@
           {
             "ip": "46.30.126.214",
             "asn": 47527,
-            "as_org": "DLX-AS",
+            "as_org": "DLX-AS DLX A/S",
             "as_country": "DK"
           }
         ],
@@ -100,7 +100,7 @@
           {
             "ip": "2a00:1b18:1:2::53",
             "asn": 47527,
-            "as_org": "DLX-AS",
+            "as_org": "DLX-AS DLX A/S",
             "as_country": "DK"
           }
         ]
@@ -111,7 +111,7 @@
           {
             "ip": "130.226.213.138",
             "asn": 1835,
-            "as_org": "FSKNET-DK Forskningsnettet - Danish network for Research and Education",
+            "as_org": "FSKNET-DK - IDDQD-AS",
             "as_country": "EU"
           }
         ],
@@ -119,7 +119,7 @@
           {
             "ip": "2001:878:0:e000:82:e2:d5:8a",
             "asn": 1835,
-            "as_org": "FSKNET-DK Forskningsnettet - Danish network for Research and Education",
+            "as_org": "FSKNET-DK - IDDQD-AS",
             "as_country": "EU"
           }
         ]
@@ -130,7 +130,7 @@
           {
             "ip": "194.0.28.7",
             "asn": 48283,
-            "as_org": "SIDN-ANYCAST",
+            "as_org": "SIDN-ANYCAST Stichting Internet Domeinregistratie Nederland",
             "as_country": "NL"
           }
         ],
@@ -138,7 +138,7 @@
           {
             "ip": "2001:678:2c:0:194:0:28:7",
             "asn": 48283,
-            "as_org": "SIDN-ANYCAST",
+            "as_org": "SIDN-ANYCAST Stichting Internet Domeinregistratie Nederland",
             "as_country": "NL"
           }
         ]
@@ -149,7 +149,7 @@
           {
             "ip": "185.43.134.16",
             "asn": 25192,
-            "as_org": "CZNIC-AS",
+            "as_org": "CZNIC-AS CZ.NIC, z.s.p.o.",
             "as_country": "CZ"
           }
         ],
@@ -157,7 +157,7 @@
           {
             "ip": "2001:148f:fffd::16",
             "asn": 25192,
-            "as_org": "CZNIC-AS",
+            "as_org": "CZNIC-AS CZ.NIC, z.s.p.o.",
             "as_country": "CZ"
           }
         ]

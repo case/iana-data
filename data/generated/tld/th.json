@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -56,7 +56,7 @@
           {
             "ip": "122.155.23.64",
             "asn": 9335,
-            "as_org": "CAT-CLOUD-AP CAT Telecom Public Company Limited",
+            "as_org": "NTPCL-AS-AP - National Telecom Public Company Limited",
             "as_country": "TH"
           }
         ],
@@ -64,7 +64,7 @@
           {
             "ip": "2001:c38:2000:183::30",
             "asn": 9335,
-            "as_org": "CAT-CLOUD-AP CAT Telecom Public Company Limited",
+            "as_org": "NTPCL-AS-AP - National Telecom Public Company Limited",
             "as_country": "TH"
           }
         ]
@@ -75,7 +75,7 @@
           {
             "ip": "203.159.64.64",
             "asn": 142437,
-            "as_org": "TNSCL-AS-AP Thai Name Server Co., Ltd.",
+            "as_org": "TNSCL-AS-AP - Thai Name Server Co., Ltd.",
             "as_country": "TH"
           }
         ],
@@ -83,7 +83,7 @@
           {
             "ip": "2405:3340:e011:3000::30",
             "asn": 142437,
-            "as_org": "TNSCL-AS-AP Thai Name Server Co., Ltd.",
+            "as_org": "TNSCL-AS-AP - Thai Name Server Co., Ltd.",
             "as_country": "TH"
           }
         ]
@@ -94,7 +94,7 @@
           {
             "ip": "194.0.1.28",
             "asn": 42909,
-            "as_org": "COMMUNITYDNS",
+            "as_org": "COMMUNITYDNS Community DNS Limited",
             "as_country": "GB"
           }
         ],
@@ -102,7 +102,7 @@
           {
             "ip": "2001:678:4::1c",
             "asn": 42909,
-            "as_org": "COMMUNITYDNS",
+            "as_org": "COMMUNITYDNS Community DNS Limited",
             "as_country": "GB"
           }
         ]
@@ -132,7 +132,7 @@
           {
             "ip": "202.28.0.1",
             "asn": 4621,
-            "as_org": "UNINET-AS-AP UNINET-",
+            "as_org": "UNINET-AS-AP - UNINET-TH",
             "as_country": "TH"
           }
         ],
@@ -144,7 +144,7 @@
           {
             "ip": "204.61.216.126",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -152,7 +152,7 @@
           {
             "ip": "2001:500:14:6126:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]

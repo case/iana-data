@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -57,7 +57,7 @@
           {
             "ip": "194.0.1.18",
             "asn": 42909,
-            "as_org": "COMMUNITYDNS",
+            "as_org": "COMMUNITYDNS Community DNS Limited",
             "as_country": "GB"
           }
         ],
@@ -65,7 +65,7 @@
           {
             "ip": "2001:678:4::12",
             "asn": 42909,
-            "as_org": "COMMUNITYDNS",
+            "as_org": "COMMUNITYDNS Community DNS Limited",
             "as_country": "GB"
           }
         ]
@@ -76,7 +76,7 @@
           {
             "ip": "203.119.73.105",
             "asn": 23902,
-            "as_org": "VNNIC-AS-VN Vietnam Internet network information center VNNIC",
+            "as_org": "VNNIC-AS-VN - Vietnam Internet network information center (VNNIC)",
             "as_country": "VN"
           }
         ],
@@ -84,7 +84,7 @@
           {
             "ip": "2001:dc8:1:2::105",
             "asn": 23902,
-            "as_org": "VNNIC-AS-VN Vietnam Internet network information center VNNIC",
+            "as_org": "VNNIC-AS-VN - Vietnam Internet network information center (VNNIC)",
             "as_country": "VN"
           }
         ]
@@ -95,7 +95,7 @@
           {
             "ip": "203.119.38.105",
             "asn": 24066,
-            "as_org": "VNNIC-AS-VN Vietnam Internet Network Information Center",
+            "as_org": "VNNIC-AS-VN - Vietnam Internet Network Information Center",
             "as_country": "VN"
           }
         ],
@@ -103,7 +103,7 @@
           {
             "ip": "2001:dc8:c000:7::105",
             "asn": 24066,
-            "as_org": "VNNIC-AS-VN Vietnam Internet Network Information Center",
+            "as_org": "VNNIC-AS-VN - Vietnam Internet Network Information Center",
             "as_country": "VN"
           }
         ]
@@ -114,7 +114,7 @@
           {
             "ip": "203.119.44.105",
             "asn": 24089,
-            "as_org": "VNNIC-AS-AP Vietnam Internet Network Information Center",
+            "as_org": "VNNIC-AS-AP - Vietnam Internet Network Information Center",
             "as_country": "VN"
           }
         ],
@@ -122,7 +122,7 @@
           {
             "ip": "2001:dc8:8000:2::105",
             "asn": 24089,
-            "as_org": "VNNIC-AS-AP Vietnam Internet Network Information Center",
+            "as_org": "VNNIC-AS-AP - Vietnam Internet Network Information Center",
             "as_country": "VN"
           }
         ]
@@ -133,7 +133,7 @@
           {
             "ip": "203.119.60.105",
             "asn": 38736,
-            "as_org": "VNNIC-AS-VN Vietnam Internet network information center VNNIC",
+            "as_org": "VNNIC-AS-VN - Vietnam Internet network information center (VNNIC)",
             "as_country": "VN"
           }
         ],
@@ -141,7 +141,7 @@
           {
             "ip": "2001:dc8:1000:2::105",
             "asn": 38736,
-            "as_org": "VNNIC-AS-VN Vietnam Internet network information center VNNIC",
+            "as_org": "VNNIC-AS-VN - Vietnam Internet network information center (VNNIC)",
             "as_country": "VN"
           }
         ]
@@ -152,7 +152,7 @@
           {
             "ip": "203.119.68.105",
             "asn": 38737,
-            "as_org": "VNNIC-AS-VN Vietnam Internet network information center VNNIC",
+            "as_org": "VNNIC-AS-VN - Vietnam Internet network information center (VNNIC)",
             "as_country": "VN"
           }
         ],
@@ -160,7 +160,7 @@
           {
             "ip": "2001:dc8:d000:2::105",
             "asn": 38737,
-            "as_org": "VNNIC-AS-VN Vietnam Internet network information center VNNIC",
+            "as_org": "VNNIC-AS-VN - Vietnam Internet network information center (VNNIC)",
             "as_country": "VN"
           }
         ]
@@ -171,7 +171,7 @@
           {
             "ip": "204.61.216.115",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -179,7 +179,7 @@
           {
             "ip": "2001:500:14:6115:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]
@@ -190,7 +190,7 @@
           {
             "ip": "202.47.142.105",
             "asn": 45554,
-            "as_org": "VNNICANYCASTDNS-AS-VN Vietnam Internet network information center VNNIC",
+            "as_org": "VNNICANYCASTDNS-AS-VN - Vietnam Internet network information center (VNNIC)",
             "as_country": "VN"
           }
         ],
@@ -198,7 +198,7 @@
           {
             "ip": "2001:dc8:6000::105",
             "asn": 45554,
-            "as_org": "VNNICANYCASTDNS-AS-VN Vietnam Internet network information center VNNIC",
+            "as_org": "VNNICANYCASTDNS-AS-VN - Vietnam Internet network information center (VNNIC)",
             "as_country": "VN"
           }
         ]

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -46,7 +46,7 @@
           {
             "ip": "153.5.81.140",
             "asn": 2107,
-            "as_org": "ARNES-NET Academic and Research Network of Slovenia",
+            "as_org": "ARNES-NET ARNES",
             "as_country": "SI"
           }
         ],
@@ -54,7 +54,7 @@
           {
             "ip": "2001:1470:8000:53::44",
             "asn": 2107,
-            "as_org": "ARNES-NET Academic and Research Network of Slovenia",
+            "as_org": "ARNES-NET ARNES",
             "as_country": "SI"
           }
         ]
@@ -65,7 +65,7 @@
           {
             "ip": "78.104.145.4",
             "asn": 1120,
-            "as_org": "ACONET_SERVICES ACOnet Services @ Vienna Internet eXchange",
+            "as_org": "ACOnet_Services - ACONET",
             "as_country": "EU"
           }
         ],
@@ -73,7 +73,7 @@
           {
             "ip": "2001:628:453:bb::4",
             "asn": 1120,
-            "as_org": "ACONET_SERVICES ACOnet Services @ Vienna Internet eXchange",
+            "as_org": "ACOnet_Services - ACONET",
             "as_country": "EU"
           }
         ]
@@ -84,7 +84,7 @@
           {
             "ip": "185.43.134.12",
             "asn": 25192,
-            "as_org": "CZNIC-AS",
+            "as_org": "CZNIC-AS CZ.NIC, z.s.p.o.",
             "as_country": "CZ"
           }
         ],
@@ -92,7 +92,7 @@
           {
             "ip": "2001:148f:fffd::12",
             "asn": 25192,
-            "as_org": "CZNIC-AS",
+            "as_org": "CZNIC-AS CZ.NIC, z.s.p.o.",
             "as_country": "CZ"
           }
         ]
@@ -103,7 +103,7 @@
           {
             "ip": "194.149.137.168",
             "asn": 52188,
-            "as_org": "MK-UKIM-FCSE",
+            "as_org": "MK-UKIM-FCSE Univerzitet \"Sv. Kiril i Metodij\"",
             "as_country": "MK"
           }
         ],

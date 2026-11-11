@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -65,7 +65,7 @@
           {
             "ip": "128.139.35.5",
             "asn": 378,
-            "as_org": "MACHBA-AS ILAN",
+            "as_org": "MACHBA-AS IUCC - Israel InterUniversity Computation Center",
             "as_country": "IL"
           }
         ],
@@ -77,7 +77,7 @@
           {
             "ip": "128.139.34.240",
             "asn": 378,
-            "as_org": "MACHBA-AS ILAN",
+            "as_org": "MACHBA-AS IUCC - Israel InterUniversity Computation Center",
             "as_country": "IL"
           }
         ],
@@ -85,7 +85,7 @@
           {
             "ip": "2001:bf8:900:6::808b:22f0",
             "asn": 378,
-            "as_org": "MACHBA-AS ILAN",
+            "as_org": "MACHBA-AS IUCC - Israel InterUniversity Computation Center",
             "as_country": "IL"
           }
         ]
@@ -115,7 +115,7 @@
           {
             "ip": "194.0.11.103",
             "asn": 31529,
-            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_org": "DENIC-ANYCAST-AS DENIC eG",
             "as_country": "DE"
           }
         ],
@@ -123,7 +123,7 @@
           {
             "ip": "2001:678:e:103::53",
             "asn": 31529,
-            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_org": "DENIC-ANYCAST-AS DENIC eG",
             "as_country": "DE"
           }
         ]
@@ -134,7 +134,7 @@
           {
             "ip": "204.61.216.134",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -142,7 +142,7 @@
           {
             "ip": "2001:500:14:6134:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]
@@ -153,7 +153,7 @@
           {
             "ip": "192.115.7.53",
             "asn": 31391,
-            "as_org": "ISOC-IL-AS",
+            "as_org": "ISOC-IL-AS Israel Internet Association",
             "as_country": "IL"
           }
         ],
@@ -161,7 +161,7 @@
           {
             "ip": "2a01:4280:7::53",
             "asn": 31391,
-            "as_org": "ISOC-IL-AS",
+            "as_org": "ISOC-IL-AS Israel Internet Association",
             "as_country": "IL"
           }
         ]
@@ -172,7 +172,7 @@
           {
             "ip": "192.115.7.60",
             "asn": 31391,
-            "as_org": "ISOC-IL-AS",
+            "as_org": "ISOC-IL-AS Israel Internet Association",
             "as_country": "IL"
           }
         ],
@@ -180,7 +180,7 @@
           {
             "ip": "2a01:4280:7::60",
             "asn": 31391,
-            "as_org": "ISOC-IL-AS",
+            "as_org": "ISOC-IL-AS Israel Internet Association",
             "as_country": "IL"
           }
         ]
@@ -191,7 +191,7 @@
           {
             "ip": "192.115.4.235",
             "asn": 31391,
-            "as_org": "ISOC-IL-AS",
+            "as_org": "ISOC-IL-AS Israel Internet Association",
             "as_country": "IL"
           }
         ],

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -35,7 +35,7 @@
           {
             "ip": "71.163.249.97",
             "asn": 701,
-            "as_org": "UUNET",
+            "as_org": "UUNET - Verizon Business",
             "as_country": "US"
           }
         ],
@@ -47,7 +47,7 @@
           {
             "ip": "117.103.88.33",
             "asn": 24439,
-            "as_org": "NTAMAR-AS-AP MARSHALL ISLANDS NTA ISP AS",
+            "as_org": "NTAMAR-AS-AP - MARSHALL ISLANDS NTA ISP AS",
             "as_country": "MH"
           }
         ],

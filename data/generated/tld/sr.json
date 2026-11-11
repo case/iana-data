@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -46,7 +46,7 @@
           {
             "ip": "168.195.219.210",
             "asn": 263799,
-            "as_org": "CARIBBEAN COMMUNICATION SERVICES",
+            "as_org": "AS263799 - CARIBBEAN COMMUNICATION SERVICES",
             "as_country": "SR"
           }
         ],
@@ -54,7 +54,7 @@
           {
             "ip": "2803:ff40:a251:0:168:195:219:2",
             "asn": 263799,
-            "as_org": "CARIBBEAN COMMUNICATION SERVICES",
+            "as_org": "AS263799 - CARIBBEAN COMMUNICATION SERVICES",
             "as_country": "SR"
           }
         ]
@@ -65,7 +65,7 @@
           {
             "ip": "168.195.216.214",
             "asn": 263799,
-            "as_org": "CARIBBEAN COMMUNICATION SERVICES",
+            "as_org": "AS263799 - CARIBBEAN COMMUNICATION SERVICES",
             "as_country": "SR"
           }
         ],
@@ -73,7 +73,7 @@
           {
             "ip": "2803:ff40:a000:2501:168:195:216:2",
             "asn": 263799,
-            "as_org": "CARIBBEAN COMMUNICATION SERVICES",
+            "as_org": "AS263799 - CARIBBEAN COMMUNICATION SERVICES",
             "as_country": "SR"
           }
         ]
@@ -84,7 +84,7 @@
           {
             "ip": "45.83.205.134",
             "asn": 211588,
-            "as_org": "XYPHEN",
+            "as_org": "XYPHEN Innovation Harbor B.V.",
             "as_country": "NL"
           }
         ],
@@ -92,7 +92,7 @@
           {
             "ip": "2a0f:ff40:100:3112:2d53:cd87::",
             "asn": 211588,
-            "as_org": "XYPHEN",
+            "as_org": "XYPHEN Innovation Harbor B.V.",
             "as_country": "NL"
           }
         ]

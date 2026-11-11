@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -47,7 +47,7 @@
           {
             "ip": "199.252.157.234",
             "asn": 721,
-            "as_org": "DNIC-ASBLK-00721-00726",
+            "as_org": "DNIC-ASBLK-00721-00726 - United States Department of Defense (DoD)",
             "as_country": "US"
           }
         ],
@@ -55,7 +55,7 @@
           {
             "ip": "2608:140:c:157::234",
             "asn": 5927,
-            "as_org": "DNIC-ASBLK-05800-06055",
+            "as_org": "DNIC-ASBLK-05800-06055 - United States Department of Defense (DoD)",
             "as_country": "US"
           }
         ]
@@ -66,7 +66,7 @@
           {
             "ip": "199.252.162.234",
             "asn": 721,
-            "as_org": "DNIC-ASBLK-00721-00726",
+            "as_org": "DNIC-ASBLK-00721-00726 - United States Department of Defense (DoD)",
             "as_country": "US"
           }
         ],
@@ -74,7 +74,7 @@
           {
             "ip": "2608:120:c:162::234",
             "asn": 5927,
-            "as_org": "DNIC-ASBLK-05800-06055",
+            "as_org": "DNIC-ASBLK-05800-06055 - United States Department of Defense (DoD)",
             "as_country": "US"
           }
         ]
@@ -85,7 +85,7 @@
           {
             "ip": "199.252.154.234",
             "asn": 721,
-            "as_org": "DNIC-ASBLK-00721-00726",
+            "as_org": "DNIC-ASBLK-00721-00726 - United States Department of Defense (DoD)",
             "as_country": "US"
           }
         ],
@@ -93,7 +93,7 @@
           {
             "ip": "2608:4122:2:154::234",
             "asn": 5927,
-            "as_org": "DNIC-ASBLK-05800-06055",
+            "as_org": "DNIC-ASBLK-05800-06055 - United States Department of Defense (DoD)",
             "as_country": "US"
           }
         ]
@@ -104,7 +104,7 @@
           {
             "ip": "199.252.143.234",
             "asn": 721,
-            "as_org": "DNIC-ASBLK-00721-00726",
+            "as_org": "DNIC-ASBLK-00721-00726 - United States Department of Defense (DoD)",
             "as_country": "US"
           }
         ],
@@ -112,7 +112,7 @@
           {
             "ip": "2608:4163:1:143::234",
             "asn": 5927,
-            "as_org": "DNIC-ASBLK-05800-06055",
+            "as_org": "DNIC-ASBLK-05800-06055 - United States Department of Defense (DoD)",
             "as_country": "US"
           }
         ]
@@ -123,7 +123,7 @@
           {
             "ip": "199.252.180.234",
             "asn": 721,
-            "as_org": "DNIC-ASBLK-00721-00726",
+            "as_org": "DNIC-ASBLK-00721-00726 - United States Department of Defense (DoD)",
             "as_country": "US"
           }
         ],
@@ -131,7 +131,7 @@
           {
             "ip": "2608:c184:1:180::234",
             "asn": 5927,
-            "as_org": "DNIC-ASBLK-05800-06055",
+            "as_org": "DNIC-ASBLK-05800-06055 - United States Department of Defense (DoD)",
             "as_country": "US"
           }
         ]
@@ -142,7 +142,7 @@
           {
             "ip": "199.252.155.234",
             "asn": 5927,
-            "as_org": "DNIC-ASBLK-05800-06055",
+            "as_org": "DNIC-ASBLK-05800-06055 - United States Department of Defense (DoD)",
             "as_country": "US"
           }
         ],
@@ -150,7 +150,7 @@
           {
             "ip": "2608:c144:1:155::234",
             "asn": 5927,
-            "as_org": "DNIC-ASBLK-05800-06055",
+            "as_org": "DNIC-ASBLK-05800-06055 - United States Department of Defense (DoD)",
             "as_country": "US"
           }
         ]

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -30,13 +30,11 @@
       "rdap_source": "IANA",
       "country_name_iso": "Senegal",
       "as_org_aliases": [
-        "AFNIC.fr",
         "Amazon",
         "Packet Clearing House",
         "RIPE NCC"
       ],
       "as_org_slugs": [
-        "afnic",
         "amazon",
         "packet-clearing-house",
         "ripe-ncc"
@@ -58,7 +56,7 @@
           {
             "ip": "13.39.116.127",
             "asn": 16509,
-            "as_org": "AMAZON-02",
+            "as_org": "AMAZON-02 - Amazon.com, Inc.",
             "as_country": "US"
           }
         ],
@@ -70,7 +68,7 @@
           {
             "ip": "204.61.216.159",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -78,7 +76,7 @@
           {
             "ip": "2001:500:14:6159:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]
@@ -88,8 +86,8 @@
         "ipv4": [
           {
             "ip": "194.0.9.1",
-            "asn": 2486,
-            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "asn": 2484,
+            "as_org": "NIC-FR-DNS-ANYCAST-AFNIC - AFNIC (Association Francaise pour le Nommage Internet en Cooperation)",
             "as_country": "FR"
           }
         ],
@@ -97,7 +95,7 @@
           {
             "ip": "2001:678:c::1",
             "asn": 2484,
-            "as_org": "NIC-FR-DNS-ANYCAST-AFNIC AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_org": "NIC-FR-DNS-ANYCAST-AFNIC - AFNIC (Association Francaise pour le Nommage Internet en Cooperation)",
             "as_country": "FR"
           }
         ]
@@ -108,7 +106,7 @@
           {
             "ip": "196.1.95.1",
             "asn": 329407,
-            "as_org": "UCAD1",
+            "as_org": "Universite Cheikh Anta DIOP de DAKAR - Universite Cheikh Anta DIOP de DAKAR",
             "as_country": "SN"
           }
         ],
@@ -120,7 +118,7 @@
           {
             "ip": "213.154.64.11",
             "asn": 8346,
-            "as_org": "SONATEL SONATEL-AS Autonomous System",
+            "as_org": "SONATEL - IDDQD-AS",
             "as_country": "SN"
           }
         ],
@@ -132,7 +130,7 @@
           {
             "ip": "193.0.9.111",
             "asn": 197000,
-            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre (RIPE NCC)",
             "as_country": "NL"
           }
         ],
@@ -140,7 +138,7 @@
           {
             "ip": "2a13:27c0:30::111",
             "asn": 197000,
-            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre (RIPE NCC)",
             "as_country": "NL"
           }
         ]

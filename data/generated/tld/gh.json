@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -42,7 +42,7 @@
           {
             "ip": "200.160.0.5",
             "asn": 22548,
-            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_org": "AS22548 - Nucleo de Inf. e Coord. do Ponto BR - NIC.BR",
             "as_country": "BR"
           }
         ],
@@ -50,7 +50,7 @@
           {
             "ip": "2001:12ff:0:a20::5",
             "asn": 22548,
-            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_org": "AS22548 - Nucleo de Inf. e Coord. do Ponto BR - NIC.BR",
             "as_country": "BR"
           }
         ]
@@ -61,7 +61,7 @@
           {
             "ip": "197.253.95.251",
             "asn": 37313,
-            "as_org": "GGoC1-AS",
+            "as_org": "Ghana Government (Ministry of Communications) - Ghana Government (Ministry of Communications)",
             "as_country": "GH"
           }
         ],
@@ -73,7 +73,7 @@
           {
             "ip": "197.253.127.251",
             "asn": 37313,
-            "as_org": "GGoC1-AS",
+            "as_org": "Ghana Government (Ministry of Communications) - Ghana Government (Ministry of Communications)",
             "as_country": "GH"
           }
         ],

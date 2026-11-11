@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -49,7 +49,7 @@
           {
             "ip": "158.38.61.97",
             "asn": 224,
-            "as_org": "UNINETT UNINETT, The Norwegian University & Research Network",
+            "as_org": "UNINETT - Sikt - Kunnskapssektorens Tjenesteleverandor",
             "as_country": "NO"
           }
         ],
@@ -57,7 +57,7 @@
           {
             "ip": "2001:700:4603::1",
             "asn": 224,
-            "as_org": "UNINETT UNINETT, The Norwegian University & Research Network",
+            "as_org": "UNINETT - Sikt - Kunnskapssektorens Tjenesteleverandor",
             "as_country": "NO"
           }
         ]
@@ -68,7 +68,7 @@
           {
             "ip": "128.39.2.22",
             "asn": 224,
-            "as_org": "UNINETT UNINETT, The Norwegian University & Research Network",
+            "as_org": "UNINETT - Sikt - Kunnskapssektorens Tjenesteleverandor",
             "as_country": "NO"
           }
         ],
@@ -76,7 +76,7 @@
           {
             "ip": "2001:700:0:102::aa53",
             "asn": 224,
-            "as_org": "UNINETT UNINETT, The Norwegian University & Research Network",
+            "as_org": "UNINETT - Sikt - Kunnskapssektorens Tjenesteleverandor",
             "as_country": "NO"
           }
         ]
@@ -87,7 +87,7 @@
           {
             "ip": "158.38.0.181",
             "asn": 224,
-            "as_org": "UNINETT UNINETT, The Norwegian University & Research Network",
+            "as_org": "UNINETT - Sikt - Kunnskapssektorens Tjenesteleverandor",
             "as_country": "NO"
           }
         ],
@@ -95,7 +95,7 @@
           {
             "ip": "2001:700:0:503::aa:5302",
             "asn": 224,
-            "as_org": "UNINETT UNINETT, The Norwegian University & Research Network",
+            "as_org": "UNINETT - Sikt - Kunnskapssektorens Tjenesteleverandor",
             "as_country": "NO"
           }
         ]
@@ -106,7 +106,7 @@
           {
             "ip": "193.10.252.19",
             "asn": 2603,
-            "as_org": "NORDUNET",
+            "as_org": "NORDUNET NORDUnet",
             "as_country": "DK"
           }
         ],
@@ -114,7 +114,7 @@
           {
             "ip": "2001:948:4:2::19",
             "asn": 2603,
-            "as_org": "NORDUNET",
+            "as_org": "NORDUNET NORDUnet",
             "as_country": "DK"
           }
         ]
@@ -125,7 +125,7 @@
           {
             "ip": "128.39.8.40",
             "asn": 224,
-            "as_org": "UNINETT UNINETT, The Norwegian University & Research Network",
+            "as_org": "UNINETT - Sikt - Kunnskapssektorens Tjenesteleverandor",
             "as_country": "NO"
           }
         ],
@@ -133,7 +133,7 @@
           {
             "ip": "2001:700:0:412f::40",
             "asn": 224,
-            "as_org": "UNINETT UNINETT, The Norwegian University & Research Network",
+            "as_org": "UNINETT - Sikt - Kunnskapssektorens Tjenesteleverandor",
             "as_country": "NO"
           }
         ]
@@ -144,7 +144,7 @@
           {
             "ip": "193.75.4.22",
             "asn": 2116,
-            "as_org": "GLOBALCONNECT-",
+            "as_org": "GlobalConnect-AS2116 GLOBALCONNECT AS",
             "as_country": "NO"
           }
         ],
@@ -152,7 +152,7 @@
           {
             "ip": "2001:8c0:8200:1::2",
             "asn": 2116,
-            "as_org": "GLOBALCONNECT-",
+            "as_org": "GlobalConnect-AS2116 GLOBALCONNECT AS",
             "as_country": "NO"
           }
         ]
@@ -163,7 +163,7 @@
           {
             "ip": "158.38.8.133",
             "asn": 224,
-            "as_org": "UNINETT UNINETT, The Norwegian University & Research Network",
+            "as_org": "UNINETT - Sikt - Kunnskapssektorens Tjenesteleverandor",
             "as_country": "NO"
           }
         ],
@@ -171,7 +171,7 @@
           {
             "ip": "2001:700:0:52d:158:38:8:133",
             "asn": 224,
-            "as_org": "UNINETT UNINETT, The Norwegian University & Research Network",
+            "as_org": "UNINETT - Sikt - Kunnskapssektorens Tjenesteleverandor",
             "as_country": "NO"
           }
         ]

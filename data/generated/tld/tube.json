@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -75,7 +75,7 @@
           {
             "ip": "195.253.64.12",
             "asn": 8561,
-            "as_org": "KNIPPWORLDWI",
+            "as_org": "KNIPPWORLDWIDE Knipp Medien und Kommunikation GmbH",
             "as_country": "DE"
           }
         ],
@@ -83,7 +83,7 @@
           {
             "ip": "2a01:5b0:4::c",
             "asn": 8561,
-            "as_org": "KNIPPWORLDWI",
+            "as_org": "KNIPPWORLDWIDE Knipp Medien und Kommunikation GmbH",
             "as_country": "DE"
           }
         ]
@@ -94,7 +94,7 @@
           {
             "ip": "195.253.65.11",
             "asn": 50611,
-            "as_org": "KNIPP-IRONDNS1-AS Technologiepark",
+            "as_org": "KNIPP-IRONDNS1-AS Knipp Medien und Kommunikation GmbH",
             "as_country": "DE"
           }
         ],
@@ -102,7 +102,7 @@
           {
             "ip": "2a01:5b0:5::b",
             "asn": 50611,
-            "as_org": "KNIPP-IRONDNS1-AS Technologiepark",
+            "as_org": "KNIPP-IRONDNS1-AS Knipp Medien und Kommunikation GmbH",
             "as_country": "DE"
           }
         ]
@@ -113,7 +113,7 @@
           {
             "ip": "195.253.65.12",
             "asn": 50611,
-            "as_org": "KNIPP-IRONDNS1-AS Technologiepark",
+            "as_org": "KNIPP-IRONDNS1-AS Knipp Medien und Kommunikation GmbH",
             "as_country": "DE"
           }
         ],
@@ -121,7 +121,7 @@
           {
             "ip": "2a01:5b0:5::c",
             "asn": 50611,
-            "as_org": "KNIPP-IRONDNS1-AS Technologiepark",
+            "as_org": "KNIPP-IRONDNS1-AS Knipp Medien und Kommunikation GmbH",
             "as_country": "DE"
           }
         ]
@@ -132,7 +132,7 @@
           {
             "ip": "195.253.64.11",
             "asn": 8561,
-            "as_org": "KNIPPWORLDWI",
+            "as_org": "KNIPPWORLDWIDE Knipp Medien und Kommunikation GmbH",
             "as_country": "DE"
           }
         ],
@@ -140,7 +140,7 @@
           {
             "ip": "2a01:5b0:4::b",
             "asn": 8561,
-            "as_org": "KNIPPWORLDWI",
+            "as_org": "KNIPPWORLDWIDE Knipp Medien und Kommunikation GmbH",
             "as_country": "DE"
           }
         ]

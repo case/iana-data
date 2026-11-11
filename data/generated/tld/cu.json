@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -47,7 +47,7 @@
           {
             "ip": "193.0.9.70",
             "asn": 197000,
-            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre (RIPE NCC)",
             "as_country": "NL"
           }
         ],
@@ -55,7 +55,7 @@
           {
             "ip": "2a13:27c0:30::70",
             "asn": 197000,
-            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre (RIPE NCC)",
             "as_country": "NL"
           }
         ]
@@ -66,7 +66,7 @@
           {
             "ip": "169.158.128.136",
             "asn": 10569,
-            "as_org": "Red CENIAInternet",
+            "as_org": "AS10569 - Red CENIAInternet",
             "as_country": "CU"
           }
         ],
@@ -74,7 +74,7 @@
           {
             "ip": "2001:1340:1:128::136",
             "asn": 10569,
-            "as_org": "Red CENIAInternet",
+            "as_org": "AS10569 - Red CENIAInternet",
             "as_country": "CU"
           }
         ]
@@ -85,7 +85,7 @@
           {
             "ip": "200.160.0.5",
             "asn": 22548,
-            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_org": "AS22548 - Nucleo de Inf. e Coord. do Ponto BR - NIC.BR",
             "as_country": "BR"
           }
         ],
@@ -93,7 +93,7 @@
           {
             "ip": "2001:12ff:0:a20::5",
             "asn": 22548,
-            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_org": "AS22548 - Nucleo de Inf. e Coord. do Ponto BR - NIC.BR",
             "as_country": "BR"
           }
         ]
@@ -104,7 +104,7 @@
           {
             "ip": "169.158.128.88",
             "asn": 10569,
-            "as_org": "Red CENIAInternet",
+            "as_org": "AS10569 - Red CENIAInternet",
             "as_country": "CU"
           }
         ],
@@ -116,7 +116,7 @@
           {
             "ip": "204.59.1.222",
             "asn": 16509,
-            "as_org": "AMAZON-02",
+            "as_org": "AMAZON-02 - Amazon.com, Inc.",
             "as_country": "US"
           }
         ],
@@ -128,7 +128,7 @@
           {
             "ip": "147.28.0.39",
             "asn": 3130,
-            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_org": "RGNET-SEA RGnet OU",
             "as_country": "EE"
           }
         ],
@@ -136,7 +136,7 @@
           {
             "ip": "2001:418:1::39",
             "asn": 3130,
-            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_org": "RGNET-SEA RGnet OU",
             "as_country": "EE"
           }
         ]

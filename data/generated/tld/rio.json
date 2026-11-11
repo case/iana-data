@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -70,7 +70,7 @@
           {
             "ip": "200.219.148.10",
             "asn": 53035,
-            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_org": "AS53035 - Nucleo de Inf. e Coord. do Ponto BR - NIC.BR",
             "as_country": "BR"
           }
         ],
@@ -78,7 +78,7 @@
           {
             "ip": "2001:12f8:6::10",
             "asn": 53035,
-            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_org": "AS53035 - Nucleo de Inf. e Coord. do Ponto BR - NIC.BR",
             "as_country": "BR"
           }
         ]
@@ -89,7 +89,7 @@
           {
             "ip": "200.189.41.10",
             "asn": 10906,
-            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_org": "AS10906 - Nucleo de Inf. e Coord. do Ponto BR - NIC.BR",
             "as_country": "BR"
           }
         ],
@@ -97,7 +97,7 @@
           {
             "ip": "2001:12f8:8::10",
             "asn": 10906,
-            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_org": "AS10906 - Nucleo de Inf. e Coord. do Ponto BR - NIC.BR",
             "as_country": "BR"
           }
         ]
@@ -108,7 +108,7 @@
           {
             "ip": "200.192.233.10",
             "asn": 11284,
-            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_org": "AS11284 - Nucleo de Inf. e Coord. do Ponto BR - NIC.BR",
             "as_country": "BR"
           }
         ],
@@ -116,7 +116,7 @@
           {
             "ip": "2001:12f8:a::10",
             "asn": 11284,
-            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_org": "AS11284 - Nucleo de Inf. e Coord. do Ponto BR - NIC.BR",
             "as_country": "BR"
           }
         ]
@@ -127,7 +127,7 @@
           {
             "ip": "200.219.154.10",
             "asn": 11644,
-            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_org": "AS11644 - Nucleo de Inf. e Coord. do Ponto BR - NIC.BR",
             "as_country": "BR"
           }
         ],
@@ -135,7 +135,7 @@
           {
             "ip": "2001:12f8:4::10",
             "asn": 11644,
-            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_org": "AS11644 - Nucleo de Inf. e Coord. do Ponto BR - NIC.BR",
             "as_country": "BR"
           }
         ]
@@ -146,7 +146,7 @@
           {
             "ip": "200.229.248.10",
             "asn": 12136,
-            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_org": "AS12136 - Nucleo de Inf. e Coord. do Ponto BR - NIC.BR",
             "as_country": "BR"
           }
         ],
@@ -154,7 +154,7 @@
           {
             "ip": "2001:12f8:2::10",
             "asn": 12136,
-            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_org": "AS12136 - Nucleo de Inf. e Coord. do Ponto BR - NIC.BR",
             "as_country": "BR"
           }
         ]
@@ -165,7 +165,7 @@
           {
             "ip": "200.219.159.10",
             "asn": 14650,
-            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_org": "AS14650 - Nucleo de Inf. e Coord. do Ponto BR - NIC.BR",
             "as_country": "BR"
           }
         ],
@@ -173,7 +173,7 @@
           {
             "ip": "2001:12f8:c::10",
             "asn": 14650,
-            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_org": "AS14650 - Nucleo de Inf. e Coord. do Ponto BR - NIC.BR",
             "as_country": "BR"
           }
         ]

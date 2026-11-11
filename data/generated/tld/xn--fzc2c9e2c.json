@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -54,7 +54,7 @@
           {
             "ip": "194.0.1.27",
             "asn": 42909,
-            "as_org": "COMMUNITYDNS",
+            "as_org": "COMMUNITYDNS Community DNS Limited",
             "as_country": "GB"
           }
         ],
@@ -66,7 +66,7 @@
           {
             "ip": "204.61.216.27",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -78,7 +78,7 @@
           {
             "ip": "203.143.19.3",
             "asn": 5087,
-            "as_org": "LANKA-COM Lanka Communication Services",
+            "as_org": "LANKA-COM - Lanka Communication Services",
             "as_country": "LK"
           }
         ],
@@ -90,7 +90,7 @@
           {
             "ip": "123.231.6.18",
             "asn": 18001,
-            "as_org": "DIALOG-AS Dialog Axiata PLC.",
+            "as_org": "DIALOG-AS - Dialog Axiata PLC.",
             "as_country": "LK"
           }
         ],
@@ -102,7 +102,7 @@
           {
             "ip": "192.248.8.17",
             "asn": 38229,
-            "as_org": "LEARN-LK Lanka Education & Research Network, NREN",
+            "as_org": "LEARN-LK - Lanka Education & Research Network, NREN",
             "as_country": "LK"
           }
         ],
@@ -114,7 +114,7 @@
           {
             "ip": "203.94.66.129",
             "asn": 9329,
-            "as_org": "SLTINT-AS-AP Sri Lanka Telecom Internet",
+            "as_org": "SLTINT-AS-AP - Sri Lanka Telecom Internet",
             "as_country": "LK"
           }
         ],
@@ -126,7 +126,7 @@
           {
             "ip": "192.248.1.162",
             "asn": 38229,
-            "as_org": "LEARN-LK Lanka Education & Research Network, NREN",
+            "as_org": "LEARN-LK - Lanka Education & Research Network, NREN",
             "as_country": "LK"
           }
         ],
@@ -134,7 +134,7 @@
           {
             "ip": "2401:dd00:1::162",
             "asn": 38229,
-            "as_org": "LEARN-LK Lanka Education & Research Network, NREN",
+            "as_org": "LEARN-LK - Lanka Education & Research Network, NREN",
             "as_country": "LK"
           }
         ]
@@ -145,7 +145,7 @@
           {
             "ip": "202.124.166.178",
             "asn": 18001,
-            "as_org": "DIALOG-AS Dialog Axiata PLC.",
+            "as_org": "DIALOG-AS - Dialog Axiata PLC.",
             "as_country": "LK"
           }
         ],

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -41,7 +41,7 @@
           {
             "ip": "197.255.224.18",
             "asn": 36939,
-            "as_org": "ComoresTelecom",
+            "as_org": "Comores Telecom - Comores Telecom",
             "as_country": "KM"
           }
         ],
@@ -53,7 +53,7 @@
           {
             "ip": "197.255.224.66",
             "asn": 36939,
-            "as_org": "ComoresTelecom",
+            "as_org": "Comores Telecom - Comores Telecom",
             "as_country": "KM"
           }
         ],
@@ -65,7 +65,7 @@
           {
             "ip": "196.216.168.46",
             "asn": 37177,
-            "as_org": "AFRINIC-ANYCAST",
+            "as_org": "African Network Information Center - (AfriNIC) Ltd - African Network Information Center - (AfriNIC) Ltd",
             "as_country": "MU"
           }
         ],
@@ -73,7 +73,7 @@
           {
             "ip": "2001:43f8:120::46",
             "asn": 37177,
-            "as_org": "AFRINIC-ANYCAST",
+            "as_org": "African Network Information Center - (AfriNIC) Ltd - African Network Information Center - (AfriNIC) Ltd",
             "as_country": "MU"
           }
         ]

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -35,7 +35,7 @@
           {
             "ip": "51.195.14.249",
             "asn": 16276,
-            "as_org": "OVH",
+            "as_org": "OVH OVH SAS",
             "as_country": "FR"
           }
         ],
@@ -47,7 +47,7 @@
           {
             "ip": "45.83.41.38",
             "asn": 204548,
-            "as_org": "CLOUDWEBMANAGE-IL-FR",
+            "as_org": "CLOUDWEBMANAGE-IL-FR Kamatera Inc",
             "as_country": "US"
           }
         ],

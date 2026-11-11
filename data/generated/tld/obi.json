@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -34,7 +34,7 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "2015-09-03",
     "tld_updated": [
-      "2023-08-11"
+      "2026-11-10"
     ],
     "events": {
       "delegation": "2015-09-23"
@@ -62,6 +62,12 @@
         "algorithm": 8,
         "digest_type": 2,
         "digest": "540d7e7cb6f111d9ea048e3801806a4814b6c1dd229f3a2414aae8facce3cb13"
+      },
+      {
+        "key_tag": 64540,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "0bc46df49d4aa9ffc3eacd15a9b1ab10ad752ecfee24ca9db444e14f7910c201"
       }
     ],
     "nameservers": [
@@ -71,7 +77,7 @@
           {
             "ip": "65.22.112.17",
             "asn": 12041,
-            "as_org": "AS-AFILIAS1",
+            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
             "as_country": "US"
           }
         ],
@@ -79,7 +85,7 @@
           {
             "ip": "2a01:8840:6e::17",
             "asn": 12041,
-            "as_org": "AS-AFILIAS1",
+            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
             "as_country": "US"
           }
         ]
@@ -90,7 +96,7 @@
           {
             "ip": "65.22.115.17",
             "asn": 207266,
-            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_org": "AFiLIAS-SECONDARY-DNS Identity Digital Limited",
             "as_country": "IE"
           }
         ],
@@ -98,7 +104,7 @@
           {
             "ip": "2a01:8840:71::17",
             "asn": 207266,
-            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_org": "AFiLIAS-SECONDARY-DNS Identity Digital Limited",
             "as_country": "IE"
           }
         ]
@@ -109,7 +115,7 @@
           {
             "ip": "65.22.113.17",
             "asn": 12041,
-            "as_org": "AS-AFILIAS1",
+            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
             "as_country": "US"
           }
         ],
@@ -117,7 +123,7 @@
           {
             "ip": "2a01:8840:6f::17",
             "asn": 12041,
-            "as_org": "AS-AFILIAS1",
+            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
             "as_country": "US"
           }
         ]
@@ -128,7 +134,7 @@
           {
             "ip": "65.22.114.17",
             "asn": 12041,
-            "as_org": "AS-AFILIAS1",
+            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
             "as_country": "US"
           }
         ],
@@ -136,7 +142,7 @@
           {
             "ip": "2a01:8840:70::17",
             "asn": 12041,
-            "as_org": "AS-AFILIAS1",
+            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
             "as_country": "US"
           }
         ]

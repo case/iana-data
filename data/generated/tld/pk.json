@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -50,7 +50,7 @@
           {
             "ip": "185.159.197.160",
             "asn": 55195,
-            "as_org": "CIRA-CLOUD1",
+            "as_org": "CIRA-CLOUD1 - CIRA Canadian Internet Registration Authority Autorit Canadienne pour les enregistrements Internet",
             "as_country": "CA"
           }
         ],
@@ -58,7 +58,7 @@
           {
             "ip": "2620:10a:80aa::160",
             "asn": 55195,
-            "as_org": "CIRA-CLOUD1",
+            "as_org": "CIRA-CLOUD1 - CIRA Canadian Internet Registration Authority Autorit Canadienne pour les enregistrements Internet",
             "as_country": "CA"
           }
         ]
@@ -69,7 +69,7 @@
           {
             "ip": "185.159.198.160",
             "asn": 394354,
-            "as_org": "CIRA-CLOUD2",
+            "as_org": "CIRA-CLOUD2 - CIRA Canadian Internet Registration Authority Autorit Canadienne pour les enregistrements Internet",
             "as_country": "CA"
           }
         ],
@@ -77,7 +77,7 @@
           {
             "ip": "2620:10a:80ab::160",
             "asn": 394354,
-            "as_org": "CIRA-CLOUD2",
+            "as_org": "CIRA-CLOUD2 - CIRA Canadian Internet Registration Authority Autorit Canadienne pour les enregistrements Internet",
             "as_country": "CA"
           }
         ]
@@ -88,7 +88,7 @@
           {
             "ip": "107.6.178.178",
             "asn": 32475,
-            "as_org": "SINGLEHOP-LLC",
+            "as_org": "SINGLEHOP-LLC - Internap Holding LLC",
             "as_country": "US"
           }
         ],
@@ -100,7 +100,7 @@
           {
             "ip": "119.81.34.90",
             "asn": 36351,
-            "as_org": "SOFTLAYER",
+            "as_org": "SOFTLAYER - IBM Cloud",
             "as_country": "US"
           }
         ],

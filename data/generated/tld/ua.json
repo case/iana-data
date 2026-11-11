@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -64,13 +64,13 @@
           {
             "ip": "185.136.96.185",
             "asn": 203391,
-            "as_org": "CLOUDNSNET Cloud DNS Ltd.",
+            "as_org": "CLOUDNSNET Cloud DNS Ltd",
             "as_country": "BG"
           },
           {
             "ip": "185.136.97.185",
             "asn": 203391,
-            "as_org": "CLOUDNSNET Cloud DNS Ltd.",
+            "as_org": "CLOUDNSNET Cloud DNS Ltd",
             "as_country": "BG"
           }
         ],
@@ -78,13 +78,13 @@
           {
             "ip": "2a06:fb00:1::4:185",
             "asn": 203391,
-            "as_org": "CLOUDNSNET Cloud DNS Ltd.",
+            "as_org": "CLOUDNSNET Cloud DNS Ltd",
             "as_country": "BG"
           },
           {
             "ip": "2a06:fb00:1::2:185",
             "asn": 203391,
-            "as_org": "CLOUDNSNET Cloud DNS Ltd.",
+            "as_org": "CLOUDNSNET Cloud DNS Ltd",
             "as_country": "BG"
           }
         ]
@@ -95,7 +95,7 @@
           {
             "ip": "185.43.134.15",
             "asn": 25192,
-            "as_org": "CZNIC-AS",
+            "as_org": "CZNIC-AS CZ.NIC, z.s.p.o.",
             "as_country": "CZ"
           }
         ],
@@ -103,7 +103,7 @@
           {
             "ip": "2001:148f:fffd::15",
             "asn": 25192,
-            "as_org": "CZNIC-AS",
+            "as_org": "CZNIC-AS CZ.NIC, z.s.p.o.",
             "as_country": "CZ"
           }
         ]
@@ -114,7 +114,7 @@
           {
             "ip": "195.47.253.1",
             "asn": 29067,
-            "as_org": "UATLD-AS UA ccTLD Manager",
+            "as_org": "UATLD-AS LLC \"Hostmaster\"",
             "as_country": "UA"
           }
         ],
@@ -122,7 +122,7 @@
           {
             "ip": "2001:67c:258::1",
             "asn": 29067,
-            "as_org": "UATLD-AS UA ccTLD Manager",
+            "as_org": "UATLD-AS LLC \"Hostmaster\"",
             "as_country": "UA"
           }
         ]
@@ -133,7 +133,7 @@
           {
             "ip": "74.123.224.40",
             "asn": 18865,
-            "as_org": "AS-INTUIX",
+            "as_org": "AS-INTUIX - Intuix LLC",
             "as_country": "US"
           }
         ],
@@ -141,7 +141,7 @@
           {
             "ip": "2604:ee00:0:101::40",
             "asn": 18865,
-            "as_org": "AS-INTUIX",
+            "as_org": "AS-INTUIX - Intuix LLC",
             "as_country": "US"
           }
         ]
@@ -171,7 +171,7 @@
           {
             "ip": "204.61.216.12",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -179,7 +179,7 @@
           {
             "ip": "2001:500:14:6012:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]
@@ -190,7 +190,7 @@
           {
             "ip": "193.46.128.10",
             "asn": 1921,
-            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD ipcom GmbH",
             "as_country": "AT"
           }
         ],
@@ -198,7 +198,7 @@
           {
             "ip": "2a02:850:ffe0::10",
             "asn": 1921,
-            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD ipcom GmbH",
             "as_country": "AT"
           }
         ]

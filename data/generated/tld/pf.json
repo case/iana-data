@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -35,7 +35,7 @@
           {
             "ip": "103.254.227.99",
             "asn": 55943,
-            "as_org": "ONATI-AS-AP ONATI",
+            "as_org": "ONATI-AS-AP - ONATI",
             "as_country": "PF"
           }
         ],
@@ -43,7 +43,7 @@
           {
             "ip": "2402:6d00:1000::5",
             "asn": 55943,
-            "as_org": "ONATI-AS-AP ONATI",
+            "as_org": "ONATI-AS-AP - ONATI",
             "as_country": "PF"
           }
         ]
@@ -54,7 +54,7 @@
           {
             "ip": "202.3.225.10",
             "asn": 9471,
-            "as_org": "ONATI-AS-AP ONATI",
+            "as_org": "ONATI-AS-AP - ONATI",
             "as_country": "PF"
           }
         ],
@@ -66,7 +66,7 @@
           {
             "ip": "202.3.225.20",
             "asn": 9471,
-            "as_org": "ONATI-AS-AP ONATI",
+            "as_org": "ONATI-AS-AP - ONATI",
             "as_country": "PF"
           }
         ],

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -42,7 +42,7 @@
           {
             "ip": "79.136.119.20",
             "asn": 8473,
-            "as_org": "BAHNHOF",
+            "as_org": "BAHNHOF Bahnhof AB",
             "as_country": "SE"
           }
         ],
@@ -50,7 +50,7 @@
           {
             "ip": "2001:9b0:1:601:250:56ff:feb7:46",
             "asn": 8473,
-            "as_org": "BAHNHOF",
+            "as_org": "BAHNHOF Bahnhof AB",
             "as_country": "SE"
           }
         ]
@@ -61,7 +61,7 @@
           {
             "ip": "195.178.160.2",
             "asn": 8473,
-            "as_org": "BAHNHOF",
+            "as_org": "BAHNHOF Bahnhof AB",
             "as_country": "SE"
           }
         ],
@@ -69,7 +69,7 @@
           {
             "ip": "2001:9b0:1:104:250:56ff:feb7:5c51",
             "asn": 8473,
-            "as_org": "BAHNHOF",
+            "as_org": "BAHNHOF Bahnhof AB",
             "as_country": "SE"
           }
         ]
@@ -80,7 +80,7 @@
           {
             "ip": "52.63.82.137",
             "asn": 16509,
-            "as_org": "AMAZON-02",
+            "as_org": "AMAZON-02 - Amazon.com, Inc.",
             "as_country": "US"
           }
         ],
@@ -88,7 +88,7 @@
           {
             "ip": "2406:da1c:306:4700:d0cf:a4f8:f1c7:249e",
             "asn": 16509,
-            "as_org": "AMAZON-02",
+            "as_org": "AMAZON-02 - Amazon.com, Inc.",
             "as_country": "US"
           }
         ]
@@ -99,7 +99,7 @@
           {
             "ip": "34.218.33.231",
             "asn": 16509,
-            "as_org": "AMAZON-02",
+            "as_org": "AMAZON-02 - Amazon.com, Inc.",
             "as_country": "US"
           }
         ],
@@ -107,7 +107,7 @@
           {
             "ip": "2600:1f14:15:cb00:c08f:baeb:bf79:c730",
             "asn": 16509,
-            "as_org": "AMAZON-02",
+            "as_org": "AMAZON-02 - Amazon.com, Inc.",
             "as_country": "US"
           }
         ]

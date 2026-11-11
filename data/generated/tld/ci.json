@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -56,7 +56,7 @@
           {
             "ip": "204.61.216.120",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -64,7 +64,7 @@
           {
             "ip": "2001:500:14:6120:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]
@@ -75,7 +75,7 @@
           {
             "ip": "192.134.0.49",
             "asn": 2486,
-            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 - AFNIC (Association Francaise pour le Nommage Internet en Cooperation)",
             "as_country": "FR"
           }
         ],
@@ -83,7 +83,7 @@
           {
             "ip": "2001:660:3006:1::1:1",
             "asn": 2486,
-            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 - AFNIC (Association Francaise pour le Nommage Internet en Cooperation)",
             "as_country": "FR"
           }
         ]
@@ -94,7 +94,7 @@
           {
             "ip": "196.216.168.30",
             "asn": 37177,
-            "as_org": "AFRINIC-ANYCAST",
+            "as_org": "African Network Information Center - (AfriNIC) Ltd - African Network Information Center - (AfriNIC) Ltd",
             "as_country": "MU"
           }
         ],
@@ -102,7 +102,7 @@
           {
             "ip": "2001:43f8:120::30",
             "asn": 37177,
-            "as_org": "AFRINIC-ANYCAST",
+            "as_org": "African Network Information Center - (AfriNIC) Ltd - African Network Information Center - (AfriNIC) Ltd",
             "as_country": "MU"
           }
         ]
@@ -113,7 +113,7 @@
           {
             "ip": "196.49.0.84",
             "asn": 329666,
-            "as_org": "CIVIX_Management",
+            "as_org": "Cote d'Ivoire Internet Exchange Point - Cote d'Ivoire Internet Exchange Point",
             "as_country": "CI"
           }
         ],
@@ -125,7 +125,7 @@
           {
             "ip": "128.223.32.35",
             "asn": 3582,
-            "as_org": "UONET",
+            "as_org": "UONET - University of Oregon",
             "as_country": "US"
           }
         ],
@@ -133,7 +133,7 @@
           {
             "ip": "2001:468:d01:20::80df:2023",
             "asn": 3582,
-            "as_org": "UONET",
+            "as_org": "UONET - University of Oregon",
             "as_country": "US"
           }
         ]

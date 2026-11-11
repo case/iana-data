@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -66,7 +66,7 @@
           {
             "ip": "202.131.1.4",
             "asn": 55342,
-            "as_org": "HOMENET6837-AS-AP Homenet",
+            "as_org": "HOMENET6837-AS-AP - Homenet",
             "as_country": "MN"
           }
         ],
@@ -78,7 +78,7 @@
           {
             "ip": "202.131.4.12",
             "asn": 45237,
-            "as_org": "GLOBAL-MG-AS-AP Magicnet LLC",
+            "as_org": "GLOBAL-MG-AS-AP - Magicnet LLC",
             "as_country": "MN"
           }
         ],

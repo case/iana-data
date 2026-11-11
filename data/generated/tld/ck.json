@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -35,7 +35,7 @@
           {
             "ip": "130.195.5.12",
             "asn": 23905,
-            "as_org": "VUW-AS-AP Victoria University of Wellington",
+            "as_org": "VUW-AS-AP - Victoria University of Wellington",
             "as_country": "NZ"
           }
         ],
@@ -47,7 +47,7 @@
           {
             "ip": "130.195.6.10",
             "asn": 23905,
-            "as_org": "VUW-AS-AP Victoria University of Wellington",
+            "as_org": "VUW-AS-AP - Victoria University of Wellington",
             "as_country": "NZ"
           }
         ],
@@ -59,7 +59,7 @@
           {
             "ip": "202.65.32.128",
             "asn": 10131,
-            "as_org": "CKTELECOM-CK-AP Telecom Cook Islands",
+            "as_org": "CKTELECOM-CK-AP - Telecom Cook Islands",
             "as_country": "CK"
           }
         ],
@@ -71,7 +71,7 @@
           {
             "ip": "202.65.32.127",
             "asn": 10131,
-            "as_org": "CKTELECOM-CK-AP Telecom Cook Islands",
+            "as_org": "CKTELECOM-CK-AP - Telecom Cook Islands",
             "as_country": "CK"
           }
         ],

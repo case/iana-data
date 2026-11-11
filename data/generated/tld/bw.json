@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -52,7 +52,7 @@
           {
             "ip": "168.167.98.226",
             "asn": 14988,
-            "as_org": "BTC-GATE1",
+            "as_org": "Botswana Telecommunications Corporation - Botswana Telecommunications Corporation",
             "as_country": "BW"
           }
         ],
@@ -64,7 +64,7 @@
           {
             "ip": "168.167.168.37",
             "asn": 14988,
-            "as_org": "BTC-GATE1",
+            "as_org": "Botswana Telecommunications Corporation - Botswana Telecommunications Corporation",
             "as_country": "BW"
           }
         ],
@@ -76,7 +76,7 @@
           {
             "ip": "196.216.168.72",
             "asn": 37177,
-            "as_org": "AFRINIC-ANYCAST",
+            "as_org": "African Network Information Center - (AfriNIC) Ltd - African Network Information Center - (AfriNIC) Ltd",
             "as_country": "MU"
           }
         ],
@@ -84,7 +84,7 @@
           {
             "ip": "2001:43f8:120::72",
             "asn": 37177,
-            "as_org": "AFRINIC-ANYCAST",
+            "as_org": "African Network Information Center - (AfriNIC) Ltd - African Network Information Center - (AfriNIC) Ltd",
             "as_country": "MU"
           }
         ]
@@ -95,7 +95,7 @@
           {
             "ip": "204.61.216.70",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -103,7 +103,7 @@
           {
             "ip": "2001:500:14:6070:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]

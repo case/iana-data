@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -35,7 +35,7 @@
           {
             "ip": "80.73.216.250",
             "asn": 204649,
-            "as_org": "FALK",
+            "as_org": "FALK Sure South Atlantic Limited",
             "as_country": "FK"
           }
         ],
@@ -47,7 +47,7 @@
           {
             "ip": "80.73.216.251",
             "asn": 204649,
-            "as_org": "FALK",
+            "as_org": "FALK Sure South Atlantic Limited",
             "as_country": "FK"
           }
         ],
@@ -59,7 +59,7 @@
           {
             "ip": "93.187.151.42",
             "asn": 8680,
-            "as_org": "SURE-INTERNATIONAL-LIMITED",
+            "as_org": "SURE-International-Limited Sure (Guernsey) Limited",
             "as_country": "GG"
           }
         ],

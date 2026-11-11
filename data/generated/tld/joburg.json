@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -97,7 +97,7 @@
           {
             "ip": "196.29.59.175",
             "asn": 6968,
-            "as_org": "ZACR",
+            "as_org": "ZA CENTRAL REGISTRY NPC - ZA CENTRAL REGISTRY NPC",
             "as_country": "ZA"
           }
         ],
@@ -105,7 +105,7 @@
           {
             "ip": "2001:43f8:790:5901::c41d:3baf",
             "asn": 6968,
-            "as_org": "ZACR",
+            "as_org": "ZA CENTRAL REGISTRY NPC - ZA CENTRAL REGISTRY NPC",
             "as_country": "ZA"
           }
         ]

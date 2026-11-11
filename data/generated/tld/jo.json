@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -46,7 +46,7 @@
           {
             "ip": "193.188.66.2",
             "asn": 8934,
-            "as_org": "NITC Amman - Jordan",
+            "as_org": "NITC National Information Technology Center",
             "as_country": "JO"
           }
         ],
@@ -54,7 +54,7 @@
           {
             "ip": "2a02:9c0:0:407::2",
             "asn": 8934,
-            "as_org": "NITC Amman - Jordan",
+            "as_org": "NITC National Information Technology Center",
             "as_country": "JO"
           }
         ]
@@ -65,7 +65,7 @@
           {
             "ip": "193.188.66.103",
             "asn": 8934,
-            "as_org": "NITC Amman - Jordan",
+            "as_org": "NITC National Information Technology Center",
             "as_country": "JO"
           }
         ],
@@ -73,7 +73,7 @@
           {
             "ip": "2a02:9c0:0:408::103",
             "asn": 8934,
-            "as_org": "NITC Amman - Jordan",
+            "as_org": "NITC National Information Technology Center",
             "as_country": "JO"
           }
         ]
@@ -84,7 +84,7 @@
           {
             "ip": "54.155.28.251",
             "asn": 16509,
-            "as_org": "AMAZON-02",
+            "as_org": "AMAZON-02 - Amazon.com, Inc.",
             "as_country": "US"
           }
         ],
@@ -92,7 +92,7 @@
           {
             "ip": "2a05:d018:123c:3500:3e00:7185:3a6e:e082",
             "asn": 16509,
-            "as_org": "AMAZON-02",
+            "as_org": "AMAZON-02 - Amazon.com, Inc.",
             "as_country": "US"
           }
         ]
@@ -103,7 +103,7 @@
           {
             "ip": "193.188.69.19",
             "asn": 8934,
-            "as_org": "NITC Amman - Jordan",
+            "as_org": "NITC National Information Technology Center",
             "as_country": "JO"
           }
         ],
@@ -111,7 +111,7 @@
           {
             "ip": "2a02:9c0:0:19::19",
             "asn": 8934,
-            "as_org": "NITC Amman - Jordan",
+            "as_org": "NITC National Information Technology Center",
             "as_country": "JO"
           }
         ]
@@ -122,7 +122,7 @@
           {
             "ip": "193.0.9.83",
             "asn": 197000,
-            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre (RIPE NCC)",
             "as_country": "NL"
           }
         ],
@@ -130,7 +130,7 @@
           {
             "ip": "2a13:27c0:30::83",
             "asn": 197000,
-            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre (RIPE NCC)",
             "as_country": "NL"
           }
         ]
@@ -141,7 +141,7 @@
           {
             "ip": "147.28.0.39",
             "asn": 3130,
-            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_org": "RGNET-SEA RGnet OU",
             "as_country": "EE"
           }
         ],
@@ -149,7 +149,7 @@
           {
             "ip": "2001:418:1::39",
             "asn": 3130,
-            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_org": "RGNET-SEA RGnet OU",
             "as_country": "EE"
           }
         ]

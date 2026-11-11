@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -77,7 +77,7 @@
           {
             "ip": "194.0.6.1",
             "asn": 199670,
-            "as_org": "DNS-ANYCAST DNS.be Anycast - Toplevel .be domain registry",
+            "as_org": "DNS-ANYCAST DNS-Belgium VZW",
             "as_country": "BE"
           }
         ],
@@ -85,7 +85,7 @@
           {
             "ip": "2001:678:9::1",
             "asn": 199670,
-            "as_org": "DNS-ANYCAST DNS.be Anycast - Toplevel .be domain registry",
+            "as_org": "DNS-ANYCAST DNS-Belgium VZW",
             "as_country": "BE"
           }
         ]
@@ -96,7 +96,7 @@
           {
             "ip": "194.0.37.1",
             "asn": 199670,
-            "as_org": "DNS-ANYCAST DNS.be Anycast - Toplevel .be domain registry",
+            "as_org": "DNS-ANYCAST DNS-Belgium VZW",
             "as_country": "BE"
           }
         ],
@@ -104,7 +104,7 @@
           {
             "ip": "2001:678:64::1",
             "asn": 199670,
-            "as_org": "DNS-ANYCAST DNS.be Anycast - Toplevel .be domain registry",
+            "as_org": "DNS-ANYCAST DNS-Belgium VZW",
             "as_country": "BE"
           }
         ]
@@ -115,7 +115,7 @@
           {
             "ip": "194.0.43.1",
             "asn": 199670,
-            "as_org": "DNS-ANYCAST DNS.be Anycast - Toplevel .be domain registry",
+            "as_org": "DNS-ANYCAST DNS-Belgium VZW",
             "as_country": "BE"
           }
         ],
@@ -123,7 +123,7 @@
           {
             "ip": "2001:678:68::1",
             "asn": 199670,
-            "as_org": "DNS-ANYCAST DNS.be Anycast - Toplevel .be domain registry",
+            "as_org": "DNS-ANYCAST DNS-Belgium VZW",
             "as_country": "BE"
           }
         ]
@@ -134,7 +134,7 @@
           {
             "ip": "194.0.44.1",
             "asn": 199670,
-            "as_org": "DNS-ANYCAST DNS.be Anycast - Toplevel .be domain registry",
+            "as_org": "DNS-ANYCAST DNS-Belgium VZW",
             "as_country": "BE"
           }
         ],
@@ -142,7 +142,7 @@
           {
             "ip": "2001:678:6c::1",
             "asn": 199670,
-            "as_org": "DNS-ANYCAST DNS.be Anycast - Toplevel .be domain registry",
+            "as_org": "DNS-ANYCAST DNS-Belgium VZW",
             "as_country": "BE"
           }
         ]
@@ -153,7 +153,7 @@
           {
             "ip": "120.29.253.8",
             "asn": 12008,
-            "as_org": "SECURITYSERVICES",
+            "as_org": "VERCARA - Vercara, LLC",
             "as_country": "US"
           }
         ],
@@ -161,7 +161,7 @@
           {
             "ip": "2001:dcd:7::8",
             "asn": 12008,
-            "as_org": "SECURITYSERVICES",
+            "as_org": "VERCARA - Vercara, LLC",
             "as_country": "US"
           }
         ]
@@ -172,7 +172,7 @@
           {
             "ip": "194.0.25.19",
             "asn": 1921,
-            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD ipcom GmbH",
             "as_country": "AT"
           }
         ],
@@ -180,7 +180,7 @@
           {
             "ip": "2001:678:20::19",
             "asn": 1921,
-            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD ipcom GmbH",
             "as_country": "AT"
           }
         ]

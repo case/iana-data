@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -50,7 +50,7 @@
           {
             "ip": "192.100.224.1",
             "asn": 28499,
-            "as_org": "Network Information Center Mexico",
+            "as_org": "AS28499 - Network Information Center Mexico",
             "as_country": "MX"
           }
         ],
@@ -58,7 +58,7 @@
           {
             "ip": "2001:1258::1",
             "asn": 28499,
-            "as_org": "Network Information Center Mexico",
+            "as_org": "AS28499 - Network Information Center Mexico",
             "as_country": "MX"
           }
         ]
@@ -68,16 +68,16 @@
         "ipv4": [
           {
             "ip": "189.201.244.1",
-            "asn": 28540,
-            "as_org": "Network Information Center Mexico",
-            "as_country": "MX"
+            "asn": 42,
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
+            "as_country": "US"
           }
         ],
         "ipv6": [
           {
             "ip": "2801:c4:c0::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]
@@ -88,7 +88,7 @@
           {
             "ip": "207.248.68.1",
             "asn": 28500,
-            "as_org": "Network Information Center Mexico",
+            "as_org": "AS28500 - Network Information Center Mexico",
             "as_country": "MX"
           }
         ],
@@ -96,7 +96,7 @@
           {
             "ip": "2801:c4:d0::1",
             "asn": 28500,
-            "as_org": "Network Information Center Mexico",
+            "as_org": "AS28500 - Network Information Center Mexico",
             "as_country": "MX"
           }
         ]
@@ -107,7 +107,7 @@
           {
             "ip": "200.94.176.1",
             "asn": 28498,
-            "as_org": "Network Information Center Mexico",
+            "as_org": "AS28498 - Network Information Center Mexico",
             "as_country": "MX"
           }
         ],
@@ -115,7 +115,7 @@
           {
             "ip": "2001:13c7:7000::1",
             "asn": 28498,
-            "as_org": "Network Information Center Mexico",
+            "as_org": "AS28498 - Network Information Center Mexico",
             "as_country": "MX"
           }
         ]
@@ -126,7 +126,7 @@
           {
             "ip": "200.23.1.1",
             "asn": 28498,
-            "as_org": "Network Information Center Mexico",
+            "as_org": "AS28498 - Network Information Center Mexico",
             "as_country": "MX"
           }
         ],
@@ -134,7 +134,7 @@
           {
             "ip": "2001:1201::1",
             "asn": 28498,
-            "as_org": "Network Information Center Mexico",
+            "as_org": "AS28498 - Network Information Center Mexico",
             "as_country": "MX"
           }
         ]
@@ -145,7 +145,7 @@
           {
             "ip": "201.131.252.1",
             "asn": 27661,
-            "as_org": "Network Information Center Mexico",
+            "as_org": "AS27661 - Network Information Center Mexico",
             "as_country": "MX"
           }
         ],
@@ -153,7 +153,7 @@
           {
             "ip": "2001:1201:10::1",
             "asn": 27661,
-            "as_org": "Network Information Center Mexico",
+            "as_org": "AS27661 - Network Information Center Mexico",
             "as_country": "MX"
           }
         ]

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -50,7 +50,7 @@
           {
             "ip": "210.101.60.1",
             "asn": 131098,
-            "as_org": "BDNSKR-AS-KR Korea Internet Security Agency",
+            "as_org": "BDNSKR-AS-KR-KR - Korea Internet Security Agency",
             "as_country": "KR"
           }
         ],
@@ -62,7 +62,7 @@
           {
             "ip": "210.101.61.1",
             "asn": 131099,
-            "as_org": "CDNSKR-AS-KR Korea Internet Security Agency",
+            "as_org": "CDNSKR-AS-KR-KR - Korea Internet Security Agency",
             "as_country": "KR"
           }
         ],
@@ -74,7 +74,7 @@
           {
             "ip": "203.83.159.1",
             "asn": 23599,
-            "as_org": "DDNSKR-KR Korea Internet Security Agency",
+            "as_org": "DDNSKR-KR-KR - Korea Internet Security Agency",
             "as_country": "KR"
           }
         ],
@@ -82,7 +82,7 @@
           {
             "ip": "2001:dcc:4::1",
             "asn": 23599,
-            "as_org": "DDNSKR-KR Korea Internet Security Agency",
+            "as_org": "DDNSKR-KR-KR - Korea Internet Security Agency",
             "as_country": "KR"
           }
         ]
@@ -93,7 +93,7 @@
           {
             "ip": "202.30.124.100",
             "asn": 23596,
-            "as_org": "EDNSKR-KR Korea Internet Security Agency",
+            "as_org": "EDNSKR-KR-KR - Korea Internet Security Agency",
             "as_country": "KR"
           }
         ],
@@ -101,7 +101,7 @@
           {
             "ip": "2001:dcc:5::100",
             "asn": 23596,
-            "as_org": "EDNSKR-KR Korea Internet Security Agency",
+            "as_org": "EDNSKR-KR-KR - Korea Internet Security Agency",
             "as_country": "KR"
           }
         ]
@@ -112,7 +112,7 @@
           {
             "ip": "210.101.62.1",
             "asn": 131100,
-            "as_org": "FDNSKR-AS-KR Korea Internet Security Agency",
+            "as_org": "FDNSKR-AS-KR-KR - Korea Internet Security Agency",
             "as_country": "KR"
           }
         ],
@@ -120,7 +120,7 @@
           {
             "ip": "2001:dcc:6::1",
             "asn": 131100,
-            "as_org": "FDNSKR-AS-KR Korea Internet Security Agency",
+            "as_org": "FDNSKR-AS-KR-KR - Korea Internet Security Agency",
             "as_country": "KR"
           }
         ]
@@ -131,7 +131,7 @@
           {
             "ip": "202.31.190.1",
             "asn": 23600,
-            "as_org": "GDNSKR-KR Korea Internet Security Agency",
+            "as_org": "GDNSKR-KR-KR - Korea Internet Security Agency",
             "as_country": "KR"
           }
         ],
@@ -139,7 +139,7 @@
           {
             "ip": "2001:dc5:a::1",
             "asn": 23600,
-            "as_org": "GDNSKR-KR Korea Internet Security Agency",
+            "as_org": "GDNSKR-KR-KR - Korea Internet Security Agency",
             "as_country": "KR"
           }
         ]

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -50,13 +50,13 @@
           {
             "ip": "102.219.183.67",
             "asn": 328919,
-            "as_org": "OCL-AS",
+            "as_org": "Open Connect Limited - Open Connect Limited",
             "as_country": "MW"
           },
           {
             "ip": "196.45.188.5",
             "asn": 36969,
-            "as_org": "MTL-AS",
+            "as_org": "Malawi Telecommunications Limited - Malawi Telecommunications Limited",
             "as_country": "MW"
           }
         ],
@@ -68,13 +68,13 @@
           {
             "ip": "41.87.5.162",
             "asn": 36969,
-            "as_org": "MTL-AS",
+            "as_org": "Malawi Telecommunications Limited - Malawi Telecommunications Limited",
             "as_country": "MW"
           },
           {
             "ip": "196.45.190.9",
             "asn": 36969,
-            "as_org": "MTL-AS",
+            "as_org": "Malawi Telecommunications Limited - Malawi Telecommunications Limited",
             "as_country": "MW"
           }
         ],
@@ -86,7 +86,7 @@
           {
             "ip": "185.43.134.10",
             "asn": 25192,
-            "as_org": "CZNIC-AS",
+            "as_org": "CZNIC-AS CZ.NIC, z.s.p.o.",
             "as_country": "CZ"
           }
         ],
@@ -94,7 +94,7 @@
           {
             "ip": "2001:148f:fffd::10",
             "asn": 25192,
-            "as_org": "CZNIC-AS",
+            "as_org": "CZNIC-AS CZ.NIC, z.s.p.o.",
             "as_country": "CZ"
           }
         ]
@@ -105,7 +105,7 @@
           {
             "ip": "193.0.9.99",
             "asn": 197000,
-            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre (RIPE NCC)",
             "as_country": "NL"
           }
         ],
@@ -113,7 +113,7 @@
           {
             "ip": "2a13:27c0:30::99",
             "asn": 197000,
-            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre (RIPE NCC)",
             "as_country": "NL"
           }
         ]
@@ -124,7 +124,7 @@
           {
             "ip": "202.12.31.53",
             "asn": 18366,
-            "as_org": "APNIC-ANYCAST APNIC ANYCAST ASN",
+            "as_org": "APNIC-ANYCAST - Asia Pacific Network Information Centre",
             "as_country": "AU"
           }
         ],
@@ -132,7 +132,7 @@
           {
             "ip": "2001:dd8:12::53",
             "asn": 18366,
-            "as_org": "APNIC-ANYCAST APNIC ANYCAST ASN",
+            "as_org": "APNIC-ANYCAST - Asia Pacific Network Information Centre",
             "as_country": "AU"
           }
         ]
@@ -143,7 +143,7 @@
           {
             "ip": "204.61.216.131",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -151,7 +151,7 @@
           {
             "ip": "2001:500:14:6131:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]
@@ -162,7 +162,7 @@
           {
             "ip": "147.28.0.39",
             "asn": 3130,
-            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_org": "RGNET-SEA RGnet OU",
             "as_country": "EE"
           }
         ],
@@ -170,7 +170,7 @@
           {
             "ip": "2001:418:1::39",
             "asn": 3130,
-            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_org": "RGNET-SEA RGnet OU",
             "as_country": "EE"
           }
         ]

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -54,7 +54,7 @@
           {
             "ip": "200.0.68.10",
             "asn": 61455,
-            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_org": "AS61455 - LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
             "as_country": "UY"
           }
         ],
@@ -62,7 +62,7 @@
           {
             "ip": "2801:14:a000::10",
             "asn": 61455,
-            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_org": "AS61455 - LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
             "as_country": "UY"
           }
         ]
@@ -73,7 +73,7 @@
           {
             "ip": "164.73.128.5",
             "asn": 1797,
-            "as_org": "Uruguay",
+            "as_org": "AS1797 - Uruguay",
             "as_country": "UY"
           }
         ],
@@ -81,7 +81,7 @@
           {
             "ip": "2001:1328:6::5",
             "asn": 1797,
-            "as_org": "Uruguay",
+            "as_org": "AS1797 - Uruguay",
             "as_country": "UY"
           }
         ]
@@ -92,7 +92,7 @@
           {
             "ip": "164.73.128.70",
             "asn": 1797,
-            "as_org": "Uruguay",
+            "as_org": "AS1797 - Uruguay",
             "as_country": "UY"
           }
         ],
@@ -104,7 +104,7 @@
           {
             "ip": "65.22.41.1",
             "asn": 12041,
-            "as_org": "AS-AFILIAS1",
+            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
             "as_country": "US"
           }
         ],
@@ -112,7 +112,7 @@
           {
             "ip": "2a01:8840:1bb::1",
             "asn": 12041,
-            "as_org": "AS-AFILIAS1",
+            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
             "as_country": "US"
           }
         ]
@@ -123,7 +123,7 @@
           {
             "ip": "200.160.0.5",
             "asn": 22548,
-            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_org": "AS22548 - Nucleo de Inf. e Coord. do Ponto BR - NIC.BR",
             "as_country": "BR"
           }
         ],
@@ -131,7 +131,7 @@
           {
             "ip": "2001:12ff:0:a20::5",
             "asn": 22548,
-            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_org": "AS22548 - Nucleo de Inf. e Coord. do Ponto BR - NIC.BR",
             "as_country": "BR"
           }
         ]
@@ -142,7 +142,7 @@
           {
             "ip": "200.40.30.254",
             "asn": 6057,
-            "as_org": "Administracion Nacional de Telecomunicaciones",
+            "as_org": "AS6057 - Administracion Nacional de Telecomunicaciones",
             "as_country": "UY"
           }
         ],
@@ -150,7 +150,7 @@
           {
             "ip": "2800:a0:53:1001::1",
             "asn": 6057,
-            "as_org": "Administracion Nacional de Telecomunicaciones",
+            "as_org": "AS6057 - Administracion Nacional de Telecomunicaciones",
             "as_country": "UY"
           }
         ]
@@ -161,7 +161,7 @@
           {
             "ip": "200.40.220.254",
             "asn": 6057,
-            "as_org": "Administracion Nacional de Telecomunicaciones",
+            "as_org": "AS6057 - Administracion Nacional de Telecomunicaciones",
             "as_country": "UY"
           }
         ],
@@ -169,7 +169,7 @@
           {
             "ip": "2800:a0:53:1002::1",
             "asn": 6057,
-            "as_org": "Administracion Nacional de Telecomunicaciones",
+            "as_org": "AS6057 - Administracion Nacional de Telecomunicaciones",
             "as_country": "UY"
           }
         ]

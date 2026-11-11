@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -57,8 +57,8 @@
         "ipv4": [
           {
             "ip": "198.41.0.4",
-            "asn": 396566,
-            "as_org": "VRSN-AC50-340",
+            "asn": 20172,
+            "as_org": "VGRS-AC27 - VeriSign Global Registry Services",
             "as_country": "US"
           }
         ],
@@ -66,7 +66,7 @@
           {
             "ip": "2001:503:ba3e::2:30",
             "asn": 396566,
-            "as_org": "VRSN-AC50-340",
+            "as_org": "VRSN-AC50-340 - VeriSign Global Registry Services",
             "as_country": "US"
           }
         ]
@@ -77,7 +77,7 @@
           {
             "ip": "170.247.170.2",
             "asn": 394353,
-            "as_org": "BROOT-AS",
+            "as_org": "BROOT-AS - B.Root-Server-OPS",
             "as_country": "US"
           }
         ],
@@ -85,7 +85,7 @@
           {
             "ip": "2801:1b8:10::b",
             "asn": 394353,
-            "as_org": "BROOT-AS",
+            "as_org": "BROOT-AS - B.Root-Server-OPS",
             "as_country": "US"
           }
         ]
@@ -96,7 +96,7 @@
           {
             "ip": "192.33.4.12",
             "asn": 2149,
-            "as_org": "COGENT-2149",
+            "as_org": "COGENT-2149 - Cogent Communications, LLC",
             "as_country": "US"
           }
         ],
@@ -104,7 +104,7 @@
           {
             "ip": "2001:500:2::c",
             "asn": 2149,
-            "as_org": "COGENT-2149",
+            "as_org": "COGENT-2149 - Cogent Communications, LLC",
             "as_country": "US"
           }
         ]
@@ -115,7 +115,7 @@
           {
             "ip": "199.7.91.13",
             "asn": 10886,
-            "as_org": "MAX-GIGAPOP",
+            "as_org": "MAX-GIGAPOP - University of Maryland",
             "as_country": "US"
           }
         ],
@@ -123,7 +123,7 @@
           {
             "ip": "2001:500:2d::d",
             "asn": 10886,
-            "as_org": "MAX-GIGAPOP",
+            "as_org": "MAX-GIGAPOP - University of Maryland",
             "as_country": "US"
           }
         ]
@@ -134,7 +134,7 @@
           {
             "ip": "192.203.230.10",
             "asn": 21556,
-            "as_org": "NARC-EROOT",
+            "as_org": "NARC-EROOT - National Aeronautics and Space Administration",
             "as_country": "US"
           }
         ],
@@ -142,7 +142,7 @@
           {
             "ip": "2001:500:a8::e",
             "asn": 21556,
-            "as_org": "NARC-EROOT",
+            "as_org": "NARC-EROOT - National Aeronautics and Space Administration",
             "as_country": "US"
           }
         ]
@@ -153,7 +153,7 @@
           {
             "ip": "192.5.5.241",
             "asn": 3557,
-            "as_org": "ISC-AS",
+            "as_org": "ISC-AS - Internet Systems Consortium, Inc.",
             "as_country": "US"
           }
         ],
@@ -161,7 +161,7 @@
           {
             "ip": "2001:500:2f::f",
             "asn": 3557,
-            "as_org": "ISC-AS",
+            "as_org": "ISC-AS - Internet Systems Consortium, Inc.",
             "as_country": "US"
           }
         ]
@@ -172,7 +172,7 @@
           {
             "ip": "192.112.36.4",
             "asn": 5927,
-            "as_org": "DNIC-ASBLK-05800-06055",
+            "as_org": "DNIC-ASBLK-05800-06055 - United States Department of Defense (DoD)",
             "as_country": "US"
           }
         ],
@@ -180,7 +180,7 @@
           {
             "ip": "2001:500:12::d0d",
             "asn": 5927,
-            "as_org": "DNIC-ASBLK-05800-06055",
+            "as_org": "DNIC-ASBLK-05800-06055 - United States Department of Defense (DoD)",
             "as_country": "US"
           }
         ]
@@ -191,7 +191,7 @@
           {
             "ip": "198.97.190.53",
             "asn": 1508,
-            "as_org": "DNIC-AS-01508",
+            "as_org": "DNIC-AS-01508 - Headquarters, USAISC",
             "as_country": "US"
           }
         ],
@@ -199,7 +199,7 @@
           {
             "ip": "2001:500:1::53",
             "asn": 1508,
-            "as_org": "DNIC-AS-01508",
+            "as_org": "DNIC-AS-01508 - Headquarters, USAISC",
             "as_country": "US"
           }
         ]
@@ -210,7 +210,7 @@
           {
             "ip": "192.36.148.17",
             "asn": 29216,
-            "as_org": "I-ROOT DNS root name server i.root-servers.net.",
+            "as_org": "I-ROOT Netnod AB",
             "as_country": "SE"
           }
         ],
@@ -218,7 +218,7 @@
           {
             "ip": "2001:7fe::53",
             "asn": 29216,
-            "as_org": "I-ROOT DNS root name server i.root-servers.net.",
+            "as_org": "I-ROOT Netnod AB",
             "as_country": "SE"
           }
         ]
@@ -229,7 +229,7 @@
           {
             "ip": "193.0.14.129",
             "asn": 25152,
-            "as_org": "K-ROOT-SERVER Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_org": "K-ROOT-SERVER Reseaux IP Europeens Network Coordination Centre (RIPE NCC)",
             "as_country": "NL"
           }
         ],
@@ -237,7 +237,7 @@
           {
             "ip": "2001:7fd::1",
             "asn": 25152,
-            "as_org": "K-ROOT-SERVER Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_org": "K-ROOT-SERVER Reseaux IP Europeens Network Coordination Centre (RIPE NCC)",
             "as_country": "NL"
           }
         ]
@@ -248,7 +248,7 @@
           {
             "ip": "199.7.83.42",
             "asn": 20144,
-            "as_org": "IMRS",
+            "as_org": "IMRS - ICANN",
             "as_country": "US"
           }
         ],
@@ -256,7 +256,7 @@
           {
             "ip": "2001:500:9f::42",
             "asn": 20144,
-            "as_org": "IMRS",
+            "as_org": "IMRS - ICANN",
             "as_country": "US"
           }
         ]
@@ -267,7 +267,7 @@
           {
             "ip": "202.12.27.33",
             "asn": 7500,
-            "as_org": "M-ROOT-DNS WIDE Project",
+            "as_org": "M-ROOT-DNS - WIDE Project",
             "as_country": "JP"
           }
         ],
@@ -275,7 +275,7 @@
           {
             "ip": "2001:dc3::35",
             "asn": 7500,
-            "as_org": "M-ROOT-DNS WIDE Project",
+            "as_org": "M-ROOT-DNS - WIDE Project",
             "as_country": "JP"
           }
         ]

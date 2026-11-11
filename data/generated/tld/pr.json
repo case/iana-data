@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -56,7 +56,7 @@
           {
             "ip": "200.0.68.10",
             "asn": 61455,
-            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_org": "AS61455 - LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
             "as_country": "UY"
           }
         ],
@@ -64,7 +64,7 @@
           {
             "ip": "2801:14:a000::10",
             "asn": 61455,
-            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_org": "AS61455 - LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
             "as_country": "UY"
           }
         ]
@@ -75,7 +75,7 @@
           {
             "ip": "199.254.59.17",
             "asn": 12041,
-            "as_org": "AS-AFILIAS1",
+            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
             "as_country": "US"
           }
         ],
@@ -83,7 +83,7 @@
           {
             "ip": "2001:500:25::17",
             "asn": 12041,
-            "as_org": "AS-AFILIAS1",
+            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
             "as_country": "US"
           }
         ]
@@ -94,7 +94,7 @@
           {
             "ip": "199.249.116.17",
             "asn": 207266,
-            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_org": "AFiLIAS-SECONDARY-DNS Identity Digital Limited",
             "as_country": "IE"
           }
         ],
@@ -102,7 +102,7 @@
           {
             "ip": "2001:500:44::17",
             "asn": 207266,
-            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_org": "AFiLIAS-SECONDARY-DNS Identity Digital Limited",
             "as_country": "IE"
           }
         ]
@@ -113,7 +113,7 @@
           {
             "ip": "199.254.60.17",
             "asn": 12041,
-            "as_org": "AS-AFILIAS1",
+            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
             "as_country": "US"
           }
         ],
@@ -121,7 +121,7 @@
           {
             "ip": "2001:500:26::17",
             "asn": 12041,
-            "as_org": "AS-AFILIAS1",
+            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
             "as_country": "US"
           }
         ]
@@ -132,7 +132,7 @@
           {
             "ip": "199.249.124.17",
             "asn": 207266,
-            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_org": "AFiLIAS-SECONDARY-DNS Identity Digital Limited",
             "as_country": "IE"
           }
         ],
@@ -140,7 +140,7 @@
           {
             "ip": "2001:500:4c::17",
             "asn": 207266,
-            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_org": "AFiLIAS-SECONDARY-DNS Identity Digital Limited",
             "as_country": "IE"
           }
         ]
@@ -151,7 +151,7 @@
           {
             "ip": "199.254.61.17",
             "asn": 12041,
-            "as_org": "AS-AFILIAS1",
+            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
             "as_country": "US"
           }
         ],
@@ -159,7 +159,7 @@
           {
             "ip": "2001:500:27::17",
             "asn": 12041,
-            "as_org": "AS-AFILIAS1",
+            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
             "as_country": "US"
           }
         ]
@@ -170,7 +170,7 @@
           {
             "ip": "199.254.62.17",
             "asn": 12041,
-            "as_org": "AS-AFILIAS1",
+            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
             "as_country": "US"
           }
         ],
@@ -178,7 +178,7 @@
           {
             "ip": "2001:500:28::17",
             "asn": 12041,
-            "as_org": "AS-AFILIAS1",
+            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
             "as_country": "US"
           }
         ]
@@ -189,7 +189,7 @@
           {
             "ip": "194.0.11.111",
             "asn": 31529,
-            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_org": "DENIC-ANYCAST-AS DENIC eG",
             "as_country": "DE"
           }
         ],
@@ -197,7 +197,7 @@
           {
             "ip": "2001:678:e:111::53",
             "asn": 31529,
-            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_org": "DENIC-ANYCAST-AS DENIC eG",
             "as_country": "DE"
           }
         ]

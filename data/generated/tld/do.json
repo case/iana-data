@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -46,7 +46,7 @@
           {
             "ip": "200.0.68.10",
             "asn": 61455,
-            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_org": "AS61455 - LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
             "as_country": "UY"
           }
         ],
@@ -54,7 +54,7 @@
           {
             "ip": "2801:14:a000::10",
             "asn": 61455,
-            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_org": "AS61455 - LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
             "as_country": "UY"
           }
         ]
@@ -65,7 +65,7 @@
           {
             "ip": "190.113.72.177",
             "asn": 262178,
-            "as_org": "Pontificia Universidad Catolica Madre y Maestra PUCMM",
+            "as_org": "AS262178 - Pontificia Universidad Catolica Madre y Maestra (PUCMM)",
             "as_country": "DO"
           }
         ],
@@ -73,7 +73,7 @@
           {
             "ip": "2001:13e0:85d0:106::177",
             "asn": 262178,
-            "as_org": "Pontificia Universidad Catolica Madre y Maestra PUCMM",
+            "as_org": "AS262178 - Pontificia Universidad Catolica Madre y Maestra (PUCMM)",
             "as_country": "DO"
           }
         ]
@@ -84,7 +84,7 @@
           {
             "ip": "190.113.72.178",
             "asn": 262178,
-            "as_org": "Pontificia Universidad Catolica Madre y Maestra PUCMM",
+            "as_org": "AS262178 - Pontificia Universidad Catolica Madre y Maestra (PUCMM)",
             "as_country": "DO"
           }
         ],
@@ -92,7 +92,7 @@
           {
             "ip": "2001:13e0:85d0:106::178",
             "asn": 262178,
-            "as_org": "Pontificia Universidad Catolica Madre y Maestra PUCMM",
+            "as_org": "AS262178 - Pontificia Universidad Catolica Madre y Maestra (PUCMM)",
             "as_country": "DO"
           }
         ]
@@ -103,7 +103,7 @@
           {
             "ip": "190.113.65.12",
             "asn": 262178,
-            "as_org": "Pontificia Universidad Catolica Madre y Maestra PUCMM",
+            "as_org": "AS262178 - Pontificia Universidad Catolica Madre y Maestra (PUCMM)",
             "as_country": "DO"
           }
         ],
@@ -111,7 +111,7 @@
           {
             "ip": "2001:13e0:0:1::12",
             "asn": 262178,
-            "as_org": "Pontificia Universidad Catolica Madre y Maestra PUCMM",
+            "as_org": "AS262178 - Pontificia Universidad Catolica Madre y Maestra (PUCMM)",
             "as_country": "DO"
           }
         ]
@@ -122,7 +122,7 @@
           {
             "ip": "204.61.216.124",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -130,7 +130,7 @@
           {
             "ip": "2001:500:14:6124:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]
@@ -141,7 +141,7 @@
           {
             "ip": "190.113.65.13",
             "asn": 262178,
-            "as_org": "Pontificia Universidad Catolica Madre y Maestra PUCMM",
+            "as_org": "AS262178 - Pontificia Universidad Catolica Madre y Maestra (PUCMM)",
             "as_country": "DO"
           }
         ],
@@ -149,7 +149,7 @@
           {
             "ip": "2001:13e0:0:1::13",
             "asn": 262178,
-            "as_org": "Pontificia Universidad Catolica Madre y Maestra PUCMM",
+            "as_org": "AS262178 - Pontificia Universidad Catolica Madre y Maestra (PUCMM)",
             "as_country": "DO"
           }
         ]
@@ -160,7 +160,7 @@
           {
             "ip": "128.223.32.35",
             "asn": 3582,
-            "as_org": "UONET",
+            "as_org": "UONET - University of Oregon",
             "as_country": "US"
           }
         ],
@@ -168,7 +168,7 @@
           {
             "ip": "2001:468:d01:20::80df:2023",
             "asn": 3582,
-            "as_org": "UONET",
+            "as_org": "UONET - University of Oregon",
             "as_country": "US"
           }
         ]

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -77,7 +77,7 @@
           {
             "ip": "216.239.32.105",
             "asn": 15169,
-            "as_org": "GOOGLE",
+            "as_org": "GOOGLE - Google LLC",
             "as_country": "US"
           }
         ],
@@ -85,7 +85,7 @@
           {
             "ip": "2001:4860:4802:32::69",
             "asn": 15169,
-            "as_org": "GOOGLE",
+            "as_org": "GOOGLE - Google LLC",
             "as_country": "US"
           }
         ]
@@ -96,7 +96,7 @@
           {
             "ip": "216.239.34.105",
             "asn": 15169,
-            "as_org": "GOOGLE",
+            "as_org": "GOOGLE - Google LLC",
             "as_country": "US"
           }
         ],
@@ -104,7 +104,7 @@
           {
             "ip": "2001:4860:4802:34::69",
             "asn": 15169,
-            "as_org": "GOOGLE",
+            "as_org": "GOOGLE - Google LLC",
             "as_country": "US"
           }
         ]
@@ -115,7 +115,7 @@
           {
             "ip": "216.239.36.105",
             "asn": 15169,
-            "as_org": "GOOGLE",
+            "as_org": "GOOGLE - Google LLC",
             "as_country": "US"
           }
         ],
@@ -123,7 +123,7 @@
           {
             "ip": "2001:4860:4802:36::69",
             "asn": 15169,
-            "as_org": "GOOGLE",
+            "as_org": "GOOGLE - Google LLC",
             "as_country": "US"
           }
         ]
@@ -134,7 +134,7 @@
           {
             "ip": "216.239.38.105",
             "asn": 15169,
-            "as_org": "GOOGLE",
+            "as_org": "GOOGLE - Google LLC",
             "as_country": "US"
           }
         ],
@@ -142,7 +142,7 @@
           {
             "ip": "2001:4860:4802:38::69",
             "asn": 15169,
-            "as_org": "GOOGLE",
+            "as_org": "GOOGLE - Google LLC",
             "as_country": "US"
           }
         ]
@@ -153,7 +153,7 @@
           {
             "ip": "216.239.60.105",
             "asn": 43515,
-            "as_org": "YOUTUBE YOUTUBE",
+            "as_org": "YOUTUBE Google Ireland Limited",
             "as_country": "IE"
           }
         ],
@@ -161,7 +161,7 @@
           {
             "ip": "2001:4860:4805::69",
             "asn": 43515,
-            "as_org": "YOUTUBE YOUTUBE",
+            "as_org": "YOUTUBE Google Ireland Limited",
             "as_country": "IE"
           }
         ]

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -42,7 +42,7 @@
           {
             "ip": "217.23.160.50",
             "asn": 15766,
-            "as_org": "DOMICILIUM-AS",
+            "as_org": "DOMICILIUM-AS Domicilium (IOM) Limited",
             "as_country": "IM"
           }
         ],
@@ -54,7 +54,7 @@
           {
             "ip": "217.23.163.140",
             "asn": 15766,
-            "as_org": "DOMICILIUM-AS",
+            "as_org": "DOMICILIUM-AS Domicilium (IOM) Limited",
             "as_country": "IM"
           }
         ],
@@ -85,7 +85,7 @@
           {
             "ip": "83.218.14.53",
             "asn": 15766,
-            "as_org": "DOMICILIUM-AS",
+            "as_org": "DOMICILIUM-AS Domicilium (IOM) Limited",
             "as_country": "IM"
           }
         ],

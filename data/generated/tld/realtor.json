@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -78,7 +78,7 @@
           {
             "ip": "213.248.219.122",
             "asn": 43519,
-            "as_org": "NOMINETANYCAST",
+            "as_org": "NOMINETANYCAST Nominet UK",
             "as_country": "GB"
           }
         ],
@@ -86,7 +86,7 @@
           {
             "ip": "2a01:618:403::122",
             "asn": 43519,
-            "as_org": "NOMINETANYCAST",
+            "as_org": "NOMINETANYCAST Nominet UK",
             "as_country": "GB"
           }
         ]
@@ -97,7 +97,7 @@
           {
             "ip": "103.49.83.122",
             "asn": 43519,
-            "as_org": "NOMINETANYCAST",
+            "as_org": "NOMINETANYCAST Nominet UK",
             "as_country": "GB"
           }
         ],
@@ -105,7 +105,7 @@
           {
             "ip": "2401:fd80:403::122",
             "asn": 43519,
-            "as_org": "NOMINETANYCAST",
+            "as_org": "NOMINETANYCAST Nominet UK",
             "as_country": "GB"
           }
         ]
@@ -116,7 +116,7 @@
           {
             "ip": "213.248.223.122",
             "asn": 43519,
-            "as_org": "NOMINETANYCAST",
+            "as_org": "NOMINETANYCAST Nominet UK",
             "as_country": "GB"
           }
         ],
@@ -124,7 +124,7 @@
           {
             "ip": "2a01:618:407::122",
             "asn": 43519,
-            "as_org": "NOMINETANYCAST",
+            "as_org": "NOMINETANYCAST Nominet UK",
             "as_country": "GB"
           }
         ]
@@ -135,7 +135,7 @@
           {
             "ip": "43.230.51.122",
             "asn": 43519,
-            "as_org": "NOMINETANYCAST",
+            "as_org": "NOMINETANYCAST Nominet UK",
             "as_country": "GB"
           }
         ],
@@ -143,7 +143,7 @@
           {
             "ip": "2401:fd80:407::122",
             "asn": 43519,
-            "as_org": "NOMINETANYCAST",
+            "as_org": "NOMINETANYCAST Nominet UK",
             "as_country": "GB"
           }
         ]
@@ -154,7 +154,7 @@
           {
             "ip": "156.154.100.3",
             "asn": 12008,
-            "as_org": "SECURITYSERVICES",
+            "as_org": "VERCARA - Vercara, LLC",
             "as_country": "US"
           }
         ],
@@ -162,7 +162,7 @@
           {
             "ip": "2001:502:ad09::3",
             "asn": 12008,
-            "as_org": "SECURITYSERVICES",
+            "as_org": "VERCARA - Vercara, LLC",
             "as_country": "US"
           }
         ]
@@ -173,7 +173,7 @@
           {
             "ip": "156.154.101.3",
             "asn": 12008,
-            "as_org": "SECURITYSERVICES",
+            "as_org": "VERCARA - Vercara, LLC",
             "as_country": "US"
           }
         ],
@@ -181,7 +181,7 @@
           {
             "ip": "2001:502:2eda::3",
             "asn": 12008,
-            "as_org": "SECURITYSERVICES",
+            "as_org": "VERCARA - Vercara, LLC",
             "as_country": "US"
           }
         ]
@@ -192,7 +192,7 @@
           {
             "ip": "156.154.102.3",
             "asn": 12008,
-            "as_org": "SECURITYSERVICES",
+            "as_org": "VERCARA - Vercara, LLC",
             "as_country": "US"
           }
         ],
@@ -200,7 +200,7 @@
           {
             "ip": "2610:a1:1009::3",
             "asn": 12008,
-            "as_org": "SECURITYSERVICES",
+            "as_org": "VERCARA - Vercara, LLC",
             "as_country": "US"
           }
         ]
@@ -211,7 +211,7 @@
           {
             "ip": "156.154.103.3",
             "asn": 12008,
-            "as_org": "SECURITYSERVICES",
+            "as_org": "VERCARA - Vercara, LLC",
             "as_country": "US"
           }
         ],
@@ -219,7 +219,7 @@
           {
             "ip": "2610:a1:1010::3",
             "asn": 12008,
-            "as_org": "SECURITYSERVICES",
+            "as_org": "VERCARA - Vercara, LLC",
             "as_country": "US"
           }
         ]

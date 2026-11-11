@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -51,7 +51,7 @@
           {
             "ip": "195.47.253.13",
             "asn": 29067,
-            "as_org": "UATLD-AS UA ccTLD Manager",
+            "as_org": "UATLD-AS LLC \"Hostmaster\"",
             "as_country": "UA"
           }
         ],
@@ -59,7 +59,7 @@
           {
             "ip": "2001:67c:258::13",
             "asn": 29067,
-            "as_org": "UATLD-AS UA ccTLD Manager",
+            "as_org": "UATLD-AS LLC \"Hostmaster\"",
             "as_country": "UA"
           }
         ]
@@ -70,7 +70,7 @@
           {
             "ip": "217.14.111.13",
             "asn": 15815,
-            "as_org": "INTRANS-AS",
+            "as_org": "INTRANS-AS INTRA Network Systems Ltd",
             "as_country": "AZ"
           }
         ],
@@ -82,7 +82,7 @@
           {
             "ip": "148.251.2.246",
             "asn": 24940,
-            "as_org": "HETZNER-AS",
+            "as_org": "HETZNER-AS Hetzner Online GmbH",
             "as_country": "DE"
           }
         ],
@@ -94,7 +94,7 @@
           {
             "ip": "147.28.0.39",
             "asn": 3130,
-            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_org": "RGNET-SEA RGnet OU",
             "as_country": "EE"
           }
         ],
@@ -102,7 +102,7 @@
           {
             "ip": "2001:418:1::39",
             "asn": 3130,
-            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_org": "RGNET-SEA RGnet OU",
             "as_country": "EE"
           }
         ]

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -44,7 +44,7 @@
           {
             "ip": "79.98.120.73",
             "asn": 47201,
-            "as_org": "AEDAAS1",
+            "as_org": "AEDAAS1 TELECOMMUNICATIONS AND DIGITAL GOVERNMENT REGULATORY AUTHORITY",
             "as_country": "AE"
           }
         ],
@@ -52,7 +52,7 @@
           {
             "ip": "2a00:d30:120::73",
             "asn": 47201,
-            "as_org": "AEDAAS1",
+            "as_org": "AEDAAS1 TELECOMMUNICATIONS AND DIGITAL GOVERNMENT REGULATORY AUTHORITY",
             "as_country": "AE"
           }
         ]
@@ -63,7 +63,7 @@
           {
             "ip": "79.98.121.73",
             "asn": 47201,
-            "as_org": "AEDAAS1",
+            "as_org": "AEDAAS1 TELECOMMUNICATIONS AND DIGITAL GOVERNMENT REGULATORY AUTHORITY",
             "as_country": "AE"
           }
         ],
@@ -71,7 +71,7 @@
           {
             "ip": "2a00:d30:121::73",
             "asn": 47201,
-            "as_org": "AEDAAS1",
+            "as_org": "AEDAAS1 TELECOMMUNICATIONS AND DIGITAL GOVERNMENT REGULATORY AUTHORITY",
             "as_country": "AE"
           }
         ]
@@ -82,7 +82,7 @@
           {
             "ip": "202.12.31.53",
             "asn": 18366,
-            "as_org": "APNIC-ANYCAST APNIC ANYCAST ASN",
+            "as_org": "APNIC-ANYCAST - Asia Pacific Network Information Centre",
             "as_country": "AU"
           }
         ],
@@ -90,7 +90,7 @@
           {
             "ip": "2001:dd8:12::53",
             "asn": 18366,
-            "as_org": "APNIC-ANYCAST APNIC ANYCAST ASN",
+            "as_org": "APNIC-ANYCAST - Asia Pacific Network Information Centre",
             "as_country": "AU"
           }
         ]
@@ -101,7 +101,7 @@
           {
             "ip": "199.4.137.1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -109,7 +109,7 @@
           {
             "ip": "2001:500:7d::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]

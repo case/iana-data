@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -35,17 +35,17 @@
         "ipv4": [
           {
             "ip": "185.21.168.17",
-            "asn": 61005,
-            "as_org": "AS-OPENTLD1",
-            "as_country": "NL"
+            "asn": 57382,
+            "as_org": "TK1 Telecommunication Tokelau Corporation Teletok",
+            "as_country": "TK"
           }
         ],
         "ipv6": [
           {
             "ip": "2a04:1b00:4::1",
-            "asn": 61005,
-            "as_org": "AS-OPENTLD1",
-            "as_country": "NL"
+            "asn": 57382,
+            "as_org": "TK1 Telecommunication Tokelau Corporation Teletok",
+            "as_country": "TK"
           }
         ]
       },
@@ -54,17 +54,17 @@
         "ipv4": [
           {
             "ip": "185.21.169.17",
-            "asn": 61005,
-            "as_org": "AS-OPENTLD1",
-            "as_country": "NL"
+            "asn": 57382,
+            "as_org": "TK1 Telecommunication Tokelau Corporation Teletok",
+            "as_country": "TK"
           }
         ],
         "ipv6": [
           {
             "ip": "2a04:1b00:5::1",
-            "asn": 61005,
-            "as_org": "AS-OPENTLD1",
-            "as_country": "NL"
+            "asn": 57382,
+            "as_org": "TK1 Telecommunication Tokelau Corporation Teletok",
+            "as_country": "TK"
           }
         ]
       },
@@ -73,17 +73,17 @@
         "ipv4": [
           {
             "ip": "185.21.170.17",
-            "asn": 61007,
-            "as_org": "AS-OPENTLD2",
-            "as_country": "NL"
+            "asn": 198147,
+            "as_org": "TK2 Telecommunication Tokelau Corporation Teletok",
+            "as_country": "TK"
           }
         ],
         "ipv6": [
           {
             "ip": "2a04:1b00:6::1",
-            "asn": 61007,
-            "as_org": "AS-OPENTLD2",
-            "as_country": "NL"
+            "asn": 198147,
+            "as_org": "TK2 Telecommunication Tokelau Corporation Teletok",
+            "as_country": "TK"
           }
         ]
       },
@@ -92,17 +92,17 @@
         "ipv4": [
           {
             "ip": "185.21.171.17",
-            "asn": 61007,
-            "as_org": "AS-OPENTLD2",
-            "as_country": "NL"
+            "asn": 198147,
+            "as_org": "TK2 Telecommunication Tokelau Corporation Teletok",
+            "as_country": "TK"
           }
         ],
         "ipv6": [
           {
             "ip": "2a04:1b00:7::1",
-            "asn": 61007,
-            "as_org": "AS-OPENTLD2",
-            "as_country": "NL"
+            "asn": 198147,
+            "as_org": "TK2 Telecommunication Tokelau Corporation Teletok",
+            "as_country": "TK"
           }
         ]
       }

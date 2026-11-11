@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -53,7 +53,7 @@
           {
             "ip": "43.250.84.53",
             "asn": 23888,
-            "as_org": "NTC-AS-AP National Telecommunication Corporation HQ",
+            "as_org": "NTC-AS-AP - National Telecommunication Corporation HQ,",
             "as_country": "PK"
           }
         ],
@@ -65,7 +65,7 @@
           {
             "ip": "43.250.84.54",
             "asn": 23888,
-            "as_org": "NTC-AS-AP National Telecommunication Corporation HQ",
+            "as_org": "NTC-AS-AP - National Telecommunication Corporation HQ,",
             "as_country": "PK"
           }
         ],
@@ -77,7 +77,7 @@
           {
             "ip": "36.50.76.15",
             "asn": 152155,
-            "as_org": "SNSKIES-AS-AP SN SKIESPVT. LIMITED",
+            "as_org": "SNSKIES-AS-AP - SN SKIES(PVT.) LIMITED",
             "as_country": "PK"
           }
         ],

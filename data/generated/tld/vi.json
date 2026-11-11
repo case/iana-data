@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -30,9 +30,11 @@
       "rdap_source": "IANA",
       "country_name_iso": "Virgin Islands, U.S.",
       "as_org_aliases": [
+        "Amazon",
         "Packet Clearing House"
       ],
       "as_org_slugs": [
+        "amazon",
         "packet-clearing-house"
       ],
       "geographic_scope": "country"
@@ -43,17 +45,17 @@
         "ipv4": [
           {
             "ip": "108.128.43.191",
-            "asn": 0,
-            "as_org": "Unknown",
-            "as_country": "None"
+            "asn": 16509,
+            "as_org": "AMAZON-02 - Amazon.com, Inc.",
+            "as_country": "US"
           }
         ],
         "ipv6": [
           {
             "ip": "2a05:d018:1db7:6efe:91ed:ac51:e2f1:55b3",
-            "asn": 0,
-            "as_org": "Unknown",
-            "as_country": "None"
+            "asn": 16509,
+            "as_org": "AMAZON-02 - Amazon.com, Inc.",
+            "as_country": "US"
           }
         ]
       },
@@ -63,7 +65,7 @@
           {
             "ip": "204.61.216.133",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -71,7 +73,7 @@
           {
             "ip": "2001:500:14:6133:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]

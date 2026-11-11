@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -84,7 +84,7 @@
           {
             "ip": "103.61.60.1",
             "asn": 138457,
-            "as_org": "CAICT-AS-AP China Academy of Information and Communications Technology",
+            "as_org": "CAICT-AS-AP - China Academy of Information and Communications Technology",
             "as_country": "CN"
           }
         ],
@@ -92,7 +92,7 @@
           {
             "ip": "2402:7d80::1",
             "asn": 8075,
-            "as_org": "MICROSOFT-CORP-MSN-AS-BLOCK",
+            "as_org": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
             "as_country": "US"
           }
         ]
@@ -103,7 +103,7 @@
           {
             "ip": "103.61.61.1",
             "asn": 8075,
-            "as_org": "MICROSOFT-CORP-MSN-AS-BLOCK",
+            "as_org": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
             "as_country": "US"
           }
         ],
@@ -111,7 +111,7 @@
           {
             "ip": "2402:7d80:8888::1",
             "asn": 8075,
-            "as_org": "MICROSOFT-CORP-MSN-AS-BLOCK",
+            "as_org": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
             "as_country": "US"
           }
         ]
@@ -122,7 +122,7 @@
           {
             "ip": "103.61.62.1",
             "asn": 8075,
-            "as_org": "MICROSOFT-CORP-MSN-AS-BLOCK",
+            "as_org": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
             "as_country": "US"
           }
         ],
@@ -134,7 +134,7 @@
           {
             "ip": "103.61.63.1",
             "asn": 8075,
-            "as_org": "MICROSOFT-CORP-MSN-AS-BLOCK",
+            "as_org": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
             "as_country": "US"
           }
         ],

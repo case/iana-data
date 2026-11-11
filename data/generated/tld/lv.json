@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -52,7 +52,7 @@
           {
             "ip": "194.0.48.1",
             "asn": 51955,
-            "as_org": "NIC-LV-ANYCAST-AS",
+            "as_org": "NIC-LV-ANYCAST-AS Institute of Mathematics and Computer Science of University of Latvia",
             "as_country": "LV"
           }
         ],
@@ -60,7 +60,7 @@
           {
             "ip": "2001:678:7c::7c",
             "asn": 51955,
-            "as_org": "NIC-LV-ANYCAST-AS",
+            "as_org": "NIC-LV-ANYCAST-AS Institute of Mathematics and Computer Science of University of Latvia",
             "as_country": "LV"
           }
         ]
@@ -71,7 +71,7 @@
           {
             "ip": "92.240.70.1",
             "asn": 5538,
-            "as_org": "SIGMANET-NIC",
+            "as_org": "SigmaNet-NIC Institute of Mathematics and Computer Science of University of Latvia",
             "as_country": "LV"
           }
         ],
@@ -83,7 +83,7 @@
           {
             "ip": "185.159.199.140",
             "asn": 396501,
-            "as_org": "CIRA-5",
+            "as_org": "CIRA-5 - CIRA Canadian Internet Registration Authority Autorit Canadienne pour les enregistrements Internet",
             "as_country": "CA"
           }
         ],
@@ -91,7 +91,7 @@
           {
             "ip": "2620:10a:80ac::140",
             "asn": 396501,
-            "as_org": "CIRA-5",
+            "as_org": "CIRA-5 - CIRA Canadian Internet Registration Authority Autorit Canadienne pour les enregistrements Internet",
             "as_country": "CA"
           }
         ]
@@ -102,7 +102,7 @@
           {
             "ip": "194.0.8.1",
             "asn": 51955,
-            "as_org": "NIC-LV-ANYCAST-AS",
+            "as_org": "NIC-LV-ANYCAST-AS Institute of Mathematics and Computer Science of University of Latvia",
             "as_country": "LV"
           }
         ],
@@ -110,7 +110,7 @@
           {
             "ip": "2001:678:b:1::1",
             "asn": 51955,
-            "as_org": "NIC-LV-ANYCAST-AS",
+            "as_org": "NIC-LV-ANYCAST-AS Institute of Mathematics and Computer Science of University of Latvia",
             "as_country": "LV"
           }
         ]
@@ -159,7 +159,7 @@
           {
             "ip": "192.36.125.2",
             "asn": 1653,
-            "as_org": "SUNET SUNET Swedish University Network",
+            "as_org": "SUNET - Vetenskapsradet / SUNET",
             "as_country": "EU"
           }
         ],
@@ -167,7 +167,7 @@
           {
             "ip": "2001:6b0:7::2",
             "asn": 1653,
-            "as_org": "SUNET SUNET Swedish University Network",
+            "as_org": "SUNET - Vetenskapsradet / SUNET",
             "as_country": "EU"
           }
         ]

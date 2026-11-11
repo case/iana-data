@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -43,7 +43,7 @@
           {
             "ip": "91.218.160.197",
             "asn": 51346,
-            "as_org": "TOJIKTELECOM-AS",
+            "as_org": "TOJIKTELECOM-AS Opened Joint Stock Company \"Tojiktelecom\"",
             "as_country": "TJ"
           }
         ],
@@ -55,7 +55,7 @@
           {
             "ip": "128.223.32.35",
             "asn": 3582,
-            "as_org": "UONET",
+            "as_org": "UONET - University of Oregon",
             "as_country": "US"
           }
         ],
@@ -63,7 +63,7 @@
           {
             "ip": "2001:468:d01:20::80df:2023",
             "asn": 3582,
-            "as_org": "UONET",
+            "as_org": "UONET - University of Oregon",
             "as_country": "US"
           }
         ]
@@ -74,16 +74,16 @@
           {
             "ip": "193.0.9.117",
             "asn": 197000,
-            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre (RIPE NCC)",
             "as_country": "NL"
           }
         ],
         "ipv6": [
           {
             "ip": "2a13:27c0:30::117",
-            "asn": 0,
-            "as_org": "Unknown",
-            "as_country": "None"
+            "asn": 197000,
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre (RIPE NCC)",
+            "as_country": "NL"
           }
         ]
       }

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -64,7 +64,7 @@
           {
             "ip": "203.119.2.164",
             "asn": 9735,
-            "as_org": "HKDNR-AS-AP Hong Kong Domain Name Registration Co. Ltd",
+            "as_org": "HKDNR-AS-AP - Hong Kong Domain Name Registration Co. Ltd",
             "as_country": "HK"
           }
         ],
@@ -72,7 +72,7 @@
           {
             "ip": "2001:dca:4000::cb77:2a4",
             "asn": 9735,
-            "as_org": "HKDNR-AS-AP Hong Kong Domain Name Registration Co. Ltd",
+            "as_org": "HKDNR-AS-AP - Hong Kong Domain Name Registration Co. Ltd",
             "as_country": "HK"
           }
         ]
@@ -83,7 +83,7 @@
           {
             "ip": "203.119.87.164",
             "asn": 9735,
-            "as_org": "HKDNR-AS-AP Hong Kong Domain Name Registration Co. Ltd",
+            "as_org": "HKDNR-AS-AP - Hong Kong Domain Name Registration Co. Ltd",
             "as_country": "HK"
           }
         ],
@@ -91,7 +91,7 @@
           {
             "ip": "2001:dca:2000::cb77:57a4",
             "asn": 9735,
-            "as_org": "HKDNR-AS-AP Hong Kong Domain Name Registration Co. Ltd",
+            "as_org": "HKDNR-AS-AP - Hong Kong Domain Name Registration Co. Ltd",
             "as_country": "HK"
           }
         ]
@@ -102,7 +102,7 @@
           {
             "ip": "169.54.247.173",
             "asn": 36351,
-            "as_org": "SOFTLAYER",
+            "as_org": "SOFTLAYER - IBM Cloud",
             "as_country": "US"
           }
         ],
@@ -110,7 +110,7 @@
           {
             "ip": "2607:f0d0:1b02:b9::4",
             "asn": 36351,
-            "as_org": "SOFTLAYER",
+            "as_org": "SOFTLAYER - IBM Cloud",
             "as_country": "US"
           }
         ]
@@ -121,7 +121,7 @@
           {
             "ip": "135.90.90.24",
             "asn": 36351,
-            "as_org": "SOFTLAYER",
+            "as_org": "SOFTLAYER - IBM Cloud",
             "as_country": "US"
           }
         ],
@@ -129,7 +129,7 @@
           {
             "ip": "2401:c900:2101:2a::b",
             "asn": 36351,
-            "as_org": "SOFTLAYER",
+            "as_org": "SOFTLAYER - IBM Cloud",
             "as_country": "US"
           }
         ]

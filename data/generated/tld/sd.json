@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -48,7 +48,7 @@
           {
             "ip": "196.29.180.14",
             "asn": 33788,
-            "as_org": "KANARTEL",
+            "as_org": "Kanar Telecommunication (Canar Telecom Co.Ltd) - Kanar Telecommunication (Canar Telecom Co.Ltd)",
             "as_country": "SD"
           }
         ],
@@ -60,7 +60,7 @@
           {
             "ip": "196.29.166.134",
             "asn": 33788,
-            "as_org": "KANARTEL",
+            "as_org": "Kanar Telecommunication (Canar Telecom Co.Ltd) - Kanar Telecommunication (Canar Telecom Co.Ltd)",
             "as_country": "SD"
           }
         ],
@@ -84,7 +84,7 @@
           {
             "ip": "102.130.251.10",
             "asn": 328381,
-            "as_org": "Sudanese-Internet-AS",
+            "as_org": "Sudanese Internet Association - Sudanese Internet Association",
             "as_country": "SD"
           }
         ],
@@ -96,7 +96,7 @@
           {
             "ip": "196.216.168.26",
             "asn": 37177,
-            "as_org": "AFRINIC-ANYCAST",
+            "as_org": "African Network Information Center - (AfriNIC) Ltd - African Network Information Center - (AfriNIC) Ltd",
             "as_country": "MU"
           }
         ],
@@ -104,7 +104,7 @@
           {
             "ip": "2001:43f8:120::26",
             "asn": 37177,
-            "as_org": "AFRINIC-ANYCAST",
+            "as_org": "African Network Information Center - (AfriNIC) Ltd - African Network Information Center - (AfriNIC) Ltd",
             "as_country": "MU"
           }
         ]
@@ -115,7 +115,7 @@
           {
             "ip": "204.61.216.97",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -123,7 +123,7 @@
           {
             "ip": "2001:500:14:6097:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]
@@ -134,7 +134,7 @@
           {
             "ip": "193.0.9.109",
             "asn": 197000,
-            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre (RIPE NCC)",
             "as_country": "NL"
           }
         ],

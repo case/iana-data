@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -43,7 +43,7 @@
           {
             "ip": "78.104.145.8",
             "asn": 1120,
-            "as_org": "ACONET_SERVICES ACOnet Services @ Vienna Internet eXchange",
+            "as_org": "ACOnet_Services - ACONET",
             "as_country": "EU"
           }
         ],
@@ -51,7 +51,7 @@
           {
             "ip": "2001:628:453:bb::8",
             "asn": 1120,
-            "as_org": "ACONET_SERVICES ACOnet Services @ Vienna Internet eXchange",
+            "as_org": "ACOnet_Services - ACONET",
             "as_country": "EU"
           }
         ]
@@ -62,7 +62,7 @@
           {
             "ip": "193.227.1.1",
             "asn": 2561,
-            "as_org": "EUN",
+            "as_org": "Egyptian Universities Network (EUN) - Egyptian Universities Network (EUN)",
             "as_country": "EG"
           }
         ],
@@ -74,7 +74,7 @@
           {
             "ip": "147.28.0.39",
             "asn": 3130,
-            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_org": "RGNET-SEA RGnet OU",
             "as_country": "EE"
           }
         ],
@@ -82,7 +82,7 @@
           {
             "ip": "2001:418:1::39",
             "asn": 3130,
-            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_org": "RGNET-SEA RGnet OU",
             "as_country": "EE"
           }
         ]

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -50,7 +50,7 @@
           {
             "ip": "185.150.40.131",
             "asn": 51172,
-            "as_org": "DOMREG-UNI-AS",
+            "as_org": "DOMREG-UNI-AS Kauno Technologijos Universitetas",
             "as_country": "LT"
           }
         ],
@@ -62,7 +62,7 @@
           {
             "ip": "194.0.20.1",
             "asn": 44358,
-            "as_org": "DOMREG-ANY-AS KTU Internet Service Centre",
+            "as_org": "DOMREG-ANY-AS Kauno Technologijos Universitetas",
             "as_country": "LT"
           }
         ],
@@ -70,7 +70,7 @@
           {
             "ip": "2001:678:19::1",
             "asn": 44358,
-            "as_org": "DOMREG-ANY-AS KTU Internet Service Centre",
+            "as_org": "DOMREG-ANY-AS Kauno Technologijos Universitetas",
             "as_country": "LT"
           }
         ]
@@ -81,7 +81,7 @@
           {
             "ip": "194.0.3.1",
             "asn": 44358,
-            "as_org": "DOMREG-ANY-AS KTU Internet Service Centre",
+            "as_org": "DOMREG-ANY-AS Kauno Technologijos Universitetas",
             "as_country": "LT"
           }
         ],
@@ -89,7 +89,7 @@
           {
             "ip": "2001:678:6::1",
             "asn": 44358,
-            "as_org": "DOMREG-ANY-AS KTU Internet Service Centre",
+            "as_org": "DOMREG-ANY-AS Kauno Technologijos Universitetas",
             "as_country": "LT"
           }
         ]
@@ -100,7 +100,7 @@
           {
             "ip": "194.0.18.1",
             "asn": 44358,
-            "as_org": "DOMREG-ANY-AS KTU Internet Service Centre",
+            "as_org": "DOMREG-ANY-AS Kauno Technologijos Universitetas",
             "as_country": "LT"
           }
         ],
@@ -112,7 +112,7 @@
           {
             "ip": "194.0.19.1",
             "asn": 44358,
-            "as_org": "DOMREG-ANY-AS KTU Internet Service Centre",
+            "as_org": "DOMREG-ANY-AS Kauno Technologijos Universitetas",
             "as_country": "LT"
           }
         ],
@@ -120,7 +120,7 @@
           {
             "ip": "2001:678:8c::1",
             "asn": 44358,
-            "as_org": "DOMREG-ANY-AS KTU Internet Service Centre",
+            "as_org": "DOMREG-ANY-AS Kauno Technologijos Universitetas",
             "as_country": "LT"
           }
         ]
@@ -131,7 +131,7 @@
           {
             "ip": "194.0.25.46",
             "asn": 1921,
-            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD ipcom GmbH",
             "as_country": "AT"
           }
         ],
@@ -139,7 +139,7 @@
           {
             "ip": "2001:678:20::46",
             "asn": 1921,
-            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD ipcom GmbH",
             "as_country": "AT"
           }
         ]

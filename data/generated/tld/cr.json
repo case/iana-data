@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -66,7 +66,7 @@
           {
             "ip": "200.0.68.10",
             "asn": 61455,
-            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_org": "AS61455 - LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
             "as_country": "UY"
           }
         ],
@@ -74,7 +74,7 @@
           {
             "ip": "2801:14:a000::10",
             "asn": 61455,
-            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_org": "AS61455 - LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
             "as_country": "UY"
           }
         ]
@@ -85,7 +85,7 @@
           {
             "ip": "185.159.197.100",
             "asn": 55195,
-            "as_org": "CIRA-CLOUD1",
+            "as_org": "CIRA-CLOUD1 - CIRA Canadian Internet Registration Authority Autorit Canadienne pour les enregistrements Internet",
             "as_country": "CA"
           }
         ],
@@ -93,7 +93,7 @@
           {
             "ip": "2620:10a:80aa::100",
             "asn": 55195,
-            "as_org": "CIRA-CLOUD1",
+            "as_org": "CIRA-CLOUD1 - CIRA Canadian Internet Registration Authority Autorit Canadienne pour les enregistrements Internet",
             "as_country": "CA"
           }
         ]
@@ -104,7 +104,7 @@
           {
             "ip": "185.159.198.100",
             "asn": 394354,
-            "as_org": "CIRA-CLOUD2",
+            "as_org": "CIRA-CLOUD2 - CIRA Canadian Internet Registration Authority Autorit Canadienne pour les enregistrements Internet",
             "as_country": "CA"
           }
         ],
@@ -112,7 +112,7 @@
           {
             "ip": "2620:10a:80ab::100",
             "asn": 394354,
-            "as_org": "CIRA-CLOUD2",
+            "as_org": "CIRA-CLOUD2 - CIRA Canadian Internet Registration Authority Autorit Canadienne pour les enregistrements Internet",
             "as_country": "CA"
           }
         ]
@@ -123,7 +123,7 @@
           {
             "ip": "194.0.11.107",
             "asn": 31529,
-            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_org": "DENIC-ANYCAST-AS DENIC eG",
             "as_country": "DE"
           }
         ],
@@ -131,7 +131,7 @@
           {
             "ip": "2001:678:e:107::53",
             "asn": 31529,
-            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_org": "DENIC-ANYCAST-AS DENIC eG",
             "as_country": "DE"
           }
         ]
@@ -142,7 +142,7 @@
           {
             "ip": "200.107.82.100",
             "asn": 263779,
-            "as_org": "Academia Nacional de Ciencias",
+            "as_org": "AS263779 - Academia Nacional de Ciencias",
             "as_country": "CR"
           }
         ],
@@ -150,7 +150,7 @@
           {
             "ip": "2001:13c7:7004:1::d100",
             "asn": 263779,
-            "as_org": "Academia Nacional de Ciencias",
+            "as_org": "AS263779 - Academia Nacional de Ciencias",
             "as_country": "CR"
           }
         ]
@@ -161,7 +161,7 @@
           {
             "ip": "204.61.216.89",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -169,7 +169,7 @@
           {
             "ip": "2001:500:14:6089:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]

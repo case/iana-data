@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -52,16 +52,16 @@
           {
             "ip": "86.111.192.9",
             "asn": 30857,
-            "as_org": "CITC-AS",
+            "as_org": "CITC-AS Communications, Space & Technology Commission (Saudi Arabia)",
             "as_country": "SA"
           }
         ],
         "ipv6": [
           {
             "ip": "2001:67c:18c8:10::c1",
-            "asn": 0,
-            "as_org": "Unknown",
-            "as_country": "None"
+            "asn": 30857,
+            "as_org": "CITC-AS Communications, Space & Technology Commission (Saudi Arabia)",
+            "as_country": "SA"
           }
         ]
       },
@@ -71,7 +71,7 @@
           {
             "ip": "86.111.196.9",
             "asn": 30857,
-            "as_org": "CITC-AS",
+            "as_org": "CITC-AS Communications, Space & Technology Commission (Saudi Arabia)",
             "as_country": "SA"
           }
         ],
@@ -79,7 +79,7 @@
           {
             "ip": "2001:67c:130:10::9",
             "asn": 30857,
-            "as_org": "CITC-AS",
+            "as_org": "CITC-AS Communications, Space & Technology Commission (Saudi Arabia)",
             "as_country": "SA"
           }
         ]
@@ -90,7 +90,7 @@
           {
             "ip": "212.138.118.118",
             "asn": 8895,
-            "as_org": "ISU Internet Services Unit ISU",
+            "as_org": "ISU King Abdul Aziz City for Science and Technology",
             "as_country": "SA"
           }
         ],
@@ -98,7 +98,7 @@
           {
             "ip": "2001:1490:0:800::118",
             "asn": 8895,
-            "as_org": "ISU Internet Services Unit ISU",
+            "as_org": "ISU King Abdul Aziz City for Science and Technology",
             "as_country": "SA"
           }
         ]
@@ -109,7 +109,7 @@
           {
             "ip": "86.51.77.213",
             "asn": 35819,
-            "as_org": "MOBILY-AS Etihad Etisalat Company Mobily",
+            "as_org": "Mobily-AS Etihad Etisalat, a joint stock company",
             "as_country": "SA"
           }
         ],
@@ -117,7 +117,7 @@
           {
             "ip": "2a02:ce0:1:30::5",
             "asn": 35819,
-            "as_org": "MOBILY-AS Etihad Etisalat Company Mobily",
+            "as_org": "Mobily-AS Etihad Etisalat, a joint stock company",
             "as_country": "SA"
           }
         ]
@@ -128,7 +128,7 @@
           {
             "ip": "86.51.28.37",
             "asn": 35819,
-            "as_org": "MOBILY-AS Etihad Etisalat Company Mobily",
+            "as_org": "Mobily-AS Etihad Etisalat, a joint stock company",
             "as_country": "SA"
           }
         ],
@@ -136,7 +136,7 @@
           {
             "ip": "2a02:ce0:1:91::5",
             "asn": 35819,
-            "as_org": "MOBILY-AS Etihad Etisalat Company Mobily",
+            "as_org": "Mobily-AS Etihad Etisalat, a joint stock company",
             "as_country": "SA"
           }
         ]
@@ -166,7 +166,7 @@
           {
             "ip": "204.61.216.41",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -174,7 +174,7 @@
           {
             "ip": "2001:500:14:6041:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]
@@ -185,7 +185,7 @@
           {
             "ip": "37.107.223.170",
             "asn": 25019,
-            "as_org": "SAUDINETSTC-AS",
+            "as_org": "SAUDINETSTC-AS Saudi Telecom Company JSC",
             "as_country": "SA"
           }
         ],
@@ -193,7 +193,7 @@
           {
             "ip": "2001:16a0:1:3002::2",
             "asn": 25019,
-            "as_org": "SAUDINETSTC-AS",
+            "as_org": "SAUDINETSTC-AS Saudi Telecom Company JSC",
             "as_country": "SA"
           }
         ]
@@ -204,7 +204,7 @@
           {
             "ip": "37.107.255.170",
             "asn": 25019,
-            "as_org": "SAUDINETSTC-AS",
+            "as_org": "SAUDINETSTC-AS Saudi Telecom Company JSC",
             "as_country": "SA"
           }
         ],
@@ -212,7 +212,7 @@
           {
             "ip": "2001:16a0:2:3002::2",
             "asn": 25019,
-            "as_org": "SAUDINETSTC-AS",
+            "as_org": "SAUDINETSTC-AS Saudi Telecom Company JSC",
             "as_country": "SA"
           }
         ]
@@ -223,7 +223,7 @@
           {
             "ip": "213.236.36.92",
             "asn": 41176,
-            "as_org": "SAHARANET-AS Sahara Net Main NOC AS",
+            "as_org": "SaharaNet-AS Sahara Al Jazeera Network Information Technology Company",
             "as_country": "SA"
           }
         ],
@@ -231,7 +231,7 @@
           {
             "ip": "2a02:d70:64:68::2",
             "asn": 41176,
-            "as_org": "SAHARANET-AS Sahara Net Main NOC AS",
+            "as_org": "SaharaNet-AS Sahara Al Jazeera Network Information Technology Company",
             "as_country": "SA"
           }
         ]

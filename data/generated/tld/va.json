@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -34,7 +34,7 @@
           {
             "ip": "212.77.0.110",
             "asn": 8978,
-            "as_org": "ASN-HOLYSEE Holy See Secretariat of State Department of Telecommunications",
+            "as_org": "ASN-HOLYSEE Holy See - Vatican City State",
             "as_country": "VA"
           }
         ],
@@ -42,7 +42,7 @@
           {
             "ip": "2a01:b8:0:1:212:77:0:110",
             "asn": 8978,
-            "as_org": "ASN-HOLYSEE Holy See Secretariat of State Department of Telecommunications",
+            "as_org": "ASN-HOLYSEE Holy See - Vatican City State",
             "as_country": "VA"
           }
         ]
@@ -53,7 +53,7 @@
           {
             "ip": "212.77.0.2",
             "asn": 8978,
-            "as_org": "ASN-HOLYSEE Holy See Secretariat of State Department of Telecommunications",
+            "as_org": "ASN-HOLYSEE Holy See - Vatican City State",
             "as_country": "VA"
           }
         ],
@@ -61,7 +61,7 @@
           {
             "ip": "2a01:b8:0:1:212:77:0:2",
             "asn": 8978,
-            "as_org": "ASN-HOLYSEE Holy See Secretariat of State Department of Telecommunications",
+            "as_org": "ASN-HOLYSEE Holy See - Vatican City State",
             "as_country": "VA"
           }
         ]
@@ -72,7 +72,7 @@
           {
             "ip": "212.77.2.58",
             "asn": 8978,
-            "as_org": "ASN-HOLYSEE Holy See Secretariat of State Department of Telecommunications",
+            "as_org": "ASN-HOLYSEE Holy See - Vatican City State",
             "as_country": "VA"
           }
         ],
@@ -80,7 +80,7 @@
           {
             "ip": "2a01:b8::2:3a",
             "asn": 8978,
-            "as_org": "ASN-HOLYSEE Holy See Secretariat of State Department of Telecommunications",
+            "as_org": "ASN-HOLYSEE Holy See - Vatican City State",
             "as_country": "VA"
           }
         ]
@@ -91,7 +91,7 @@
           {
             "ip": "193.201.40.6",
             "asn": 24796,
-            "as_org": "NAMEX-IXP-SERVICES Rome Internet eXchange point",
+            "as_org": "NAMEX-IXP NAMEX CONSORZIO",
             "as_country": "IT"
           }
         ],
@@ -99,7 +99,7 @@
           {
             "ip": "2a0f:80:1::6",
             "asn": 24796,
-            "as_org": "NAMEX-IXP-SERVICES Rome Internet eXchange point",
+            "as_org": "NAMEX-IXP NAMEX CONSORZIO",
             "as_country": "IT"
           }
         ]
@@ -110,7 +110,7 @@
           {
             "ip": "193.201.40.7",
             "asn": 24796,
-            "as_org": "NAMEX-IXP-SERVICES Rome Internet eXchange point",
+            "as_org": "NAMEX-IXP NAMEX CONSORZIO",
             "as_country": "IT"
           }
         ],
@@ -118,7 +118,7 @@
           {
             "ip": "2a0f:80:1::7",
             "asn": 24796,
-            "as_org": "NAMEX-IXP-SERVICES Rome Internet eXchange point",
+            "as_org": "NAMEX-IXP NAMEX CONSORZIO",
             "as_country": "IT"
           }
         ]

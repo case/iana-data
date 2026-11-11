@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -47,7 +47,7 @@
           {
             "ip": "193.189.123.2",
             "asn": 39200,
-            "as_org": "IRNICANYCAST-AS",
+            "as_org": "IRNICAnyCAST-AS Institute for Research in Fundamental Sciences",
             "as_country": "IR"
           }
         ],
@@ -66,7 +66,7 @@
           {
             "ip": "193.189.122.83",
             "asn": 35285,
-            "as_org": "IRNIC-AS",
+            "as_org": "IRNIC-AS Institute for Research in Fundamental Sciences",
             "as_country": "IR"
           }
         ],

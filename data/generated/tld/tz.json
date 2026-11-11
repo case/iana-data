@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -77,7 +77,7 @@
           {
             "ip": "204.61.216.15",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -85,7 +85,7 @@
           {
             "ip": "2001:500:14:6015:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]
@@ -96,7 +96,7 @@
           {
             "ip": "196.216.162.67",
             "asn": 37045,
-            "as_org": "tznic",
+            "as_org": "Tanzania Network Information Centre (tzNIC) - Tanzania Network Information Centre (tzNIC)",
             "as_country": "TZ"
           }
         ],
@@ -104,7 +104,7 @@
           {
             "ip": "2001:43f8:e0:1::67",
             "asn": 37045,
-            "as_org": "tznic",
+            "as_org": "Tanzania Network Information Centre (tzNIC) - Tanzania Network Information Centre (tzNIC)",
             "as_country": "TZ"
           }
         ]
@@ -115,7 +115,7 @@
           {
             "ip": "147.28.0.39",
             "asn": 3130,
-            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_org": "RGNET-SEA RGnet OU",
             "as_country": "EE"
           }
         ],
@@ -123,7 +123,7 @@
           {
             "ip": "2001:418:1::39",
             "asn": 3130,
-            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_org": "RGNET-SEA RGnet OU",
             "as_country": "EE"
           }
         ]
@@ -134,7 +134,7 @@
           {
             "ip": "185.43.134.11",
             "asn": 25192,
-            "as_org": "CZNIC-AS",
+            "as_org": "CZNIC-AS CZ.NIC, z.s.p.o.",
             "as_country": "CZ"
           }
         ],
@@ -142,7 +142,7 @@
           {
             "ip": "2001:148f:fffd::11",
             "asn": 25192,
-            "as_org": "CZNIC-AS",
+            "as_org": "CZNIC-AS CZ.NIC, z.s.p.o.",
             "as_country": "CZ"
           }
         ]

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -67,7 +67,7 @@
           {
             "ip": "196.216.168.25",
             "asn": 37177,
-            "as_org": "AFRINIC-ANYCAST",
+            "as_org": "African Network Information Center - (AfriNIC) Ltd - African Network Information Center - (AfriNIC) Ltd",
             "as_country": "MU"
           }
         ],
@@ -75,7 +75,7 @@
           {
             "ip": "2001:43f8:120::25",
             "asn": 37177,
-            "as_org": "AFRINIC-ANYCAST",
+            "as_org": "African Network Information Center - (AfriNIC) Ltd - African Network Information Center - (AfriNIC) Ltd",
             "as_country": "MU"
           }
         ]
@@ -86,7 +86,7 @@
           {
             "ip": "41.228.62.63",
             "asn": 2609,
-            "as_org": "TN-BB-AS Tunisia BackBone AS",
+            "as_org": "TN-BB-AS - IDDQD-AS",
             "as_country": "TN"
           }
         ],
@@ -94,7 +94,7 @@
           {
             "ip": "2c0f:fab0:ffff:4:41:228:62:63",
             "asn": 2609,
-            "as_org": "TN-BB-AS Tunisia BackBone AS",
+            "as_org": "TN-BB-AS - IDDQD-AS",
             "as_country": "TN"
           }
         ]
@@ -105,7 +105,7 @@
           {
             "ip": "41.228.63.62",
             "asn": 2609,
-            "as_org": "TN-BB-AS Tunisia BackBone AS",
+            "as_org": "TN-BB-AS - IDDQD-AS",
             "as_country": "TN"
           }
         ],
@@ -113,7 +113,7 @@
           {
             "ip": "2c0f:fab0:ffff:5:41:228:63:62",
             "asn": 2609,
-            "as_org": "TN-BB-AS Tunisia BackBone AS",
+            "as_org": "TN-BB-AS - IDDQD-AS",
             "as_country": "TN"
           }
         ]
@@ -124,7 +124,7 @@
           {
             "ip": "192.93.0.4",
             "asn": 2486,
-            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 - AFNIC (Association Francaise pour le Nommage Internet en Cooperation)",
             "as_country": "FR"
           }
         ],
@@ -132,7 +132,7 @@
           {
             "ip": "2001:660:3005:1::1:2",
             "asn": 2486,
-            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 - AFNIC (Association Francaise pour le Nommage Internet en Cooperation)",
             "as_country": "FR"
           }
         ]
@@ -143,7 +143,7 @@
           {
             "ip": "204.61.216.94",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -151,7 +151,7 @@
           {
             "ip": "2001:500:14:6094:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]
@@ -162,7 +162,7 @@
           {
             "ip": "147.28.0.39",
             "asn": 3130,
-            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_org": "RGNET-SEA RGnet OU",
             "as_country": "EE"
           }
         ],
@@ -170,7 +170,7 @@
           {
             "ip": "2001:418:1::39",
             "asn": 3130,
-            "as_org": "RGNET-SEA RGnet Seattle Westin",
+            "as_org": "RGNET-SEA RGnet OU",
             "as_country": "EE"
           }
         ]

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -26,12 +26,10 @@
     "annotations": {
       "country_name_iso": "Gabon",
       "as_org_aliases": [
-        "AFNIC.fr",
         "Netnod AB",
         "Packet Clearing House"
       ],
       "as_org_slugs": [
-        "afnic",
         "netnod",
         "packet-clearing-house"
       ],
@@ -51,8 +49,8 @@
         "ipv4": [
           {
             "ip": "194.0.9.1",
-            "asn": 2486,
-            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "asn": 2484,
+            "as_org": "NIC-FR-DNS-ANYCAST-AFNIC - AFNIC (Association Francaise pour le Nommage Internet en Cooperation)",
             "as_country": "FR"
           }
         ],
@@ -60,7 +58,7 @@
           {
             "ip": "2001:678:c::1",
             "asn": 2484,
-            "as_org": "NIC-FR-DNS-ANYCAST-AFNIC AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_org": "NIC-FR-DNS-ANYCAST-AFNIC - AFNIC (Association Francaise pour le Nommage Internet en Cooperation)",
             "as_country": "FR"
           }
         ]
@@ -90,7 +88,7 @@
           {
             "ip": "194.0.36.1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -98,7 +96,7 @@
           {
             "ip": "2001:678:4c::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]

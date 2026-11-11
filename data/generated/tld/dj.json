@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -49,7 +49,7 @@
           {
             "ip": "197.241.17.175",
             "asn": 30990,
-            "as_org": "ADJIB-AS",
+            "as_org": "DJIBOUTI TELECOM S.A. - DJIBOUTI TELECOM S.A.",
             "as_country": "DJ"
           }
         ],
@@ -61,7 +61,7 @@
           {
             "ip": "196.201.196.54",
             "asn": 30990,
-            "as_org": "ADJIB-AS",
+            "as_org": "DJIBOUTI TELECOM S.A. - DJIBOUTI TELECOM S.A.",
             "as_country": "DJ"
           }
         ],
@@ -73,7 +73,7 @@
           {
             "ip": "52.213.131.190",
             "asn": 16509,
-            "as_org": "AMAZON-02",
+            "as_org": "AMAZON-02 - Amazon.com, Inc.",
             "as_country": "US"
           }
         ],

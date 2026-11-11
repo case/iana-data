@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -45,7 +45,7 @@
           {
             "ip": "206.51.254.4",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -53,7 +53,7 @@
           {
             "ip": "2620:171:804:ad2::4",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]
@@ -64,7 +64,7 @@
           {
             "ip": "185.43.134.13",
             "asn": 25192,
-            "as_org": "CZNIC-AS",
+            "as_org": "CZNIC-AS CZ.NIC, z.s.p.o.",
             "as_country": "CZ"
           }
         ],
@@ -72,7 +72,7 @@
           {
             "ip": "2001:148f:fffd::13",
             "asn": 25192,
-            "as_org": "CZNIC-AS",
+            "as_org": "CZNIC-AS CZ.NIC, z.s.p.o.",
             "as_country": "CZ"
           }
         ]
@@ -83,7 +83,7 @@
           {
             "ip": "185.39.208.29",
             "asn": 199993,
-            "as_org": "DNS",
+            "as_org": "DNSPT Associacao DNS.PT",
             "as_country": "PT"
           }
         ],
@@ -91,7 +91,7 @@
           {
             "ip": "2a04:6d80::29",
             "asn": 199993,
-            "as_org": "DNS",
+            "as_org": "DNSPT Associacao DNS.PT",
             "as_country": "PT"
           }
         ]
@@ -102,7 +102,7 @@
           {
             "ip": "45.54.45.54",
             "asn": 63911,
-            "as_org": "NETACTUATE-AS-AP NetActuate, Inc",
+            "as_org": "NETACTUATE-AS-AP - NetActuate, Inc",
             "as_country": "US"
           }
         ],
@@ -110,7 +110,7 @@
           {
             "ip": "2607:f740:45::54",
             "asn": 63911,
-            "as_org": "NETACTUATE-AS-AP NetActuate, Inc",
+            "as_org": "NETACTUATE-AS-AP - NetActuate, Inc",
             "as_country": "US"
           }
         ]

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -67,7 +67,7 @@
           {
             "ip": "125.208.32.1",
             "asn": 24406,
-            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_org": "CNNIC-CRITICAL-AP - China Internet Network Infomation Center",
             "as_country": "CN"
           }
         ],
@@ -75,7 +75,7 @@
           {
             "ip": "2001:dc7:fffe::1",
             "asn": 24409,
-            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_org": "CNNIC-CRITICAL-AP - China Internet Network Infomation Center",
             "as_country": "CN"
           }
         ]
@@ -86,7 +86,7 @@
           {
             "ip": "125.208.33.1",
             "asn": 24406,
-            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_org": "CNNIC-CRITICAL-AP - China Internet Network Infomation Center",
             "as_country": "CN"
           }
         ],
@@ -94,7 +94,7 @@
           {
             "ip": "2001:dc7:ffff::1",
             "asn": 24409,
-            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_org": "CNNIC-CRITICAL-AP - China Internet Network Infomation Center",
             "as_country": "CN"
           }
         ]
@@ -104,8 +104,8 @@
         "ipv4": [
           {
             "ip": "125.208.34.1",
-            "asn": 24406,
-            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "asn": 24409,
+            "as_org": "CNNIC-CRITICAL-AP - China Internet Network Infomation Center",
             "as_country": "CN"
           }
         ],
@@ -113,7 +113,7 @@
           {
             "ip": "2001:dc7:fffd::1",
             "asn": 24151,
-            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_org": "CNNIC-CRITICAL-AP - China Internet Network Infomation Center",
             "as_country": "CN"
           }
         ]
@@ -124,7 +124,7 @@
           {
             "ip": "125.208.35.1",
             "asn": 24151,
-            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_org": "CNNIC-CRITICAL-AP - China Internet Network Infomation Center",
             "as_country": "CN"
           }
         ],
@@ -132,7 +132,7 @@
           {
             "ip": "2001:dc7:fffc::1",
             "asn": 24409,
-            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_org": "CNNIC-CRITICAL-AP - China Internet Network Infomation Center",
             "as_country": "CN"
           }
         ]
@@ -143,7 +143,7 @@
           {
             "ip": "125.208.36.1",
             "asn": 24151,
-            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_org": "CNNIC-CRITICAL-AP - China Internet Network Infomation Center",
             "as_country": "CN"
           }
         ],
@@ -151,7 +151,7 @@
           {
             "ip": "2001:dc7:fffb::1",
             "asn": 24406,
-            "as_org": "CNNIC-CRITICAL-AP China Internet Network Infomation Center",
+            "as_org": "CNNIC-CRITICAL-AP - China Internet Network Infomation Center",
             "as_country": "CN"
           }
         ]

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -75,7 +75,7 @@
           {
             "ip": "192.36.133.107",
             "asn": 39871,
-            "as_org": "NETNOD-GBG Netnod Equipment located at IX in Gothenburg",
+            "as_org": "NETNOD-GBG Netnod AB",
             "as_country": "SE"
           }
         ],
@@ -83,7 +83,7 @@
           {
             "ip": "2001:67c:254c:301::53",
             "asn": 39871,
-            "as_org": "NETNOD-GBG Netnod Equipment located at IX in Gothenburg",
+            "as_org": "NETNOD-GBG Netnod AB",
             "as_country": "SE"
           }
         ]
@@ -94,7 +94,7 @@
           {
             "ip": "192.36.135.107",
             "asn": 39840,
-            "as_org": "NETNOD-SVL Netnod Equipment located at IX in Sundsvall",
+            "as_org": "NETNOD-SVL Netnod AB",
             "as_country": "SE"
           }
         ],
@@ -102,7 +102,7 @@
           {
             "ip": "2001:67c:2554:301::53",
             "asn": 39840,
-            "as_org": "NETNOD-SVL Netnod Equipment located at IX in Sundsvall",
+            "as_org": "NETNOD-SVL Netnod AB",
             "as_country": "SE"
           }
         ]
@@ -132,7 +132,7 @@
           {
             "ip": "194.68.134.97",
             "asn": 20943,
-            "as_org": "NETNOD-LUL Netnod Equipment located at IX in Lulea",
+            "as_org": "NETNOD-LUL Netnod AB",
             "as_country": "SE"
           }
         ],
@@ -140,7 +140,7 @@
           {
             "ip": "2001:67c:2558:301::53",
             "asn": 20943,
-            "as_org": "NETNOD-LUL Netnod Equipment located at IX in Lulea",
+            "as_org": "NETNOD-LUL Netnod AB",
             "as_country": "SE"
           }
         ]
@@ -170,7 +170,7 @@
           {
             "ip": "194.0.11.112",
             "asn": 31529,
-            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_org": "DENIC-ANYCAST-AS DENIC eG",
             "as_country": "DE"
           }
         ],
@@ -178,7 +178,7 @@
           {
             "ip": "2001:678:e:112::53",
             "asn": 31529,
-            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_org": "DENIC-ANYCAST-AS DENIC eG",
             "as_country": "DE"
           }
         ]
@@ -189,7 +189,7 @@
           {
             "ip": "213.108.25.4",
             "asn": 197564,
-            "as_org": "INTERNETSTIFTELSEN",
+            "as_org": "INTERNETSTIFTELSEN Stiftelsen for Internetinfrastruktur",
             "as_country": "SE"
           }
         ],
@@ -197,7 +197,7 @@
           {
             "ip": "2001:67c:124c:e000::4",
             "asn": 197564,
-            "as_org": "INTERNETSTIFTELSEN",
+            "as_org": "INTERNETSTIFTELSEN Stiftelsen for Internetinfrastruktur",
             "as_country": "SE"
           }
         ]
@@ -208,7 +208,7 @@
           {
             "ip": "185.159.197.150",
             "asn": 55195,
-            "as_org": "CIRA-CLOUD1",
+            "as_org": "CIRA-CLOUD1 - CIRA Canadian Internet Registration Authority Autorit Canadienne pour les enregistrements Internet",
             "as_country": "CA"
           }
         ],
@@ -216,7 +216,7 @@
           {
             "ip": "2620:10a:80aa::150",
             "asn": 55195,
-            "as_org": "CIRA-CLOUD1",
+            "as_org": "CIRA-CLOUD1 - CIRA Canadian Internet Registration Authority Autorit Canadienne pour les enregistrements Internet",
             "as_country": "CA"
           }
         ]
@@ -227,7 +227,7 @@
           {
             "ip": "185.159.198.150",
             "asn": 394354,
-            "as_org": "CIRA-CLOUD2",
+            "as_org": "CIRA-CLOUD2 - CIRA Canadian Internet Registration Authority Autorit Canadienne pour les enregistrements Internet",
             "as_country": "CA"
           }
         ],
@@ -235,7 +235,7 @@
           {
             "ip": "2620:10a:80ab::150",
             "asn": 394354,
-            "as_org": "CIRA-CLOUD2",
+            "as_org": "CIRA-CLOUD2 - CIRA Canadian Internet Registration Authority Autorit Canadienne pour les enregistrements Internet",
             "as_country": "CA"
           }
         ]

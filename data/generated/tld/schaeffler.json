@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -72,7 +72,7 @@
           {
             "ip": "194.0.25.34",
             "asn": 1921,
-            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD ipcom GmbH",
             "as_country": "AT"
           }
         ],
@@ -80,7 +80,7 @@
           {
             "ip": "2001:678:20::34",
             "asn": 1921,
-            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD ipcom GmbH",
             "as_country": "AT"
           }
         ]
@@ -91,7 +91,7 @@
           {
             "ip": "194.0.26.14",
             "asn": 201612,
-            "as_org": "NICAT-MINICAST-AS",
+            "as_org": "NICAT-MINICAST-AS nic.at GmbH",
             "as_country": "AT"
           }
         ],
@@ -99,7 +99,7 @@
           {
             "ip": "2001:67c:10e0::14",
             "asn": 201612,
-            "as_org": "NICAT-MINICAST-AS",
+            "as_org": "NICAT-MINICAST-AS nic.at GmbH",
             "as_country": "AT"
           }
         ]
@@ -110,7 +110,7 @@
           {
             "ip": "194.0.24.14",
             "asn": 201612,
-            "as_org": "NICAT-MINICAST-AS",
+            "as_org": "NICAT-MINICAST-AS nic.at GmbH",
             "as_country": "AT"
           }
         ],
@@ -118,7 +118,7 @@
           {
             "ip": "2001:678:24::14",
             "asn": 201612,
-            "as_org": "NICAT-MINICAST-AS",
+            "as_org": "NICAT-MINICAST-AS nic.at GmbH",
             "as_country": "AT"
           }
         ]

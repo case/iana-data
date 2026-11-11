@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -77,7 +77,7 @@
           {
             "ip": "37.209.192.4",
             "asn": 12008,
-            "as_org": "SECURITYSERVICES",
+            "as_org": "VERCARA - Vercara, LLC",
             "as_country": "US"
           }
         ],
@@ -85,7 +85,7 @@
           {
             "ip": "2001:dcd:1::4",
             "asn": 12008,
-            "as_org": "SECURITYSERVICES",
+            "as_org": "VERCARA - Vercara, LLC",
             "as_country": "US"
           }
         ]
@@ -96,7 +96,7 @@
           {
             "ip": "37.209.194.4",
             "asn": 397213,
-            "as_org": "SECURITYSERVICES",
+            "as_org": "SECURITYSERVICES - Vercara, LLC",
             "as_country": "US"
           }
         ],
@@ -104,7 +104,7 @@
           {
             "ip": "2001:dcd:2::4",
             "asn": 12008,
-            "as_org": "SECURITYSERVICES",
+            "as_org": "VERCARA - Vercara, LLC",
             "as_country": "US"
           }
         ]
@@ -115,7 +115,7 @@
           {
             "ip": "37.209.196.4",
             "asn": 12008,
-            "as_org": "SECURITYSERVICES",
+            "as_org": "VERCARA - Vercara, LLC",
             "as_country": "US"
           }
         ],
@@ -127,7 +127,7 @@
           {
             "ip": "37.209.198.4",
             "asn": 12008,
-            "as_org": "SECURITYSERVICES",
+            "as_org": "VERCARA - Vercara, LLC",
             "as_country": "US"
           }
         ],
@@ -135,7 +135,7 @@
           {
             "ip": "2001:dcd:4::4",
             "asn": 12008,
-            "as_org": "SECURITYSERVICES",
+            "as_org": "VERCARA - Vercara, LLC",
             "as_country": "US"
           }
         ]

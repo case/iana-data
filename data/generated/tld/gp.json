@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -28,12 +28,10 @@
     "annotations": {
       "country_name_iso": "Guadeloupe",
       "as_org_aliases": [
-        "AFNIC.fr",
         "LACTLD",
         "RIPE NCC"
       ],
       "as_org_slugs": [
-        "afnic",
         "lactld",
         "ripe-ncc"
       ],
@@ -46,7 +44,7 @@
           {
             "ip": "200.0.68.10",
             "asn": 61455,
-            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_org": "AS61455 - LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
             "as_country": "UY"
           }
         ],
@@ -54,7 +52,7 @@
           {
             "ip": "2801:14:a000::10",
             "asn": 61455,
-            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_org": "AS61455 - LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
             "as_country": "UY"
           }
         ]
@@ -65,7 +63,7 @@
           {
             "ip": "193.0.9.76",
             "asn": 197000,
-            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre (RIPE NCC)",
             "as_country": "NL"
           }
         ],
@@ -73,7 +71,7 @@
           {
             "ip": "2a13:27c0:30::76",
             "asn": 197000,
-            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre (RIPE NCC)",
             "as_country": "NL"
           }
         ]
@@ -83,8 +81,8 @@
         "ipv4": [
           {
             "ip": "194.0.9.1",
-            "asn": 2486,
-            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "asn": 2484,
+            "as_org": "NIC-FR-DNS-ANYCAST-AFNIC - AFNIC (Association Francaise pour le Nommage Internet en Cooperation)",
             "as_country": "FR"
           }
         ],
@@ -92,7 +90,7 @@
           {
             "ip": "2001:678:c::1",
             "asn": 2484,
-            "as_org": "NIC-FR-DNS-ANYCAST-AFNIC AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_org": "NIC-FR-DNS-ANYCAST-AFNIC - AFNIC (Association Francaise pour le Nommage Internet en Cooperation)",
             "as_country": "FR"
           }
         ]
@@ -103,7 +101,7 @@
           {
             "ip": "193.218.114.2",
             "asn": 22150,
-            "as_org": "CARRIERHOUSE",
+            "as_org": "CARRIERHOUSE - Carrierhouse Corp.",
             "as_country": "US"
           }
         ],
@@ -115,7 +113,7 @@
           {
             "ip": "193.218.114.34",
             "asn": 22150,
-            "as_org": "CARRIERHOUSE",
+            "as_org": "CARRIERHOUSE - Carrierhouse Corp.",
             "as_country": "US"
           }
         ],

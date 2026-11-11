@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -56,7 +56,7 @@
           {
             "ip": "200.0.68.10",
             "asn": 61455,
-            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_org": "AS61455 - LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
             "as_country": "UY"
           }
         ],
@@ -64,7 +64,7 @@
           {
             "ip": "2801:14:a000::10",
             "asn": 61455,
-            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_org": "AS61455 - LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
             "as_country": "UY"
           }
         ]
@@ -75,7 +75,7 @@
           {
             "ip": "200.108.148.50",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -83,7 +83,7 @@
           {
             "ip": "2801:140:10::10",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]
@@ -94,7 +94,7 @@
           {
             "ip": "192.140.126.50",
             "asn": 265731,
-            "as_org": "Secretaria Legal y Tecnica",
+            "as_org": "AS265731 - Secretaria Legal y Tecnica",
             "as_country": "AR"
           }
         ],
@@ -102,7 +102,7 @@
           {
             "ip": "2801:140:dddd::50",
             "asn": 265731,
-            "as_org": "Secretaria Legal y Tecnica",
+            "as_org": "AS265731 - Secretaria Legal y Tecnica",
             "as_country": "AR"
           }
         ]
@@ -113,7 +113,7 @@
           {
             "ip": "170.238.66.50",
             "asn": 264798,
-            "as_org": "Secretaria Legal y Tecnica",
+            "as_org": "AS264798 - Secretaria Legal y Tecnica",
             "as_country": "AR"
           }
         ],
@@ -121,7 +121,7 @@
           {
             "ip": "2801:140:eeee::50",
             "asn": 264798,
-            "as_org": "Secretaria Legal y Tecnica",
+            "as_org": "AS264798 - Secretaria Legal y Tecnica",
             "as_country": "AR"
           }
         ]
@@ -132,7 +132,7 @@
           {
             "ip": "130.59.31.20",
             "asn": 559,
-            "as_org": "SWITCH Switch, Swiss Academic and Research Network",
+            "as_org": "Switch SWITCH",
             "as_country": "CH"
           }
         ],
@@ -140,7 +140,7 @@
           {
             "ip": "2001:620:0:ff::20",
             "asn": 559,
-            "as_org": "SWITCH Switch, Swiss Academic and Research Network",
+            "as_org": "Switch SWITCH",
             "as_country": "CH"
           }
         ]

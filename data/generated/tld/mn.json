@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -58,7 +58,7 @@
           {
             "ip": "199.254.59.1",
             "asn": 12041,
-            "as_org": "AS-AFILIAS1",
+            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
             "as_country": "US"
           }
         ],
@@ -66,7 +66,7 @@
           {
             "ip": "2001:500:25::1",
             "asn": 12041,
-            "as_org": "AS-AFILIAS1",
+            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
             "as_country": "US"
           }
         ]
@@ -77,7 +77,7 @@
           {
             "ip": "199.249.116.1",
             "asn": 207266,
-            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_org": "AFiLIAS-SECONDARY-DNS Identity Digital Limited",
             "as_country": "IE"
           }
         ],
@@ -85,7 +85,7 @@
           {
             "ip": "2001:500:44::1",
             "asn": 207266,
-            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_org": "AFiLIAS-SECONDARY-DNS Identity Digital Limited",
             "as_country": "IE"
           }
         ]
@@ -96,7 +96,7 @@
           {
             "ip": "199.254.60.1",
             "asn": 12041,
-            "as_org": "AS-AFILIAS1",
+            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
             "as_country": "US"
           }
         ],
@@ -104,7 +104,7 @@
           {
             "ip": "2001:500:26::1",
             "asn": 12041,
-            "as_org": "AS-AFILIAS1",
+            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
             "as_country": "US"
           }
         ]
@@ -115,7 +115,7 @@
           {
             "ip": "199.249.124.1",
             "asn": 207266,
-            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_org": "AFiLIAS-SECONDARY-DNS Identity Digital Limited",
             "as_country": "IE"
           }
         ],
@@ -123,7 +123,7 @@
           {
             "ip": "2001:500:4c::1",
             "asn": 207266,
-            "as_org": "AFILIAS-SECONDARY-DNS",
+            "as_org": "AFiLIAS-SECONDARY-DNS Identity Digital Limited",
             "as_country": "IE"
           }
         ]
@@ -134,7 +134,7 @@
           {
             "ip": "199.254.61.1",
             "asn": 12041,
-            "as_org": "AS-AFILIAS1",
+            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
             "as_country": "US"
           }
         ],
@@ -142,7 +142,7 @@
           {
             "ip": "2001:500:27::1",
             "asn": 12041,
-            "as_org": "AS-AFILIAS1",
+            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
             "as_country": "US"
           }
         ]
@@ -153,7 +153,7 @@
           {
             "ip": "199.254.62.1",
             "asn": 12041,
-            "as_org": "AS-AFILIAS1",
+            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
             "as_country": "US"
           }
         ],
@@ -161,7 +161,7 @@
           {
             "ip": "2001:500:28::1",
             "asn": 12041,
-            "as_org": "AS-AFILIAS1",
+            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
             "as_country": "US"
           }
         ]
@@ -172,7 +172,7 @@
           {
             "ip": "202.131.0.10",
             "asn": 45237,
-            "as_org": "GLOBAL-MG-AS-AP Magicnet LLC",
+            "as_org": "GLOBAL-MG-AS-AP - Magicnet LLC",
             "as_country": "MN"
           }
         ],
@@ -184,7 +184,7 @@
           {
             "ip": "202.72.241.5",
             "asn": 24320,
-            "as_org": "RAILCOM Railcom - Commercial Center",
+            "as_org": "RAILCOM - Railcom - Commercial Center,",
             "as_country": "MN"
           }
         ],
@@ -196,7 +196,7 @@
           {
             "ip": "202.131.224.80",
             "asn": 9484,
-            "as_org": "MOBINET-AS-MN Mobinet LLC. AS Mobinet Internet Service Provider",
+            "as_org": "MOBINET-AS-MN - Mobinet LLC. AS Mobinet Internet Service Provider",
             "as_country": "MN"
           }
         ],
@@ -208,7 +208,7 @@
           {
             "ip": "218.100.84.26",
             "asn": 56301,
-            "as_org": "MN-NDC-MN National Data Center building",
+            "as_org": "MN-NDC-MN - National Data Center building",
             "as_country": "MN"
           }
         ],

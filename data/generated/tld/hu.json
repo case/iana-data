@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -28,12 +28,10 @@
     "annotations": {
       "country_name_iso": "Hungary",
       "as_org_aliases": [
-        "AFNIC.fr",
         "Packet Clearing House",
         "RcodeZero"
       ],
       "as_org_slugs": [
-        "afnic",
         "packet-clearing-house",
         "rcodezero"
       ],
@@ -54,7 +52,7 @@
           {
             "ip": "5.28.0.97",
             "asn": 12303,
-            "as_org": "ISZT-AS 1132 Budapest Victor Hugo u. 18-22.",
+            "as_org": "ISZT-AS Magyarorszagi Internet Szolgaltatok Tanacsa Tudomanyos Egyesulet",
             "as_country": "HU"
           }
         ],
@@ -62,7 +60,7 @@
           {
             "ip": "2a00:e6a0:3:1014::97",
             "asn": 12303,
-            "as_org": "ISZT-AS 1132 Budapest Victor Hugo u. 18-22.",
+            "as_org": "ISZT-AS Magyarorszagi Internet Szolgaltatok Tanacsa Tudomanyos Egyesulet",
             "as_country": "HU"
           }
         ]
@@ -73,15 +71,15 @@
           {
             "ip": "193.41.82.18",
             "asn": 197792,
-            "as_org": "ISZT-INFRA-AS",
+            "as_org": "ISZT-INFRA-AS Magyarorszagi Internet Szolgaltatok Tanacsa Tudomanyos Egyesulet",
             "as_country": "HU"
           }
         ],
         "ipv6": [
           {
             "ip": "2a0f:7ec0:100:100::53",
-            "asn": 210788,
-            "as_org": "BIX-AS",
+            "asn": 197792,
+            "as_org": "ISZT-INFRA-AS Magyarorszagi Internet Szolgaltatok Tanacsa Tudomanyos Egyesulet",
             "as_country": "HU"
           }
         ]
@@ -92,7 +90,7 @@
           {
             "ip": "195.111.1.92",
             "asn": 1955,
-            "as_org": "HBONE-AS KIFU",
+            "as_org": "HBONE-AS KIFU (Governmental Info Tech Development Agency)",
             "as_country": "HU"
           }
         ],
@@ -100,7 +98,7 @@
           {
             "ip": "2001:738:2:2::53",
             "asn": 1955,
-            "as_org": "HBONE-AS KIFU",
+            "as_org": "HBONE-AS KIFU (Governmental Info Tech Development Agency)",
             "as_country": "HU"
           }
         ]
@@ -111,7 +109,7 @@
           {
             "ip": "5.28.0.99",
             "asn": 12303,
-            "as_org": "ISZT-AS 1132 Budapest Victor Hugo u. 18-22.",
+            "as_org": "ISZT-AS Magyarorszagi Internet Szolgaltatok Tanacsa Tudomanyos Egyesulet",
             "as_country": "HU"
           }
         ],
@@ -119,7 +117,7 @@
           {
             "ip": "2a00:e6a0:3:1014::53:99",
             "asn": 12303,
-            "as_org": "ISZT-AS 1132 Budapest Victor Hugo u. 18-22.",
+            "as_org": "ISZT-AS Magyarorszagi Internet Szolgaltatok Tanacsa Tudomanyos Egyesulet",
             "as_country": "HU"
           }
         ]
@@ -130,7 +128,7 @@
           {
             "ip": "194.0.25.11",
             "asn": 1921,
-            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD ipcom GmbH",
             "as_country": "AT"
           }
         ],
@@ -138,7 +136,7 @@
           {
             "ip": "2001:678:20::11",
             "asn": 1921,
-            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD ipcom GmbH",
             "as_country": "AT"
           }
         ]
@@ -148,8 +146,8 @@
         "ipv4": [
           {
             "ip": "194.0.9.1",
-            "asn": 2486,
-            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "asn": 2484,
+            "as_org": "NIC-FR-DNS-ANYCAST-AFNIC - AFNIC (Association Francaise pour le Nommage Internet en Cooperation)",
             "as_country": "FR"
           }
         ],
@@ -157,7 +155,7 @@
           {
             "ip": "2001:678:c::1",
             "asn": 2484,
-            "as_org": "NIC-FR-DNS-ANYCAST-AFNIC AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_org": "NIC-FR-DNS-ANYCAST-AFNIC - AFNIC (Association Francaise pour le Nommage Internet en Cooperation)",
             "as_country": "FR"
           }
         ]
@@ -168,7 +166,7 @@
           {
             "ip": "204.61.216.146",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -176,7 +174,7 @@
           {
             "ip": "2001:500:14:6146:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]

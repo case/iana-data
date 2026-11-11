@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -57,7 +57,7 @@
           {
             "ip": "192.5.6.30",
             "asn": 396549,
-            "as_org": "VRSN-AC50-340",
+            "as_org": "VRSN-AC50-340 - VeriSign Global Registry Services",
             "as_country": "US"
           }
         ],
@@ -65,7 +65,7 @@
           {
             "ip": "2001:503:a83e::2:30",
             "asn": 10515,
-            "as_org": "CLT-NIC",
+            "as_org": "CLT-NIC - VeriSign Infrastructure & Operations",
             "as_country": "US"
           }
         ]
@@ -75,17 +75,17 @@
         "ipv4": [
           {
             "ip": "192.33.14.30",
-            "asn": 396751,
-            "as_org": "AS396751",
-            "as_country": "Unknown"
+            "asn": 396654,
+            "as_org": "VRSN-AC50-340 - VeriSign Global Registry Services",
+            "as_country": "US"
           }
         ],
         "ipv6": [
           {
             "ip": "2001:503:231d::2:30",
-            "asn": 396690,
-            "as_org": "AS396690",
-            "as_country": "Unknown"
+            "asn": 396654,
+            "as_org": "VRSN-AC50-340 - VeriSign Global Registry Services",
+            "as_country": "US"
           }
         ]
       },
@@ -94,8 +94,8 @@
         "ipv4": [
           {
             "ip": "192.26.92.30",
-            "asn": 396549,
-            "as_org": "VRSN-AC50-340",
+            "asn": 397204,
+            "as_org": "VRSN-AC28 - VeriSign Global Registry Services",
             "as_country": "US"
           }
         ],
@@ -103,7 +103,7 @@
           {
             "ip": "2001:503:83eb::30",
             "asn": 10515,
-            "as_org": "CLT-NIC",
+            "as_org": "CLT-NIC - VeriSign Infrastructure & Operations",
             "as_country": "US"
           }
         ]
@@ -113,8 +113,8 @@
         "ipv4": [
           {
             "ip": "192.31.80.30",
-            "asn": 396549,
-            "as_org": "VRSN-AC50-340",
+            "asn": 397204,
+            "as_org": "VRSN-AC28 - VeriSign Global Registry Services",
             "as_country": "US"
           }
         ],
@@ -122,7 +122,7 @@
           {
             "ip": "2001:500:856e::30",
             "asn": 10515,
-            "as_org": "CLT-NIC",
+            "as_org": "CLT-NIC - VeriSign Infrastructure & Operations",
             "as_country": "US"
           }
         ]
@@ -132,8 +132,8 @@
         "ipv4": [
           {
             "ip": "192.12.94.30",
-            "asn": 396549,
-            "as_org": "VRSN-AC50-340",
+            "asn": 397204,
+            "as_org": "VRSN-AC28 - VeriSign Global Registry Services",
             "as_country": "US"
           }
         ],
@@ -141,7 +141,7 @@
           {
             "ip": "2001:502:1ca1::30",
             "asn": 10515,
-            "as_org": "CLT-NIC",
+            "as_org": "CLT-NIC - VeriSign Infrastructure & Operations",
             "as_country": "US"
           }
         ]
@@ -152,7 +152,7 @@
           {
             "ip": "192.35.51.30",
             "asn": 396600,
-            "as_org": "VRSN-AC50-340",
+            "as_org": "VRSN-AC50-340 - VeriSign Global Registry Services",
             "as_country": "US"
           }
         ],
@@ -160,7 +160,7 @@
           {
             "ip": "2001:503:d414::30",
             "asn": 396600,
-            "as_org": "VRSN-AC50-340",
+            "as_org": "VRSN-AC50-340 - VeriSign Global Registry Services",
             "as_country": "US"
           }
         ]
@@ -171,7 +171,7 @@
           {
             "ip": "192.42.93.30",
             "asn": 396600,
-            "as_org": "VRSN-AC50-340",
+            "as_org": "VRSN-AC50-340 - VeriSign Global Registry Services",
             "as_country": "US"
           }
         ],
@@ -179,7 +179,7 @@
           {
             "ip": "2001:503:eea3::30",
             "asn": 396600,
-            "as_org": "VRSN-AC50-340",
+            "as_org": "VRSN-AC50-340 - VeriSign Global Registry Services",
             "as_country": "US"
           }
         ]
@@ -190,7 +190,7 @@
           {
             "ip": "192.54.112.30",
             "asn": 396600,
-            "as_org": "VRSN-AC50-340",
+            "as_org": "VRSN-AC50-340 - VeriSign Global Registry Services",
             "as_country": "US"
           }
         ],
@@ -198,7 +198,7 @@
           {
             "ip": "2001:502:8cc::30",
             "asn": 396600,
-            "as_org": "VRSN-AC50-340",
+            "as_org": "VRSN-AC50-340 - VeriSign Global Registry Services",
             "as_country": "US"
           }
         ]
@@ -209,7 +209,7 @@
           {
             "ip": "192.43.172.30",
             "asn": 396600,
-            "as_org": "VRSN-AC50-340",
+            "as_org": "VRSN-AC50-340 - VeriSign Global Registry Services",
             "as_country": "US"
           }
         ],
@@ -217,7 +217,7 @@
           {
             "ip": "2001:503:39c1::30",
             "asn": 396600,
-            "as_org": "VRSN-AC50-340",
+            "as_org": "VRSN-AC50-340 - VeriSign Global Registry Services",
             "as_country": "US"
           }
         ]
@@ -227,8 +227,8 @@
         "ipv4": [
           {
             "ip": "192.48.79.30",
-            "asn": 36623,
-            "as_org": "HGTLD",
+            "asn": 20172,
+            "as_org": "VGRS-AC27 - VeriSign Global Registry Services",
             "as_country": "US"
           }
         ],
@@ -236,7 +236,7 @@
           {
             "ip": "2001:502:7094::30",
             "asn": 396566,
-            "as_org": "VRSN-AC50-340",
+            "as_org": "VRSN-AC50-340 - VeriSign Global Registry Services",
             "as_country": "US"
           }
         ]
@@ -246,8 +246,8 @@
         "ipv4": [
           {
             "ip": "192.52.178.30",
-            "asn": 36623,
-            "as_org": "HGTLD",
+            "asn": 20172,
+            "as_org": "VGRS-AC27 - VeriSign Global Registry Services",
             "as_country": "US"
           }
         ],
@@ -255,7 +255,7 @@
           {
             "ip": "2001:503:d2d::30",
             "asn": 396566,
-            "as_org": "VRSN-AC50-340",
+            "as_org": "VRSN-AC50-340 - VeriSign Global Registry Services",
             "as_country": "US"
           }
         ]
@@ -265,8 +265,8 @@
         "ipv4": [
           {
             "ip": "192.41.162.30",
-            "asn": 36623,
-            "as_org": "HGTLD",
+            "asn": 20172,
+            "as_org": "VGRS-AC27 - VeriSign Global Registry Services",
             "as_country": "US"
           }
         ],
@@ -274,7 +274,7 @@
           {
             "ip": "2001:500:d937::30",
             "asn": 396566,
-            "as_org": "VRSN-AC50-340",
+            "as_org": "VRSN-AC50-340 - VeriSign Global Registry Services",
             "as_country": "US"
           }
         ]
@@ -284,8 +284,8 @@
         "ipv4": [
           {
             "ip": "192.55.83.30",
-            "asn": 36623,
-            "as_org": "HGTLD",
+            "asn": 20172,
+            "as_org": "VGRS-AC27 - VeriSign Global Registry Services",
             "as_country": "US"
           }
         ],
@@ -293,7 +293,7 @@
           {
             "ip": "2001:501:b1f9::30",
             "asn": 396566,
-            "as_org": "VRSN-AC50-340",
+            "as_org": "VRSN-AC50-340 - VeriSign Global Registry Services",
             "as_country": "US"
           }
         ]

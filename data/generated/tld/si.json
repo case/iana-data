@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -60,7 +60,7 @@
           {
             "ip": "153.5.81.140",
             "asn": 2107,
-            "as_org": "ARNES-NET Academic and Research Network of Slovenia",
+            "as_org": "ARNES-NET ARNES",
             "as_country": "SI"
           }
         ],
@@ -68,7 +68,7 @@
           {
             "ip": "2001:1470:8000:53::44",
             "asn": 2107,
-            "as_org": "ARNES-NET Academic and Research Network of Slovenia",
+            "as_org": "ARNES-NET ARNES",
             "as_country": "SI"
           }
         ]
@@ -98,7 +98,7 @@
           {
             "ip": "204.61.216.54",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -106,7 +106,7 @@
           {
             "ip": "2001:500:14:6054:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]
@@ -117,7 +117,7 @@
           {
             "ip": "194.0.25.22",
             "asn": 1921,
-            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD ipcom GmbH",
             "as_country": "AT"
           }
         ],
@@ -125,7 +125,7 @@
           {
             "ip": "2001:678:20::22",
             "asn": 1921,
-            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD ipcom GmbH",
             "as_country": "AT"
           }
         ]
@@ -136,7 +136,7 @@
           {
             "ip": "185.159.197.11",
             "asn": 55195,
-            "as_org": "CIRA-CLOUD1",
+            "as_org": "CIRA-CLOUD1 - CIRA Canadian Internet Registration Authority Autorit Canadienne pour les enregistrements Internet",
             "as_country": "CA"
           }
         ],
@@ -144,7 +144,7 @@
           {
             "ip": "2620:10a:80aa::11",
             "asn": 55195,
-            "as_org": "CIRA-CLOUD1",
+            "as_org": "CIRA-CLOUD1 - CIRA Canadian Internet Registration Authority Autorit Canadienne pour les enregistrements Internet",
             "as_country": "CA"
           }
         ]
@@ -155,7 +155,7 @@
           {
             "ip": "185.159.198.11",
             "asn": 394354,
-            "as_org": "CIRA-CLOUD2",
+            "as_org": "CIRA-CLOUD2 - CIRA Canadian Internet Registration Authority Autorit Canadienne pour les enregistrements Internet",
             "as_country": "CA"
           }
         ],
@@ -163,7 +163,7 @@
           {
             "ip": "2620:10a:80ab::11",
             "asn": 394354,
-            "as_org": "CIRA-CLOUD2",
+            "as_org": "CIRA-CLOUD2 - CIRA Canadian Internet Registration Authority Autorit Canadienne pour les enregistrements Internet",
             "as_country": "CA"
           }
         ]

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -40,7 +40,7 @@
           {
             "ip": "188.166.71.229",
             "asn": 14061,
-            "as_org": "DIGITALOCEAN-ASN",
+            "as_org": "DIGITALOCEAN-ASN - DigitalOcean, LLC",
             "as_country": "US"
           }
         ],
@@ -48,7 +48,7 @@
           {
             "ip": "2a03:b0c0:2:f0:0:1:46a5:8001",
             "asn": 14061,
-            "as_org": "DIGITALOCEAN-ASN",
+            "as_org": "DIGITALOCEAN-ASN - DigitalOcean, LLC",
             "as_country": "US"
           }
         ]
@@ -59,7 +59,7 @@
           {
             "ip": "103.31.84.199",
             "asn": 7642,
-            "as_org": "DHIRAAGU-MV-AP DHIVEHI RAAJJEYGE GULHUN PLC",
+            "as_org": "DHIRAAGU-MV-AP - DHIVEHI RAAJJEYGE GULHUN PLC",
             "as_country": "MV"
           }
         ],
@@ -67,7 +67,7 @@
           {
             "ip": "2406:e400:a:1::1",
             "asn": 7642,
-            "as_org": "DHIRAAGU-MV-AP DHIVEHI RAAJJEYGE GULHUN PLC",
+            "as_org": "DHIRAAGU-MV-AP - DHIVEHI RAAJJEYGE GULHUN PLC",
             "as_country": "MV"
           }
         ]
@@ -78,7 +78,7 @@
           {
             "ip": "204.61.216.24",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -86,7 +86,7 @@
           {
             "ip": "2001:500:14:6024:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]
@@ -97,7 +97,7 @@
           {
             "ip": "27.114.188.1",
             "asn": 7642,
-            "as_org": "DHIRAAGU-MV-AP DHIVEHI RAAJJEYGE GULHUN PLC",
+            "as_org": "DHIRAAGU-MV-AP - DHIVEHI RAAJJEYGE GULHUN PLC",
             "as_country": "MV"
           }
         ],
@@ -105,7 +105,7 @@
           {
             "ip": "2406:e400:1:1::1",
             "asn": 7642,
-            "as_org": "DHIRAAGU-MV-AP DHIVEHI RAAJJEYGE GULHUN PLC",
+            "as_org": "DHIRAAGU-MV-AP - DHIVEHI RAAJJEYGE GULHUN PLC",
             "as_country": "MV"
           }
         ]

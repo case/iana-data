@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -27,12 +27,6 @@
     ],
     "annotations": {
       "country_name_iso": "Morocco",
-      "as_org_aliases": [
-        "AFNIC.fr"
-      ],
-      "as_org_slugs": [
-        "afnic"
-      ],
       "geographic_scope": "country"
     },
     "ds_records": [
@@ -50,13 +44,13 @@
           {
             "ip": "81.192.171.83",
             "asn": 6713,
-            "as_org": "IAM-AS",
+            "as_org": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM - Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM",
             "as_country": "MA"
           },
           {
             "ip": "81.192.171.131",
             "asn": 6713,
-            "as_org": "IAM-AS",
+            "as_org": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM - Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM",
             "as_country": "MA"
           }
         ],
@@ -64,7 +58,7 @@
           {
             "ip": "2001:4288:1800:186::3",
             "asn": 6713,
-            "as_org": "IAM-AS",
+            "as_org": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM - Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM",
             "as_country": "MA"
           }
         ]
@@ -75,13 +69,13 @@
           {
             "ip": "81.192.171.132",
             "asn": 6713,
-            "as_org": "IAM-AS",
+            "as_org": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM - Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM",
             "as_country": "MA"
           },
           {
             "ip": "81.192.171.84",
             "asn": 6713,
-            "as_org": "IAM-AS",
+            "as_org": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM - Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM",
             "as_country": "MA"
           }
         ],
@@ -89,7 +83,7 @@
           {
             "ip": "2001:4288:1800:186::4",
             "asn": 6713,
-            "as_org": "IAM-AS",
+            "as_org": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM - Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM",
             "as_country": "MA"
           }
         ]
@@ -100,13 +94,13 @@
           {
             "ip": "81.192.171.115",
             "asn": 6713,
-            "as_org": "IAM-AS",
+            "as_org": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM - Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM",
             "as_country": "MA"
           },
           {
             "ip": "81.192.171.139",
             "asn": 6713,
-            "as_org": "IAM-AS",
+            "as_org": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM - Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM",
             "as_country": "MA"
           }
         ],
@@ -114,7 +108,7 @@
           {
             "ip": "2001:4288:1800:386::3",
             "asn": 6713,
-            "as_org": "IAM-AS",
+            "as_org": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM - Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM",
             "as_country": "MA"
           }
         ]
@@ -125,13 +119,13 @@
           {
             "ip": "81.192.171.116",
             "asn": 6713,
-            "as_org": "IAM-AS",
+            "as_org": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM - Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM",
             "as_country": "MA"
           },
           {
             "ip": "81.192.171.140",
             "asn": 6713,
-            "as_org": "IAM-AS",
+            "as_org": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM - Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM",
             "as_country": "MA"
           }
         ],
@@ -139,7 +133,7 @@
           {
             "ip": "2001:4288:1800:386::4",
             "asn": 6713,
-            "as_org": "IAM-AS",
+            "as_org": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM - Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM",
             "as_country": "MA"
           }
         ]
@@ -150,7 +144,7 @@
           {
             "ip": "193.51.208.13",
             "asn": 2200,
-            "as_org": "FR-RENATER Reseau National de telecommunications pour la Technologie",
+            "as_org": "FR-RENATER - Renater",
             "as_country": "FR"
           }
         ],
@@ -162,7 +156,7 @@
           {
             "ip": "105.73.80.236",
             "asn": 36884,
-            "as_org": "MAROCCONNECT",
+            "as_org": "Wana Corporate - Wana Corporate",
             "as_country": "MA"
           }
         ],
@@ -174,7 +168,7 @@
           {
             "ip": "41.214.240.4",
             "asn": 36925,
-            "as_org": "ASMedi",
+            "as_org": "MEDITELECOM - MEDITELECOM",
             "as_country": "MA"
           }
         ],
@@ -182,7 +176,7 @@
           {
             "ip": "2c0f:fb20:100:fc::33",
             "asn": 36925,
-            "as_org": "ASMedi",
+            "as_org": "MEDITELECOM - MEDITELECOM",
             "as_country": "MA"
           }
         ]
@@ -192,8 +186,8 @@
         "ipv4": [
           {
             "ip": "194.0.9.1",
-            "asn": 2486,
-            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "asn": 2484,
+            "as_org": "NIC-FR-DNS-ANYCAST-AFNIC - AFNIC (Association Francaise pour le Nommage Internet en Cooperation)",
             "as_country": "FR"
           }
         ],
@@ -201,7 +195,7 @@
           {
             "ip": "2001:678:c::1",
             "asn": 2484,
-            "as_org": "NIC-FR-DNS-ANYCAST-AFNIC AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_org": "NIC-FR-DNS-ANYCAST-AFNIC - AFNIC (Association Francaise pour le Nommage Internet en Cooperation)",
             "as_country": "FR"
           }
         ]

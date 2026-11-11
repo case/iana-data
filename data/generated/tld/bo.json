@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -46,7 +46,7 @@
           {
             "ip": "204.61.216.48",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -54,7 +54,7 @@
           {
             "ip": "2001:500:14:6048:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]
@@ -65,7 +65,7 @@
           {
             "ip": "200.160.0.5",
             "asn": 22548,
-            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_org": "AS22548 - Nucleo de Inf. e Coord. do Ponto BR - NIC.BR",
             "as_country": "BR"
           }
         ],
@@ -73,7 +73,7 @@
           {
             "ip": "2001:12ff:0:a20::5",
             "asn": 22548,
-            "as_org": "Nucleo de Inf. e Coord. do Ponto BR - NIC.",
+            "as_org": "AS22548 - Nucleo de Inf. e Coord. do Ponto BR - NIC.BR",
             "as_country": "BR"
           }
         ]
@@ -84,7 +84,7 @@
           {
             "ip": "166.114.1.40",
             "asn": 52250,
-            "as_org": "Ag para el Desarrollo de la Sociedad de la Inf en Bolivia - ADSIB",
+            "as_org": "AS52250 - Ag para el Desarrollo de la Sociedad de la Inf en Bolivia - ADSIB",
             "as_country": "BO"
           }
         ],
@@ -96,7 +96,7 @@
           {
             "ip": "192.93.0.4",
             "asn": 2486,
-            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 - AFNIC (Association Francaise pour le Nommage Internet en Cooperation)",
             "as_country": "FR"
           }
         ],
@@ -104,7 +104,7 @@
           {
             "ip": "2001:660:3005:1::1:2",
             "asn": 2486,
-            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 - AFNIC (Association Francaise pour le Nommage Internet en Cooperation)",
             "as_country": "FR"
           }
         ]

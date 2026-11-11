@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -36,7 +36,7 @@
           {
             "ip": "198.73.186.1",
             "asn": 36864,
-            "as_org": "AFRIBONEMALI-AS",
+            "as_org": "AFRIBONE MALI SA - AFRIBONE MALI SA",
             "as_country": "ML"
           }
         ],
@@ -48,7 +48,7 @@
           {
             "ip": "41.207.188.36",
             "asn": 24691,
-            "as_org": "TOGOTEL-AS TogoTelecom, Togo",
+            "as_org": "TOGOTEL-AS - IDDQD-AS",
             "as_country": "TG"
           }
         ],
@@ -60,7 +60,7 @@
           {
             "ip": "108.61.25.122",
             "asn": 20473,
-            "as_org": "AS-VULTR",
+            "as_org": "AS-VULTR - The Constant Company, LLC",
             "as_country": "US"
           }
         ],
@@ -68,7 +68,7 @@
           {
             "ip": "2001:19f0:300:1007::cafe",
             "asn": 20473,
-            "as_org": "AS-VULTR",
+            "as_org": "AS-VULTR - The Constant Company, LLC",
             "as_country": "US"
           }
         ]
@@ -79,7 +79,7 @@
           {
             "ip": "80.248.68.12",
             "asn": 30982,
-            "as_org": "CAFENET",
+            "as_org": "CAFE Informatique et telecommunications - CAFE Informatique et telecommunications",
             "as_country": "TG"
           }
         ],
@@ -91,7 +91,7 @@
           {
             "ip": "87.98.180.44",
             "asn": 16276,
-            "as_org": "OVH",
+            "as_org": "OVH OVH SAS",
             "as_country": "FR"
           }
         ],
@@ -99,7 +99,7 @@
           {
             "ip": "2001:41d0:2:8adf::2",
             "asn": 16276,
-            "as_org": "OVH",
+            "as_org": "OVH OVH SAS",
             "as_country": "FR"
           }
         ]
@@ -110,7 +110,7 @@
           {
             "ip": "103.25.58.26",
             "asn": 136557,
-            "as_org": "HOST-AS-AP Host Universal Pty Ltd",
+            "as_org": "HOST-AS-AP - Host Universal Pty Ltd",
             "as_country": "AU"
           }
         ],
@@ -129,7 +129,7 @@
           {
             "ip": "188.165.33.42",
             "asn": 16276,
-            "as_org": "OVH",
+            "as_org": "OVH OVH SAS",
             "as_country": "FR"
           }
         ],
@@ -137,7 +137,7 @@
           {
             "ip": "2001:41d0:8:5c79::3",
             "asn": 16276,
-            "as_org": "OVH",
+            "as_org": "OVH OVH SAS",
             "as_country": "FR"
           }
         ]
@@ -148,7 +148,7 @@
           {
             "ip": "80.248.64.20",
             "asn": 30982,
-            "as_org": "CAFENET",
+            "as_org": "CAFE Informatique et telecommunications - CAFE Informatique et telecommunications",
             "as_country": "TG"
           }
         ],

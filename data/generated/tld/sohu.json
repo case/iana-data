@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -67,7 +67,7 @@
           {
             "ip": "203.99.24.1",
             "asn": 38345,
-            "as_org": "ZDNS Internet Domain Name System Beijing Engineering Resrarch Center Ltd.",
+            "as_org": "ZDNS - Internet Domain Name System Beijing Engineering Resrarch Center Ltd.",
             "as_country": "CN"
           }
         ],
@@ -79,7 +79,7 @@
           {
             "ip": "203.99.25.1",
             "asn": 38345,
-            "as_org": "ZDNS Internet Domain Name System Beijing Engineering Resrarch Center Ltd.",
+            "as_org": "ZDNS - Internet Domain Name System Beijing Engineering Resrarch Center Ltd.",
             "as_country": "CN"
           }
         ],
@@ -91,7 +91,7 @@
           {
             "ip": "203.99.26.1",
             "asn": 38345,
-            "as_org": "ZDNS Internet Domain Name System Beijing Engineering Resrarch Center Ltd.",
+            "as_org": "ZDNS - Internet Domain Name System Beijing Engineering Resrarch Center Ltd.",
             "as_country": "CN"
           }
         ],
@@ -103,7 +103,7 @@
           {
             "ip": "203.99.27.1",
             "asn": 38345,
-            "as_org": "ZDNS Internet Domain Name System Beijing Engineering Resrarch Center Ltd.",
+            "as_org": "ZDNS - Internet Domain Name System Beijing Engineering Resrarch Center Ltd.",
             "as_country": "CN"
           }
         ],
@@ -115,7 +115,7 @@
           {
             "ip": "116.169.54.111",
             "asn": 4837,
-            "as_org": "CHINA169-BACKBONE CHINA UNICOM China169 Backbone",
+            "as_org": "CHINA169-Backbone - CHINA UNICOM China169 Backbone",
             "as_country": "CN"
           }
         ],
@@ -127,7 +127,7 @@
           {
             "ip": "223.72.199.37",
             "asn": 56048,
-            "as_org": "CMNET-BEIJING-AP China Mobile Communicaitons Corporation",
+            "as_org": "CMNET-BEIJING-AP - China Mobile Communicaitons Corporation",
             "as_country": "CN"
           }
         ],
@@ -140,7 +140,7 @@
           {
             "ip": "2401:8d00:1::1",
             "asn": 38345,
-            "as_org": "ZDNS Internet Domain Name System Beijing Engineering Resrarch Center Ltd.",
+            "as_org": "ZDNS - Internet Domain Name System Beijing Engineering Resrarch Center Ltd.",
             "as_country": "CN"
           }
         ]
@@ -152,7 +152,7 @@
           {
             "ip": "2401:8d00:2::1",
             "asn": 24149,
-            "as_org": "ZDNS Internet Domain Name System Beijing Engineering Resrarch Center Ltd.",
+            "as_org": "ZDNS - Internet Domain Name System Beijing Engineering Resrarch Center Ltd.",
             "as_country": "CN"
           }
         ]

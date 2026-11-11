@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -59,7 +59,7 @@
           {
             "ip": "196.216.168.27",
             "asn": 37177,
-            "as_org": "AFRINIC-ANYCAST",
+            "as_org": "African Network Information Center - (AfriNIC) Ltd - African Network Information Center - (AfriNIC) Ltd",
             "as_country": "MU"
           }
         ],
@@ -67,7 +67,7 @@
           {
             "ip": "2001:43f8:120::27",
             "asn": 37177,
-            "as_org": "AFRINIC-ANYCAST",
+            "as_org": "African Network Information Center - (AfriNIC) Ltd - African Network Information Center - (AfriNIC) Ltd",
             "as_country": "MU"
           }
         ]
@@ -78,7 +78,7 @@
           {
             "ip": "204.61.216.130",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -86,7 +86,7 @@
           {
             "ip": "2001:500:14:6130:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]
@@ -97,13 +97,13 @@
           {
             "ip": "185.38.108.108",
             "asn": 60592,
-            "as_org": "GRANSY Gransy s.r.o. gransy.com",
+            "as_org": "GRANSY Gransy s.r.o.",
             "as_country": "CZ"
           },
           {
             "ip": "185.28.194.194",
             "asn": 60592,
-            "as_org": "GRANSY Gransy s.r.o. gransy.com",
+            "as_org": "GRANSY Gransy s.r.o.",
             "as_country": "CZ"
           }
         ],

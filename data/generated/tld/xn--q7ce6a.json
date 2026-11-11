@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -69,7 +69,7 @@
           {
             "ip": "64.96.1.1",
             "asn": 393818,
-            "as_org": "TUCOWS-TRS-DNS1",
+            "as_org": "TUCOWS-TRS-DNS1 - Tucows.com Co.",
             "as_country": "CA"
           }
         ],
@@ -77,7 +77,7 @@
           {
             "ip": "2620:57:4001::1",
             "asn": 393818,
-            "as_org": "TUCOWS-TRS-DNS1",
+            "as_org": "TUCOWS-TRS-DNS1 - Tucows.com Co.",
             "as_country": "CA"
           }
         ]
@@ -88,7 +88,7 @@
           {
             "ip": "64.96.2.1",
             "asn": 63363,
-            "as_org": "TUCOWS-TRS-DNS2",
+            "as_org": "TUCOWS-TRS-DNS2 - Tucows.com Co.",
             "as_country": "CA"
           }
         ],
@@ -96,7 +96,7 @@
           {
             "ip": "2620:57:4002::1",
             "asn": 63363,
-            "as_org": "TUCOWS-TRS-DNS2",
+            "as_org": "TUCOWS-TRS-DNS2 - Tucows.com Co.",
             "as_country": "CA"
           }
         ]
@@ -107,7 +107,7 @@
           {
             "ip": "64.78.204.1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -115,7 +115,7 @@
           {
             "ip": "2620:171:812:1534:8::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]
@@ -126,7 +126,7 @@
           {
             "ip": "64.78.205.1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -134,7 +134,7 @@
           {
             "ip": "2620:171:813:1534:8::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]

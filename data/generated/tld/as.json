@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -52,7 +52,7 @@
           {
             "ip": "213.248.219.254",
             "asn": 43519,
-            "as_org": "NOMINETANYCAST",
+            "as_org": "NOMINETANYCAST Nominet UK",
             "as_country": "GB"
           }
         ],
@@ -60,7 +60,7 @@
           {
             "ip": "2a01:618:403::254",
             "asn": 43519,
-            "as_org": "NOMINETANYCAST",
+            "as_org": "NOMINETANYCAST Nominet UK",
             "as_country": "GB"
           }
         ]
@@ -71,7 +71,7 @@
           {
             "ip": "103.49.83.254",
             "asn": 43519,
-            "as_org": "NOMINETANYCAST",
+            "as_org": "NOMINETANYCAST Nominet UK",
             "as_country": "GB"
           }
         ],
@@ -79,7 +79,7 @@
           {
             "ip": "2401:fd80:403::254",
             "asn": 43519,
-            "as_org": "NOMINETANYCAST",
+            "as_org": "NOMINETANYCAST Nominet UK",
             "as_country": "GB"
           }
         ]
@@ -90,7 +90,7 @@
           {
             "ip": "213.248.223.254",
             "asn": 43519,
-            "as_org": "NOMINETANYCAST",
+            "as_org": "NOMINETANYCAST Nominet UK",
             "as_country": "GB"
           }
         ],
@@ -98,7 +98,7 @@
           {
             "ip": "2a01:618:407::254",
             "asn": 43519,
-            "as_org": "NOMINETANYCAST",
+            "as_org": "NOMINETANYCAST Nominet UK",
             "as_country": "GB"
           }
         ]
@@ -109,7 +109,7 @@
           {
             "ip": "43.230.51.254",
             "asn": 43519,
-            "as_org": "NOMINETANYCAST",
+            "as_org": "NOMINETANYCAST Nominet UK",
             "as_country": "GB"
           }
         ],
@@ -117,7 +117,7 @@
           {
             "ip": "2401:fd80:407::254",
             "asn": 43519,
-            "as_org": "NOMINETANYCAST",
+            "as_org": "NOMINETANYCAST Nominet UK",
             "as_country": "GB"
           }
         ]
@@ -128,7 +128,7 @@
           {
             "ip": "23.128.97.53",
             "asn": 398987,
-            "as_org": "NS-GLOBAL",
+            "as_org": "NS-GLOBAL - PhirePhly Design",
             "as_country": "US"
           }
         ],
@@ -136,7 +136,7 @@
           {
             "ip": "2607:7c80:53::53",
             "asn": 398987,
-            "as_org": "NS-GLOBAL",
+            "as_org": "NS-GLOBAL - PhirePhly Design",
             "as_country": "US"
           }
         ]

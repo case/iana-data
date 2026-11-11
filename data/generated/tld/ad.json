@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -56,7 +56,7 @@
           {
             "ip": "194.69.254.15",
             "asn": 25354,
-            "as_org": "RED-ES-AS",
+            "as_org": "RED-ES-AS Entidad Publica Empresarial Red.es",
             "as_country": "ES"
           }
         ],
@@ -64,7 +64,7 @@
           {
             "ip": "2001:67c:21cc:2000::64:47",
             "asn": 25354,
-            "as_org": "RED-ES-AS",
+            "as_org": "RED-ES-AS Entidad Publica Empresarial Red.es",
             "as_country": "ES"
           }
         ]
@@ -75,7 +75,7 @@
           {
             "ip": "195.253.65.11",
             "asn": 50611,
-            "as_org": "KNIPP-IRONDNS1-AS Technologiepark",
+            "as_org": "KNIPP-IRONDNS1-AS Knipp Medien und Kommunikation GmbH",
             "as_country": "DE"
           }
         ],
@@ -83,7 +83,7 @@
           {
             "ip": "2a01:5b0:5::b",
             "asn": 50611,
-            "as_org": "KNIPP-IRONDNS1-AS Technologiepark",
+            "as_org": "KNIPP-IRONDNS1-AS Knipp Medien und Kommunikation GmbH",
             "as_country": "DE"
           }
         ]
@@ -94,7 +94,7 @@
           {
             "ip": "195.253.64.11",
             "asn": 8561,
-            "as_org": "KNIPPWORLDWI",
+            "as_org": "KNIPPWORLDWIDE Knipp Medien und Kommunikation GmbH",
             "as_country": "DE"
           }
         ],
@@ -102,7 +102,7 @@
           {
             "ip": "2a01:5b0:4::b",
             "asn": 8561,
-            "as_org": "KNIPPWORLDWI",
+            "as_org": "KNIPPWORLDWIDE Knipp Medien und Kommunikation GmbH",
             "as_country": "DE"
           }
         ]
@@ -113,7 +113,7 @@
           {
             "ip": "192.134.0.49",
             "asn": 2486,
-            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 - AFNIC (Association Francaise pour le Nommage Internet en Cooperation)",
             "as_country": "FR"
           }
         ],
@@ -121,7 +121,7 @@
           {
             "ip": "2001:660:3006:1::1:1",
             "asn": 2486,
-            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 - AFNIC (Association Francaise pour le Nommage Internet en Cooperation)",
             "as_country": "FR"
           }
         ]

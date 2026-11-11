@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -53,7 +53,7 @@
           {
             "ip": "54.228.209.46",
             "asn": 16509,
-            "as_org": "AMAZON-02",
+            "as_org": "AMAZON-02 - Amazon.com, Inc.",
             "as_country": "US"
           }
         ],
@@ -65,7 +65,7 @@
           {
             "ip": "168.187.192.106",
             "asn": 42781,
-            "as_org": "ZNETAS-",
+            "as_org": "ZNETAS-KW Zajil International Telecom Company KSCC",
             "as_country": "KW"
           }
         ],
@@ -77,7 +77,7 @@
           {
             "ip": "194.58.198.135",
             "asn": 56908,
-            "as_org": "NETNOD-NDS $Id: aut-num_AS56908,v 1.1 20160307 11:15:51 mem Exp $",
+            "as_org": "NETNOD-NDS Netnod AB",
             "as_country": "SE"
           }
         ],
@@ -85,7 +85,7 @@
           {
             "ip": "2a01:3f1:3032:8001::135",
             "asn": 56908,
-            "as_org": "NETNOD-NDS $Id: aut-num_AS56908,v 1.1 20160307 11:15:51 mem Exp $",
+            "as_org": "NETNOD-NDS Netnod AB",
             "as_country": "SE"
           }
         ]
@@ -115,7 +115,7 @@
           {
             "ip": "204.61.216.118",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -123,7 +123,7 @@
           {
             "ip": "2001:500:14:6118:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]

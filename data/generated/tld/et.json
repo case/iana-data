@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -43,7 +43,7 @@
           {
             "ip": "197.156.74.192",
             "asn": 24757,
-            "as_org": "EthioNet-AS",
+            "as_org": "Ethio Telecom - Ethio Telecom",
             "as_country": "ET"
           }
         ],
@@ -55,7 +55,7 @@
           {
             "ip": "197.156.74.193",
             "asn": 24757,
-            "as_org": "EthioNet-AS",
+            "as_org": "Ethio Telecom - Ethio Telecom",
             "as_country": "ET"
           }
         ],
@@ -67,7 +67,7 @@
           {
             "ip": "196.188.116.180",
             "asn": 24757,
-            "as_org": "EthioNet-AS",
+            "as_org": "Ethio Telecom - Ethio Telecom",
             "as_country": "ET"
           }
         ],
@@ -79,7 +79,7 @@
           {
             "ip": "196.188.116.181",
             "asn": 24757,
-            "as_org": "EthioNet-AS",
+            "as_org": "Ethio Telecom - Ethio Telecom",
             "as_country": "ET"
           }
         ],

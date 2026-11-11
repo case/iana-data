@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -46,7 +46,7 @@
           {
             "ip": "91.212.89.244",
             "asn": 48979,
-            "as_org": "UZINFOCOM",
+            "as_org": "UZINFOCOM DAVLAT AXBOROT TIZIMLARINI YARATISH VA QO`LLAB QUVATLASH BO`YICHA YAGONA INTEGRATOR-UZINFOCOM LLC",
             "as_country": "UZ"
           }
         ],
@@ -58,7 +58,7 @@
           {
             "ip": "82.115.52.4",
             "asn": 205273,
-            "as_org": "TELEPORT-DC-AS",
+            "as_org": "teleport-dc-as Teleport DC LLC FE",
             "as_country": "UZ"
           }
         ],
@@ -70,7 +70,7 @@
           {
             "ip": "185.74.6.29",
             "asn": 202660,
-            "as_org": "BRM-DATACENTER",
+            "as_org": "BRM-DataCenter \"Uzbektelekom\" Joint Stock Company",
             "as_country": "UZ"
           }
         ],
@@ -78,7 +78,7 @@
           {
             "ip": "2a05:45c7:e001::4",
             "asn": 202660,
-            "as_org": "BRM-DATACENTER",
+            "as_org": "BRM-DataCenter \"Uzbektelekom\" Joint Stock Company",
             "as_country": "UZ"
           }
         ]
@@ -89,7 +89,7 @@
           {
             "ip": "83.69.136.139",
             "asn": 31492,
-            "as_org": "UZSCI-AS Uzbek Scientific & Education Network",
+            "as_org": "UZSCI-AS UZSCINET",
             "as_country": "UZ"
           }
         ],
@@ -101,7 +101,7 @@
           {
             "ip": "217.12.81.129",
             "asn": 25389,
-            "as_org": "UZ-BCC-AS ISP - Amaliy Aloqalar Biznesi Ltd., Tashkent, Uzbekistan",
+            "as_org": "UZ-BCC-AS Amaliy Aloqalar Biznesi Ltd.",
             "as_country": "UZ"
           }
         ],
@@ -113,13 +113,13 @@
           {
             "ip": "83.69.129.33",
             "asn": 31492,
-            "as_org": "UZSCI-AS Uzbek Scientific & Education Network",
+            "as_org": "UZSCI-AS UZSCINET",
             "as_country": "UZ"
           },
           {
             "ip": "80.241.0.234",
             "asn": 21282,
-            "as_org": "KAZNIC-AS Internet Service Provider",
+            "as_org": "KAZNIC-AS KazNIC Organization",
             "as_country": "KZ"
           }
         ],
@@ -127,7 +127,7 @@
           {
             "ip": "2a01:7640:0:d::2",
             "asn": 21282,
-            "as_org": "KAZNIC-AS Internet Service Provider",
+            "as_org": "KAZNIC-AS KazNIC Organization",
             "as_country": "KZ"
           }
         ]
@@ -138,7 +138,7 @@
           {
             "ip": "72.167.34.137",
             "asn": 398101,
-            "as_org": "GO-DADDY-COM-LLC",
+            "as_org": "GO-DADDY-COM-LLC - GoDaddy.com, LLC",
             "as_country": "US"
           }
         ],
@@ -146,7 +146,7 @@
           {
             "ip": "2603:3:6101:8ac0::",
             "asn": 398101,
-            "as_org": "GO-DADDY-COM-LLC",
+            "as_org": "GO-DADDY-COM-LLC - GoDaddy.com, LLC",
             "as_country": "US"
           }
         ]
@@ -157,7 +157,7 @@
           {
             "ip": "91.212.89.233",
             "asn": 48979,
-            "as_org": "UZINFOCOM",
+            "as_org": "UZINFOCOM DAVLAT AXBOROT TIZIMLARINI YARATISH VA QO`LLAB QUVATLASH BO`YICHA YAGONA INTEGRATOR-UZINFOCOM LLC",
             "as_country": "UZ"
           }
         ],

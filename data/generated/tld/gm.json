@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -41,7 +41,7 @@
           {
             "ip": "196.216.168.29",
             "asn": 37177,
-            "as_org": "AFRINIC-ANYCAST",
+            "as_org": "African Network Information Center - (AfriNIC) Ltd - African Network Information Center - (AfriNIC) Ltd",
             "as_country": "MU"
           }
         ],
@@ -49,7 +49,7 @@
           {
             "ip": "2001:43f8:120::29",
             "asn": 37177,
-            "as_org": "AFRINIC-ANYCAST",
+            "as_org": "African Network Information Center - (AfriNIC) Ltd - African Network Information Center - (AfriNIC) Ltd",
             "as_country": "MU"
           }
         ]
@@ -60,7 +60,7 @@
           {
             "ip": "194.63.250.217",
             "asn": 12996,
-            "as_org": "DOMENESHOP Oslo, Norway",
+            "as_org": "DOMENESHOP Domeneshop AS",
             "as_country": "NO"
           }
         ],
@@ -72,7 +72,7 @@
           {
             "ip": "209.250.227.199",
             "asn": 20473,
-            "as_org": "AS-VULTR",
+            "as_org": "AS-VULTR - The Constant Company, LLC",
             "as_country": "US"
           }
         ],
@@ -80,7 +80,7 @@
           {
             "ip": "2a05:f480:1000:235:5400:4ff:fee5:2f89",
             "asn": 20473,
-            "as_org": "AS-VULTR",
+            "as_org": "AS-VULTR - The Constant Company, LLC",
             "as_country": "US"
           }
         ]

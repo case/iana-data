@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -52,7 +52,7 @@
           {
             "ip": "185.39.208.19",
             "asn": 199993,
-            "as_org": "DNS",
+            "as_org": "DNSPT Associacao DNS.PT",
             "as_country": "PT"
           }
         ],
@@ -60,7 +60,7 @@
           {
             "ip": "2a04:6d80::19",
             "asn": 199993,
-            "as_org": "DNS",
+            "as_org": "DNSPT Associacao DNS.PT",
             "as_country": "PT"
           }
         ]
@@ -71,7 +71,7 @@
           {
             "ip": "204.61.216.114",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -79,7 +79,7 @@
           {
             "ip": "2001:500:14:6114:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]

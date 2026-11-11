@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -28,12 +28,10 @@
     "annotations": {
       "country_name_iso": "Benin",
       "as_org_aliases": [
-        "AFNIC.fr",
         "AFRINIC",
         "Packet Clearing House"
       ],
       "as_org_slugs": [
-        "afnic",
         "afrinic",
         "packet-clearing-house"
       ],
@@ -54,7 +52,7 @@
           {
             "ip": "196.216.168.33",
             "asn": 37177,
-            "as_org": "AFRINIC-ANYCAST",
+            "as_org": "African Network Information Center - (AfriNIC) Ltd - African Network Information Center - (AfriNIC) Ltd",
             "as_country": "MU"
           }
         ],
@@ -62,7 +60,7 @@
           {
             "ip": "2001:43f8:120::33",
             "asn": 37177,
-            "as_org": "AFRINIC-ANYCAST",
+            "as_org": "African Network Information Center - (AfriNIC) Ltd - African Network Information Center - (AfriNIC) Ltd",
             "as_country": "MU"
           }
         ]
@@ -72,8 +70,8 @@
         "ipv4": [
           {
             "ip": "194.0.9.1",
-            "asn": 2486,
-            "as_org": "NIC-FR-DNS-UNICAST-PARIS2 AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "asn": 2484,
+            "as_org": "NIC-FR-DNS-ANYCAST-AFNIC - AFNIC (Association Francaise pour le Nommage Internet en Cooperation)",
             "as_country": "FR"
           }
         ],
@@ -81,7 +79,7 @@
           {
             "ip": "2001:678:c::1",
             "asn": 2484,
-            "as_org": "NIC-FR-DNS-ANYCAST-AFNIC AFNIC Association Francaise pour le Nommage Internet en Cooperation",
+            "as_org": "NIC-FR-DNS-ANYCAST-AFNIC - AFNIC (Association Francaise pour le Nommage Internet en Cooperation)",
             "as_country": "FR"
           }
         ]
@@ -92,7 +90,7 @@
           {
             "ip": "154.65.28.218",
             "asn": 328098,
-            "as_org": "JENY-SAS-AS",
+            "as_org": "JENY SAS - JENY SAS",
             "as_country": "BJ"
           }
         ],
@@ -104,7 +102,7 @@
           {
             "ip": "41.85.191.2",
             "asn": 28683,
-            "as_org": "SBIN",
+            "as_org": "SOCIETE BENINOISE D'INFRASTRUCTURES NUMERIQUES - SOCIETE BENINOISE D'INFRASTRUCTURES NUMERIQUES",
             "as_country": "BJ"
           }
         ],
@@ -116,7 +114,7 @@
           {
             "ip": "204.61.216.125",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -124,7 +122,7 @@
           {
             "ip": "2001:500:14:6125:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]

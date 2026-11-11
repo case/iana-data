@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -42,7 +42,7 @@
           {
             "ip": "193.0.9.82",
             "asn": 197000,
-            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre (RIPE NCC)",
             "as_country": "NL"
           }
         ],
@@ -50,7 +50,7 @@
           {
             "ip": "2a13:27c0:30::82",
             "asn": 197000,
-            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre (RIPE NCC)",
             "as_country": "NL"
           }
         ]
@@ -61,7 +61,7 @@
           {
             "ip": "196.2.1.6",
             "asn": 3586,
-            "as_org": "JAMNET",
+            "as_org": "JAMNET - University of the West Indies",
             "as_country": "JM"
           }
         ],
@@ -73,7 +73,7 @@
           {
             "ip": "196.3.191.66",
             "asn": 22306,
-            "as_org": "FISC-",
+            "as_org": "FISC-JM - eGov Jamaica Limited",
             "as_country": "JM"
           }
         ],
@@ -85,7 +85,7 @@
           {
             "ip": "128.223.32.35",
             "asn": 3582,
-            "as_org": "UONET",
+            "as_org": "UONET - University of Oregon",
             "as_country": "US"
           }
         ],
@@ -93,7 +93,7 @@
           {
             "ip": "2001:468:d01:20::80df:2023",
             "asn": 3582,
-            "as_org": "UONET",
+            "as_org": "UONET - University of Oregon",
             "as_country": "US"
           }
         ]

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -43,7 +43,7 @@
           {
             "ip": "194.51.3.49",
             "asn": 3215,
-            "as_org": "France Telecom - Orange",
+            "as_org": "AS3215 Orange S.A.",
             "as_country": "FR"
           }
         ],
@@ -55,7 +55,7 @@
           {
             "ip": "193.0.9.101",
             "asn": 197000,
-            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre RIPE NCC",
+            "as_org": "RIPE-NCC-AUTHDNS-AS Reseaux IP Europeens Network Coordination Centre (RIPE NCC)",
             "as_country": "NL"
           }
         ],
@@ -74,7 +74,7 @@
           {
             "ip": "196.216.168.45",
             "asn": 37177,
-            "as_org": "AFRINIC-ANYCAST",
+            "as_org": "African Network Information Center - (AfriNIC) Ltd - African Network Information Center - (AfriNIC) Ltd",
             "as_country": "MU"
           }
         ],
@@ -82,7 +82,7 @@
           {
             "ip": "2001:43f8:120::45",
             "asn": 37177,
-            "as_org": "AFRINIC-ANYCAST",
+            "as_org": "African Network Information Center - (AfriNIC) Ltd - African Network Information Center - (AfriNIC) Ltd",
             "as_country": "MU"
           }
         ]
@@ -93,7 +93,7 @@
           {
             "ip": "41.138.54.10",
             "asn": 37385,
-            "as_org": "SONITEL",
+            "as_org": "Societe Nigerienne des Telecommunications (SONITEL) - Societe Nigerienne des Telecommunications (SONITEL)",
             "as_country": "NE"
           }
         ],

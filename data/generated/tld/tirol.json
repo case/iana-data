@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -75,7 +75,7 @@
           {
             "ip": "194.0.11.114",
             "asn": 31529,
-            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_org": "DENIC-ANYCAST-AS DENIC eG",
             "as_country": "DE"
           }
         ],
@@ -83,7 +83,7 @@
           {
             "ip": "2001:678:e:114::53",
             "asn": 31529,
-            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_org": "DENIC-ANYCAST-AS DENIC eG",
             "as_country": "DE"
           }
         ]
@@ -94,7 +94,7 @@
           {
             "ip": "157.90.205.138",
             "asn": 24940,
-            "as_org": "HETZNER-AS",
+            "as_org": "HETZNER-AS Hetzner Online GmbH",
             "as_country": "DE"
           }
         ],
@@ -102,7 +102,7 @@
           {
             "ip": "2a01:4f8:252:4295::9d5a:cd8a",
             "asn": 24940,
-            "as_org": "HETZNER-AS",
+            "as_org": "HETZNER-AS Hetzner Online GmbH",
             "as_country": "DE"
           }
         ]
@@ -113,7 +113,7 @@
           {
             "ip": "193.56.204.111",
             "asn": 199216,
-            "as_org": "COMPASS-AS",
+            "as_org": "COMPASS-AS Compass-Verlag GmbH",
             "as_country": "AT"
           }
         ],
@@ -121,7 +121,7 @@
           {
             "ip": "2a0c:8f40:0:701::111",
             "asn": 199216,
-            "as_org": "COMPASS-AS",
+            "as_org": "COMPASS-AS Compass-Verlag GmbH",
             "as_country": "AT"
           }
         ]

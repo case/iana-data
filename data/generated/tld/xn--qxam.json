@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -65,7 +65,7 @@
           {
             "ip": "139.91.191.3",
             "asn": 8522,
-            "as_org": "FORTH-AS",
+            "as_org": "FORTH-AS Foundation of Research and Technology Hellas",
             "as_country": "GR"
           }
         ],
@@ -73,7 +73,7 @@
           {
             "ip": "2001:648:2c30::191:3",
             "asn": 8522,
-            "as_org": "FORTH-AS",
+            "as_org": "FORTH-AS Foundation of Research and Technology Hellas",
             "as_country": "GR"
           }
         ]
@@ -84,7 +84,7 @@
           {
             "ip": "194.0.25.48",
             "asn": 1921,
-            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD ipcom GmbH",
             "as_country": "AT"
           }
         ],
@@ -92,7 +92,7 @@
           {
             "ip": "2001:678:20::48",
             "asn": 1921,
-            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD RcodeZero Anycast DNS",
+            "as_org": "RCODEZERO-ANYCAST-SEC1-TLD ipcom GmbH",
             "as_country": "AT"
           }
         ]
@@ -103,7 +103,7 @@
           {
             "ip": "78.104.145.227",
             "asn": 1120,
-            "as_org": "ACONET_SERVICES ACOnet Services @ Vienna Internet eXchange",
+            "as_org": "ACOnet_Services - ACONET",
             "as_country": "EU"
           }
         ],
@@ -115,7 +115,7 @@
           {
             "ip": "194.0.11.102",
             "asn": 31529,
-            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_org": "DENIC-ANYCAST-AS DENIC eG",
             "as_country": "DE"
           }
         ],
@@ -123,7 +123,7 @@
           {
             "ip": "2001:678:e:102::53",
             "asn": 31529,
-            "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
+            "as_org": "DENIC-ANYCAST-AS DENIC eG",
             "as_country": "DE"
           }
         ]
@@ -134,7 +134,7 @@
           {
             "ip": "194.0.4.10",
             "asn": 48053,
-            "as_org": "GR-ANYCAST-DNS-CLOUD",
+            "as_org": "gr-anycast-dns-cloud Foundation of Research and Technology Hellas",
             "as_country": "GR"
           }
         ],
@@ -142,7 +142,7 @@
           {
             "ip": "2001:678:7::4:10",
             "asn": 48053,
-            "as_org": "GR-ANYCAST-DNS-CLOUD",
+            "as_org": "gr-anycast-dns-cloud Foundation of Research and Technology Hellas",
             "as_country": "GR"
           }
         ]
@@ -153,7 +153,7 @@
           {
             "ip": "139.91.1.1",
             "asn": 8522,
-            "as_org": "FORTH-AS",
+            "as_org": "FORTH-AS Foundation of Research and Technology Hellas",
             "as_country": "GR"
           }
         ],

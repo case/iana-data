@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -55,7 +55,7 @@
           {
             "ip": "206.51.255.1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -63,7 +63,7 @@
           {
             "ip": "2620:171:805:ad2:7068::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]
@@ -74,7 +74,7 @@
           {
             "ip": "137.189.6.21",
             "asn": 3661,
-            "as_org": "ERX-CUHKNET The Chinese University of Hong Kong",
+            "as_org": "ERX-CUHKNET - The Chinese University of Hong Kong",
             "as_country": "HK"
           }
         ],
@@ -82,7 +82,7 @@
           {
             "ip": "2405:3000:3:6::15",
             "asn": 3661,
-            "as_org": "ERX-CUHKNET The Chinese University of Hong Kong",
+            "as_org": "ERX-CUHKNET - The Chinese University of Hong Kong",
             "as_country": "HK"
           }
         ]
@@ -93,7 +93,7 @@
           {
             "ip": "202.12.31.53",
             "asn": 18366,
-            "as_org": "APNIC-ANYCAST APNIC ANYCAST ASN",
+            "as_org": "APNIC-ANYCAST - Asia Pacific Network Information Centre",
             "as_country": "AU"
           }
         ],
@@ -101,7 +101,7 @@
           {
             "ip": "2001:dd8:12::53",
             "asn": 18366,
-            "as_org": "APNIC-ANYCAST APNIC ANYCAST ASN",
+            "as_org": "APNIC-ANYCAST - Asia Pacific Network Information Centre",
             "as_country": "AU"
           }
         ]
@@ -112,7 +112,7 @@
           {
             "ip": "194.0.1.23",
             "asn": 42909,
-            "as_org": "COMMUNITYDNS",
+            "as_org": "COMMUNITYDNS Community DNS Limited",
             "as_country": "GB"
           }
         ],
@@ -120,7 +120,7 @@
           {
             "ip": "2001:678:4::17",
             "asn": 42909,
-            "as_org": "COMMUNITYDNS",
+            "as_org": "COMMUNITYDNS Community DNS Limited",
             "as_country": "GB"
           }
         ]

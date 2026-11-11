@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -52,7 +52,7 @@
           {
             "ip": "91.231.86.238",
             "asn": 197726,
-            "as_org": "UKRNAMES-AS",
+            "as_org": "UKRNAMES-AS Ukrainian Internet Names Center LTD",
             "as_country": "UA"
           }
         ],
@@ -60,7 +60,7 @@
           {
             "ip": "2a02:128:2:52ae:fdee:d892:347d:d892",
             "asn": 197726,
-            "as_org": "UKRNAMES-AS",
+            "as_org": "UKRNAMES-AS Ukrainian Internet Names Center LTD",
             "as_country": "UA"
           }
         ]
@@ -71,7 +71,7 @@
           {
             "ip": "51.222.128.197",
             "asn": 16276,
-            "as_org": "OVH",
+            "as_org": "OVH OVH SAS",
             "as_country": "FR"
           }
         ],
@@ -83,7 +83,7 @@
           {
             "ip": "37.187.75.31",
             "asn": 16276,
-            "as_org": "OVH",
+            "as_org": "OVH OVH SAS",
             "as_country": "FR"
           }
         ],
@@ -95,7 +95,7 @@
           {
             "ip": "149.202.5.226",
             "asn": 16276,
-            "as_org": "OVH",
+            "as_org": "OVH OVH SAS",
             "as_country": "FR"
           }
         ],
@@ -126,7 +126,7 @@
           {
             "ip": "195.123.192.7",
             "asn": 49227,
-            "as_org": "TCI-ANYCAST-NET TCI DNS-WHOIS ANYCAST",
+            "as_org": "TCI-ANYCAST-NET Ukrainian Internet Names Center LTD",
             "as_country": "UA"
           }
         ],

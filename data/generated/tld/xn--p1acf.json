@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -85,7 +85,7 @@
           {
             "ip": "185.38.108.108",
             "asn": 60592,
-            "as_org": "GRANSY Gransy s.r.o. gransy.com",
+            "as_org": "GRANSY Gransy s.r.o.",
             "as_country": "CZ"
           }
         ],
@@ -93,7 +93,7 @@
           {
             "ip": "2a00:fea0:dead::beef",
             "asn": 60592,
-            "as_org": "GRANSY Gransy s.r.o. gransy.com",
+            "as_org": "GRANSY Gransy s.r.o.",
             "as_country": "CZ"
           }
         ]
@@ -104,7 +104,7 @@
           {
             "ip": "72.42.113.2",
             "asn": 187,
-            "as_org": "DNSCAST-AS",
+            "as_org": "DNSCAST-AS - DNScast",
             "as_country": "US"
           }
         ],
@@ -112,7 +112,7 @@
           {
             "ip": "2620:171:d01:dc::2",
             "asn": 187,
-            "as_org": "DNSCAST-AS",
+            "as_org": "DNSCAST-AS - DNScast",
             "as_country": "US"
           }
         ]
@@ -123,7 +123,7 @@
           {
             "ip": "72.0.49.2",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -131,7 +131,7 @@
           {
             "ip": "2620:171:a01:ad::2",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]

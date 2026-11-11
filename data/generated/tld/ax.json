@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -44,7 +44,7 @@
           {
             "ip": "194.112.0.1",
             "asn": 3238,
-            "as_org": "ALCOM",
+            "as_org": "ALCOM Alands Telekommunikation Ab",
             "as_country": "FI"
           }
         ],
@@ -56,7 +56,7 @@
           {
             "ip": "194.112.0.5",
             "asn": 3238,
-            "as_org": "ALCOM",
+            "as_org": "ALCOM Alands Telekommunikation Ab",
             "as_country": "FI"
           }
         ],
@@ -68,7 +68,7 @@
           {
             "ip": "82.199.186.130",
             "asn": 3238,
-            "as_org": "ALCOM",
+            "as_org": "ALCOM Alands Telekommunikation Ab",
             "as_country": "FI"
           }
         ],
@@ -76,7 +76,7 @@
           {
             "ip": "2a00:5500:1:6::130",
             "asn": 3238,
-            "as_org": "ALCOM",
+            "as_org": "ALCOM Alands Telekommunikation Ab",
             "as_country": "FI"
           }
         ]
@@ -87,7 +87,7 @@
           {
             "ip": "82.199.184.194",
             "asn": 3238,
-            "as_org": "ALCOM",
+            "as_org": "ALCOM Alands Telekommunikation Ab",
             "as_country": "FI"
           }
         ],
@@ -95,7 +95,7 @@
           {
             "ip": "2a00:5500:1:7::194",
             "asn": 3238,
-            "as_org": "ALCOM",
+            "as_org": "ALCOM Alands Telekommunikation Ab",
             "as_country": "FI"
           }
         ]

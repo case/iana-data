@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -78,7 +78,7 @@
           {
             "ip": "194.169.218.141",
             "asn": 199330,
-            "as_org": "CENTRALNIC-ANYCAST-A CentralNic Anycast-A AS Number",
+            "as_org": "CENTRALNIC-ANYCAST-A CentralNic Ltd",
             "as_country": "GB"
           }
         ],
@@ -86,7 +86,7 @@
           {
             "ip": "2001:67c:13cc::1:141",
             "asn": 199330,
-            "as_org": "CENTRALNIC-ANYCAST-A CentralNic Anycast-A AS Number",
+            "as_org": "CENTRALNIC-ANYCAST-A CentralNic Ltd",
             "as_country": "GB"
           }
         ]
@@ -97,7 +97,7 @@
           {
             "ip": "185.24.64.141",
             "asn": 60890,
-            "as_org": "CENTRALNIC-ANYCAST-B CentralNic Anycast-B AS Number",
+            "as_org": "CENTRALNIC-ANYCAST-B CentralNic Ltd",
             "as_country": "GB"
           }
         ],
@@ -105,7 +105,7 @@
           {
             "ip": "2a04:2b00:13cc::1:141",
             "asn": 60890,
-            "as_org": "CENTRALNIC-ANYCAST-B CentralNic Anycast-B AS Number",
+            "as_org": "CENTRALNIC-ANYCAST-B CentralNic Ltd",
             "as_country": "GB"
           }
         ]
@@ -116,7 +116,7 @@
           {
             "ip": "212.18.248.141",
             "asn": 201304,
-            "as_org": "CENTRALNIC-ANYCAST-E",
+            "as_org": "CENTRALNIC-ANYCAST-E CentralNic Ltd",
             "as_country": "GB"
           }
         ],
@@ -124,7 +124,7 @@
           {
             "ip": "2a04:2b00:13ee::141",
             "asn": 201304,
-            "as_org": "CENTRALNIC-ANYCAST-E",
+            "as_org": "CENTRALNIC-ANYCAST-E CentralNic Ltd",
             "as_country": "GB"
           }
         ]
@@ -135,7 +135,7 @@
           {
             "ip": "212.18.249.141",
             "asn": 201303,
-            "as_org": "CENTRALNIC-ANYCAST-F",
+            "as_org": "CentralNic-Anycast-F CentralNic Ltd",
             "as_country": "GB"
           }
         ],
@@ -143,7 +143,7 @@
           {
             "ip": "2a04:2b00:13ff::141",
             "asn": 201303,
-            "as_org": "CENTRALNIC-ANYCAST-F",
+            "as_org": "CentralNic-Anycast-F CentralNic Ltd",
             "as_country": "GB"
           }
         ]

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -41,7 +41,7 @@
           {
             "ip": "203.98.224.66",
             "asn": 55722,
-            "as_org": "CENPAC-AS-AP Cenpac Net Inc",
+            "as_org": "CENPAC-AS-AP - Cenpac Net Inc",
             "as_country": "NR"
           }
         ],
@@ -53,7 +53,7 @@
           {
             "ip": "203.98.225.9",
             "asn": 55722,
-            "as_org": "CENPAC-AS-AP Cenpac Net Inc",
+            "as_org": "CENPAC-AS-AP - Cenpac Net Inc",
             "as_country": "NR"
           }
         ],
@@ -65,7 +65,7 @@
           {
             "ip": "202.144.128.200",
             "asn": 18024,
-            "as_org": "BTTELECOM-AS-AP Bhutan Telecom Ltd",
+            "as_org": "BTTELECOM-AS-AP - Bhutan Telecom Ltd",
             "as_country": "BT"
           }
         ],
@@ -73,7 +73,7 @@
           {
             "ip": "2405:d000:0:100::200",
             "asn": 18024,
-            "as_org": "BTTELECOM-AS-AP Bhutan Telecom Ltd",
+            "as_org": "BTTELECOM-AS-AP - Bhutan Telecom Ltd",
             "as_country": "BT"
           }
         ]
@@ -84,7 +84,7 @@
           {
             "ip": "128.223.32.35",
             "asn": 3582,
-            "as_org": "UONET",
+            "as_org": "UONET - University of Oregon",
             "as_country": "US"
           }
         ],
@@ -92,7 +92,7 @@
           {
             "ip": "2001:468:d01:20::80df:2023",
             "asn": 3582,
-            "as_org": "UONET",
+            "as_org": "UONET - University of Oregon",
             "as_country": "US"
           }
         ]

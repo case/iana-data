@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -67,7 +67,7 @@
           {
             "ip": "157.90.205.138",
             "asn": 24940,
-            "as_org": "HETZNER-AS",
+            "as_org": "HETZNER-AS Hetzner Online GmbH",
             "as_country": "DE"
           }
         ],
@@ -75,7 +75,7 @@
           {
             "ip": "2a01:4f8:252:4295::9d5a:cd8a",
             "asn": 24940,
-            "as_org": "HETZNER-AS",
+            "as_org": "HETZNER-AS Hetzner Online GmbH",
             "as_country": "DE"
           }
         ]
@@ -86,7 +86,7 @@
           {
             "ip": "147.135.106.236",
             "asn": 16276,
-            "as_org": "OVH",
+            "as_org": "OVH OVH SAS",
             "as_country": "FR"
           }
         ],
@@ -94,7 +94,7 @@
           {
             "ip": "2604:2dc0:200:2eb::2",
             "asn": 16276,
-            "as_org": "OVH",
+            "as_org": "OVH OVH SAS",
             "as_country": "FR"
           }
         ]
@@ -105,7 +105,7 @@
           {
             "ip": "194.58.198.33",
             "asn": 56908,
-            "as_org": "NETNOD-NDS $Id: aut-num_AS56908,v 1.1 20160307 11:15:51 mem Exp $",
+            "as_org": "NETNOD-NDS Netnod AB",
             "as_country": "SE"
           }
         ],
@@ -113,7 +113,7 @@
           {
             "ip": "2a01:3f1:3033::53",
             "asn": 56908,
-            "as_org": "NETNOD-NDS $Id: aut-num_AS56908,v 1.1 20160307 11:15:51 mem Exp $",
+            "as_org": "NETNOD-NDS Netnod AB",
             "as_country": "SE"
           }
         ]

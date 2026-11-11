@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -55,7 +55,7 @@
           {
             "ip": "178.23.16.104",
             "asn": 42298,
-            "as_org": "GCC-MPLS-PEERING GCC MPLS peering",
+            "as_org": "GCC-MPLS-peering Ooredoo Q.S.C.",
             "as_country": "QA"
           }
         ],
@@ -67,7 +67,7 @@
           {
             "ip": "178.23.17.104",
             "asn": 42298,
-            "as_org": "GCC-MPLS-PEERING GCC MPLS peering",
+            "as_org": "GCC-MPLS-peering Ooredoo Q.S.C.",
             "as_country": "QA"
           }
         ],
@@ -79,7 +79,7 @@
           {
             "ip": "212.77.192.10",
             "asn": 8781,
-            "as_org": "QA-ISP",
+            "as_org": "QA-ISP Ooredoo Q.S.C.",
             "as_country": "QA"
           }
         ],
@@ -91,7 +91,7 @@
           {
             "ip": "212.77.192.13",
             "asn": 8781,
-            "as_org": "QA-ISP",
+            "as_org": "QA-ISP Ooredoo Q.S.C.",
             "as_country": "QA"
           }
         ],
@@ -103,7 +103,7 @@
           {
             "ip": "178.23.20.60",
             "asn": 42298,
-            "as_org": "GCC-MPLS-PEERING GCC MPLS peering",
+            "as_org": "GCC-MPLS-peering Ooredoo Q.S.C.",
             "as_country": "QA"
           }
         ],
@@ -115,7 +115,7 @@
           {
             "ip": "37.209.192.6",
             "asn": 12008,
-            "as_org": "SECURITYSERVICES",
+            "as_org": "VERCARA - Vercara, LLC",
             "as_country": "US"
           }
         ],
@@ -123,7 +123,7 @@
           {
             "ip": "2001:dcd:1::6",
             "asn": 12008,
-            "as_org": "SECURITYSERVICES",
+            "as_org": "VERCARA - Vercara, LLC",
             "as_country": "US"
           }
         ]
@@ -134,7 +134,7 @@
           {
             "ip": "37.209.194.6",
             "asn": 397213,
-            "as_org": "SECURITYSERVICES",
+            "as_org": "SECURITYSERVICES - Vercara, LLC",
             "as_country": "US"
           }
         ],
@@ -142,7 +142,7 @@
           {
             "ip": "2001:dcd:2::6",
             "asn": 12008,
-            "as_org": "SECURITYSERVICES",
+            "as_org": "VERCARA - Vercara, LLC",
             "as_country": "US"
           }
         ]
@@ -153,7 +153,7 @@
           {
             "ip": "178.23.22.60",
             "asn": 42298,
-            "as_org": "GCC-MPLS-PEERING GCC MPLS peering",
+            "as_org": "GCC-MPLS-peering Ooredoo Q.S.C.",
             "as_country": "QA"
           }
         ],
@@ -161,7 +161,7 @@
           {
             "ip": "2a0c:a640:1:22::60",
             "asn": 42298,
-            "as_org": "GCC-MPLS-PEERING GCC MPLS peering",
+            "as_org": "GCC-MPLS-peering Ooredoo Q.S.C.",
             "as_country": "QA"
           }
         ]
@@ -172,7 +172,7 @@
           {
             "ip": "204.61.216.62",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ],
@@ -180,7 +180,7 @@
           {
             "ip": "2001:500:14:6062:ad::1",
             "asn": 42,
-            "as_org": "WOODYNET-1",
+            "as_org": "WOODYNET-1 - WoodyNet, Inc.",
             "as_country": "US"
           }
         ]

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -52,7 +52,7 @@
           {
             "ip": "200.0.68.10",
             "asn": 61455,
-            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_org": "AS61455 - LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
             "as_country": "UY"
           }
         ],
@@ -60,7 +60,7 @@
           {
             "ip": "2801:14:a000::10",
             "asn": 61455,
-            "as_org": "LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
+            "as_org": "AS61455 - LACTLD - LATIN AMERICAN AND CARIBBEAN TLD ASSOCIATION",
             "as_country": "UY"
           }
         ]
@@ -71,7 +71,7 @@
           {
             "ip": "190.9.129.56",
             "asn": 8048,
-            "as_org": "CANTV Servicios, Venezuela",
+            "as_org": "AS8048 - CANTV Servicios, Venezuela",
             "as_country": "VE"
           }
         ],
@@ -83,7 +83,7 @@
           {
             "ip": "190.202.128.43",
             "asn": 8048,
-            "as_org": "CANTV Servicios, Venezuela",
+            "as_org": "AS8048 - CANTV Servicios, Venezuela",
             "as_country": "VE"
           }
         ],
@@ -95,7 +95,7 @@
           {
             "ip": "45.175.22.88",
             "asn": 267892,
-            "as_org": "COMISION NACIONAL DE TELECOMUNICACIONES CONATEL NICVE",
+            "as_org": "AS267892 - COMISION NACIONAL DE TELECOMUNICACIONES CONATEL (NICVE)",
             "as_country": "VE"
           }
         ],
@@ -103,7 +103,7 @@
           {
             "ip": "2801:18:8800:3:18ba:beff:fe61:d08b",
             "asn": 267892,
-            "as_org": "COMISION NACIONAL DE TELECOMUNICACIONES CONATEL NICVE",
+            "as_org": "AS267892 - COMISION NACIONAL DE TELECOMUNICACIONES CONATEL (NICVE)",
             "as_country": "VE"
           }
         ]
@@ -114,7 +114,7 @@
           {
             "ip": "45.175.22.4",
             "asn": 267892,
-            "as_org": "COMISION NACIONAL DE TELECOMUNICACIONES CONATEL NICVE",
+            "as_org": "AS267892 - COMISION NACIONAL DE TELECOMUNICACIONES CONATEL (NICVE)",
             "as_country": "VE"
           }
         ],
@@ -122,7 +122,7 @@
           {
             "ip": "2801:18:8800:1::4",
             "asn": 267892,
-            "as_org": "COMISION NACIONAL DE TELECOMUNICACIONES CONATEL NICVE",
+            "as_org": "AS267892 - COMISION NACIONAL DE TELECOMUNICACIONES CONATEL (NICVE)",
             "as_country": "VE"
           }
         ]
@@ -133,7 +133,7 @@
           {
             "ip": "200.7.5.14",
             "asn": 52305,
-            "as_org": "NIC Chile",
+            "as_org": "AS52305 - NIC Chile",
             "as_country": "CL"
           }
         ],
@@ -141,7 +141,7 @@
           {
             "ip": "2001:1398:276:0:200:7:5:14",
             "asn": 52305,
-            "as_org": "NIC Chile",
+            "as_org": "AS52305 - NIC Chile",
             "as_country": "CL"
           }
         ]

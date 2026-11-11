@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T03:06:23Z",
+  "publication": "2026-11-11T22:19:37Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -35,7 +35,7 @@
           {
             "ip": "64.68.192.10",
             "asn": 16686,
-            "as_org": "EDNS",
+            "as_org": "EDNS - easyDNS Technologies, Inc.",
             "as_country": "CA"
           }
         ],
@@ -43,7 +43,7 @@
           {
             "ip": "2620:49:1::10",
             "asn": 16686,
-            "as_org": "EDNS",
+            "as_org": "EDNS - easyDNS Technologies, Inc.",
             "as_country": "CA"
           }
         ]
@@ -54,7 +54,7 @@
           {
             "ip": "64.68.193.10",
             "asn": 16686,
-            "as_org": "EDNS",
+            "as_org": "EDNS - easyDNS Technologies, Inc.",
             "as_country": "CA"
           }
         ],
@@ -62,7 +62,7 @@
           {
             "ip": "2620:49:2::10",
             "asn": 16686,
-            "as_org": "EDNS",
+            "as_org": "EDNS - easyDNS Technologies, Inc.",
             "as_country": "CA"
           }
         ]
@@ -73,7 +73,7 @@
           {
             "ip": "64.68.196.10",
             "asn": 16686,
-            "as_org": "EDNS",
+            "as_org": "EDNS - easyDNS Technologies, Inc.",
             "as_country": "CA"
           }
         ],
@@ -81,7 +81,7 @@
           {
             "ip": "2620:49:3::10",
             "asn": 16686,
-            "as_org": "EDNS",
+            "as_org": "EDNS - easyDNS Technologies, Inc.",
             "as_country": "CA"
           }
         ]
@@ -92,7 +92,7 @@
           {
             "ip": "64.68.197.10",
             "asn": 16686,
-            "as_org": "EDNS",
+            "as_org": "EDNS - easyDNS Technologies, Inc.",
             "as_country": "CA"
           }
         ],
@@ -100,7 +100,7 @@
           {
             "ip": "2620:49:4::10",
             "asn": 16686,
-            "as_org": "EDNS",
+            "as_org": "EDNS - easyDNS Technologies, Inc.",
             "as_country": "CA"
           }
         ]
