@@ -499,14 +499,15 @@ class TestNotificationDeduplication:
         assert head == theirs
 
 
-def test_pr_body_carries_the_drift_report_and_the_approval_note(workspace, signing_key):
+def test_pr_body_carries_the_drift_report_and_the_test_command(workspace, signing_key):
     produce(workspace)
 
     run_open_pr(workspace, signing_key)
 
     body = (workspace["workdir"] / "pr-body.md").read_text()
     assert "DRIFT miami" in body
-    assert "need manual approval" in body
+    assert "gh workflow run tests.yaml --ref coordinate-drift" in body
+    assert "need manual approval" not in body
 
 
 def test_pr_body_flags_a_partial_refresh(workspace, signing_key):
@@ -544,6 +545,8 @@ class TestPerCallerWording:
         assert "The nightly check found asn labels no longer present upstream." in body
         assert "Merge to archive them." in body
         assert "Wikidata" not in body
+        assert "gh workflow run tests.yaml --ref asn-drift" in body
+        assert "--ref coordinate-drift" not in body
 
     def test_the_coordinate_caller_keeps_its_own_wording(self, workspace, signing_key):
         produce(workspace)

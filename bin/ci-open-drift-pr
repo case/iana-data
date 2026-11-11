@@ -82,7 +82,11 @@ fi
     echo "**The refresh could not fetch every place.** Confirm the drifted values above are the ones committed."
     echo
   fi
-  echo "Checks on this PR need manual approval: it was opened by GITHUB_TOKEN."
+  echo "No checks run on this PR automatically, because GITHUB_TOKEN opened it. Run the tests with:"
+  echo
+  echo '```'
+  echo "gh workflow run tests.yaml --ref $branch"
+  echo '```'
   echo
   echo "$instructions"
 } > "$workdir/pr-body.md"

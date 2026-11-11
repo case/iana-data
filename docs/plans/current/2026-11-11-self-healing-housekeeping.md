@@ -47,6 +47,12 @@ fix PR.
       kept only when a full build shows it on a TLD nameserver address. See
       [2026-11-11 iptoasn labels](../../memory/log/2026-11-11-iptoasn-labels.md).
 
-## Phase 3: TLD list drift
+## Phase 3: checks on bot PRs
+
+- [ ] Open drift PRs with a GitHub App token, so `pull_request` checks run on them. Events from
+      `GITHUB_TOKEN` start no workflows, so drift PRs carry the `gh workflow run` command instead.
+      App permissions: Contents and Pull requests write only, installed on this repo only.
+
+## Phase 4: TLD list drift
 
 - [ ] Give the `tlds.txt` versus IANA TLD JSON drift an alert path, or make it a failure.
