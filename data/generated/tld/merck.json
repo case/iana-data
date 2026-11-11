@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-07T22:58:14Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "merck",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -40,6 +42,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Hetzner",
         "Netnod AB"
@@ -49,6 +52,14 @@
         "netnod"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 61224,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "e02519adf0ef1076f54211757c4298f56fc1f53e781e6fa0fb730d4d0ee26a22"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns1.dns.business",

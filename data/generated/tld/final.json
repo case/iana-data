@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-07T22:58:14Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "final",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -33,6 +35,9 @@
     "tld_updated": [
       "2025-08-14"
     ],
+    "events": {
+      "delegation": "2015-09-26"
+    },
     "annotations": {
       "iana_admin_alias": "NIC.br",
       "iana_admin_slug": "nic-br",
@@ -43,6 +48,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "NIC.br"
       ],
@@ -50,6 +56,14 @@
         "nic-br"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 50876,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "fa2b3e06baf62edcf8b49c179dc4de953299cb56e11bf191aa81a94b3d0b535d"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.dns.br",

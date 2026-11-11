@@ -1,18 +1,20 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-24T03:36:48Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "mx",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
     "orgs": {
       "iana": {
-        "sponsor": "NIC-Mexico\nITESM - Campus Monterrey",
+        "sponsor": "NIC-Mexico ITESM - Campus Monterrey",
         "admin": "NIC-Mexico, ITESM - Campus Monterrey",
         "tech": "NIC-Mexico, ITESM - Campus Monterrey"
       }
@@ -33,6 +35,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 43850,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "3d4481f6dc8fa708903891bd06481c6069d37baa241022e3699ac8928693dbef"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "c.mx-ns.mx",

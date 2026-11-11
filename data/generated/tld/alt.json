@@ -1,0 +1,18 @@
+{
+  "description": "Per-TLD bootstrap data, from IANA sources",
+  "publication": "2026-11-11T03:06:23Z",
+  "sources": {
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
+    "iana_rdap": "https://data.iana.org/rdap/dns.json"
+  },
+  "tld": {
+    "tld": "alt",
+    "tld_script_code": "Latn",
+    "status": "reserved",
+    "delegated": false,
+    "iana_tag": "special-use",
+    "type": "special-use",
+    "purpose": "Used for alternative naming systems outside the global Domain Name System (DNS).",
+    "remarks": "Used for alternative naming systems outside the global Domain Name System (DNS).\r\n\r\nIts purpose is to provide a namespace for experimental or non-standard naming schemes — such as peer-to-peer or blockchain-based networks — so they can coexist with the global DNS without risk of collision or confusion.\r\n\r\nRefer to [The .alt Special-Use Top-Level Domain](https://www.iana.org/go/rfc9476) (RFC 9476) for more information."
+  }
+}

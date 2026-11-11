@@ -1,25 +1,27 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-07T22:58:14Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "rw",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
     "orgs": {
       "iana": {
-        "sponsor": "Rwanda Internet Community and Technology  Alliance (RICTA) Ltd",
+        "sponsor": "Rwanda Internet Community and Technology Alliance (RICTA) Ltd",
         "admin": "Rwanda Internet Community and Technology  Alliance (RICTA) Ltd",
         "tech": "Rwanda Internet Community and Technology  Alliance (RICTA) Ltd"
       }
     },
     "registry_url": "https://registry.ricta.org.rw",
     "whois_server": "whois.ricta.org.rw",
-    "rdap_server": "https://rdap.ricta.org.rw",
+    "rdap_server": "https://rdap.ricta.org.rw/",
     "tld_created": "1996-10-21",
     "tld_updated": [
       "2025-08-26"
@@ -41,6 +43,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 39755,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "005f7a73f0609a69ca7736158490764e1a8dc0652ab1d0e327941af0fe673111"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "dnsnode.ricta.org.rw",

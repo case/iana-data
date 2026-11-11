@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-11T03:43:07Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "amsterdam",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,17 +32,21 @@
     },
     "registry_url": "http://www.nic.amsterdam",
     "whois_server": "whois.nic.amsterdam",
-    "rdap_server": "https://rdap.nic.amsterdam",
+    "rdap_server": "https://rdap.nic.amsterdam/",
     "tld_created": "2014-11-20",
     "tld_updated": [
       "2023-07-18"
     ],
+    "events": {
+      "delegation": "2014-12-25"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CIRA.ca",
         "RcodeZero",
@@ -53,6 +59,14 @@
       ],
       "geographic_scope": "city"
     },
+    "ds_records": [
+      {
+        "key_tag": 29930,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "66e790789a927fe0510dffbc2309654d9cc1b4d32fb3797b6ea6f31cad59d7f3"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns1.dns.amsterdam",

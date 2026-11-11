@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "fm",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -37,6 +39,20 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 26186,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "db3703697384a6f8b3a944a21c1a81ffd921000b23aa4241380b4ba3aa28dea0"
+      },
+      {
+        "key_tag": 60226,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "ff4191e32b7f636aabaf957bf976bc1d792b5709b73a351fc77f45d0033dfbde"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.fm",

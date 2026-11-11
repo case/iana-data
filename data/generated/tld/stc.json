@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "stc",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "http://www.stc.com.sa",
     "whois_server": "whois.nic.stc",
-    "rdap_server": "https://rdap.centralnic.com/stc",
+    "rdap_server": "https://rdap.centralnic.com/stc/",
     "tld_created": "2015-08-20",
     "tld_updated": [
       "2024-05-28"
     ],
+    "events": {
+      "delegation": "2015-08-29"
+    },
     "annotations": {
       "iana_admin_alias": "CentralNic",
       "iana_admin_slug": "centralnic",
@@ -45,6 +50,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -52,6 +58,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 42226,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "79a9d1a91d2dd8f3bca16221e6ff11e7e5e852e63d0c3756f6e73f94296b12ab"
+      },
+      {
+        "key_tag": 18386,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "cd56934775d3c7ce4c8a4050fc370fa90545b1d2ba312c8299ee2e38affff7a5"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.stc",

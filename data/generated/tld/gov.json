@@ -1,15 +1,23 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-05T03:36:57Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "gov",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
-    "iana_tag": "sponsored",
+    "iana_tag": "generic",
     "type": "gtld",
+    "archived": {
+      "iana_tag": {
+        "value": "sponsored",
+        "archived_on": "2026-11-10"
+      }
+    },
     "orgs": {
       "iana": {
         "sponsor": "Cybersecurity and Infrastructure Security Agency",
@@ -26,6 +34,7 @@
     ],
     "annotations": {
       "rdap_source": "IANA",
+      "iana_delegation_round": "pre-icann",
       "as_org_aliases": [
         "Cloudflare"
       ],
@@ -33,6 +42,14 @@
         "cloudflare"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 2536,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "0baf26b7bbf313a859046fd3b1ee49ddfba33934cfb3e717c21e2a2935c2f259"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.ns.gov",

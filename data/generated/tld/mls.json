@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-11T03:43:07Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "mls",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -34,6 +36,9 @@
     "tld_updated": [
       "2026-01-23"
     ],
+    "events": {
+      "delegation": "2016-04-20"
+    },
     "annotations": {
       "iana_tech_alias": "CIRA.ca",
       "iana_tech_slug": "cira",
@@ -42,6 +47,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CIRA.ca",
         "DENIC.de"
@@ -51,6 +57,14 @@
         "denic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 27059,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "f227379cec6727f1fbc29b86b6512978894b2e9a3530064b31dcc82609c4a49d"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.ns.nic.mls",

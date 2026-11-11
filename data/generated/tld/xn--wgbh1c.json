@@ -1,15 +1,17 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--wgbh1c",
     "tld_unicode": "مصر",
     "tld_script": "Arabic",
+    "tld_script_code": "Arab",
     "tld_iso": "eg",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -24,8 +26,13 @@
     "tld_updated": [
       "2023-07-25"
     ],
+    "events": {
+      "delegation": "2010-05-05"
+    },
     "annotations": {
       "country_name_iso": "Egypt",
+      "iana_translation_en": "Egypt",
+      "iana_transliteration": "masr",
       "as_org_aliases": [
         "Packet Clearing House"
       ],
@@ -34,8 +41,23 @@
       ],
       "geographic_scope": "country",
       "language_code": "ar",
-      "language_name_en": "Arabic"
+      "language_name_en": "Arabic",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 65350,
+        "algorithm": 13,
+        "digest_type": 1,
+        "digest": "746dd718f1bdae3b4f2578767c4b47a039501641"
+      },
+      {
+        "key_tag": 65350,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "5ece34228c4114fc455e07f4bb4b3df8b501d874c4a4070acbb378f41f17a0e5"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns1.dotmasr.eg",

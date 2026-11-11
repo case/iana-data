@@ -1,7 +1,7 @@
 {
   "description": "Index of per-TLD data files at data/generated/tld/",
-  "publication": "2026-09-26T07:35:36Z",
-  "count": 1595,
+  "publication": "2026-11-11T03:06:23Z",
+  "count": 1603,
   "tlds": [
     {
       "tld": "aaa",
@@ -36,7 +36,7 @@
       "delegated": true,
       "tld_created": "2015-04-09",
       "tld_updated": [
-        "2023-08-11"
+        "2026-10-27"
       ]
     },
     {
@@ -45,7 +45,7 @@
       "delegated": true,
       "tld_created": "2014-11-20",
       "tld_updated": [
-        "2026-01-26"
+        "2026-10-27"
       ]
     },
     {
@@ -63,7 +63,7 @@
       "delegated": true,
       "tld_created": "2016-07-21",
       "tld_updated": [
-        "2024-07-25"
+        "2026-10-27"
       ]
     },
     {
@@ -81,7 +81,7 @@
       "delegated": true,
       "tld_created": "2014-07-10",
       "tld_updated": [
-        "2024-04-16"
+        "2026-10-14"
       ]
     },
     {
@@ -99,7 +99,7 @@
       "delegated": true,
       "tld_created": "1997-12-19",
       "tld_updated": [
-        "2023-03-07"
+        "2026-10-23"
       ]
     },
     {
@@ -108,7 +108,7 @@
       "delegated": true,
       "tld_created": "2013-12-12",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -117,7 +117,7 @@
       "delegated": true,
       "tld_created": "2015-04-30",
       "tld_updated": [
-        "2026-06-03"
+        "2026-10-27"
       ]
     },
     {
@@ -135,7 +135,7 @@
       "delegated": true,
       "tld_created": "2014-04-24",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -162,7 +162,7 @@
       "delegated": true,
       "tld_created": "2014-02-20",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -198,7 +198,7 @@
       "delegated": true,
       "tld_created": "2014-11-26",
       "tld_updated": [
-        "2024-04-16"
+        "2026-10-14"
       ]
     },
     {
@@ -216,7 +216,7 @@
       "delegated": true,
       "tld_created": "2015-06-11",
       "tld_updated": [
-        "2026-04-10"
+        "2026-10-27"
       ]
     },
     {
@@ -225,7 +225,7 @@
       "delegated": true,
       "tld_created": "2001-12-21",
       "tld_updated": [
-        "2026-08-04"
+        "2026-10-23"
       ]
     },
     {
@@ -279,7 +279,7 @@
       "delegated": true,
       "tld_created": "1991-09-03",
       "tld_updated": [
-        "2021-02-08"
+        "2026-10-16"
       ]
     },
     {
@@ -288,7 +288,7 @@
       "delegated": true,
       "tld_created": "2016-03-31",
       "tld_updated": [
-        "2023-08-25"
+        "2026-11-05"
       ]
     },
     {
@@ -297,7 +297,7 @@
       "delegated": true,
       "tld_created": "2014-01-09",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -306,7 +306,7 @@
       "delegated": true,
       "tld_created": "1995-02-16",
       "tld_updated": [
-        "2025-02-11"
+        "2026-10-30"
       ]
     },
     {
@@ -333,7 +333,7 @@
       "delegated": true,
       "tld_created": "2016-05-26",
       "tld_updated": [
-        "2024-11-15"
+        "2026-10-27"
       ]
     },
     {
@@ -342,7 +342,7 @@
       "delegated": true,
       "tld_created": "2014-04-17",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -360,7 +360,7 @@
       "delegated": true,
       "tld_created": "2016-03-31",
       "tld_updated": [
-        "2023-08-25"
+        "2026-11-05"
       ]
     },
     {
@@ -396,7 +396,7 @@
       "delegated": true,
       "tld_created": "2016-01-08",
       "tld_updated": [
-        "2023-08-11"
+        "2026-10-27"
       ]
     },
     {
@@ -414,7 +414,7 @@
       "delegated": true,
       "tld_created": "2016-02-05",
       "tld_updated": [
-        "2023-08-16"
+        "2026-11-04"
       ]
     },
     {
@@ -443,6 +443,11 @@
       "tld_updated": [
         "2022-01-07"
       ]
+    },
+    {
+      "tld": "alt",
+      "type": "special-use",
+      "delegated": false
     },
     {
       "tld": "am",
@@ -576,7 +581,7 @@
       "delegated": true,
       "tld_created": "2016-10-27",
       "tld_updated": [
-        "2026-05-25"
+        "2026-10-27"
       ]
     },
     {
@@ -585,7 +590,7 @@
       "delegated": true,
       "tld_created": "2015-02-05",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -657,7 +662,7 @@
       "delegated": true,
       "tld_created": "2014-03-20",
       "tld_updated": [
-        "2025-09-04"
+        "2026-10-23"
       ]
     },
     {
@@ -666,12 +671,12 @@
       "delegated": true,
       "tld_created": "2014-05-29",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
       "tld": "arpa",
-      "type": "infrastructure",
+      "type": "special-use",
       "delegated": true,
       "tld_created": "1985-01-01",
       "tld_updated": [
@@ -693,7 +698,7 @@
       "delegated": true,
       "tld_created": "2015-09-24",
       "tld_updated": [
-        "2024-03-31"
+        "2026-10-27"
       ]
     },
     {
@@ -711,7 +716,7 @@
       "delegated": true,
       "tld_created": "2016-07-21",
       "tld_updated": [
-        "2024-12-17"
+        "2026-10-27"
       ]
     },
     {
@@ -720,7 +725,7 @@
       "delegated": true,
       "tld_created": "2007-05-02",
       "tld_updated": [
-        "2026-08-04"
+        "2026-11-04"
       ]
     },
     {
@@ -729,7 +734,7 @@
       "delegated": true,
       "tld_created": "2014-04-03",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -756,7 +761,7 @@
       "delegated": true,
       "tld_created": "2014-05-22",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -774,7 +779,7 @@
       "delegated": true,
       "tld_created": "2014-04-24",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -783,7 +788,7 @@
       "delegated": true,
       "tld_created": "2015-11-12",
       "tld_updated": [
-        "2025-03-07"
+        "2026-10-23"
       ]
     },
     {
@@ -801,7 +806,7 @@
       "delegated": true,
       "tld_created": "2014-05-08",
       "tld_updated": [
-        "2025-08-12"
+        "2026-10-21"
       ]
     },
     {
@@ -828,7 +833,7 @@
       "delegated": true,
       "tld_created": "2015-03-12",
       "tld_updated": [
-        "2025-08-12"
+        "2026-10-21"
       ]
     },
     {
@@ -954,7 +959,7 @@
       "delegated": true,
       "tld_created": "2014-10-01",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -990,7 +995,7 @@
       "delegated": true,
       "tld_created": "2015-01-08",
       "tld_updated": [
-        "2025-04-15"
+        "2026-10-27"
       ]
     },
     {
@@ -999,7 +1004,7 @@
       "delegated": true,
       "tld_created": "2015-01-08",
       "tld_updated": [
-        "2025-04-15"
+        "2026-10-27"
       ]
     },
     {
@@ -1008,7 +1013,7 @@
       "delegated": true,
       "tld_created": "2015-10-24",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-04"
       ]
     },
     {
@@ -1017,7 +1022,7 @@
       "delegated": true,
       "tld_created": "2014-01-16",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -1080,7 +1085,7 @@
       "delegated": true,
       "tld_created": "2016-05-12",
       "tld_updated": [
-        "2023-08-11"
+        "2026-10-27"
       ]
     },
     {
@@ -1098,7 +1103,7 @@
       "delegated": true,
       "tld_created": "2016-02-11",
       "tld_updated": [
-        "2023-08-11"
+        "2026-10-27"
       ]
     },
     {
@@ -1134,7 +1139,7 @@
       "delegated": true,
       "tld_created": "2015-08-13",
       "tld_updated": [
-        "2025-03-25"
+        "2026-11-10"
       ]
     },
     {
@@ -1152,7 +1157,7 @@
       "delegated": true,
       "tld_created": "2014-03-13",
       "tld_updated": [
-        "2024-04-16"
+        "2026-10-14"
       ]
     },
     {
@@ -1188,7 +1193,7 @@
       "delegated": true,
       "tld_created": "2015-12-10",
       "tld_updated": [
-        "2024-01-25"
+        "2026-10-23"
       ]
     },
     {
@@ -1197,7 +1202,7 @@
       "delegated": true,
       "tld_created": "2015-07-16",
       "tld_updated": [
-        "2025-09-04"
+        "2026-10-23"
       ]
     },
     {
@@ -1224,7 +1229,7 @@
       "delegated": true,
       "tld_created": "1994-02-01",
       "tld_updated": [
-        "2026-09-23"
+        "2026-09-28"
       ]
     },
     {
@@ -1269,7 +1274,7 @@
       "delegated": true,
       "tld_created": "2013-11-08",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -1287,7 +1292,7 @@
       "delegated": true,
       "tld_created": "2015-01-29",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -1296,7 +1301,7 @@
       "delegated": true,
       "tld_created": "2014-05-15",
       "tld_updated": [
-        "2025-09-04"
+        "2026-10-23"
       ]
     },
     {
@@ -1305,7 +1310,7 @@
       "delegated": true,
       "tld_created": "2001-06-26",
       "tld_updated": [
-        "2026-03-10"
+        "2026-10-22"
       ]
     },
     {
@@ -1332,7 +1337,7 @@
       "delegated": true,
       "tld_created": "2014-03-20",
       "tld_updated": [
-        "2025-09-04"
+        "2026-10-23"
       ]
     },
     {
@@ -1341,7 +1346,7 @@
       "delegated": true,
       "tld_created": "2014-04-17",
       "tld_updated": [
-        "2026-09-21"
+        "2026-09-29"
       ]
     },
     {
@@ -1377,7 +1382,7 @@
       "delegated": true,
       "tld_created": "2014-10-16",
       "tld_updated": [
-        "2023-12-05"
+        "2026-10-27"
       ]
     },
     {
@@ -1386,7 +1391,7 @@
       "delegated": true,
       "tld_created": "2014-01-23",
       "tld_updated": [
-        "2025-09-04"
+        "2026-10-23"
       ]
     },
     {
@@ -1395,7 +1400,7 @@
       "delegated": true,
       "tld_created": "1993-03-31",
       "tld_updated": [
-        "2024-03-11"
+        "2026-10-26"
       ]
     },
     {
@@ -1404,7 +1409,7 @@
       "delegated": true,
       "tld_created": "2015-09-10",
       "tld_updated": [
-        "2023-08-11"
+        "2026-10-27"
       ]
     },
     {
@@ -1440,7 +1445,7 @@
       "delegated": true,
       "tld_created": "2014-07-31",
       "tld_updated": [
-        "2025-08-28"
+        "2026-11-04"
       ]
     },
     {
@@ -1467,7 +1472,7 @@
       "delegated": true,
       "tld_created": "2015-11-06",
       "tld_updated": [
-        "2023-08-11"
+        "2026-10-28"
       ]
     },
     {
@@ -1476,7 +1481,7 @@
       "delegated": true,
       "tld_created": "2016-07-28",
       "tld_updated": [
-        "2023-12-05"
+        "2026-10-27"
       ]
     },
     {
@@ -1539,7 +1544,7 @@
       "delegated": true,
       "tld_created": "2015-12-18",
       "tld_updated": [
-        "2023-08-11"
+        "2026-10-27"
       ]
     },
     {
@@ -1557,7 +1562,7 @@
       "delegated": true,
       "tld_created": "2016-11-21",
       "tld_updated": [
-        "2024-04-16"
+        "2026-10-14"
       ]
     },
     {
@@ -1575,7 +1580,7 @@
       "delegated": true,
       "tld_created": "2014-01-16",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -1611,7 +1616,7 @@
       "delegated": true,
       "tld_created": "2015-05-29",
       "tld_updated": [
-        "2023-08-11"
+        "2026-10-28"
       ]
     },
     {
@@ -1638,7 +1643,7 @@
       "delegated": true,
       "tld_created": "2015-03-06",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -1710,7 +1715,7 @@
       "delegated": true,
       "tld_created": "2013-12-19",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -1719,7 +1724,7 @@
       "delegated": true,
       "tld_created": "2014-08-18",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -1764,7 +1769,7 @@
       "delegated": true,
       "tld_created": "1994-05-10",
       "tld_updated": [
-        "2025-01-09"
+        "2026-10-19"
       ]
     },
     {
@@ -1773,7 +1778,7 @@
       "delegated": true,
       "tld_created": "1991-09-03",
       "tld_updated": [
-        "2020-11-23"
+        "2026-11-02"
       ]
     },
     {
@@ -1800,7 +1805,7 @@
       "delegated": true,
       "tld_created": "2013-12-12",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -1809,7 +1814,7 @@
       "delegated": true,
       "tld_created": "2015-03-12",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -1854,7 +1859,7 @@
       "delegated": true,
       "tld_created": "2013-10-31",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -1863,7 +1868,7 @@
       "delegated": true,
       "tld_created": "2013-12-12",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -1899,7 +1904,7 @@
       "delegated": true,
       "tld_created": "2014-04-03",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -1935,7 +1940,7 @@
       "delegated": true,
       "tld_created": "2014-02-06",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -1944,7 +1949,7 @@
       "delegated": true,
       "tld_created": "2014-04-17",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -1962,7 +1967,7 @@
       "delegated": true,
       "tld_created": "2013-12-12",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -1989,7 +1994,7 @@
       "delegated": true,
       "tld_created": "2014-08-18",
       "tld_updated": [
-        "2024-04-16"
+        "2026-10-14"
       ]
     },
     {
@@ -2016,7 +2021,7 @@
       "delegated": true,
       "tld_created": "2014-04-17",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -2025,7 +2030,7 @@
       "delegated": true,
       "tld_created": "2015-02-13",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -2043,7 +2048,7 @@
       "delegated": true,
       "tld_created": "2014-01-30",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -2124,7 +2129,7 @@
       "delegated": true,
       "tld_created": "2013-12-12",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -2142,7 +2147,7 @@
       "delegated": true,
       "tld_created": "2014-08-13",
       "tld_updated": [
-        "2023-08-22"
+        "2026-10-29"
       ]
     },
     {
@@ -2160,7 +2165,7 @@
       "delegated": true,
       "tld_created": "2015-04-16",
       "tld_updated": [
-        "2024-03-31"
+        "2026-10-27"
       ]
     },
     {
@@ -2196,7 +2201,7 @@
       "delegated": true,
       "tld_created": "2015-06-18",
       "tld_updated": [
-        "2023-08-11"
+        "2026-10-27"
       ]
     },
     {
@@ -2214,7 +2219,7 @@
       "delegated": true,
       "tld_created": "2018-05-17",
       "tld_updated": [
-        "2025-08-14"
+        "2026-11-04"
       ]
     },
     {
@@ -2232,7 +2237,7 @@
       "delegated": true,
       "tld_created": "2015-01-29",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -2241,7 +2246,7 @@
       "delegated": true,
       "tld_created": "2014-01-09",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -2295,7 +2300,7 @@
       "delegated": true,
       "tld_created": "2014-05-08",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -2313,7 +2318,7 @@
       "delegated": true,
       "tld_created": "2015-07-30",
       "tld_updated": [
-        "2023-08-11"
+        "2026-10-27"
       ]
     },
     {
@@ -2322,7 +2327,7 @@
       "delegated": true,
       "tld_created": "2015-11-12",
       "tld_updated": [
-        "2026-07-14"
+        "2026-10-23"
       ]
     },
     {
@@ -2340,7 +2345,7 @@
       "delegated": true,
       "tld_created": "2016-06-30",
       "tld_updated": [
-        "2023-10-17"
+        "2026-10-27"
       ]
     },
     {
@@ -2367,7 +2372,7 @@
       "delegated": true,
       "tld_created": "2014-07-03",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -2403,7 +2408,7 @@
       "delegated": true,
       "tld_created": "2014-05-01",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -2412,7 +2417,7 @@
       "delegated": true,
       "tld_created": "2014-01-30",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -2430,7 +2435,7 @@
       "delegated": true,
       "tld_created": "2014-04-11",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -2439,7 +2444,7 @@
       "delegated": true,
       "tld_created": "2015-12-10",
       "tld_updated": [
-        "2023-08-11"
+        "2026-10-27"
       ]
     },
     {
@@ -2448,7 +2453,7 @@
       "delegated": true,
       "tld_created": "2013-10-31",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -2466,7 +2471,7 @@
       "delegated": true,
       "tld_created": "2014-01-09",
       "tld_updated": [
-        "2024-04-16"
+        "2026-10-22"
       ]
     },
     {
@@ -2475,7 +2480,7 @@
       "delegated": true,
       "tld_created": "2015-09-24",
       "tld_updated": [
-        "2024-03-31"
+        "2026-10-27"
       ]
     },
     {
@@ -2511,7 +2516,7 @@
       "delegated": true,
       "tld_created": "2014-11-20",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -2520,7 +2525,7 @@
       "delegated": true,
       "tld_created": "2013-12-19",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -2529,7 +2534,7 @@
       "delegated": true,
       "tld_created": "2013-12-19",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -2547,7 +2552,7 @@
       "delegated": true,
       "tld_created": "2014-03-13",
       "tld_updated": [
-        "2025-09-01"
+        "2026-10-19"
       ]
     },
     {
@@ -2583,7 +2588,7 @@
       "delegated": true,
       "tld_created": "2014-01-23",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -2592,7 +2597,7 @@
       "delegated": true,
       "tld_created": "2013-12-12",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -2601,7 +2606,7 @@
       "delegated": true,
       "tld_created": "2015-12-23",
       "tld_updated": [
-        "2024-04-16"
+        "2026-10-14"
       ]
     },
     {
@@ -2610,7 +2615,7 @@
       "delegated": true,
       "tld_created": "2013-12-12",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -2628,7 +2633,7 @@
       "delegated": true,
       "tld_created": "2014-02-06",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -2637,7 +2642,7 @@
       "delegated": true,
       "tld_created": "2013-11-08",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -2646,7 +2651,7 @@
       "delegated": true,
       "tld_created": "2014-01-30",
       "tld_updated": [
-        "2025-10-07"
+        "2026-10-23"
       ]
     },
     {
@@ -2655,7 +2660,7 @@
       "delegated": true,
       "tld_created": "2015-12-10",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -2664,7 +2669,7 @@
       "delegated": true,
       "tld_created": "2013-11-08",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -2673,7 +2678,7 @@
       "delegated": true,
       "tld_created": "2014-02-28",
       "tld_updated": [
-        "2024-04-16"
+        "2026-10-14"
       ]
     },
     {
@@ -2691,7 +2696,7 @@
       "delegated": true,
       "tld_created": "2014-01-16",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -2727,7 +2732,7 @@
       "delegated": true,
       "tld_created": "2016-01-29",
       "tld_updated": [
-        "2025-06-17"
+        "2026-11-03"
       ]
     },
     {
@@ -2736,7 +2741,7 @@
       "delegated": true,
       "tld_created": "2015-05-08",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -2745,7 +2750,7 @@
       "delegated": true,
       "tld_created": "2015-02-19",
       "tld_updated": [
-        "2024-04-16"
+        "2026-10-14"
       ]
     },
     {
@@ -2772,7 +2777,7 @@
       "delegated": true,
       "tld_created": "2014-04-24",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -2781,7 +2786,7 @@
       "delegated": true,
       "tld_created": "2014-04-24",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -2817,7 +2822,7 @@
       "delegated": true,
       "tld_created": "2014-08-28",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-04"
       ]
     },
     {
@@ -2826,7 +2831,7 @@
       "delegated": true,
       "tld_created": "2016-10-21",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-04"
       ]
     },
     {
@@ -2835,7 +2840,7 @@
       "delegated": true,
       "tld_created": "2014-01-30",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -2952,7 +2957,7 @@
       "delegated": true,
       "tld_created": "2014-01-09",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -2979,7 +2984,7 @@
       "delegated": true,
       "tld_created": "2014-01-23",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -3015,7 +3020,7 @@
       "delegated": true,
       "tld_created": "2016-01-08",
       "tld_updated": [
-        "2024-04-16"
+        "2026-10-14"
       ]
     },
     {
@@ -3051,7 +3056,7 @@
       "delegated": true,
       "tld_created": "2014-07-03",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -3060,7 +3065,7 @@
       "delegated": true,
       "tld_created": "2014-05-22",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -3069,7 +3074,7 @@
       "delegated": true,
       "tld_created": "2014-10-16",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -3096,7 +3101,7 @@
       "delegated": true,
       "tld_created": "2015-06-25",
       "tld_updated": [
-        "2023-08-07"
+        "2026-11-06"
       ]
     },
     {
@@ -3105,7 +3110,7 @@
       "delegated": true,
       "tld_created": "2014-01-09",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -3114,7 +3119,7 @@
       "delegated": true,
       "tld_created": "2014-04-17",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -3123,7 +3128,7 @@
       "delegated": true,
       "tld_created": "2014-05-22",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -3141,7 +3146,7 @@
       "delegated": true,
       "tld_created": "2014-12-18",
       "tld_updated": [
-        "2024-04-16"
+        "2026-10-14"
       ]
     },
     {
@@ -3168,7 +3173,7 @@
       "delegated": true,
       "tld_created": "2013-11-13",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -3186,7 +3191,7 @@
       "delegated": true,
       "tld_created": "2014-04-17",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -3195,7 +3200,7 @@
       "delegated": true,
       "tld_created": "2014-05-22",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -3204,7 +3209,7 @@
       "delegated": true,
       "tld_created": "2013-11-13",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -3213,7 +3218,7 @@
       "delegated": true,
       "tld_created": "2014-04-17",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -3303,7 +3308,7 @@
       "delegated": true,
       "tld_created": "2016-07-14",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -3321,7 +3326,7 @@
       "delegated": true,
       "tld_created": "2015-04-16",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -3339,7 +3344,7 @@
       "delegated": true,
       "tld_created": "2013-12-12",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -3492,7 +3497,7 @@
       "delegated": true,
       "tld_created": "1991-02-01",
       "tld_updated": [
-        "2024-04-10"
+        "2026-10-01"
       ]
     },
     {
@@ -3510,7 +3515,7 @@
       "delegated": true,
       "tld_created": "2016-01-08",
       "tld_updated": [
-        "2025-06-17"
+        "2026-11-05"
       ]
     },
     {
@@ -3528,7 +3533,7 @@
       "delegated": true,
       "tld_created": "2013-12-19",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -3563,7 +3568,7 @@
       "delegated": true,
       "tld_created": "2013-12-19",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -3572,16 +3577,7 @@
       "delegated": true,
       "tld_created": "2014-09-11",
       "tld_updated": [
-        "2025-08-27"
-      ]
-    },
-    {
-      "tld": "emerson",
-      "type": "gtld",
-      "delegated": false,
-      "tld_created": "2015-12-10",
-      "tld_updated": [
-        "2016-10-25"
+        "2026-10-30"
       ]
     },
     {
@@ -3590,7 +3586,7 @@
       "delegated": true,
       "tld_created": "2014-10-16",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -3599,7 +3595,7 @@
       "delegated": true,
       "tld_created": "2014-05-29",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -3608,7 +3604,7 @@
       "delegated": true,
       "tld_created": "2014-04-03",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -3617,7 +3613,7 @@
       "delegated": true,
       "tld_created": "2013-11-13",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -3644,7 +3640,7 @@
       "delegated": true,
       "tld_created": "2013-10-31",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -3662,7 +3658,7 @@
       "delegated": true,
       "tld_created": "2016-04-14",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-04"
       ]
     },
     {
@@ -3680,7 +3676,7 @@
       "delegated": true,
       "tld_created": "1988-04-14",
       "tld_updated": [
-        "2025-07-11"
+        "2026-10-26"
       ]
     },
     {
@@ -3698,7 +3694,7 @@
       "delegated": true,
       "tld_created": "2013-11-08",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -3761,7 +3757,7 @@
       "delegated": true,
       "tld_created": "2014-01-30",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -3774,12 +3770,17 @@
       ]
     },
     {
+      "tld": "example",
+      "type": "special-use",
+      "delegated": false
+    },
+    {
       "tld": "exchange",
       "type": "gtld",
       "delegated": true,
       "tld_created": "2014-04-17",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -3788,7 +3789,7 @@
       "delegated": true,
       "tld_created": "2014-01-16",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-03"
       ]
     },
     {
@@ -3797,7 +3798,7 @@
       "delegated": true,
       "tld_created": "2014-01-30",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -3806,7 +3807,7 @@
       "delegated": true,
       "tld_created": "2015-03-12",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -3815,7 +3816,7 @@
       "delegated": true,
       "tld_created": "2016-02-26",
       "tld_updated": [
-        "2023-08-16"
+        "2026-11-05"
       ]
     },
     {
@@ -3824,7 +3825,7 @@
       "delegated": true,
       "tld_created": "2015-06-25",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-05"
       ]
     },
     {
@@ -3833,7 +3834,7 @@
       "delegated": true,
       "tld_created": "2014-04-17",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -3860,7 +3861,7 @@
       "delegated": true,
       "tld_created": "2015-08-06",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -3869,7 +3870,7 @@
       "delegated": true,
       "tld_created": "2015-02-28",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -3878,7 +3879,7 @@
       "delegated": true,
       "tld_created": "2015-02-05",
       "tld_updated": [
-        "2023-12-07"
+        "2026-10-30"
       ]
     },
     {
@@ -3887,7 +3888,7 @@
       "delegated": true,
       "tld_created": "2013-12-19",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -3905,7 +3906,7 @@
       "delegated": true,
       "tld_created": "2014-10-23",
       "tld_updated": [
-        "2024-04-16"
+        "2026-10-14"
       ]
     },
     {
@@ -3923,7 +3924,7 @@
       "delegated": true,
       "tld_created": "2016-06-09",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-05"
       ]
     },
     {
@@ -3941,7 +3942,7 @@
       "delegated": true,
       "tld_created": "2016-07-14",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-05"
       ]
     },
     {
@@ -3977,7 +3978,7 @@
       "delegated": true,
       "tld_created": "2016-07-28",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-05"
       ]
     },
     {
@@ -3986,7 +3987,7 @@
       "delegated": true,
       "tld_created": "2016-08-18",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-05"
       ]
     },
     {
@@ -4013,7 +4014,7 @@
       "delegated": true,
       "tld_created": "2014-04-24",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -4022,7 +4023,7 @@
       "delegated": true,
       "tld_created": "2014-04-17",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -4058,7 +4059,7 @@
       "delegated": true,
       "tld_created": "2014-02-13",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -4067,7 +4068,7 @@
       "delegated": true,
       "tld_created": "2014-02-28",
       "tld_updated": [
-        "2024-04-16"
+        "2026-10-14"
       ]
     },
     {
@@ -4076,7 +4077,7 @@
       "delegated": true,
       "tld_created": "2014-12-18",
       "tld_updated": [
-        "2024-04-16"
+        "2026-10-14"
       ]
     },
     {
@@ -4085,7 +4086,7 @@
       "delegated": true,
       "tld_created": "2014-04-11",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -4121,7 +4122,7 @@
       "delegated": true,
       "tld_created": "2014-01-30",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -4139,7 +4140,7 @@
       "delegated": true,
       "tld_created": "2013-12-19",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -4220,7 +4221,7 @@
       "delegated": true,
       "tld_created": "2015-02-13",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -4238,7 +4239,7 @@
       "delegated": true,
       "tld_created": "2015-03-06",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -4247,7 +4248,7 @@
       "delegated": true,
       "tld_created": "2014-09-24",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -4265,7 +4266,7 @@
       "delegated": true,
       "tld_created": "2014-02-06",
       "tld_updated": [
-        "2025-08-14"
+        "2026-11-04"
       ]
     },
     {
@@ -4319,7 +4320,7 @@
       "delegated": true,
       "tld_created": "2014-04-03",
       "tld_updated": [
-        "2025-08-27"
+        "2026-11-04"
       ]
     },
     {
@@ -4382,7 +4383,7 @@
       "delegated": true,
       "tld_created": "2014-04-17",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -4391,7 +4392,7 @@
       "delegated": true,
       "tld_created": "2014-04-17",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -4400,7 +4401,7 @@
       "delegated": true,
       "tld_created": "2014-02-06",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -4409,7 +4410,7 @@
       "delegated": true,
       "tld_created": "2015-05-14",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -4436,7 +4437,7 @@
       "delegated": true,
       "tld_created": "2013-11-08",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -4445,7 +4446,7 @@
       "delegated": true,
       "tld_created": "2015-10-24",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-05"
       ]
     },
     {
@@ -4454,7 +4455,7 @@
       "delegated": true,
       "tld_created": "2015-10-15",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-05"
       ]
     },
     {
@@ -4472,7 +4473,7 @@
       "delegated": true,
       "tld_created": "2016-05-24",
       "tld_updated": [
-        "2026-09-22"
+        "2026-10-09"
       ]
     },
     {
@@ -4490,7 +4491,7 @@
       "delegated": true,
       "tld_created": "2014-10-23",
       "tld_updated": [
-        "2024-04-16"
+        "2026-10-14"
       ]
     },
     {
@@ -4499,7 +4500,7 @@
       "delegated": true,
       "tld_created": "2019-07-19",
       "tld_updated": [
-        "2024-04-16"
+        "2026-10-14"
       ]
     },
     {
@@ -4571,7 +4572,7 @@
       "delegated": true,
       "tld_created": "2015-06-11",
       "tld_updated": [
-        "2024-03-31"
+        "2026-11-05"
       ]
     },
     {
@@ -4625,7 +4626,7 @@
       "delegated": true,
       "tld_created": "1995-12-05",
       "tld_updated": [
-        "2024-06-24"
+        "2026-11-04"
       ]
     },
     {
@@ -4643,7 +4644,7 @@
       "delegated": true,
       "tld_created": "2014-07-31",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -4652,7 +4653,7 @@
       "delegated": true,
       "tld_created": "2014-05-29",
       "tld_updated": [
-        "2025-08-14"
+        "2026-11-04"
       ]
     },
     {
@@ -4661,7 +4662,7 @@
       "delegated": true,
       "tld_created": "2015-06-11",
       "tld_updated": [
-        "2025-08-14"
+        "2026-11-04"
       ]
     },
     {
@@ -4688,7 +4689,7 @@
       "delegated": true,
       "tld_created": "2013-12-19",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -4706,7 +4707,7 @@
       "delegated": true,
       "tld_created": "2014-05-29",
       "tld_updated": [
-        "2025-08-08"
+        "2026-11-05"
       ]
     },
     {
@@ -4742,7 +4743,7 @@
       "delegated": true,
       "tld_created": "2016-03-03",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -4778,7 +4779,7 @@
       "delegated": true,
       "tld_created": "2016-06-24",
       "tld_updated": [
-        "2024-04-16"
+        "2026-10-14"
       ]
     },
     {
@@ -4787,7 +4788,7 @@
       "delegated": true,
       "tld_created": "2015-03-12",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -4805,7 +4806,7 @@
       "delegated": true,
       "tld_created": "2015-03-12",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -4832,7 +4833,7 @@
       "delegated": true,
       "tld_created": "2015-12-17",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-05"
       ]
     },
     {
@@ -4868,7 +4869,7 @@
       "delegated": true,
       "tld_created": "2015-11-12",
       "tld_updated": [
-        "2026-07-14"
+        "2026-11-05"
       ]
     },
     {
@@ -4904,7 +4905,7 @@
       "delegated": true,
       "tld_created": "1989-02-19",
       "tld_updated": [
-        "2026-09-23"
+        "2026-10-16"
       ]
     },
     {
@@ -4922,7 +4923,7 @@
       "delegated": true,
       "tld_created": "2013-11-08",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -4931,7 +4932,7 @@
       "delegated": true,
       "tld_created": "2014-04-17",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -4940,7 +4941,7 @@
       "delegated": true,
       "tld_created": "2014-06-12",
       "tld_updated": [
-        "2025-09-04"
+        "2026-11-05"
       ]
     },
     {
@@ -4949,7 +4950,7 @@
       "delegated": true,
       "tld_created": "2014-04-03",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -4967,7 +4968,7 @@
       "delegated": true,
       "tld_created": "2015-07-30",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -4994,7 +4995,7 @@
       "delegated": true,
       "tld_created": "1994-04-15",
       "tld_updated": [
-        "2026-07-22"
+        "2026-10-22"
       ]
     },
     {
@@ -5030,7 +5031,7 @@
       "delegated": true,
       "tld_created": "2014-05-08",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -5048,7 +5049,7 @@
       "delegated": true,
       "tld_created": "2013-10-31",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -5102,7 +5103,7 @@
       "delegated": true,
       "tld_created": "2014-03-26",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -5138,7 +5139,7 @@
       "delegated": true,
       "tld_created": "2015-09-17",
       "tld_updated": [
-        "2024-04-16"
+        "2026-10-14"
       ]
     },
     {
@@ -5147,7 +5148,7 @@
       "delegated": true,
       "tld_created": "2014-07-24",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -5162,10 +5163,10 @@
     {
       "tld": "helsinki",
       "type": "gtld",
-      "delegated": true,
+      "delegated": false,
       "tld_created": "2015-12-10",
       "tld_updated": [
-        "2025-08-27"
+        "2026-10-28"
       ]
     },
     {
@@ -5183,7 +5184,7 @@
       "delegated": true,
       "tld_created": "2014-10-30",
       "tld_updated": [
-        "2023-08-31"
+        "2026-11-05"
       ]
     },
     {
@@ -5246,7 +5247,7 @@
       "delegated": true,
       "tld_created": "2016-04-15",
       "tld_updated": [
-        "2026-01-16"
+        "2026-11-05"
       ]
     },
     {
@@ -5273,7 +5274,7 @@
       "delegated": true,
       "tld_created": "2015-04-30",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -5282,7 +5283,7 @@
       "delegated": true,
       "tld_created": "2013-10-31",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -5291,7 +5292,7 @@
       "delegated": true,
       "tld_created": "2013-12-19",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -5300,7 +5301,7 @@
       "delegated": true,
       "tld_created": "2015-05-29",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-05"
       ]
     },
     {
@@ -5354,7 +5355,7 @@
       "delegated": true,
       "tld_created": "2014-02-28",
       "tld_updated": [
-        "2024-04-16"
+        "2026-10-14"
       ]
     },
     {
@@ -5363,7 +5364,7 @@
       "delegated": true,
       "tld_created": "2016-12-02",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -5426,7 +5427,7 @@
       "delegated": true,
       "tld_created": "2013-12-19",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -5489,7 +5490,7 @@
       "delegated": true,
       "tld_created": "2016-08-04",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-05"
       ]
     },
     {
@@ -5624,7 +5625,7 @@
       "delegated": true,
       "tld_created": "2016-04-07",
       "tld_updated": [
-        "2023-08-25"
+        "2026-11-09"
       ]
     },
     {
@@ -5642,7 +5643,7 @@
       "delegated": true,
       "tld_created": "2014-08-22",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -5651,7 +5652,7 @@
       "delegated": true,
       "tld_created": "2013-12-19",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -5660,7 +5661,7 @@
       "delegated": true,
       "tld_created": "1989-05-08",
       "tld_updated": [
-        "2026-06-29"
+        "2026-10-12"
       ]
     },
     {
@@ -5678,7 +5679,7 @@
       "delegated": true,
       "tld_created": "2014-02-13",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -5696,7 +5697,7 @@
       "delegated": true,
       "tld_created": "2001-06-26",
       "tld_updated": [
-        "2026-03-10"
+        "2026-10-20"
       ]
     },
     {
@@ -5714,7 +5715,7 @@
       "delegated": true,
       "tld_created": "2014-02-27",
       "tld_updated": [
-        "2024-04-16"
+        "2026-10-14"
       ]
     },
     {
@@ -5723,7 +5724,7 @@
       "delegated": true,
       "tld_created": "2013-12-19",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -5741,7 +5742,7 @@
       "delegated": true,
       "tld_created": "2014-04-24",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -5763,12 +5764,17 @@
       ]
     },
     {
+      "tld": "internal",
+      "type": "special-use",
+      "delegated": false
+    },
+    {
       "tld": "international",
       "type": "gtld",
       "delegated": true,
       "tld_created": "2013-12-19",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -5781,12 +5787,17 @@
       ]
     },
     {
+      "tld": "invalid",
+      "type": "special-use",
+      "delegated": false
+    },
+    {
       "tld": "investments",
       "type": "gtld",
       "delegated": true,
       "tld_created": "2014-04-17",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -5795,7 +5806,7 @@
       "delegated": true,
       "tld_created": "1997-09-16",
       "tld_updated": [
-        "2023-01-18"
+        "2026-11-03"
       ]
     },
     {
@@ -5831,7 +5842,7 @@
       "delegated": true,
       "tld_created": "2014-11-06",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -5858,7 +5869,7 @@
       "delegated": true,
       "tld_created": "2016-04-07",
       "tld_updated": [
-        "2023-08-25"
+        "2026-11-09"
       ]
     },
     {
@@ -5867,7 +5878,7 @@
       "delegated": true,
       "tld_created": "2015-05-29",
       "tld_updated": [
-        "2025-08-28"
+        "2026-10-30"
       ]
     },
     {
@@ -5876,7 +5887,7 @@
       "delegated": true,
       "tld_created": "2015-05-29",
       "tld_updated": [
-        "2025-08-28"
+        "2026-10-30"
       ]
     },
     {
@@ -5903,7 +5914,7 @@
       "delegated": true,
       "tld_created": "2016-05-19",
       "tld_updated": [
-        "2025-08-27"
+        "2026-11-05"
       ]
     },
     {
@@ -5930,7 +5941,7 @@
       "delegated": true,
       "tld_created": "2015-10-15",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-05"
       ]
     },
     {
@@ -5939,7 +5950,7 @@
       "delegated": true,
       "tld_created": "2015-01-15",
       "tld_updated": [
-        "2024-02-09"
+        "2026-11-05"
       ]
     },
     {
@@ -5975,7 +5986,7 @@
       "delegated": true,
       "tld_created": "2016-07-07",
       "tld_updated": [
-        "2026-06-12"
+        "2026-11-05"
       ]
     },
     {
@@ -5984,7 +5995,7 @@
       "delegated": true,
       "tld_created": "2014-03-06",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -5993,7 +6004,7 @@
       "delegated": true,
       "tld_created": "2015-04-09",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -6020,7 +6031,7 @@
       "delegated": true,
       "tld_created": "2015-05-14",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-05"
       ]
     },
     {
@@ -6083,7 +6094,7 @@
       "delegated": true,
       "tld_created": "2015-11-12",
       "tld_updated": [
-        "2026-07-14"
+        "2026-11-05"
       ]
     },
     {
@@ -6101,7 +6112,7 @@
       "delegated": true,
       "tld_created": "1986-08-05",
       "tld_updated": [
-        "2025-11-06"
+        "2026-11-06"
       ]
     },
     {
@@ -6119,7 +6130,7 @@
       "delegated": true,
       "tld_created": "2014-12-18",
       "tld_updated": [
-        "2025-09-30"
+        "2026-09-30"
       ]
     },
     {
@@ -6128,16 +6139,16 @@
       "delegated": true,
       "tld_created": "2014-05-08",
       "tld_updated": [
-        "2026-09-22"
+        "2026-10-09"
       ]
     },
     {
       "tld": "juniper",
       "type": "gtld",
-      "delegated": true,
+      "delegated": false,
       "tld_created": "2016-06-30",
       "tld_updated": [
-        "2023-08-11"
+        "2026-09-30"
       ]
     },
     {
@@ -6146,7 +6157,7 @@
       "delegated": true,
       "tld_created": "2013-12-19",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -6173,7 +6184,7 @@
       "delegated": true,
       "tld_created": "2015-12-17",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-05"
       ]
     },
     {
@@ -6191,7 +6202,7 @@
       "delegated": true,
       "tld_created": "2015-12-17",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-05"
       ]
     },
     {
@@ -6245,7 +6256,7 @@
       "delegated": true,
       "tld_created": "2022-03-05",
       "tld_updated": [
-        "2025-09-02"
+        "2026-11-05"
       ]
     },
     {
@@ -6254,7 +6265,7 @@
       "delegated": true,
       "tld_created": "2013-12-19",
       "tld_updated": [
-        "2025-09-04"
+        "2026-11-05"
       ]
     },
     {
@@ -6281,7 +6292,7 @@
       "delegated": true,
       "tld_created": "2013-11-13",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -6317,7 +6328,7 @@
       "delegated": true,
       "tld_created": "2014-02-20",
       "tld_updated": [
-        "2025-09-01"
+        "2026-10-19"
       ]
     },
     {
@@ -6335,7 +6346,7 @@
       "delegated": true,
       "tld_created": "2016-06-03",
       "tld_updated": [
-        "2023-08-07"
+        "2026-11-05"
       ]
     },
     {
@@ -6362,7 +6373,7 @@
       "delegated": true,
       "tld_created": "2015-12-04",
       "tld_updated": [
-        "2024-06-04"
+        "2026-10-05"
       ]
     },
     {
@@ -6398,7 +6409,7 @@
       "delegated": true,
       "tld_created": "2015-12-17",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-05"
       ]
     },
     {
@@ -6443,7 +6454,7 @@
       "delegated": true,
       "tld_created": "1996-05-14",
       "tld_updated": [
-        "2025-08-21"
+        "2026-11-02"
       ]
     },
     {
@@ -6470,7 +6481,7 @@
       "delegated": true,
       "tld_created": "2015-11-12",
       "tld_updated": [
-        "2025-03-07"
+        "2026-10-23"
       ]
     },
     {
@@ -6479,7 +6490,7 @@
       "delegated": true,
       "tld_created": "2015-12-10",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-05"
       ]
     },
     {
@@ -6515,7 +6526,7 @@
       "delegated": true,
       "tld_created": "2013-11-08",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -6524,7 +6535,7 @@
       "delegated": true,
       "tld_created": "2015-10-15",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-05"
       ]
     },
     {
@@ -6542,7 +6553,7 @@
       "delegated": true,
       "tld_created": "2015-06-04",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-05"
       ]
     },
     {
@@ -6578,7 +6589,7 @@
       "delegated": true,
       "tld_created": "2015-06-18",
       "tld_updated": [
-        "2024-04-16"
+        "2026-10-14"
       ]
     },
     {
@@ -6587,7 +6598,7 @@
       "delegated": true,
       "tld_created": "2014-05-22",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -6605,7 +6616,7 @@
       "delegated": true,
       "tld_created": "1991-09-03",
       "tld_updated": [
-        "2026-08-05"
+        "2026-11-06"
       ]
     },
     {
@@ -6623,7 +6634,7 @@
       "delegated": true,
       "tld_created": "2014-04-03",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -6641,7 +6652,7 @@
       "delegated": true,
       "tld_created": "2016-03-31",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-05"
       ]
     },
     {
@@ -6650,7 +6661,7 @@
       "delegated": true,
       "tld_created": "2014-11-20",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -6659,7 +6670,7 @@
       "delegated": true,
       "tld_created": "2016-03-24",
       "tld_updated": [
-        "2024-07-25"
+        "2026-11-05"
       ]
     },
     {
@@ -6677,7 +6688,7 @@
       "delegated": true,
       "tld_created": "2014-06-26",
       "tld_updated": [
-        "2025-09-04"
+        "2026-11-05"
       ]
     },
     {
@@ -6713,7 +6724,7 @@
       "delegated": true,
       "tld_created": "2014-05-08",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -6740,7 +6751,7 @@
       "delegated": true,
       "tld_created": "2013-10-31",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -6767,7 +6778,7 @@
       "delegated": true,
       "tld_created": "2014-04-17",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -6776,7 +6787,7 @@
       "delegated": true,
       "tld_created": "2013-12-12",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -6821,7 +6832,7 @@
       "delegated": true,
       "tld_created": "2015-06-25",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -6857,7 +6868,7 @@
       "delegated": true,
       "tld_created": "2018-02-16",
       "tld_updated": [
-        "2025-09-04"
+        "2026-11-05"
       ]
     },
     {
@@ -6884,8 +6895,18 @@
       "delegated": true,
       "tld_created": "2014-05-08",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
+    },
+    {
+      "tld": "local",
+      "type": "special-use",
+      "delegated": false
+    },
+    {
+      "tld": "localhost",
+      "type": "special-use",
+      "delegated": false
     },
     {
       "tld": "locker",
@@ -6947,7 +6968,7 @@
       "delegated": true,
       "tld_created": "2014-06-05",
       "tld_updated": [
-        "2025-09-04"
+        "2026-11-05"
       ]
     },
     {
@@ -7010,7 +7031,7 @@
       "delegated": true,
       "tld_created": "2015-08-06",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -7037,7 +7058,7 @@
       "delegated": true,
       "tld_created": "2016-06-16",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-05"
       ]
     },
     {
@@ -7055,7 +7076,7 @@
       "delegated": true,
       "tld_created": "2014-03-13",
       "tld_updated": [
-        "2024-04-17"
+        "2026-10-14"
       ]
     },
     {
@@ -7118,7 +7139,7 @@
       "delegated": true,
       "tld_created": "2015-02-13",
       "tld_updated": [
-        "2024-03-31"
+        "2026-11-05"
       ]
     },
     {
@@ -7127,7 +7148,7 @@
       "delegated": true,
       "tld_created": "2014-02-06",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -7154,7 +7175,7 @@
       "delegated": true,
       "tld_created": "2013-12-12",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -7181,7 +7202,7 @@
       "delegated": true,
       "tld_created": "2014-05-22",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -7190,7 +7211,7 @@
       "delegated": true,
       "tld_created": "2014-01-09",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -7199,7 +7220,7 @@
       "delegated": true,
       "tld_created": "2015-03-06",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -7208,7 +7229,7 @@
       "delegated": true,
       "tld_created": "2014-12-18",
       "tld_updated": [
-        "2024-05-02"
+        "2026-11-05"
       ]
     },
     {
@@ -7244,7 +7265,7 @@
       "delegated": true,
       "tld_created": "2015-05-14",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -7280,7 +7301,7 @@
       "delegated": true,
       "tld_created": "2016-07-21",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-05"
       ]
     },
     {
@@ -7316,7 +7337,7 @@
       "delegated": true,
       "tld_created": "2014-04-03",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -7334,7 +7355,7 @@
       "delegated": true,
       "tld_created": "2014-07-03",
       "tld_updated": [
-        "2024-04-17"
+        "2026-10-14"
       ]
     },
     {
@@ -7352,7 +7373,7 @@
       "delegated": true,
       "tld_created": "2014-11-20",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -7441,7 +7462,7 @@
       "delegated": true,
       "tld_created": "2014-02-28",
       "tld_updated": [
-        "2024-04-17"
+        "2026-10-14"
       ]
     },
     {
@@ -7486,7 +7507,7 @@
       "delegated": true,
       "tld_created": "2016-06-24",
       "tld_updated": [
-        "2023-08-04"
+        "2026-11-05"
       ]
     },
     {
@@ -7558,7 +7579,7 @@
       "delegated": true,
       "tld_created": "1995-03-02",
       "tld_updated": [
-        "2022-06-15"
+        "2026-11-06"
       ]
     },
     {
@@ -7576,7 +7597,7 @@
       "delegated": true,
       "tld_created": "2005-10-17",
       "tld_updated": [
-        "2025-09-04"
+        "2026-11-05"
       ]
     },
     {
@@ -7603,7 +7624,7 @@
       "delegated": true,
       "tld_created": "2014-01-09",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -7648,7 +7669,7 @@
       "delegated": true,
       "tld_created": "2014-11-20",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -7693,7 +7714,7 @@
       "delegated": true,
       "tld_created": "2014-05-22",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -7738,7 +7759,7 @@
       "delegated": true,
       "tld_created": "2015-03-12",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -7837,7 +7858,7 @@
       "delegated": true,
       "tld_created": "1995-10-06",
       "tld_updated": [
-        "2026-08-05"
+        "2026-10-29"
       ]
     },
     {
@@ -7936,7 +7957,7 @@
       "delegated": true,
       "tld_created": "2016-08-04",
       "tld_updated": [
-        "2025-12-01"
+        "2026-11-05"
       ]
     },
     {
@@ -7990,7 +8011,7 @@
       "delegated": true,
       "tld_created": "2014-05-29",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -8062,7 +8083,7 @@
       "delegated": true,
       "tld_created": "2014-08-18",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -8098,7 +8119,7 @@
       "delegated": true,
       "tld_created": "2015-03-12",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-05"
       ]
     },
     {
@@ -8107,7 +8128,7 @@
       "delegated": true,
       "tld_created": "2016-04-21",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-05"
       ]
     },
     {
@@ -8161,7 +8182,7 @@
       "delegated": true,
       "tld_created": "2014-07-10",
       "tld_updated": [
-        "2025-08-14"
+        "2026-11-04"
       ]
     },
     {
@@ -8368,7 +8389,7 @@
       "delegated": true,
       "tld_created": "2014-03-13",
       "tld_updated": [
-        "2024-04-17"
+        "2026-10-14"
       ]
     },
     {
@@ -8377,7 +8398,7 @@
       "delegated": true,
       "tld_created": "1987-01-19",
       "tld_updated": [
-        "2026-08-14"
+        "2026-10-22"
       ]
     },
     {
@@ -8494,8 +8515,13 @@
       "delegated": true,
       "tld_created": "2014-07-10",
       "tld_updated": [
-        "2025-08-14"
+        "2026-11-04"
       ]
+    },
+    {
+      "tld": "onion",
+      "type": "special-use",
+      "delegated": false
     },
     {
       "tld": "onl",
@@ -8548,7 +8574,7 @@
       "delegated": true,
       "tld_created": "2015-01-15",
       "tld_updated": [
-        "2024-02-09"
+        "2026-11-09"
       ]
     },
     {
@@ -8566,7 +8592,7 @@
       "delegated": true,
       "tld_created": "1985-01-01",
       "tld_updated": [
-        "2026-03-10"
+        "2026-11-04"
       ]
     },
     {
@@ -8638,7 +8664,7 @@
       "delegated": true,
       "tld_created": "1994-05-25",
       "tld_updated": [
-        "2026-07-28"
+        "2026-09-29"
       ]
     },
     {
@@ -8845,7 +8871,7 @@
       "delegated": true,
       "tld_created": "2014-01-16",
       "tld_updated": [
-        "2026-09-21"
+        "2026-09-29"
       ]
     },
     {
@@ -8971,7 +8997,7 @@
       "delegated": true,
       "tld_created": "1992-06-03",
       "tld_updated": [
-        "2022-07-06"
+        "2026-10-12"
       ]
     },
     {
@@ -9052,7 +9078,7 @@
       "delegated": true,
       "tld_created": "2015-10-29",
       "tld_updated": [
-        "2023-08-11"
+        "2026-10-30"
       ]
     },
     {
@@ -9088,7 +9114,7 @@
       "delegated": true,
       "tld_created": "2014-11-26",
       "tld_updated": [
-        "2024-04-17"
+        "2026-10-14"
       ]
     },
     {
@@ -9151,7 +9177,7 @@
       "delegated": true,
       "tld_created": "2002-05-08",
       "tld_updated": [
-        "2026-03-10"
+        "2026-10-23"
       ]
     },
     {
@@ -9673,7 +9699,7 @@
       "delegated": true,
       "tld_created": "1993-02-26",
       "tld_updated": [
-        "2026-04-28"
+        "2026-09-28"
       ]
     },
     {
@@ -9700,7 +9726,7 @@
       "delegated": true,
       "tld_created": "2014-02-28",
       "tld_updated": [
-        "2024-04-17"
+        "2026-10-14"
       ]
     },
     {
@@ -9808,7 +9834,7 @@
       "delegated": true,
       "tld_created": "1994-05-17",
       "tld_updated": [
-        "2026-09-10"
+        "2026-10-13"
       ]
     },
     {
@@ -9997,7 +10023,7 @@
       "delegated": true,
       "tld_created": "1997-05-09",
       "tld_updated": [
-        "2026-06-08"
+        "2026-11-05"
       ]
     },
     {
@@ -10015,7 +10041,7 @@
       "delegated": true,
       "tld_created": "2014-06-26",
       "tld_updated": [
-        "2026-08-31"
+        "2026-11-05"
       ]
     },
     {
@@ -10177,7 +10203,7 @@
       "delegated": true,
       "tld_created": "2015-12-23",
       "tld_updated": [
-        "2024-04-17"
+        "2026-10-14"
       ]
     },
     {
@@ -10231,7 +10257,7 @@
       "delegated": true,
       "tld_created": "2015-04-09",
       "tld_updated": [
-        "2024-04-17"
+        "2026-10-14"
       ]
     },
     {
@@ -10267,7 +10293,7 @@
       "delegated": true,
       "tld_created": "1997-09-23",
       "tld_updated": [
-        "2026-08-05"
+        "2026-10-23"
       ]
     },
     {
@@ -10879,7 +10905,7 @@
       "delegated": true,
       "tld_created": "2015-02-19",
       "tld_updated": [
-        "2024-04-17"
+        "2026-10-14"
       ]
     },
     {
@@ -10942,7 +10968,7 @@
       "delegated": true,
       "tld_created": "2014-03-13",
       "tld_updated": [
-        "2024-04-17"
+        "2026-10-14"
       ]
     },
     {
@@ -11023,7 +11049,7 @@
       "delegated": true,
       "tld_created": "2014-10-30",
       "tld_updated": [
-        "2024-04-17"
+        "2026-10-14"
       ]
     },
     {
@@ -11149,7 +11175,7 @@
       "delegated": true,
       "tld_created": "1997-01-27",
       "tld_updated": [
-        "2026-03-27"
+        "2026-09-28"
       ]
     },
     {
@@ -11250,6 +11276,11 @@
       "tld_updated": [
         "2025-10-07"
       ]
+    },
+    {
+      "tld": "test",
+      "type": "special-use",
+      "delegated": false
     },
     {
       "tld": "teva",
@@ -11383,7 +11414,7 @@
       "delegated": true,
       "tld_created": "1997-12-11",
       "tld_updated": [
-        "2020-03-09"
+        "2026-10-05"
       ]
     },
     {
@@ -11500,7 +11531,7 @@
       "delegated": true,
       "tld_created": "2014-07-24",
       "tld_updated": [
-        "2026-09-23"
+        "2026-10-09"
       ]
     },
     {
@@ -11923,7 +11954,7 @@
       "delegated": true,
       "tld_created": "1991-09-03",
       "tld_updated": [
-        "2024-07-09"
+        "2026-11-04"
       ]
     },
     {
@@ -11968,7 +11999,7 @@
       "delegated": true,
       "tld_created": "2014-05-15",
       "tld_updated": [
-        "2026-04-29"
+        "2026-10-05"
       ]
     },
     {
@@ -11995,7 +12026,7 @@
       "delegated": true,
       "tld_created": "1995-08-31",
       "tld_updated": [
-        "2024-02-26"
+        "2026-10-22"
       ]
     },
     {
@@ -12058,7 +12089,7 @@
       "delegated": true,
       "tld_created": "2015-07-30",
       "tld_updated": [
-        "2024-04-17"
+        "2026-10-22"
       ]
     },
     {
@@ -12148,7 +12179,7 @@
       "delegated": true,
       "tld_created": "2014-02-28",
       "tld_updated": [
-        "2024-04-17"
+        "2026-10-14"
       ]
     },
     {
@@ -12363,7 +12394,7 @@
       "delegated": true,
       "tld_created": "2014-07-10",
       "tld_updated": [
-        "2024-04-17"
+        "2026-10-14"
       ]
     },
     {
@@ -12417,7 +12448,7 @@
       "delegated": true,
       "tld_created": "2014-02-06",
       "tld_updated": [
-        "2024-04-17"
+        "2026-10-14"
       ]
     },
     {
@@ -12498,7 +12529,7 @@
       "delegated": true,
       "tld_created": "2014-08-18",
       "tld_updated": [
-        "2024-04-17"
+        "2026-10-15"
       ]
     },
     {
@@ -12588,7 +12619,7 @@
       "delegated": true,
       "tld_created": "2016-03-18",
       "tld_updated": [
-        "2025-10-24"
+        "2026-08-11"
       ]
     },
     {
@@ -12791,16 +12822,6 @@
       ]
     },
     {
-      "tld": "xn--4gq48lf9j",
-      "tld_unicode": "一号店",
-      "type": "gtld",
-      "delegated": false,
-      "tld_created": "2016-07-21",
-      "tld_updated": [
-        "2017-01-23"
-      ]
-    },
-    {
       "tld": "xn--54b7fta0cc",
       "tld_unicode": "বাংলা",
       "type": "cctld",
@@ -12847,7 +12868,7 @@
       "delegated": true,
       "tld_created": "2015-12-04",
       "tld_updated": [
-        "2025-01-20"
+        "2026-10-06"
       ]
     },
     {
@@ -13037,7 +13058,7 @@
       "delegated": true,
       "tld_created": "2014-02-27",
       "tld_updated": [
-        "2025-08-14"
+        "2026-11-05"
       ]
     },
     {
@@ -13417,7 +13438,7 @@
       "delegated": true,
       "tld_created": "2014-02-27",
       "tld_updated": [
-        "2025-08-14"
+        "2026-11-05"
       ]
     },
     {
@@ -13747,7 +13768,7 @@
       "delegated": true,
       "tld_created": "2019-06-13",
       "tld_updated": [
-        "2026-09-23"
+        "2026-09-28"
       ]
     },
     {
@@ -13857,7 +13878,7 @@
       "delegated": true,
       "tld_created": "2013-10-21",
       "tld_updated": [
-        "2024-04-17"
+        "2026-10-14"
       ]
     },
     {
@@ -13897,7 +13918,7 @@
       "delegated": true,
       "tld_created": "2014-02-27",
       "tld_updated": [
-        "2025-08-14"
+        "2026-11-05"
       ]
     },
     {
@@ -13907,7 +13928,7 @@
       "delegated": true,
       "tld_created": "2014-02-27",
       "tld_updated": [
-        "2025-08-14"
+        "2026-11-05"
       ]
     },
     {
@@ -13917,7 +13938,7 @@
       "delegated": true,
       "tld_created": "2015-03-12",
       "tld_updated": [
-        "2025-05-01"
+        "2026-11-03"
       ]
     },
     {
@@ -14007,7 +14028,7 @@
       "delegated": true,
       "tld_created": "2019-06-10",
       "tld_updated": [
-        "2023-03-17"
+        "2026-11-02"
       ]
     },
     {
@@ -14057,7 +14078,7 @@
       "delegated": true,
       "tld_created": "2014-03-06",
       "tld_updated": [
-        "2025-04-30"
+        "2026-11-03"
       ]
     },
     {
@@ -14315,7 +14336,7 @@
       "delegated": true,
       "tld_created": "2011-04-15",
       "tld_updated": [
-        "2024-04-17"
+        "2026-10-14"
       ]
     },
     {
@@ -14387,7 +14408,7 @@
       "delegated": true,
       "tld_created": "2014-08-15",
       "tld_updated": [
-        "2024-04-17"
+        "2026-10-14"
       ]
     },
     {
@@ -14427,12 +14448,17 @@
       ]
     },
     {
+      "tld": "yu",
+      "type": "cctld",
+      "delegated": false
+    },
+    {
       "tld": "yun",
       "type": "gtld",
       "delegated": true,
       "tld_created": "2016-03-18",
       "tld_updated": [
-        "2025-10-24"
+        "2026-10-12"
       ]
     },
     {
@@ -14506,6 +14532,11 @@
       "tld_updated": [
         "2025-10-07"
       ]
+    },
+    {
+      "tld": "zr",
+      "type": "cctld",
+      "delegated": false
     },
     {
       "tld": "zuerich",

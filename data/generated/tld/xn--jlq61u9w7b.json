@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--jlq61u9w7b",
     "tld_unicode": "诺基亚",
     "tld_script": "Han-CJK",
+    "tld_script_code": "Hani",
+    "status": "retired",
     "delegated": false,
     "iana_tag": "generic",
     "type": "gtld",
@@ -29,6 +31,10 @@
     "tld_updated": [
       "2022-12-06"
     ],
+    "events": {
+      "delegation": "2015-12-18",
+      "revocation": "2022-12-06"
+    },
     "annotations": {
       "registry_agreement_types": [
         "base",
@@ -36,8 +42,12 @@
         "non_sponsored"
       ],
       "icann_translation_en": "nokia",
+      "iana_translation_en": "Nokia",
+      "iana_transliteration": "nuojiya",
+      "iana_delegation_round": "2012",
       "language_code": "zh",
-      "language_name_en": "Chinese"
+      "language_name_en": "Chinese",
+      "language_code_source": "IANA"
     }
   }
 }

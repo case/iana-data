@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "lidl",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "https://www.nic.lidl",
     "whois_server": "whois.nic.lidl",
-    "rdap_server": "https://rdap.centralnic.com/lidl",
+    "rdap_server": "https://rdap.centralnic.com/lidl/",
     "tld_created": "2014-12-04",
     "tld_updated": [
       "2023-11-06"
     ],
+    "events": {
+      "delegation": "2014-12-13"
+    },
     "annotations": {
       "iana_tech_alias": "CentralNic",
       "iana_tech_slug": "centralnic",
@@ -44,6 +49,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -51,6 +57,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 44022,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "031250e5d00e613d5044b944a8f5d9e88fa4f803eae5f887c1670e0a8bcffc97"
+      },
+      {
+        "key_tag": 25851,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "1aa0941e7d1538497268ee853423361989c3b0d9a8f2d3da4e3f3ba0521e24e9"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.lidl",

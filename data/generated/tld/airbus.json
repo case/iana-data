@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "airbus",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -14,7 +16,7 @@
       "iana": {
         "sponsor": "Airbus S.A.S.",
         "admin": "Airbus S.A.S.",
-        "tech": "Identity Digital Inc."
+        "tech": "Identity Digital Limited"
       },
       "icann": {
         "registry_operator": "Airbus S.A.S.",
@@ -32,8 +34,11 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "2016-05-26",
     "tld_updated": [
-      "2024-11-15"
+      "2026-10-27"
     ],
+    "events": {
+      "delegation": "2016-06-10"
+    },
     "annotations": {
       "iana_tech_alias": "Identity Digital",
       "iana_tech_slug": "identity-digital",
@@ -43,6 +48,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Identity Digital"
       ],
@@ -50,6 +56,14 @@
         "identity-digital"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 14521,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "6c88943750d48ba049fdcc29c2408f6fb4e77b4c0c7e0a9b35f91282a6510dbf"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "v0n0.nic.airbus",

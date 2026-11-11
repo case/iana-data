@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--jvr189m",
     "tld_unicode": "食品",
     "tld_script": "Han-CJK",
+    "tld_script_code": "Hani",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -37,6 +39,9 @@
     "tld_updated": [
       "2025-06-17"
     ],
+    "events": {
+      "delegation": "2016-02-22"
+    },
     "annotations": {
       "iana_sponsor_alias": "Amazon",
       "iana_sponsor_slug": "amazon",
@@ -52,15 +57,27 @@
         "non_sponsored"
       ],
       "icann_translation_en": "food",
+      "iana_translation_en": "food",
+      "iana_transliteration": "shokuhin",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Identity Digital"
       ],
       "as_org_slugs": [
         "identity-digital"
       ],
-      "language_code": "zh",
-      "language_name_en": "Chinese"
+      "language_code": "ja",
+      "language_name_en": "Japanese",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 2149,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "508bddccb2b2b23586882a59e145310aca85ffb453eb073565e900466f52a39f"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "v0n0.nic.xn--jvr189m",

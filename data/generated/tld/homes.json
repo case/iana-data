@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "homes",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2025-08-12"
     ],
+    "events": {
+      "delegation": "2014-05-22"
+    },
     "annotations": {
       "iana_sponsor_alias": "xyz.com",
       "iana_sponsor_slug": "xyz-com",
@@ -49,6 +54,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -56,6 +62,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 33262,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "d9f3c8d72738eba7ed5002404c5e2748e1aa47c83e36d33d2d4eb72360e49d80"
+      },
+      {
+        "key_tag": 64382,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "252b825350b3fb0d15cc087d7e7e52af81ce901db0f3a614d927ad153c909560"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.homes",

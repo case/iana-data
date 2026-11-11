@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--mgbca7dzdo",
     "tld_unicode": "ابوظبي",
     "tld_script": "Arabic",
+    "tld_script_code": "Arab",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -31,11 +33,14 @@
       }
     },
     "whois_server": "whois.nic.xn--mgbca7dzdo",
-    "rdap_server": "https://rdap.nic.xn--mgbca7dzdo",
+    "rdap_server": "https://rdap.nic.xn--mgbca7dzdo/",
     "tld_created": "2016-03-03",
     "tld_updated": [
       "2019-11-26"
     ],
+    "events": {
+      "delegation": "2016-04-06"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -43,6 +48,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "abu dhabi",
+      "iana_translation_en": "Abu Dhabi",
+      "iana_transliteration": "abu dhabi",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -51,8 +59,23 @@
       ],
       "geographic_scope": "city",
       "language_code": "ar",
-      "language_name_en": "Arabic"
+      "language_name_en": "Arabic",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 1909,
+        "algorithm": 8,
+        "digest_type": 1,
+        "digest": "d5a6f96664ae0d000a01b196c4348e7e231d95f8"
+      },
+      {
+        "key_tag": 1909,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "f62b4e977cba32cef37856a9f919ce405eb998f04d4abb309f1f9b86c105ca72"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "gtld.alpha.aridns.net.au",

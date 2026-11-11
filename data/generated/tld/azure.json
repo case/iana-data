@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-28T08:41:21Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "azure",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -34,6 +36,9 @@
     "tld_updated": [
       "2026-02-02"
     ],
+    "events": {
+      "delegation": "2015-06-06"
+    },
     "annotations": {
       "iana_sponsor_alias": "Microsoft",
       "iana_sponsor_slug": "microsoft",
@@ -49,6 +54,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Nominet",
         "UltraDNS"
@@ -58,6 +64,14 @@
         "ultradns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 40166,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "9f412d488bc68de48010ed08d94cc6830cd604296f3bdf244ac9d7dfa74ae458"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "dns1.nic.azure",

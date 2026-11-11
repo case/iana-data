@@ -1,22 +1,24 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-12T03:44:14Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--5tzm5g",
     "tld_unicode": "网站",
     "tld_script": "Han-CJK",
+    "tld_script_code": "Hani",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
     "orgs": {
       "iana": {
-        "sponsor": "Global Website TLD Asia Limited",
-        "admin": "Global Website TLD Asia Limited",
-        "tech": "Identity Digital Inc."
+        "sponsor": "Jolly Host, LLC",
+        "admin": "Identity Digital Inc.",
+        "tech": "Identity Digital Limited"
       },
       "icann": {
         "registry_operator": "Jolly Host, LLC",
@@ -31,13 +33,17 @@
       }
     },
     "registry_url": "https://www.identity.digital/",
-    "whois_server": "whois.nic.xn--5tzm5g",
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "2015-12-04",
     "tld_updated": [
-      "2025-01-20"
+      "2026-10-06"
     ],
+    "events": {
+      "delegation": "2016-04-17"
+    },
     "annotations": {
+      "iana_admin_alias": "Identity Digital",
+      "iana_admin_slug": "identity-digital",
       "iana_tech_alias": "Identity Digital",
       "iana_tech_slug": "identity-digital",
       "rdap_source": "IANA",
@@ -46,6 +52,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "website",
+      "iana_translation_en": "website",
+      "iana_transliteration": "wangzhan",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Identity Digital"
       ],
@@ -53,8 +62,17 @@
         "identity-digital"
       ],
       "language_code": "zh",
-      "language_name_en": "Chinese"
+      "language_name_en": "Chinese",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 26359,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "7d1e023bbb026ac5d19ae62d5f13ee6e01f3450a1e6629e25a9205dcf2a31f9e"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a0.nic.xn--5tzm5g",

@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "black",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -32,8 +34,11 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "2014-03-20",
     "tld_updated": [
-      "2025-09-04"
+      "2026-10-23"
     ],
+    "events": {
+      "delegation": "2014-03-27"
+    },
     "annotations": {
       "iana_sponsor_alias": "Identity Digital",
       "iana_sponsor_slug": "identity-digital",
@@ -48,6 +53,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Identity Digital"
       ],
@@ -55,6 +61,14 @@
         "identity-digital"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 10574,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "6ebe5cfe0922c29ba68b30694d5deaaffeab483b47492c83a6af78e50290b3a7"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a0.nic.black",

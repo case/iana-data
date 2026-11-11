@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-28T08:41:21Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--c2br7g",
     "tld_unicode": "नेट",
     "tld_script": "Devanagari",
+    "tld_script_code": "Deva",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -37,6 +39,9 @@
     "tld_updated": [
       "2026-03-30"
     ],
+    "events": {
+      "delegation": "2015-07-28"
+    },
     "annotations": {
       "iana_sponsor_alias": "VeriSign",
       "iana_sponsor_slug": "verisign",
@@ -52,6 +57,8 @@
         "non_sponsored"
       ],
       "icann_translation_en": "net",
+      "iana_transliteration": "neta",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "VeriSign"
       ],
@@ -59,8 +66,17 @@
         "verisign"
       ],
       "language_code": "hi",
-      "language_name_en": "Hindi"
+      "language_name_en": "Hindi",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 49124,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "0292c5ae9eb4fc4ee8953dacb82db36ec9ca5def3e8bd053964cc1c9a92b426a"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ac1.nstld.com",

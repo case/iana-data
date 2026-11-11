@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "art",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "http://art.art/",
     "whois_server": "whois.nic.art",
-    "rdap_server": "https://rdap.centralnic.com/art",
+    "rdap_server": "https://rdap.centralnic.com/art/",
     "tld_created": "2016-06-09",
     "tld_updated": [
       "2024-04-30"
     ],
+    "events": {
+      "delegation": "2016-06-23"
+    },
     "annotations": {
       "iana_tech_alias": "CentralNic",
       "iana_tech_slug": "centralnic",
@@ -43,6 +48,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -50,6 +56,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 29485,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "bf041a7ec6ca857f5d85151c66f561deb9c863b98e05670c345c9cf9ed199aee"
+      },
+      {
+        "key_tag": 32002,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "fb2ae28a30b90d8b273b88edf84d3edc704c6aa6dd08c1f51c8e96992441bb17"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.art",

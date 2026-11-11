@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "cbn",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -34,6 +36,9 @@
     "tld_updated": [
       "2024-05-11"
     ],
+    "events": {
+      "delegation": "2015-02-13"
+    },
     "annotations": {
       "iana_tech_alias": "GoDaddy Registry",
       "iana_tech_slug": "godaddy-registry",
@@ -43,6 +48,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -50,6 +56,14 @@
         "ultradns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 38299,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "1907c6c2996fc1df2198492f294525824c6321ae8a891284b0bc74efc2083538"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.cbn",

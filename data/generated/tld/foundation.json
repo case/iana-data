@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "foundation",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -33,8 +35,11 @@
     "rdap_server": "https://rdap.publicinterestregistry.org/rdap/",
     "tld_created": "2014-02-06",
     "tld_updated": [
-      "2025-08-14"
+      "2026-11-04"
     ],
+    "events": {
+      "delegation": "2014-02-11"
+    },
     "annotations": {
       "iana_sponsor_alias": "PIR",
       "iana_sponsor_slug": "pir",
@@ -49,6 +54,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Identity Digital"
       ],
@@ -56,6 +62,20 @@
         "identity-digital"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 50359,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "b440325c92cab8d16072f62301b71032691fd4c5d46ed01278cf945b0f8e360b"
+      },
+      {
+        "key_tag": 30514,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "7a15a6b19f38d1df8348ec94655ba751519b93ccdf3a2c80c4120257493caf8b"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "v0n0.nic.foundation",

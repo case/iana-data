@@ -1,19 +1,21 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-11T03:43:07Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "koeln",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
     "orgs": {
       "iana": {
-        "sponsor": "dotKoeln GmbH",
-        "admin": "dotKoeln GmbH",
+        "sponsor": "domainworx Service & Management GmbH",
+        "admin": "domainworx Service & Management GmbH",
         "tech": "RyCE GmbH"
       },
       "icann": {
@@ -33,14 +35,18 @@
     "rdap_server": "https://rdap.ryce-rsp.com/rdap/",
     "tld_created": "2014-02-20",
     "tld_updated": [
-      "2025-09-01"
+      "2026-10-19"
     ],
+    "events": {
+      "delegation": "2014-03-05"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "DENIC.de",
         "Hetzner",
@@ -53,6 +59,14 @@
       ],
       "geographic_scope": "city"
     },
+    "ds_records": [
+      {
+        "key_tag": 38539,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "3d58791c3bccf61d15649d4d6a7b686b7cdf411dbe4af145ece40fed88ebcbcf"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "dns.ryce-rsp.com",

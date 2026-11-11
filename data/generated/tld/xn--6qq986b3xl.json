@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--6qq986b3xl",
     "tld_unicode": "我爱你",
     "tld_script": "Han-CJK",
+    "tld_script_code": "Hani",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -32,11 +34,14 @@
     },
     "registry_url": "http://www.520.wang",
     "whois_server": "whois.gtld.zdns.cn",
-    "rdap_server": "https://rdap.zdnsgtld.com/xn--6qq986b3xl",
+    "rdap_server": "https://rdap.zdnsgtld.com/xn--6qq986b3xl/",
     "tld_created": "2013-12-12",
     "tld_updated": [
       "2026-05-22"
     ],
+    "events": {
+      "delegation": "2014-01-03"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -44,6 +49,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "I love you",
+      "iana_translation_en": "I love you",
+      "iana_transliteration": "wo ai ni",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "ZDNS"
       ],
@@ -51,8 +59,17 @@
         "zdns"
       ],
       "language_code": "zh",
-      "language_name_en": "Chinese"
+      "language_name_en": "Chinese",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 54794,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "04db2d2f9cab81d80fd8f7062b4e2a42a99f9fdf172a90039c30e4a6b9a844df"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.zdnscloud.cn",

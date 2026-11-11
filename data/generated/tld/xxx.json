@@ -1,15 +1,23 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xxx",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
-    "iana_tag": "sponsored",
+    "iana_tag": "generic",
     "type": "gtld",
+    "archived": {
+      "iana_tag": {
+        "value": "sponsored",
+        "archived_on": "2026-11-10"
+      }
+    },
     "orgs": {
       "iana": {
         "sponsor": "ICM Registry LLC",
@@ -33,8 +41,11 @@
     "rdap_server": "https://rdap.nic.xxx/",
     "tld_created": "2011-04-15",
     "tld_updated": [
-      "2024-04-17"
+      "2026-10-14"
     ],
+    "events": {
+      "delegation": "2011-04-15"
+    },
     "annotations": {
       "iana_sponsor_alias": "ICM Registry",
       "iana_sponsor_slug": "icm-registry",
@@ -49,6 +60,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2004",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -56,6 +68,14 @@
         "ultradns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 32177,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "fdd5d28e807ffbc169caaa26ba1ee9c3349d66c7f606a0e93a0e07eed9422b4f"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.xxx",

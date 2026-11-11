@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "deloitte",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "http://nic.deloitte",
     "whois_server": "whois.nic.deloitte",
-    "rdap_server": "https://rdap.centralnic.com/deloitte",
+    "rdap_server": "https://rdap.centralnic.com/deloitte/",
     "tld_created": "2015-12-23",
     "tld_updated": [
       "2023-11-22"
     ],
+    "events": {
+      "delegation": "2016-01-29"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -42,6 +47,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -49,6 +55,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 41922,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "fd71f550c4e968f52e85dfb13eb0da6068b0fa4970ade6cbf96300c872a90998"
+      },
+      {
+        "key_tag": 48890,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "1f0e244529dab8ba76058cfade19a8142c4f747e9cddfc74a990c324536e049f"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.deloitte",

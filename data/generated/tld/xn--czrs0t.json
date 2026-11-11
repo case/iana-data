@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--czrs0t",
     "tld_unicode": "商店",
     "tld_script": "Han-CJK",
+    "tld_script_code": "Hani",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -36,6 +38,9 @@
     "tld_updated": [
       "2025-10-07"
     ],
+    "events": {
+      "delegation": "2014-12-06"
+    },
     "annotations": {
       "iana_sponsor_alias": "Identity Digital",
       "iana_sponsor_slug": "identity-digital",
@@ -51,6 +56,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "shop",
+      "iana_translation_en": "shop",
+      "iana_transliteration": "shangdian",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Identity Digital"
       ],
@@ -58,8 +66,17 @@
         "identity-digital"
       ],
       "language_code": "zh",
-      "language_name_en": "Chinese"
+      "language_name_en": "Chinese",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 1450,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "ee874dd50ba3cecb8187c1d3fb2f8c72fae826a33c0c6a96dab7c16db8a70d84"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "v0n0.nic.xn--czrs0t",

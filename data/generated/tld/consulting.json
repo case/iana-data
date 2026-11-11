@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "consulting",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -32,8 +34,11 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "2014-01-30",
     "tld_updated": [
-      "2025-10-07"
+      "2026-10-23"
     ],
+    "events": {
+      "delegation": "2014-04-01"
+    },
     "annotations": {
       "iana_sponsor_alias": "Identity Digital",
       "iana_sponsor_slug": "identity-digital",
@@ -48,6 +53,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Identity Digital"
       ],
@@ -55,6 +61,14 @@
         "identity-digital"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 19711,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "91a28e467022b5432377a7b0dc41b3c351bf87ce3621ea772b9e00631b4d0b59"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "v0n0.nic.consulting",

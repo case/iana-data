@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "london",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2023-11-06"
     ],
+    "events": {
+      "delegation": "2014-03-22"
+    },
     "annotations": {
       "iana_tech_alias": "CentralNic",
       "iana_tech_slug": "centralnic",
@@ -43,6 +48,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -51,6 +57,20 @@
       ],
       "geographic_scope": "city"
     },
+    "ds_records": [
+      {
+        "key_tag": 9956,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "dded8bee7362bbbf9f4186b413c901ff293f5897412fd92e5ef507765d0a6443"
+      },
+      {
+        "key_tag": 17464,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "bc991b8aaf8a17d5328d74cf6439bf4ec08b21a2968308af2316f01205cdab09"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.london",

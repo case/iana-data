@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "college",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "https://nic.college/",
     "whois_server": "whois.nic.college",
-    "rdap_server": "https://rdap.centralnic.com/college",
+    "rdap_server": "https://rdap.centralnic.com/college/",
     "tld_created": "2014-03-13",
     "tld_updated": [
       "2025-08-12"
     ],
+    "events": {
+      "delegation": "2014-04-10"
+    },
     "annotations": {
       "iana_sponsor_alias": "xyz.com",
       "iana_sponsor_slug": "xyz-com",
@@ -49,6 +54,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -56,6 +62,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 46634,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "7bebb696e117d17efa506b8dd2209d2c49e97e6635596ff3177be76be0463c3c"
+      },
+      {
+        "key_tag": 58717,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "e6e5f277e746f95d3437e6dcb123cc6825cf733639c389ba79d55d997e25413a"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.college",

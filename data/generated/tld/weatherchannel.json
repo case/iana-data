@@ -1,20 +1,21 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "weatherchannel",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
     "orgs": {
       "iana": {
         "sponsor": "The Weather Company, LLC",
-        "admin": "The Weather Company, LLC",
-        "tech": "2155 E GoDaddy Way"
+        "admin": "The Weather Company, LLC"
       },
       "icann": {
         "registry_operator": "The Weather Company, LLC",
@@ -34,6 +35,9 @@
     "tld_updated": [
       "2026-03-01"
     ],
+    "events": {
+      "delegation": "2016-01-28"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -41,6 +45,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -48,6 +53,14 @@
         "ultradns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 47695,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "b2f90e6997386b0411808f05702d0f9ac00f5c0d129262394c86e1ba79977be2"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.weatherchannel",

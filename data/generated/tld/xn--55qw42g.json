@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-23T07:46:56Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--55qw42g",
     "tld_unicode": "公益",
     "tld_script": "Han-CJK",
+    "tld_script_code": "Hani",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -32,11 +34,14 @@
     },
     "registry_url": "http://www.conac.cn",
     "whois_server": "whois.nic.xn--55qw42g",
-    "rdap_server": "https://rdap.ngtld.cn",
+    "rdap_server": "https://rdap.ngtld.cn/",
     "tld_created": "2013-12-12",
     "tld_updated": [
       "2026-07-21"
     ],
+    "events": {
+      "delegation": "2013-12-17"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -44,6 +49,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "public interest",
+      "iana_translation_en": "public interest",
+      "iana_transliteration": "gongyi",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CNNIC.cn"
       ],
@@ -51,8 +59,17 @@
         "cnnic"
       ],
       "language_code": "zh",
-      "language_name_en": "Chinese"
+      "language_name_en": "Chinese",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 44374,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "7a835652c46de71fc431dad529adb5722f1db5239d8a83308b91bcad79328467"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ta.ngtld.cn",

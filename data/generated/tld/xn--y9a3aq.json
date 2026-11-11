@@ -1,15 +1,17 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-07T22:58:14Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--y9a3aq",
     "tld_unicode": "հայ",
     "tld_script": "Armenian",
+    "tld_script_code": "Armn",
     "tld_iso": "am",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -26,8 +28,12 @@
     "tld_updated": [
       "2024-11-25"
     ],
+    "events": {
+      "delegation": "2015-05-07"
+    },
     "annotations": {
       "country_name_iso": "Armenia",
+      "iana_transliteration": "hye",
       "as_org_aliases": [
         "Community DNS",
         "Netnod AB",
@@ -40,8 +46,17 @@
       ],
       "geographic_scope": "country",
       "language_code": "hy",
-      "language_name_en": "Armenian"
+      "language_name_en": "Armenian",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 57177,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "5a9734cad6bd5f59959199a36800d02fe5f77ae9ce1e1e65b9f5aec5785d071d"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "fork.sth.dnsnode.net",

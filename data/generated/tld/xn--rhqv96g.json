@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-16T08:10:23Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--rhqv96g",
     "tld_unicode": "世界",
     "tld_script": "Han-CJK",
+    "tld_script_code": "Hani",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -34,8 +36,11 @@
     "rdap_server": "https://rdap.teleinfo.cn/xn--rhqv96g/",
     "tld_created": "2014-03-06",
     "tld_updated": [
-      "2025-04-30"
+      "2026-11-03"
     ],
+    "events": {
+      "delegation": "2014-03-12"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -43,6 +48,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "world",
+      "iana_translation_en": "world",
+      "iana_transliteration": "shijie",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Microsoft",
         "Teleinfo"
@@ -52,8 +60,23 @@
         "teleinfo"
       ],
       "language_code": "zh",
-      "language_name_en": "Chinese"
+      "language_name_en": "Chinese",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 27565,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "b53c43c6b3f1146cc9969545c292fae4823d43b81da05141646f837451e92375"
+      },
+      {
+        "key_tag": 33427,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "9351edbe1ea6275c59bacccb774672a3298a58351728c6f763af54f33b9d5ea6"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns1.teleinfo.cn",

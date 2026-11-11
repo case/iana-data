@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "dhl",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -28,11 +30,14 @@
         "date_removed": null
       }
     },
-    "rdap_server": "https://rdap.centralnic.com/dhl",
+    "rdap_server": "https://rdap.centralnic.com/dhl/",
     "tld_created": "2016-05-26",
     "tld_updated": [
       "2023-11-27"
     ],
+    "events": {
+      "delegation": "2016-06-02"
+    },
     "annotations": {
       "iana_tech_alias": "CentralNic",
       "iana_tech_slug": "centralnic",
@@ -42,6 +47,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -49,6 +55,14 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 28795,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "ea7331ce53fd633adda48600f5739ca3cadc2d8e4afe78837eed5018c298098b"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.dhl",

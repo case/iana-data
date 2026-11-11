@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-07T22:58:14Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "pg",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -18,7 +20,7 @@
       }
     },
     "whois_server": "whois.nic.pg",
-    "rdap_server": "https://rdap.nic.pg",
+    "rdap_server": "https://rdap.nic.pg/",
     "tld_created": "1991-09-26",
     "tld_updated": [
       "2025-08-22"
@@ -36,6 +38,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 23985,
+        "algorithm": 15,
+        "digest_type": 2,
+        "digest": "1435d979dcac97970f142938ce1be5d6af7ac9fe75a8b8254fa1eb9251c7c37f"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "dns.pch.pg",

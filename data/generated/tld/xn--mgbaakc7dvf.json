@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--mgbaakc7dvf",
     "tld_unicode": "اتصالات",
     "tld_script": "Arabic",
+    "tld_script_code": "Arab",
+    "status": "retired",
     "delegated": false,
     "iana_tag": "generic",
     "type": "gtld",
@@ -29,14 +31,22 @@
     "tld_updated": [
       "2023-11-17"
     ],
+    "events": {
+      "delegation": "2017-06-10",
+      "revocation": "2023-11-17"
+    },
     "annotations": {
       "registry_agreement_types": [
         "base",
         "non_sponsored"
       ],
       "icann_translation_en": "communications",
+      "iana_translation_en": "Etisalat",
+      "iana_transliteration": "ittisalat",
+      "iana_delegation_round": "2012",
       "language_code": "ar",
-      "language_name_en": "Arabic"
+      "language_name_en": "Arabic",
+      "language_code_source": "IANA"
     }
   }
 }

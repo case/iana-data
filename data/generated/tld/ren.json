@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-24T03:45:35Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "ren",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "http://nic.ren/",
     "whois_server": "whois.nic.ren",
-    "rdap_server": "https://rdap.zdnsgtld.com/ren",
+    "rdap_server": "https://rdap.zdnsgtld.com/ren/",
     "tld_created": "2014-02-28",
     "tld_updated": [
       "2026-06-23"
     ],
+    "events": {
+      "delegation": "2014-03-27"
+    },
     "annotations": {
       "iana_admin_alias": "ZDNS",
       "iana_admin_slug": "zdns",
@@ -45,6 +50,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "ZDNS"
       ],
@@ -52,6 +58,14 @@
         "zdns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 16939,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "0d92a314ba5fee31419e629a7ebd53350b79e887f79721a615ec7fa03331c81f"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.zdnscloud.cn",

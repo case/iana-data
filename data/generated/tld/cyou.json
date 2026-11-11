@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "cyou",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2024-06-19"
     ],
+    "events": {
+      "delegation": "2015-04-03"
+    },
     "annotations": {
       "iana_sponsor_alias": "Shortdot",
       "iana_sponsor_slug": "shortdot",
@@ -47,6 +52,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -54,6 +60,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 19927,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "2079b2824eee39ec9ab51f32b199a6bcc68162ca56bd12c2740b8c800fc611c4"
+      },
+      {
+        "key_tag": 14103,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "579e60f99fbb5da7942ead76a5f2c5e5c2f7b6e7376d3d76363b6314c660dc28"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.cyou",

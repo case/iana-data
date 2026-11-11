@@ -1,21 +1,17 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-25T04:50:15Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "eh",
+    "tld_script_code": "Latn",
+    "status": "eligible",
     "delegated": false,
     "iana_tag": "country-code",
     "type": "cctld",
-    "orgs": {
-      "iana": {
-        "admin": "Not assigned",
-        "tech": "Not assigned"
-      }
-    },
     "tld_updated": [
       "1999-09-26"
     ],

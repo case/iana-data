@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "zuerich",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "https://nic.zuerich",
     "whois_server": "whois.nic.zuerich",
-    "rdap_server": "https://rdap.centralnic.com/zuerich",
+    "rdap_server": "https://rdap.centralnic.com/zuerich/",
     "tld_created": "2014-12-18",
     "tld_updated": [
       "2023-10-16"
     ],
+    "events": {
+      "delegation": "2014-12-25"
+    },
     "annotations": {
       "iana_tech_alias": "CentralNic",
       "iana_tech_slug": "centralnic",
@@ -43,6 +48,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -51,6 +57,20 @@
       ],
       "geographic_scope": "city"
     },
+    "ds_records": [
+      {
+        "key_tag": 7399,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "69407fe45988e2c569855c70330a24520db734481082c668317e8bbb764551d3"
+      },
+      {
+        "key_tag": 48857,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "c64fde4469567966aa2300c152df46bd230916a54f5bf936083ef79eb894c157"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.zuerich",

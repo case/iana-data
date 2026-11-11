@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "extraspace",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -14,7 +16,7 @@
       "iana": {
         "sponsor": "Extra Space Storage LLC",
         "admin": "FairWinds Partners",
-        "tech": "Afilias"
+        "tech": "Identity Digital Limited"
       },
       "icann": {
         "registry_operator": "Extra Space Storage LLC",
@@ -33,8 +35,11 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "2016-02-26",
     "tld_updated": [
-      "2023-08-16"
+      "2026-11-05"
     ],
+    "events": {
+      "delegation": "2016-03-25"
+    },
     "annotations": {
       "iana_tech_alias": "Identity Digital",
       "iana_tech_slug": "identity-digital",
@@ -44,6 +49,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Identity Digital"
       ],
@@ -51,6 +57,14 @@
         "identity-digital"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 42956,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "f33aabcdf6e37cf93fe0da5e076cfb42b25ef5b9a55b6736548041e42c4afbad"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a0.nic.extraspace",

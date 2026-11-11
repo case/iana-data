@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--fzys8d69uvgm",
     "tld_unicode": "電訊盈科",
     "tld_script": "Han-CJK",
+    "tld_script_code": "Hani",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -37,6 +39,9 @@
     "tld_updated": [
       "2026-01-16"
     ],
+    "events": {
+      "delegation": "2016-05-11"
+    },
     "annotations": {
       "iana_tech_alias": "Identity Digital",
       "iana_tech_slug": "identity-digital",
@@ -47,6 +52,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "pccw",
+      "iana_translation_en": "PCCW",
+      "iana_transliteration": "dianxun yingke",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Identity Digital"
       ],
@@ -54,8 +62,17 @@
         "identity-digital"
       ],
       "language_code": "zh",
-      "language_name_en": "Chinese"
+      "language_name_en": "Chinese",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 5302,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "1d8b69a4fcfc475fb7d9d7b5b1366b92c51826a503a530f2ea1c6d07d58b9d2a"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a0.nic.xn--fzys8d69uvgm",

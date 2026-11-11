@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "aquarelle",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "https://www.aquarelle.com",
     "whois_server": "whois.nic.aquarelle",
-    "rdap_server": "https://rdap.nic.aquarelle",
+    "rdap_server": "https://rdap.nic.aquarelle/",
     "tld_created": "2014-11-06",
     "tld_updated": [
       "2024-11-08"
     ],
+    "events": {
+      "delegation": "2014-12-02"
+    },
     "annotations": {
       "iana_tech_alias": "CentralNic",
       "iana_tech_slug": "centralnic",
@@ -44,6 +49,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -51,6 +57,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 22061,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "65a423ec214071521668ed047d2e74ba781e6495e0252cb8e08a7a633a89297d"
+      },
+      {
+        "key_tag": 23208,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "3ce81b2d9619bd2e5ba77ba9005e79c77728f75983b7ef37d1944c0746ad4310"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.aquarelle",

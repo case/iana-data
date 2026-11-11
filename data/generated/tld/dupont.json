@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "dupont",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -34,6 +36,9 @@
     "tld_updated": [
       "2024-06-04"
     ],
+    "events": {
+      "delegation": "2016-06-10"
+    },
     "annotations": {
       "iana_tech_alias": "GoDaddy Registry",
       "iana_tech_slug": "godaddy-registry",
@@ -43,6 +48,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -50,6 +56,14 @@
         "ultradns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 44914,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "f94ef24de9794acaf4920bfe73388a466179c339bd33ddea11b1decd2a45611b"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.dupont",

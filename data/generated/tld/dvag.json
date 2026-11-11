@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "dvag",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "http://www.dvag-registry.de",
     "whois_server": "whois.nic.dvag",
-    "rdap_server": "https://rdap.centralnic.com/dvag",
+    "rdap_server": "https://rdap.centralnic.com/dvag/",
     "tld_created": "2014-09-18",
     "tld_updated": [
       "2023-11-06"
     ],
+    "events": {
+      "delegation": "2014-09-27"
+    },
     "annotations": {
       "iana_tech_alias": "CentralNic",
       "iana_tech_slug": "centralnic",
@@ -44,6 +49,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -51,6 +57,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 3200,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "4544410064854638c7273c4481902b0b3218f905e6dae266a181dec2ab700bd3"
+      },
+      {
+        "key_tag": 43019,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "fe8ffef1497c77c40a52f1f90fd4c74d3ab546e8c7089b94c6d7ca08f1f68763"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.dvag",

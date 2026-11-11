@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "vi",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -19,10 +21,10 @@
     },
     "registry_url": "https://secure.nic.vi",
     "whois_server": "virgil.nic.vi",
-    "rdap_server": "https://rdap.nic.vi",
+    "rdap_server": "https://rdap.nic.vi/",
     "tld_created": "1995-08-31",
     "tld_updated": [
-      "2024-02-26"
+      "2026-10-22"
     ],
     "annotations": {
       "rdap_source": "IANA",
@@ -40,13 +42,20 @@
         "hostname": "ns3.nic.vi",
         "ipv4": [
           {
-            "ip": "185.17.236.230",
-            "asn": 61025,
-            "as_org": "COCCA-ASN",
-            "as_country": "NZ"
+            "ip": "108.128.43.191",
+            "asn": 0,
+            "as_org": "Unknown",
+            "as_country": "None"
           }
         ],
-        "ipv6": []
+        "ipv6": [
+          {
+            "ip": "2a05:d018:1db7:6efe:91ed:ac51:e2f1:55b3",
+            "asn": 0,
+            "as_org": "Unknown",
+            "as_country": "None"
+          }
+        ]
       },
       {
         "hostname": "pch.nic.vi",

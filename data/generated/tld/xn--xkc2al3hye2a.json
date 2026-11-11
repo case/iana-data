@@ -1,15 +1,17 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--xkc2al3hye2a",
     "tld_unicode": "இலங்கை",
     "tld_script": "Tamil",
+    "tld_script_code": "Taml",
     "tld_iso": "lk",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -25,8 +27,13 @@
     "tld_updated": [
       "2025-08-01"
     ],
+    "events": {
+      "delegation": "2010-08-18"
+    },
     "annotations": {
       "country_name_iso": "Sri Lanka",
+      "iana_translation_en": "Sri Lanka",
+      "iana_transliteration": "ilangai",
       "as_org_aliases": [
         "Community DNS",
         "Packet Clearing House"
@@ -37,8 +44,17 @@
       ],
       "geographic_scope": "country",
       "language_code": "ta",
-      "language_name_en": "Tamil"
+      "language_name_en": "Tamil",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 50119,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "7265be9f2ad36094b61328002767713c929ee655a41e5aba912287ec0b8ef2e6"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "h.nic.lk",

@@ -1,20 +1,21 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "catholic",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
     "orgs": {
       "iana": {
         "sponsor": "Pontificium Consilium de Comunicationibus Socialibus (PCCS) (Pontifical Council for Social Communication)",
-        "admin": "Secretaria pro Communicatione",
-        "tech": "Piazza Pia 3"
+        "admin": "Secretaria pro Communicatione"
       },
       "icann": {
         "registry_operator": "Pontificium Consilium de Comunicationibus Socialibus (PCCS) (Pontifical Council for Social Communication)",
@@ -35,6 +36,9 @@
     "tld_updated": [
       "2023-12-21"
     ],
+    "events": {
+      "delegation": "2016-12-01"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -42,6 +46,7 @@
         "community",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -49,6 +54,14 @@
         "ultradns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 21967,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "a6aac594f31e65e79e0dcede4d0a0b10eaa0f4db43dd7174fd928e01bd5542a0"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.catholic",

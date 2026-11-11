@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-07T22:58:14Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "gs",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -19,7 +21,7 @@
     },
     "registry_url": "http://secure.nic.gs",
     "whois_server": "whois.nic.gs",
-    "rdap_server": "https://rdap.nic.gs",
+    "rdap_server": "https://rdap.nic.gs/",
     "tld_created": "1997-07-31",
     "tld_updated": [
       "2024-03-20"
@@ -37,6 +39,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 23990,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "2cbc82da27fdb16662bf359f59df1b63fa0ab720bfc2120f17ba369a3249fc5e"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns.anycast.nic.gs",

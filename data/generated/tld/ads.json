@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "ads",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -34,6 +36,9 @@
     "tld_updated": [
       "2025-04-11"
     ],
+    "events": {
+      "delegation": "2015-03-24"
+    },
     "annotations": {
       "iana_sponsor_alias": "Google",
       "iana_sponsor_slug": "google",
@@ -48,6 +53,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Google"
       ],
@@ -55,6 +61,14 @@
         "google"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 45211,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "ddc1297dff56cc8b2de6ae9d81734bc6e4440a99ffa17c40e565433f629c3000"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns-tld1.charlestonroadregistry.com",

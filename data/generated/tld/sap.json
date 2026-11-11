@@ -1,19 +1,20 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "sap",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
     "orgs": {
       "iana": {
         "sponsor": "SAP AG",
-        "admin": "Dietmar-Hopp-Allee 16",
         "tech": "Knipp Medien und Kommunikation GmbH"
       },
       "icann": {
@@ -35,6 +36,9 @@
     "tld_updated": [
       "2022-01-07"
     ],
+    "events": {
+      "delegation": "2015-03-26"
+    },
     "annotations": {
       "iana_tech_alias": "Knipp Medien",
       "iana_tech_slug": "knipp-medien",
@@ -44,6 +48,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Knipp Medien"
       ],
@@ -51,6 +56,14 @@
         "knipp-medien"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 58162,
+        "algorithm": 10,
+        "digest_type": 2,
+        "digest": "c54138af7a4e7bede0d15ffd010ba47792ded7d0729728c814821bd4c06495b6"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "anycast10.irondns.net",

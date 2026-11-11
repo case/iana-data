@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--vermgensberater-ctb",
     "tld_unicode": "vermögensberater",
     "tld_script": "Latin",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -32,11 +34,14 @@
     },
     "registry_url": "http://www.dvag-registry.de",
     "whois_server": "whois.nic.xn--vermgensberater-ctb",
-    "rdap_server": "https://rdap.centralnic.com/xn--vermgensberater-ctb",
+    "rdap_server": "https://rdap.centralnic.com/xn--vermgensberater-ctb/",
     "tld_created": "2014-09-18",
     "tld_updated": [
       "2023-10-16"
     ],
+    "events": {
+      "delegation": "2014-09-27"
+    },
     "annotations": {
       "iana_tech_alias": "CentralNic",
       "iana_tech_slug": "centralnic",
@@ -46,6 +51,8 @@
         "non_sponsored"
       ],
       "icann_translation_en": "financial adviser",
+      "iana_translation_en": "financial advisor",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -53,8 +60,23 @@
         "centralnic"
       ],
       "language_code": "de",
-      "language_name_en": "German"
+      "language_name_en": "German",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 60320,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "bd736c840d3b1b3fdd1679d500c5f5bd82cf0323e9706932bc5b2d847d5644b5"
+      },
+      {
+        "key_tag": 22529,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "86f326f12a977d5815d4f0566880bce0b7c6e5bf798a6c848323991e303ace3f"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.xn--vermgensberater-ctb",

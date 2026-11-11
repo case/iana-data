@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "gd",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -19,7 +21,7 @@
     },
     "registry_url": "http://nic.gd",
     "whois_server": "whois.nic.gd",
-    "rdap_server": "https://rdap.centralnic.com/gd",
+    "rdap_server": "https://rdap.centralnic.com/gd/",
     "tld_created": "1992-06-03",
     "tld_updated": [
       "2025-04-07"
@@ -37,6 +39,20 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 51039,
+        "algorithm": 7,
+        "digest_type": 2,
+        "digest": "bf36a1ec5d2998566123de660bbd857d1d25231729873e5f5399a641c1cec13f"
+      },
+      {
+        "key_tag": 29368,
+        "algorithm": 7,
+        "digest_type": 2,
+        "digest": "8da3c63ce3495057f49fa905a0b138aeb9e42ffbe62336863ec52d069ecc20b4"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.gd",

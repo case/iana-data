@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--mgbab2bd",
     "tld_unicode": "بازار",
     "tld_script": "Arabic",
+    "tld_script_code": "Arab",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -37,6 +39,9 @@
     "tld_updated": [
       "2022-01-07"
     ],
+    "events": {
+      "delegation": "2014-02-18"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -44,6 +49,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "bazaar",
+      "iana_translation_en": "bazaar",
+      "iana_transliteration": "bazar",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Knipp Medien"
       ],
@@ -51,8 +59,17 @@
         "knipp-medien"
       ],
       "language_code": "ar",
-      "language_name_en": "Arabic"
+      "language_name_en": "Arabic",
+      "language_code_source": "derived"
     },
+    "ds_records": [
+      {
+        "key_tag": 47778,
+        "algorithm": 10,
+        "digest_type": 2,
+        "digest": "0ec09a1126f31b2c64c4cf2302ec87b2f12375485347bd4bfcbe93de7d33b7d2"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "anycast10.irondns.net",

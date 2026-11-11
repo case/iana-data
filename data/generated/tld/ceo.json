@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "ceo",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2025-08-12"
     ],
+    "events": {
+      "delegation": "2013-12-28"
+    },
     "annotations": {
       "iana_sponsor_alias": "xyz.com",
       "iana_sponsor_slug": "xyz-com",
@@ -49,6 +54,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -56,6 +62,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 20929,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "dce04f950578106c1c5f8386db709467091c961227606f0a761c7a0e10e2ddc7"
+      },
+      {
+        "key_tag": 24601,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "3ad5b5b1cc294b39d77dec9669a8fdbbaf0307d3766f29e14f7364e7f83ad771"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.ceo",

@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "tube",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,12 +37,16 @@
     "tld_updated": [
       "2025-04-15"
     ],
+    "events": {
+      "delegation": "2016-01-11"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Knipp Medien"
       ],
@@ -48,6 +54,20 @@
         "knipp-medien"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 52096,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "03e03aced82968f08ebe79b3d8641a366aeb3a9600b6b29671dce8af94492287"
+      },
+      {
+        "key_tag": 63079,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "f4d6217a7ff5a1e65a2c31fbd8da3305a4efe10562c3ab82d459421c1437b62d"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "anycast10.irondns.net",

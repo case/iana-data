@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--11b5bs3a9aj6g",
     "tld_unicode": "परीक्षा",
     "tld_script": "Devanagari",
+    "tld_script_code": "Deva",
+    "status": "retired",
     "delegated": false,
     "iana_tag": "test",
     "type": "gtld",
@@ -16,9 +18,16 @@
     "tld_updated": [
       "2020-04-02"
     ],
+    "events": {
+      "delegation": "2007-10-09",
+      "revocation": "2013-10-31"
+    },
     "annotations": {
+      "iana_translation_en": "test",
+      "iana_transliteration": "pariksa",
       "language_code": "hi",
-      "language_name_en": "Hindi"
+      "language_name_en": "Hindi",
+      "language_code_source": "IANA"
     }
   }
 }

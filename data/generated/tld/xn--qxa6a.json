@@ -1,15 +1,17 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-11T03:43:07Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--qxa6a",
     "tld_unicode": "ευ",
     "tld_script": "Greek",
+    "tld_script_code": "Grek",
     "tld_iso": "eu",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -26,8 +28,12 @@
     "tld_updated": [
       "2025-12-22"
     ],
+    "events": {
+      "delegation": "2019-09-11"
+    },
     "annotations": {
       "country_name_iso": "European Union",
+      "iana_transliteration": "eu",
       "as_org_aliases": [
         "ARNES.si",
         "DENIC.de",
@@ -42,8 +48,17 @@
       ],
       "geographic_scope": "supranational",
       "language_code": "el",
-      "language_name_en": "Greek"
+      "language_name_en": "Greek",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 28624,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "248cb7496d7d6c9a4c0f2bc97187e1ea7a4f9f1acefdc745680875e8a009b793"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "be.dns.eu",

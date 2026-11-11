@@ -1,20 +1,22 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-05T03:36:57Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "cl",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
     "orgs": {
       "iana": {
         "sponsor": "NIC Chile (University of Chile)",
-        "admin": "NIC Chile\nUniversity of Chile",
-        "tech": "NIC Chile\nUniversity of Chile"
+        "admin": "NIC Chile University of Chile",
+        "tech": "NIC Chile University of Chile"
       }
     },
     "registry_url": "http://www.nic.cl/",
@@ -23,6 +25,9 @@
     "tld_updated": [
       "2026-08-04"
     ],
+    "events": {
+      "delegation": "1987-12-15"
+    },
     "annotations": {
       "country_name_iso": "Chile",
       "as_org_aliases": [
@@ -39,6 +44,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 21199,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "7d756dffab6d3cd9c786ff5c659954c22944faef9433eee26f1d84eb5370b394"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.cl",

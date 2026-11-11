@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-11T03:43:07Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "africa",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2025-08-05"
     ],
+    "events": {
+      "delegation": "2017-02-15"
+    },
     "annotations": {
       "iana_sponsor_alias": "ZACR.za",
       "iana_sponsor_slug": "zacr",
@@ -45,6 +50,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Netnod AB",
         "ZACR.za"
@@ -55,6 +61,14 @@
       ],
       "geographic_scope": "supranational"
     },
+    "ds_records": [
+      {
+        "key_tag": 51115,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "53248d4d36757a31135688efa42c2c307591a7989523e6cd9cc2441414349481"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "coza1.dnsnode.net",

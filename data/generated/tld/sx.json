@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-11T03:43:07Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "sx",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -23,6 +25,9 @@
     "tld_updated": [
       "2026-01-26"
     ],
+    "events": {
+      "delegation": "2011-12-09"
+    },
     "annotations": {
       "iana_tech_alias": "CIRA.ca",
       "iana_tech_slug": "cira",
@@ -37,6 +42,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 16495,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "7a040d828920fab0207f6a46b9ccfe740aece5e74fe4d148d44c1905eb05aeaa"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns1.ns.sx",

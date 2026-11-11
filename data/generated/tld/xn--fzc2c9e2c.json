@@ -1,15 +1,17 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--fzc2c9e2c",
     "tld_unicode": "ලංකා",
     "tld_script": "Sinhala",
+    "tld_script_code": "Sinh",
     "tld_iso": "lk",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -25,8 +27,13 @@
     "tld_updated": [
       "2025-04-23"
     ],
+    "events": {
+      "delegation": "2010-08-18"
+    },
     "annotations": {
       "country_name_iso": "Sri Lanka",
+      "iana_translation_en": "Sri Lanka",
+      "iana_transliteration": "lanka",
       "as_org_aliases": [
         "Community DNS",
         "Packet Clearing House"
@@ -37,7 +44,8 @@
       ],
       "geographic_scope": "country",
       "language_code": "si",
-      "language_name_en": "Sinhala"
+      "language_name_en": "Sinhala",
+      "language_code_source": "IANA"
     },
     "nameservers": [
       {

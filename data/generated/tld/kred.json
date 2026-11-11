@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "kred",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -34,6 +36,9 @@
     "tld_updated": [
       "2023-11-17"
     ],
+    "events": {
+      "delegation": "2014-02-27"
+    },
     "annotations": {
       "iana_tech_alias": "CentralNic",
       "iana_tech_slug": "centralnic",
@@ -42,6 +47,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -49,6 +55,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 7366,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "46bb5d35906260d79f26c5639b8a1fe47061c329973204d07222808035cd11bf"
+      },
+      {
+        "key_tag": 33850,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "2ed5e1e9ef263b8455a2df166c792df49a29c8294ae9999287b56d0b81d2ed70"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.kred",

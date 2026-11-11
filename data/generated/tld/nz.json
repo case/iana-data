@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-13T07:38:16Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "nz",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -21,7 +23,7 @@
     "whois_server": "whois.irs.net.nz",
     "tld_created": "1987-01-19",
     "tld_updated": [
-      "2026-08-14"
+      "2026-10-22"
     ],
     "annotations": {
       "country_name_iso": "New Zealand",
@@ -35,6 +37,20 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 62081,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "5e2a5c07daf18fe02e2609a2f630250159f7507c2d0d08de691100151be2f544"
+      },
+      {
+        "key_tag": 38240,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "73a9d78398595a6cddbb2e694891060846f89d1df090cc78f596e87b8047d6b9"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns1.dns.net.nz",

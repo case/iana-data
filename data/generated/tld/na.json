@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-06T05:43:13Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "na",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -18,7 +20,7 @@
       }
     },
     "registry_url": "http://www.na-nic.com.na/",
-    "rdap_server": "https://keetmans.omadhina.co.na",
+    "rdap_server": "https://keetmans.omadhina.co.na/",
     "tld_created": "1991-05-08",
     "tld_updated": [
       "2026-08-05"
@@ -40,6 +42,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 25079,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "eae8c2767c1c52c78b844247a31b0ef44988782cb5517d502983ba75de98a627"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "anyc2.irondns.net",

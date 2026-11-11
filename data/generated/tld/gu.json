@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-23T08:39:05Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "gu",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -20,7 +22,7 @@
     "registry_url": "https://give.uog.edu/shop/",
     "tld_created": "1994-04-15",
     "tld_updated": [
-      "2026-07-22"
+      "2026-10-22"
     ],
     "annotations": {
       "country_name_iso": "Guam",
@@ -35,18 +37,6 @@
       "geographic_scope": "country"
     },
     "nameservers": [
-      {
-        "hostname": "gold-test.uog.edu",
-        "ipv4": [
-          {
-            "ip": "168.123.250.70",
-            "asn": 395400,
-            "as_org": "UNIVERSITY-GUAM",
-            "as_country": "GU"
-          }
-        ],
-        "ipv6": []
-      },
       {
         "hostname": "gold.uog.edu",
         "ipv4": [

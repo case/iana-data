@@ -1,15 +1,17 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-16T08:10:23Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--mgbah1a3hjkrd",
     "tld_unicode": "موريتانيا",
     "tld_script": "Arabic",
+    "tld_script_code": "Arab",
     "tld_iso": "mr",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -26,8 +28,13 @@
     "tld_updated": [
       "2023-03-07"
     ],
+    "events": {
+      "delegation": "2019-01-30"
+    },
     "annotations": {
       "country_name_iso": "Mauritania",
+      "iana_translation_en": "Mauritania",
+      "iana_transliteration": "muritania",
       "as_org_aliases": [
         "AFNIC.fr",
         "AFRINIC",
@@ -40,8 +47,17 @@
       ],
       "geographic_scope": "country",
       "language_code": "ar",
-      "language_name_en": "Arabic"
+      "language_name_en": "Arabic",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 19030,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "9c1324bbe5b1726510ca3ea47e2d42f7e6c6a09baf424ac344f32de5488ae5a9"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns-mr.afrinic.net",

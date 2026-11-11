@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "org",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -33,7 +35,7 @@
     "rdap_server": "https://rdap.publicinterestregistry.org/rdap/",
     "tld_created": "1985-01-01",
     "tld_updated": [
-      "2026-03-10"
+      "2026-11-04"
     ],
     "annotations": {
       "iana_sponsor_alias": "PIR",
@@ -49,6 +51,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "pre-icann",
       "as_org_aliases": [
         "Identity Digital"
       ],
@@ -56,26 +59,21 @@
         "identity-digital"
       ]
     },
-    "nameservers": [
+    "ds_records": [
       {
-        "hostname": "a0.org.afilias-nst.info",
-        "ipv4": [
-          {
-            "ip": "199.19.56.1",
-            "asn": 12041,
-            "as_org": "AS-AFILIAS1",
-            "as_country": "US"
-          }
-        ],
-        "ipv6": [
-          {
-            "ip": "2001:500:e::1",
-            "asn": 12041,
-            "as_org": "AS-AFILIAS1",
-            "as_country": "US"
-          }
-        ]
+        "key_tag": 26974,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "4fede294c53f438a158c41d39489cd78a86beb0d8a0aeaff14745c0d16e1de32"
       },
+      {
+        "key_tag": 725,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "eb3881030d9d34bb7bc40ddc5a198e7c830804c03fb6aa982592946deb27bebe"
+      }
+    ],
+    "nameservers": [
       {
         "hostname": "a2.org.afilias-nst.info",
         "ipv4": [
@@ -92,25 +90,6 @@
             "asn": 207266,
             "as_org": "AFILIAS-SECONDARY-DNS",
             "as_country": "IE"
-          }
-        ]
-      },
-      {
-        "hostname": "b0.org.afilias-nst.org",
-        "ipv4": [
-          {
-            "ip": "199.19.54.1",
-            "asn": 12041,
-            "as_org": "AS-AFILIAS1",
-            "as_country": "US"
-          }
-        ],
-        "ipv6": [
-          {
-            "ip": "2001:500:c::1",
-            "asn": 12041,
-            "as_org": "AS-AFILIAS1",
-            "as_country": "US"
           }
         ]
       },
@@ -134,25 +113,6 @@
         ]
       },
       {
-        "hostname": "c0.org.afilias-nst.info",
-        "ipv4": [
-          {
-            "ip": "199.19.53.1",
-            "asn": 12041,
-            "as_org": "AS-AFILIAS1",
-            "as_country": "US"
-          }
-        ],
-        "ipv6": [
-          {
-            "ip": "2001:500:b::1",
-            "asn": 12041,
-            "as_org": "AS-AFILIAS1",
-            "as_country": "US"
-          }
-        ]
-      },
-      {
         "hostname": "d0.org.afilias-nst.org",
         "ipv4": [
           {
@@ -165,6 +125,63 @@
         "ipv6": [
           {
             "ip": "2001:500:f::1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "v0n0.pir-ns.org",
+        "ipv4": [
+          {
+            "ip": "199.19.56.1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:e::1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "v0n1.pir-ns.org",
+        "ipv4": [
+          {
+            "ip": "199.19.54.1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:c::1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "v0n2.pir-ns.org",
+        "ipv4": [
+          {
+            "ip": "199.19.53.1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:b::1",
             "asn": 12041,
             "as_org": "AS-AFILIAS1",
             "as_country": "US"

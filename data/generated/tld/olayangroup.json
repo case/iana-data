@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "olayangroup",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,12 +37,16 @@
     "tld_updated": [
       "2024-05-31"
     ],
+    "events": {
+      "delegation": "2016-05-06"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -48,6 +54,14 @@
         "ultradns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 6919,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "44a731318aa7d54ea4f18178ac0eee1de541334c36f9917bb6249f41895d774c"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.olayangroup",

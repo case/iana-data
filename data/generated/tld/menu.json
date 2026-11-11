@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "menu",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,12 +37,16 @@
     "tld_updated": [
       "2024-07-05"
     ],
+    "events": {
+      "delegation": "2013-11-30"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -48,6 +54,14 @@
         "ultradns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 34801,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "9f75480edae26137d71c72574244ef65943199e92c89364035e6ba7b1f1bab32"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.menu",

@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "song",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2025-06-17"
     ],
+    "events": {
+      "delegation": "2016-02-24"
+    },
     "annotations": {
       "iana_sponsor_alias": "Amazon",
       "iana_sponsor_slug": "amazon",
@@ -49,6 +54,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Identity Digital"
       ],
@@ -56,6 +62,14 @@
         "identity-digital"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 54031,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "0595f0d68769e6bc795c21a8c96043f4b530593b76be48348797b157040bf72c"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "v0n0.nic.song",

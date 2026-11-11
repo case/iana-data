@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "protection",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "https://nic.protection/",
     "whois_server": "whois.nic.protection",
-    "rdap_server": "https://rdap.centralnic.com/protection",
+    "rdap_server": "https://rdap.centralnic.com/protection/",
     "tld_created": "2015-08-13",
     "tld_updated": [
       "2025-08-12"
     ],
+    "events": {
+      "delegation": "2015-09-13"
+    },
     "annotations": {
       "iana_sponsor_alias": "xyz.com",
       "iana_sponsor_slug": "xyz-com",
@@ -49,6 +54,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -56,6 +62,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 46846,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "3e780717cc500405e3e7869aebbe9f3d49ac770b338e216fca3f096efe92f2cf"
+      },
+      {
+        "key_tag": 42842,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "a53b40df5d9fe9bcd1973b978c241562c22c70291dd829e6c59a864cb528b415"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.protection",

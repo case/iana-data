@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "sk",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -33,6 +35,20 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 2324,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "3e7e4f60eccc4ad8f96c654563265c9a4e56b9f1ac998e88e1cf8150ff1a5205"
+      },
+      {
+        "key_tag": 56329,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "d76d7cc87d568b76634db673c73ba19e3c87c337efaeeebdce59636d4c73a985"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "e.tld.sk",

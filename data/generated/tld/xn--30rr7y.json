@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--30rr7y",
     "tld_unicode": "慈善",
     "tld_script": "Han-CJK",
+    "tld_script_code": "Hani",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -32,11 +34,14 @@
     },
     "registry_url": "http://www.cishan.wang",
     "whois_server": "whois.gtld.zdns.cn",
-    "rdap_server": "https://rdap.zdnsgtld.com/xn--30rr7y",
+    "rdap_server": "https://rdap.zdnsgtld.com/xn--30rr7y/",
     "tld_created": "2015-03-12",
     "tld_updated": [
       "2026-05-22"
     ],
+    "events": {
+      "delegation": "2015-03-31"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -44,6 +49,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "charity",
+      "iana_translation_en": "charity",
+      "iana_transliteration": "cishan",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "ZDNS"
       ],
@@ -51,8 +59,17 @@
         "zdns"
       ],
       "language_code": "zh",
-      "language_name_en": "Chinese"
+      "language_name_en": "Chinese",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 44210,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "ca8c1b37378e7eba858c4fe9bad7bd6748e70da47639c3a0e31db1f71f66f467"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.zdnscloud.cn",

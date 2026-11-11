@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "ge",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -33,6 +35,20 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 39472,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "3b29e39d95557b7f087160cd7ac47c4c040801f5e8cfd8b88d4ccb30620c7162"
+      },
+      {
+        "key_tag": 39472,
+        "algorithm": 8,
+        "digest_type": 4,
+        "digest": "776a4623d39fbb38e5adbc3d8463e7d1a2593d8ea458a1fc755fba003adc4a31d971f124ce01b7cd5dac505038ba6336"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns1.nic.ge",

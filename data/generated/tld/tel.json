@@ -1,15 +1,23 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "tel",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
-    "iana_tag": "sponsored",
+    "iana_tag": "generic",
     "type": "gtld",
+    "archived": {
+      "iana_tag": {
+        "value": "sponsored",
+        "archived_on": "2026-11-10"
+      }
+    },
     "orgs": {
       "iana": {
         "sponsor": "Telnames Ltd.",
@@ -44,6 +52,7 @@
         "community",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2004",
       "as_org_aliases": [
         "Knipp Medien"
       ],
@@ -51,6 +60,14 @@
         "knipp-medien"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 31166,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "1d7b6aada1a03510077f789a75184ca61a6fe3176a263d1be52bce89355caa8d"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "anycast10.irondns.net",

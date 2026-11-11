@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-11T03:43:07Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "eco",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2026-04-29"
     ],
+    "events": {
+      "delegation": "2016-08-28"
+    },
     "annotations": {
       "iana_tech_alias": "CIRA.ca",
       "iana_tech_slug": "cira",
@@ -44,6 +49,7 @@
         "community",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CIRA.ca",
         "DENIC.de"
@@ -53,6 +59,14 @@
         "denic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 28231,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "c7f0d645e7eb76db60c34bf1a460b5abcccf5b4b6a167187941501e9844cf62a"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.ns.nic.eco",

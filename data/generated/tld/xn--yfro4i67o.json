@@ -1,15 +1,17 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-11T03:43:07Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--yfro4i67o",
     "tld_unicode": "新加坡",
     "tld_script": "Han-CJK",
+    "tld_script_code": "Hani",
     "tld_iso": "sg",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -27,9 +29,14 @@
     "tld_updated": [
       "2026-02-11"
     ],
+    "events": {
+      "delegation": "2011-02-06"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "country_name_iso": "Singapore",
+      "iana_translation_en": "Singapore",
+      "iana_transliteration": "xinjiapo",
       "as_org_aliases": [
         "APNIC",
         "CIRA.ca",
@@ -44,8 +51,17 @@
       ],
       "geographic_scope": "country",
       "language_code": "zh-Hans",
-      "language_name_en": "Chinese (Simplified)"
+      "language_name_en": "Chinese (Simplified)",
+      "language_code_source": "refined"
     },
+    "ds_records": [
+      {
+        "key_tag": 42197,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "d8001fe0b7a80f256a0ee1789c909f320bbb43964fb8e211274ab22220074c41"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "dsany2.sgnic.sg",

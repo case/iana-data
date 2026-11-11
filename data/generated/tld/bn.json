@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-07T22:58:14Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "bn",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -37,6 +39,20 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 7952,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "aee5e99a9df33e7ea387e5e5144681fc98cf39c85857a6180c2d04b20808784e"
+      },
+      {
+        "key_tag": 9806,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "d60df0220811fb57dcb02c402714ee56a178c9275c6889a30bdc04ec5a31ca96"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "bn-ns.anycast.pch.net",

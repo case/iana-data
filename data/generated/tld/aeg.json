@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "aeg",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -14,7 +16,7 @@
       "iana": {
         "sponsor": "Aktiebolaget Electrolux",
         "admin": "AB Electrolux",
-        "tech": "Identity Digital Inc."
+        "tech": "Identity Digital Limited"
       },
       "icann": {
         "registry_operator": "Aktiebolaget Electrolux",
@@ -32,8 +34,11 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "2015-06-11",
     "tld_updated": [
-      "2026-04-10"
+      "2026-10-27"
     ],
+    "events": {
+      "delegation": "2015-06-20"
+    },
     "annotations": {
       "iana_tech_alias": "Identity Digital",
       "iana_tech_slug": "identity-digital",
@@ -43,6 +48,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Identity Digital"
       ],
@@ -50,6 +56,14 @@
         "identity-digital"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 60260,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "c8f068b7fbb8eeb8d74f02b2f6413913c7cc08769f0bbc4f8ffb9158b51add9e"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "v0n0.nic.aeg",

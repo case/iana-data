@@ -1,20 +1,20 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "philips",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
     "orgs": {
       "iana": {
-        "sponsor": "Koninklijke Philips N.V.",
-        "admin": "High Tech Campus 5",
-        "tech": "High Tech Campus 5"
+        "sponsor": "Koninklijke Philips N.V."
       },
       "icann": {
         "registry_operator": "Koninklijke Philips N.V.",
@@ -35,6 +35,9 @@
     "tld_updated": [
       "2023-11-30"
     ],
+    "events": {
+      "delegation": "2015-05-09"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -42,6 +45,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -49,6 +53,14 @@
         "ultradns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 40792,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "c71972943a57973e364eaf29f7562f99cf426f5786e2be3f28f7da685cd47059"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.philips",

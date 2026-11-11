@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T06:02:29Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--qcka1pmc",
     "tld_unicode": "グーグル",
     "tld_script": "Katakana",
+    "tld_script_code": "Kana",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -36,6 +38,9 @@
     "tld_updated": [
       "2025-04-11"
     ],
+    "events": {
+      "delegation": "2014-11-20"
+    },
     "annotations": {
       "iana_sponsor_alias": "Google",
       "iana_sponsor_slug": "google",
@@ -51,6 +56,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "google",
+      "iana_translation_en": "Google",
+      "iana_transliteration": "guguru",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Google"
       ],
@@ -58,8 +66,17 @@
         "google"
       ],
       "language_code": "ja",
-      "language_name_en": "Japanese"
+      "language_name_en": "Japanese",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 65200,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "4f705eef39238ef3192218a9bf4fa3789b1557cfc96e8eeb86583114c02abf50"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns-tld1.charlestonroadregistry.com",

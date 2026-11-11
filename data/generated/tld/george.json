@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "george",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "http://www.walmart.com",
     "whois_server": "whois.nic.george",
-    "rdap_server": "https://rdap.nic.george",
+    "rdap_server": "https://rdap.nic.george/",
     "tld_created": "2016-07-21",
     "tld_updated": [
       "2024-11-20"
     ],
+    "events": {
+      "delegation": "2016-08-18"
+    },
     "annotations": {
       "iana_sponsor_alias": "Walmart",
       "iana_sponsor_slug": "walmart",
@@ -50,6 +55,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -57,6 +63,20 @@
         "ultradns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 1759,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "0caa1f5ae9c0e736030b351ab71bb351053798ce39b3b662ceefdb956057d5fe"
+      },
+      {
+        "key_tag": 52471,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "2075b42f79f6ac18baaa19256564296dc9a53b1a24f2bf84550e005206b4e2d3"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.george",

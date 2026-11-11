@@ -1,15 +1,17 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-02T07:14:48Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--xkc2dl3a5ee0h",
     "tld_unicode": "இந்தியா",
     "tld_script": "Tamil",
+    "tld_script_code": "Taml",
     "tld_iso": "in",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -26,6 +28,9 @@
     "tld_updated": [
       "2026-09-01"
     ],
+    "events": {
+      "delegation": "2011-02-06"
+    },
     "annotations": {
       "iana_sponsor_alias": "NIXI.in",
       "iana_sponsor_slug": "nixi",
@@ -34,6 +39,8 @@
       "iana_tech_alias": "NIXI.in",
       "iana_tech_slug": "nixi",
       "country_name_iso": "India",
+      "iana_translation_en": "India",
+      "iana_transliteration": "intiya",
       "as_org_aliases": [
         "Packet Clearing House",
         "Tucows"
@@ -44,8 +51,17 @@
       ],
       "geographic_scope": "country",
       "language_code": "ta",
-      "language_name_en": "Tamil"
+      "language_name_en": "Tamil",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 17943,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "c79b16bacfc2e7811bc669dd6320a299e69d1ae4e9e63fd26d5cdd8dd4e85346"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns1.registry.in",

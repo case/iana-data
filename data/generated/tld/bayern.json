@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "bayern",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2023-06-13"
     ],
+    "events": {
+      "delegation": "2014-05-03"
+    },
     "annotations": {
       "iana_admin_alias": "GoDaddy Registry",
       "iana_admin_slug": "godaddy-registry",
@@ -45,6 +50,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Knipp Medien",
         "UltraDNS"
@@ -55,6 +61,14 @@
       ],
       "geographic_scope": "subdivision"
     },
+    "ds_records": [
+      {
+        "key_tag": 27095,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "c8d5a25263ef9eaab175f1ca68623488aa7919e16814f516cc369e09f237623a"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "anycast10.irondns.net",

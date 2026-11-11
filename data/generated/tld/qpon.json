@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "qpon",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2023-11-17"
     ],
+    "events": {
+      "delegation": "2014-02-12"
+    },
     "annotations": {
       "iana_tech_alias": "CentralNic",
       "iana_tech_slug": "centralnic",
@@ -43,6 +48,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -50,6 +56,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 2327,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "3862ebe8922407508c2915d29ada122bfdc2385e90e14f0b98145665d794e347"
+      },
+      {
+        "key_tag": 16832,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "640f8ec05b04bbb53bd37b2ead4360a4fb63e8fc4084d6e5d5ee78facd4f47a3"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.qpon",

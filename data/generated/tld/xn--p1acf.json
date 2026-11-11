@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-07T22:58:14Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--p1acf",
     "tld_unicode": "рус",
     "tld_script": "Cyrillic",
+    "tld_script_code": "Cyrl",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -36,6 +38,9 @@
     "tld_updated": [
       "2025-12-04"
     ],
+    "events": {
+      "delegation": "2014-09-27"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -44,6 +49,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "russian speaking community",
+      "iana_translation_en": "Russian",
+      "iana_transliteration": "rus",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Gransy",
         "Packet Clearing House"
@@ -53,8 +61,23 @@
         "packet-clearing-house"
       ],
       "language_code": "ru",
-      "language_name_en": "Russian"
+      "language_name_en": "Russian",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 11446,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "c39b9fb91b155ca7ff3f84bc7f7b7713e8d3b40ae9b7b0d9c3de0fdc36fa325c"
+      },
+      {
+        "key_tag": 50380,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "575ac79f934055ecffb95e4485c9bf8eabd39f7ab379c14566a1550081343be6"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns1.anycastdns.cz",

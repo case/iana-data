@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "quebec",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "http://www.registre.quebec",
     "whois_server": "whois.nic.quebec",
-    "rdap_server": "https://rdap.nic.quebec",
+    "rdap_server": "https://rdap.nic.quebec/",
     "tld_created": "2014-03-13",
     "tld_updated": [
       "2025-09-19"
     ],
+    "events": {
+      "delegation": "2014-04-16"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -42,6 +47,7 @@
         "community",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Knipp Medien"
       ],
@@ -50,6 +56,14 @@
       ],
       "geographic_scope": "subdivision"
     },
+    "ds_records": [
+      {
+        "key_tag": 46012,
+        "algorithm": 10,
+        "digest_type": 2,
+        "digest": "5916001fff3dc261a7f1b5d81bdc63312697f8b672ae1c8ac7677f6e68977f48"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "anycast10.irondns.net",

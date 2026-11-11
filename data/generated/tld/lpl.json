@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "lpl",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -29,11 +31,14 @@
       }
     },
     "whois_server": "whois.nic.lpl",
-    "rdap_server": "https://rdap.centralnic.com/lpl",
+    "rdap_server": "https://rdap.centralnic.com/lpl/",
     "tld_created": "2016-06-30",
     "tld_updated": [
       "2023-10-05"
     ],
+    "events": {
+      "delegation": "2016-07-19"
+    },
     "annotations": {
       "iana_tech_alias": "CentralNic",
       "iana_tech_slug": "centralnic",
@@ -43,6 +48,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -50,6 +56,14 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 43324,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "1783403d052e9b382d00f3d78ab8dc40689ae032b7246d93a683761837f220df"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.lpl",

@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "jprs",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -33,14 +35,18 @@
     "rdap_server": "https://rdap.nic.jprs/rdap/",
     "tld_created": "2014-12-18",
     "tld_updated": [
-      "2025-09-30"
+      "2026-09-30"
     ],
+    "events": {
+      "delegation": "2015-07-08"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Identity Digital"
       ],
@@ -48,6 +54,14 @@
         "identity-digital"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 48034,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "896272ea6db699dc17fbc83162dc152805d97ebf53b763ce3e6fadd89ba71b00"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "tld1.nic.jprs",

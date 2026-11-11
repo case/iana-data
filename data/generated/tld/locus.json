@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-28T08:41:21Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "locus",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -34,6 +36,9 @@
     "tld_updated": [
       "2025-01-28"
     ],
+    "events": {
+      "delegation": "2016-03-09"
+    },
     "annotations": {
       "iana_tech_alias": "Nominet",
       "iana_tech_slug": "nominet",
@@ -43,6 +48,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Nominet",
         "UltraDNS"
@@ -52,6 +58,14 @@
         "ultradns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 23735,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "fb7c38be258c83cb17367ab656fe05f6a8a2a616feac4115dcecfa7da03a1214"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "dns1.nic.locus",

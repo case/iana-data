@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "bond",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "http://nic.bond",
     "whois_server": "whois.nic.bond",
-    "rdap_server": "https://rdap.centralnic.com/bond",
+    "rdap_server": "https://rdap.centralnic.com/bond/",
     "tld_created": "2014-10-30",
     "tld_updated": [
       "2024-04-18"
     ],
+    "events": {
+      "delegation": "2015-03-27"
+    },
     "annotations": {
       "iana_sponsor_alias": "Shortdot",
       "iana_sponsor_slug": "shortdot",
@@ -47,6 +52,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -54,6 +60,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 35002,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "fa12aa0eba1f60642345ceefbdd7a36ec310eb1602547beaad5a1793ecca9dd5"
+      },
+      {
+        "key_tag": 6470,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "a7074c6987d326d776c85c8b378a3ef437099503492c367d67952a9dcec2d229"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.bond",

@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "bz",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -21,7 +23,7 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "1991-09-03",
     "tld_updated": [
-      "2020-11-23"
+      "2026-11-02"
     ],
     "annotations": {
       "rdap_source": "supplemental",
@@ -34,6 +36,20 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 22882,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "088ad52a5e8e9adf54345cb21753a54f71bfb8e2674f08b02b64ab53f45eab9f"
+      },
+      {
+        "key_tag": 53666,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "68b554aeebde38de65dc0e61f8d12e450af921c6bfd481ebd7698a28b1b553dc"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a0.cctld.afilias-nst.info",

@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-09T06:15:40Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "gea",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2022-06-15"
     ],
+    "events": {
+      "delegation": "2015-08-28"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -43,6 +48,7 @@
         "community",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "nic.at",
         "RcodeZero"
@@ -52,6 +58,14 @@
         "rcodezero"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 60191,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "62049b91e513b7230f960b356c6e70634af960efbfe5ddd4f33741a26b2583f0"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.dns.nic.gea",

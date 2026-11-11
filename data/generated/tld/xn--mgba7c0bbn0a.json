@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--mgba7c0bbn0a",
     "tld_unicode": "العليان",
     "tld_script": "Arabic",
+    "tld_script_code": "Arab",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -37,6 +39,9 @@
     "tld_updated": [
       "2024-05-31"
     ],
+    "events": {
+      "delegation": "2016-05-03"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
@@ -44,6 +49,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "olayan",
+      "iana_translation_en": "Olayan",
+      "iana_transliteration": "al-ulayan",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -51,8 +59,17 @@
         "ultradns"
       ],
       "language_code": "ar",
-      "language_name_en": "Arabic"
+      "language_name_en": "Arabic",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 49291,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "3bda917f1a0fec4728394c77584d299dc23814cbcc508a46255a2ea944883caa"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.xn--mgba7c0bbn0a",

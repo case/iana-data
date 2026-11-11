@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-07T04:51:02Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "bzh",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "https://www.pik.bzh",
     "whois_server": "whois.nic.bzh",
-    "rdap_server": "https://rdap.nic.bzh",
+    "rdap_server": "https://rdap.nic.bzh/",
     "tld_created": "2014-05-29",
     "tld_updated": [
       "2026-08-06"
     ],
+    "events": {
+      "delegation": "2014-06-17"
+    },
     "annotations": {
       "iana_tech_alias": "AFNIC.fr",
       "iana_tech_slug": "afnic",
@@ -44,6 +49,7 @@
         "community",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "AFNIC.fr",
         "Netnod AB",
@@ -57,6 +63,14 @@
       "geographic_scope": "subdivision",
       "cultural_affiliation": "breton"
     },
+    "ds_records": [
+      {
+        "key_tag": 54187,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "482a5773d7a8c267394416ebe3d39eb178b393dcbce62bad0872e87161f64f08"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "d.nic.fr",

@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "bmw",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,11 +32,14 @@
     },
     "registry_url": "http://nic.bmw.com",
     "whois_server": "whois.nic.bmw",
-    "rdap_server": "https://rdap.centralnic.com/bmw",
+    "rdap_server": "https://rdap.centralnic.com/bmw/",
     "tld_created": "2014-06-05",
     "tld_updated": [
       "2023-11-06"
     ],
+    "events": {
+      "delegation": "2014-06-21"
+    },
     "annotations": {
       "iana_sponsor_alias": "BMW",
       "iana_sponsor_slug": "bmw",
@@ -50,6 +55,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -57,6 +63,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 43579,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "b543b5adba44e6e32d11c93bb4e729d80fa1197f59b2ae505a1e292605234793"
+      },
+      {
+        "key_tag": 27910,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "39614cab4109a1b7b9917e39631416e97086839970f15957fd37ca05fffe1470"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.bmw",

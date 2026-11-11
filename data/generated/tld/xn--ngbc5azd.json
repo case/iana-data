@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--ngbc5azd",
     "tld_unicode": "شبكة",
     "tld_script": "Arabic",
+    "tld_script_code": "Arab",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,8 +37,11 @@
     "rdap_server": "https://rdap.nic.xn--ngbc5azd/",
     "tld_created": "2013-10-21",
     "tld_updated": [
-      "2024-04-17"
+      "2026-10-14"
     ],
+    "events": {
+      "delegation": "2013-10-23"
+    },
     "annotations": {
       "iana_admin_alias": "GoDaddy Registry",
       "iana_admin_slug": "godaddy-registry",
@@ -48,6 +53,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "web",
+      "iana_translation_en": "web",
+      "iana_transliteration": "shabaka",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -55,8 +63,17 @@
         "ultradns"
       ],
       "language_code": "ar",
-      "language_name_en": "Arabic"
+      "language_name_en": "Arabic",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 39079,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "807069f4aa4c215cc6fe3d832fd16ea785b305ee315e95ad94622033c48b7b7c"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.xn--ngbc5azd",

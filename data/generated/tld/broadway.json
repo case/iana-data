@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-28T08:41:21Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "broadway",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -34,6 +36,9 @@
     "tld_updated": [
       "2025-05-28"
     ],
+    "events": {
+      "delegation": "2015-11-18"
+    },
     "annotations": {
       "iana_admin_alias": "Nominet",
       "iana_admin_slug": "nominet",
@@ -44,6 +49,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Nominet",
         "UltraDNS"
@@ -53,6 +59,14 @@
         "ultradns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 47576,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "ccc4ce45aacb1c0ecd8181d968b86beff3b34d1a71576f137ca43529ff8f12bb"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "dns1.nic.broadway",

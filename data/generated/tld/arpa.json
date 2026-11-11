@@ -1,15 +1,23 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-23T07:46:56Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "arpa",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
-    "iana_tag": "infrastructure",
-    "type": "infrastructure",
+    "iana_tag": "special-use",
+    "type": "special-use",
+    "archived": {
+      "iana_tag": {
+        "value": "infrastructure",
+        "archived_on": "2026-11-10"
+      }
+    },
     "orgs": {
       "iana": {
         "sponsor": "Internet Architecture Board (IAB)",
@@ -23,6 +31,8 @@
     "tld_updated": [
       "2023-11-27"
     ],
+    "purpose": "Supports infrastructure identifier spaces",
+    "remarks": "The .arpa top-level domain is the “Address and Routing Parameter Area” domain and is designated to be used exclusively for Internet-infrastructure purposes. IANA administers the domain in cooperation with the Internet technical community through the guidance of the Internet Architecture Board.\r\n\r\nFor further information, see [Management Guidelines & Operational Requirements for the Address and Routing Parameter Area Domain (\"arpa\")](https://www.iana.org/go/rfc3172) (RFC 3172).",
     "annotations": {
       "as_org_aliases": [
         "RIPE NCC",
@@ -33,6 +43,14 @@
         "verisign"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 42581,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "f28391c1ed4dc0f151edd251a3103dce0b9a5a251acf6e24073771d71f3c40f9"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.ns.arpa",

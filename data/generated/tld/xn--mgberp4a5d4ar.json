@@ -1,15 +1,17 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-16T07:41:14Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--mgberp4a5d4ar",
     "tld_unicode": "السعودية",
     "tld_script": "Arabic",
+    "tld_script_code": "Arab",
     "tld_iso": "sa",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -26,8 +28,13 @@
     "tld_updated": [
       "2026-02-18"
     ],
+    "events": {
+      "delegation": "2010-05-05"
+    },
     "annotations": {
       "country_name_iso": "Saudi Arabia",
+      "iana_translation_en": "Saudi Arabia",
+      "iana_transliteration": "al-saudiah",
       "as_org_aliases": [
         "Netnod AB",
         "Packet Clearing House"
@@ -38,8 +45,17 @@
       ],
       "geographic_scope": "country",
       "language_code": "ar",
-      "language_name_en": "Arabic"
+      "language_name_en": "Arabic",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 13607,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "077575475c021eae1f28829578b9d405b4bd35a707671243c76371b5ca8e41c2"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "c1.dns.sa",
@@ -51,7 +67,14 @@
             "as_country": "SA"
           }
         ],
-        "ipv6": []
+        "ipv6": [
+          {
+            "ip": "2001:67c:18c8:10::c1",
+            "asn": 0,
+            "as_org": "Unknown",
+            "as_country": "None"
+          }
+        ]
       },
       {
         "hostname": "c2.dns.sa",

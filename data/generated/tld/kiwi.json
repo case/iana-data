@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-11T03:43:07Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "kiwi",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2026-05-07"
     ],
+    "events": {
+      "delegation": "2014-01-03"
+    },
     "annotations": {
       "iana_tech_alias": "CIRA.ca",
       "iana_tech_slug": "cira",
@@ -43,6 +48,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CIRA.ca",
         "DENIC.de"
@@ -54,6 +60,14 @@
       "geographic_scope": "country",
       "cultural_affiliation": "kiwi"
     },
+    "ds_records": [
+      {
+        "key_tag": 6740,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "3895de77a00d2a030dd20ada5704314791fe3bb94648907a9054c12702741898"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.ns.nic.kiwi",

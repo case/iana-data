@@ -1,15 +1,17 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-02T07:14:48Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--gecrj9c",
     "tld_unicode": "ભારત",
     "tld_script": "Gujarati",
+    "tld_script_code": "Gujr",
     "tld_iso": "in",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -26,6 +28,9 @@
     "tld_updated": [
       "2026-09-01"
     ],
+    "events": {
+      "delegation": "2011-02-06"
+    },
     "annotations": {
       "iana_sponsor_alias": "NIXI.in",
       "iana_sponsor_slug": "nixi",
@@ -34,6 +39,8 @@
       "iana_tech_alias": "NIXI.in",
       "iana_tech_slug": "nixi",
       "country_name_iso": "India",
+      "iana_translation_en": "India",
+      "iana_transliteration": "bharat",
       "as_org_aliases": [
         "Packet Clearing House",
         "Tucows"
@@ -44,8 +51,17 @@
       ],
       "geographic_scope": "country",
       "language_code": "gu",
-      "language_name_en": "Gujarati"
+      "language_name_en": "Gujarati",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 50254,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "131a10a5763dd43bd20565bae996b05198bb9cfcfc3e7f9b04ebd641b960710b"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns1.registry.in",

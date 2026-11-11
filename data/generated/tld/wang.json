@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "wang",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -30,17 +32,21 @@
     },
     "registry_url": "http://www.nic.wang",
     "whois_server": "whois.gtld.zdns.cn",
-    "rdap_server": "https://rdap.zdnsgtld.com/wang",
+    "rdap_server": "https://rdap.zdnsgtld.com/wang/",
     "tld_created": "2013-12-12",
     "tld_updated": [
       "2026-05-22"
     ],
+    "events": {
+      "delegation": "2014-01-03"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "registry_agreement_types": [
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "ZDNS"
       ],
@@ -48,6 +54,14 @@
         "zdns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 19549,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "328b02976180a88840e22a052b3d03c8ce7b67609b7cc1840e0e0fe71a3e8e8e"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.zdnscloud.cn",

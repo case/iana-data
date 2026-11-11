@@ -1,19 +1,20 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-28T08:41:21Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "tv",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
     "orgs": {
       "iana": {
         "sponsor": "Ministry of Transport, Energy, Communications and Innovations",
-        "admin": "2 Vaiaku Rd",
         "tech": "GoDaddy Registry"
       }
     },
@@ -37,6 +38,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 57277,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "cdf61faf1ebc9d83d5bc3d9de22e794ae8acdb0475ea8cf27e92cc00f0c3f5f9"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.tv",

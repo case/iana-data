@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "tc",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -17,16 +19,24 @@
         "tech": "NIC TC Internet Hizmetleri A.S."
       }
     },
-    "registry_url": "HTTPS://WWW.NIC.TC",
+    "registry_url": "https://www.nic.tc",
     "whois_server": "whois.nic.tc",
     "tld_created": "1997-01-27",
     "tld_updated": [
-      "2026-03-27"
+      "2026-09-28"
     ],
     "annotations": {
       "country_name_iso": "Turks and Caicos Islands",
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 13489,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "84c53c74a506b5dfc189ed7ce2b41161ba0175b2013b4fdca9b77f2a6b42de3a"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "root1.zone.tc",

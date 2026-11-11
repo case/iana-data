@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-08-26T03:28:59Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "ibm",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2023-11-30"
     ],
+    "events": {
+      "delegation": "2014-10-01"
+    },
     "annotations": {
       "iana_sponsor_alias": "IBM",
       "iana_sponsor_slug": "ibm",
@@ -50,6 +55,7 @@
         "brand",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "UltraDNS"
       ],
@@ -57,6 +63,14 @@
         "ultradns"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 9955,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "8bd095c8717fc998d47cb36565c650ccade45531991bc5956e121e803f8b5fc9"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.ibm",

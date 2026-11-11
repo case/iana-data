@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "dealer",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2023-11-17"
     ],
+    "events": {
+      "delegation": "2015-12-24"
+    },
     "annotations": {
       "iana_tech_alias": "CentralNic",
       "iana_tech_slug": "centralnic",
@@ -43,6 +48,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CentralNic"
       ],
@@ -50,6 +56,20 @@
         "centralnic"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 31586,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "8c442bfe32daff402fcc59d26a90f5ecac593fb6ba8a6396bd21686e3bd0d24b"
+      },
+      {
+        "key_tag": 31235,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "221ac84b1ddc9345e73cfd727b7c85ad97d782d1485250f4e62f7b424371b5a4"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.nic.dealer",

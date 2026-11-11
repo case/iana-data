@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-07T22:58:14Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "ss",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -19,11 +21,14 @@
     },
     "registry_url": "https://nic.ss/",
     "whois_server": "whois.nic.ss",
-    "rdap_server": "https://rdap.nic.ss",
+    "rdap_server": "https://rdap.nic.ss/",
     "tld_created": "2011-08-31",
     "tld_updated": [
       "2024-04-05"
     ],
+    "events": {
+      "delegation": "2019-02-01"
+    },
     "annotations": {
       "rdap_source": "IANA",
       "country_name_iso": "South Sudan",
@@ -39,6 +44,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 39884,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "b603d47de4d4ac23168537763d91e5677300ac06f5d9a1108d29ea91c2c0d204"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns-ss.afrinic.net",

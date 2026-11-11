@@ -1,14 +1,16 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-09-23T07:46:56Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--io0a7i",
     "tld_unicode": "网络",
     "tld_script": "Han-CJK",
+    "tld_script_code": "Hani",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -37,6 +39,9 @@
     "tld_updated": [
       "2026-07-08"
     ],
+    "events": {
+      "delegation": "2014-01-18"
+    },
     "annotations": {
       "iana_sponsor_alias": "CNNIC.cn",
       "iana_sponsor_slug": "cnnic",
@@ -52,6 +57,9 @@
         "non_sponsored"
       ],
       "icann_translation_en": "network",
+      "iana_translation_en": "network",
+      "iana_transliteration": "wangiuo",
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "CNNIC.cn"
       ],
@@ -59,8 +67,17 @@
         "cnnic"
       ],
       "language_code": "zh",
-      "language_name_en": "Chinese"
+      "language_name_en": "Chinese",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 7354,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "47e1c08f32a93f8296cc53920e1c281c8ea10b14f21528f2594e7c84225e7fcc"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "a.ngtld.cn",

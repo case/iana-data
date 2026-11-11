@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-06-11T03:43:07Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "ro",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -21,7 +23,7 @@
     "whois_server": "whois.rotld.ro",
     "tld_created": "1993-02-26",
     "tld_updated": [
-      "2026-04-28"
+      "2026-09-28"
     ],
     "annotations": {
       "country_name_iso": "Romania",
@@ -35,6 +37,14 @@
       ],
       "geographic_scope": "country"
     },
+    "ds_records": [
+      {
+        "key_tag": 39877,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "7e362086dad6ceaedb5474a21d13401b7ba68f3162abe6ef2679f040dd65d16d"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "dns-at.rotld.ro",
@@ -71,6 +81,25 @@
             "asn": 31529,
             "as_org": "DENIC-ANYCAST-AS DNS anycast AS object for .DE DNS service",
             "as_country": "DE"
+          }
+        ]
+      },
+      {
+        "hostname": "dns-d.rotld.ro",
+        "ipv4": [
+          {
+            "ip": "194.102.178.21",
+            "asn": 0,
+            "as_org": "Unknown",
+            "as_country": "None"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2a03:5e81::194:102:178:21",
+            "asn": 0,
+            "as_org": "Unknown",
+            "as_country": "None"
           }
         ]
       },

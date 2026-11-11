@@ -1,12 +1,14 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-05-26T05:23:55Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "hiphop",
+    "tld_script_code": "Latn",
+    "status": "active",
     "delegated": true,
     "iana_tag": "generic",
     "type": "gtld",
@@ -35,6 +37,9 @@
     "tld_updated": [
       "2025-12-15"
     ],
+    "events": {
+      "delegation": "2014-05-15"
+    },
     "annotations": {
       "iana_tech_alias": "Tucows",
       "iana_tech_slug": "tucows",
@@ -43,6 +48,7 @@
         "base",
         "non_sponsored"
       ],
+      "iana_delegation_round": "2012",
       "as_org_aliases": [
         "Packet Clearing House",
         "Tucows"
@@ -52,6 +58,14 @@
         "tucows"
       ]
     },
+    "ds_records": [
+      {
+        "key_tag": 7668,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "de0bde4365798b5080d31d7a5a8e7182d4924938761bfd506af371ea5cb36ab0"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns01.trs-dns.com",

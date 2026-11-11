@@ -1,15 +1,17 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-07-21T03:36:51Z",
+  "publication": "2026-11-11T03:06:23Z",
   "sources": {
-    "iana_root_db": "https://www.iana.org/domains/root/db",
+    "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
   },
   "tld": {
     "tld": "xn--mgbai9azgqp6j",
     "tld_unicode": "پاکستان",
     "tld_script": "Arabic",
+    "tld_script_code": "Arab",
     "tld_iso": "pk",
+    "status": "active",
     "delegated": true,
     "iana_tag": "country-code",
     "type": "cctld",
@@ -24,12 +26,26 @@
     "tld_updated": [
       "2026-02-11"
     ],
+    "events": {
+      "delegation": "2017-02-15"
+    },
     "annotations": {
       "country_name_iso": "Pakistan",
+      "iana_translation_en": "Pakistan",
+      "iana_transliteration": "pakistan",
       "geographic_scope": "country",
       "language_code": "ur",
-      "language_name_en": "Urdu"
+      "language_name_en": "Urdu",
+      "language_code_source": "IANA"
     },
+    "ds_records": [
+      {
+        "key_tag": 23595,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "e46d0e529c6f1a41ec7de4a184c062ffb2847d49618192fecb8d348818e576c6"
+      }
+    ],
     "nameservers": [
       {
         "hostname": "ns1.ntc.org.pk",
