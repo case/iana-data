@@ -1,6 +1,6 @@
 {
   "RDAP_BOOTSTRAP": {
-    "last_checked": "2026-11-11T22:19:03Z",
+    "last_checked": "2026-11-12T09:14:13Z",
     "headers": {
       "etag": "\"1182e-642f50662aab6-gzip\"",
       "last_modified": "Thu, 06 Nov 2025 23:00:01 GMT"
@@ -15,15 +15,15 @@
     }
   },
   "TLD_LIST": {
-    "last_checked": "2026-11-11T22:19:03Z",
+    "last_checked": "2026-11-12T09:14:13Z",
     "headers": {
       "etag": "\"2548-643b0e096fc2a\"",
       "last_modified": "Sun, 16 Nov 2025 07:07:01 GMT"
     },
     "cache_data": {
       "url": "https://data.iana.org/TLD/tlds-alpha-by-domain.txt",
-      "etag": "W/\"252f-65ffad77d5b93-br\"",
-      "last_modified": "Wed, 11 Nov 2026 07:07:02 GMT",
+      "etag": "W/\"252f-6600ef552e4de-br\"",
+      "last_modified": "Thu, 12 Nov 2026 07:07:01 GMT",
       "cache_control": "public, max-age=600, s-maxage=600",
       "cache_max_age": "600",
       "last_downloaded": "2026-11-11T22:19:03Z"
@@ -34,7 +34,7 @@
       "etag": "W/\"329e3-19aa7ccdea5-br\"",
       "last_modified": "Fri, 21 Nov 2025 19:03:32 GMT"
     },
-    "last_checked": "2026-11-11T22:19:10Z",
+    "last_checked": "2026-11-12T09:14:20Z",
     "last_downloaded": "2025-11-21T19:03:32Z",
     "last_changed": "2025-11-21T19:03:10Z",
     "cache_data": {
@@ -42,36 +42,36 @@
     }
   },
   "IPTOASN": {
-    "last_downloaded": "2026-11-11T05:04:40Z",
-    "last_checked": "2026-11-11T22:19:39Z",
-    "run_id": "42963310107"
+    "last_downloaded": "2026-11-12T06:08:28Z",
+    "last_checked": "2026-11-12T09:14:49Z",
+    "run_id": "43166015376"
   },
   "GTLDS_JSON": {
-    "last_checked": "2026-11-11T22:19:10Z",
+    "last_checked": "2026-11-12T09:14:21Z",
     "cache_data": {
       "url": "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json",
-      "last_modified": "Wed, 11 Nov 2026 21:46:48 GMT",
+      "last_modified": "Thu, 12 Nov 2026 05:46:49 GMT",
       "cache_control": "max-age=28800",
       "cache_max_age": "28800",
-      "last_downloaded": "2026-11-11T22:19:10Z"
+      "last_downloaded": "2026-11-12T09:14:21Z"
     }
   },
   "IANA_TLDS_SCHEMA": {
-    "last_checked": "2026-11-11T22:19:03Z",
+    "last_checked": "2026-11-12T09:14:13Z",
     "cache_data": {
       "url": "https://data.iana.org/TLD/v1/tlds-schema.json",
-      "etag": "W/\"44d6-65de5ed46d480-br\"",
+      "etag": "W/\"44d6-65de5ed5420ca-br\"",
       "last_modified": "Thu, 15 Oct 2026 19:19:30 GMT",
       "cache_control": "public, max-age=600, s-maxage=600",
       "cache_max_age": "600",
-      "last_downloaded": "2026-11-11T22:19:04Z"
+      "last_downloaded": "2026-11-12T09:14:14Z"
     }
   },
   "IANA_TLDS": {
-    "last_checked": "2026-11-11T22:19:04Z",
+    "last_checked": "2026-11-12T09:14:15Z",
     "cache_data": {
       "url": "https://data.iana.org/TLD/v1/tlds.json",
-      "etag": "W/\"2c9b42-660072a00d880-br\"",
+      "etag": "W/\"2c9b42-660072a0854d2-br\"",
       "last_modified": "Wed, 11 Nov 2026 21:49:06 GMT",
       "cache_control": "public, max-age=600, s-maxage=600",
       "cache_max_age": "600",
