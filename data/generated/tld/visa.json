@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T22:19:37Z",
+  "publication": "2026-11-13T09:03:11Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,7 +16,7 @@
       "iana": {
         "sponsor": "Visa Worldwide Pte. Limited",
         "admin": "Visa Worldwide Pte. Limited",
-        "tech": "Identity Digital Inc."
+        "tech": "Identity Digital Limited"
       },
       "icann": {
         "registry_operator": "Visa Worldwide Pte. Limited",
@@ -35,7 +35,7 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "2016-06-30",
     "tld_updated": [
-      "2024-11-15"
+      "2026-11-12"
     ],
     "events": {
       "delegation": "2016-07-28"
@@ -63,6 +63,12 @@
         "algorithm": 8,
         "digest_type": 2,
         "digest": "94d6f007f7a3cd81d061701497a7e54f801a495e219370723bab6f2707b68d6e"
+      },
+      {
+        "key_tag": 18799,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "8cbfd1f0b03acdc4968112e70937eef26fa5194ce99c4f79eb95bd81afda6ca3"
       }
     ],
     "nameservers": [

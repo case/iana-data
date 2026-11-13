@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T22:19:37Z",
+  "publication": "2026-11-13T09:03:11Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -34,7 +34,7 @@
     "rdap_server": "https://rdap.nic.athleta/",
     "tld_created": "2016-07-14",
     "tld_updated": [
-      "2024-05-11"
+      "2026-11-12"
     ],
     "events": {
       "delegation": "2016-08-04"
@@ -62,6 +62,12 @@
         "algorithm": 8,
         "digest_type": 2,
         "digest": "cc5ce98fe2c8ebb8da9b7cef6efae743b1b92a8b60d276c42510fd7c55177632"
+      },
+      {
+        "key_tag": 25050,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "4556ee1cfddad4c8dd492c5e88c0e0d6f5b603e7e515eb878b2440b07d079bb1"
       }
     ],
     "nameservers": [

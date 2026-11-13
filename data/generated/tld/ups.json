@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T22:19:37Z",
+  "publication": "2026-11-13T09:03:11Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,7 +16,7 @@
       "iana": {
         "sponsor": "UPS Market Driver, Inc.",
         "admin": "UPS Market Driver, Inc.",
-        "tech": "Afilias"
+        "tech": "Identity Digital Limited"
       },
       "icann": {
         "registry_operator": "UPS Market Driver, Inc.",
@@ -35,7 +35,7 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "2016-04-14",
     "tld_updated": [
-      "2023-08-11"
+      "2026-11-12"
     ],
     "events": {
       "delegation": "2016-05-31"
@@ -63,6 +63,12 @@
         "algorithm": 8,
         "digest_type": 2,
         "digest": "28e49220a4b3bc519f2cd5800b8c96db682a9651eec3bb19ff98d670cbe4be36"
+      },
+      {
+        "key_tag": 446,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "25a2798323f4f51a67a82f82b60044c112734c5843a7cdfcc76a72682ce577d0"
       }
     ],
     "nameservers": [

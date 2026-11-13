@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T22:19:37Z",
+  "publication": "2026-11-13T09:03:11Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -18,7 +18,7 @@
       "iana": {
         "sponsor": "Amazon Registry Services, Inc.",
         "admin": "Amazon Registry Services",
-        "tech": "Identity Digital Inc."
+        "tech": "Identity Digital Limited"
       },
       "icann": {
         "registry_operator": "Amazon Registry Services, Inc.",
@@ -37,7 +37,7 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "2016-01-29",
     "tld_updated": [
-      "2025-06-17"
+      "2026-11-12"
     ],
     "events": {
       "delegation": "2016-02-19"
@@ -74,6 +74,12 @@
         "algorithm": 8,
         "digest_type": 2,
         "digest": "faecafc5a2a9f88ac34a7d570da61418bc78607db107aa10f150c77022c9b910"
+      },
+      {
+        "key_tag": 61631,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "450c2b2ad37e14708782752c7028c5f9f6b849ab2a85dfef684cf1e906ac8799"
       }
     ],
     "nameservers": [

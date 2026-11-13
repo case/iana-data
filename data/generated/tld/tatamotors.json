@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T22:19:37Z",
+  "publication": "2026-11-13T09:03:11Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,7 +16,7 @@
       "iana": {
         "sponsor": "Tata Motors Ltd",
         "admin": "Tata Motors Ltd",
-        "tech": "Identity Digital Inc."
+        "tech": "Identity Digital Limited"
       },
       "icann": {
         "registry_operator": "Tata Motors Ltd",
@@ -34,7 +34,7 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "2015-07-16",
     "tld_updated": [
-      "2023-08-11"
+      "2026-11-12"
     ],
     "events": {
       "delegation": "2015-07-24"
@@ -62,6 +62,12 @@
         "algorithm": 8,
         "digest_type": 2,
         "digest": "038f7fe751b672c38c8a1748d2e8be90c1cb1ff8c35766ec10e0242e0c2fb843"
+      },
+      {
+        "key_tag": 58120,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "39206e381ed991b669ab6d738d425551c34596f3908cb7454091680ba66adc73"
       }
     ],
     "nameservers": [

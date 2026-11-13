@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T22:19:37Z",
+  "publication": "2026-11-13T09:03:11Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -35,7 +35,7 @@
     "rdap_server": "https://rdap.nic.afl/",
     "tld_created": "2015-02-19",
     "tld_updated": [
-      "2023-11-30"
+      "2026-11-12"
     ],
     "events": {
       "delegation": "2015-03-28"
@@ -61,6 +61,12 @@
         "algorithm": 8,
         "digest_type": 2,
         "digest": "3ed455af1ed7b0b93e6e2d245360464c9d6549def04606b10e76fd52bd692ca3"
+      },
+      {
+        "key_tag": 42641,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "8a87c80f4bfb54e26384c25cb7f4f06787e6b2d1f64c3a039859a1d47d95e9b6"
       }
     ],
     "nameservers": [

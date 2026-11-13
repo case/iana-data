@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T22:19:37Z",
+  "publication": "2026-11-13T09:03:11Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,7 +16,7 @@
       "iana": {
         "sponsor": "National Australia Bank Limited",
         "admin": "National Australia Bank Limited",
-        "tech": "Identity Digital Inc."
+        "tech": "Identity Digital Limited"
       },
       "icann": {
         "registry_operator": "National Australia Bank Limited",
@@ -35,7 +35,7 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "2016-08-04",
     "tld_updated": [
-      "2025-12-01"
+      "2026-11-12"
     ],
     "events": {
       "delegation": "2016-08-18"
@@ -63,6 +63,12 @@
         "algorithm": 8,
         "digest_type": 2,
         "digest": "7ec37b9eec2fd88753a21503f50e7a96f59e706ef760d8143773b0d6b1b16e4c"
+      },
+      {
+        "key_tag": 39809,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "bb4c2d6a2ff8793d27c8cd740becfe511e3fa048023d7fb181835f8b26cd7090"
       }
     ],
     "nameservers": [

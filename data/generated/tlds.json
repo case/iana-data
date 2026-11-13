@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T22:19:37Z",
+  "publication": "2026-11-13T09:03:11Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -36,7 +36,7 @@
       "rdap_server": "https://rdap.nic.aaa/",
       "tld_created": "2015-08-13",
       "tld_updated": [
-        "2024-12-11"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2015-08-28"
@@ -64,6 +64,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "89f7670afc091b199b47900e4ce4135b9463b7f74d3d19a1c732e78c345d4de6"
+        },
+        {
+          "key_tag": 62303,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "b81ce4c58e8407062d58a8227521225406030703276745a1e5ea957d31968ba6"
         }
       ],
       "nameservers": [
@@ -212,7 +218,7 @@
       "rdap_server": "https://rdap.nic.aarp/",
       "tld_created": "2015-10-22",
       "tld_updated": [
-        "2024-08-23"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2015-11-03"
@@ -240,6 +246,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "bff5bd7c3f7a468cdcc7caf66e978a5d9b5211f39241039a5218b82aa62fb6c6"
+        },
+        {
+          "key_tag": 44121,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "0b214cc2bbef539fce2c23749888ff2833cbbb49753207e80cb4050fe223fc97"
         }
       ],
       "nameservers": [
@@ -4041,7 +4053,7 @@
       "rdap_server": "https://rdap.nic.afl/",
       "tld_created": "2015-02-19",
       "tld_updated": [
-        "2023-11-30"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2015-03-28"
@@ -4067,6 +4079,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "3ed455af1ed7b0b93e6e2d245360464c9d6549def04606b10e76fd52bd692ca3"
+        },
+        {
+          "key_tag": 42641,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "8a87c80f4bfb54e26384c25cb7f4f06787e6b2d1f64c3a039859a1d47d95e9b6"
         }
       ],
       "nameservers": [
@@ -6585,7 +6603,7 @@
       "rdap_server": "https://rdap.nic.ally/",
       "tld_created": "2015-10-22",
       "tld_updated": [
-        "2024-07-18"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-03-24"
@@ -6613,6 +6631,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "774c1930a734067dc62e7ae54bcdeadaa2281a57155b8f0af3683bfcbf7fe46c"
+        },
+        {
+          "key_tag": 48758,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "487b768708e965a7696a98f3442fe6bdcdda771b4a85ddecdddd64af123ec34b"
         }
       ],
       "nameservers": [
@@ -7374,7 +7398,7 @@
       "rdap_server": "https://rdap.nic.americanexpress/",
       "tld_created": "2016-07-22",
       "tld_updated": [
-        "2024-05-11"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-08-08"
@@ -7402,6 +7426,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "1586cd9180548b70d0d4978f816744c95202f6d63e8685866025116314e629a7"
+        },
+        {
+          "key_tag": 10998,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "d895304c1134aab35bbeee9547806d7b0054d26ac0df8524c89369cd74be92db"
         }
       ],
       "nameservers": [
@@ -7550,7 +7580,7 @@
       "rdap_server": "https://rdap.nic.americanfamily/",
       "tld_created": "2016-07-14",
       "tld_updated": [
-        "2024-08-23"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-07-26"
@@ -7578,6 +7608,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "50d98dc6d7a2bc4ce8121a409ef96e22ea6ff8b0334f0629151093ac247bd80f"
+        },
+        {
+          "key_tag": 20560,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "f5515b9d5f42afdcd509256080d4098d625972f7b3c005c28f863fc8e3090d2a"
         }
       ],
       "nameservers": [
@@ -7726,7 +7762,7 @@
       "rdap_server": "https://rdap.nic.amex/",
       "tld_created": "2016-07-21",
       "tld_updated": [
-        "2024-05-11"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-08-08"
@@ -7754,6 +7790,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "7deb639c1b7c68838cb13ac4063cef638bd32b47a399f6fe712e893a9a8cec19"
+        },
+        {
+          "key_tag": 55649,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "88bc7f2b792f61df9b68da44a74b504f25ee850f1d52790e2074d828d93c1a78"
         }
       ],
       "nameservers": [
@@ -7902,7 +7944,7 @@
       "rdap_server": "https://rdap.nic.amfam/",
       "tld_created": "2016-07-14",
       "tld_updated": [
-        "2024-08-23"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-07-23"
@@ -7930,6 +7972,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "18afbe180bf3ddde328e5f7e0d2bb7869db47ab073a3d4f29a7be3e65bdca003"
+        },
+        {
+          "key_tag": 3687,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "3e439e059e70bb076f771ba8df44bd097260b564c205cb2fca170e440a99d71f"
         }
       ],
       "nameservers": [
@@ -8863,7 +8911,7 @@
       "rdap_server": "https://rdap.nic.anz/",
       "tld_created": "2016-06-09",
       "tld_updated": [
-        "2023-11-30"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-06-21"
@@ -8889,6 +8937,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "93266a86bc6d50ad9da1dde33b73589f9cd0be961a058eb386475f63891206c8"
+        },
+        {
+          "key_tag": 14397,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "e071520718f5c2231bf0f5e46a8be12c7d2406a91e36b98075a83975cabd7de8"
         }
       ],
       "nameservers": [
@@ -12192,7 +12246,7 @@
       "rdap_server": "https://rdap.nic.athleta/",
       "tld_created": "2016-07-14",
       "tld_updated": [
-        "2024-05-11"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-08-04"
@@ -12220,6 +12274,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "cc5ce98fe2c8ebb8da9b7cef6efae743b1b92a8b60d276c42510fd7c55177632"
+        },
+        {
+          "key_tag": 25050,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "4556ee1cfddad4c8dd492c5e88c0e0d6f5b603e7e515eb878b2440b07d079bb1"
         }
       ],
       "nameservers": [
@@ -13379,7 +13439,7 @@
       "rdap_server": "https://rdap.nic.auspost/",
       "tld_created": "2016-08-11",
       "tld_updated": [
-        "2023-11-30"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-08-17"
@@ -13405,6 +13465,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "8631f3b3daa56f69e46a0513ae0ba9943a0992a664a7ebc25c2a4e8792c5df83"
+        },
+        {
+          "key_tag": 56894,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "9908f31bcd26e8508cac33f471c0d8a80b3116e04a0406abf0abb348f8bb4a39"
         }
       ],
       "nameservers": [
@@ -15455,7 +15521,7 @@
       "rdap_server": "https://rdap.nic.banamex/",
       "tld_created": "2016-07-21",
       "tld_updated": [
-        "2024-05-11"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-07-28"
@@ -15483,6 +15549,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "eb04c740fb681ab87a2376cfb9e5ce3a865f930da98246836670d0bb29478229"
+        },
+        {
+          "key_tag": 22391,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "30c2d0efd7fc68c17255b9c2af3eccc5fc5ffa02f9c5836c9afe2d751996c22b"
         }
       ],
       "nameservers": [
@@ -17085,7 +17157,7 @@
       "rdap_server": "https://rdap.nic.basketball/",
       "tld_created": "2016-10-13",
       "tld_updated": [
-        "2024-11-14"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-10-19"
@@ -17112,6 +17184,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "02653b2567731ff23c16036c9f0d51a3596fb8c93b6bd0801b74e7267af995af"
+        },
+        {
+          "key_tag": 59610,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "174304de5f0f81d2151fe7157938d5f92f6d6ae024452fb65cfd816ea381ebac"
         }
       ],
       "nameservers": [
@@ -25050,7 +25128,7 @@
       "rdap_server": "https://rdap.nic.booking/",
       "tld_created": "2016-07-07",
       "tld_updated": [
-        "2024-05-11"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-07-23"
@@ -25077,6 +25155,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "35e34127bc68cc91698d0b5ec4562002aa8293da7c6ce0bc1c75cff3e6529ec4"
+        },
+        {
+          "key_tag": 7210,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "edb5c3c99a62846f6e2b67fce1503bca96754b0a6c10ad27422c20a9dbffcb83"
         }
       ],
       "nameservers": [
@@ -30192,7 +30276,7 @@
       "rdap_server": "https://rdap.nic.calvinklein/",
       "tld_created": "2016-07-28",
       "tld_updated": [
-        "2024-05-11"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-08-04"
@@ -30220,6 +30304,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "bb8a91f6ed57b17da3d9f3f91b7ece068799ba0f09c5310bcbc80150bf1555a3"
+        },
+        {
+          "key_tag": 55231,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "7a04877c7a2a472783e62b2d663edbdaca7a53d0eb6dacf230bdfedbc056a018"
         }
       ],
       "nameservers": [
@@ -34215,7 +34305,7 @@
       "rdap_server": "https://rdap.nic.cbn/",
       "tld_created": "2014-11-20",
       "tld_updated": [
-        "2024-05-11"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2015-02-13"
@@ -34243,6 +34333,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "1907c6c2996fc1df2198492f294525824c6321ae8a891284b0bc74efc2083538"
+        },
+        {
+          "key_tag": 57661,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "bd7e195b59ad7b8e5dea035f565282c5fbdf30a1462bd53107fa49ab76548ee5"
         }
       ],
       "nameservers": [
@@ -34391,7 +34487,7 @@
       "rdap_server": "https://rdap.nic.cbre/",
       "tld_created": "2016-06-16",
       "tld_updated": [
-        "2024-05-11"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-07-02"
@@ -34419,6 +34515,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "1e62d3ea2ec98f8360413e0291ee4a9f51870c43a37cc027317fba746fde3fe2"
+        },
+        {
+          "key_tag": 17711,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "d90506ce7ca2e158f57be99cee6548307fb23ed12e8ba7a439f0eea8a41d9430"
         }
       ],
       "nameservers": [
@@ -175620,7 +175722,7 @@
         "iana": {
           "sponsor": "STADA Arzneimittel AG",
           "admin": "Opportunity Interactive Services GmbH",
-          "tech": "Identity Digital Inc."
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "STADA Arzneimittel AG",
@@ -175639,7 +175741,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-08-13",
       "tld_updated": [
-        "2025-06-11"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2015-09-13"
@@ -175668,6 +175770,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "0bdb59ef7db2dbdd103cf1cda4ecbddd6befc6f4d074ef177311fc3358c14941"
+        },
+        {
+          "key_tag": 10822,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "8fcf73e7843d18bfd05072659aacdf5338bfc80a410ee83dc2b3bfb874c26f88"
         }
       ],
       "nameservers": [
@@ -181169,7 +181277,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-01-08",
       "tld_updated": [
-        "2025-08-27"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-01-21"
@@ -181197,6 +181305,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "9f3d7ceb441cd4dac22efcccf5e79d238163e139ab368abddaa1029302a77bcb"
+        },
+        {
+          "key_tag": 60541,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "427a02f3d4fe16592e4de10b56319e89d2dad8b23a11a2e62e8a68f24a1d04db"
         }
       ],
       "nameservers": [
@@ -181465,7 +181579,7 @@
         "iana": {
           "sponsor": "Tata Motors Ltd",
           "admin": "Tata Motors Ltd",
-          "tech": "Identity Digital Inc."
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "Tata Motors Ltd",
@@ -181483,7 +181597,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-07-16",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2015-07-24"
@@ -181511,6 +181625,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "038f7fe751b672c38c8a1748d2e8be90c1cb1ff8c35766ec10e0242e0c2fb843"
+        },
+        {
+          "key_tag": 58120,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "39206e381ed991b669ab6d738d425551c34596f3908cb7454091680ba66adc73"
         }
       ],
       "nameservers": [
@@ -183747,7 +183867,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-12-18",
       "tld_updated": [
-        "2025-08-27"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2015-01-24"
@@ -183775,6 +183895,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "225862860c611d932591e3173ca1ff2a1903716878ee30981ab59e1d179570bb"
+        },
+        {
+          "key_tag": 14879,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "81ab1179d01bb5fe3bbc5d83e586dc76132210f2f4c3e5aa7a3c4927c925c5c3"
         }
       ],
       "nameservers": [
@@ -184657,7 +184783,7 @@
         "iana": {
           "sponsor": "Home Depot Product Authority, LLC",
           "admin": "Home Depot Product Authority, LLC",
-          "tech": "Afilias"
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "Home Depot Product Authority, LLC",
@@ -184676,7 +184802,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-05-14",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2015-05-22"
@@ -184703,6 +184829,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "a2b1e70ec2a5831a069b94ccf9b39e547cd9a351055ea87f4b74dd99f7b061e1"
+        },
+        {
+          "key_tag": 35111,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "6af319399d0633e7f160d63de59f3c9654496c89bdd285a0a5939f8dbf26fdb0"
         }
       ],
       "nameservers": [
@@ -185132,7 +185264,7 @@
         "iana": {
           "sponsor": "Teachers Insurance and Annuity Association of America",
           "admin": "Teachers Insurance and Annuity Association of America",
-          "tech": "Identity Digital Inc."
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "Teachers Insurance and Annuity Association of America",
@@ -185151,7 +185283,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-03-24",
       "tld_updated": [
-        "2024-03-28"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-07-20"
@@ -185179,6 +185311,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "14d2ba968e8bda466149febec577c50eca9cb7759996fa762a5f8081c424b825"
+        },
+        {
+          "key_tag": 50299,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "66f432ee5f8b9390f4f363f6befa5099a8a752893dd1cd8da194514abb2e2235"
         }
       ],
       "nameservers": [
@@ -187179,7 +187317,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-01-08",
       "tld_updated": [
-        "2025-08-27"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-01-21"
@@ -187207,6 +187345,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "74cceeb96ef2237b854b057ab38a9384865f16c48eeb467364d09458b75355ef"
+        },
+        {
+          "key_tag": 39790,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "b8a56fd0273b01df42f6f26b3dd8d39f6639718f76c1753b83150f6356d5d1c6"
         }
       ],
       "nameservers": [
@@ -187595,7 +187739,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-11-13",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2013-11-19"
@@ -187628,6 +187772,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "92c5eaf94dd9dbc7d5254faf41cff9dfeae138c718773528dae6b717ef1b6fe0"
+        },
+        {
+          "key_tag": 8092,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "a3c07f3d6fdb3de1732f3aac98701f2ea12fd8bb0564e9d6ba0cdd7132392042"
         }
       ],
       "nameservers": [
@@ -187914,7 +188064,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-01-16",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2014-01-23"
@@ -187947,6 +188097,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "5ddd852d119830be951afa0d5176443a935eaa350278ef15fbea34156cf5a9ab"
+        },
+        {
+          "key_tag": 1547,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "c213bf66307bb131517dff9b31f47f2a5a2f7b57c97f8c2b5e8a46b613c2773d"
         }
       ],
       "nameservers": [
@@ -188646,7 +188802,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-03-12",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2015-03-24"
@@ -188679,6 +188835,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "ad0f4d55834496f7305ac2a3a8743ddbf7c4802ec246341e7f9e555fa42b5ee9"
+        },
+        {
+          "key_tag": 11872,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "078f335cd6fdae3c83736584ec6c1338be3d67ce734b5a9d492f6c12e431b874"
         }
       ],
       "nameservers": [
@@ -188827,7 +188989,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-04-03",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2014-04-11"
@@ -188860,6 +189022,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "515451761441c5c476f32ee4d28ae24d5179521fb505c318ef721e5fd6165c16"
+        },
+        {
+          "key_tag": 39731,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "0765c547c7c62216edf117575fb0b0601d1bdb999e502ecf07cac5172845df00"
         }
       ],
       "nameservers": [
@@ -189140,7 +189308,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-04-03",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2014-04-11"
@@ -189173,6 +189341,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "7e93110615b5fadb76632c18aee800588a81fc4d6d70b9029385987290678ea9"
+        },
+        {
+          "key_tag": 5935,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "24251931c0cdf1f16a36fca4048f4b53e1f4a6a9320d51ea3aa3b855e458b5fd"
         }
       ],
       "nameservers": [
@@ -189687,7 +189861,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-03-06",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2015-03-13"
@@ -189720,6 +189894,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "ef6ca74a84fbac616c85ddfc58eac5475041c67daec11fe64fa0c481968a0790"
+        },
+        {
+          "key_tag": 24712,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "34a94b3c751c48a466ef244d53fae8c61fed05b86af59603b35ccd5152708d0a"
         }
       ],
       "nameservers": [
@@ -189868,7 +190048,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-12-19",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2013-12-28"
@@ -189901,6 +190081,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "80dd6f1aad9c85fed280bc232c0dd8426c09dd7bdd6f6e6bc16232e252cba059"
+        },
+        {
+          "key_tag": 6482,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "c517b9170ded02cbd44959465f2e54ecc693563d59295f034bdd5ab2e736251e"
         }
       ],
       "nameservers": [
@@ -190055,7 +190241,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2005-07-27",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "annotations": {
         "iana_sponsor_alias": "Identity Digital",
@@ -190086,6 +190272,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "df8590752dcf2cc075f91d5a6178c38a7ba1dbbc0c2327b88ca37be4797be126"
+        },
+        {
+          "key_tag": 589,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "608beead4bff670ee8da73b5908817420d9be75861f529d6c98e59623b63da16"
         }
       ],
       "nameservers": [
@@ -190253,7 +190445,7 @@
         "iana": {
           "sponsor": "Travelers TLD, LLC",
           "admin": "Travelers TLD, LLC",
-          "tech": "Afilias"
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "Travelers TLD, LLC",
@@ -190272,7 +190464,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-11-25",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2015-12-05"
@@ -190306,6 +190498,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "975d9fd3b056e286263f680f31106c7509ed466eae0aa08b3b045abae39945f6"
+        },
+        {
+          "key_tag": 3154,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "b14eb29e22508b3c9be63a3480eef9565c5ba54972107970b3be570ca535c2bc"
         }
       ],
       "nameservers": [
@@ -190398,7 +190596,7 @@
         "iana": {
           "sponsor": "Travelers TLD, LLC",
           "admin": "Travelers TLD, LLC",
-          "tech": "Afilias"
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "Travelers TLD, LLC",
@@ -190417,7 +190615,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-11-25",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2015-12-15"
@@ -190450,6 +190648,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "1a8f262ddbe7316233e999f81ae452c17b3435c57bab9ceec4bae518f121e1f1"
+        },
+        {
+          "key_tag": 58307,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "93120674763dcc6d68bb2bd441addb7687ac4d53f19d112ab526dbabb980ed2d"
         }
       ],
       "nameservers": [
@@ -190682,7 +190886,7 @@
         "iana": {
           "sponsor": "Travelers TLD, LLC",
           "admin": "Travelers TLD, LLC",
-          "tech": "Afilias"
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "Travelers TLD, LLC",
@@ -190701,7 +190905,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-11-25",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2015-12-11"
@@ -190734,6 +190938,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "f525871ee63ffed32856ba0c67f5115d5b011a437b67250e357df2bdcf1ea31c"
+        },
+        {
+          "key_tag": 64501,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "e27032c5232903064037b1b035f7edceb61a40518a1433d164bd016f4b1aff15"
         }
       ],
       "nameservers": [
@@ -191814,7 +192024,7 @@
         "iana": {
           "sponsor": "T V SUNDRAM IYENGAR & SONS PRIVATE LIMITED",
           "admin": "Identity Digital Inc.",
-          "tech": "Identity Digital Inc."
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "T V SUNDRAM IYENGAR  & SONS LIMITED",
@@ -191833,7 +192043,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-02-05",
       "tld_updated": [
-        "2024-09-05"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-02-13"
@@ -191862,6 +192072,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "a36cbb75c2c810d16fdd5562c334351bdd007f5aeb008537115586951ac39240"
+        },
+        {
+          "key_tag": 46151,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "6115c2aa92b374a6b6a3a7693a5044dab8de2e3dabea14b273b8cb5c78a446fa"
         }
       ],
       "nameservers": [
@@ -192511,7 +192727,7 @@
         "iana": {
           "sponsor": "National Australia Bank Limited",
           "admin": "National Australia Bank Limited",
-          "tech": "Identity Digital Inc."
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "National Australia Bank Limited",
@@ -192530,7 +192746,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-08-04",
       "tld_updated": [
-        "2025-12-01"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-08-18"
@@ -192558,6 +192774,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "7ec37b9eec2fd88753a21503f50e7a96f59e706ef760d8143773b0d6b1b16e4c"
+        },
+        {
+          "key_tag": 39809,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "bb4c2d6a2ff8793d27c8cd740becfe511e3fa048023d7fb181835f8b26cd7090"
         }
       ],
       "nameservers": [
@@ -192650,7 +192872,7 @@
         "iana": {
           "sponsor": "UBS AG",
           "admin": "UBS AG",
-          "tech": "Identity Digital Inc."
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "UBS AG",
@@ -192668,7 +192890,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-06-11",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2015-07-11"
@@ -192696,6 +192918,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "7c8d56d7ecd2a44500d7463258c99b2acb49ebc2bbabb7aeb3a658f2d21581ab"
+        },
+        {
+          "key_tag": 42605,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "c52da9337e4427c022ea144cdb0055eb474540ec16fc36499f6540953664f821"
         }
       ],
       "nameservers": [
@@ -193349,7 +193577,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-04-03",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2014-04-11"
@@ -193382,6 +193610,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "674e5d0fc3d6a5ee42486211ce3be970a6b6dde79ba48553732c1a929715302e"
+        },
+        {
+          "key_tag": 16829,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "e6ed731738bf2c12876f232c01ff74519b53eec16e105a57c08af283d4e86859"
         }
       ],
       "nameservers": [
@@ -193832,7 +194066,7 @@
         "iana": {
           "sponsor": "UPS Market Driver, Inc.",
           "admin": "UPS Market Driver, Inc.",
-          "tech": "Afilias"
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "UPS Market Driver, Inc.",
@@ -193851,7 +194085,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-04-14",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-05-31"
@@ -193879,6 +194113,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "28e49220a4b3bc519f2cd5800b8c96db682a9651eec3bb19ff98d670cbe4be36"
+        },
+        {
+          "key_tag": 446,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "25a2798323f4f51a67a82f82b60044c112734c5843a7cdfcc76a72682ce577d0"
         }
       ],
       "nameservers": [
@@ -194641,7 +194881,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-02-13",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2014-02-21"
@@ -194674,6 +194914,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "63af40a94f8066d7f6ad7fcf89dc7111407c1da7a217ffc6c7f2f84a87cc9fc0"
+        },
+        {
+          "key_tag": 55324,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "9ddfead66c2d98b56bdd8e2e622356bea7f8f87f1ef17c1cedd17567225f7b48"
         }
       ],
       "nameservers": [
@@ -194944,7 +195190,7 @@
         "iana": {
           "sponsor": "The Vanguard Group, Inc.",
           "admin": "The Vanguard Group, Inc.",
-          "tech": "Identity Digital Inc."
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "The Vanguard Group, Inc.",
@@ -194963,7 +195209,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-08-18",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-08-28"
@@ -194991,6 +195237,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "de83f2879537f8479c81335da97c8d0b923767b78b5fb56544889d3a7006efb2"
+        },
+        {
+          "key_tag": 8039,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "8ed2a6575326417831094d6285e1ed311ff60a4b370a1ebc4eaec0e1ed166fe2"
         }
       ],
       "nameservers": [
@@ -195541,7 +195793,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-10-31",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2013-11-06"
@@ -195574,6 +195826,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "5ad3e6b74a570bbd7ea2f84c87e6bfc6c305233383d14f29074f3e6e4a03a810"
+        },
+        {
+          "key_tag": 44791,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "ba837cee8844092df38fffd798b36f5eb21314e5d24b00410212d482b5e818ee"
         }
       ],
       "nameservers": [
@@ -195998,7 +196256,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-05-22",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2014-05-31"
@@ -196031,6 +196289,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "2b1b3ab9f4fdd837fc9f9c7875fa916b6a22c3ef5c0c04d5d3235e42828cf6a8"
+        },
+        {
+          "key_tag": 64495,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "ec91044e6fb87288253d2878c0026ff5574881df384b8bdeac6e4c1da0141437"
         }
       ],
       "nameservers": [
@@ -196367,7 +196631,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-12-12",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2013-12-17"
@@ -196400,6 +196664,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "ee19922420d5f38807e2d61a8d0a7811e2c622bdf65cbdf56ab83ff4569ff4b3"
+        },
+        {
+          "key_tag": 60341,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "33bb2cdbe372870f513dbbb37027ab39bc04c4d9c771f7e9e49f15bdb9d3e054"
         }
       ],
       "nameservers": [
@@ -196548,7 +196818,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-12-17",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2014-12-25"
@@ -196581,6 +196851,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "4cafbfedab7097a3727581bcc76ff8eb10b0c144b96f77cf48d7814e21d8d3a7"
+        },
+        {
+          "key_tag": 16592,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "3f69a52ff9879b500b2fc1d211bcdae13e2f0b649f85775b755177f235b1d397"
         }
       ],
       "nameservers": [
@@ -196711,7 +196987,7 @@
         "iana": {
           "sponsor": "VIENNA INSURANCE GROUP AG Wiener Versicherung Gruppe",
           "admin": "VIENNA INSURANCE GROUP AG Wiener Versicherung Gruppe",
-          "tech": "Afilias"
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "VIENNA INSURANCE GROUP AG Wiener Versicherung Gruppe",
@@ -196730,7 +197006,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-11-25",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-04-06"
@@ -196758,6 +197034,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "4dd8d2a7168f0358e8945f0558e2a643f3e941f6440fd26aa0d91b4e2b54b0e1"
+        },
+        {
+          "key_tag": 10669,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "5c5367bb183f81af2dae3de3398c8f04bbb277a4e9a39dec7b018045801fbc91"
         }
       ],
       "nameservers": [
@@ -196850,7 +197132,7 @@
         "iana": {
           "sponsor": "Viking River Cruises (Bermuda) Ltd.",
           "admin": "Viking River Cruises (Bermuda) Ltd.",
-          "tech": "Afilias"
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "Viking River Cruises (Bermuda) Ltd.",
@@ -196869,7 +197151,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-10-15",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-02-22"
@@ -196897,6 +197179,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "1809dba33d16e851270758c3ef774d65984af94f7c3de9b3470167ce19c22def"
+        },
+        {
+          "key_tag": 55381,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "c1440eec1efe4a6600f4fe5d4b62e3d1846614a0be4994abf26581d085546fa1"
         }
       ],
       "nameservers": [
@@ -197007,7 +197295,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-02-06",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2014-02-11"
@@ -197040,6 +197328,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "ce7cf1b69581dc8a7d97b190d57a0d90de2f35f3f906e15984163f3bd62b6a7a"
+        },
+        {
+          "key_tag": 1475,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "29b02d1413a3670a3a51f6fc43edd4798a2486daab4fa306f5b72be9de1e1b6a"
         }
       ],
       "nameservers": [
@@ -197188,7 +197482,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-07-23",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2015-08-05"
@@ -197221,6 +197515,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "ba89439b43dd4c15ad9d0bc69198518041f5a9e269ce479569f0e42017d8a9a5"
+        },
+        {
+          "key_tag": 49082,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "2059f744d3ca351435057220c3f76d501abf0cf308d7d2c2eb982641fe692977"
         }
       ],
       "nameservers": [
@@ -197751,7 +198051,7 @@
         "iana": {
           "sponsor": "Visa Worldwide Pte. Limited",
           "admin": "Visa Worldwide Pte. Limited",
-          "tech": "Identity Digital Inc."
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "Visa Worldwide Pte. Limited",
@@ -197770,7 +198070,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-06-30",
       "tld_updated": [
-        "2024-11-15"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-07-28"
@@ -197798,6 +198098,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "94d6f007f7a3cd81d061701497a7e54f801a495e219370723bab6f2707b68d6e"
+        },
+        {
+          "key_tag": 18799,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "8cbfd1f0b03acdc4968112e70937eef26fa5194ce99c4f79eb95bd81afda6ca3"
         }
       ],
       "nameservers": [
@@ -197946,7 +198252,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-02-06",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2014-02-11"
@@ -197979,6 +198285,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "4e659852dd1934d5e78a5e6600ebad107682821e3bb5991f8b4bf8dfbc6927ff"
+        },
+        {
+          "key_tag": 53656,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "38c736af520392e88abfbf1ac78eeabda3879d239dc0954ac1676e34cc3b81d8"
         }
       ],
       "nameservers": [
@@ -199106,7 +199418,7 @@
         "iana": {
           "sponsor": "Volvo Holding Sverige Aktiebolag",
           "admin": "AB Volvo",
-          "tech": "Identity Digital Inc."
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "Volvo Holding Sverige Aktiebolag",
@@ -199124,7 +199436,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-01-29",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-10-24"
@@ -199152,6 +199464,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "0bb2ad4280d93d2c86cdd0dc7cf335c35b50fee80e6e07c25a061c76a506a006"
+        },
+        {
+          "key_tag": 22111,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "278a42c3a8004185765a76e5c0b4191a73b4af7f50853edf020332eb77935c47"
         }
       ],
       "nameservers": [
@@ -199262,7 +199580,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-02-13",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2014-03-02"
@@ -199291,6 +199609,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "101d2ae9c31fbe10078e74d477010aa5c8966d814421123a893b8b0e7b46891a"
+        },
+        {
+          "key_tag": 39235,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "d0bbbb8cb83151f21f7d63ad987fbaeca9b76672a98017d24a182c00002e97d1"
         }
       ],
       "nameservers": [
@@ -199577,7 +199901,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-02-13",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2014-03-02"
@@ -199606,6 +199930,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "847371b1a0a21ae134a0e0c15b0e505bb4c88a26ed401daff4f4e8794c5b31a1"
+        },
+        {
+          "key_tag": 30562,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "4c7794e79b7080721c902f71a4e6ed0839d0c381ac2cbd08bc6cb80f4cafa5e6"
         }
       ],
       "nameservers": [
@@ -199716,7 +200046,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-10-31",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2013-11-06"
@@ -199749,6 +200079,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "e17ea6fe786d37d2884b4eb52ae275ec41c4265aa252e2469396ff49878170c5"
+        },
+        {
+          "key_tag": 18596,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "5ba7ae66bf423cf3e9c2a36176564f25426e3cca856b80990707d367747e2806"
         }
       ],
       "nameservers": [
@@ -201091,7 +201427,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-01-16",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2014-01-23"
@@ -201124,6 +201460,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "df912e3dd3fd5d0961ccd55abbcfb99e3cadba09ff443e3f1a7bebae400d57ad"
+        },
+        {
+          "key_tag": 55960,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "2dbcb6b1133f868c5cf013a1d3145b17d33ec6ee3fdacf2221662fb8efade750"
         }
       ],
       "nameservers": [
@@ -201272,7 +201614,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-11-12",
       "tld_updated": [
-        "2025-09-04"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2015-12-14"
@@ -201305,6 +201647,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "9110905c79b0c95933eb1f037a0d7a150819f1d1553ad89187a7849039a97ebe"
+        },
+        {
+          "key_tag": 39272,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "22b7eceed5354bcf3a593558c94ca1ea16d7604fe04946de2e21f73d9ad99c0d"
         }
       ],
       "nameservers": [
@@ -202926,7 +203274,7 @@
         "iana": {
           "sponsor": "Weir Group IP Limited",
           "admin": "Head of IT Service Delivery",
-          "tech": "Identity Digital Inc."
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "Weir Group IP Limited",
@@ -202945,7 +203293,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-04-02",
       "tld_updated": [
-        "2023-08-11"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2015-04-17"
@@ -202973,6 +203321,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "bfffb5b824d7cc802beb433840269cd57749aa46593c40b9967bfba4c376fc6f"
+        },
+        {
+          "key_tag": 14065,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "b5e6314ca39a79530f377579509c96db1dfe14eb3dcb2e0905dbcb5fc1d0918a"
         }
       ],
       "nameservers": [
@@ -204212,7 +204566,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-07-23",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2015-08-05"
@@ -204245,6 +204599,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "16016cd0c2432421b72d072422278999c3c2772353e3d5214d25be24b4d521cb"
+        },
+        {
+          "key_tag": 58469,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "d56956b6770b2e490be1e9a76297bd51578cf3ac93efda6e62da088c73e89ac8"
         }
       ],
       "nameservers": [
@@ -205114,7 +205474,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-01-16",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2014-01-23"
@@ -205147,6 +205507,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "0339dd99b86b96b8e437908e9aea3eb578fad0de211bd8cf7a4fe6885e0acdd2"
+        },
+        {
+          "key_tag": 10889,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "ce896c56c5e75d5263023495f17e83caa0a297ce5230a611cadc7286d7cb66af"
         }
       ],
       "nameservers": [
@@ -205295,7 +205661,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-09-11",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2014-09-19"
@@ -205328,6 +205694,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "84c4ee9b8cec0c7eb9c2c892a07df5513897f91c5b3bc80410ebb062e86eac21"
+        },
+        {
+          "key_tag": 422,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "d75d23d372a9a5b83f3e6c72201a16131744708a1b25fe1fbe7c8da064f32281"
         }
       ],
       "nameservers": [
@@ -205999,7 +206371,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-04-17",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2014-04-23"
@@ -206032,6 +206404,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "a9f9582d8b0f154f7051751b8c2ab121231ccb2ae36ea6da9536439855bf9f0f"
+        },
+        {
+          "key_tag": 64501,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "db534bdfbd62b40781f6bdeeae115157844bfbbaa5aa3bd54ed01f8686cdda6d"
         }
       ],
       "nameservers": [
@@ -206746,7 +207124,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-02-19",
       "tld_updated": [
-        "2025-10-21"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2015-03-07"
@@ -206773,6 +207151,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "3bbba82ef5ee5583f6743af83a583f203153df0c2066f8707a735dc514474bf4"
+        },
+        {
+          "key_tag": 56090,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "9b1f2cd66625077e0aadc9bdddc9cc1b4b86d3931bcc4d96e255b191573884f1"
         }
       ],
       "nameservers": [
@@ -207069,7 +207453,7 @@
         "iana": {
           "sponsor": "Amazon Registry Services, Inc.",
           "admin": "Amazon Registry Services, Inc.",
-          "tech": "Identity Digital Inc."
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "Amazon Registry Services, Inc.",
@@ -207088,7 +207472,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-01-29",
       "tld_updated": [
-        "2025-06-17"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-02-19"
@@ -207127,6 +207511,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "27e776688bd0cedb38466ce0e6b2bcc5cbefa0549e04848ef0f1fdbe40f85d0e"
+        },
+        {
+          "key_tag": 54482,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "8105b408dee98695937d516ae3054e56531d17362c20e26c1b28f0985c43d58e"
         }
       ],
       "nameservers": [
@@ -209870,7 +210260,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-06-24",
       "tld_updated": [
-        "2025-12-08"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-07-02"
@@ -209904,6 +210294,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "a488e3a362b06a6999e5025415a1e989cf592c01e996a0e94104e296a1bded34"
+        },
+        {
+          "key_tag": 48259,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "29c2f0de8676d01106dec61849350f16acbc76db6832580d9e04e498d0e4e7b1"
         }
       ],
       "nameservers": [
@@ -210054,7 +210450,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-12-04",
       "tld_updated": [
-        "2026-10-06"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-04-17"
@@ -210089,6 +210485,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "7d1e023bbb026ac5d19ae62d5f13ee6e01f3450a1e6629e25a9205dcf2a31f9e"
+        },
+        {
+          "key_tag": 39281,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "6d12649854ca15505498544957c7b505910ec051318b1eca134ad8407918e21d"
         }
       ],
       "nameservers": [
@@ -210201,7 +210603,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-01-23",
       "tld_updated": [
-        "2025-09-04"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2014-02-05"
@@ -210240,6 +210642,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "b725fa381426f5e3a9338c5c5a57447611aba619e9675d9bf973d1d2a3b14b5e"
+        },
+        {
+          "key_tag": 11759,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "6a6178cee51cb2abd29ad053a6a4584f08cc6bb040cd44c8ac1a4d19845d3f5c"
         }
       ],
       "nameservers": [
@@ -212385,7 +212793,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-12-18",
       "tld_updated": [
-        "2025-08-27"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2015-01-24"
@@ -212419,6 +212827,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "bd5e5982605e7ec6077b7742d7894a6959657afbfe9ee345eda682a9a4bf0252"
+        },
+        {
+          "key_tag": 32009,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "9d58cfbc9344c12d16f4096cfa2096ef0a43e22e936b1e68f0929978d2abb893"
         }
       ],
       "nameservers": [
@@ -212513,7 +212927,7 @@
         "iana": {
           "sponsor": "Amazon Registry Services, Inc.",
           "admin": "Amazon Registry Services, Inc.",
-          "tech": "Identity Digital Inc."
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "Amazon Registry Services, Inc.",
@@ -212532,7 +212946,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-01-29",
       "tld_updated": [
-        "2025-06-17"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-02-21"
@@ -212571,6 +212985,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "05f9b4a2cc75f4cc41150454bb3911c3a8b0874d626162842146114819b45443"
+        },
+        {
+          "key_tag": 53690,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "921c397859d263155c2fe352a51d86749f156dc42849c4f027ffaeda5f1e15ec"
         }
       ],
       "nameservers": [
@@ -213011,7 +213431,7 @@
         "iana": {
           "sponsor": "Amazon Registry Services, Inc.",
           "admin": "Amazon Registry Services, Inc.",
-          "tech": "Identity Digital Inc."
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "Amazon Registry Services, Inc.",
@@ -213030,7 +213450,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-01-29",
       "tld_updated": [
-        "2025-06-17"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-02-19"
@@ -213069,6 +213489,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "480318eeeb6f2bfec750dd4267bddc9d033b80c0bf1bf9cf979780c35bb87769"
+        },
+        {
+          "key_tag": 63281,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "3769433e5378a73ec1914e8aa446a7db8d6b24256ec1a20a15ec28b3e3dd4ff6"
         }
       ],
       "nameservers": [
@@ -213961,7 +214387,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-11-20",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2014-12-06"
@@ -214000,6 +214426,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "ee874dd50ba3cecb8187c1d3fb2f8c72fae826a33c0c6a96dab7c16db8a70d84"
+        },
+        {
+          "key_tag": 13120,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "421212a0cd3d4c4a4ab8a9da9d5032bbb9fa9e23490c94209680b345fa044740"
         }
       ],
       "nameservers": [
@@ -214764,7 +215196,7 @@
         "iana": {
           "sponsor": "Amazon Registry Services, Inc.",
           "admin": "Amazon Registry Services, Inc.",
-          "tech": "Identity Digital Inc."
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "Amazon Registry Services, Inc.",
@@ -214783,7 +215215,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-11-25",
       "tld_updated": [
-        "2025-06-17"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2015-12-14"
@@ -214822,6 +215254,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "b28c814ee8f6237ced8a3ba3d591b75f455258faec60828f7d01432a8e153eac"
+        },
+        {
+          "key_tag": 28355,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "1be79e7bf7825b1009e1611a1c44b569eb63131dc38dcc88d5c72a411175f72c"
         }
       ],
       "nameservers": [
@@ -215163,7 +215601,7 @@
         "iana": {
           "sponsor": "Amazon Registry Services, Inc.",
           "admin": "Amazon Registry Services, Inc.",
-          "tech": "Identity Digital Inc."
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "Amazon Registry Services, Inc.",
@@ -215182,7 +215620,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-03-18",
       "tld_updated": [
-        "2025-06-17"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-03-25"
@@ -215221,6 +215659,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "e4d17f595eb9ea2d365fdb095ec7866a106ae8a3dfda44da3225efeee0a74b02"
+        },
+        {
+          "key_tag": 56095,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "ef1d015f5a8284114fc3e1e5edfabbb64e57696529be8cad2e9969f0dd3ed206"
         }
       ],
       "nameservers": [
@@ -216130,7 +216574,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-07-17",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2015-05-09"
@@ -216169,6 +216613,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "e3f265b8894b76bab24512c5276be9243c0afb4595a14c879f9fb711e754c013"
+        },
+        {
+          "key_tag": 14845,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "2bf630d314852feca5ae87c1fa64f480d131fa5f039a64258f1ddb5f4238fbe2"
         }
       ],
       "nameservers": [
@@ -216775,7 +217225,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-04-15",
       "tld_updated": [
-        "2026-01-16"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-05-11"
@@ -216809,6 +217259,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "1d8b69a4fcfc475fb7d9d7b5b1366b92c51826a503a530f2ea1c6d07d58b9d2a"
+        },
+        {
+          "key_tag": 61376,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "fd0e1d3f3a3ffc28da8c43c611b98bf2fdd3cec6e97f17c7d66b5f2bf76bc5c8"
         }
       ],
       "nameservers": [
@@ -217112,7 +217568,7 @@
         "iana": {
           "sponsor": "Amazon Registry Services, Inc.",
           "admin": "Amazon Registry Services, Inc.",
-          "tech": "Identity Digital Inc."
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "Amazon Registry Services, Inc.",
@@ -217131,7 +217587,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-01-29",
       "tld_updated": [
-        "2025-06-17"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-02-19"
@@ -217170,6 +217626,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "ea53409a63f3c2e67887df475d35837ca4696aadd7a08523436c05960ac99eee"
+        },
+        {
+          "key_tag": 27979,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "3e9d6a6f5114ca3ed71d9f27c10a5132f233ad686954d276d9e5e1a747e8f710"
         }
       ],
       "nameservers": [
@@ -217438,7 +217900,7 @@
         "iana": {
           "sponsor": "Amazon Registry Services, Inc.",
           "admin": "Amazon Registry Services, Inc.",
-          "tech": "Identity Digital Inc."
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "Amazon Registry Services, Inc.",
@@ -217457,7 +217919,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-09-16",
       "tld_updated": [
-        "2025-06-17"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-09-30"
@@ -217496,6 +217958,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "abe26a827cd8026e02a148365ad795fa844282e961fc25583498834571b1ea7a"
+        },
+        {
+          "key_tag": 47422,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "b118f2c16e7703315a5ed3b9ea080c88014a38bbd27f6cbab3804bed506d3b52"
         }
       ],
       "nameservers": [
@@ -219511,7 +219979,7 @@
         "iana": {
           "sponsor": "Amazon Registry Services, Inc.",
           "admin": "Amazon Registry Services, Inc.",
-          "tech": "Identity Digital Inc."
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "Amazon Registry Services, Inc.",
@@ -219530,7 +219998,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-01-29",
       "tld_updated": [
-        "2025-06-17"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-02-22"
@@ -219569,6 +220037,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "508bddccb2b2b23586882a59e145310aca85ffb453eb073565e900466f52a39f"
+        },
+        {
+          "key_tag": 33490,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "9f8b5486ec07d7e7372605a869625087f088b13465c26b20e3f8243184969cd4"
         }
       ],
       "nameservers": [
@@ -227200,7 +227674,7 @@
         "iana": {
           "sponsor": "Amazon Registry Services, Inc.",
           "admin": "Amazon Registry Services",
-          "tech": "Identity Digital Inc."
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "Amazon Registry Services, Inc.",
@@ -227219,7 +227693,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-01-29",
       "tld_updated": [
-        "2025-06-17"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-02-19"
@@ -227256,6 +227730,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "faecafc5a2a9f88ac34a7d570da61418bc78607db107aa10f150c77022c9b910"
+        },
+        {
+          "key_tag": 61631,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "450c2b2ad37e14708782752c7028c5f9f6b849ab2a85dfef684cf1e906ac8799"
         }
       ],
       "nameservers": [
@@ -228327,7 +228807,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-10-21",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2013-10-23"
@@ -228366,6 +228846,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "98698bf6004dcfe48f3c5beb164f75d63fbac726ae652da39af2929a8f836f92"
+        },
+        {
+          "key_tag": 9646,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "12a285165325a80e23a48bdc46d5e8fcee4c444c6d31c383543e8178d544f477"
         }
       ],
       "nameservers": [
@@ -228818,7 +229304,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-11-25",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2014-08-22"
@@ -228857,6 +229343,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "97139be679993f9bc92729c06a1ce43ae75083580338cf750f15fd2b34737717"
+        },
+        {
+          "key_tag": 18791,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "fff17e24e79ee2987e3cfefcad05f529055c0aebc8ca1b0f46b42735c0f73f07"
         }
       ],
       "nameservers": [
@@ -229146,7 +229638,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-02-05",
       "tld_updated": [
-        "2025-12-08"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-03-05"
@@ -229185,6 +229677,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "02b28cd1839a544e6b0b047b0cc37a3c7d4dc4e34453ade1960d56127a776014"
+        },
+        {
+          "key_tag": 14491,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "7dc00e3fcd286559b56dee77936f1f9bcbf48decdc73dba4d5b264e0c3ca34dd"
         }
       ],
       "nameservers": [
@@ -229336,7 +229834,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-02-05",
       "tld_updated": [
-        "2025-12-08"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-05-16"
@@ -229376,6 +229874,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "b8c49da52d3bef085a04146ec9c966c341dd0c187019934c7862d57274aa49ce"
+        },
+        {
+          "key_tag": 20966,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "f56fb4869ef127f754af2b1df175dfab485137ff76b20059f961ecb18db0396e"
         }
       ],
       "nameservers": [
@@ -231376,7 +231880,7 @@
         "iana": {
           "sponsor": "Yahoo Inc.",
           "admin": "Yahoo Inc.",
-          "tech": "Identity Digital Inc."
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "Yahoo Inc.",
@@ -231395,7 +231899,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-01-29",
       "tld_updated": [
-        "2026-05-25"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2016-02-13"
@@ -231423,6 +231927,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "674c472960577338b3372085bb0a35e23308226578f018401a20914d4c928ad4"
+        },
+        {
+          "key_tag": 13570,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "ac9624aea1d623f4b70a2b7a3eaf105d8f333265b030de158789e1f997e5a208"
         }
       ],
       "nameservers": [
@@ -233468,7 +233978,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-09-10",
       "tld_updated": [
-        "2026-08-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2015-10-27"
@@ -233496,6 +234006,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "2e4669652e0c3b84007e43707f8354c94afd6f929a5152524bedbaa6f009dafa"
+        },
+        {
+          "key_tag": 20839,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "f4bad8d1c96c11b998665085fdaa763802612737415e836f1c2dda1295abb4ac"
         }
       ],
       "nameservers": [
@@ -233588,7 +234104,7 @@
         "iana": {
           "sponsor": "Amazon Registry Services, Inc.",
           "admin": "Amazon Registry Services, Inc.",
-          "tech": "Identity Digital Inc."
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "Amazon Registry Services, Inc.",
@@ -233607,7 +234123,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-11-12",
       "tld_updated": [
-        "2025-06-17"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2015-12-05"
@@ -233640,6 +234156,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "2f7c24f9a7f75c1ba05da9b742209f4e8204bd280f50b4f64800854b0965dd12"
+        },
+        {
+          "key_tag": 40157,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "93860899ff71d325cd81a2d97bd77f82a45ca9cedcbd68388ab7eb0b3c5987d1"
         }
       ],
       "nameservers": [
@@ -234090,7 +234612,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-01-09",
       "tld_updated": [
-        "2025-10-07"
+        "2026-11-12"
       ],
       "events": {
         "delegation": "2014-01-14"
@@ -234123,6 +234645,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "44853e072aa0c590351b822b9a23ff95631412a3583228163a995598ef764baf"
+        },
+        {
+          "key_tag": 9442,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "2c313be01ada7291e963ca798e3bc50c1dee5f00405e0c7b80cbb3950e3224e8"
         }
       ],
       "nameservers": [

@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T22:19:37Z",
+  "publication": "2026-11-13T09:03:11Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,7 +16,7 @@
       "iana": {
         "sponsor": "Volvo Holding Sverige Aktiebolag",
         "admin": "AB Volvo",
-        "tech": "Identity Digital Inc."
+        "tech": "Identity Digital Limited"
       },
       "icann": {
         "registry_operator": "Volvo Holding Sverige Aktiebolag",
@@ -34,7 +34,7 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "2016-01-29",
     "tld_updated": [
-      "2023-08-11"
+      "2026-11-12"
     ],
     "events": {
       "delegation": "2016-10-24"
@@ -62,6 +62,12 @@
         "algorithm": 8,
         "digest_type": 2,
         "digest": "0bb2ad4280d93d2c86cdd0dc7cf335c35b50fee80e6e07c25a061c76a506a006"
+      },
+      {
+        "key_tag": 22111,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "278a42c3a8004185765a76e5c0b4191a73b4af7f50853edf020332eb77935c47"
       }
     ],
     "nameservers": [

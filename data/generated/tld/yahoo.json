@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T22:19:37Z",
+  "publication": "2026-11-13T09:03:11Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,7 +16,7 @@
       "iana": {
         "sponsor": "Yahoo Inc.",
         "admin": "Yahoo Inc.",
-        "tech": "Identity Digital Inc."
+        "tech": "Identity Digital Limited"
       },
       "icann": {
         "registry_operator": "Yahoo Inc.",
@@ -35,7 +35,7 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "2016-01-29",
     "tld_updated": [
-      "2026-05-25"
+      "2026-11-12"
     ],
     "events": {
       "delegation": "2016-02-13"
@@ -63,6 +63,12 @@
         "algorithm": 8,
         "digest_type": 2,
         "digest": "674c472960577338b3372085bb0a35e23308226578f018401a20914d4c928ad4"
+      },
+      {
+        "key_tag": 13570,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "ac9624aea1d623f4b70a2b7a3eaf105d8f333265b030de158789e1f997e5a208"
       }
     ],
     "nameservers": [

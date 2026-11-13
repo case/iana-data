@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T22:19:37Z",
+  "publication": "2026-11-13T09:03:11Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,7 +16,7 @@
       "iana": {
         "sponsor": "Teachers Insurance and Annuity Association of America",
         "admin": "Teachers Insurance and Annuity Association of America",
-        "tech": "Identity Digital Inc."
+        "tech": "Identity Digital Limited"
       },
       "icann": {
         "registry_operator": "Teachers Insurance and Annuity Association of America",
@@ -35,7 +35,7 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "2016-03-24",
     "tld_updated": [
-      "2024-03-28"
+      "2026-11-12"
     ],
     "events": {
       "delegation": "2016-07-20"
@@ -63,6 +63,12 @@
         "algorithm": 8,
         "digest_type": 2,
         "digest": "14d2ba968e8bda466149febec577c50eca9cb7759996fa762a5f8081c424b825"
+      },
+      {
+        "key_tag": 50299,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "66f432ee5f8b9390f4f363f6befa5099a8a752893dd1cd8da194514abb2e2235"
       }
     ],
     "nameservers": [

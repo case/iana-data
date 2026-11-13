@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T22:19:37Z",
+  "publication": "2026-11-13T09:03:11Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -35,7 +35,7 @@
     "rdap_server": "https://rdap.nic.auspost/",
     "tld_created": "2016-08-11",
     "tld_updated": [
-      "2023-11-30"
+      "2026-11-12"
     ],
     "events": {
       "delegation": "2016-08-17"
@@ -61,6 +61,12 @@
         "algorithm": 8,
         "digest_type": 2,
         "digest": "8631f3b3daa56f69e46a0513ae0ba9943a0992a664a7ebc25c2a4e8792c5df83"
+      },
+      {
+        "key_tag": 56894,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "9908f31bcd26e8508cac33f471c0d8a80b3116e04a0406abf0abb348f8bb4a39"
       }
     ],
     "nameservers": [
