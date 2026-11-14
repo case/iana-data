@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T22:19:37Z",
+  "publication": "2026-11-14T08:33:33Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,7 +16,7 @@
       "iana": {
         "sponsor": "Scholarships.com, LLC",
         "admin": "Scholarships.com, LLC",
-        "tech": "Afilias"
+        "tech": "Identity Digital Limited"
       },
       "icann": {
         "registry_operator": "Scholarships.com, LLC",
@@ -35,7 +35,7 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "2014-07-10",
     "tld_updated": [
-      "2023-08-03"
+      "2026-11-13"
     ],
     "events": {
       "delegation": "2015-04-02"
@@ -62,6 +62,12 @@
         "algorithm": 8,
         "digest_type": 2,
         "digest": "24261732a51a4d33adc9a823ee1e38139bcabbda2f4c2eb7f6c8ceb3480b64b6"
+      },
+      {
+        "key_tag": 31619,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "61c036ef0f8daa057795969eb9afa3c09ba47846cbe8e4999350dcdcfb12236e"
       }
     ],
     "nameservers": [

@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-13T09:03:11Z",
+  "publication": "2026-11-14T08:33:33Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -15922,7 +15922,7 @@
       "rdap_server": "https://rdap.nic.bank/",
       "tld_created": "2014-11-26",
       "tld_updated": [
-        "2024-07-01"
+        "2026-11-13"
       ],
       "events": {
         "delegation": "2015-01-09"
@@ -15956,6 +15956,12 @@
           "algorithm": 13,
           "digest_type": 2,
           "digest": "c962ca12693bf639b1eeb2c9e5a5e90988ab334038e8daff0c1cd05454b57038"
+        },
+        {
+          "key_tag": 53289,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "587eebddd5ccd11f788442b1013459468aa0fca1fd667c74049f390025a6e22a"
         }
       ],
       "nameservers": [
@@ -36405,7 +36411,7 @@
       "rdap_server": "https://rdap.publicinterestregistry.org/rdap/",
       "tld_created": "2018-05-17",
       "tld_updated": [
-        "2026-11-04"
+        "2026-11-13"
       ],
       "events": {
         "delegation": "2018-06-07"
@@ -36433,12 +36439,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 52489,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "fa42c0a07830a438c791e59d07b39121b72564a6b0af5eb4f2235e5d16d656f7"
-        },
         {
           "key_tag": 41827,
           "algorithm": 8,
@@ -59383,7 +59383,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-09-11",
       "tld_updated": [
-        "2026-10-30"
+        "2026-11-13"
       ],
       "events": {
         "delegation": "2014-10-22"
@@ -59406,12 +59406,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 58186,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "b19e38544f1c313575b683c8533acf792a0373c18f270ed0a1ebd2c3f77a291b"
-        },
         {
           "key_tag": 5957,
           "algorithm": 8,
@@ -70892,7 +70886,7 @@
       "rdap_server": "https://rdap.publicinterestregistry.org/rdap/",
       "tld_created": "2014-02-06",
       "tld_updated": [
-        "2026-11-04"
+        "2026-11-13"
       ],
       "events": {
         "delegation": "2014-02-11"
@@ -70920,12 +70914,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 50359,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "b440325c92cab8d16072f62301b71032691fd4c5d46ed01278cf945b0f8e360b"
-        },
         {
           "key_tag": 30514,
           "algorithm": 8,
@@ -71876,7 +71864,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-04-03",
       "tld_updated": [
-        "2026-11-04"
+        "2026-11-13"
       ],
       "events": {
         "delegation": "2014-04-19"
@@ -71899,12 +71887,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 44230,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "50f935219610318d526521f0e31c70705b462bde2c9fdba142969b27207b3b7f"
-        },
         {
           "key_tag": 4544,
           "algorithm": 8,
@@ -77157,7 +77139,7 @@
       "rdap_server": "https://rdap.publicinterestregistry.org/rdap/",
       "tld_created": "2014-05-29",
       "tld_updated": [
-        "2026-11-04"
+        "2026-11-13"
       ],
       "events": {
         "delegation": "2014-06-04"
@@ -77185,12 +77167,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 51526,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "d1dd06d869102253fe38e8f665571b0f10a7f2c24ad4a92c10c47503919a6e1d"
-        },
         {
           "key_tag": 45025,
           "algorithm": 8,
@@ -77345,7 +77321,7 @@
       "rdap_server": "https://rdap.publicinterestregistry.org/rdap/",
       "tld_created": "2015-06-11",
       "tld_updated": [
-        "2026-11-04"
+        "2026-11-13"
       ],
       "events": {
         "delegation": "2015-08-06"
@@ -77373,12 +77349,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 42049,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "51655c1edba06b3c2329578ade539d446169f70f06adfd536c0ef7b315506a1f"
-        },
         {
           "key_tag": 57566,
           "algorithm": 8,
@@ -84880,7 +84850,7 @@
         "iana": {
           "sponsor": "HDFC Bank Limited",
           "admin": "HDFC Bank Limited",
-          "tech": "Afilias"
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "HDFC BANK LIMITED",
@@ -84898,7 +84868,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-02-05",
       "tld_updated": [
-        "2023-08-23"
+        "2026-11-13"
       ],
       "events": {
         "delegation": "2016-02-11"
@@ -84930,6 +84900,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "b8f2ca908cc4e3526a25ad74da7f2d9962b4a1692805ae8f5c0cef5542745029"
+        },
+        {
+          "key_tag": 30971,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "aca2743cae6c486e4cecc0ce1765740c8d7351c0d2f51abc82857ac0efeb7bbc"
         }
       ],
       "nameservers": [
@@ -85526,14 +85502,14 @@
       "type": "gtld",
       "orgs": {
         "icann": {
-          "registry_operator": "City of Helsinki",
-          "specification_13": false,
-          "third_or_lower_level_registration": false,
-          "application_id": "1-1865-66478",
+          "registry_operator": null,
+          "specification_13": null,
+          "third_or_lower_level_registration": null,
+          "application_id": null,
           "registry_operator_country_code": null,
-          "date_contract_signed": "2015-02-05",
+          "date_contract_signed": null,
           "date_delegated": "2016-01-26",
-          "contract_terminated": false,
+          "contract_terminated": true,
           "date_removed": "2026-10-28"
         }
       },
@@ -96995,7 +96971,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-05-29",
       "tld_updated": [
-        "2026-10-30"
+        "2026-11-13"
       ],
       "events": {
         "delegation": "2015-07-11"
@@ -97018,12 +96994,6 @@
         "geographic_scope": "city"
       },
       "ds_records": [
-        {
-          "key_tag": 2221,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "7f26778aff98dad019476832c62ce0399f247ba6f4f8e10bf26b8c80db6e30d9"
-        },
         {
           "key_tag": 47420,
           "algorithm": 8,
@@ -97140,7 +97110,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-05-29",
       "tld_updated": [
-        "2026-10-30"
+        "2026-11-13"
       ],
       "events": {
         "delegation": "2015-07-11"
@@ -97163,12 +97133,6 @@
         "geographic_scope": "city"
       },
       "ds_records": [
-        {
-          "key_tag": 61630,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "3ebb91801cf0d1a67a84b4f1e265b248a3e3b0459c30d3631955e98a31a430d8"
-        },
         {
           "key_tag": 2354,
           "algorithm": 8,
@@ -127153,7 +127117,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "1995-10-06",
       "tld_updated": [
-        "2026-10-29"
+        "2026-11-13"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -127167,12 +127131,6 @@
         "geographic_scope": "country"
       },
       "ds_records": [
-        {
-          "key_tag": 46330,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "35d980186cac1554ef565ac20a1b774a480a111d63d594c5913e83d7f5e3867e"
-        },
         {
           "key_tag": 46579,
           "algorithm": 8,
@@ -132055,7 +132013,7 @@
       "rdap_server": "https://rdap.publicinterestregistry.org/rdap/",
       "tld_created": "2014-07-10",
       "tld_updated": [
-        "2026-11-04"
+        "2026-11-13"
       ],
       "events": {
         "delegation": "2014-07-18"
@@ -132084,12 +132042,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 23944,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "dfec23291372ba32bc2bde96f88a383373be1c4ba7bcdb65d5e34f1607400f63"
-        },
         {
           "key_tag": 4621,
           "algorithm": 8,
@@ -137719,7 +137671,7 @@
       "rdap_server": "https://rdap.publicinterestregistry.org/rdap/",
       "tld_created": "2014-07-10",
       "tld_updated": [
-        "2026-11-04"
+        "2026-11-13"
       ],
       "events": {
         "delegation": "2014-07-27"
@@ -137748,12 +137700,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 45685,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "535cba6cfb082ffcce6584c2958dcbdf706a21de784096a2738b3acd8d643032"
-        },
         {
           "key_tag": 16340,
           "algorithm": 8,
@@ -138891,7 +138837,7 @@
       "rdap_server": "https://rdap.publicinterestregistry.org/rdap/",
       "tld_created": "1985-01-01",
       "tld_updated": [
-        "2026-11-04"
+        "2026-11-13"
       ],
       "annotations": {
         "iana_sponsor_alias": "PIR",
@@ -138917,12 +138863,6 @@
       },
       "ds_records": [
         {
-          "key_tag": 26974,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "4fede294c53f438a158c41d39489cd78a86beb0d8a0aeaff14745c0d16e1de32"
-        },
-        {
           "key_tag": 725,
           "algorithm": 8,
           "digest_type": 2,
@@ -138930,63 +138870,6 @@
         }
       ],
       "nameservers": [
-        {
-          "hostname": "a2.org.afilias-nst.info",
-          "ipv4": [
-            {
-              "ip": "199.249.112.1",
-              "asn": 207266,
-              "as_org": "AFiLIAS-SECONDARY-DNS Identity Digital Limited",
-              "as_country": "IE"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2001:500:40::1",
-              "asn": 207266,
-              "as_org": "AFiLIAS-SECONDARY-DNS Identity Digital Limited",
-              "as_country": "IE"
-            }
-          ]
-        },
-        {
-          "hostname": "b2.org.afilias-nst.org",
-          "ipv4": [
-            {
-              "ip": "199.249.120.1",
-              "asn": 207266,
-              "as_org": "AFiLIAS-SECONDARY-DNS Identity Digital Limited",
-              "as_country": "IE"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2001:500:48::1",
-              "asn": 207266,
-              "as_org": "AFiLIAS-SECONDARY-DNS Identity Digital Limited",
-              "as_country": "IE"
-            }
-          ]
-        },
-        {
-          "hostname": "d0.org.afilias-nst.org",
-          "ipv4": [
-            {
-              "ip": "199.19.57.1",
-              "asn": 12041,
-              "as_org": "AS-AFILIAS1 - Afilias, Inc.",
-              "as_country": "US"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2001:500:f::1",
-              "asn": 12041,
-              "as_org": "AS-AFILIAS1 - Afilias, Inc.",
-              "as_country": "US"
-            }
-          ]
-        },
         {
           "hostname": "v0n0.pir-ns.org",
           "ipv4": [
@@ -139041,6 +138924,63 @@
               "asn": 12041,
               "as_org": "AS-AFILIAS1 - Afilias, Inc.",
               "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "v0n3.pir-ns.org",
+          "ipv4": [
+            {
+              "ip": "199.19.57.1",
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1 - Afilias, Inc.",
+              "as_country": "US"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2001:500:f::1",
+              "asn": 12041,
+              "as_org": "AS-AFILIAS1 - Afilias, Inc.",
+              "as_country": "US"
+            }
+          ]
+        },
+        {
+          "hostname": "v2n0.pir-ns.org",
+          "ipv4": [
+            {
+              "ip": "199.249.112.1",
+              "asn": 207266,
+              "as_org": "AFiLIAS-SECONDARY-DNS Identity Digital Limited",
+              "as_country": "IE"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2001:500:40::1",
+              "asn": 207266,
+              "as_org": "AFiLIAS-SECONDARY-DNS Identity Digital Limited",
+              "as_country": "IE"
+            }
+          ]
+        },
+        {
+          "hostname": "v2n1.pir-ns.org",
+          "ipv4": [
+            {
+              "ip": "199.249.120.1",
+              "asn": 207266,
+              "as_org": "AFiLIAS-SECONDARY-DNS Identity Digital Limited",
+              "as_country": "IE"
+            }
+          ],
+          "ipv6": [
+            {
+              "ip": "2001:500:48::1",
+              "asn": 207266,
+              "as_org": "AFiLIAS-SECONDARY-DNS Identity Digital Limited",
+              "as_country": "IE"
             }
           ]
         }
@@ -164227,7 +164167,7 @@
         "iana": {
           "sponsor": "Scholarships.com, LLC",
           "admin": "Scholarships.com, LLC",
-          "tech": "Afilias"
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "Scholarships.com, LLC",
@@ -164246,7 +164186,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-07-10",
       "tld_updated": [
-        "2023-08-03"
+        "2026-11-13"
       ],
       "events": {
         "delegation": "2015-04-02"
@@ -164273,6 +164213,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "24261732a51a4d33adc9a823ee1e38139bcabbda2f4c2eb7f6c8ceb3480b64b6"
+        },
+        {
+          "key_tag": 31619,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "61c036ef0f8daa057795969eb9afa3c09ba47846cbe8e4999350dcdcfb12236e"
         }
       ],
       "nameservers": [
@@ -195636,7 +195582,7 @@
         "iana": {
           "sponsor": "Dot Vegas, Inc.",
           "admin": "Dot Vegas Inc.",
-          "tech": "Afilias"
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "Dot Vegas, Inc.",
@@ -195655,7 +195601,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-03-20",
       "tld_updated": [
-        "2023-08-03"
+        "2026-11-13"
       ],
       "events": {
         "delegation": "2014-03-31"
@@ -195683,6 +195629,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "612d11e84db7671f5dc9b54fb8944d57474de91ca498ca80b6ebc05c162c3af0"
+        },
+        {
+          "key_tag": 22567,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "bf4a87f0321beecc839cfb550c26fb2512556c5bc50310a3ecb67944917f946c"
         }
       ],
       "nameservers": [
@@ -213142,7 +213094,7 @@
       "rdap_server": "https://rdap.publicinterestregistry.org/rdap/",
       "tld_created": "2014-02-27",
       "tld_updated": [
-        "2026-11-05"
+        "2026-11-13"
       ],
       "events": {
         "delegation": "2014-03-05"
@@ -213175,12 +213127,6 @@
         "language_code_source": "IANA"
       },
       "ds_records": [
-        {
-          "key_tag": 16534,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "85d1ff435e850dcef97843fd4ceed2d36ceec9186ddcbc5fb3bd9ad440d7c398"
-        },
         {
           "key_tag": 54134,
           "algorithm": 8,
@@ -218737,7 +218683,7 @@
       "rdap_server": "https://rdap.publicinterestregistry.org/rdap/",
       "tld_created": "2014-02-27",
       "tld_updated": [
-        "2026-11-05"
+        "2026-11-13"
       ],
       "events": {
         "delegation": "2014-03-09"
@@ -218771,12 +218717,6 @@
         "language_code_source": "IANA"
       },
       "ds_records": [
-        {
-          "key_tag": 45889,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "1ef7aca91f4ef292f518f1fcf77a646c21d7aa2594e3bd4af18906af70774604"
-        },
         {
           "key_tag": 51181,
           "algorithm": 8,
@@ -225280,7 +225220,7 @@
       "rdap_server": "https://rdap.publicinterestregistry.org/rdap/",
       "tld_created": "2014-02-27",
       "tld_updated": [
-        "2026-11-05"
+        "2026-11-13"
       ],
       "events": {
         "delegation": "2014-03-09"
@@ -225314,12 +225254,6 @@
         "language_code_source": "IANA"
       },
       "ds_records": [
-        {
-          "key_tag": 22459,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "435a53c55e065976a2c03f1d8b09241a6ec3ea90d63d6cdaecd0ed93daf61e99"
-        },
         {
           "key_tag": 19774,
           "algorithm": 8,
@@ -225438,7 +225372,7 @@
       "rdap_server": "https://rdap.publicinterestregistry.org/rdap/",
       "tld_created": "2014-02-27",
       "tld_updated": [
-        "2026-11-05"
+        "2026-11-13"
       ],
       "events": {
         "delegation": "2014-03-09"
@@ -225472,12 +225406,6 @@
         "language_code_source": "IANA"
       },
       "ds_records": [
-        {
-          "key_tag": 28897,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "6429b014e65ce5bd280e303e77c65ed29b9018fd717157b19871cd63994758f2"
-        },
         {
           "key_tag": 45947,
           "algorithm": 8,

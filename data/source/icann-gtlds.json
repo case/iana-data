@@ -6201,17 +6201,17 @@
     "thirdOrLowerLevelRegistration" : false,
     "uLabel" : null
   }, {
-    "applicationId" : "1-1865-66478",
-    "contractTerminated" : false,
-    "dateOfContractSignature" : "2015-02-05",
+    "applicationId" : null,
+    "contractTerminated" : true,
+    "dateOfContractSignature" : null,
     "delegationDate" : "2016-01-26",
     "gTLD" : "helsinki",
     "registryClassDomainNameList" : null,
-    "registryOperator" : "City of Helsinki",
+    "registryOperator" : null,
     "registryOperatorCountryCode" : null,
     "removalDate" : "2026-10-28",
-    "specification13" : false,
-    "thirdOrLowerLevelRegistration" : false,
+    "specification13" : null,
+    "thirdOrLowerLevelRegistration" : null,
     "uLabel" : null
   }, {
     "applicationId" : "1-1140-20987",
@@ -16588,6 +16588,6 @@
     "thirdOrLowerLevelRegistration" : false,
     "uLabel" : null
   } ],
-  "updatedOn" : "2026-11-13T05:46:50.783+0000",
+  "updatedOn" : "2026-11-14T05:46:51.401+0000",
   "version" : 2
 }

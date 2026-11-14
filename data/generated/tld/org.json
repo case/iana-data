@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T22:19:37Z",
+  "publication": "2026-11-14T08:33:33Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -35,7 +35,7 @@
     "rdap_server": "https://rdap.publicinterestregistry.org/rdap/",
     "tld_created": "1985-01-01",
     "tld_updated": [
-      "2026-11-04"
+      "2026-11-13"
     ],
     "annotations": {
       "iana_sponsor_alias": "PIR",
@@ -61,12 +61,6 @@
     },
     "ds_records": [
       {
-        "key_tag": 26974,
-        "algorithm": 8,
-        "digest_type": 2,
-        "digest": "4fede294c53f438a158c41d39489cd78a86beb0d8a0aeaff14745c0d16e1de32"
-      },
-      {
         "key_tag": 725,
         "algorithm": 8,
         "digest_type": 2,
@@ -74,63 +68,6 @@
       }
     ],
     "nameservers": [
-      {
-        "hostname": "a2.org.afilias-nst.info",
-        "ipv4": [
-          {
-            "ip": "199.249.112.1",
-            "asn": 207266,
-            "as_org": "AFiLIAS-SECONDARY-DNS Identity Digital Limited",
-            "as_country": "IE"
-          }
-        ],
-        "ipv6": [
-          {
-            "ip": "2001:500:40::1",
-            "asn": 207266,
-            "as_org": "AFiLIAS-SECONDARY-DNS Identity Digital Limited",
-            "as_country": "IE"
-          }
-        ]
-      },
-      {
-        "hostname": "b2.org.afilias-nst.org",
-        "ipv4": [
-          {
-            "ip": "199.249.120.1",
-            "asn": 207266,
-            "as_org": "AFiLIAS-SECONDARY-DNS Identity Digital Limited",
-            "as_country": "IE"
-          }
-        ],
-        "ipv6": [
-          {
-            "ip": "2001:500:48::1",
-            "asn": 207266,
-            "as_org": "AFiLIAS-SECONDARY-DNS Identity Digital Limited",
-            "as_country": "IE"
-          }
-        ]
-      },
-      {
-        "hostname": "d0.org.afilias-nst.org",
-        "ipv4": [
-          {
-            "ip": "199.19.57.1",
-            "asn": 12041,
-            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
-            "as_country": "US"
-          }
-        ],
-        "ipv6": [
-          {
-            "ip": "2001:500:f::1",
-            "asn": 12041,
-            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
-            "as_country": "US"
-          }
-        ]
-      },
       {
         "hostname": "v0n0.pir-ns.org",
         "ipv4": [
@@ -185,6 +122,63 @@
             "asn": 12041,
             "as_org": "AS-AFILIAS1 - Afilias, Inc.",
             "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "v0n3.pir-ns.org",
+        "ipv4": [
+          {
+            "ip": "199.19.57.1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
+            "as_country": "US"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:f::1",
+            "asn": 12041,
+            "as_org": "AS-AFILIAS1 - Afilias, Inc.",
+            "as_country": "US"
+          }
+        ]
+      },
+      {
+        "hostname": "v2n0.pir-ns.org",
+        "ipv4": [
+          {
+            "ip": "199.249.112.1",
+            "asn": 207266,
+            "as_org": "AFiLIAS-SECONDARY-DNS Identity Digital Limited",
+            "as_country": "IE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:40::1",
+            "asn": 207266,
+            "as_org": "AFiLIAS-SECONDARY-DNS Identity Digital Limited",
+            "as_country": "IE"
+          }
+        ]
+      },
+      {
+        "hostname": "v2n1.pir-ns.org",
+        "ipv4": [
+          {
+            "ip": "199.249.120.1",
+            "asn": 207266,
+            "as_org": "AFiLIAS-SECONDARY-DNS Identity Digital Limited",
+            "as_country": "IE"
+          }
+        ],
+        "ipv6": [
+          {
+            "ip": "2001:500:48::1",
+            "asn": 207266,
+            "as_org": "AFiLIAS-SECONDARY-DNS Identity Digital Limited",
+            "as_country": "IE"
           }
         ]
       }
