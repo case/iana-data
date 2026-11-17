@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-15T08:47:54Z",
+  "publication": "2026-11-17T10:08:22Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -28552,7 +28552,7 @@
       "rdap_server": "https://rdap.nic.buzz/",
       "tld_created": "2013-12-12",
       "tld_updated": [
-        "2024-05-11"
+        "2026-11-16"
       ],
       "events": {
         "delegation": "2013-12-18"
@@ -28579,6 +28579,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "fba59e35952704ae0656bc122aec20528c8d49600e314e8bdf0ae00ce8c336b7"
+        },
+        {
+          "key_tag": 13643,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "896a171b1427913a8844e66d87e729daa7d84b32cc0d41a9596fade82e41c1ed"
         }
       ],
       "nameservers": [
@@ -31448,7 +31454,7 @@
       "rdap_server": "https://rdap.nic.capitalone/",
       "tld_created": "2016-08-04",
       "tld_updated": [
-        "2025-08-13"
+        "2026-11-16"
       ],
       "events": {
         "delegation": "2016-08-10"
@@ -31471,12 +31477,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 16365,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "017564f7c0204b23e19605e08e5dcf57c286d6d5097b53440de91d4f04d3abac"
-        },
         {
           "key_tag": 35674,
           "algorithm": 8,
@@ -39782,8 +39782,8 @@
       "type": "gtld",
       "orgs": {
         "iana": {
-          "sponsor": "Internet Naming Co.",
-          "admin": "Internet Naming Co.",
+          "sponsor": "Waterford Limited",
+          "admin": "Waterford Limited",
           "tech": "Tucows.com, Co."
         },
         "icann": {
@@ -39803,7 +39803,7 @@
       "rdap_server": "https://rdap.registry.click/rdap/",
       "tld_created": "2014-08-15",
       "tld_updated": [
-        "2026-06-16"
+        "2026-11-16"
       ],
       "events": {
         "delegation": "2014-08-16"
@@ -76037,7 +76037,7 @@
       "rdap_server": "https://rdap.nic.george/",
       "tld_created": "2016-07-21",
       "tld_updated": [
-        "2024-11-20"
+        "2026-11-16"
       ],
       "events": {
         "delegation": "2016-08-18"
@@ -76066,12 +76066,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 1759,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "0caa1f5ae9c0e736030b351ab71bb351053798ce39b3b662ceefdb956057d5fe"
-        },
         {
           "key_tag": 52471,
           "algorithm": 8,
@@ -82098,7 +82092,7 @@
       "rdap_server": "https://rdap.nic.grocery/",
       "tld_created": "2017-06-08",
       "tld_updated": [
-        "2024-11-20"
+        "2026-11-16"
       ],
       "events": {
         "delegation": "2017-06-28"
@@ -82126,12 +82120,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 58537,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "3306b36e70fe436fc00b50acd0d7c0dab84db02062907f3ff5cece68f09cb68c"
-        },
         {
           "key_tag": 18634,
           "algorithm": 8,
@@ -113590,7 +113578,7 @@
       "rdap_server": "https://rdap.registry.love/rdap/",
       "tld_created": "2015-03-25",
       "tld_updated": [
-        "2025-12-12"
+        "2026-11-16"
       ],
       "events": {
         "delegation": "2015-04-02"
@@ -153252,8 +153240,8 @@
       "type": "gtld",
       "orgs": {
         "iana": {
-          "sponsor": "Internet Naming Co.",
-          "admin": "Internet Naming Co.",
+          "sponsor": "Waterford Limited",
+          "admin": "Waterford Limited",
           "tech": "Tucows.com, Co."
         },
         "icann": {
@@ -153273,7 +153261,7 @@
       "rdap_server": "https://rdap.registry.click/rdap/",
       "tld_created": "2015-06-11",
       "tld_updated": [
-        "2025-12-12"
+        "2026-11-16"
       ],
       "events": {
         "delegation": "2015-07-01"
@@ -161383,7 +161371,7 @@
       "rdap_server": "https://rdap.nic.samsclub/",
       "tld_created": "2016-07-21",
       "tld_updated": [
-        "2024-11-20"
+        "2026-11-16"
       ],
       "events": {
         "delegation": "2016-08-18"
@@ -161412,12 +161400,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 60532,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "3d5123de8729f24800c0715726142c8317b27134af028dc67f541de50903643b"
-        },
         {
           "key_tag": 35602,
           "algorithm": 8,
@@ -200608,7 +200590,7 @@
       "rdap_server": "https://rdap.nic.walmart/",
       "tld_created": "2016-07-21",
       "tld_updated": [
-        "2024-11-20"
+        "2026-11-16"
       ],
       "events": {
         "delegation": "2016-08-18"
@@ -200637,12 +200619,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 34531,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "e09b4ccfa8a68b1d6a13042fa28a343782d0d1b4bf3e79c6a1415d3b2825b922"
-        },
         {
           "key_tag": 4411,
           "algorithm": 8,
