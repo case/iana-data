@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-17T10:08:22Z",
+  "publication": "2026-11-18T09:42:45Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -1108,7 +1108,7 @@
       "rdap_server": "https://rdap.nic.able/",
       "tld_created": "2016-03-03",
       "tld_updated": [
-        "2024-05-11"
+        "2026-11-17"
       ],
       "events": {
         "delegation": "2016-06-21"
@@ -1135,6 +1135,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "6effec2f6db34b2d1086a3b4cedd6e4109135877e533d6d1bf0f7ca760eb018f"
+        },
+        {
+          "key_tag": 26098,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "5f99abd27b0d2b9548ea6f5e12fadbe97cc8cea77c107e729f46dfd907116840"
         }
       ],
       "nameservers": [
@@ -4831,7 +4837,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "1995-02-16",
       "tld_updated": [
-        "2026-10-30"
+        "2026-11-17"
       ],
       "annotations": {
         "rdap_source": "IANA",
@@ -4845,12 +4851,6 @@
         "geographic_scope": "country"
       },
       "ds_records": [
-        {
-          "key_tag": 3799,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "8a8030d4661ae6fcf417349682ac058648371002e70e717e4cf2f11f83543385"
-        },
         {
           "key_tag": 1814,
           "algorithm": 8,
@@ -8126,7 +8126,7 @@
       "rdap_server": "https://rdap.nic.amica/",
       "tld_created": "2015-08-06",
       "tld_updated": [
-        "2024-05-11"
+        "2026-11-17"
       ],
       "events": {
         "delegation": "2015-08-29"
@@ -8154,6 +8154,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "d2d98dd38d76b5819cd3079b1772ea5370f5cd0843cd53af0569985c6d92599f"
+        },
+        {
+          "key_tag": 20663,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "5e4bfcd2fc6bdff0ec82ab9fa2845f187cac00f327537d36fb83b7b2978f4162"
         }
       ],
       "nameservers": [
@@ -23103,7 +23109,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "1993-03-31",
       "tld_updated": [
-        "2026-10-26"
+        "2026-11-17"
       ],
       "annotations": {
         "iana_tech_alias": "Identity Digital",
@@ -23119,12 +23125,6 @@
         "geographic_scope": "country"
       },
       "ds_records": [
-        {
-          "key_tag": 37810,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "e3e102b0b9334884c32ba5ee04c628e94d9d66b9026287109066ebeeecfebc20"
-        },
         {
           "key_tag": 5636,
           "algorithm": 8,
@@ -33963,7 +33963,7 @@
       "rdap_server": "https://rdap.nic.catholic/",
       "tld_created": "2016-11-16",
       "tld_updated": [
-        "2023-12-21"
+        "2026-11-17"
       ],
       "events": {
         "delegation": "2016-12-01"
@@ -33989,6 +33989,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "a6aac594f31e65e79e0dcede4d0a0b10eaa0f4db43dd7174fd928e01bd5542a0"
+        },
+        {
+          "key_tag": 48425,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "6f954cb606cfc10f045318505ac80fc9223f5ea0d930c2b7744dcef16827cdc7"
         }
       ],
       "nameservers": [
@@ -117694,7 +117700,7 @@
       "orgs": {
         "iana": {
           "sponsor": "Marriott Worldwide Corporation",
-          "admin": "FairWinds Partners",
+          "admin": "FairWinds (USA) Inc.",
           "tech": "Identity Digital Limited"
         },
         "icann": {
@@ -117714,7 +117720,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-12-18",
       "tld_updated": [
-        "2026-11-05"
+        "2026-11-17"
       ],
       "events": {
         "delegation": "2015-01-14"
@@ -133846,7 +133852,7 @@
       "rdap_server": "https://rdap.nic.norton/",
       "tld_created": "2015-09-24",
       "tld_updated": [
-        "2025-08-14"
+        "2026-11-17"
       ],
       "events": {
         "delegation": "2015-12-03"
@@ -133869,12 +133875,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 13095,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "8a3e13067f0237e9f16d0c6d25c72b262af2e49bbba4345c70e1ba5fd19ac321"
-        },
         {
           "key_tag": 47347,
           "algorithm": 8,
@@ -167198,7 +167198,7 @@
         "iana": {
           "sponsor": "SEW-EURODRIVE GmbH & Co KG",
           "admin": "SEW-EURODRIVE GmbH & Co KG",
-          "tech": "Afilias Limited"
+          "tech": "Identity Digital Limited"
         },
         "icann": {
           "registry_operator": "SEW-EURODRIVE GmbH & Co KG",
@@ -167217,7 +167217,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-11-06",
       "tld_updated": [
-        "2023-08-15"
+        "2026-11-17"
       ],
       "events": {
         "delegation": "2014-12-13"
@@ -167245,6 +167245,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "f058b69dc4842232e352dbe1485dfc257ad1627aee9f4bf4decd967307e30b1d"
+        },
+        {
+          "key_tag": 51979,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "d92d8dff7f16573a2f13fe7df48dd101d49e54a198939b0959c485cdd0fbf0c6"
         }
       ],
       "nameservers": [
@@ -211137,7 +211143,7 @@
       "rdap_server": "https://rdap.nic.xn--80aqecdr1a/",
       "tld_created": "2016-11-16",
       "tld_updated": [
-        "2023-12-21"
+        "2026-11-17"
       ],
       "events": {
         "delegation": "2016-12-01"
@@ -211169,6 +211175,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "1c651bd0c4b0b51d953b5baab9df5fb4256b88ca5883cea94ae060c1e5c313a4"
+        },
+        {
+          "key_tag": 25454,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "03869d6516c911faf7fec032f1c422e27dc93e9e3776555b40bdb2e71887c0a8"
         }
       ],
       "nameservers": [
@@ -223407,7 +223419,7 @@
       "rdap_server": "https://rdap.nic.xn--mgbi4ecexp/",
       "tld_created": "2016-11-16",
       "tld_updated": [
-        "2023-12-21"
+        "2026-11-17"
       ],
       "events": {
         "delegation": "2016-12-01"
@@ -223439,6 +223451,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "308b25083f486a76906992484720bd2f9f944fcb49111512ea95957417f3c03d"
+        },
+        {
+          "key_tag": 45810,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "da047b9ddbe048d9ad32c38edf573b52f43557a1a0464cc97cae4007ac80718f"
         }
       ],
       "nameservers": [
@@ -228535,7 +228553,7 @@
       "rdap_server": "https://rdap.nic.xn--tiq49xqyj/",
       "tld_created": "2016-11-16",
       "tld_updated": [
-        "2023-12-21"
+        "2026-11-17"
       ],
       "events": {
         "delegation": "2016-12-01"
@@ -228567,6 +228585,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "c1fbac37a1a9b6fb9dc85ba47c7f98ad7cf2d78cbbd3cda8c93d389870616ba0"
+        },
+        {
+          "key_tag": 51024,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "04e2e54d1a6f0bdee01b7f50af5175407dbba68e370bcc5bca1b789034ed9543"
         }
       ],
       "nameservers": [

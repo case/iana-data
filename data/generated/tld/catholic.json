@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T22:19:37Z",
+  "publication": "2026-11-18T09:42:45Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -34,7 +34,7 @@
     "rdap_server": "https://rdap.nic.catholic/",
     "tld_created": "2016-11-16",
     "tld_updated": [
-      "2023-12-21"
+      "2026-11-17"
     ],
     "events": {
       "delegation": "2016-12-01"
@@ -60,6 +60,12 @@
         "algorithm": 8,
         "digest_type": 2,
         "digest": "a6aac594f31e65e79e0dcede4d0a0b10eaa0f4db43dd7174fd928e01bd5542a0"
+      },
+      {
+        "key_tag": 48425,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "6f954cb606cfc10f045318505ac80fc9223f5ea0d930c2b7744dcef16827cdc7"
       }
     ],
     "nameservers": [

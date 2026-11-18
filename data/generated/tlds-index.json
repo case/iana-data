@@ -1,6 +1,6 @@
 {
   "description": "Index of per-TLD data files at data/generated/tld/",
-  "publication": "2026-11-17T10:08:22Z",
+  "publication": "2026-11-18T09:42:45Z",
   "count": 1603,
   "tlds": [
     {
@@ -72,7 +72,7 @@
       "delegated": true,
       "tld_created": "2016-03-03",
       "tld_updated": [
-        "2024-05-11"
+        "2026-11-17"
       ]
     },
     {
@@ -306,7 +306,7 @@
       "delegated": true,
       "tld_created": "1995-02-16",
       "tld_updated": [
-        "2026-10-30"
+        "2026-11-17"
       ]
     },
     {
@@ -509,7 +509,7 @@
       "delegated": true,
       "tld_created": "2015-08-06",
       "tld_updated": [
-        "2024-05-11"
+        "2026-11-17"
       ]
     },
     {
@@ -1400,7 +1400,7 @@
       "delegated": true,
       "tld_created": "1993-03-31",
       "tld_updated": [
-        "2026-10-26"
+        "2026-11-17"
       ]
     },
     {
@@ -2057,7 +2057,7 @@
       "delegated": true,
       "tld_created": "2016-11-16",
       "tld_updated": [
-        "2023-12-21"
+        "2026-11-17"
       ]
     },
     {
@@ -7229,7 +7229,7 @@
       "delegated": true,
       "tld_created": "2014-12-18",
       "tld_updated": [
-        "2026-11-05"
+        "2026-11-17"
       ]
     },
     {
@@ -8299,7 +8299,7 @@
       "delegated": true,
       "tld_created": "2015-09-24",
       "tld_updated": [
-        "2025-08-14"
+        "2026-11-17"
       ]
     },
     {
@@ -10248,7 +10248,7 @@
       "delegated": true,
       "tld_created": "2014-11-06",
       "tld_updated": [
-        "2023-08-15"
+        "2026-11-17"
       ]
     },
     {
@@ -12928,7 +12928,7 @@
       "delegated": true,
       "tld_created": "2016-11-16",
       "tld_updated": [
-        "2023-12-21"
+        "2026-11-17"
       ]
     },
     {
@@ -13798,7 +13798,7 @@
       "delegated": true,
       "tld_created": "2016-11-16",
       "tld_updated": [
-        "2023-12-21"
+        "2026-11-17"
       ]
     },
     {
@@ -14148,7 +14148,7 @@
       "delegated": true,
       "tld_created": "2016-11-16",
       "tld_updated": [
-        "2023-12-21"
+        "2026-11-17"
       ]
     },
     {

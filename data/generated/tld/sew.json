@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T22:19:37Z",
+  "publication": "2026-11-18T09:42:45Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,7 +16,7 @@
       "iana": {
         "sponsor": "SEW-EURODRIVE GmbH & Co KG",
         "admin": "SEW-EURODRIVE GmbH & Co KG",
-        "tech": "Afilias Limited"
+        "tech": "Identity Digital Limited"
       },
       "icann": {
         "registry_operator": "SEW-EURODRIVE GmbH & Co KG",
@@ -35,7 +35,7 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "2014-11-06",
     "tld_updated": [
-      "2023-08-15"
+      "2026-11-17"
     ],
     "events": {
       "delegation": "2014-12-13"
@@ -63,6 +63,12 @@
         "algorithm": 8,
         "digest_type": 2,
         "digest": "f058b69dc4842232e352dbe1485dfc257ad1627aee9f4bf4decd967307e30b1d"
+      },
+      {
+        "key_tag": 51979,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "d92d8dff7f16573a2f13fe7df48dd101d49e54a198939b0959c485cdd0fbf0c6"
       }
     ],
     "nameservers": [
