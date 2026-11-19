@@ -118,15 +118,6 @@
       "monitoring": true
     },
     {
-      "tld": "pr",
-      "rdapServer": "https://rdap.identitydigital.services/rdap/",
-      "backendOperator": "Identity Digital Inc.",
-      "dateUpdated": "2024-04-30",
-      "source": "Manually discovered",
-      "notes": "",
-      "monitoring": true
-    },
-    {
       "tld": "sh",
       "rdapServer": "https://rdap.identitydigital.services/rdap/",
       "backendOperator": "Identity Digital Inc.",
