@@ -1,3 +1,16 @@
+# Matches every jdx/mise-action version: and Renovate's constraints.mise; tests/ci/test_mise_lock.py checks they agree.
+min_version = "2026.11.4"
+
+[settings]
+lockfile = true
+lockfile_platforms = ["linux-x64", "linux-arm64", "macos-x64", "macos-arm64"]
+# uv owns Python via .python-version; a global mise setting must not add it to this repo's lock.
+idiomatic_version_file_enable_tools = []
+
+# Strict installs for this repo's tools only, not the global config's. Why: docs/memory/log/2026-11-19-mise-renovate.md
+[tool_config]
+locked = true
+
 # Bootstrap tools
 [tools]
 # pyproject.toml's [tool.uv] required-version stays the authority on what uv the

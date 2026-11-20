@@ -1,0 +1,36 @@
+name: Renovate mise tools
+
+on:
+  schedule:
+    # Weekly, Mondays 05:00 UTC
+    - cron: "0 5 * * 1"
+  workflow_dispatch: # Allow manual triggering
+
+concurrency:
+  group: renovate-mise
+  cancel-in-progress: false
+
+permissions: {}
+
+jobs:
+  renovate-mise:
+    permissions:
+      contents: write
+      issues: read # Renovate's repository query always reads issues
+      pull-requests: write
+    runs-on: ubuntu-26.04
+    timeout-minutes: 20
+
+    steps:
+      # For the local action and the report check's mise.toml; Renovate clones on its own.
+      - name: Check out repository
+        timeout-minutes: 2
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Propose mise tool updates
+        timeout-minutes: 15
+        uses: ./.github/actions/mise-renovate
+        with:
+          token: ${{ github.token }}

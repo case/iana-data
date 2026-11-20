@@ -41,6 +41,8 @@ jobs:
       - name: Install mise and the pinned toolchain
         timeout-minutes: 5
         uses: jdx/mise-action@b44d12e7d0d8ee7461bb893e1b1993500433185b # v5.2.7
+        with:
+          version: "2026.11.4" # Matches mise.toml min_version
 
       # Exit 1 means drift or an unreachable article, but a crash and a missing
       # places.json exit 1 too, so the check's own summary line is what proves it

@@ -27,7 +27,8 @@ updates:
 
   # GitHub Actions
   - package-ecosystem: "github-actions"
-    directory: "/"
+    # "/" scans only .github/workflows and a root action.yml, not local composite actions.
+    directories: ["/", "/.github/actions/*"]
     open-pull-requests-limit: 10
     cooldown:
       default-days: 7

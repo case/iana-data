@@ -1,0 +1,44 @@
+{
+  "platform": "github",
+  "exitCodeForErrors": true,
+  "reportType": "file",
+  "reportPath": "/tmp/renovate-report.json",
+  "onboarding": false,
+  "requireConfig": "ignored",
+  "username": "github-actions[bot]",
+  "gitAuthor": "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>",
+  "platformCommit": "enabled",
+  "allowedUnsafeExecutions": [],
+  "constraints": {
+    "mise": "2026.11.4"
+  },
+  "enabledManagers": [
+    "mise"
+  ],
+  "includePaths": [
+    "mise.toml",
+    "mise.lock"
+  ],
+  "rangeStrategy": "pin",
+  "minimumReleaseAge": "7 days",
+  "minimumReleaseAgeBehaviour": "timestamp-required",
+  "internalChecksFilter": "strict",
+  "vulnerabilityAlerts": {
+    "enabled": false
+  },
+  "statusCheckWhen": {
+    "artifactError": "never",
+    "configValidation": "never",
+    "mergeConfidence": "never",
+    "minimumReleaseAge": "never"
+  },
+  "dependencyDashboard": false,
+  "branchPrefix": "renovate-mise/",
+  "groupName": "mise tools",
+  "separateMajorMinor": false,
+  "prConcurrentLimit": 1,
+  "branchConcurrentLimit": 1,
+  "prBodyNotes": [
+    "Opened with the workflow's `GITHUB_TOKEN`, so this repository's workflows do not run on it automatically. Dispatch the test workflow on `{{{branchName}}}` before merging."
+  ]
+}

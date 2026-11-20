@@ -62,6 +62,9 @@ group "JSON: parse + canonical format (whole repo)" \
   uv run python bin/lint-json.py
 group "Formatting: dprint check (whole repo, per dprint.json)" \
   dprint check
+# Offline; mise's own `mise lock --check` arrives in a release newer than the pinned mise.
+group "mise: mise.lock pins every mise.toml tool and platform" \
+  uv run python .github/actions/mise-renovate/check-lock.py mise.toml mise.lock
 group "GitHub Actions: jactionlint (workflows, actions, dependabot)" \
   jactionlint --profile default --no-online
 

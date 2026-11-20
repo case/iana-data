@@ -1,0 +1,40 @@
+name: "Renovate mise tools"
+description: "Open one PR bumping mise.toml tool pins, and mise.lock with them, to releases at least 7 days old"
+inputs:
+  token:
+    description: "The job's GITHUB_TOKEN, with permissions for contents, pull-requests write, and issues read"
+    required: true
+runs:
+  using: "composite"
+  steps:
+    # The container writes its report to the runner's /tmp; a stale one must not pass the check.
+    - name: Clear earlier Renovate reports
+      shell: bash
+      run: python3 -I "$GITHUB_ACTION_PATH/check-report.py" "$GITHUB_ACTION_PATH/renovate-global.json" --clear
+
+    - name: Run Renovate on mise.toml
+      uses: renovatebot/github-action@266fef21329c44765ad42f9dea1f01f5d2d91084 # v46.3.13
+      env:
+        RENOVATE_REPOSITORIES: ${{ github.repository }}
+        LOG_LEVEL: info
+      with:
+        token: ${{ inputs.token }}
+        configurationFile: ${{ github.action_path }}/renovate-global.json
+        # Exact names only, so a caller's RENOVATE_* variables cannot override the policy file.
+        env-regex: "^(?:RENOVATE_REPOSITORIES|LOG_LEVEL)$"
+        renovate-image: ghcr.io/renovatebot/renovate:44.234.1@sha256:7f97a190186bbb994ace854b17afe29e3c37c1f672a2b2d28ebd433c17a612df
+
+    # Renovate exits 0 for a disabled repository, so a green run alone does not prove it read mise.toml.
+    - name: Confirm Renovate read mise.toml
+      shell: bash
+      env:
+        REPOSITORY: ${{ github.repository }}
+      run: python3 -I "$GITHUB_ACTION_PATH/check-report.py" "$GITHUB_ACTION_PATH/renovate-global.json" "$REPOSITORY" "$GITHUB_WORKSPACE/mise.toml"
+
+    # The report cannot show that `mise lock` succeeded, so read back each branch Renovate pushed.
+    - name: Confirm each Renovate branch locks its mise.toml
+      shell: bash
+      env:
+        GH_TOKEN: ${{ inputs.token }}
+        REPOSITORY: ${{ github.repository }}
+      run: python3 -I "$GITHUB_ACTION_PATH/check-branches.py" "$GITHUB_ACTION_PATH/renovate-global.json" "$REPOSITORY"
