@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T22:19:37Z",
+  "publication": "2026-11-20T09:38:45Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -16,7 +16,7 @@
       "iana": {
         "sponsor": "STATE BANK OF INDIA",
         "admin": "State Bank of India",
-        "tech": "Afilias"
+        "tech": "Identity Digital Limited"
       },
       "icann": {
         "registry_operator": "STATE BANK OF INDIA",
@@ -35,7 +35,7 @@
     "rdap_server": "https://rdap.identitydigital.services/rdap/",
     "tld_created": "2016-03-24",
     "tld_updated": [
-      "2023-08-16"
+      "2026-11-19"
     ],
     "events": {
       "delegation": "2016-04-16"
@@ -63,6 +63,12 @@
         "algorithm": 8,
         "digest_type": 2,
         "digest": "cef021e759c80743ac2b871f39db1aac7bfb542244b74ebd5c98776f5d4d844a"
+      },
+      {
+        "key_tag": 45,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "f4fffabeb8d5e65a4bbddc454297e3d2efc4b0a1172b859a11048ec939893618"
       }
     ],
     "nameservers": [
