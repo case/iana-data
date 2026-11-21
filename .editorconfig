@@ -37,6 +37,10 @@ indent_style = tab
 [*.ps1]
 indent_size = 4
 
+# Make requires literal tabs in recipes.
+[{Makefile,*.mk}]
+indent_style = tab
+
 # Windows batch scripts expect CRLF.
 [*.{bat,cmd}]
 end_of_line = crlf
