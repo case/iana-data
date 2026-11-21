@@ -12759,7 +12759,7 @@
     "delegationDate" : "2014-05-30",
     "gTLD" : "space",
     "registryClassDomainNameList" : null,
-    "registryOperator" : "Radix Technologies Inc SEZC",
+    "registryOperator" : "Squarespace Registry LLC",
     "registryOperatorCountryCode" : null,
     "removalDate" : null,
     "specification13" : false,
@@ -15034,9 +15034,9 @@
     "delegationDate" : "2016-03-30",
     "gTLD" : "xihuan",
     "registryClassDomainNameList" : null,
-    "registryOperator" : "Beijing Qihu Keji Co., Ltd.",
+    "registryOperator" : "QIHOO 360 TECHNOLOGY CO. LTD.",
     "registryOperatorCountryCode" : null,
-    "removalDate" : null,
+    "removalDate" : "2026-11-20",
     "specification13" : false,
     "thirdOrLowerLevelRegistration" : false,
     "uLabel" : null
@@ -16588,6 +16588,6 @@
     "thirdOrLowerLevelRegistration" : false,
     "uLabel" : null
   } ],
-  "updatedOn" : "2026-11-20T05:47:02.303+0000",
+  "updatedOn" : "2026-11-21T05:47:03.608+0000",
   "version" : 2
 }

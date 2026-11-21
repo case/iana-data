@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-20T09:38:45Z",
+  "publication": "2026-11-21T09:10:17Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -4353,7 +4353,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "1991-09-03",
       "tld_updated": [
-        "2026-10-16"
+        "2026-11-20"
       ],
       "annotations": {
         "iana_tech_alias": "Identity Digital",
@@ -4369,12 +4369,6 @@
         "geographic_scope": "country"
       },
       "ds_records": [
-        {
-          "key_tag": 8905,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "e3cdce330b6f170283c06a1e3aad11c098ad4a83cfc0f3cb603ecfc49af4a059"
-        },
         {
           "key_tag": 25471,
           "algorithm": 8,
@@ -34161,7 +34155,7 @@
       "rdap_server": "https://rdap.nic.cba/",
       "tld_created": "2015-03-26",
       "tld_updated": [
-        "2026-08-04"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2015-06-22"
@@ -34187,6 +34181,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "84871955bc863e5911b72369b1d1eb75ff087a8093edb4ba4bfb48f95813c034"
+        },
+        {
+          "key_tag": 8578,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "444813bf8b96b5fd1367f8fe0516d8bb8ec42008ed1e4fa91d9ac4795560afc6"
         }
       ],
       "nameservers": [
@@ -132925,7 +132925,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-12-19",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2013-12-28"
@@ -132953,12 +132953,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 46082,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "c8f816a7a575bdb2f997f682aab2653ba2cb5eddb69b036a30742a33befaf141"
-        },
         {
           "key_tag": 64022,
           "algorithm": 8,
@@ -137869,7 +137863,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-12-12",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2013-12-28"
@@ -137893,12 +137887,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 40711,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "2144e3a641835a0f4944a2bab8df4dd9eecc76a76c330690765966c1c81a2d78"
-        },
         {
           "key_tag": 32977,
           "algorithm": 8,
@@ -138516,7 +138504,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-01-15",
       "tld_updated": [
-        "2026-11-09"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2015-03-03"
@@ -138539,12 +138527,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 51169,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "43a2fd7b6df137824c6ee5b145ad5fa8664600165ef0c9772b1d286bcda63873"
-        },
         {
           "key_tag": 46726,
           "algorithm": 8,
@@ -139021,7 +139003,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-05-29",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-06-13"
@@ -139049,12 +139031,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 22474,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "5803fbc9f1fc0d4aa172dc24f6b2b099f18dc13e04cee7f605777d798a3a812f"
-        },
         {
           "key_tag": 53117,
           "algorithm": 8,
@@ -140823,7 +140799,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-01-30",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-02-04"
@@ -140851,12 +140827,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 27907,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "ded4dc046e9d9f9250f766bd987e6268d4c82333b9835a520aa311df9d3c0948"
-        },
         {
           "key_tag": 35320,
           "algorithm": 8,
@@ -141010,7 +140980,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-02-06",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-02-11"
@@ -141038,12 +141008,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 24967,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "3facb67c61427cac01c712ea17c8d0e9eb74f5290a2d36311499c096578254bd"
-        },
         {
           "key_tag": 12151,
           "algorithm": 8,
@@ -141893,7 +141857,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-07-16",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2015-07-26"
@@ -141921,12 +141885,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 42856,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "ee6c6c84eff7b00eb70d9bd8a29cee8a04d29d4d006cc1f61a95fff873fde974"
-        },
         {
           "key_tag": 19084,
           "algorithm": 8,
@@ -143394,7 +143352,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-11-13",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2013-11-19"
@@ -143422,12 +143380,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 30361,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "11ab70b24654e6225068852309a763d43af4958b7c670407842c40f655bee3aa"
-        },
         {
           "key_tag": 38452,
           "algorithm": 8,
@@ -143581,7 +143533,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-12-12",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2013-12-17"
@@ -143609,12 +143561,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 41914,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "b6a00eeeb4864e5152cf32cb1dc5ae4528ab2cf82c46a4de0a2d77921b51c979"
-        },
         {
           "key_tag": 9617,
           "algorithm": 8,
@@ -144305,7 +144251,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-04-03",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-04-11"
@@ -144333,12 +144279,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 6637,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "550ea36a773c9dc5a81e39bb942120f5b00aa3eaefdeadc785c8fc7265d41012"
-        },
         {
           "key_tag": 56674,
           "algorithm": 8,
@@ -145030,7 +144970,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-12-19",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-01-18"
@@ -145058,12 +144998,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 53032,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "54475c411977fb9c94c01453633eb43b8dc64b154462de278a0644c6b83a79d1"
-        },
         {
           "key_tag": 10729,
           "algorithm": 8,
@@ -145414,7 +145348,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-08-22",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-08-27"
@@ -145442,12 +145376,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 55750,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "9271cd9fb2ca456900ef1e26877eb45d968d8ddf80281b6c6e05621f4067207f"
-        },
         {
           "key_tag": 7495,
           "algorithm": 8,
@@ -145870,7 +145798,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-06-05",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-07-02"
@@ -145898,12 +145826,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 436,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "2ee9ef69fb398b0d80a926994666cc9405231a042f31752d00295ccfc2ddbaf4"
-        },
         {
           "key_tag": 5176,
           "algorithm": 8,
@@ -146353,7 +146275,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-11-08",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2013-11-14"
@@ -146381,12 +146303,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 48722,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "d0024bf8bc37e85179a92e3b16f602aa566e63df0eb315324be040ff2d35bdb4"
-        },
         {
           "key_tag": 19205,
           "algorithm": 8,
@@ -146540,7 +146456,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-03-12",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2015-03-24"
@@ -146568,12 +146484,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 5074,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "eae08e76fc529973567f9ede81dcad8090f91800ab271b798006ae563a538b2f"
-        },
         {
           "key_tag": 57179,
           "algorithm": 8,
@@ -147316,7 +147226,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-09-04",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-10-15"
@@ -147344,12 +147254,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 12856,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "571efc932d4c25e2f41df9e216b66732f8d17bb7efd2f6230af3127948ba167c"
-        },
         {
           "key_tag": 4279,
           "algorithm": 8,
@@ -149078,7 +148982,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-02-06",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-02-11"
@@ -149106,12 +149010,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 55354,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "61296764506d9b3ea454b8cf49fea13cbb8662804f0a02948139ffbb0e0cbc8f"
-        },
         {
           "key_tag": 54340,
           "algorithm": 8,
@@ -149572,7 +149470,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-12-18",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2015-12-31"
@@ -149600,12 +149498,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 61459,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "583dcffeacf0cf25f52e5f4d356db7e3d3e4145992edc4e8b1fea3b5ad1868ca"
-        },
         {
           "key_tag": 39689,
           "algorithm": 8,
@@ -149721,7 +149613,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-01-30",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-02-04"
@@ -149749,12 +149641,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 24565,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "519c0cae03f6f4a6679f85ed1376f04a6702406f0731734618f608895306e4f5"
-        },
         {
           "key_tag": 35165,
           "algorithm": 8,
@@ -150915,7 +150801,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-02-20",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-02-26"
@@ -150943,12 +150829,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 53776,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "3766469c89af5eca8e8c5852e359396294057677c5ae8ca9c641422d7237bb4f"
-        },
         {
           "key_tag": 21190,
           "algorithm": 8,
@@ -153424,7 +153304,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-12-12",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2013-12-17"
@@ -153452,12 +153332,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 50824,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "4740fa6aefac02132e2edea2f54dcd7fa2140f06de024524215b7eac2968a225"
-        },
         {
           "key_tag": 3980,
           "algorithm": 8,
@@ -153611,7 +153485,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-01-16",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-01-18"
@@ -153639,12 +153513,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 20191,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "a838978f76dab8c9a0057b3fdddbd9883e760764e5ae1cea04f0961d61a4bb28"
-        },
         {
           "key_tag": 35084,
           "algorithm": 8,
@@ -153947,7 +153815,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-05-29",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-06-04"
@@ -153975,12 +153843,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 5731,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "d3ba72f70047888faae7f22dead5112c540fa6aac533dcc55d9ee4920de4cca9"
-        },
         {
           "key_tag": 59905,
           "algorithm": 8,
@@ -154134,7 +153996,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-05-15",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-05-22"
@@ -154162,12 +154024,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 25897,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "4d05b8cdd95e0502923689dfeb01db93185455e252acab2556af477baaf4865d"
-        },
         {
           "key_tag": 61445,
           "algorithm": 8,
@@ -154321,7 +154177,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-04-03",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-04-11"
@@ -154349,12 +154205,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 16819,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "2fe6f73a7337d0492ba6acc3c38ac175e81d13b593136551ad1e95641dd396cd"
-        },
         {
           "key_tag": 26357,
           "algorithm": 8,
@@ -155102,7 +154952,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-01-30",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-02-04"
@@ -155130,12 +154980,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 33616,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "348cca06b6eaa7f81247d1b92c72a18cab732c243954080d773507739433202e"
-        },
         {
           "key_tag": 8425,
           "algorithm": 8,
@@ -155289,7 +155133,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-12-19",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2013-12-28"
@@ -155317,12 +155161,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 39172,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "c1d26541b3cca74a53db2b5eaba4ad0a17d7f5d06c824b9a658ad2580fa40b28"
-        },
         {
           "key_tag": 37922,
           "algorithm": 8,
@@ -155476,7 +155314,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-01-30",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-02-04"
@@ -155504,12 +155342,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 23221,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "4ff9de3b32f0735045d53641deeb17597de3638b7ef3aa33616d4f52c6aa6b51"
-        },
         {
           "key_tag": 14410,
           "algorithm": 8,
@@ -155663,7 +155495,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-05-29",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-06-04"
@@ -155691,12 +155523,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 53482,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "9f97cc9c78c5d96051f4689120777eaab356675883b2573d4d2ef769b33dfe34"
-        },
         {
           "key_tag": 18677,
           "algorithm": 8,
@@ -155990,7 +155816,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-07-31",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-08-08"
@@ -156018,12 +155844,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 62200,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "a9093436978db7d5ee302879f0bf8d7a84e0a2c0aa132784f92d97d0d4e15992"
-        },
         {
           "key_tag": 2980,
           "algorithm": 8,
@@ -156357,7 +156177,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-02-06",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-02-11"
@@ -156385,12 +156205,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 38191,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "5dafa6aa4e5bb71394ff2f91b4423ef5a1c7ba598e359f7afcc8df8c6f68957c"
-        },
         {
           "key_tag": 22289,
           "algorithm": 8,
@@ -156689,7 +156503,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-01-16",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-01-18"
@@ -156711,12 +156525,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 12391,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "aa344ed8e0615ff242ec66edea4160269d0ec1d36437965a8d1d1aba6a4d97d8"
-        },
         {
           "key_tag": 56734,
           "algorithm": 8,
@@ -157459,7 +157267,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-10-09",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-10-15"
@@ -157487,12 +157295,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 64594,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "e5771475fcab4c6df4608be0ede2efd5cfbcfa1405ca0b121c57557b959a40bd"
-        },
         {
           "key_tag": 4202,
           "algorithm": 8,
@@ -157889,7 +157691,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-01-16",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-04-10"
@@ -157917,12 +157719,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 55882,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "bda2ed5e9099d2e358529c190d03290d396b85fc2a41259c734fb816bc7d5ed6"
-        },
         {
           "key_tag": 58762,
           "algorithm": 8,
@@ -159421,7 +159217,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-04-30",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2015-05-07"
@@ -159449,12 +159245,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 37315,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "fb85b407411a748f93e2393fdc4123c2fd6f15d2b8841091d83dff1364726a37"
-        },
         {
           "key_tag": 20657,
           "algorithm": 8,
@@ -160701,7 +160491,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-04-23",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2015-12-24"
@@ -160725,12 +160515,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 6139,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "01e166cb1c6a2797fbdeffbe26b009a7a1f72905f476353537dfa63754b479de"
-        },
         {
           "key_tag": 45982,
           "algorithm": 8,
@@ -161020,7 +160804,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-12-17",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-12-25"
@@ -161048,12 +160832,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 58006,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "3aafea8a5f3796ff0e2a4754c784aa2dd72f34853afcdb1dbd7571c7673c88cf"
-        },
         {
           "key_tag": 54547,
           "algorithm": 8,
@@ -161207,7 +160985,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-11-12",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2015-12-05"
@@ -161235,12 +161013,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 20629,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "15beee88cb2059844adc8b06944fc2424a7618726b390a08fc21fde2ef6daa07"
-        },
         {
           "key_tag": 47747,
           "algorithm": 8,
@@ -162433,7 +162205,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-07-31",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-08-08"
@@ -162461,12 +162233,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 30877,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "24db28de74191d33588c628d306be3457278f59ceca8104d2a81cfa7fcd8d6e6"
-        },
         {
           "key_tag": 53839,
           "algorithm": 8,
@@ -164341,7 +164107,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-02-13",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2015-02-19"
@@ -164369,12 +164135,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 34030,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "30e847d55bbc147f8706cf9ee2b50478f41a143e2cbb738f7214ddd59cfb31ae"
-        },
         {
           "key_tag": 58271,
           "algorithm": 8,
@@ -164528,7 +164288,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-04-11",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-04-22"
@@ -164556,12 +164316,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 32869,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "76b7d6a448a72d947cf0b045429535113822fad4dad7b120910ea0d4f5e835aa"
-        },
         {
           "key_tag": 42206,
           "algorithm": 8,
@@ -166847,7 +166601,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-04-03",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-04-11"
@@ -166875,12 +166629,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 36727,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "46f51f49699733c685b1a338969594396ba5e24d76f6011149c20be7a3b757fc"
-        },
         {
           "key_tag": 7852,
           "algorithm": 8,
@@ -168874,7 +168622,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-01-16",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-01-18"
@@ -168902,12 +168650,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 54049,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "b4dd9094c19c5a3be8d6921d695f16cd6412258fa8302e5d7879405e2c0ef7dc"
-        },
         {
           "key_tag": 17005,
           "algorithm": 8,
@@ -169023,7 +168765,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-12-12",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2013-12-17"
@@ -169051,12 +168793,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 59242,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "e6883ee7853289aff66b9090429f6573077638bac3b5a6595b0c16108abfbe9c"
-        },
         {
           "key_tag": 30247,
           "algorithm": 8,
@@ -169347,7 +169083,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-06-08",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2016-06-21"
@@ -169375,12 +169111,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 31984,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "372b561bd71aad22ecf3c93491046fb1b6d5d23a25b899baedecb89a4c038c91"
-        },
         {
           "key_tag": 27631,
           "algorithm": 8,
@@ -169664,7 +169394,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-04-09",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2015-04-16"
@@ -169692,12 +169422,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 43876,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "7b05d715b0b79a0a0844d3283f0115d1dcbae5c3d98eec45f17df09bc5963904"
-        },
         {
           "key_tag": 31030,
           "algorithm": 8,
@@ -170455,7 +170179,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-10-31",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2013-11-06"
@@ -170483,12 +170207,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 11041,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "28f8fd0b9b11a1947d4dd5a1190aba72a1a1f30b7fd3752e8261defbfe17b84b"
-        },
         {
           "key_tag": 53221,
           "algorithm": 8,
@@ -171063,7 +170781,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-05-14",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2015-05-30"
@@ -171092,12 +170810,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 62489,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "d421064a672f86a83a4c7fe005ce8cd164fffdfab3e64415498c3413ba46fe10"
-        },
         {
           "key_tag": 16289,
           "algorithm": 8,
@@ -172793,7 +172505,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-05-08",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2015-05-13"
@@ -172821,12 +172533,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 28159,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "88ef6e5b2aae60cccf9f9585d03f0f2bff9a57c613cf3edcf01e34734886f0d3"
-        },
         {
           "key_tag": 56986,
           "algorithm": 8,
@@ -172980,7 +172686,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-01-09",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-01-14"
@@ -173008,12 +172714,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 40816,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "683895edf086360b6bc8f2e6674bfe94735df6f88a6efeff850b905595383af8"
-        },
         {
           "key_tag": 13606,
           "algorithm": 8,
@@ -173299,7 +172999,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-05-22",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-05-31"
@@ -173327,12 +173027,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 13531,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "adbc7a3c20e6f0b685c47bfa610899b783dc463921f47bc231a6e29147e80902"
-        },
         {
           "key_tag": 37115,
           "algorithm": 8,
@@ -173640,7 +173334,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-12-19",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2013-12-28"
@@ -173668,12 +173362,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 55894,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "9fe65d323fa0cef5b7c9180df5e5eb8cb03d9e8253fe0089e85e4bb58a57aa5d"
-        },
         {
           "key_tag": 7885,
           "algorithm": 8,
@@ -173827,7 +173515,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-12-19",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2013-12-28"
@@ -173855,12 +173543,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 23131,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "1e10218cd63ab2aaa5a7c6fd02ccb36a543eac55a4185e24e9ed4e15a866e2b0"
-        },
         {
           "key_tag": 26822,
           "algorithm": 8,
@@ -174015,7 +173697,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-01-29",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2016-02-24"
@@ -174043,12 +173725,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 54031,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "0595f0d68769e6bc795c21a8c96043f4b530593b76be48348797b157040bf72c"
-        },
         {
           "key_tag": 7711,
           "algorithm": 8,
@@ -174499,7 +174175,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2020-09-25",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2020-10-17"
@@ -174524,12 +174200,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 11881,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "5f494f6958801e119d309bf6cd627c42d1fd04055703aeaac2c2d1b98db00b97"
-        },
         {
           "key_tag": 42266,
           "algorithm": 8,
@@ -174630,7 +174300,7 @@
           "tech": "Tucows.com, Co."
         },
         "icann": {
-          "registry_operator": "Radix Technologies Inc SEZC",
+          "registry_operator": "Squarespace Registry LLC",
           "specification_13": false,
           "third_or_lower_level_registration": false,
           "application_id": "1-1072-65736",
@@ -175705,7 +175375,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-08-13",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2015-09-13"
@@ -175729,12 +175399,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 10585,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "0bdb59ef7db2dbdd103cf1cda4ecbddd6befc6f4d074ef177311fc3358c14941"
-        },
         {
           "key_tag": 10822,
           "algorithm": 8,
@@ -177458,7 +177122,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-06-25",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2015-07-08"
@@ -177486,12 +177150,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 1354,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "d4289b105c9cb81d1ea631fe723a7dd3e9a52fb649b4a0a40c4890a9faa62846"
-        },
         {
           "key_tag": 35741,
           "algorithm": 8,
@@ -177827,7 +177485,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-01-29",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2015-02-04"
@@ -177855,12 +177513,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 64534,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "ae493c6907eab77640ded4690ae2035a5a613d78edca8814f9314334e4c19943"
-        },
         {
           "key_tag": 14471,
           "algorithm": 8,
@@ -178342,7 +177994,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-02-13",
       "tld_updated": [
-        "2026-11-11"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-02-25"
@@ -178370,12 +178022,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 10984,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "ac8aff181900b2a9ac0736c0e254c3e847e240705467109b03cfc22839a30405"
-        },
         {
           "key_tag": 43604,
           "algorithm": 8,
@@ -178529,7 +178175,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-02-13",
       "tld_updated": [
-        "2026-11-11"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-02-21"
@@ -178557,12 +178203,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 43957,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "81a7a79353c68ff3d449a1b307f82944686706043cfde44f65b22b396ff9ac5e"
-        },
         {
           "key_tag": 32515,
           "algorithm": 8,
@@ -178716,7 +178356,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-12-12",
       "tld_updated": [
-        "2026-11-11"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2013-12-18"
@@ -178744,12 +178384,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 59704,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "5c789108f88d370a56e1c616c42694a492fa0b3ed7cafb7f9565777e1b85ad96"
-        },
         {
           "key_tag": 481,
           "algorithm": 8,
@@ -179085,7 +178719,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-04-17",
       "tld_updated": [
-        "2026-11-11"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-04-23"
@@ -179113,12 +178747,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 23746,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "26e3f51a86c852653ef6b6fdd89566f7d9faab6985201274b0abe95b530e400e"
-        },
         {
           "key_tag": 23591,
           "algorithm": 8,
@@ -180402,7 +180030,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-12-12",
       "tld_updated": [
-        "2026-11-11"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2013-12-17"
@@ -180430,12 +180058,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 9634,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "a45f6041847622b7a24e0b41aea1bbc2e618e952e2555206776295edcc9ef77d"
-        },
         {
           "key_tag": 13097,
           "algorithm": 8,
@@ -182070,7 +181692,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-04-17",
       "tld_updated": [
-        "2026-11-11"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-04-23"
@@ -182098,12 +181720,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 3385,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "4d66cf4d6309a91268d634432d008877ab792d0632a1f8775b732a18c277786f"
-        },
         {
           "key_tag": 12485,
           "algorithm": 8,
@@ -182257,7 +181873,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-04-30",
       "tld_updated": [
-        "2026-11-11"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2015-05-07"
@@ -182285,12 +181901,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 28756,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "75a029ee9c29f3cfb66255f04c724e4739ed871da812f13b9684e07382535369"
-        },
         {
           "key_tag": 40637,
           "algorithm": 8,
@@ -183103,7 +182713,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-04-09",
       "tld_updated": [
-        "2026-11-11"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2015-04-16"
@@ -183131,12 +182741,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 38380,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "98207980337abe3132eb70514e4f2117a2cbc9d83acd2e89b18f9368a0456ea9"
-        },
         {
           "key_tag": 19904,
           "algorithm": 8,
@@ -183434,7 +183038,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-11-08",
       "tld_updated": [
-        "2026-11-11"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2013-11-14"
@@ -183462,12 +183066,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 27175,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "dbbbb57529756c1bf2ed1ab1ca275b580c2f3296fcb65689844a8d58cd936516"
-        },
         {
           "key_tag": 4126,
           "algorithm": 8,
@@ -183981,7 +183579,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-01-29",
       "tld_updated": [
-        "2026-11-11"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2015-02-04"
@@ -184009,12 +183607,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 41695,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "30e59d10fa2e38db83b8dbac7ced28b8a1d6a6697b19b0b8eae5f7cbbaf5d0d8"
-        },
         {
           "key_tag": 2851,
           "algorithm": 8,
@@ -184915,7 +184507,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-04-30",
       "tld_updated": [
-        "2026-11-11"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2015-05-06"
@@ -184943,12 +184535,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 835,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "1f2f456aa1f487103616fe00b21f4c6b8238213f5fc85401cfe49dc4b4c2da10"
-        },
         {
           "key_tag": 12365,
           "algorithm": 8,
@@ -185585,7 +185171,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-01-16",
       "tld_updated": [
-        "2026-11-11"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-01-23"
@@ -185613,12 +185199,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 18877,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "8a24a050895db01a10aa65274b30e9dcf130a48499f4e24659488430893de7e1"
-        },
         {
           "key_tag": 17822,
           "algorithm": 8,
@@ -185809,7 +185389,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-11-13",
       "tld_updated": [
-        "2026-11-11"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2013-11-19"
@@ -185837,12 +185417,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 47965,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "f7855e0b7abe74ad44b19dba63986f47a496e1b7dd37ffed2bc2c2499da4ca72"
-        },
         {
           "key_tag": 35345,
           "algorithm": 8,
@@ -185996,7 +185570,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-12-11",
       "tld_updated": [
-        "2026-11-11"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-12-18"
@@ -186024,12 +185598,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 21502,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "6db31bf7d51a54d4c5179619a31d6256747d09b3b4788b6a82c61841c20eceaa"
-        },
         {
           "key_tag": 38111,
           "algorithm": 8,
@@ -187709,7 +187277,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-11-13",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2013-11-19"
@@ -187737,12 +187305,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 8164,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "92c5eaf94dd9dbc7d5254faf41cff9dfeae138c718773528dae6b717ef1b6fe0"
-        },
         {
           "key_tag": 8092,
           "algorithm": 8,
@@ -188034,7 +187596,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-01-16",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-01-23"
@@ -188062,12 +187624,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 13831,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "5ddd852d119830be951afa0d5176443a935eaa350278ef15fbea34156cf5a9ab"
-        },
         {
           "key_tag": 1547,
           "algorithm": 8,
@@ -188772,7 +188328,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-03-12",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2015-03-24"
@@ -188800,12 +188356,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 41716,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "ad0f4d55834496f7305ac2a3a8743ddbf7c4802ec246341e7f9e555fa42b5ee9"
-        },
         {
           "key_tag": 11872,
           "algorithm": 8,
@@ -188959,7 +188509,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-04-03",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-04-11"
@@ -188987,12 +188537,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 63256,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "515451761441c5c476f32ee4d28ae24d5179521fb505c318ef721e5fd6165c16"
-        },
         {
           "key_tag": 39731,
           "algorithm": 8,
@@ -189278,7 +188822,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-04-03",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-04-11"
@@ -189306,12 +188850,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 26029,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "7e93110615b5fadb76632c18aee800588a81fc4d6d70b9029385987290678ea9"
-        },
         {
           "key_tag": 5935,
           "algorithm": 8,
@@ -189831,7 +189369,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-03-06",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2015-03-13"
@@ -189859,12 +189397,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 49129,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "ef6ca74a84fbac616c85ddfc58eac5475041c67daec11fe64fa0c481968a0790"
-        },
         {
           "key_tag": 24712,
           "algorithm": 8,
@@ -190018,7 +189550,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-12-19",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2013-12-28"
@@ -190046,12 +189578,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 44281,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "80dd6f1aad9c85fed280bc232c0dd8426c09dd7bdd6f6e6bc16232e252cba059"
-        },
         {
           "key_tag": 6482,
           "algorithm": 8,
@@ -190211,7 +189737,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2005-07-27",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "annotations": {
         "iana_sponsor_alias": "Identity Digital",
@@ -190237,12 +189763,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 60277,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "df8590752dcf2cc075f91d5a6178c38a7ba1dbbc0c2327b88ca37be4797be126"
-        },
         {
           "key_tag": 589,
           "algorithm": 8,
@@ -192013,7 +191533,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-02-05",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2016-02-13"
@@ -192037,12 +191557,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 29161,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "a36cbb75c2c810d16fdd5562c334351bdd007f5aeb008537115586951ac39240"
-        },
         {
           "key_tag": 46151,
           "algorithm": 8,
@@ -193547,7 +193061,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-04-03",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-04-11"
@@ -193575,12 +193089,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 40537,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "674e5d0fc3d6a5ee42486211ce3be970a6b6dde79ba48553732c1a929715302e"
-        },
         {
           "key_tag": 16829,
           "algorithm": 8,
@@ -194857,7 +194365,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-02-13",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-02-21"
@@ -194885,12 +194393,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 53014,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "63af40a94f8066d7f6ad7fcf89dc7111407c1da7a217ffc6c7f2f84a87cc9fc0"
-        },
         {
           "key_tag": 55324,
           "algorithm": 8,
@@ -195775,7 +195277,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-10-31",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2013-11-06"
@@ -195803,12 +195305,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 43132,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "5ad3e6b74a570bbd7ea2f84c87e6bfc6c305233383d14f29074f3e6e4a03a810"
-        },
         {
           "key_tag": 44791,
           "algorithm": 8,
@@ -196238,7 +195734,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-05-22",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-05-31"
@@ -196266,12 +195762,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 19864,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "2b1b3ab9f4fdd837fc9f9c7875fa916b6a22c3ef5c0c04d5d3235e42828cf6a8"
-        },
         {
           "key_tag": 64495,
           "algorithm": 8,
@@ -196613,7 +196103,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-12-12",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2013-12-17"
@@ -196641,12 +196131,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 1006,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "ee19922420d5f38807e2d61a8d0a7811e2c622bdf65cbdf56ab83ff4569ff4b3"
-        },
         {
           "key_tag": 60341,
           "algorithm": 8,
@@ -196800,7 +196284,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-12-17",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-12-25"
@@ -196828,12 +196312,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 42529,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "4cafbfedab7097a3727581bcc76ff8eb10b0c144b96f77cf48d7814e21d8d3a7"
-        },
         {
           "key_tag": 16592,
           "algorithm": 8,
@@ -197277,7 +196755,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-02-06",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-02-11"
@@ -197305,12 +196783,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 32191,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "ce7cf1b69581dc8a7d97b190d57a0d90de2f35f3f906e15984163f3bd62b6a7a"
-        },
         {
           "key_tag": 1475,
           "algorithm": 8,
@@ -197464,7 +196936,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-07-23",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2015-08-05"
@@ -197492,12 +196964,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 25786,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "ba89439b43dd4c15ad9d0bc69198518041f5a9e269ce479569f0e42017d8a9a5"
-        },
         {
           "key_tag": 49082,
           "algorithm": 8,
@@ -198234,7 +197700,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-02-06",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-02-11"
@@ -198262,12 +197728,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 58084,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "4e659852dd1934d5e78a5e6600ebad107682821e3bb5991f8b4bf8dfbc6927ff"
-        },
         {
           "key_tag": 53656,
           "algorithm": 8,
@@ -199562,7 +199022,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-02-13",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-03-02"
@@ -199586,12 +199046,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 62749,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "101d2ae9c31fbe10078e74d477010aa5c8966d814421123a893b8b0e7b46891a"
-        },
         {
           "key_tag": 39235,
           "algorithm": 8,
@@ -199883,7 +199337,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-02-13",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-03-02"
@@ -199907,12 +199361,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 26875,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "847371b1a0a21ae134a0e0c15b0e505bb4c88a26ed401daff4f4e8794c5b31a1"
-        },
         {
           "key_tag": 30562,
           "algorithm": 8,
@@ -200028,7 +199476,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-10-31",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2013-11-06"
@@ -200056,12 +199504,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 25570,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "e17ea6fe786d37d2884b4eb52ae275ec41c4265aa252e2469396ff49878170c5"
-        },
         {
           "key_tag": 18596,
           "algorithm": 8,
@@ -201403,7 +200845,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-01-16",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-01-23"
@@ -201431,12 +200873,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 54769,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "df912e3dd3fd5d0961ccd55abbcfb99e3cadba09ff443e3f1a7bebae400d57ad"
-        },
         {
           "key_tag": 55960,
           "algorithm": 8,
@@ -201590,7 +201026,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-11-12",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2015-12-14"
@@ -201618,12 +201054,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 61699,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "9110905c79b0c95933eb1f037a0d7a150819f1d1553ad89187a7849039a97ebe"
-        },
         {
           "key_tag": 39272,
           "algorithm": 8,
@@ -204548,7 +203978,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-07-23",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2015-08-05"
@@ -204576,12 +204006,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 4210,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "16016cd0c2432421b72d072422278999c3c2772353e3d5214d25be24b4d521cb"
-        },
         {
           "key_tag": 58469,
           "algorithm": 8,
@@ -205456,7 +204880,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-01-16",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-01-23"
@@ -205484,12 +204908,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 46672,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "0339dd99b86b96b8e437908e9aea3eb578fad0de211bd8cf7a4fe6885e0acdd2"
-        },
         {
           "key_tag": 10889,
           "algorithm": 8,
@@ -205643,7 +205061,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-09-11",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-09-19"
@@ -205671,12 +205089,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 13081,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "84c4ee9b8cec0c7eb9c2c892a07df5513897f91c5b3bc80410ebb062e86eac21"
-        },
         {
           "key_tag": 422,
           "algorithm": 8,
@@ -206353,7 +205765,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-04-17",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-04-23"
@@ -206381,12 +205793,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 47461,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "a9f9582d8b0f154f7051751b8c2ab121231ccb2ae36ea6da9536439855bf9f0f"
-        },
         {
           "key_tag": 64501,
           "algorithm": 8,
@@ -206949,18 +206355,13 @@
     {
       "tld": "xihuan",
       "tld_script_code": "Latn",
-      "status": "active",
-      "delegated": true,
+      "status": "retired",
+      "delegated": false,
       "iana_tag": "generic",
       "type": "gtld",
       "orgs": {
-        "iana": {
-          "sponsor": "Beijing Qihu Keji Co., Ltd.",
-          "admin": "Beijing Qihu Keji Co., Ltd.",
-          "tech": "Beijing Tele-info Technology Co., Ltd."
-        },
         "icann": {
-          "registry_operator": "Beijing Qihu Keji Co., Ltd.",
+          "registry_operator": "QIHOO 360 TECHNOLOGY CO. LTD.",
           "specification_13": false,
           "third_or_lower_level_registration": false,
           "application_id": "1-974-79364",
@@ -206968,18 +206369,17 @@
           "date_contract_signed": "2015-01-08",
           "date_delegated": "2016-03-30",
           "contract_terminated": false,
-          "date_removed": null
+          "date_removed": "2026-11-20"
         }
       },
-      "registry_url": "http://www.teleinfo.cn",
-      "whois_server": "whois.teleinfo.cn",
       "rdap_server": "https://rdap.teleinfo.cn/",
       "tld_created": "2016-03-18",
       "tld_updated": [
-        "2026-08-11"
+        "2026-11-20"
       ],
       "events": {
-        "delegation": "2016-03-30"
+        "delegation": "2016-03-30",
+        "revocation": "2026-11-20"
       },
       "annotations": {
         "rdap_source": "IANA",
@@ -206987,94 +206387,8 @@
           "base",
           "non_sponsored"
         ],
-        "iana_delegation_round": "2012",
-        "as_org_aliases": [
-          "Microsoft",
-          "Teleinfo"
-        ],
-        "as_org_slugs": [
-          "microsoft",
-          "teleinfo"
-        ]
-      },
-      "ds_records": [
-        {
-          "key_tag": 27565,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "b77f15373b8af8e7ba2d8641701ae833416f8d439bbdaee71d18ce55efde7903"
-        },
-        {
-          "key_tag": 33427,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "1061b1aacada68d55b091340a0765746a4fa68530d47faa10edfcd3237e3748c"
-        }
-      ],
-      "nameservers": [
-        {
-          "hostname": "ns1.teleinfo.cn",
-          "ipv4": [
-            {
-              "ip": "103.61.60.1",
-              "asn": 138457,
-              "as_org": "CAICT-AS-AP - China Academy of Information and Communications Technology",
-              "as_country": "CN"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2402:7d80::1",
-              "asn": 8075,
-              "as_org": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-              "as_country": "US"
-            }
-          ]
-        },
-        {
-          "hostname": "ns2.teleinfoo.com",
-          "ipv4": [
-            {
-              "ip": "103.61.61.1",
-              "asn": 8075,
-              "as_org": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-              "as_country": "US"
-            }
-          ],
-          "ipv6": [
-            {
-              "ip": "2402:7d80:8888::1",
-              "asn": 8075,
-              "as_org": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-              "as_country": "US"
-            }
-          ]
-        },
-        {
-          "hostname": "ns3.teleinfo.cn",
-          "ipv4": [
-            {
-              "ip": "103.61.62.1",
-              "asn": 8075,
-              "as_org": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-              "as_country": "US"
-            }
-          ],
-          "ipv6": []
-        },
-        {
-          "hostname": "ns4.teleinfoo.com",
-          "ipv4": [
-            {
-              "ip": "103.61.63.1",
-              "asn": 8075,
-              "as_org": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-              "as_country": "US"
-            }
-          ],
-          "ipv6": []
-        }
-      ]
+        "iana_delegation_round": "2012"
+      }
     },
     {
       "tld": "xin",
@@ -207106,7 +206420,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-02-19",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2015-03-07"
@@ -207128,12 +206442,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 2809,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "3bbba82ef5ee5583f6743af83a583f203153df0c2066f8707a735dc514474bf4"
-        },
         {
           "key_tag": 56090,
           "algorithm": 8,
@@ -207454,7 +206762,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-01-29",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2016-02-19"
@@ -207488,12 +206796,6 @@
         "language_code_source": "IANA"
       },
       "ds_records": [
-        {
-          "key_tag": 53164,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "27e776688bd0cedb38466ce0e6b2bcc5cbefa0549e04848ef0f1fdbe40f85d0e"
-        },
         {
           "key_tag": 54482,
           "algorithm": 8,
@@ -210432,7 +209734,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-12-04",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2016-04-17"
@@ -210462,12 +209764,6 @@
         "language_code_source": "IANA"
       },
       "ds_records": [
-        {
-          "key_tag": 26359,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "7d1e023bbb026ac5d19ae62d5f13ee6e01f3450a1e6629e25a9205dcf2a31f9e"
-        },
         {
           "key_tag": 39281,
           "algorithm": 8,
@@ -210585,7 +209881,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-01-23",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-02-05"
@@ -210619,12 +209915,6 @@
         "language_code_source": "IANA"
       },
       "ds_records": [
-        {
-          "key_tag": 51310,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "b725fa381426f5e3a9338c5c5a57447611aba619e9675d9bf973d1d2a3b14b5e"
-        },
         {
           "key_tag": 11759,
           "algorithm": 8,
@@ -212934,7 +212224,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-01-29",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2016-02-21"
@@ -212968,12 +212258,6 @@
         "language_code_source": "IANA"
       },
       "ds_records": [
-        {
-          "key_tag": 59140,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "05f9b4a2cc75f4cc41150454bb3911c3a8b0874d626162842146114819b45443"
-        },
         {
           "key_tag": 53690,
           "algorithm": 8,
@@ -213432,7 +212716,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-01-29",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2016-02-19"
@@ -213466,12 +212750,6 @@
         "language_code_source": "IANA"
       },
       "ds_records": [
-        {
-          "key_tag": 7171,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "480318eeeb6f2bfec750dd4267bddc9d033b80c0bf1bf9cf979780c35bb87769"
-        },
         {
           "key_tag": 63281,
           "algorithm": 8,
@@ -214369,7 +213647,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-11-20",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-12-06"
@@ -214403,12 +213681,6 @@
         "language_code_source": "IANA"
       },
       "ds_records": [
-        {
-          "key_tag": 1450,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "ee874dd50ba3cecb8187c1d3fb2f8c72fae826a33c0c6a96dab7c16db8a70d84"
-        },
         {
           "key_tag": 13120,
           "algorithm": 8,
@@ -215197,7 +214469,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-11-25",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2015-12-14"
@@ -215231,12 +214503,6 @@
         "language_code_source": "IANA"
       },
       "ds_records": [
-        {
-          "key_tag": 53936,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "b28c814ee8f6237ced8a3ba3d591b75f455258faec60828f7d01432a8e153eac"
-        },
         {
           "key_tag": 28355,
           "algorithm": 8,
@@ -215602,7 +214868,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-03-18",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2016-03-25"
@@ -215636,12 +214902,6 @@
         "language_code_source": "IANA"
       },
       "ds_records": [
-        {
-          "key_tag": 33139,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "e4d17f595eb9ea2d365fdb095ec7866a106ae8a3dfda44da3225efeee0a74b02"
-        },
         {
           "key_tag": 56095,
           "algorithm": 8,
@@ -216556,7 +215816,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-07-17",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2015-05-09"
@@ -216590,12 +215850,6 @@
         "language_code_source": "IANA"
       },
       "ds_records": [
-        {
-          "key_tag": 63835,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "e3f265b8894b76bab24512c5276be9243c0afb4595a14c879f9fb711e754c013"
-        },
         {
           "key_tag": 14845,
           "algorithm": 8,
@@ -217569,7 +216823,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-01-29",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2016-02-19"
@@ -217603,12 +216857,6 @@
         "language_code_source": "IANA"
       },
       "ds_records": [
-        {
-          "key_tag": 8299,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "ea53409a63f3c2e67887df475d35837ca4696aadd7a08523436c05960ac99eee"
-        },
         {
           "key_tag": 27979,
           "algorithm": 8,
@@ -217901,7 +217149,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-09-16",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2016-09-30"
@@ -217935,12 +217183,6 @@
         "language_code_source": "IANA"
       },
       "ds_records": [
-        {
-          "key_tag": 62404,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "abe26a827cd8026e02a148365ad795fa844282e961fc25583498834571b1ea7a"
-        },
         {
           "key_tag": 47422,
           "algorithm": 8,
@@ -219974,7 +219216,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-01-29",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2016-02-22"
@@ -220008,12 +219250,6 @@
         "language_code_source": "IANA"
       },
       "ds_records": [
-        {
-          "key_tag": 2149,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "508bddccb2b2b23586882a59e145310aca85ffb453eb073565e900466f52a39f"
-        },
         {
           "key_tag": 33490,
           "algorithm": 8,
@@ -227663,7 +226899,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2016-01-29",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2016-02-19"
@@ -227695,12 +226931,6 @@
         "language_code_source": "IANA"
       },
       "ds_records": [
-        {
-          "key_tag": 1249,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "faecafc5a2a9f88ac34a7d570da61418bc78607db107aa10f150c77022c9b910"
-        },
         {
           "key_tag": 61631,
           "algorithm": 8,
@@ -228783,7 +228013,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-10-21",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2013-10-23"
@@ -228817,12 +228047,6 @@
         "language_code_source": "IANA"
       },
       "ds_records": [
-        {
-          "key_tag": 57331,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "98698bf6004dcfe48f3c5beb164f75d63fbac726ae652da39af2929a8f836f92"
-        },
         {
           "key_tag": 9646,
           "algorithm": 8,
@@ -229280,7 +228504,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2013-11-25",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-08-22"
@@ -229314,12 +228538,6 @@
         "language_code_source": "derived"
       },
       "ds_records": [
-        {
-          "key_tag": 25099,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "97139be679993f9bc92729c06a1ce43ae75083580338cf750f15fd2b34737717"
-        },
         {
           "key_tag": 18791,
           "algorithm": 8,
@@ -233954,7 +233172,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-09-10",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2015-10-27"
@@ -233977,12 +233195,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 40147,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "2e4669652e0c3b84007e43707f8354c94afd6f929a5152524bedbaa6f009dafa"
-        },
         {
           "key_tag": 20839,
           "algorithm": 8,
@@ -234099,7 +233311,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2015-11-12",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2015-12-05"
@@ -234127,12 +233339,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 52774,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "2f7c24f9a7f75c1ba05da9b742209f4e8204bd280f50b4f64800854b0965dd12"
-        },
         {
           "key_tag": 40157,
           "algorithm": 8,
@@ -234588,7 +233794,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-01-09",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-20"
       ],
       "events": {
         "delegation": "2014-01-14"
@@ -234616,12 +233822,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 12136,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "44853e072aa0c590351b822b9a23ff95631412a3583228163a995598ef764baf"
-        },
         {
           "key_tag": 9442,
           "algorithm": 8,

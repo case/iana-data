@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T22:19:37Z",
+  "publication": "2026-11-21T09:10:17Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -34,7 +34,7 @@
     "rdap_server": "https://rdap.nic.cba/",
     "tld_created": "2015-03-26",
     "tld_updated": [
-      "2026-08-04"
+      "2026-11-20"
     ],
     "events": {
       "delegation": "2015-06-22"
@@ -60,6 +60,12 @@
         "algorithm": 8,
         "digest_type": 2,
         "digest": "84871955bc863e5911b72369b1d1eb75ff087a8093edb4ba4bfb48f95813c034"
+      },
+      {
+        "key_tag": 8578,
+        "algorithm": 13,
+        "digest_type": 2,
+        "digest": "444813bf8b96b5fd1367f8fe0516d8bb8ec42008ed1e4fa91d9ac4795560afc6"
       }
     ],
     "nameservers": [
