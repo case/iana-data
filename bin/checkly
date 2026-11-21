@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+usage() {
+  cat <<'USAGE'
+Usage: bin/checkly <command>
+
+Commands for the ccTLD RDAP checks in monitoring/checkly/:
+  --test             Run the checks once.
+  --preview-deploy   Deploy them as a preview.
+  --deploy           Deploy them to production.
+  --info             Show the account and project info.
+  -h, --help         Show this help.
+USAGE
+}
+
+config=monitoring/checkly/checkly.config.ts
+if [ "$#" -gt 1 ]; then
+  printf 'bin/checkly: takes one option, got %s arguments\n\n' "$#" >&2
+  usage >&2
+  exit 2
+fi
+
+case "${1:-}" in
+  --test) exec pnpm exec checkly test --config "$config" ;;
+  --preview-deploy) exec pnpm exec checkly deploy --preview --config "$config" ;;
+  --deploy) exec pnpm exec checkly deploy --config "$config" ;;
+  --info) exec pnpm exec jiti monitoring/checkly/info.ts ;;
+  -h | --help | "") usage ;;
+  *)
+    printf 'bin/checkly: unknown option %s\n\n' "$1" >&2
+    usage >&2
+    exit 2
+    ;;
+esac

@@ -142,7 +142,7 @@ def test_tld_script_field_present_for_idns(built_tlds_json):
                 pytest.fail(
                     f"Missing tld_script for {tld_name}. "
                     f"This TLD is not in the test fixture at {mapping_file}. "
-                    f"Run 'make generate-idn-mapping' to update production mapping, "
+                    f"Run 'bin/generate --idn-mapping' to update production mapping, "
                     f"then add '{tld_name}' to the test fixture."
                 )
             else:
@@ -231,7 +231,7 @@ def test_delegated_and_undelegated_idns_have_scripts(built_tlds_json):
                 pytest.fail(
                     f"Delegated IDN {tld_name} missing tld_script. "
                     f"TLD not in test fixture at {mapping_file}. "
-                    f"Run 'make generate-idn-mapping' then update test fixture."
+                    f"Run 'bin/generate --idn-mapping' then update test fixture."
                 )
         assert tld["tld_script"]
 
@@ -242,7 +242,7 @@ def test_delegated_and_undelegated_idns_have_scripts(built_tlds_json):
                 pytest.fail(
                     f"Undelegated IDN {tld_name} missing tld_script. "
                     f"TLD not in test fixture at {mapping_file}. "
-                    f"Run 'make generate-idn-mapping' then update test fixture."
+                    f"Run 'bin/generate --idn-mapping' then update test fixture."
                 )
         assert tld["tld_script"]
 
@@ -264,7 +264,7 @@ def test_no_null_scripts_for_idns(built_tlds_json):
                 pytest.fail(
                     f"Null script for {tld_name}. "
                     f"TLD not in test fixture at {mapping_file}. "
-                    f"Run 'make generate-idn-mapping' then update test fixture."
+                    f"Run 'bin/generate --idn-mapping' then update test fixture."
                 )
             else:
                 pytest.fail(

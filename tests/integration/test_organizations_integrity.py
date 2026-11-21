@@ -53,7 +53,7 @@ def _require_iptoasn_source() -> bool:
 
     reason = (
         f"{get_iptoasn_path()} is missing, so a fresh build carries no ASN data. "
-        "Fetch it with:\n    make download-iptoasn"
+        "Fetch it with:\n    bin/download --iptoasn"
     )
     if os.environ.get("CI"):
         pytest.fail(f"{reason}\n\nCI downloads this artifact; check that step.")

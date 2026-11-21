@@ -44,7 +44,7 @@ def main(argv: list[str]) -> int:
                     path.write_text(
                         gh_api(
                             "-H",
-                            "Accept: application/vnd.github.raw",
+                            "Accept: application/vnd.github.raw+json",
                             f"repos/{repository}/contents/{path.name}?ref={quote(branch, safe='')}",
                         ),
                         encoding="utf-8",

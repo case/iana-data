@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+usage() {
+  cat <<'USAGE'
+Usage: bin/download <source>
+
+Sources:
+  --iana       The core IANA files, respecting cache headers. The TLD JSON is parsed
+               before it replaces the stored copy; a failed download keeps the old file.
+  --iptoasn    The iptoasn table for ASN lookups. Also stamps data/generated/metadata.json.
+  -h, --help   Show this help.
+USAGE
+}
+
+if [ "$#" -gt 1 ]; then
+  printf 'bin/download: takes one option, got %s arguments\n\n' "$#" >&2
+  usage >&2
+  exit 2
+fi
+
+case "${1:-}" in
+  --iana) exec uv run python -m src.cli --download ;;
+  --iptoasn) exec uv run python -m src.cli --download-iptoasn ;;
+  -h | --help | "") usage ;;
+  *)
+    printf 'bin/download: unknown option %s\n\n' "$1" >&2
+    usage >&2
+    exit 2
+    ;;
+esac

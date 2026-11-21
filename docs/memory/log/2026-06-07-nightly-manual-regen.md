@@ -33,4 +33,4 @@ A nightly with no real change produces no commit: the writer compares content wi
 
 ## Operational note
 
-Keep the local iptoasn file fresh (`make download-iptoasn`) before adding/verifying org mappings. `tests.yaml` builds from the daily `update-iptoasn` artifact (current), so a stale local iptoasn can pass locally while CI fails on a string that only exists in the old snapshot.
+Keep the local iptoasn file fresh (`bin/download --iptoasn`) before adding/verifying org mappings. `tests.yaml` builds from the daily `update-iptoasn` artifact (current), so a stale local iptoasn can pass locally while CI fails on a string that only exists in the old snapshot.

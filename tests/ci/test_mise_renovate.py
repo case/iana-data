@@ -398,3 +398,11 @@ def test_a_policy_without_a_report_path_fails(tmp_path):
     )
     assert result.returncode == 1
     assert "names no readable reportPath" in result.stdout
+
+
+def test_a_report_that_cannot_be_cleared_fails(tmp_path):
+    """A stale report the job cannot delete would otherwise be read as this run's."""
+    (tmp_path / "renovate-report.json").mkdir()
+    result = run_check(tmp_path, None, clear=True)
+    assert result.returncode == 1
+    assert "cannot clear the earlier report" in result.stdout

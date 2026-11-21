@@ -169,7 +169,7 @@ def main():
     tlds_file = Path("data/source/iana-tlds.txt")
     if not tlds_file.exists():
         print(f"Error: {tlds_file} not found")
-        print("Run 'make download-core' first")
+        print("Run 'bin/download --iana' first")
         return 1
 
     # Find all IDN TLDs (start with xn--)

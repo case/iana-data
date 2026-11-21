@@ -373,13 +373,18 @@ The `data/generated/agreements.json` file is the ICANN registry-agreement-type e
 
 **Data downloads**
 
-- `make download-core` - Downloads the core IANA files, respecting cache headers. The TLD JSON is parsed before it replaces the stored copy; a rejected or failed download keeps the previous file
+- `bin/download --iana` - Downloads the core IANA files, respecting cache headers. The TLD JSON is parsed before it replaces the stored copy; a rejected or failed download keeps the previous file
+- `bin/download --iptoasn` - Downloads the iptoasn table that `bin/build --all` uses for ASN lookups
 
 **Misc**
 
-- `make analyze-idn-scripts` - analyzes the IDNs, and prints their associated Unicode label names
-- `make generate-idn-mapping` - creates the `data/generated/idn-script-mapping.json` file, by mapping IDNs like `ελ` to their Unicode character labels (e.g. `GREEK`), then using `pycountry` to map their labels to their ISO script names
-- `make analyze-registry-agreements` - summarizes the contents of the ICANN Registry Agreements file
+- `bin/generate --idn-mapping` - creates the `data/generated/idn-script-mapping.json` file, by mapping IDNs like `ελ` to their Unicode character labels (e.g. `GREEK`), then using `pycountry` to map their labels to their ISO script names
+- `bin/analyze --idn-scripts` - analyzes the IDNs, and prints their associated Unicode label names
+- `bin/analyze --registry-agreements` - summarizes the contents of the ICANN Registry Agreements file
+- `bin/analyze --data` and `bin/analyze --tlds-json` - summarize the downloaded source data, and the size of `tlds.json` by field
+- `bin/checkly --test` - runs the Checkly monitoring checks; `--preview-deploy`, `--deploy` and `--info` cover the rest
+
+Each `bin/` script prints its options with `--help`.
 
 ## Local dev
 

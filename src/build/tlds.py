@@ -155,7 +155,7 @@ def build_tlds_json(
                 logger.warning("Error loading iptoasn data: %s", e)
         else:
             logger.info(
-                "No iptoasn data found at %s (run 'make download-iptoasn' to enable ASN lookups)",
+                "No iptoasn data found at %s (run 'bin/download --iptoasn' to enable ASN lookups)",
                 iptoasn_path,
             )
 

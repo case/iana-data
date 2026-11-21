@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+usage() {
+  cat <<'USAGE'
+Usage: bin/generate <artifact>
+
+Artifacts:
+  --idn-mapping   data/generated/idn-script-mapping.json, mapping each IDN's Unicode
+                  script labels to ISO 15924 names. bin/build also runs this.
+  -h, --help      Show this help.
+USAGE
+}
+
+if [ "$#" -gt 1 ]; then
+  printf 'bin/generate: takes one option, got %s arguments\n\n' "$#" >&2
+  usage >&2
+  exit 2
+fi
+
+case "${1:-}" in
+  --idn-mapping) exec uv run python scripts/idn_unicode_scripts/generate_idn_script_mapping.py ;;
+  -h | --help | "") usage ;;
+  *)
+    printf 'bin/generate: unknown option %s\n\n' "$1" >&2
+    usage >&2
+    exit 2
+    ;;
+esac

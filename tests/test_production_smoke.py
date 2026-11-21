@@ -32,6 +32,8 @@ def test_module_can_be_imported():
     import src
     import src.analyze
     import src.build
+    import src.cli
+    import src.config
     import src.parse
     import src.utilities  # noqa: F401
 
@@ -40,7 +42,7 @@ def test_cli_module_can_run():
     """Test that CLI can be invoked as a module (python -m src.cli).
 
     This is how GitHub Actions runs the CLI:
-    - make download-core → uv run python -m src.cli --download
+    - bin/download --iana → uv run python -m src.cli --download
     - ./bin/build --all → generate-idn-mapping + uv run python -m src.cli --build
     """
     result = subprocess.run(
@@ -53,15 +55,13 @@ def test_cli_module_can_run():
 
     assert result.returncode == 0, f"CLI failed to run: {result.stderr}"
     assert "IANA data ETL" in result.stdout
-    assert "--download" in result.stdout
-    assert "--build" in result.stdout
+    for flag in ("--download", "--analyze", "--build"):
+        assert flag in result.stdout
     assert "--download-tld-pages" not in result.stdout
 
 
 def test_cli_download_flag_works():
-    """Test that --download flag works (used by: make download-core)."""
-    # Don't actually download, just verify CLI accepts the flag
-    # The actual download is mocked in unit tests
+    """--download validates its sources before fetching (used by: bin/download --iana)."""
     result = subprocess.run(
         [sys.executable, "-m", "src.cli", "--download", "NONEXISTENT_SOURCE"],
         capture_output=True,
@@ -69,149 +69,52 @@ def test_cli_download_flag_works():
         timeout=10,
         check=False,
     )
-
-    # Should fail gracefully with error about unknown source, not crash
-    # Exit code doesn't matter - we just care it doesn't have import errors
-    assert "circular import" not in result.stderr.lower()
-    assert "ImportError" not in result.stderr
+    assert result.returncode == 1
+    assert "Invalid source(s): NONEXISTENT_SOURCE" in result.stdout + result.stderr
 
 
-def test_cli_analyze_flag_works():
-    """Test that --analyze flag works (used by: make analyze)."""
+@pytest.mark.parametrize(
+    "report", ["--data", "--idn-scripts", "--registry-agreements", "--tlds-json"]
+)
+def test_every_analyze_report_runs(report):
+    """Each report reads the committed data, so a moved script or broken import fails here."""
     result = subprocess.run(
-        [sys.executable, "-m", "src.cli", "--analyze"],
-        capture_output=True,
-        text=True,
-        timeout=10,
-        check=False,
+        ["bin/analyze", report], capture_output=True, text=True, timeout=60, check=False
     )
-
-    # Should not crash with import errors
-    assert "circular import" not in result.stderr.lower()
-    assert "ImportError" not in result.stderr
-
-
-@pytest.mark.skipif(not Path("Makefile").exists(), reason="Makefile not found")
-def test_makefile_targets_exist():
-    """Verify that all Makefile targets used in GitHub Actions exist.
-
-    GitHub Actions workflow uses these Make targets:
-    - make download-core
-    - make generate-idn-mapping
-
-    Build/lint/test are run via bin/build, bin/lint, bin/test, not via make.
-    """
-    makefile_lines = Path("Makefile").read_text().splitlines()
-
-    required_targets = [
-        "download-core",
-        "generate-idn-mapping",
-    ]
-
-    for target in required_targets:
-        # Match either a .PHONY line or a recipe line, anchored so that
-        # e.g. "test" does not substring-match into "checkly-test:".
-        phony_line = f".PHONY: {target}"
-        recipe_prefix = f"{target}:"
-        found = any(
-            line == phony_line or line.startswith(recipe_prefix)
-            for line in makefile_lines
-        )
-        assert found, (
-            f"Required Make target '{target}' not found in Makefile (used by GitHub Actions)"
-        )
+    assert result.returncode == 0, result.stdout + result.stderr
 
 
 @pytest.mark.skipif(not Path("bin").is_dir(), reason="bin/ directory not found")
-def test_bin_scripts_are_executable():
-    """Verify bin/setup, bin/lint, bin/test, bin/build exist and are executable.
-
-    GitHub Actions invokes these directly (replacing the old make
-    deps/lint/test/build targets); a non-executable file would fail CI with a
-    confusing "Permission denied".
-    """
+def test_every_bin_script_is_executable():
+    """Every bin/ entry point is executable; CI fails one without the bit with "Permission denied"."""
     import os
 
-    for name in ("setup", "lint", "test", "build"):
-        path = Path("bin") / name
-        assert path.is_file(), f"bin/{name} is missing"
-        assert os.access(path, os.X_OK), f"bin/{name} is not executable"
+    scripts = [
+        path for path in Path("bin").iterdir() if path.is_file() and not path.suffix
+    ]
+    assert {
+        "setup",
+        "lint",
+        "test",
+        "build",
+        "download",
+        "generate",
+        "analyze",
+        "checkly",
+    } <= {path.name for path in scripts}
+    for path in scripts:
+        assert os.access(path, os.X_OK), f"{path} is not executable"
 
 
-def test_all_cli_subcommands_have_help():
-    """Ensure all CLI subcommands are documented and accessible."""
+@pytest.mark.parametrize("script", ["analyze", "checkly", "download", "generate"])
+def test_a_bin_script_rejects_extra_arguments(script):
+    """A second argument would be dropped silently, so the script refuses it before running."""
     result = subprocess.run(
-        [sys.executable, "-m", "src.cli", "--help"],
+        [f"bin/{script}", "--help", "extra"],
         capture_output=True,
         text=True,
         timeout=10,
         check=False,
     )
-
-    assert result.returncode == 0
-
-    # All subcommands used in production should be documented
-    required_flags = [
-        "--download",
-        "--analyze",
-        "--build",
-    ]
-
-    for flag in required_flags:
-        assert flag in result.stdout, (
-            f"Required CLI flag '{flag}' not found in --help output (used by Makefile/GitHub Actions)"
-        )
-
-
-def test_package_has_no_syntax_errors():
-    """Verify all Python files in src/ can be compiled.
-
-    This catches syntax errors that might not be covered by tests.
-    """
-    src_dir = Path("src")
-    python_files = list(src_dir.rglob("*.py"))
-
-    assert len(python_files) > 0, "No Python files found in src/"
-
-    for py_file in python_files:
-        try:
-            compile(py_file.read_text(), str(py_file), "exec")
-        except SyntaxError as e:
-            pytest.fail(f"Syntax error in {py_file}: {e}")
-
-
-def test_no_circular_imports_in_package_structure():
-    """Test importing all packages doesn't cause circular import.
-
-    This validates the entire package structure, not just individual modules.
-    """
-    packages = [
-        "src",
-        "src.analyze",
-        "src.build",
-        "src.cli",
-        "src.config",
-        "src.parse",
-        "src.utilities",
-    ]
-
-    for package_name in packages:
-        try:
-            __import__(package_name)
-        except ImportError as e:
-            if "circular import" in str(e).lower():
-                pytest.fail(f"Circular import detected in {package_name}: {e}")
-            # Other ImportErrors might be OK (missing optional deps, etc.)
-
-
-def test_cli_entry_points_are_defined():
-    """Verify that the CLI module structure is correct."""
-    # The CLI should be runnable as: python -m src.cli
-    cli_module = Path("src/cli.py")
-    assert cli_module.exists(), "src/cli.py not found"
-
-    # Should have __main__ guard or be executable
-    cli_content = cli_module.read_text()
-    assert 'if __name__ == "__main__"' in cli_content or "def main(" in cli_content, (
-        "CLI module should have main entry point"
-    )
+    assert result.returncode == 2
+    assert f"Usage: bin/{script}" in result.stderr

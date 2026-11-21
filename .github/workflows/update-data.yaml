@@ -51,13 +51,13 @@ jobs:
         run: bin/setup
 
       # Exit 3 is a failed fetch and 4 a rejected payload. Both keep the stored
-      # file, so continue and alert. Not `make`, which turns every failure into 2.
+      # file, so continue and alert.
       - name: Download core data (RDAP, TLD list, TLD JSON and schema)
         id: download-core
         timeout-minutes: 10
         run: |
           status=0
-          uv run python -m src.cli --download || status=$?
+          bin/download --iana || status=$?
           echo "status=$status" >> "$GITHUB_OUTPUT"
           case "$status" in
             0) ;;
@@ -126,7 +126,7 @@ jobs:
       - name: Generate IDN script mappings
         id: generate-idn-mapping
         continue-on-error: true
-        run: make generate-idn-mapping
+        run: bin/generate --idn-mapping
 
       - name: Notification if IDN mapping fails
         if: steps.generate-idn-mapping.outcome == 'failure'

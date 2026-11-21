@@ -257,7 +257,7 @@ from urllib.parse import parse_qs, urlsplit
 endpoint = urlsplit(sys.argv[-1])
 key = endpoint.path + "".join(f"?ref={ref}" for ref in parse_qs(endpoint.query).get("ref", []))
 served = json.loads(Path(__file__).with_name("served.json").read_text())
-raw = "Accept: application/vnd.github.raw" in sys.argv
+raw = "Accept: application/vnd.github.raw+json" in sys.argv
 if key not in served or ("/contents/" in key and not raw):
     sys.exit("gh: Not Found (HTTP 404)")
 print(served[key], end="")

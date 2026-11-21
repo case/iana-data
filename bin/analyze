@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+usage() {
+  cat <<'USAGE'
+Usage: bin/analyze <report>
+
+Reports:
+  --data                  Summarize the downloaded source data.
+  --idn-scripts           Print each IDN's Unicode script labels.
+  --registry-agreements   Summarize the ICANN Registry Agreements file.
+  --tlds-json             Break down data/generated/tlds.json's size by field.
+  -h, --help              Show this help.
+USAGE
+}
+
+if [ "$#" -gt 1 ]; then
+  printf 'bin/analyze: takes one option, got %s arguments\n\n' "$#" >&2
+  usage >&2
+  exit 2
+fi
+
+case "${1:-}" in
+  --data) exec uv run python -m src.cli --analyze ;;
+  --idn-scripts) exec uv run python scripts/idn_unicode_scripts/analyze_idn_scripts.py ;;
+  --registry-agreements) exec uv run python scripts/registry-agreement-table/analyze_registry_agreements.py ;;
+  --tlds-json) exec uv run python scripts/analyze_tlds_json.py ;;
+  -h | --help | "") usage ;;
+  *)
+    printf 'bin/analyze: unknown option %s\n\n' "$1" >&2
+    usage >&2
+    exit 2
+    ;;
+esac

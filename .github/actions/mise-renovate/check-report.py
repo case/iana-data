@@ -71,7 +71,11 @@ def main(argv: list[str]) -> int:
         return 1
     if argv[2] == "--clear":
         # Before Renovate runs, so a report left by an earlier job cannot pass the check.
-        report_path.unlink(missing_ok=True)
+        try:
+            report_path.unlink(missing_ok=True)
+        except OSError as err:
+            print(f"::error::cannot clear the earlier report at {report_path}: {err}")
+            return 1
         return 0
     repository, mise_path = argv[2], Path(argv[3])
     try:
