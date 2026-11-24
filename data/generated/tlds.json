@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-22T09:18:58Z",
+  "publication": "2026-11-24T11:58:56Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -31147,7 +31147,7 @@
       "rdap_server": "https://rdap.nic.capetown/rdap/",
       "tld_created": "2014-06-05",
       "tld_updated": [
-        "2025-08-05"
+        "2026-11-23"
       ],
       "events": {
         "delegation": "2014-06-19"
@@ -31181,6 +31181,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "3b828190e412d1780fd97c538547f6698f1db01570ffae56efb91f4e4735e6a6"
+        },
+        {
+          "key_tag": 61110,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "a1cc10b1317c9dde66457d59ed2fd086fe5e7628d0300690595868bd31f6fe3c"
         }
       ],
       "nameservers": [
@@ -57185,7 +57191,7 @@
       "rdap_server": "https://rdap.nic.durban/rdap/",
       "tld_created": "2014-06-05",
       "tld_updated": [
-        "2025-08-05"
+        "2026-11-23"
       ],
       "events": {
         "delegation": "2014-06-19"
@@ -57219,6 +57225,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "12f972c27bf0e22f2c4740bf8a4769d7113ed0beff1cf79c070af070203f81a1"
+        },
+        {
+          "key_tag": 50324,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "4f83b7317d5f08f149031c7a91dcba89056f2af80af49f869744ed0dfd5f81c7"
         }
       ],
       "nameservers": [
@@ -100073,7 +100085,7 @@
       "rdap_server": "https://rdap.nic.joburg/rdap/",
       "tld_created": "2014-06-05",
       "tld_updated": [
-        "2025-08-05"
+        "2026-11-23"
       ],
       "events": {
         "delegation": "2014-06-19"
@@ -100107,6 +100119,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "d027f109b59baeb30bc000dc1f2d34b57d9ba404923f899bb07e4badd0dc2136"
+        },
+        {
+          "key_tag": 25698,
+          "algorithm": 13,
+          "digest_type": 2,
+          "digest": "ed9be57b57f7b805fb170a7bce876c2cb8558b372bcf12f82f04783cb8bdde4f"
         }
       ],
       "nameservers": [
@@ -118848,7 +118866,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2007-09-24",
       "tld_updated": [
-        "2020-10-19"
+        "2026-11-23"
       ],
       "annotations": {
         "rdap_source": "supplemental",
@@ -118867,6 +118885,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "7708c8a6d5d72b63214bbff50cb54553f7e07a1fa5e9074bd8d63c43102d8559"
+        },
+        {
+          "key_tag": 11657,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "104fa3cadf5b1a6f3892eef5494e505455fc390e0229cb4efc0ddc3ca1a6282e"
         }
       ],
       "nameservers": [
@@ -163964,7 +163988,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-07-10",
       "tld_updated": [
-        "2026-11-13"
+        "2026-11-23"
       ],
       "events": {
         "delegation": "2015-04-02"
@@ -163986,12 +164010,6 @@
         ]
       },
       "ds_records": [
-        {
-          "key_tag": 57649,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "24261732a51a4d33adc9a823ee1e38139bcabbda2f4c2eb7f6c8ceb3480b64b6"
-        },
         {
           "key_tag": 31619,
           "algorithm": 8,
@@ -195133,7 +195151,7 @@
       "rdap_server": "https://rdap.identitydigital.services/rdap/",
       "tld_created": "2014-03-20",
       "tld_updated": [
-        "2026-11-13"
+        "2026-11-23"
       ],
       "events": {
         "delegation": "2014-03-31"
@@ -195156,12 +195174,6 @@
         "geographic_scope": "city"
       },
       "ds_records": [
-        {
-          "key_tag": 13336,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "612d11e84db7671f5dc9b54fb8944d57474de91ca498ca80b6ebc05c162c3af0"
-        },
         {
           "key_tag": 22567,
           "algorithm": 8,
