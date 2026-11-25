@@ -1,6 +1,6 @@
 {
   "description": "Enhanced TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-24T11:58:56Z",
+  "publication": "2026-11-25T10:51:29Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -60976,7 +60976,7 @@
       "whois_server": "whois.nic.es",
       "tld_created": "1988-04-14",
       "tld_updated": [
-        "2026-10-26"
+        "2026-11-24"
       ],
       "annotations": {
         "iana_sponsor_alias": "Red.es",
@@ -60997,12 +60997,6 @@
         "geographic_scope": "country"
       },
       "ds_records": [
-        {
-          "key_tag": 54404,
-          "algorithm": 8,
-          "digest_type": 2,
-          "digest": "c130df280cd8ebb99c8b6c8335b9fd5f1d709641494e044c8085b1ac21833b47"
-        },
         {
           "key_tag": 4901,
           "algorithm": 8,
@@ -76474,11 +76468,10 @@
         }
       },
       "registry_url": "http://nic.ggee",
-      "whois_server": "whois.nic.ggee",
       "rdap_server": "https://rdap.gmoregistry.net/rdap/",
       "tld_created": "2014-12-18",
       "tld_updated": [
-        "2019-08-07"
+        "2026-11-24"
       ],
       "events": {
         "delegation": "2014-12-25"
@@ -76511,6 +76504,12 @@
           "algorithm": 8,
           "digest_type": 2,
           "digest": "0d54d07bebf1a6afe76ecf6d55c48698d8f233b719009329e4465b75078479d5"
+        },
+        {
+          "key_tag": 53225,
+          "algorithm": 8,
+          "digest_type": 2,
+          "digest": "46fd8436b76fd4863d5b2c4ac46276d79d4fdda3b2a138d09d90bef1d1308da8"
         }
       ],
       "nameservers": [

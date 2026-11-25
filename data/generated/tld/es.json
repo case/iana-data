@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T22:19:37Z",
+  "publication": "2026-11-25T10:51:29Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -23,7 +23,7 @@
     "whois_server": "whois.nic.es",
     "tld_created": "1988-04-14",
     "tld_updated": [
-      "2026-10-26"
+      "2026-11-24"
     ],
     "annotations": {
       "iana_sponsor_alias": "Red.es",
@@ -44,12 +44,6 @@
       "geographic_scope": "country"
     },
     "ds_records": [
-      {
-        "key_tag": 54404,
-        "algorithm": 8,
-        "digest_type": 2,
-        "digest": "c130df280cd8ebb99c8b6c8335b9fd5f1d709641494e044c8085b1ac21833b47"
-      },
       {
         "key_tag": 4901,
         "algorithm": 8,
