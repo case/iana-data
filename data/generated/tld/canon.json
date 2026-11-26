@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T22:19:37Z",
+  "publication": "2026-11-26T10:25:32Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -31,11 +31,10 @@
       }
     },
     "registry_url": "http://nic.canon",
-    "whois_server": "whois.nic.canon",
     "rdap_server": "https://rdap.gmoregistry.net/rdap/",
     "tld_created": "2015-01-29",
     "tld_updated": [
-      "2019-08-20"
+      "2026-11-25"
     ],
     "events": {
       "delegation": "2015-02-04"
@@ -65,6 +64,12 @@
         "algorithm": 8,
         "digest_type": 2,
         "digest": "9a1fc16a90acf3c7d3233480f45f595debdef3f71ae637bf3f8093670dda7d8a"
+      },
+      {
+        "key_tag": 36839,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "8fec511198d1fb8229c9a8b0f8e4c2b6652c947281489aced02a5e8265afb9cf"
       }
     ],
     "nameservers": [

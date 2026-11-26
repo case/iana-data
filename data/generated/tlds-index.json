@@ -1,6 +1,6 @@
 {
   "description": "Index of per-TLD data files at data/generated/tld/",
-  "publication": "2026-11-25T10:51:29Z",
+  "publication": "2026-11-26T10:25:32Z",
   "count": 1603,
   "tlds": [
     {
@@ -1886,7 +1886,7 @@
       "delegated": true,
       "tld_created": "2015-01-29",
       "tld_updated": [
-        "2019-08-20"
+        "2026-11-25"
       ]
     },
     {
@@ -2993,7 +2993,7 @@
       "delegated": true,
       "tld_created": "2014-07-10",
       "tld_updated": [
-        "2019-08-20"
+        "2026-11-25"
       ]
     },
     {
@@ -3227,7 +3227,7 @@
       "delegated": true,
       "tld_created": "2016-07-14",
       "tld_updated": [
-        "2025-05-29"
+        "2026-11-25"
       ]
     },
     {
@@ -3281,7 +3281,7 @@
       "delegated": true,
       "tld_created": "2014-02-27",
       "tld_updated": [
-        "2019-08-28"
+        "2026-11-25"
       ]
     },
     {
@@ -4752,7 +4752,7 @@
       "delegated": true,
       "tld_created": "2014-02-27",
       "tld_updated": [
-        "2019-08-20"
+        "2026-11-25"
       ]
     },
     {
@@ -4797,7 +4797,7 @@
       "delegated": true,
       "tld_created": "2015-02-13",
       "tld_updated": [
-        "2019-08-20"
+        "2026-11-25"
       ]
     },
     {
@@ -5220,7 +5220,7 @@
       "delegated": true,
       "tld_created": "2015-04-23",
       "tld_updated": [
-        "2019-08-20"
+        "2026-11-25"
       ]
     },
     {
@@ -5661,7 +5661,7 @@
       "delegated": true,
       "tld_created": "1989-05-08",
       "tld_updated": [
-        "2026-10-12"
+        "2026-11-25"
       ]
     },
     {
@@ -5688,7 +5688,7 @@
       "delegated": true,
       "tld_created": "2014-07-10",
       "tld_updated": [
-        "2019-08-20"
+        "2026-11-25"
       ]
     },
     {
@@ -5959,7 +5959,7 @@
       "delegated": true,
       "tld_created": "2015-01-08",
       "tld_updated": [
-        "2019-08-20"
+        "2026-11-25"
       ]
     },
     {
@@ -6166,7 +6166,7 @@
       "delegated": true,
       "tld_created": "2014-12-18",
       "tld_updated": [
-        "2019-08-20"
+        "2026-11-25"
       ]
     },
     {
@@ -6436,7 +6436,7 @@
       "delegated": true,
       "tld_created": "2015-01-08",
       "tld_updated": [
-        "2019-08-20"
+        "2026-11-25"
       ]
     },
     {
@@ -6959,7 +6959,7 @@
       "delegated": true,
       "tld_created": "2015-01-08",
       "tld_updated": [
-        "2019-08-20"
+        "2026-11-25"
       ]
     },
     {
@@ -7975,7 +7975,7 @@
       "delegated": true,
       "tld_created": "2014-01-16",
       "tld_updated": [
-        "2019-08-20"
+        "2026-11-25"
       ]
     },
     {
@@ -8137,7 +8137,7 @@
       "delegated": true,
       "tld_created": "2016-04-21",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-25"
       ]
     },
     {
@@ -8191,7 +8191,7 @@
       "delegated": true,
       "tld_created": "2014-04-24",
       "tld_updated": [
-        "2019-08-20"
+        "2026-11-25"
       ]
     },
     {
@@ -8209,7 +8209,7 @@
       "delegated": true,
       "tld_created": "2015-02-05",
       "tld_updated": [
-        "2019-08-20"
+        "2026-11-25"
       ]
     },
     {
@@ -8227,7 +8227,7 @@
       "delegated": true,
       "tld_created": "2015-10-01",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-25"
       ]
     },
     {
@@ -8245,7 +8245,7 @@
       "delegated": true,
       "tld_created": "2014-07-10",
       "tld_updated": [
-        "2019-08-20"
+        "2026-11-25"
       ]
     },
     {
@@ -8254,7 +8254,7 @@
       "delegated": true,
       "tld_created": "2016-01-08",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-25"
       ]
     },
     {
@@ -8326,7 +8326,7 @@
       "delegated": true,
       "tld_created": "2016-04-15",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-25"
       ]
     },
     {
@@ -8407,7 +8407,7 @@
       "delegated": true,
       "tld_created": "2015-09-03",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-25"
       ]
     },
     {
@@ -8443,7 +8443,7 @@
       "delegated": true,
       "tld_created": "2014-02-20",
       "tld_updated": [
-        "2019-08-20"
+        "2026-11-25"
       ]
     },
     {
@@ -8583,7 +8583,7 @@
       "delegated": true,
       "tld_created": "2015-06-18",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-25"
       ]
     },
     {
@@ -8619,7 +8619,7 @@
       "delegated": true,
       "tld_created": "2015-12-10",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-25"
       ]
     },
     {
@@ -8637,7 +8637,7 @@
       "delegated": true,
       "tld_created": "2014-06-26",
       "tld_updated": [
-        "2019-08-20"
+        "2026-11-25"
       ]
     },
     {
@@ -8772,7 +8772,7 @@
       "delegated": true,
       "tld_created": "2016-04-15",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-25"
       ]
     },
     {
@@ -8925,7 +8925,7 @@
       "delegated": true,
       "tld_created": "2015-01-08",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-25"
       ]
     },
     {
@@ -9078,7 +9078,7 @@
       "delegated": true,
       "tld_created": "2015-10-29",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-25"
       ]
     },
     {
@@ -9213,7 +9213,7 @@
       "delegated": true,
       "tld_created": "2016-02-19",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-25"
       ]
     },
     {
@@ -9312,7 +9312,7 @@
       "delegated": true,
       "tld_created": "2016-01-15",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-25"
       ]
     },
     {
@@ -9474,7 +9474,7 @@
       "delegated": true,
       "tld_created": "2015-11-20",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-25"
       ]
     },
     {
@@ -9618,7 +9618,7 @@
       "delegated": true,
       "tld_created": "2015-12-17",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-25"
       ]
     },
     {
@@ -9636,7 +9636,7 @@
       "delegated": true,
       "tld_created": "2016-04-15",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-25"
       ]
     },
     {
@@ -9735,7 +9735,7 @@
       "delegated": true,
       "tld_created": "2016-08-18",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-25"
       ]
     },
     {
@@ -9816,7 +9816,7 @@
       "delegated": true,
       "tld_created": "2015-10-01",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-25"
       ]
     },
     {
@@ -9825,7 +9825,7 @@
       "delegated": true,
       "tld_created": "2014-03-13",
       "tld_updated": [
-        "2019-08-20"
+        "2026-11-25"
       ]
     },
     {
@@ -9933,7 +9933,7 @@
       "delegated": true,
       "tld_created": "2015-07-16",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-25"
       ]
     },
     {
@@ -9987,7 +9987,7 @@
       "delegated": true,
       "tld_created": "2015-01-15",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-25"
       ]
     },
     {
@@ -10212,7 +10212,7 @@
       "delegated": true,
       "tld_created": "2015-04-02",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-25"
       ]
     },
     {
@@ -10302,7 +10302,7 @@
       "delegated": true,
       "tld_created": "2016-06-24",
       "tld_updated": [
-        "2026-11-10"
+        "2026-11-25"
       ]
     },
     {
@@ -10365,7 +10365,7 @@
       "delegated": true,
       "tld_created": "2016-05-05",
       "tld_updated": [
-        "2019-08-20"
+        "2026-11-25"
       ]
     },
     {
@@ -10986,7 +10986,7 @@
       "delegated": true,
       "tld_created": "2014-06-26",
       "tld_updated": [
-        "2019-08-27"
+        "2026-11-25"
       ]
     },
     {
@@ -11112,7 +11112,7 @@
       "delegated": true,
       "tld_created": "2016-01-08",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-25"
       ]
     },
     {
@@ -11130,7 +11130,7 @@
       "delegated": true,
       "tld_created": "2015-07-16",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-25"
       ]
     },
     {
@@ -11265,7 +11265,7 @@
       "delegated": true,
       "tld_created": "2014-12-18",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-25"
       ]
     },
     {
@@ -11324,7 +11324,7 @@
       "delegated": true,
       "tld_created": "2015-05-14",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-25"
       ]
     },
     {
@@ -11351,7 +11351,7 @@
       "delegated": true,
       "tld_created": "2016-03-24",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-25"
       ]
     },
     {
@@ -11477,7 +11477,7 @@
       "delegated": true,
       "tld_created": "2016-01-08",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-25"
       ]
     },
     {
@@ -11513,7 +11513,7 @@
       "delegated": true,
       "tld_created": "2014-01-16",
       "tld_updated": [
-        "2019-08-20"
+        "2026-11-25"
       ]
     },
     {
@@ -11549,7 +11549,7 @@
       "delegated": true,
       "tld_created": "2014-10-09",
       "tld_updated": [
-        "2019-08-20"
+        "2026-11-25"
       ]
     },
     {
@@ -11666,7 +11666,7 @@
       "delegated": true,
       "tld_created": "2015-11-25",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-25"
       ]
     },
     {
@@ -11675,7 +11675,7 @@
       "delegated": true,
       "tld_created": "2015-11-25",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-25"
       ]
     },
     {
@@ -11693,7 +11693,7 @@
       "delegated": true,
       "tld_created": "2015-11-25",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-25"
       ]
     },
     {
@@ -11792,7 +11792,7 @@
       "delegated": true,
       "tld_created": "2016-08-04",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-25"
       ]
     },
     {
@@ -11801,7 +11801,7 @@
       "delegated": true,
       "tld_created": "2015-06-11",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-25"
       ]
     },
     {
@@ -11882,7 +11882,7 @@
       "delegated": true,
       "tld_created": "2016-04-14",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-25"
       ]
     },
     {
@@ -11945,7 +11945,7 @@
       "delegated": true,
       "tld_created": "2016-08-18",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-25"
       ]
     },
     {
@@ -12053,7 +12053,7 @@
       "delegated": true,
       "tld_created": "2015-11-25",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-25"
       ]
     },
     {
@@ -12062,7 +12062,7 @@
       "delegated": true,
       "tld_created": "2015-10-15",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-25"
       ]
     },
     {
@@ -12107,7 +12107,7 @@
       "delegated": true,
       "tld_created": "2016-06-30",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-25"
       ]
     },
     {
@@ -12197,7 +12197,7 @@
       "delegated": true,
       "tld_created": "2016-01-29",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-25"
       ]
     },
     {
@@ -12412,7 +12412,7 @@
       "delegated": true,
       "tld_created": "2015-04-02",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-25"
       ]
     },
     {
@@ -12858,7 +12858,7 @@
       "delegated": true,
       "tld_created": "2016-06-24",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-25"
       ]
     },
     {
@@ -13038,7 +13038,7 @@
       "delegated": true,
       "tld_created": "2014-12-18",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-25"
       ]
     },
     {
@@ -13318,7 +13318,7 @@
       "delegated": true,
       "tld_created": "2016-04-15",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-25"
       ]
     },
     {
@@ -14208,7 +14208,7 @@
       "delegated": true,
       "tld_created": "2016-02-05",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-25"
       ]
     },
     {
@@ -14218,7 +14218,7 @@
       "delegated": true,
       "tld_created": "2016-02-05",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-25"
       ]
     },
     {
@@ -14363,7 +14363,7 @@
       "delegated": true,
       "tld_created": "2016-01-29",
       "tld_updated": [
-        "2026-11-12"
+        "2026-11-25"
       ]
     },
     {
@@ -14399,7 +14399,7 @@
       "delegated": true,
       "tld_created": "2015-02-13",
       "tld_updated": [
-        "2019-08-20"
+        "2026-11-25"
       ]
     },
     {
@@ -14417,7 +14417,7 @@
       "delegated": true,
       "tld_created": "2014-03-27",
       "tld_updated": [
-        "2019-08-20"
+        "2026-11-25"
       ]
     },
     {

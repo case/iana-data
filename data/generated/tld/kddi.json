@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T22:19:37Z",
+  "publication": "2026-11-26T10:25:32Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -31,11 +31,10 @@
       }
     },
     "registry_url": "http://nic.kddi",
-    "whois_server": "whois.nic.kddi",
     "rdap_server": "https://rdap.gmoregistry.net/rdap/",
     "tld_created": "2014-12-18",
     "tld_updated": [
-      "2019-08-20"
+      "2026-11-25"
     ],
     "events": {
       "delegation": "2015-01-09"
@@ -65,6 +64,12 @@
         "algorithm": 8,
         "digest_type": 2,
         "digest": "871a87191b82d082df95647615db803c3cf6e7b80578b018118c2dd27d7fa00b"
+      },
+      {
+        "key_tag": 49130,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "c7c7596adaa6fb0f96b866ee7a628dd5f0716477828bba03d0754fd342b8b35e"
       }
     ],
     "nameservers": [

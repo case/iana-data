@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T22:19:37Z",
+  "publication": "2026-11-26T10:25:32Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -31,11 +31,10 @@
       }
     },
     "registry_url": "http://nic.toshiba",
-    "whois_server": "whois.nic.toshiba",
     "rdap_server": "https://rdap.gmoregistry.net/rdap/",
     "tld_created": "2014-10-09",
     "tld_updated": [
-      "2019-08-20"
+      "2026-11-25"
     ],
     "events": {
       "delegation": "2015-02-04"
@@ -65,6 +64,12 @@
         "algorithm": 8,
         "digest_type": 2,
         "digest": "3ef24a44f5ffda39fe23e4e4e4d2449e55a0b3001ec68a075a38313b6a4ff0d5"
+      },
+      {
+        "key_tag": 31999,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "a1eb30fd728a2745cdb58059227a37022046e693aaa2232272fe5e758fdb3670"
       }
     ],
     "nameservers": [

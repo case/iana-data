@@ -1,6 +1,6 @@
 {
   "description": "Per-TLD bootstrap data, from IANA sources",
-  "publication": "2026-11-11T22:19:37Z",
+  "publication": "2026-11-26T10:25:32Z",
   "sources": {
     "iana_tlds": "https://data.iana.org/TLD/v1/tlds.json",
     "iana_rdap": "https://data.iana.org/rdap/dns.json"
@@ -31,11 +31,10 @@
       }
     },
     "registry_url": "http://www.gmoregistry.com/en/",
-    "whois_server": "whois.nic.otsuka",
     "rdap_server": "https://rdap.gmoregistry.net/rdap/",
     "tld_created": "2014-06-26",
     "tld_updated": [
-      "2019-08-20"
+      "2026-11-25"
     ],
     "events": {
       "delegation": "2014-08-27"
@@ -65,6 +64,12 @@
         "algorithm": 8,
         "digest_type": 2,
         "digest": "99fa7ba5260c1c400fc5d65616fd3d796a6ab5aea557314cab10392de8fc90b3"
+      },
+      {
+        "key_tag": 32075,
+        "algorithm": 8,
+        "digest_type": 2,
+        "digest": "9f48af951934721becc98c1ac34dfcbaeb09d4ecbb4d04a2d34561457f8f3a9d"
       }
     ],
     "nameservers": [
